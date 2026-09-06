@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "status": "read_only_inventory",
+  "commands_sent": false,
+  "sources": [
+    "/home/maksu/docker/homeassistant/config/.storage/core.entity_registry",
+    "/home/maksu/docker/homeassistant/config/.storage/core.device_registry",
+    "retained MQTT topic zigbee2mqtt/bridge/devices (subscription only)"
+  ],
+  "integration": {
+    "home_assistant_platform": "mqtt",
+    "zigbee_stack": "Zigbee2MQTT 2.13.0",
+    "group_entity_not_used_for_choreography": "light.swiatla_kolor_sypialnia",
+    "group_members": [
+      "light.tasma_lozko",
+      "light.zarowka_fotel",
+      "light.zarowka_szafa"
+    ],
+    "reason_for_not_using_group": "Individual control is required to preserve the bed-to-room spatial progression."
+  },
+  "devices": [
+    {
+      "role": "led_strip_bed",
+      "entity_id": "light.tasma_lozko",
+      "user_description": "LED strip partly under the bed and partly behind the headboard",
+      "detected_vendor": "Tuya",
+      "detected_model": "TS0503B",
+      "detected_description": "Zigbee RGB light",
+      "supported_color_modes_home_assistant": ["xy"],
+      "brightness": {"supported": true, "zigbee2mqtt_range": [0, 254]},
+      "color_xy": true,
+      "color_temperature": false,
+      "effects_advertised": ["blink", "breathe", "okay", "channel_change", "finish_effect", "stop_effect", "colorloop", "stop_colorloop"],
+      "effects_selected_for_cue_sheet": false,
+      "transition": {
+        "planned": true,
+        "explicitly_live_verified": false,
+        "note": "Entity/device registries do not explicitly prove transition timing; verify later with a supervised manual command before implementation."
+      }
+    },
+    {
+      "role": "near_bed_bulb",
+      "entity_id": "light.zarowka_fotel",
+      "user_brand_identification": "EMOS Zigbee",
+      "detected_converter_vendor": "Tuya",
+      "detected_model": "TS0505B_1",
+      "detected_description": "Zigbee RGB+CCT light",
+      "supported_color_modes_home_assistant": ["color_temp", "xy"],
+      "brightness": {"supported": true, "zigbee2mqtt_range": [0, 254]},
+      "color_xy": true,
+      "color_temperature": {
+        "supported": true,
+        "kelvin_range_home_assistant": [2000, 6535],
+        "mired_range_zigbee2mqtt": [153, 500]
+      },
+      "preferred_mode_for_room_brightness": "color_temp",
+      "transition": {
+        "planned": true,
+        "explicitly_live_verified": false,
+        "note": "Verify the real transition curve later; no light command was sent in this session."
+      }
+    },
+    {
+      "role": "far_room_bulb",
+      "entity_id": "light.zarowka_szafa",
+      "user_brand_identification": "EMOS Zigbee",
+      "detected_converter_vendor": "Tuya",
+      "detected_model": "TS0505B_1",
+      "detected_description": "Zigbee RGB+CCT light",
+      "supported_color_modes_home_assistant": ["color_temp", "xy"],
+      "brightness": {"supported": true, "zigbee2mqtt_range": [0, 254]},
+      "color_xy": true,
+      "color_temperature": {
+        "supported": true,
+        "kelvin_range_home_assistant": [2000, 6535],
+        "mired_range_zigbee2mqtt": [153, 500]
+      },
+      "preferred_mode_for_room_brightness": "color_temp",
+      "transition": {
+        "planned": true,
+        "explicitly_live_verified": false,
+        "note": "Verify the real transition curve later; no light command was sent in this session."
+      }
+    },
+    {
+      "role": "large_light_circuit_1",
+      "entity_id": "light.wlacznik_sypialnia_left",
+      "detected_vendor": "Aqara",
+      "detected_model": "WS-EUK02",
+      "endpoint": "left",
+      "supported_color_modes_home_assistant": ["onoff"],
+      "brightness": {"supported": false},
+      "color": false,
+      "transition": {"supported": false},
+      "manual_mapping_required": true
+    },
+    {
+      "role": "large_light_circuit_2",
+      "entity_id": "light.wlacznik_sypialnia_right",
+      "detected_vendor": "Aqara",
+      "detected_model": "WS-EUK02",
+      "endpoint": "right",
+      "supported_color_modes_home_assistant": ["onoff"],
+      "brightness": {"supported": false},
+      "color": false,
+      "transition": {"supported": false},
+      "manual_mapping_required": true
+    }
+  ]
+}

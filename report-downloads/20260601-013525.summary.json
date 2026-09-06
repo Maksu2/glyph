@@ -1,0 +1,30 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-01T01:42:40.816164+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260601-013525.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260601-013525.jsonl",
+  "count": 60,
+  "valid_count": 59,
+  "overall_avg": 2.797,
+  "averages": {
+    "continuation_fit": 3.271,
+    "polish": 3.153,
+    "coherence": 2.78,
+    "repetition": 2.61,
+    "safety": 5.0,
+    "overall": 2.797
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.797/5 na 59/60 próbkach. Trening: step=None, train_loss=None, val_loss=None, lr=None. Najsłabsze średnie: repetition=2.61, coherence=2.78; najmocniejsza metryka: continuation_fit=3.27.",
+  "training_stats": {
+    "step": null,
+    "total_steps": null,
+    "progress_pct": null,
+    "loss": null,
+    "lr": null,
+    "last_eval": null,
+    "tokens_m": null
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.797. Najsłabsze metryki to 'coherence' (2.78) i 'repetition' (2.61). Wyniki są stabilne w kontekście modelu bazowego, ale wskazują na znaczące problemy z utrzymaniem spójności narracyjnej i nadmierną powtarzalnością fraz. Brak metryk treningowych uniemożliwia analizę trendów uczenia. Typowym błędem jest nagłe przechodzenie między płynną narracją a zbyt konkretnymi, niepasującymi elementami (np. historycznymi faktami lub elementami fabularnymi).",
+  "raw_description_output": "```json\n{\n  \"description\": \"Ogólny wynik benchmarku wynosi 2.797. Najsłabsze metryki to 'coherence' (2.78) i 'repetition' (2.61). Wyniki są stabilne w kontekście modelu bazowego, ale wskazują na znaczące problemy z utrzymaniem spójności narracyjnej i nadmierną powtarzalnością fraz. Brak metryk treningowych uniemożliwia analizę trendów uczenia. Typowym błędem jest nagłe przechodzenie między płynną narracją a zbyt konkretnymi, niepasującymi elementami (np. historycznymi faktami lub elementami fabularnymi).\",\n  \"overall_score\": 2.797,\n  \"weakest_metrics\": [\"coherence\", \"repetition\"],\n  \"loss_analysis\": \"N/A (Brak metryk treningowych)\",\n  \"specific_error_type\": \"Niestabilne przejścia kontekstowe (przejście z prozy do faktów/elementów fabularnych)\"\n}\n```"
+}

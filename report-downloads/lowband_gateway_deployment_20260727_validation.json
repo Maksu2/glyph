@@ -1,0 +1,76 @@
+{
+  "project": "Lowband Gateway",
+  "version": "0.1.0",
+  "validated_at": "2026-07-27T19:39:28Z",
+  "status": "deployed_and_healthy",
+  "public_base_url": "https://lowband.maksu.online",
+  "model": "gpt-5.6-terra",
+  "reasoning_effort": "medium",
+  "services": {
+    "running": 6,
+    "healthy_with_healthcheck": 5,
+    "cloudflared_connections": 4
+  },
+  "public_checks": {
+    "https_health_status": 200,
+    "https_health_body": {
+      "status": "ok"
+    },
+    "http_redirect_status": 308,
+    "unauthenticated_jobs_status": 401,
+    "pwa_manifest_status": 200,
+    "service_worker_status": 200
+  },
+  "real_public_e2e": {
+    "passed": true,
+    "accepted_seconds": 0.276,
+    "client_disconnected": true,
+    "final_status": "done",
+    "etag_status": 304,
+    "runner": "isolated_http",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": "medium"
+  },
+  "database": {
+    "integrity_check": "ok",
+    "journal_mode": "wal",
+    "migration_head": "0003_system_job_events",
+    "visible_jobs_after_cleanup": 0,
+    "usage_tombstones": 2,
+    "active_sessions_after_cleanup": 0
+  },
+  "backup": {
+    "path_in_volume": "/data/backups/lowband-deployed-20260727.sqlite",
+    "integrity_check": "ok",
+    "migration_head": "0003_system_job_events"
+  },
+  "security": {
+    "public_host_ports": 0,
+    "runner_uid": 10001,
+    "runner_read_only_root": true,
+    "runner_capabilities": "none",
+    "runner_forbidden_secret_count": 0,
+    "runner_workspace_empty": true,
+    "cloudflared_uid": 65532,
+    "cloudflared_read_only_root": true,
+    "cloudflared_capabilities": "none",
+    "cloudflare_files_in_volume_mode": "0400"
+  },
+  "tests": {
+    "passed": 66,
+    "skipped_opt_in": 1,
+    "failed": 0,
+    "warnings": 1,
+    "lint": "passed",
+    "format": "passed",
+    "compileall": "passed",
+    "dependency_check": "passed",
+    "compose_validation": "passed"
+  },
+  "operator_actions_remaining": [
+    "Read the initial password from the private runtime file and save it in a password manager",
+    "Delete the runtime password file after saving it",
+    "Optionally configure ntfy",
+    "Optionally configure Cloudflare Access"
+  ]
+}

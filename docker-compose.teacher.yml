@@ -1,0 +1,63 @@
+name: ai-model-teacher
+
+services:
+  teacher-vulkan:
+    image: ghcr.io/ggml-org/llama.cpp:server-vulkan
+    profiles:
+      - teacher
+    init: true
+    ports:
+      - "${GEMMA4_BIND:-127.0.0.1}:${GEMMA4_PORT:-8182}:8080"
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+      - /dev/dri/card0:/dev/dri/card0
+    group_add:
+      - "${RENDER_GID:-993}"
+      - "${VIDEO_GID:-44}"
+    cpu_shares: "${GEMMA4_CPU_SHARES:-128}"
+    mem_limit: "${GEMMA4_MEM_LIMIT:-12g}"
+    memswap_limit: "${GEMMA4_MEMSWAP_LIMIT:-12g}"
+    pids_limit: 512
+    oom_score_adj: 600
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:size=1g,mode=1777
+    volumes:
+      - type: bind
+        source: "${GEMMA4_MODELS_DIR_HOST:-/home/maksu/ai-model/models/gemma4}"
+        target: /models
+        read_only: true
+    command:
+      - "-m"
+      - "${GEMMA4_MODEL:-/models/gemma-4-e4b-it-q4_k_m.gguf}"
+      - "--host"
+      - "0.0.0.0"
+      - "--port"
+      - "8080"
+      - "-c"
+      - "${GEMMA4_CTX:-4096}"
+      - "-b"
+      - "${GEMMA4_BATCH:-256}"
+      - "-ub"
+      - "${GEMMA4_UBATCH:-64}"
+      - "-ngl"
+      - "${GEMMA4_GPU_LAYERS:-99}"
+      - "-fa"
+      - "${GEMMA4_FLASH_ATTN:-on}"
+      - "--parallel"
+      - "${GEMMA4_PARALLEL:-1}"
+      - "--threads"
+      - "${GEMMA4_THREADS:-2}"
+      - "--threads-batch"
+      - "${GEMMA4_THREADS_BATCH:-2}"
+      - "--cache-ram"
+      - "${GEMMA4_CACHE_RAM:-0}"
+      - "--poll"
+      - "${GEMMA4_POLL:-100}"
+      - "--poll-batch"
+      - "${GEMMA4_POLL_BATCH:-1}"
+      - "--no-cont-batching"

@@ -1,0 +1,169 @@
+[
+  {
+    "name": "fa_on_b256_ub64",
+    "args": [
+      "-c",
+      "4096",
+      "-b",
+      "256",
+      "-ub",
+      "64",
+      "-ngl",
+      "99",
+      "-fa",
+      "on",
+      "--parallel",
+      "1",
+      "--threads",
+      "2",
+      "--threads-batch",
+      "2",
+      "--cache-ram",
+      "0",
+      "--no-cont-batching"
+    ],
+    "ok": true,
+    "vals": [
+      [
+        "short",
+        44.02516588544927,
+        176.85171787327772
+      ],
+      [
+        "long",
+        43.9400492952428,
+        217.09521434275715
+      ]
+    ]
+  },
+  {
+    "name": "fa_on_b384_ub96",
+    "args": [
+      "-c",
+      "4096",
+      "-b",
+      "384",
+      "-ub",
+      "96",
+      "-ngl",
+      "99",
+      "-fa",
+      "on",
+      "--parallel",
+      "1",
+      "--threads",
+      "2",
+      "--threads-batch",
+      "2",
+      "--cache-ram",
+      "0",
+      "--no-cont-batching"
+    ],
+    "ok": false,
+    "error": "RemoteDisconnected('Remote end closed connection without response')"
+  },
+  {
+    "name": "fa_on_b512_ub128",
+    "args": [
+      "-c",
+      "4096",
+      "-b",
+      "512",
+      "-ub",
+      "128",
+      "-ngl",
+      "99",
+      "-fa",
+      "on",
+      "--parallel",
+      "1",
+      "--threads",
+      "2",
+      "--threads-batch",
+      "2",
+      "--cache-ram",
+      "0",
+      "--no-cont-batching"
+    ],
+    "ok": false,
+    "error": "RemoteDisconnected('Remote end closed connection without response')"
+  },
+  {
+    "name": "fa_on_b768_ub192",
+    "args": [
+      "-c",
+      "4096",
+      "-b",
+      "768",
+      "-ub",
+      "192",
+      "-ngl",
+      "99",
+      "-fa",
+      "on",
+      "--parallel",
+      "1",
+      "--threads",
+      "2",
+      "--threads-batch",
+      "2",
+      "--cache-ram",
+      "0",
+      "--no-cont-batching"
+    ],
+    "ok": false,
+    "error": "RemoteDisconnected('Remote end closed connection without response')"
+  },
+  {
+    "name": "fa_on_b1024_ub256",
+    "args": [
+      "-c",
+      "4096",
+      "-b",
+      "1024",
+      "-ub",
+      "256",
+      "-ngl",
+      "99",
+      "-fa",
+      "on",
+      "--parallel",
+      "1",
+      "--threads",
+      "2",
+      "--threads-batch",
+      "2",
+      "--cache-ram",
+      "0",
+      "--no-cont-batching"
+    ],
+    "ok": false,
+    "error": "RemoteDisconnected('Remote end closed connection without response')"
+  },
+  {
+    "name": "fa_on_b1536_ub384",
+    "args": [
+      "-c",
+      "4096",
+      "-b",
+      "1536",
+      "-ub",
+      "384",
+      "-ngl",
+      "99",
+      "-fa",
+      "on",
+      "--parallel",
+      "1",
+      "--threads",
+      "2",
+      "--threads-batch",
+      "2",
+      "--cache-ram",
+      "0",
+      "--no-cont-batching"
+    ],
+    "ok": false,
+    "error": "RemoteDisconnected('Remote end closed connection without response')"
+  }
+]

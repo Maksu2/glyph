@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-15T23:31:57.840438+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260515-232042.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260515-232042.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.567,
+  "averages": {
+    "continuation_fit": 3.0,
+    "polish": 3.117,
+    "coherence": 2.583,
+    "repetition": 2.317,
+    "safety": 5.0,
+    "overall": 2.567
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.567/5 na 60/60 próbkach. Trening: step=89480, train_loss=3.8059, val_loss=4.4776, lr=0.00019. Najsłabsze średnie: repetition=2.32, coherence=2.58; najmocniejsza metryka: polish=3.12. Podejrzane powtórzenia widać m.in. w próbkach: base_style_05.",
+  "training_stats": {
+    "step": 89480,
+    "total_steps": 200000,
+    "progress_pct": 44.74,
+    "loss": 3.8059,
+    "lr": 0.00019,
+    "last_eval": {
+      "ts": "2026-05-15 22:33:46",
+      "step": 89000,
+      "val_loss": 4.4776
+    },
+    "tokens_m": 733.02
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.57/5. Najsłabsze metryki to 'coherence' (2.58) i 'repetition' (2.32). Wskaźniki straty (train_loss=3.81, val_loss=4.48) sugerują, że model nie wykazuje znaczącej nadmiernej generalizacji na zbiorze walidacyjnym. W próbkach widoczny jest powtarzający się problem z niestabilną spójnością narracyjną i nagłymi skokami tematycznymi, co jest typowe dla etapu pretrainingu.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.57/5. Najsłabsze metryki to 'coherence' (2.58) i 'repetition' (2.32). Wskaźniki straty (train_loss=3.81, val_loss=4.48) sugerują, że model nie wykazuje znaczącej nadmiernej generalizacji na zbiorze walidacyjnym. W próbkach widoczny jest powtarzający się problem z niestabilną spójnością narracyjną i nagłymi skokami tematycznymi, co jest typowe dla etapu pretrainingu.\"\n}\n```"
+}

@@ -1,0 +1,30 @@
+{
+  "variant": "glyph-100m",
+  "stage": "stage 2",
+  "recovery_started_at": "2026-05-27T05:20:59Z",
+  "resume_checkpoint": "checkpoints/glyph-100m/latest.pt",
+  "resume_step": 1000,
+  "target_step": 10000,
+  "diagnostic": {
+    "status": "passed",
+    "target_step": 1010,
+    "optimizer_foreach": false,
+    "attention_backend": "math",
+    "finite_check_interval": 1,
+    "checkpoint_written": false
+  },
+  "active_run": {
+    "status": "running",
+    "optimizer_foreach": false,
+    "attention_backend": "math",
+    "finite_check_interval": 10,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "dataset_name": "glyph100_stage1_candidate",
+    "latest_observed_step": 1050,
+    "latest_observed_loss": 6.2584,
+    "latest_observed_toks_per_sec": 3287
+  },
+  "hypothesis": "The failed attempt was likely caused by an unstable ROCm fast path, probably AdamW foreach and/or default SDPA selection on gfx1012, not by a corrupt checkpoint."
+}

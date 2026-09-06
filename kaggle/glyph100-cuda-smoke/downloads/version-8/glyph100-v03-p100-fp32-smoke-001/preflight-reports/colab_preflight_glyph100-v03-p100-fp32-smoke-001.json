@@ -1,0 +1,32 @@
+{
+  "status": "FAIL",
+  "run_id": "glyph100-v03-p100-fp32-smoke-001",
+  "environment": {
+    "timestamp_utc": "2026-08-08T14:53:31.992746+00:00",
+    "python": "3.12.13",
+    "pytorch": "2.10.0+cu128",
+    "cuda_available": true,
+    "torch_cuda": "12.8",
+    "torch_hip": null,
+    "cudnn": 91002,
+    "gpu": {
+      "name": "Tesla P100-PCIE-16GB",
+      "compute_capability": "6.0",
+      "total_vram_bytes": 17059545088,
+      "free_vram_bytes": 16088432640,
+      "bf16_supported": true
+    },
+    "ram_total_bytes": 33659379712,
+    "ram_available_bytes": 31208787968,
+    "content_disk_total_bytes": 8656922775552,
+    "content_disk_free_bytes": 1102540840960,
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35"
+  },
+  "checkpoint": null,
+  "label_audit": null,
+  "inference_smoke": [],
+  "warnings": [
+    "AcceleratorError: CUDA error: no kernel image is available for execution on the device\nSearch for `cudaErrorNoKernelImageForDevice' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n"
+  ],
+  "training_performed": false
+}

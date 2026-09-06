@@ -1,0 +1,33 @@
+{
+  "method": "Gemma Judge over fixed Polish continuation prompts",
+  "snapshotDate": "2026-06-21 03:39 CEST",
+  "count": 60,
+  "validCount": 59,
+  "overall": 2.797,
+  "metrics": {
+    "continuationFit": 3.169,
+    "polish": 3.22,
+    "coherence": 2.966,
+    "repetition": 2.593,
+    "safety": 5.0
+  },
+  "checkpointStep": 50000,
+  "trainLoss": 3.2214,
+  "validationLoss": 3.3927,
+  "learningRate": 0.000175,
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.797/5 na 59/60 próbkach. Trening: step=50000, train_loss=3.2214, val_loss=3.3927, lr=0.000175. Najsłabsze średnie: repetition=2.59, coherence=2.97; najmocniejsza metryka: polish=3.22.",
+  "categories": [
+    "Polish fluency",
+    "coherence",
+    "repetition",
+    "topic adherence",
+    "technical style"
+  ],
+  "failureModes": [
+    "phrase repetition",
+    "topic drift",
+    "SEO/forum-like text leakage",
+    "weak factual reliability",
+    "unstable long continuations"
+  ]
+}

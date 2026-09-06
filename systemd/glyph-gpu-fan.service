@@ -1,0 +1,13 @@
+[Unit]
+Description=Glyph GPU fan controller for amdgpu
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/maksu/ai-model
+ExecStart=/usr/bin/python3 /home/maksu/ai-model/scripts/gpu_fan_curve.py --profile glyph-training --log-file /home/maksu/ai-model/logs/gpu-fan-curve.log
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

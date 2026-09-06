@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "shell_before_api",
+      "passed": true,
+      "detail": "Ekran logowania był widoczny bez oczekiwania na /session.",
+      "duration_ms": null
+    },
+    {
+      "name": "lost_login_response_recovered",
+      "passed": true,
+      "detail": "POST /login utracił odpowiedź, a GET /session potwierdził sesję.",
+      "duration_ms": null
+    },
+    {
+      "name": "service_worker_active",
+      "passed": true,
+      "detail": "Rejestracje: [{'scope': 'http://127.0.0.1:18765/', 'active': 'activated', 'waiting': None, 'installing': None}]; direct={'secure': True, 'scope': 'http://127.0.0.1:18765/', 'active': 'activated', 'waiting': None, 'installing': None}; shell=[{'path': '/', 'status': 200, 'ok': True}, {'path': '/assets/styles.css', 'status': 200, 'ok': True}, {'path': '/assets/app.js', 'status': 200, 'ok': True}, {'path': '/assets/icon.svg', 'status': 200, 'ok': True}, {'path': '/manifest.webmanifest', 'status': 200, 'ok': True}, {'path': '/offline.html', 'status': 200, 'ok': True}]; błędy: ['Failed to load resource: net::ERR_TIMED_OUT']",
+      "duration_ms": null
+    },
+    {
+      "name": "lost_job_response_recovered",
+      "passed": true,
+      "detail": "POST dotarł raz; lookup po client_request_id odnalazł zapisane zadanie. message='Zadanie zapisane. Możesz zamknąć aplikację.'; local=[{'local_key': 'ef518d42-ba4e-4e12-86c4-21b0c197b681', 'client_request_id': 'ef518d42-ba4e-4e12-86c4-21b0c197b681', 'public_id': '00P3LBkDer6JEOSFmqD3Qg', 'prompt_preview': 'Zadanie z utraconą odpowiedzią', 'title': 'Zadanie z utraconą odpowiedzią', 'status': 'queued', 'created_at': '2026-07-27T21:20:43Z', 'updated_at': '2026-07-27T21:20:43Z', 'sync_state': 'synced', 'sync_error': None, 'last_synced_at': '2026-07-27T21:20:43.933Z', 'quality': 'normal', 'notify': True, 'has_result': False, 'finished_at': None}]",
+      "duration_ms": null
+    },
+    {
+      "name": "multiple_submit_single_first_request",
+      "passed": true,
+      "detail": "Trzy submit events utworzyły jeden pierwszy POST; drugi POST był jawnym retry. calls=2, count_before_retry=1, count_after=2",
+      "duration_ms": null
+    },
+    {
+      "name": "safe_retry_reuses_client_request_id",
+      "passed": true,
+      "detail": "Retry użył tego samego client_request_id=335864be-a1b9-44f6-a94c-3ce646c03d65.",
+      "duration_ms": null
+    },
+    {
+      "name": "manual_refresh_no_overlap",
+      "passed": true,
+      "detail": "Cztery kliknięcia spowodowały 1 request listy.",
+      "duration_ms": null
+    },
+    {
+      "name": "status_failure_preserves_last_data",
+      "passed": true,
+      "detail": "Błąd odświeżenia nie zastąpił statusu queued stanem błędu.",
+      "duration_ms": null
+    },
+    {
+      "name": "weak_edge_cached_shell",
+      "passed": true,
+      "detail": "Shell i formularz widoczne po 46 ms.",
+      "duration_ms": 46
+    },
+    {
+      "name": "brutal_edge_cached_shell",
+      "passed": true,
+      "detail": "Shell i formularz widoczne po 24 ms.",
+      "duration_ms": 24
+    },
+    {
+      "name": "offline_full_reload",
+      "passed": true,
+      "detail": "Pełny refresh offline pokazał shell po 33 ms.",
+      "duration_ms": 33
+    },
+    {
+      "name": "offline_draft_and_statuses_survive",
+      "passed": true,
+      "detail": "IndexedDB/localStorage zachowały szkic i ostatnie statusy.",
+      "duration_ms": null
+    },
+    {
+      "name": "reconnect_does_not_auto_duplicate",
+      "passed": true,
+      "detail": "Powrót sieci zsynchronizował statusy, ale nie wysłał automatycznie lokalnego draftu.",
+      "duration_ms": null
+    },
+    {
+      "name": "expired_session_keeps_local_records",
+      "passed": true,
+      "detail": "Po wygaśnięciu sesji pozostało 3 lokalnych rekordów.",
+      "duration_ms": null
+    },
+    {
+      "name": "complete_atomic_shell_cache",
+      "passed": true,
+      "detail": "Cache zawiera kompletny shell: ['/', '/assets/app.js', '/assets/icon.svg', '/assets/styles.css', '/manifest.webmanifest', '/offline.html']",
+      "duration_ms": null
+    },
+    {
+      "name": "interrupted_worker_update_keeps_old_shell",
+      "passed": true,
+      "detail": "Po niekompletnej aktualizacji aktywny stary cache pozostał: {'keys': ['lowband-shell-v2-test', 'lowband-shell-v4-broken'], 'active': True}",
+      "duration_ms": null
+    },
+    {
+      "name": "completed_worker_update_reloads_offline",
+      "passed": true,
+      "detail": "Po kompletnej aktualizacji reload offline trwał 35 ms.",
+      "duration_ms": 35
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Weak EDGE",
+      "download_kbps": 100,
+      "upload_kbps": 40,
+      "latency_ms": 850,
+      "packet_loss_percent": 1,
+      "shell_ms": 46,
+      "shell_visible": true,
+      "packet_loss_supported": true
+    },
+    {
+      "name": "Brutal EDGE",
+      "download_kbps": 50,
+      "upload_kbps": 15,
+      "latency_ms": 1950,
+      "packet_loss_percent": 3,
+      "shell_ms": 24,
+      "shell_visible": true,
+      "packet_loss_supported": true
+    }
+  ],
+  "limitations": [
+    "CDP emuluje łączne opóźnienie; osobny DNS delay jest doliczony do latency.",
+    "Packet loss zależy od obsługi pola packetLoss przez używaną wersję Chromium."
+  ]
+}

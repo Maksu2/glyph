@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-30T23:32:13.317485+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260530-232425.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260530-232425.jsonl",
+  "count": 60,
+  "valid_count": 59,
+  "overall_avg": 2.814,
+  "averages": {
+    "continuation_fit": 3.153,
+    "polish": 3.153,
+    "coherence": 2.847,
+    "repetition": 2.542,
+    "safety": 4.915,
+    "overall": 2.814
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.814/5 na 59/60 próbkach. Trening: step=10000, train_loss=3.6795, val_loss=3.3527, lr=0.000199. Najsłabsze średnie: repetition=2.54, coherence=2.85; najmocniejsza metryka: continuation_fit=3.15.",
+  "training_stats": {
+    "step": 10000,
+    "total_steps": 10000,
+    "progress_pct": 100.0,
+    "loss": 3.6795,
+    "lr": 0.000199,
+    "last_eval": {
+      "ts": "2026-05-27 17:48:31",
+      "step": 10000,
+      "val_loss": 3.3527
+    },
+    "tokens_m": 163.84
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.814, co wskazuje na umiarkowaną zdolność do kontynuacji tekstu literackiego. Najsłabsze metryki to 'repetition' (2.542) oraz 'coherence' (2.847), co sugeruje problemy z utrzymaniem długoterminowej spójności i tendencją do powtarzania fraz. W kontekście treningowym, spadek strat (train_loss 3.6795 -> val_loss 3.3527) przy niskiej szybkości uczenia (0.000199) jest stabilny, ale nie koreluje z wysoką wydajnością w metrykach spójności. Typowym błędem widocznym w próbkach jest niestabilne przechodzenie między opisem sensorycznym a sztywnymi, historycznymi datami/nazwami własnymi.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.814, co wskazuje na umiarkowaną zdolność do kontynuacji tekstu literackiego. Najsłabsze metryki to 'repetition' (2.542) oraz 'coherence' (2.847), co sugeruje problemy z utrzymaniem długoterminowej spójności i tendencją do powtarzania fraz. W kontekście treningowym, spadek strat (train_loss 3.6795 -> val_loss 3.3527) przy niskiej szybkości uczenia (0.000199) jest stabilny, ale nie koreluje z wysoką wydajnością w metrykach spójności. Typowym błędem widocznym w próbkach jest niestabilne przechodzenie między opisem sensorycznym a sztywnymi, historycznymi datami/nazwami własnymi.\"\n}\n```"
+}

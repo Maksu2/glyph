@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-05-21T14:57:39.742061+00:00",
+  "mode": "stable-known-good-vulkan-gpu-training-paused",
+  "training_paused_for_benchmark": true,
+  "results": [
+    {
+      "ctx": 4096,
+      "status": "ok",
+      "server_start_seconds": 19.11,
+      "prompt_tokens": 3591,
+      "prompt_n": 3592,
+      "prompt_per_second": 411.7198484843448,
+      "predicted_n": 128,
+      "predicted_per_second": 39.26781477985328,
+      "prompt_ms": 8724.379,
+      "predicted_ms": 3259.667,
+      "config": {
+        "ngl": 99,
+        "threads": 2,
+        "threads_batch": 2,
+        "batch": 256,
+        "ubatch": 64,
+        "flash_attn": "off",
+        "cpu_shares": 4096,
+        "training_paused": true
+      },
+      "log_evidence_tail": [
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | prompt processing progress, n_tokens = 3588, batch.n_tokens = 64, progress = 0.998886",
+        "teacher-vulkan-1  | slot create_check: id  0 | task 18 | created context checkpoint 1 of 32 (pos_min = 2756, pos_max = 3523, n_tokens = 3524, size = 30.009 MiB)",
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | n_tokens = 3588, memory_seq_rm [3588, end)",
+        "teacher-vulkan-1  | slot init_sampler: id  0 | task 18 | init sampler, took 0.43 ms, tokens: text = 3592, total = 3592",
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | prompt processing done, n_tokens = 3592, batch.n_tokens = 4",
+        "teacher-vulkan-1  | slot print_timing: id  0 | task 18 | ",
+        "teacher-vulkan-1  | prompt eval time =    8724.38 ms /  3592 tokens (    2.43 ms per token,   411.72 tokens per second)",
+        "teacher-vulkan-1  |        eval time =    3259.67 ms /   128 tokens (   25.47 ms per token,    39.27 tokens per second)",
+        "teacher-vulkan-1  |       total time =   11984.05 ms /  3720 tokens",
+        "teacher-vulkan-1  | slot      release: id  0 | task 18 | stop processing: n_tokens = 3719, truncated = 0",
+        "teacher-vulkan-1  | srv  update_slots: all slots are idle",
+        "teacher-vulkan-1  | srv  log_server_r: done request: POST /completion 172.27.0.1 200"
+      ]
+    },
+    {
+      "ctx": 8192,
+      "status": "ok",
+      "server_start_seconds": 34.77,
+      "prompt_tokens": 7671,
+      "prompt_n": 7672,
+      "prompt_per_second": 318.00183431350047,
+      "predicted_n": 128,
+      "predicted_per_second": 36.4980466416522,
+      "prompt_ms": 24125.647,
+      "predicted_ms": 3507.037,
+      "config": {
+        "ngl": 99,
+        "threads": 2,
+        "threads_batch": 2,
+        "batch": 256,
+        "ubatch": 64,
+        "flash_attn": "off",
+        "cpu_shares": 4096,
+        "training_paused": true
+      },
+      "log_evidence_tail": [
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | prompt processing progress, n_tokens = 7668, batch.n_tokens = 64, progress = 0.999479",
+        "teacher-vulkan-1  | slot create_check: id  0 | task 18 | created context checkpoint 1 of 32 (pos_min = 6836, pos_max = 7603, n_tokens = 7604, size = 30.009 MiB)",
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | n_tokens = 7668, memory_seq_rm [7668, end)",
+        "teacher-vulkan-1  | slot init_sampler: id  0 | task 18 | init sampler, took 1.74 ms, tokens: text = 7672, total = 7672",
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | prompt processing done, n_tokens = 7672, batch.n_tokens = 4",
+        "teacher-vulkan-1  | slot print_timing: id  0 | task 18 | ",
+        "teacher-vulkan-1  | prompt eval time =   24125.65 ms /  7672 tokens (    3.14 ms per token,   318.00 tokens per second)",
+        "teacher-vulkan-1  |        eval time =    3507.04 ms /   128 tokens (   27.40 ms per token,    36.50 tokens per second)",
+        "teacher-vulkan-1  |       total time =   27632.68 ms /  7800 tokens",
+        "teacher-vulkan-1  | slot      release: id  0 | task 18 | stop processing: n_tokens = 7799, truncated = 0",
+        "teacher-vulkan-1  | srv  update_slots: all slots are idle",
+        "teacher-vulkan-1  | srv  log_server_r: done request: POST /completion 172.27.0.1 200"
+      ]
+    },
+    {
+      "ctx": 16384,
+      "status": "ok",
+      "server_start_seconds": 78.09,
+      "prompt_tokens": 15831,
+      "prompt_n": 15832,
+      "prompt_per_second": 335.2562214518962,
+      "predicted_n": 128,
+      "predicted_per_second": 5.415559579617188,
+      "prompt_ms": 47223.583,
+      "predicted_ms": 23635.6,
+      "config": {
+        "ngl": 99,
+        "threads": 2,
+        "threads_batch": 2,
+        "batch": 256,
+        "ubatch": 64,
+        "flash_attn": "off",
+        "cpu_shares": 4096,
+        "training_paused": true
+      },
+      "log_evidence_tail": [
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | prompt processing progress, n_tokens = 15828, batch.n_tokens = 64, progress = 0.999747",
+        "teacher-vulkan-1  | slot create_check: id  0 | task 18 | created context checkpoint 2 of 32 (pos_min = 14996, pos_max = 15763, n_tokens = 15764, size = 30.009 MiB)",
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | n_tokens = 15828, memory_seq_rm [15828, end)",
+        "teacher-vulkan-1  | slot init_sampler: id  0 | task 18 | init sampler, took 3.60 ms, tokens: text = 15832, total = 15832",
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | prompt processing done, n_tokens = 15832, batch.n_tokens = 4",
+        "teacher-vulkan-1  | slot print_timing: id  0 | task 18 | ",
+        "teacher-vulkan-1  | prompt eval time =   47223.58 ms / 15832 tokens (    2.98 ms per token,   335.26 tokens per second)",
+        "teacher-vulkan-1  |        eval time =   23635.60 ms /   128 tokens (  184.65 ms per token,     5.42 tokens per second)",
+        "teacher-vulkan-1  |       total time =   70859.18 ms / 15960 tokens",
+        "teacher-vulkan-1  | slot      release: id  0 | task 18 | stop processing: n_tokens = 15959, truncated = 0",
+        "teacher-vulkan-1  | srv  update_slots: all slots are idle",
+        "teacher-vulkan-1  | srv  log_server_r: done request: POST /completion 172.27.0.1 200"
+      ]
+    },
+    {
+      "ctx": 32768,
+      "status": "ok",
+      "server_start_seconds": 113.92,
+      "prompt_tokens": 32236,
+      "prompt_n": 32237,
+      "prompt_per_second": 318.04149343927077,
+      "predicted_n": 128,
+      "predicted_per_second": 24.854798461565647,
+      "prompt_ms": 101360.988,
+      "predicted_ms": 5149.911,
+      "config": {
+        "ngl": 99,
+        "threads": 2,
+        "threads_batch": 2,
+        "batch": 256,
+        "ubatch": 64,
+        "flash_attn": "off",
+        "cpu_shares": 4096,
+        "training_paused": true
+      },
+      "log_evidence_tail": [
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | prompt processing progress, n_tokens = 32233, batch.n_tokens = 64, progress = 0.999876",
+        "teacher-vulkan-1  | slot create_check: id  0 | task 18 | created context checkpoint 4 of 32 (pos_min = 31401, pos_max = 32168, n_tokens = 32169, size = 30.009 MiB)",
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | n_tokens = 32233, memory_seq_rm [32233, end)",
+        "teacher-vulkan-1  | slot init_sampler: id  0 | task 18 | init sampler, took 7.11 ms, tokens: text = 32237, total = 32237",
+        "teacher-vulkan-1  | slot update_slots: id  0 | task 18 | prompt processing done, n_tokens = 32237, batch.n_tokens = 4",
+        "teacher-vulkan-1  | slot print_timing: id  0 | task 18 | ",
+        "teacher-vulkan-1  | prompt eval time =  101360.99 ms / 32237 tokens (    3.14 ms per token,   318.04 tokens per second)",
+        "teacher-vulkan-1  |        eval time =    5149.91 ms /   128 tokens (   40.23 ms per token,    24.85 tokens per second)",
+        "teacher-vulkan-1  |       total time =  106510.90 ms / 32365 tokens",
+        "teacher-vulkan-1  | slot      release: id  0 | task 18 | stop processing: n_tokens = 32364, truncated = 0",
+        "teacher-vulkan-1  | srv  update_slots: all slots are idle",
+        "teacher-vulkan-1  | srv  log_server_r: done request: POST /completion 172.27.0.1 200"
+      ]
+    }
+  ]
+}

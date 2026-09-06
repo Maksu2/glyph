@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "run_id": "glyph100-v03-p100-fp32-smoke-001",
+  "started_at_utc": "2026-08-08T14:58:40.712323+00:00",
+  "finished_at_utc": "2026-08-08T14:59:05.974337+00:00",
+  "gpu": {
+    "name": "Tesla P100-PCIE-16GB",
+    "compute_capability": "6.0",
+    "total_vram_bytes": 17059545088,
+    "free_vram_bytes": 16788881408,
+    "pytorch": "2.10.0+cu126",
+    "cuda": "12.6",
+    "cudnn": 91002
+  },
+  "payload_validation": {
+    "bundle_version": "1.0",
+    "checked": [
+      {
+        "path": "config.py",
+        "size": 5281,
+        "sha256": "c5fdade589b48a0a59a0a4370d518125e6733f88385a69d3d2439cf3d903fe56"
+      },
+      {
+        "path": "finetune.py",
+        "size": 29311,
+        "sha256": "cd21480e60082218fbab70215f989ec87f26048c4b7ee7d0adfb4883e8013ef8"
+      },
+      {
+        "path": "model/transformer.py",
+        "size": 9935,
+        "sha256": "671a59049a268e109551a4ee8ee0a91001847714301437e2a0782acb3d9c2ecd"
+      },
+      {
+        "path": "scripts/sft_utils.py",
+        "size": 10013,
+        "sha256": "2b69e8f9b8f8dc4ffd899a007acf6ba8cd0f80450b0daea95f0af47d1c07226f"
+      },
+      {
+        "path": "scripts/colab_bundle_utils.py",
+        "size": 7455,
+        "sha256": "98c6cbe9a1d80e7c0dae5820d55db2e5b1e9b9abbc9077408a208f8976e4cbb5"
+      },
+      {
+        "path": "scripts/colab_preflight.py",
+        "size": 16769,
+        "sha256": "a3279db43a269188c243f04baf402bcfcb19744563b6c034edcd017c096a0bbc"
+      },
+      {
+        "path": "scripts/colab_run_sft.py",
+        "size": 39997,
+        "sha256": "412abeddf44a0d8af24d2a0d8a15e12c5d415c339538165f6fe51dcd4b36e609"
+      },
+      {
+        "path": "checkpoints/glyph-100m-base44k.pt",
+        "size": 393804511,
+        "sha256": "459647219bf06785af03112de437601db5907949ae4e35797bbd16a5913a14e4"
+      },
+      {
+        "path": "data/processed/tokenizer.model",
+        "size": 498704,
+        "sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029"
+      },
+      {
+        "path": "data/sft/glyph100_sft_smoke_v0_3.jsonl",
+        "size": 1035194,
+        "sha256": "5583e1e8dea7631cafd7156f2da0cf0b96558c38215f2d62a3ffb3365e339121"
+      },
+      {
+        "path": "data/sft/processed/glyph100_sft_smoke_v0_3_train.jsonl",
+        "size": 878820,
+        "sha256": "9ad195ef0d02e07be0becf5b6b3d1bf8e583dc88437784f7fc33df2f4d5e28c6"
+      },
+      {
+        "path": "data/sft/processed/glyph100_sft_smoke_v0_3_val.jsonl",
+        "size": 104159,
+        "sha256": "f990f281aa1afd4a5803daccdc8961b92db2347bceb57d2fcb21af7639cd0d3f"
+      }
+    ]
+  },
+  "training": {
+    "status": "COMPLETE",
+    "run_id": "glyph100-v03-p100-fp32-smoke-001",
+    "started_at_utc": "2026-08-08T14:58:40.712323+00:00",
+    "finished_at_utc": "2026-08-08T14:58:56.682717+00:00",
+    "duration_seconds": 15.970388146999994,
+    "start_step": 0,
+    "end_step": 25,
+    "final_train_loss": 3.858225405216217,
+    "final_val_loss": 3.743634581565857,
+    "best_val_loss": 3.743634581565857,
+    "precision": "fp32",
+    "effective_examples_per_step": 4,
+    "latest_checkpoint": "/kaggle/working/glyph100-v03-p100-fp32-smoke-001/training/checkpoints/latest.pt",
+    "best_checkpoint": null,
+    "saved_checkpoints": [
+      {
+        "path": "/kaggle/working/glyph100-v03-p100-fp32-smoke-001/training/checkpoints/final_step_000025.pt",
+        "step": 25,
+        "size": 1175134979,
+        "sha256": "fd89109c2a7953c6e590a3fc3dbeaad0b94f25d1f3a3d41b86a1a3f25596e74b"
+      }
+    ]
+  },
+  "checkpoint_validation": {
+    "full_checkpoint_step": 25,
+    "full_checkpoint_size": 1175134979,
+    "full_checkpoint_sha256": "fd89109c2a7953c6e590a3fc3dbeaad0b94f25d1f3a3d41b86a1a3f25596e74b",
+    "model_only_path": "/kaggle/working/glyph100-v03-p100-fp32-smoke-001/glyph100-v03-p100-smoke-model-only.pt",
+    "model_only_size": 393809523,
+    "model_only_sha256": "ce65c410535c02d7d36ae71f497bbcd3f42be88e18568cb1a1baa8b61f7c4a23",
+    "optimizer_present_before_export": true,
+    "scheduler_present_before_export": true
+  },
+  "metrics_logged": 26,
+  "supervised_tokens_logged": 1980,
+  "supervised_tokens_per_second": 123.97945383512418,
+  "wall_seconds_with_preflight_and_export": 228.94762947100003,
+  "purpose": "CUDA/P100 compatibility and throughput smoke only; not a quality training run",
+  "full_v0_3_rerun_was_intentionally_not_performed": true
+}

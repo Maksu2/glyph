@@ -1,0 +1,164 @@
+{
+  "created_at": "2026-06-24T18:58:34.341649+00:00",
+  "verdict": "A) ROCm fixed-mask safe mode stable; corrected SFT smoke v0.1 can be considered.",
+  "summary": {
+    "base_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+    "dataset": "glyph100_sft_tiny_overfit_fixedmask",
+    "output": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe",
+    "log_dir": "logs/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe",
+    "device": "ROCm/HIP on AMD Radeon RX 5500 XT",
+    "dtype": "fp32",
+    "mixed_precision": "disabled",
+    "batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "effective_tokens_per_step": 2048,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.0,
+    "grad_clip": 0.5,
+    "passes": [
+      {
+        "name": "safe50",
+        "log": "logs/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/safe50.log",
+        "complete": true,
+        "status": {
+          "non_finite": false,
+          "oom": false,
+          "crash": false,
+          "complete": true
+        },
+        "steps_logged": 50,
+        "first_loss": 4.054152,
+        "final_loss": 2.29404,
+        "first_avg_loss": 4.054152,
+        "final_avg_loss": 3.198437,
+        "max_grad_norm": 32.772957,
+        "min_grad_norm": 13.998941,
+        "final_grad_norm": 13.998941,
+        "param_norm_start": 798.416,
+        "param_norm_final": 798.556,
+        "logits_min_min": -254.193,
+        "logits_max_max": -58.872,
+        "logits_mean_final": -117.616,
+        "avg_tok_s": 469.1,
+        "eval_losses": [
+          {
+            "step": 10,
+            "val_loss": 3.605634,
+            "line": "2026-06-24 18:55:02 safe eval step=   10 | val_loss=3.605634 | batches=16"
+          },
+          {
+            "step": 20,
+            "val_loss": 2.989513,
+            "line": "2026-06-24 18:55:04 safe eval step=   20 | val_loss=2.989513 | batches=16"
+          },
+          {
+            "step": 30,
+            "val_loss": 2.557322,
+            "line": "2026-06-24 18:55:07 safe eval step=   30 | val_loss=2.557322 | batches=16"
+          },
+          {
+            "step": 40,
+            "val_loss": 2.384885,
+            "line": "2026-06-24 18:55:09 safe eval step=   40 | val_loss=2.384885 | batches=16"
+          },
+          {
+            "step": 50,
+            "val_loss": 2.198289,
+            "line": "2026-06-24 18:55:12 safe eval step=   50 | val_loss=2.198289 | batches=16"
+          },
+          {
+            "step": 50,
+            "val_loss": 2.08734,
+            "line": "2026-06-24 18:55:20 safe final_eval step=   50 | val_loss=2.087340 | batches=16"
+          }
+        ],
+        "first_val_loss": 3.605634,
+        "final_val_loss": 2.08734
+      },
+      {
+        "name": "safe200",
+        "log": "logs/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/safe200.log",
+        "complete": true,
+        "status": {
+          "non_finite": false,
+          "oom": false,
+          "crash": false,
+          "complete": true
+        },
+        "steps_logged": 44,
+        "first_loss": 4.106993,
+        "final_loss": 0.676262,
+        "first_avg_loss": 4.106993,
+        "final_avg_loss": 1.700138,
+        "max_grad_norm": 24.56411,
+        "min_grad_norm": 9.739478,
+        "final_grad_norm": 12.887895,
+        "param_norm_start": 798.416,
+        "param_norm_final": 798.865,
+        "logits_min_min": -294.684,
+        "logits_max_max": -61.001,
+        "logits_mean_final": -181.432,
+        "avg_tok_s": 515.6590909090909,
+        "eval_losses": [
+          {
+            "step": 25,
+            "val_loss": 3.123633,
+            "line": "2026-06-24 18:55:46 safe eval step=   25 | val_loss=3.123633 | batches=16"
+          },
+          {
+            "step": 50,
+            "val_loss": 2.428611,
+            "line": "2026-06-24 18:55:52 safe eval step=   50 | val_loss=2.428611 | batches=16"
+          },
+          {
+            "step": 75,
+            "val_loss": 1.45346,
+            "line": "2026-06-24 18:55:58 safe eval step=   75 | val_loss=1.453460 | batches=16"
+          },
+          {
+            "step": 100,
+            "val_loss": 1.086135,
+            "line": "2026-06-24 18:56:04 safe eval step=  100 | val_loss=1.086135 | batches=16"
+          },
+          {
+            "step": 125,
+            "val_loss": 1.013497,
+            "line": "2026-06-24 18:56:15 safe eval step=  125 | val_loss=1.013497 | batches=16"
+          },
+          {
+            "step": 150,
+            "val_loss": 0.540812,
+            "line": "2026-06-24 18:56:21 safe eval step=  150 | val_loss=0.540812 | batches=16"
+          },
+          {
+            "step": 175,
+            "val_loss": 0.420417,
+            "line": "2026-06-24 18:56:27 safe eval step=  175 | val_loss=0.420417 | batches=16"
+          },
+          {
+            "step": 200,
+            "val_loss": 0.282562,
+            "line": "2026-06-24 18:56:34 safe eval step=  200 | val_loss=0.282562 | batches=16"
+          },
+          {
+            "step": 200,
+            "val_loss": 0.182106,
+            "line": "2026-06-24 18:56:46 safe final_eval step=  200 | val_loss=0.182106 | batches=16"
+          }
+        ],
+        "first_val_loss": 3.123633,
+        "final_val_loss": 0.182106
+      }
+    ],
+    "any_failure": false,
+    "checkpoints": [
+      "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-final-step_000050.pt",
+      "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-final-step_000200.pt",
+      "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-latest.pt",
+      "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-step_000050-step_000050.pt",
+      "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-step_000100-step_000100.pt",
+      "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-step_000200-step_000200.pt"
+    ],
+    "emergency_reports": []
+  }
+}

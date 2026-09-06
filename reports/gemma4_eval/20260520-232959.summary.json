@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-20T23:37:58.869962+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260520-232959.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260520-232959.jsonl",
+  "count": 60,
+  "valid_count": 59,
+  "overall_avg": 2.898,
+  "averages": {
+    "continuation_fit": 3.271,
+    "polish": 3.424,
+    "coherence": 2.915,
+    "repetition": 2.644,
+    "safety": 5.0,
+    "overall": 2.898
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.898/5 na 59/60 próbkach. Trening: step=142320, train_loss=3.6958, val_loss=4.4116, lr=8.27e-05. Najsłabsze średnie: repetition=2.64, coherence=2.92; najmocniejsza metryka: polish=3.42.",
+  "training_stats": {
+    "step": 142320,
+    "total_steps": 200000,
+    "progress_pct": 71.16,
+    "loss": 3.6958,
+    "lr": 8.27e-05,
+    "last_eval": {
+      "ts": "2026-05-19 18:43:45",
+      "step": 142000,
+      "val_loss": 4.4116
+    },
+    "tokens_m": 1165.89
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.898. Najsłabsze metryki to 'repetition' (2.644) oraz 'coherence' (2.915). Wskaźniki straty (train_loss=3.6958, val_loss=4.4116) wskazują na rozbieżność, gdzie walidacyjna strata jest wyższa, co jest nieoptymalne. Model wykazuje tendencję do generowania powtarzających się fraz i nagłych, niepowiązanych skoków tematycznych, co jest widoczne w próbkach 'base_lit_02' i 'base_lit_04'.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarkowy wynosi 2.898. Najsłabsze metryki to 'repetition' (2.644) oraz 'coherence' (2.915). Wskaźniki straty (train_loss=3.6958, val_loss=4.4116) wskazują na rozbieżność, gdzie walidacyjna strata jest wyższa, co jest nieoptymalne. Model wykazuje tendencję do generowania powtarzających się fraz i nagłych, niepowiązanych skoków tematycznych, co jest widoczne w próbkach 'base_lit_02' i 'base_lit_04'.\"\n}\n```"
+}

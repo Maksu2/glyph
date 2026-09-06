@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-22T23:38:36.343978+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260522-233059.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260522-233059.jsonl",
+  "count": 60,
+  "valid_count": 58,
+  "overall_avg": 2.793,
+  "averages": {
+    "continuation_fit": 3.138,
+    "polish": 3.172,
+    "coherence": 2.845,
+    "repetition": 2.569,
+    "safety": 4.914,
+    "overall": 2.793
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.793/5 na 58/60 próbkach. Trening: step=200000, train_loss=3.6068, val_loss=4.3489, lr=3e-05. Najsłabsze średnie: repetition=2.57, coherence=2.85; najmocniejsza metryka: polish=3.17.",
+  "training_stats": {
+    "step": 200000,
+    "total_steps": 200000,
+    "progress_pct": 100.0,
+    "loss": 3.6068,
+    "lr": 3e-05,
+    "last_eval": {
+      "ts": "2026-05-22 04:17:49",
+      "step": 200000,
+      "val_loss": 4.3489
+    },
+    "tokens_m": 1638.4
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.793, co wskazuje na umiarką zdolność do kontynuacji tekstu na poziomie modelu bazowego. Najsłabsze metryki to 'repetition' (2.569) oraz 'coherence' (2.845), co sugeruje tendencję do powtarzania fraz i niestabilności tematycznej. W kontekście treningowym, train_loss (3.6068) jest niższy niż val_loss (4.3489), co jest oczekiwane, ale różnica wskazuje na nadmierne dopasowanie do danych treningowych. W próbkach widoczny jest powtarzający się problem z niepoprawnymi konstrukcjami gramatycznymi i niepasującymi elementami kontekstowymi (np. 'zrobiła na nim wrażenie').",
+  "raw_description_output": "```json\n{\n  \"description\": \"Ogólny wynik benchmarku wynosi 2.793, co wskazuje na umiarką zdolność do kontynuacji tekstu na poziomie modelu bazowego. Najsłabsze metryki to 'repetition' (2.569) oraz 'coherence' (2.845), co sugeruje tendencję do powtarzania fraz i niestabilności tematycznej. W kontekście treningowym, train_loss (3.6068) jest niższy niż val_loss (4.3489), co jest oczekiwane, ale różnica wskazuje na nadmierne dopasowanie do danych treningowych. W próbkach widoczny jest powtarzający się problem z niepoprawnymi konstrukcjami gramatycznymi i niepasującymi elementami kontekstowymi (np. 'zrobiła na nim wrażenie').\"\n}\n```"
+}

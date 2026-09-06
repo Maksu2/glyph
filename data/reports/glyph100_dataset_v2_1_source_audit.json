@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-06-01T04:47:23.994432+00:00",
+  "sources": [
+    {
+      "name": "FinetextPL-Edu",
+      "url": "https://huggingface.co/datasets/FinetextPL/FinetextPL-Edu",
+      "type": "educational Polish text",
+      "size": "100M<n<1B rows category; 494 parquet files, first files about 590 MB each",
+      "license": "odc-by according to HF metadata",
+      "sample_quality": "not sampled; dataset is gated and requires authentication",
+      "decision": "later",
+      "reason": "promising but gated and very large; do not download without separate approval/token"
+    },
+    {
+      "name": "Wikimedia Wikisource PL",
+      "url": "https://huggingface.co/datasets/wikimedia/wikisource",
+      "type": "public/source text archive",
+      "size": "pl config about 56 MB dataset / 34 MB download, 12,020 examples in HF metadata",
+      "license": "cc-by-sa-3.0 and gfdl according to HF metadata",
+      "sample_quality": "good enough for a controlled source-aware addition; contains legal/public documents and source texts",
+      "decision": "use",
+      "reason": "small, source-aware, cheap to sample/download, adds non-Wikipedia public text"
+    }
+  ]
+}

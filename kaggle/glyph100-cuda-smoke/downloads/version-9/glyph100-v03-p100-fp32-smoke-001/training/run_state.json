@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "run_id": "glyph100-v03-p100-fp32-smoke-001",
+  "current_step": 25,
+  "best_val_loss": 3.743634581565857,
+  "updated_at_utc": "2026-08-08T14:58:56.686383+00:00"
+}

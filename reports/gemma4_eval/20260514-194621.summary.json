@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-14T19:46:40.031159+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260514-194621.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260514-194621.jsonl",
+  "count": 1,
+  "valid_count": 1,
+  "overall_avg": 3.0,
+  "averages": {
+    "relevance": 3.0,
+    "polish": 3.0,
+    "coherence": 3.0,
+    "helpfulness": 3.0,
+    "safety": 5.0,
+    "overall": 3.0
+  }
+}

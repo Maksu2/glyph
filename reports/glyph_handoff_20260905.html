@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GLYPH — handoff 2026-09-05</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2em auto;padding:0 1em;line-height:1.55;color:#222}
+h1{border-bottom:2px solid #333}h2{color:#444;margin-top:1.6em}
+code{background:#f2f2f2;padding:1px 5px;border-radius:4px;font-size:.92em}
+pre{background:#f6f6f6;padding:1em;overflow:auto;border-radius:6px;font-size:.85em}
+table{border-collapse:collapse;margin:1em 0}th,td{border:1px solid #bbb;padding:5px 10px;text-align:left}
+.warn{background:#fff8e1;border-left:4px solid #e6a800;padding:.6em 1em;margin:1em 0}
+.small{color:#666;font-size:.85em}
+</style>
+</head>
+<body>
+<h1>GLYPH — stan na 2026-09-05 (handoff dla innego AI)</h1>
+
+<h2>1. Co to jest</h2>
+<p>Glyph-100M: własny mały model językowy (język polski), trenowany lokalnie na homelabie
+(AMD Radeon RX 5500 XT, ROCm/HIP 7.13.0, AdamW). Repo: <code>/home/maksu/ai-model</code>.</p>
+<div class="warn"><b>UWAGA: to nie jest repo git</b> — brak kontroli wersji. Każdą zmianę najpierw skopiuj/zarchiwizuj.</div>
+<p>Strona raportów: <code>http://192.168.100.105:8101/</code>, publikacja skryptem
+<code>scripts/publish_report_downloads.py</code> (113 linie, stdlib, bez argparse —
+<strong>każde uruchomienie publikuje, nie ma --dry-run ani --help</strong>).</p>
+
+<h2>2. Gdzie stoimy: v2.4.2 ukoronowany</h2>
+<ul>
+<li>Run 10k→15k (01.09, 6h59m44s, exit 0, log czysty: 0 Traceback/NaN/OOM): technicznie OK,
+ale loss to <b>plateau</b> — val minimum przy 11k (3.9538), finał 3.9755 @15k. 15k to był <i>latest</i>, nie <i>best</i>.</li>
+<li>Konfig runu: resume z 10k (loss 4.0289), kroki 10001→15000, batch 4 × accum 8 → 16384 tok/step,
+LR płaski ~1.99e-4→~1.98e-4, context 512, eval co 500, checkpoint co 2500. Tokeny: 81.92M w etapie,
+245.76M łącznie (~1.06 epoki). Throughput ~3275 tok/s, VRAM ~4.93 GiB.</li>
+<li>Matched eval 05.09 (CPU, deterministyczny, 20 promptów × presety conservative/normal, seed 20260717):
+10k vs 12.5k vs 15k + panel v2.3.1 44k. Plus ręczny przegląd semantyczny.</li>
+<li><b>Kanoniczny best v2.4.2: <code>checkpoints/glyph-100m-v2_4_2-15k/step_0015000.pt</code></b>
+(= <code>latest.pt</code>, zgodność 413/413 tensorów). Powody: najwyższy avg generacji (3.525),
+pairwise z 10k 12–9 i z 12.5k 19–4, najwięcej naturalnych zakończeń (10/40), 12.5k odrzucony
+(zapętlenie 24/40!), z 44k remisowo-korzystnie (13–11–16).</li>
+</ul>
+
+<h2>3. Tabela matched eval (przebieg 1, CPU, 120 próbek)</h2>
+<table>
+<tr><th>checkpoint</th><th>avg</th><th>mediana</th><th>naturalne</th><th>ucięcia</th><th>pętle</th></tr>
+<tr><td>v242_10k</td><td>3.450</td><td>4.0</td><td>6/40</td><td>34/40</td><td>13/40</td></tr>
+<tr><td>v242_12_5k</td><td>2.350</td><td>1.0</td><td>5/40</td><td>36/40</td><td>24/40</td></tr>
+<tr><td>v242_15k</td><td>3.525</td><td>4.0</td><td>10/40</td><td>33/40</td><td>13/40</td></tr>
+<tr><td>v231_44k</td><td>3.350</td><td>4.0</td><td>12/40</td><td>30/40</td><td>20/40</td></tr>
+</table>
+<p>Ręczny przegląd: ortografia czysta wszędzie; błędy faktograficzne powszechne u wszystkich
+(żaden checkpoint nie nadaje się faktograficznie); ucięcia wiąże limit 80 tokenów.</p>
+
+<h2>4. Kluczowe pliki (wszystkie zweryfikowane 05.09)</h2>
+<pre>reports/glyph100_v2_4_2_10k_15k_run_20260905.{json,md}   # raport końcowy runu
+reports/glyph100_v2_4_2_15k_matched_eval_20260905.{json,md} # wyniki evala + werdykt
+reports/glyph100_v2_4_2_15k_launch_20260901.{json,md}     # dane startu runu
+scripts/eval_glyph100_v242_15k_trajectory.py             # skrypt matched evala
+scripts/publish_report_downloads.py                      # publikacja na stronę
+checkpoints/glyph-100m-v2_4_2-{5k,10k,15k}/              # wagi (15k: step_0012500/0015000/latest.pt)
+checkpoints/glyph-100m-v2_3_1-{44k,45k,50k}/             # starsza linia + SFT-smoke na 44k
+data/sft/                                                # dane SFT (smoke v0_2/v0_3 z raportami)</pre>
+<p>Przy minimum val (11k) <b>nie ma checkpointu</b> (interval 2500). Log nie zapisał osobnego
+<code>final.pt</code> („Limited run complete”).</p>
+
+<h2>5. Ustalenia obowiązujące</h2>
+<ol>
+<li>Bez matched evala nie startować 20k ani SFT — eval zrobiony 05.09, furtka otwarta, ale <b>decyzji o 20k/SFT brak</b>.</li>
+<li>15k traktować jako best v2.4.2 mimo val powyżej minimum (reguła decyzji z raportu).</li>
+<li>Porównywać tylko komórki z tego samego przebiegu (dryf CPU vs ROCm znany i opisany).</li>
+</ol>
+
+<h2>6. Infrastruktura AI wokół projektu</h2>
+<ul>
+<li><b>Hermes</b> (centralny agent, homelab, model Muse Spark): ma sesję roboczą GLYPH i pamięta
+konwencję raportową. Most plikowy do Muse Code: <code>/opt/hermes/data/bridge/</code>
+(runner systemd, allow-lista repo zawiera <code>/home/maksu/ai-model</code>).</li>
+<li><b>Muse Code</b> na homelabie: tryb YOLO jako <code>maksu</code> z NOPASSWD sudo.
+Sandbox martwy (AppArmor hosta blokuje user-namespaces) — shell działa bez izolacji, trzymać się workspace.</li>
+<li>Sesje z telefonu (Hermex) widać w Deskopie w zakładce <b>api</b>, desktopowe w <b>sessions</b> —
+dane wspólne, to tylko podział widoku.</li>
+<li>Koszty Hermes: ~$0.03–0.11/mies. (limity $5/$10).</li>
+</ul>
+
+<h2>7. Pending / propozycje następnych kroków</h2>
+<ol>
+<li>Decyzja: kontrolowany 20k vs SFT na 15k vs stop i spisanie wniosków.</li>
+<li>Sprawdzić, czy najnowsze raporty są już na stronie download.</li>
+<li>Ewentualnie: git-init dla ai-model (rozważyć z właścicielem; dziś brak historii).</li>
+</ol>
+
+<p class="small">Wygenerowano 2026-09-05 na podstawie plików repo (weryfikacja: raporty JSON/MD, checkpointy,
+skrypty). Liczby pochodzą z raportów z 05.09; val 10k=3.9023 pochodzi ze starszego raportu P100
+(inny sprzęt) — odcinek 10k→10.5k nie jest ściśle ciągły, patrz raport.</p>
+</body>
+</html>

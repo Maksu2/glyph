@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-18T01:42:58.944206+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260518-013142.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260518-013142.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.75,
+  "averages": {
+    "continuation_fit": 3.117,
+    "polish": 3.283,
+    "coherence": 2.833,
+    "repetition": 2.333,
+    "safety": 4.983,
+    "overall": 2.75
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.75/5 na 60/60 próbkach. Trening: step=118230, train_loss=3.7973, val_loss=4.5209, lr=0.000129. Najsłabsze średnie: repetition=2.33, coherence=2.83; najmocniejsza metryka: polish=3.28.",
+  "training_stats": {
+    "step": 118230,
+    "total_steps": 200000,
+    "progress_pct": 59.114999999999995,
+    "loss": 3.7973,
+    "lr": 0.000129,
+    "last_eval": {
+      "ts": "2026-05-18 01:08:41",
+      "step": 118000,
+      "val_loss": 4.5209
+    },
+    "tokens_m": 968.54
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.75/5. Najsłabsze metryki to 'repetition' (2.333) oraz 'coherence' (2.833). W kontekście treningowym, train_loss (3.7973) jest niższy niż val_loss (4.5209), co sugeruje potencjalny overfitting na danych treningowych. Model wykazuje tendencję do generowania niepowiązanych fraz i nagłych zmian tematu, co jest widoczne w przypadkach 'base_lit_02' i 'base_lit_05'.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarkowy wynosi 2.75/5. Najsłabsze metryki to 'repetition' (2.333) oraz 'coherence' (2.833). W kontekście treningowym, train_loss (3.7973) jest niższy niż val_loss (4.5209), co sugeruje potencjalny overfitting na danych treningowych. Model wykazuje tendencję do generowania niepowiązanych fraz i nagłych zmian tematu, co jest widoczne w przypadkach 'base_lit_02' i 'base_lit_05'.\"\n}\n```"
+}

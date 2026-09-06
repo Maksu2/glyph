@@ -1,0 +1,247 @@
+{
+  "created_at": "2026-06-24T19:25:23.887693+00:00",
+  "verdict": "PASS: fixed label mask supervises the first assistant response token.",
+  "old_boundary": "i <= assistant_pos",
+  "new_boundary": "i < assistant_pos",
+  "dataset": "data/sft/glyph100_sft_smoke_v0.jsonl",
+  "tokenizer": "data/processed/tokenizer.model",
+  "checks": {
+    "first_Loss_token_supervised": true,
+    "first_Nie_token_supervised": true,
+    "first_Projekt_token_supervised": true,
+    "end_token_supervised_all_examples": true,
+    "padding_ignore_index_minus_100": true,
+    "prompt_tokens_not_supervised_all_examples": true,
+    "no_examples_without_assistant_labels": true
+  },
+  "dataset_counts": {
+    "train_records": 1500,
+    "usable_after_fix": 1500,
+    "without_assistant_labels_after_fix": 0,
+    "total_supervised_labels_old": 27837,
+    "total_supervised_labels_new": 29337,
+    "supervised_labels_gained": 1500,
+    "padding_batch_shape": [
+      4,
+      44
+    ]
+  },
+  "examples": [
+    {
+      "id": "glyph100-sft-smoke-v0-0001",
+      "category": "anty_petle",
+      "instruction": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Jednym zdaniem.",
+      "response": "Loss pokazuje, czy model uczy się przewidywać dane treningowe lub walidacyjne.",
+      "template": "<|user|>\nNie rozwijaj bez końca: dlaczego warto mierzyć loss? Jednym zdaniem.\n<|assistant|>\nLoss pokazuje, czy model uczy się przewidywać dane treningowe lub walidacyjne.\n<|end|>\n",
+      "token_count": 42,
+      "fits_context": true,
+      "assistant_pos_in_x": 19,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Los",
+      "old": {
+        "boundary": "i <= assistant_pos",
+        "first_supervised_index": 20,
+        "first_supervised_piece": "s",
+        "supervised_labels": 21,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true
+      },
+      "new": {
+        "boundary": "i < assistant_pos",
+        "first_supervised_index": 19,
+        "first_supervised_piece": "▁Los",
+        "first_response_token_is_supervised": true,
+        "supervised_labels": 22,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true,
+        "first_ten_supervised_pieces": [
+          "▁Los",
+          "s",
+          "▁pokazuje",
+          ",",
+          "▁czy",
+          "▁model",
+          "▁uczy",
+          "▁się",
+          "▁przewi",
+          "dy"
+        ]
+      }
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0003",
+      "category": "ostrozne_odpowiedzi_przy_niepewnosci",
+      "instruction": "Czy ta diagnoza jest pewna? Wskaż ograniczenie.",
+      "response": "Nie. Bez pełnych danych można mówić tylko o najbardziej prawdopodobnym wyjaśnieniu.",
+      "template": "<|user|>\nCzy ta diagnoza jest pewna? Wskaż ograniczenie.\n<|assistant|>\nNie. Bez pełnych danych można mówić tylko o najbardziej prawdopodobnym wyjaśnieniu.\n<|end|>\n",
+      "token_count": 37,
+      "fits_context": true,
+      "assistant_pos_in_x": 16,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Nie",
+      "old": {
+        "boundary": "i <= assistant_pos",
+        "first_supervised_index": 17,
+        "first_supervised_piece": ".",
+        "supervised_labels": 19,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true
+      },
+      "new": {
+        "boundary": "i < assistant_pos",
+        "first_supervised_index": 16,
+        "first_supervised_piece": "▁Nie",
+        "first_response_token_is_supervised": true,
+        "supervised_labels": 20,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true,
+        "first_ten_supervised_pieces": [
+          "▁Nie",
+          ".",
+          "▁Bez",
+          "▁peł",
+          "nych",
+          "▁danych",
+          "▁można",
+          "▁mówić",
+          "▁tylko",
+          "▁o"
+        ]
+      }
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0002",
+      "category": "krotkie_poprawki_tekstu",
+      "instruction": "Popraw tekst: Projekt może być ciekawy, ale obecnie ma zbyt wiele funkcji planowanych na start.",
+      "response": "Projekt jest ciekawy, ale ma zbyt szeroki zakres na start.",
+      "template": "<|user|>\nPopraw tekst: Projekt może być ciekawy, ale obecnie ma zbyt wiele funkcji planowanych na start.\n<|assistant|>\nProjekt jest ciekawy, ale ma zbyt szeroki zakres na start.\n<|end|>\n",
+      "token_count": 38,
+      "fits_context": true,
+      "assistant_pos_in_x": 23,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Projekt",
+      "old": {
+        "boundary": "i <= assistant_pos",
+        "first_supervised_index": 24,
+        "first_supervised_piece": "▁jest",
+        "supervised_labels": 13,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true
+      },
+      "new": {
+        "boundary": "i < assistant_pos",
+        "first_supervised_index": 23,
+        "first_supervised_piece": "▁Projekt",
+        "first_response_token_is_supervised": true,
+        "supervised_labels": 14,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true,
+        "first_ten_supervised_pieces": [
+          "▁Projekt",
+          "▁jest",
+          "▁ciekawy",
+          ",",
+          "▁ale",
+          "▁ma",
+          "▁zbyt",
+          "▁szeroki",
+          "▁zakres",
+          "▁na"
+        ]
+      }
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0004",
+      "category": "anty_petle",
+      "instruction": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?",
+      "response": "Nie. Lepsza jest krótka, konkretna odpowiedź niż długi tekst bez treści.",
+      "template": "<|user|>\nOdpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?\n<|assistant|>\nNie. Lepsza jest krótka, konkretna odpowiedź niż długi tekst bez treści.\n<|end|>\n",
+      "token_count": 45,
+      "fits_context": true,
+      "assistant_pos_in_x": 24,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Nie",
+      "old": {
+        "boundary": "i <= assistant_pos",
+        "first_supervised_index": 25,
+        "first_supervised_piece": ".",
+        "supervised_labels": 19,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true
+      },
+      "new": {
+        "boundary": "i < assistant_pos",
+        "first_supervised_index": 24,
+        "first_supervised_piece": "▁Nie",
+        "first_response_token_is_supervised": true,
+        "supervised_labels": 20,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true,
+        "first_ten_supervised_pieces": [
+          "▁Nie",
+          ".",
+          "▁Le",
+          "p",
+          "sza",
+          "▁jest",
+          "▁kró",
+          "tka",
+          ",",
+          "▁konkre"
+        ]
+      }
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0005",
+      "category": "krotkie_poprawki_tekstu",
+      "instruction": "Usuń lanie wody: Warto byłoby dokonać porównania kilku wariantów.",
+      "response": "Warto porównać kilka wariantów.",
+      "template": "<|user|>\nUsuń lanie wody: Warto byłoby dokonać porównania kilku wariantów.\n<|assistant|>\nWarto porównać kilka wariantów.\n<|end|>\n",
+      "token_count": 26,
+      "fits_context": true,
+      "assistant_pos_in_x": 16,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Warto",
+      "old": {
+        "boundary": "i <= assistant_pos",
+        "first_supervised_index": 17,
+        "first_supervised_piece": "▁porówna",
+        "supervised_labels": 8,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true
+      },
+      "new": {
+        "boundary": "i < assistant_pos",
+        "first_supervised_index": 16,
+        "first_supervised_piece": "▁Warto",
+        "first_response_token_is_supervised": true,
+        "supervised_labels": 9,
+        "end_token_supervised": true,
+        "prompt_mask_ok": true,
+        "assistant_token_masked": true,
+        "first_ten_supervised_pieces": [
+          "▁Warto",
+          "▁porówna",
+          "ć",
+          "▁kilka",
+          "▁warian",
+          "tów",
+          ".",
+          "▁",
+          "<|end|>"
+        ]
+      }
+    }
+  ],
+  "previous_sft_smoke_quality_status": "invalid-for-quality",
+  "previous_sft_smoke_invalid_reason": "label mask off-by-one bug masked first assistant response token"
+}

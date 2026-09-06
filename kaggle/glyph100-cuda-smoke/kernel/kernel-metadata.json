@@ -1,0 +1,17 @@
+{
+  "id": "maksymilianputa/glyph-100m-v0-3-p100-cuda-smoke",
+  "title": "Glyph-100M v0.3 P100 CUDA smoke",
+  "code_file": "glyph100_cuda_smoke.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "maksymilianputa/glyph100-sft-cuda-smoke-input"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

@@ -1,0 +1,77 @@
+{
+  "report_id": "glyph_hdd_cleanup_20260831",
+  "completed_at_utc": "2026-08-31T19:48:34Z",
+  "status": "complete",
+  "training_active_after_cleanup": false,
+  "training_containers_active_after_cleanup": false,
+  "actions": {
+    "old_checkpoint_history": {
+      "path": "/mnt/data/mac/GlyphArchive/glyph-cleanup-20260522-170209/ai-model/checkpoints/steps",
+      "before_files": 256,
+      "after_files": 4,
+      "before_bytes": 85344040919,
+      "after_bytes": 1307955452,
+      "reclaimed_bytes": 84036085467,
+      "kept_files": [
+        "step_0050000.pt",
+        "step_0100000.pt",
+        "step_0150000.pt",
+        "step_0199500.pt"
+      ],
+      "kept_sha256": {
+        "step_0050000.pt": "3894cf8daf0152ecf8903863dc87c9df4c5fba77fc4a7166eabe5ed75a3bd46f",
+        "step_0100000.pt": "4dcb62fb3e28b9d8e2877e8084a402fea58c2cc796da39f015bb1c19557666da",
+        "step_0150000.pt": "c98eb05a9df1444a21f4568bcc214d1f196bcc05e2bb06a99a5057b70b56c0cb",
+        "step_0199500.pt": "8e7b14fdb09348dcfa92953e658c462a6c75e5b410579d28acfedb9b163aaecb"
+      }
+    },
+    "bambu": {
+      "path": "/mnt/data/mac/GlyphArchive/glyph-cleanup-20260522-170209/bambu",
+      "before_bytes": 76016438869,
+      "removed": true
+    },
+    "gemma": {
+      "path": "/mnt/data/mac/GlyphArchive/glyph-cold-20260704/models/gemma4",
+      "before_bytes": 5335290128,
+      "removed": true,
+      "repo_symlink_removed": "/home/maksu/ai-model/models/gemma4"
+    },
+    "raw_corpus": {
+      "source_path": "/mnt/data/mac/GlyphArchive/glyph-cold-20260704/data/raw/corpus.txt",
+      "archive_path": "/mnt/data/mac/GlyphArchive/glyph-cold-20260704/data/raw/corpus.txt.zst",
+      "original_bytes": 19676304049,
+      "archive_bytes": 7476259252,
+      "reclaimed_bytes": 12200044797,
+      "original_sha256": "1f0eca37955dd232f68eb50348c2b5581c39249b442d5413561212c8b79d2aa9",
+      "archive_test": "passed",
+      "decompressed_sha_match": true
+    },
+    "clean_corpus": {
+      "source_path": "/mnt/data/mac/GlyphArchive/glyph-cold-20260704/data/processed/corpus_clean.txt",
+      "archive_path": "/mnt/data/mac/GlyphArchive/glyph-cold-20260704/data/processed/corpus_clean.txt.zst",
+      "original_bytes": 19367506505,
+      "archive_bytes": 7350584666,
+      "reclaimed_bytes": 12016921839,
+      "original_sha256": "feadf70827e210efe64a3cbee4911fd676dc8291d7fcdecff071529a36a824af",
+      "archive_test": "passed",
+      "decompressed_sha_match": true,
+      "old_repo_symlink_removed": "/home/maksu/ai-model/data/processed/corpus_clean.txt"
+    }
+  },
+  "estimated_total_reclaimed_bytes": 189604781100,
+  "estimated_total_reclaimed_gib": 176.58,
+  "post_cleanup_du_sh": {
+    "glyph_cleanup_archive": "2.8G",
+    "glyph_cold_storage": "45G",
+    "active_repo": "32G"
+  },
+  "intentionally_untouched": [
+    "current Glyph checkpoints",
+    "tokens.bin and val_tokens.bin",
+    "other datasets",
+    "tokenizer",
+    "code and configuration",
+    "reports and secrets"
+  ],
+  "irreversible_actions": ["Bambu recordings", "Gemma archive"]
+}

@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-05-31T20:32:20.257860+00:00",
+  "raw_corpus_lines": 7793749,
+  "clean_corpus_lines": 7747761,
+  "files": [
+    {
+      "path": "data/raw/corpus.txt",
+      "bytes": 19676304049,
+      "modified": "2026-03-31T17:08:14.528525+00:00"
+    },
+    {
+      "path": "data/processed/corpus_clean.txt",
+      "bytes": 19367506505,
+      "modified": "2026-03-31T17:39:27.084306+00:00"
+    },
+    {
+      "path": "data/processed/tokens.bin",
+      "bytes": 10254778924,
+      "modified": "2026-03-31T20:29:51.497880+00:00"
+    },
+    {
+      "path": "data/processed/val_tokens.bin",
+      "bytes": 100000000,
+      "modified": "2026-05-14T04:52:51.273493+00:00"
+    },
+    {
+      "path": "data/processed/glyph100_train.bin",
+      "bytes": 235741358,
+      "modified": "2026-05-26T05:28:33.822318+00:00"
+    },
+    {
+      "path": "data/processed/glyph100_val.bin",
+      "bytes": 2479896,
+      "modified": "2026-05-26T05:28:33.275315+00:00"
+    },
+    {
+      "path": "data/processed/tokenizer.model",
+      "bytes": 498704,
+      "modified": "2026-03-31T18:11:39.630485+00:00"
+    },
+    {
+      "path": "data/raw/wolnelektury_cache.json",
+      "bytes": 5196264,
+      "modified": "2026-03-31T14:58:20.053401+00:00"
+    }
+  ],
+  "hf_wikipedia_cache_files": [
+    {
+      "path": "/home/maksu/.cache/huggingface/datasets/wikimedia___wikipedia/20231101.pl/0.0.0/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/dataset_info.json",
+      "bytes": 1699
+    },
+    {
+      "path": "/home/maksu/.cache/huggingface/datasets/wikimedia___wikipedia/20231101.pl/0.0.0/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/wikipedia-train-00005-of-00006.arrow",
+      "bytes": 445395136
+    },
+    {
+      "path": "/home/maksu/.cache/huggingface/datasets/wikimedia___wikipedia/20231101.pl/0.0.0/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/wikipedia-train-00000-of-00006.arrow",
+      "bytes": 501160544
+    },
+    {
+      "path": "/home/maksu/.cache/huggingface/datasets/wikimedia___wikipedia/20231101.pl/0.0.0/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/wikipedia-train-00003-of-00006.arrow",
+      "bytes": 500135016
+    },
+    {
+      "path": "/home/maksu/.cache/huggingface/datasets/wikimedia___wikipedia/20231101.pl/0.0.0/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/wikipedia-train-00001-of-00006.arrow",
+      "bytes": 500961520
+    },
+    {
+      "path": "/home/maksu/.cache/huggingface/datasets/wikimedia___wikipedia/20231101.pl/0.0.0/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/wikipedia-train-00004-of-00006.arrow",
+      "bytes": 501044216
+    },
+    {
+      "path": "/home/maksu/.cache/huggingface/datasets/wikimedia___wikipedia/20231101.pl/0.0.0/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/wikipedia-train-00002-of-00006.arrow",
+      "bytes": 502082784
+    }
+  ],
+  "stage1_candidate": {
+    "metadata": {
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_stage1_candidate",
+      "scope": "stage 1 sanity candidate; not final cleaner corpus",
+      "train_bin": "data/processed/glyph100_train.bin",
+      "val_bin": "data/processed/glyph100_val.bin",
+      "tokenizer": "data/processed/tokenizer.model",
+      "vocab_size": 16000,
+      "context_len": 512,
+      "train_docs": 247439,
+      "val_docs": 2561,
+      "train_tokens": 117870679,
+      "val_tokens": 1239948,
+      "created_at": "2026-05-26 05:28:33 UTC",
+      "filter_report": "data/reports/glyph_100m_dataset_report.md",
+      "stats_json": "data/reports/glyph_100m_dataset_stats.json"
+    },
+    "stats_summary": {
+      "dataset_name": "glyph100_stage1_candidate",
+      "seen_docs": 289973,
+      "accepted_docs": 250000,
+      "train_tokens": 117870679,
+      "val_tokens": 1239948,
+      "total_tokens": 119110627,
+      "source_counts": {
+        "legacy_mixed_paragraph_like": 219331,
+        "legacy_long_article_like": 30669
+      },
+      "rejection_reasons": {
+        "repeated_ngrams": 20969,
+        "single_word_repetition": 8191,
+        "too_short": 7134,
+        "boilerplate_phrase": 5458,
+        "very_long_line": 4297,
+        "too_long": 1017,
+        "too_many_urls": 811,
+        "low_unique_word_ratio": 773,
+        "low_alpha_ratio": 139,
+        "too_much_punctuation_or_symbols": 18,
+        "low_polish_signal": 12,
+        "near_duplicate_prefix": 10
+      }
+    }
+  },
+  "source_metadata_status": {
+    "data/raw/corpus.txt": "monolithic one-document-per-line corpus; original source metadata not preserved per line",
+    "huggingface_wikipedia_cache": "source-aware id/url/title/text available through datasets cache",
+    "wolnelektury_cache": "book metadata list available; text must be fetched again or reconstructed from legacy corpus",
+    "glyph100_train.bin": "token-only; no source metadata retained"
+  },
+  "decision": "Use cached Wikipedia as true source-aware input, optional Wolne Lektury API fetch, and legacy_mixed_corpus only as filtered coarse source. Do not treat legacy corpus as final clean attribution."
+}

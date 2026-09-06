@@ -1,0 +1,1797 @@
+
+
+###############################################################################
+# SCOPE, SAFETY, AND TEST MEDIUM
+###############################################################################
+Target: Sony/Optiarc DVD RW AD-5260S.
+Current medium: factory-pressed movie DVD, correctly seated and clamped (user-confirmed).
+Physical observations supplied by user: tray and pickup move, laser emits, disc never rotates.
+Goal: compare firmware/media behavior against the earlier audio-CD diagnostic.
+All media commands are read-only. No burn/write/erase/format/firmware/reset/eject was used.
+A LOAD+START command was used once on the already-closed tray to request fresh recognition.
+
+===== COMMAND: date --iso-8601=ns =====
+2026-08-26T18:22:36,676720998+00:00
+[exit=0]
+
+===== COMMAND: id =====
+uid=1000(maksu) gid=1000(maksu) groups=1000(maksu),4(adm),24(cdrom),27(sudo),30(dip),44(video),46(plugdev),101(lxd),988(docker),993(render),996(input)
+[exit=0]
+
+===== COMMAND: uname -a =====
+Linux maxoo-pc 6.8.0-138-generic #138-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul 31 22:41:49 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+[exit=0]
+
+===== COMMAND: cat /etc/os-release =====
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+[exit=0]
+
+
+###############################################################################
+# PREVIOUS AUDIO-CD REPORT BASELINE
+###############################################################################
+
+===== COMMAND: sha256sum /tmp/optiarc-diagnostics.txt =====
+b76b82d03248c63812f477acd9d9c599da3126ff4f0b206270af2c64b43001cb  /tmp/optiarc-diagnostics.txt
+[exit=0]
+
+===== COMMAND: stat -c %n\ size=%s\ mtime=%y\ mode=%a\ owner=%U:%G /tmp/optiarc-diagnostics.txt =====
+/tmp/optiarc-diagnostics.txt size=84048 mtime=2026-08-26 17:53:25.774081679 +0000 mode=600 owner=maksu:maksu
+[exit=0]
+
+Selected decisive lines from previous report:
+986:2026-08-26T17:36:03.385965+00:00 maxoo-pc kernel: ata6: SATA link up 1.5 Gbps (SStatus 113 SControl 330)
+1055:No current profile
+1175:No current profile
+1310:Additional sense: Incompatible medium installed
+1317:Additional sense: Incompatible medium installed
+1324:Additional sense: Incompatible medium installed
+1341:Additional sense: Incompatible medium installed
+1387:Additional sense: Incompatible medium installed
+1399:Additional sense: Incompatible medium installed
+1406:Additional sense: Incompatible medium installed
+1413:Additional sense: Incompatible medium installed
+1428:Additional sense: Incompatible medium installed
+1442:Additional sense: Incompatible medium installed
+1459:Additional sense: Incompatible medium installed
+1493:Additional sense: Incompatible medium installed
+1510:Additional sense: Incompatible medium installed
+1546:CDROM_DRIVE_STATUS = 1 CDS_NO_DISC
+1547:CDROM_DISC_STATUS = 1 CDS_NO_DISC
+1763::-( no media mounted, exiting...
+1983:# DIAGNOSTIC SUMMARY
+1993:7. GET EVENT STATUS NOTIFICATION returns 00 06 04 5e 00 00 00 00:
+1997:   dvd+rw-mediainfo says no media mounted; smartctl says device is NOT READY.
+
+
+###############################################################################
+# CURRENT DEVICE, CONTROLLER, AND TRANSPORT INVENTORY
+###############################################################################
+
+===== COMMAND: ls -l /dev/sr0 /dev/sg3 /dev/cdrom =====
+lrwxrwxrwx  1 root root      3 Aug 26 17:36 /dev/cdrom -> sr0
+crw-rw----+ 1 root cdrom 21, 3 Aug 26 17:36 /dev/sg3
+brw-rw----+ 1 root cdrom 11, 0 Aug 26 17:36 /dev/sr0
+[exit=0]
+
+===== COMMAND: getfacl -p /dev/sr0 /dev/sg3 =====
+# file: /dev/sr0
+# owner: root
+# group: cdrom
+user::rw-
+user:maksu:rw-
+group::rw-
+mask::rw-
+other::---
+
+# file: /dev/sg3
+# owner: root
+# group: cdrom
+user::rw-
+user:maksu:rw-
+group::rw-
+mask::rw-
+other::---
+
+[exit=0]
+
+===== COMMAND: lsblk -e 7 -o NAME\,KNAME\,PATH\,MAJ:MIN\,TYPE\,TRAN\,VENDOR\,MODEL\,REV\,SERIAL\,SIZE\,RO\,RM\,HOTPLUG\,MOUNTPOINTS\,FSTYPE\,LABEL =====
+NAME                      KNAME     PATH                              MAJ:MIN TYPE TRAN   VENDOR   MODEL                       REV SERIAL                    SIZE RO RM HOTPLUG MOUNTPOINTS FSTYPE      LABEL
+sda                       sda       /dev/sda                            8:0   disk sata   ATA      ST4000LM024-2AN1           0001 WCK8BVJ2                  3.6T  0  0       0                         
+└─sda1                    sda1      /dev/sda1                           8:1   part                                                                           3.6T  0  0       0 /mnt/data   ext4        
+sdb                       sdb       /dev/sdb                            8:16  disk sata   ATA      ST3500418AS                CC46 9VMVAV0C                465.8G  0  0       0                         
+├─sdb1                    sdb1      /dev/sdb1                           8:17  part                                                                           9.8G  0  0       0             ntfs        WinRE
+├─sdb2                    sdb2      /dev/sdb2                           8:18  part                                                                         236.7G  0  0       0             ntfs        Win7
+└─sdb3                    sdb3      /dev/sdb3                           8:19  part                                                                         219.3G  0  0       0             ntfs        Nowy
+sdc                       sdc       /dev/sdc                            8:32  disk sata   ATA      ADATA SU800                  8B 2K402LAK9HDH            476.9G  0  0       0                         
+├─sdc1                    sdc1      /dev/sdc1                           8:33  part                                                                             1G  0  0       0 /boot/efi   vfat        
+├─sdc2                    sdc2      /dev/sdc2                           8:34  part                                                                             2G  0  0       0 /boot       ext4        
+└─sdc3                    sdc3      /dev/sdc3                           8:35  part                                                                         473.9G  0  0       0             LVM2_member 
+  └─ubuntu--vg-ubuntu--lv dm-0      /dev/mapper/ubuntu--vg-ubuntu--lv 252:0   lvm                                                                          473.9G  0  0       0 /           ext4        
+sr0                       sr0       /dev/sr0                           11:0   rom  sata   Optiarc  Optiarc DVD RW AD-5260S    1.00 Optiarc_DVD_RW_AD-5260S  1024M  0  1       0                         
+nvme0n1                   nvme0n1   /dev/nvme0n1                      259:0   disk nvme            Lexar SSD NM620 512GB   SN15023 QFS959R000542P1103      476.9G  0  0       0                         
+├─nvme0n1p1               nvme0n1p1 /dev/nvme0n1p1                    259:1   part nvme                                                                      100M  0  0       0             vfat        
+├─nvme0n1p2               nvme0n1p2 /dev/nvme0n1p2                    259:2   part nvme                                                                       16M  0  0       0                         
+├─nvme0n1p3               nvme0n1p3 /dev/nvme0n1p3                    259:3   part nvme                                                                      476G  0  0       0             ntfs        
+└─nvme0n1p4               nvme0n1p4 /dev/nvme0n1p4                    259:4   part nvme                                                                      822M  0  0       0             ntfs        
+[exit=0]
+
+===== COMMAND: lsscsi -g -v =====
+[0:0:0:0]    disk    ATA      ST4000LM024-2AN1 0001  /dev/sda   /dev/sg0 
+  dir: /sys/bus/scsi/devices/0:0:0:0  [/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata1/host0/target0:0:0/0:0:0:0]
+[1:0:0:0]    disk    ATA      ST3500418AS      CC46  /dev/sdb   /dev/sg1 
+  dir: /sys/bus/scsi/devices/1:0:0:0  [/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata2/host1/target1:0:0/1:0:0:0]
+[4:0:0:0]    disk    ATA      ADATA SU800      8B    /dev/sdc   /dev/sg2 
+  dir: /sys/bus/scsi/devices/4:0:0:0  [/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata5/host4/target4:0:0/4:0:0:0]
+[5:0:0:0]    cd/dvd  Optiarc  DVD RW AD-5260S  1.00  /dev/sr0   /dev/sg3 
+  dir: /sys/bus/scsi/devices/5:0:0:0  [/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata6/host5/target5:0:0/5:0:0:0]
+[N:0:0:1]    dsk/nvm Lexar SSD NM620 512GB__1                   /dev/nvme0n1  -        
+  dir: /sys/class/nvme/nvme0/nvme0n1  [/sys/devices/pci0000:00/0000:00:01.1/0000:01:00.0/nvme/nvme0/nvme0n1]
+[exit=0]
+
+===== COMMAND: lsscsi -t =====
+[0:0:0:0]    disk    sata:5000c500e049fac5           /dev/sda 
+[1:0:0:0]    disk    sata:5000c5002d4b77cb           /dev/sdb 
+[4:0:0:0]    disk    sata:5707c1810097a0d7           /dev/sdc 
+[5:0:0:0]    cd/dvd  sata:                           /dev/sr0 
+[N:0:0:1]    disk    pcie 0x1d97:0x1202                         /dev/nvme0n1
+[exit=0]
+
+----- /proc/scsi/scsi -----
+Attached devices:
+Host: scsi0 Channel: 00 Id: 00 Lun: 00
+  Vendor: ATA      Model: ST4000LM024-2AN1 Rev: 0001
+  Type:   Direct-Access                    ANSI  SCSI revision: 05
+Host: scsi1 Channel: 00 Id: 00 Lun: 00
+  Vendor: ATA      Model: ST3500418AS      Rev: CC46
+  Type:   Direct-Access                    ANSI  SCSI revision: 05
+Host: scsi4 Channel: 00 Id: 00 Lun: 00
+  Vendor: ATA      Model: ADATA SU800      Rev: 8B  
+  Type:   Direct-Access                    ANSI  SCSI revision: 05
+Host: scsi5 Channel: 00 Id: 00 Lun: 00
+  Vendor: Optiarc  Model: DVD RW AD-5260S  Rev: 1.00
+  Type:   CD-ROM                           ANSI  SCSI revision: 05
+
+----- /proc/sys/dev/cdrom/info -----
+CD-ROM information, Id: cdrom.c 3.20 2003/12/17
+
+drive name:		sr0
+drive speed:		48
+drive # of slots:	1
+Can close tray:		1
+Can open tray:		1
+Can lock tray:		1
+Can change speed:	1
+Can select disk:	0
+Can read multisession:	1
+Can read MCN:		1
+Reports media changed:	1
+Can play audio:		1
+Can write CD-R:		1
+Can write CD-RW:	1
+Can read DVD:		1
+Can write DVD-R:	1
+Can write DVD-RAM:	0
+Can read MRW:		0
+Can write MRW:		0
+Can write RAM:		1
+
+
+Resolved SCSI path: /sys/devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata6/host5/target5:0:0/5:0:0:0
+
+===== COMMAND: lspci -nnk -s 03:00.1 =====
+03:00.1 SATA controller [0106]: Advanced Micro Devices, Inc. [AMD] 400 Series Chipset SATA Controller [1022:43c8] (rev 01)
+	Subsystem: ASMedia Technology Inc. 400 Series Chipset SATA Controller [1b21:1062]
+	Kernel driver in use: ahci
+	Kernel modules: ahci
+[exit=0]
+
+===== COMMAND: lspci -nnvv -s 03:00.1 =====
+03:00.1 SATA controller [0106]: Advanced Micro Devices, Inc. [AMD] 400 Series Chipset SATA Controller [1022:43c8] (rev 01) (prog-if 01 [AHCI 1.0])
+	Subsystem: ASMedia Technology Inc. 400 Series Chipset SATA Controller [1b21:1062]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin B routed to IRQ 43
+	IOMMU group: 17
+	Region 5: Memory at fca80000 (32-bit, non-prefetchable) [size=128K]
+	Expansion ROM at fca00000 [disabled] [size=512K]
+	Capabilities: <access denied>
+	Kernel driver in use: ahci
+	Kernel modules: ahci
+
+[exit=0]
+
+
+###############################################################################
+# CURRENT SYSFS, UDEV, AND UDISKS MEDIA STATE
+###############################################################################
+vendor=Optiarc  
+model=DVD RW AD-5260S  
+rev=1.00 
+type=5 
+state=running 
+queue_depth=1 
+queue_type=none 
+timeout=30 
+eh_timeout=10 
+device_blocked=0 
+device_busy=0 
+blacklist=NOREPORTLUN 
+iorequest_cnt=0xc51 
+iodone_cnt=0xc51 
+ioerr_cnt=0x6 
+iotmo_cnt=0x3a9 
+block/size=2097151 
+block/ro=0 
+block/removable=1 
+block/events=media_change eject_request 
+block/events_async=
+block/events_poll_msecs=-1 
+block/stat=       2        7      264       36        0        0        0        0        0       37       36        0        0        0        0        0        0 
+block/inflight=       0        0 
+
+===== COMMAND: udevadm info --query=all --name=/dev/sr0 =====
+P: /devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata6/host5/target5:0:0/5:0:0:0/block/sr0
+M: sr0
+R: 0
+U: block
+T: disk
+D: b 11:0
+N: sr0
+L: -100
+S: cdrom
+S: disk/by-id/ata-Optiarc_DVD_RW_AD-5260S
+S: disk/by-diskseq/34
+S: disk/by-path/pci-0000:03:00.1-ata-6.0
+S: disk/by-path/pci-0000:03:00.1-ata-6
+Q: 34
+E: DEVPATH=/devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata6/host5/target5:0:0/5:0:0:0/block/sr0
+E: DEVNAME=/dev/sr0
+E: DEVTYPE=disk
+E: DISKSEQ=34
+E: MAJOR=11
+E: MINOR=0
+E: SUBSYSTEM=block
+E: USEC_INITIALIZED=1444361988
+E: SCSI_TPGS=0
+E: SCSI_TYPE=cd/dvd
+E: SCSI_VENDOR=Optiarc
+E: SCSI_VENDOR_ENC=Optiarc\x20
+E: SCSI_MODEL=DVD_RW_AD-5260S
+E: SCSI_MODEL_ENC=DVD\x20RW\x20AD-5260S\x20
+E: SCSI_REVISION=1.00
+E: ID_SCSI=1
+E: ID_SCSI_INQUIRY=1
+E: ID_VENDOR=Optiarc
+E: ID_VENDOR_ENC=Optiarc\x20
+E: ID_MODEL=Optiarc_DVD_RW_AD-5260S
+E: ID_MODEL_ENC=Optiarc\x20DVD\x20RW\x20AD-5260S\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+E: ID_REVISION=1.00
+E: ID_TYPE=cd
+E: ID_CDROM=1
+E: SYSTEMD_MOUNT_DEVICE_BOUND=1
+E: ID_CDROM_CD_R=1
+E: ID_CDROM_CD_RW=1
+E: ID_CDROM_DVD=1
+E: ID_CDROM_DVD_R=1
+E: ID_CDROM_DVD_PLUS_R_DL=1
+E: ID_CDROM_DVD_PLUS_R=1
+E: ID_CDROM_DVD_PLUS_RW=1
+E: ID_CDROM_DVD_R_DL_JR=1
+E: ID_CDROM_DVD_R_DL_SEQ=1
+E: ID_CDROM_DVD_RW_SEQ=1
+E: ID_CDROM_DVD_RW_RO=1
+E: ID_CDROM_CD=1
+E: ID_CDROM_DVD_RW=1
+E: ID_CDROM_DVD_R_DL=1
+E: SYSTEMD_READY=0
+E: ID_ATA=1
+E: ID_BUS=ata
+E: ID_SERIAL=Optiarc_DVD_RW_AD-5260S
+E: ID_ATA_FEATURE_SET_PM=1
+E: ID_ATA_FEATURE_SET_PM_ENABLED=1
+E: ID_ATA_SATA=1
+E: ID_ATA_SATA_SIGNAL_RATE_GEN1=1
+E: ID_ATA_PERIPHERAL_DEVICE_TYPE=5
+E: ID_PATH=pci-0000:03:00.1-ata-6.0
+E: ID_PATH_TAG=pci-0000_03_00_1-ata-6_0
+E: ID_PATH_ATA_COMPAT=pci-0000:03:00.1-ata-6
+E: ID_FOR_SEAT=block-pci-0000_03_00_1-ata-6_0
+E: DEVLINKS=/dev/cdrom /dev/disk/by-id/ata-Optiarc_DVD_RW_AD-5260S /dev/disk/by-diskseq/34 /dev/disk/by-path/pci-0000:03:00.1-ata-6.0 /dev/disk/by-path/pci-0000:03:00.1-ata-6
+E: TAGS=:seat:uaccess:systemd:
+E: CURRENT_TAGS=:seat:uaccess:systemd:
+
+[exit=0]
+
+----- /run/udev/data/b11:0 -----
+S:disk/by-path/pci-0000:03:00.1-ata-6.0
+S:cdrom
+S:disk/by-id/ata-Optiarc_DVD_RW_AD-5260S
+S:disk/by-path/pci-0000:03:00.1-ata-6
+S:disk/by-diskseq/34
+L:-100
+I:1444361988
+E:SCSI_TPGS=0
+E:SCSI_TYPE=cd/dvd
+E:SCSI_VENDOR=Optiarc
+E:SCSI_VENDOR_ENC=Optiarc\x20
+E:SCSI_MODEL=DVD_RW_AD-5260S
+E:SCSI_MODEL_ENC=DVD\x20RW\x20AD-5260S\x20
+E:SCSI_REVISION=1.00
+E:ID_SCSI=1
+E:ID_SCSI_INQUIRY=1
+E:ID_VENDOR=Optiarc
+E:ID_VENDOR_ENC=Optiarc\x20
+E:ID_MODEL=Optiarc_DVD_RW_AD-5260S
+E:ID_MODEL_ENC=Optiarc\x20DVD\x20RW\x20AD-5260S\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+E:ID_REVISION=1.00
+E:ID_TYPE=cd
+E:ID_CDROM=1
+E:SYSTEMD_MOUNT_DEVICE_BOUND=1
+E:ID_CDROM_CD_R=1
+E:ID_CDROM_CD_RW=1
+E:ID_CDROM_DVD=1
+E:ID_CDROM_DVD_R=1
+E:ID_CDROM_DVD_PLUS_R_DL=1
+E:ID_CDROM_DVD_PLUS_R=1
+E:ID_CDROM_DVD_PLUS_RW=1
+E:ID_CDROM_DVD_R_DL_JR=1
+E:ID_CDROM_DVD_R_DL_SEQ=1
+E:ID_CDROM_DVD_RW_SEQ=1
+E:ID_CDROM_DVD_RW_RO=1
+E:ID_CDROM_CD=1
+E:ID_CDROM_DVD_RW=1
+E:ID_CDROM_DVD_R_DL=1
+E:SYSTEMD_READY=0
+E:ID_ATA=1
+E:ID_BUS=ata
+E:ID_SERIAL=Optiarc_DVD_RW_AD-5260S
+E:ID_ATA_FEATURE_SET_PM=1
+E:ID_ATA_FEATURE_SET_PM_ENABLED=1
+E:ID_ATA_SATA=1
+E:ID_ATA_SATA_SIGNAL_RATE_GEN1=1
+E:ID_ATA_PERIPHERAL_DEVICE_TYPE=5
+E:ID_PATH=pci-0000:03:00.1-ata-6.0
+E:ID_PATH_TAG=pci-0000_03_00_1-ata-6_0
+E:ID_PATH_ATA_COMPAT=pci-0000:03:00.1-ata-6
+E:ID_FOR_SEAT=block-pci-0000_03_00_1-ata-6_0
+G:systemd
+G:uaccess
+G:seat
+Q:systemd
+Q:uaccess
+Q:seat
+V:1
+
+===== COMMAND: udisksctl info -b /dev/sr0 =====
+/org/freedesktop/UDisks2/block_devices/sr0:
+  org.freedesktop.UDisks2.Block:
+    Configuration:              []
+    CryptoBackingDevice:        '/'
+    Device:                     /dev/sr0
+    DeviceNumber:               2816
+    Drive:                      '/org/freedesktop/UDisks2/drives/Optiarc_DVD_RW_AD_5260S_Optiarc_DVD_RW_AD_5260S'
+    HintAuto:                   true
+    HintIconName:               
+    HintIgnore:                 false
+    HintName:                   
+    HintPartitionable:          false
+    HintSymbolicIconName:       
+    HintSystem:                 false
+    Id:                         
+    IdLabel:                    
+    IdType:                     
+    IdUUID:                     
+    IdUsage:                    
+    IdVersion:                  
+    MDRaid:                     '/'
+    MDRaidMember:               '/'
+    PreferredDevice:            /dev/sr0
+    ReadOnly:                   true
+    Size:                       0
+    Symlinks:                   /dev/cdrom
+                                /dev/disk/by-diskseq/34
+                                /dev/disk/by-id/ata-Optiarc_DVD_RW_AD-5260S
+                                /dev/disk/by-path/pci-0000:03:00.1-ata-6
+                                /dev/disk/by-path/pci-0000:03:00.1-ata-6.0
+    UserspaceMountOptions:      
+[exit=0]
+
+===== COMMAND: udisksctl status =====
+MODEL                     REVISION  SERIAL               DEVICE
+--------------------------------------------------------------------------
+Lexar SSD NM620 512GB     SN15023   QFS959R000542P1103   nvme0n1 
+ST4000LM024-2AN1          0001      WCK8BVJ2             sda     
+ST3500418AS               CC46      9VMVAV0C             sdb     
+ADATA SU800               8B        2K402LAK9HDH         sdc     
+Optiarc DVD RW AD-5260S   1.00      Optiarc_DVD_RW_AD-5260S sr0     
+[exit=0]
+
+===== COMMAND: udevadm test-builtin blkid /sys/class/block/sr0 =====
+Trying to open "/etc/systemd/hwdb/hwdb.bin"...
+Trying to open "/etc/udev/hwdb.bin"...
+Trying to open "/usr/lib/systemd/hwdb/hwdb.bin"...
+Trying to open "/usr/lib/udev/hwdb.bin"...
+=== trie on-disk ===
+tool version:          255
+file size:        12755331 bytes
+header size             80 bytes
+strings            2583227 bytes
+nodes             10172024 bytes
+Loading kernel module index.
+Failed to read $container of PID 1, ignoring: Permission denied
+Found cgroup2 on /sys/fs/cgroup/, full unified hierarchy
+Found container virtualization none.
+Using default interface naming scheme 'v255'.
+Parsed configuration file "/usr/lib/systemd/network/99-default.link"
+Parsed configuration file "/usr/lib/systemd/network/73-usb-net-by-mac.link"
+Created link configuration context.
+sr0: Failed to set device to blkid prober: No medium found
+Builtin command 'blkid' fails: No medium found
+Unload kernel module index.
+Unloaded link configuration context.
+[exit=1]
+
+
+###############################################################################
+# KERNEL LOG BASELINE
+###############################################################################
+
+===== COMMAND: dmesg --color=never =====
+dmesg: read kernel buffer failed: Operation not permitted
+[exit=1]
+
+Relevant kernel journal from current boot:
+2026-08-26T17:12:03.249200+00:00 maxoo-pc kernel: ahci 0000:03:00.1: version 3.0
+2026-08-26T17:12:03.249358+00:00 maxoo-pc kernel: ahci 0000:03:00.1: SSS flag set, parallel bus scan disabled
+2026-08-26T17:12:03.249438+00:00 maxoo-pc kernel: ahci 0000:03:00.1: AHCI 0001.0301 32 slots 8 ports 6 Gbps 0x33 impl SATA mode
+2026-08-26T17:12:03.249607+00:00 maxoo-pc kernel: ahci 0000:03:00.1: flags: 64bit ncq sntf stag pm led clo only pmp pio slum part sxs deso sadm sds apst 
+2026-08-26T17:12:03.249689+00:00 maxoo-pc kernel: scsi host0: ahci
+2026-08-26T17:12:03.249929+00:00 maxoo-pc kernel: scsi host1: ahci
+2026-08-26T17:12:03.250134+00:00 maxoo-pc kernel: scsi host2: ahci
+2026-08-26T17:12:03.250209+00:00 maxoo-pc kernel: scsi host3: ahci
+2026-08-26T17:12:03.250282+00:00 maxoo-pc kernel: scsi host4: ahci
+2026-08-26T17:12:03.250352+00:00 maxoo-pc kernel: scsi host5: ahci
+2026-08-26T17:12:03.250500+00:00 maxoo-pc kernel: scsi host6: ahci
+2026-08-26T17:12:03.250572+00:00 maxoo-pc kernel: scsi host7: ahci
+2026-08-26T17:12:03.250611+00:00 maxoo-pc kernel: ata6: SATA max UDMA/133 abar m131072@0xfca80000 port 0xfca80380 irq 43 lpm-pol 0
+2026-08-26T17:12:03.250712+00:00 maxoo-pc kernel: ahci 0000:30:00.0: AHCI 0001.0301 32 slots 1 ports 6 Gbps 0x1 impl SATA mode
+2026-08-26T17:12:03.250792+00:00 maxoo-pc kernel: ahci 0000:30:00.0: flags: 64bit ncq sntf ilck pm led clo only pmp fbs pio slum part 
+2026-08-26T17:12:03.250934+00:00 maxoo-pc kernel: scsi host8: ahci
+2026-08-26T17:12:03.251036+00:00 maxoo-pc kernel: ahci 0000:31:00.0: AHCI 0001.0301 32 slots 1 ports 6 Gbps 0x1 impl SATA mode
+2026-08-26T17:12:03.251318+00:00 maxoo-pc kernel: ahci 0000:31:00.0: flags: 64bit ncq sntf ilck pm led clo only pmp fbs pio slum part 
+2026-08-26T17:12:03.251625+00:00 maxoo-pc kernel: scsi host9: ahci
+2026-08-26T17:12:03.258487+00:00 maxoo-pc kernel: sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+2026-08-26T17:12:03.261070+00:00 maxoo-pc kernel: sd 1:0:0:0: [sdb] Mode Sense: 00 3a 00 00
+2026-08-26T17:12:03.262494+00:00 maxoo-pc kernel: sd 4:0:0:0: [sdc] Mode Sense: 00 3a 00 00
+2026-08-26T17:12:03.262858+00:00 maxoo-pc kernel: ata6: SATA link down (SStatus 0 SControl 330)
+2026-08-26T17:36:03.385965+00:00 maxoo-pc kernel: ata6: SATA link up 1.5 Gbps (SStatus 113 SControl 330)
+2026-08-26T17:36:03.386953+00:00 maxoo-pc kernel: ata6.00: ATAPI: Optiarc DVD RW AD-5260S, 1.00, max UDMA/100
+2026-08-26T17:36:03.388953+00:00 maxoo-pc kernel: ata6.00: configured for UDMA/100
+2026-08-26T17:36:03.391951+00:00 maxoo-pc kernel: scsi 5:0:0:0: CD-ROM            Optiarc  DVD RW AD-5260S  1.00 PQ: 0 ANSI: 5
+2026-08-26T17:36:03.430955+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] scsi3-mmc drive: 48x/48x writer cd/rw xa/form2 cdda tray
+2026-08-26T17:36:03.434950+00:00 maxoo-pc kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+2026-08-26T17:36:03.458957+00:00 maxoo-pc kernel: sr 5:0:0:0: Attached scsi CD-ROM sr0
+2026-08-26T17:36:03.459180+00:00 maxoo-pc kernel: sr 5:0:0:0: Attached scsi generic sg3 type 5
+2026-08-26T17:50:02.926958+00:00 maxoo-pc kernel: block sr0: the capability attribute has been deprecated.
+2026-08-26T18:19:56.235958+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#5 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=0s
+2026-08-26T18:19:56.236209+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#5 Sense Key : Not Ready [current] 
+2026-08-26T18:19:56.236336+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#5 Add. Sense: Incompatible medium installed
+2026-08-26T18:19:56.236453+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#5 CDB: Read(10) 28 00 00 00 00 00 00 00 40 00
+2026-08-26T18:19:56.236568+00:00 maxoo-pc kernel: I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x80700 phys_seg 4 prio class 2
+2026-08-26T18:19:56.255635+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#6 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=0s
+2026-08-26T18:19:56.255823+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#6 Sense Key : Not Ready [current] 
+2026-08-26T18:19:56.255985+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#6 Add. Sense: Incompatible medium installed
+2026-08-26T18:19:56.256132+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#6 CDB: Read(10) 28 00 00 00 00 00 00 00 02 00
+2026-08-26T18:19:56.256275+00:00 maxoo-pc kernel: I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 8 prio class 2
+2026-08-26T18:19:56.256293+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 0, async page read
+2026-08-26T18:19:56.256309+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 1, async page read
+2026-08-26T18:19:56.256327+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 2, async page read
+2026-08-26T18:19:56.256343+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 3, async page read
+2026-08-26T18:19:56.257243+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 4, async page read
+2026-08-26T18:19:56.257264+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 5, async page read
+2026-08-26T18:19:56.258145+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 6, async page read
+2026-08-26T18:19:56.258165+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 7, async page read
+[pipeline_exit=0]
+
+
+###############################################################################
+# DRIVE IDENTITY, MMC FEATURES, AND CURRENT PROFILE
+###############################################################################
+
+===== COMMAND: sg_inq -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+check_pt_file_handle()-->1, page_given=0
+    inquiry cdb: [12 00 00 00 24 00]
+    inquiry cdb: [12 00 00 00 60 00]
+    inquiry cdb: [12 01 00 00 fc 00]
+inquiry:
+Fixed format, current; Sense key: Illegal Request
+Additional sense: Invalid field in cdb
+  Sense Key Specific: Error in Command: byte 1
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 05 00 00 00 00 0a  00 00 00 00 24 00 00 c0
+        00 01
+standard INQUIRY:
+  PQual=0  PDT=5  RMB=1  LU_CONG=0  hot_pluggable=0  version=0x05  [SPC-3]
+  [AERC=0]  [TrmTsk=0]  NormACA=1  HiSUP=1  Resp_data_format=2
+  SCCS=0  ACC=0  TPGS=0  3PC=0  Protect=0  [BQue=0]
+  EncServ=0  MultiP=0  [MChngr=0]  [ACKREQQ=0]  Addr16=0
+  [RelAdr=0]  WBus16=0  Sync=0  [Linked=0]  [TranDis=0]  CmdQue=0
+  [SPI: Clocking=0x0  QAS=0  IUS=0]
+    length=96 (0x60)   Peripheral device type: cd/dvd
+ Vendor identification: Optiarc 
+ Product identification: DVD RW AD-5260S 
+ Product revision level: 1.00
+[exit=0]
+
+===== COMMAND: sg_get_config --readonly -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    inquiry cdb: [12 00 00 00 24 00]
+open /dev/sg3 with flags=0x800
+    get configuration cdb: 46 00 00 00 00 00 00 20 00 00 
+No current profile
+  Optiarc   DVD RW AD-5260S   1.00
+  Peripheral device type: cd/dvd
+Features:
+  Profile list feature
+    version=0, persist=1, current=1 [0x0]
+    available profiles [more recent typically higher in list]:
+      profile: DVD+R dual layer , currentP=0
+      profile: DVD+R , currentP=0
+      profile: DVD+RW , currentP=0
+      profile: DVD-R dual layer jump recording , currentP=0
+      profile: DVD-R dual layer sequental recording , currentP=0
+      profile: DVD-RW sequential recording , currentP=0
+      profile: DVD-RW restricted overwrite , currentP=0
+      profile: DVD-R sequential recording , currentP=0
+      profile: DVD-ROM , currentP=0
+      profile: CD-RW , currentP=0
+      profile: CD-R , currentP=0
+      profile: CD-ROM , currentP=0
+  Core feature
+    version=2, persist=1, current=1 [0x1]
+      Physical interface standard: Serial ATAPI, INQ2=0, DBE=1
+  Morphing feature
+    version=1, persist=1, current=1 [0x2]
+      OCEvent=1, ASYNC=0
+  Removable media feature
+    version=1, persist=1, current=1 [0x3]
+      Loading mechanism: Tray type
+      Load=1, Eject=1, Prevent jumper=0, Lock=1
+  Write Protect feature
+    version=2, persist=0, current=0 [0x4]
+      DWP=0, WDCB=0, SPWP=1, SSWPP=0
+  Random readable feature
+    version=0, persist=0, current=0 [0x10]
+      Logical block size=0x800, blocking=0x0, PP=1
+  Multi-read feature
+    version=0, persist=0, current=0 [0x1d]
+  CD read feature
+    version=2, persist=0, current=0 [0x1e]
+      DAP=0, C2 flags=1, CD-Text=1
+  DVD read feature
+    version=1, persist=0, current=0 [0x1f]
+      MULTI110=0, Dual-RW=0, Dual-R=1
+  Random writable feature
+    version=1, persist=0, current=0 [0x20]
+      Last lba=0x0, Logical block size=0x800, blocking=0x0, PP=1
+  Incremental streaming writable feature
+    version=3, persist=0, current=0 [0x21]
+      Data block types supported=0x0, TRIO=0, ARSV=0, BUF=0
+      Number of link sizes=1
+        0
+  Formattable feature
+    version=2, persist=0, current=0 [0x23]
+      BD-RE: RENoSA=0, Expand=0, QCert=0, Cert=0, FRF=0
+      BD-R: RRM=0
+  Restricted overwrite feature
+    version=0, persist=0, current=0 [0x26]
+  CD-RW CAV write feature
+    version=0, persist=0, current=0 [0x27]
+  DVD+RW feature
+    version=1, persist=0, current=0 [0x2a]
+      Write=1, Quick start=0, Close only=0
+  DVD+R feature
+    version=0, persist=0, current=0 [0x2b]
+      Write=1
+  Rigid restricted overwrite feature
+    version=0, persist=0, current=0 [0x2c]
+      DSDG=0, DSDR=0, Intermediate=1, Blank=1
+  CD track-at-once feature
+    version=2, persist=0, current=0 [0x2d]
+      BUF=1, R-W raw=1, R-W pack=0, Test write=1
+      CD-RW=1, R-W sub-code=1, Data type supported=16137
+  CD mastering (session at once) feature
+    version=1, persist=0, current=0 [0x2e]
+      BUF=1, SAO=1, Raw MS=1, Raw=1
+      Test write=1, CD-RW=1, R-W=1
+      Maximum cue sheet length=0xbf0
+  DVD-R/-RW write feature
+    version=2, persist=0, current=0 [0x2f]
+      BUF=1, RDL=1, Test write=1, DVD-RW SL=1
+  Layer jump recording feature
+    version=0, persist=0, current=0 [0x33]
+      Number of link sizes=1
+        16
+  CD-RW media write support feature
+    version=0, persist=0, current=0 [0x37]
+      CD-RW media sub-type support (bitmask)=0xf
+  DVD+R dual layer feature
+    version=0, persist=0, current=0 [0x3b]
+      write=1
+  Power management feature
+    version=0, persist=1, current=1 [0x100]
+  Timeout feature
+    version=1, persist=1, current=1 [0x105]
+      Group 3=0, unit length=0
+  DVD CSS feature
+    version=0, persist=0, current=0 [0x106]
+      CSS version=1
+  Real time streaming feature
+    version=5, persist=0, current=0 [0x107]
+      RBCB=1, SCS=1, MP2A=1, WSPD=1, SW=0
+  Drive serial number feature
+    version=0, persist=1, current=1 [0x108]
+      Drive serial number: Lm60ZU3n1sGx
+  Disc control blocks feature
+    version=0, persist=0, current=0 [0x10a]
+      Disc control blocks:
+        0x46444300
+        0x53444300
+        0x544f4300
+  DVD CPRM feature
+    version=0, persist=0, current=0 [0x10b]
+      CPRM version=1
+[exit=0]
+
+===== COMMAND: sg_get_config --readonly --current -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    inquiry cdb: [12 00 00 00 24 00]
+open /dev/sg3 with flags=0x800
+    get configuration cdb: 46 01 00 00 00 00 00 20 00 00 
+No current profile
+  Optiarc   DVD RW AD-5260S   1.00
+  Peripheral device type: cd/dvd
+Features:
+  Profile list feature
+    version=0, persist=1, current=1 [0x0]
+    available profiles [more recent typically higher in list]:
+      profile: DVD+R dual layer , currentP=0
+      profile: DVD+R , currentP=0
+      profile: DVD+RW , currentP=0
+      profile: DVD-R dual layer jump recording , currentP=0
+      profile: DVD-R dual layer sequental recording , currentP=0
+      profile: DVD-RW sequential recording , currentP=0
+      profile: DVD-RW restricted overwrite , currentP=0
+      profile: DVD-R sequential recording , currentP=0
+      profile: DVD-ROM , currentP=0
+      profile: CD-RW , currentP=0
+      profile: CD-R , currentP=0
+      profile: CD-ROM , currentP=0
+  Core feature
+    version=2, persist=1, current=1 [0x1]
+      Physical interface standard: Serial ATAPI, INQ2=0, DBE=1
+  Morphing feature
+    version=1, persist=1, current=1 [0x2]
+      OCEvent=1, ASYNC=0
+  Removable media feature
+    version=1, persist=1, current=1 [0x3]
+      Loading mechanism: Tray type
+      Load=1, Eject=1, Prevent jumper=0, Lock=1
+  Power management feature
+    version=0, persist=1, current=1 [0x100]
+  Timeout feature
+    version=1, persist=1, current=1 [0x105]
+      Group 3=0, unit length=0
+  Drive serial number feature
+    version=0, persist=1, current=1 [0x108]
+      Drive serial number: Lm60ZU3n1sGx
+[exit=0]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 8 /dev/sg3 46 01 00 00 00 00 00 00 08 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Get configuration [46 01 00 00 00 00 00 00 08 00]
+SCSI Status: Good 
+
+Received 8 bytes of data:
+ 00     00 00 00 70 00 00 00 00                             ...p....
+No errors, may also convey true
+Attempt to decode cdb name: Get configuration
+[exit=0]
+
+===== COMMAND: sg_modes --all -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    inquiry cdb: [12 00 00 00 24 00]
+    mode sense(10) cdb: [5a 00 3f 00 00 00 00 10 00 00]
+    Optiarc   DVD RW AD-5260S   1.00   peripheral_type: cd/dvd [0x5]
+Mode parameter header from MODE SENSE(10):
+  Mode data length=216, medium type=0x70, specific param=0x00, longlba=0
+  Block descriptor length=0
+>> Read-Write error recovery, page_control: current
+ 00     01 0a 80 0f 00 00 00 00  00 00 00 00
+>> Write parameters, page_control: current
+ 00     05 32 41 c4 08 00 00 00  00 00 00 00 00 00 00 96
+ 10     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 20     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 30     00 00 00 00
+>> Caching, page_control: current
+ 00     08 0a 04 00 00 00 00 00  00 00 00 00
+>> CD device parameters (obsolete), page_control: current
+ 00     0d 06 00 0d 00 3c 00 4b
+>> LU control, page_control: current
+ 00     18 1a 00 01 00 01 00 00  00 01 00 01 00 01 00 01
+ 10     00 01 00 01 00 00 00 01  00 01 00 00
+>> Power condition (mmc), page_control: current
+ 00     1a 0a 00 03 00 00 00 c8  00 00 12 c0
+>> Timeout and protect, page_control: current
+ 00     1d 0a 00 00 00 00 00 3c  00 3c 00 00
+>> MM capabilities and mechanical status (obsolete), page_control: current
+ 00     2a 36 1f 17 f1 77 29 20  21 13 00 00 08 00 02 c2
+ 10     00 00 21 13 05 83 00 01  00 00 00 00 05 83 00 06
+ 20     00 01 21 13 00 01 1b 90  00 01 16 0d 00 01 10 8a
+ 30     00 00 0b 06 00 00 05 83
+>> page_code: 0x30, page_control: current
+ 00     30 0e 01 01 00 00 00 00  00 00 00 00 00 00 00 00
+[exit=0]
+
+===== COMMAND: sg_logs --readonly --list -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    inquiry cdb: [12 00 00 00 24 00]
+    log sense cdb: [4d 00 40 00 00 00 00 00 04 00]
+log sense:
+Fixed format, current; Sense key: Illegal Request
+Additional sense: Invalid command operation code
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 05 00 00 00 00 0a  00 00 00 00 20 00 00 00
+        00 00
+log_sense: not supported
+    Optiarc   DVD RW AD-5260S   1.00
+[exit=9]
+
+===== COMMAND: wodim dev=/dev/sr0 -checkdrive =====
+Device type    : Removable CD-ROM
+Version        : 5
+Response Format: 2
+Capabilities   : 
+Vendor_info    : 'Optiarc '
+Identification : 'DVD RW AD-5260S '
+Revision       : '1.00'
+Device seems to be: Generic mmc2 DVD-R/DVD-RW.
+Using generic SCSI-3/mmc   CD-R/CD-RW driver (mmc_cdr).
+Driver flags   : MMC-3 SWABAUDIO BURNFREE 
+Supported modes: TAO PACKET SAO SAO/R96R RAW/R16 RAW/R96P RAW/R96R
+[exit=0]
+
+===== COMMAND: wodim dev=/dev/sr0 -prcap =====
+wodim: Operation not permitted. Warning: Cannot raise RLIMIT_MEMLOCK limits.
+Device type    : Removable CD-ROM
+Version        : 5
+Response Format: 2
+Capabilities   : 
+Vendor_info    : 'Optiarc '
+Identification : 'DVD RW AD-5260S '
+Revision       : '1.00'
+Device seems to be: Generic mmc2 DVD-R/DVD-RW.
+
+Drive capabilities, per MMC-3 page 2A:
+
+  Does read CD-R media
+  Does write CD-R media
+  Does read CD-RW media
+  Does write CD-RW media
+  Does read DVD-ROM media
+  Does read DVD-R media
+  Does write DVD-R media
+  Does not read DVD-RAM media
+  Does not write DVD-RAM media
+  Does support test writing
+
+  Does read Mode 2 Form 1 blocks
+  Does read Mode 2 Form 2 blocks
+  Does read digital audio blocks
+  Does restart non-streamed digital audio reads accurately
+  Does support Buffer-Underrun-Free recording
+  Does read multi-session CDs
+  Does read fixed-packet CD media using Method 2
+  Does not read CD bar code
+  Does read R-W subcode information
+  Does not return R-W subcode de-interleaved and error-corrected
+  Does read raw P-W subcode data from lead in
+  Does return CD media catalog number
+  Does return CD ISRC information
+  Does support C2 error pointers
+  Does not deliver composite A/V data
+
+  Does play audio CDs
+  Number of volume control levels: 0
+  Does not support individual volume control setting for each channel
+  Does not support independent mute setting for each channel
+  Does not support digital output on port 1
+  Does not support digital output on port 2
+
+  Loading mechanism type: tray
+  Does support ejection of CD via START/STOP command
+  Does not lock media on power up via prevent jumper
+  Does allow media to be locked in the drive via PREVENT/ALLOW command
+  Is not currently in a media-locked state
+  Does not support changing side of disk
+  Does not have load-empty-slot-in-changer feature
+  Does not support Individual Disk Present feature
+
+  Maximum read  speed:  8467 kB/s (CD  48x, DVD  6x)
+  Current read  speed:   706 kB/s (CD   4x, DVD  0x)
+  Maximum write speed:  8467 kB/s (CD  48x, DVD  6x)
+  Current write speed:  1411 kB/s (CD   8x, DVD  1x)
+  Rotational control selected: CLV/PCAV
+  Buffer size in KB: 2048
+  Copy management revision supported: 1
+  Number of supported write speeds: 6
+  Write speed # 0:  8467 kB/s CAV (CD  48x, DVD  6x)
+  Write speed # 1:  7056 kB/s CAV (CD  40x, DVD  5x)
+  Write speed # 2:  5645 kB/s CAV (CD  32x, DVD  4x)
+  Write speed # 3:  4234 kB/s CAV (CD  24x, DVD  3x)
+  Write speed # 4:  2822 kB/s CLV/PCAV (CD  16x, DVD  2x)
+  Write speed # 5:  1411 kB/s CLV/PCAV (CD   8x, DVD  1x)
+
+Supported CD-RW media types according to MMC-4 feature 0x37:
+  Does write multi speed       CD-RW media
+  Does write high  speed       CD-RW media
+  Does write ultra high speed  CD-RW media
+  Does write ultra high speed+ CD-RW media
+[exit=0]
+
+
+###############################################################################
+# CONTROLLED RE-RECOGNITION OF THE CLOSED TRAY
+###############################################################################
+Counters before LOAD+START:
+time=2026-08-26T18:22:38,358821902+00:00 iorequest_cnt=0xcf4 iodone_cnt=0xcf3 ioerr_cnt=0x6 iotmo_cnt=0x3f9 
+
+===== TIMED COMMAND: sg_start --load --readonly -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    start stop unit cdb: [1b 00 00 00 03 00]
+time_wall_seconds=0.02 time_exit=0
+[wrapper_exit=0]
+Counters six seconds after LOAD+START:
+time=2026-08-26T18:22:44,393899440+00:00 iorequest_cnt=0xcf7 iodone_cnt=0xcf7 ioerr_cnt=0x6 iotmo_cnt=0x3fa 
+
+===== TIMED COMMAND: sg_turs -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    test unit ready cdb: [00 00 00 00 00 00]
+test unit ready:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+device not ready
+Completed 1 Test Unit Ready commands with 1 errors
+Command exited with non-zero status 2
+time_wall_seconds=0.02 time_exit=2
+[wrapper_exit=2]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 8 /dev/sg3 46 01 00 00 00 00 00 00 08 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Get configuration [46 01 00 00 00 00 00 00 08 00]
+SCSI Status: Good 
+
+Received 8 bytes of data:
+ 00     00 00 00 70 00 00 00 00                             ...p....
+No errors, may also convey true
+Attempt to decode cdb name: Get configuration
+[exit=0]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 8 /dev/sg3 4a 01 00 00 10 00 00 00 08 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Get event status notification [4a 01 00 00 10 00 00 00 08 00]
+SCSI Status: Good 
+
+Received 8 bytes of data:
+ 00     00 06 04 5e 00 00 00 00                             ...^....
+No errors, may also convey true
+Attempt to decode cdb name: Get event status notification
+[exit=0]
+
+
+###############################################################################
+# RAW SG_IO STATUS, HOST STATUS, SENSE, AND COMMAND DURATIONS
+###############################################################################
+
+===== COMMAND: gcc -O2 -Wall -Wextra -Werror -o /tmp/optiarc-sg-io /tmp/optiarc-sg-io.c =====
+[exit=0]
+
+===== COMMAND: sha256sum /tmp/optiarc-sg-io.c /tmp/optiarc-sg-io =====
+1d54bcf2ea0b6826533852976d80d20d04f3dd3964e2e8cd9a91e26e41e2afc2  /tmp/optiarc-sg-io.c
+c2513983cf78ad0591c622ba69025f1cbc9946ff137b947a442451a2451e80eb  /tmp/optiarc-sg-io
+[exit=0]
+Counters immediately before raw SG_IO sequence:
+time=2026-08-26T18:22:44,501458917+00:00 iorequest_cnt=0xcfa iodone_cnt=0xcfa ioerr_cnt=0x6 iotmo_cnt=0x3fb 
+
+===== COMMAND: /tmp/optiarc-sg-io /dev/sg3 =====
+device=/dev/sg3 open_flags=O_RDONLY|O_NONBLOCK probe_count=15
+
+===== SG_IO: TEST UNIT READY =====
+CDB (6 bytes):
+  00 00 00 00 00 00 
+requested_data=0 timeout_ms=15000 direction=NONE
+ioctl_rc=0 errno=0 (Success) wall_ms=9.240 sg_duration_ms=9
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: GET CONFIGURATION header, RT=current =====
+CDB (10 bytes):
+  46 01 00 00 00 00 00 00 08 00 
+requested_data=8 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=2.370 sg_duration_ms=3
+scsi_status=0x00 masked_status=0x00 msg_status=0x00 host_status=0x0000 driver_status=0x0000 info=0x00000000 resid=0 sb_len_wr=0
+DATA (8 bytes):
+  00 00 00 70 00 00 00 00 
+
+===== SG_IO: GET CONFIGURATION all features =====
+CDB (10 bytes):
+  46 00 00 00 00 00 00 10 00 00 
+requested_data=4096 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=3.563 sg_duration_ms=3
+scsi_status=0x00 masked_status=0x00 msg_status=0x00 host_status=0x0000 driver_status=0x0000 info=0x00000000 resid=0 sb_len_wr=0
+DATA (96 bytes):
+  00 00 01 40 00 00 00 00 00 00 03 30 00 2b 00 00 
+  00 1b 00 00 00 1a 00 00 00 16 00 00 00 15 00 00 
+  00 14 00 00 00 13 00 00 00 11 00 00 00 10 00 00 
+  00 0a 00 00 00 09 00 00 00 08 00 00 00 01 0b 08 
+  00 00 00 07 01 00 00 00 00 02 07 04 02 00 00 00 
+  00 03 07 04 39 00 00 00 00 04 08 04 02 00 00 00 
+
+===== SG_IO: GET EVENT STATUS NOTIFICATION, media class =====
+CDB (10 bytes):
+  4a 01 00 00 10 00 00 00 08 00 
+requested_data=8 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=0.611 sg_duration_ms=1
+scsi_status=0x00 masked_status=0x00 msg_status=0x00 host_status=0x0000 driver_status=0x0000 info=0x00000000 resid=0 sb_len_wr=0
+DATA (8 bytes):
+  00 06 04 5e 00 00 00 00 
+
+===== SG_IO: START STOP UNIT, START=1 =====
+CDB (6 bytes):
+  1b 00 00 00 01 00 
+requested_data=0 timeout_ms=15000 direction=NONE
+ioctl_rc=0 errno=0 (Success) wall_ms=12.432 sg_duration_ms=12
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: TEST UNIT READY after START =====
+CDB (6 bytes):
+  00 00 00 00 00 00 
+requested_data=0 timeout_ms=15000 direction=NONE
+ioctl_rc=0 errno=0 (Success) wall_ms=12.995 sg_duration_ms=13
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: READ CAPACITY(10) =====
+CDB (10 bytes):
+  25 00 00 00 00 00 00 00 00 00 
+requested_data=8 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=19.040 sg_duration_ms=19
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: READ TOC format 0 =====
+CDB (10 bytes):
+  43 00 00 00 00 00 00 00 20 00 
+requested_data=32 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=24.014 sg_duration_ms=24
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: READ TOC format 1 (session info) =====
+CDB (10 bytes):
+  43 00 01 00 00 00 00 00 20 00 
+requested_data=32 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=19.911 sg_duration_ms=20
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: READ DISC INFORMATION =====
+CDB (10 bytes):
+  51 00 00 00 00 00 00 00 22 00 
+requested_data=34 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=14.968 sg_duration_ms=15
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: READ TRACK INFORMATION, track 1 =====
+CDB (10 bytes):
+  52 01 00 00 00 01 00 00 24 00 
+requested_data=36 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=15.976 sg_duration_ms=16
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: READ FORMAT CAPACITIES =====
+CDB (10 bytes):
+  23 00 00 00 00 00 00 00 fc 00 
+requested_data=252 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=0.613 sg_duration_ms=1
+scsi_status=0x00 masked_status=0x00 msg_status=0x00 host_status=0x0000 driver_status=0x0000 info=0x00000000 resid=0 sb_len_wr=0
+DATA (96 bytes):
+  00 00 00 08 00 3f a0 c0 03 00 08 00 00 2b 00 00 
+  00 1b 00 00 00 1a 00 00 00 16 00 00 00 15 00 00 
+  00 14 00 00 00 13 00 00 00 11 00 00 00 10 00 00 
+  00 0a 00 00 00 09 00 00 00 08 00 00 00 01 0b 08 
+  00 00 00 07 01 00 00 00 00 02 07 04 02 00 00 00 
+  00 03 07 04 39 00 00 00 00 04 08 04 02 00 00 00 
+
+===== SG_IO: READ DVD STRUCTURE, physical format =====
+CDB (12 bytes):
+  ad 00 00 00 00 00 00 00 00 20 00 00 
+requested_data=32 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=14.390 sg_duration_ms=14
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: READ(10), DVD LBA 0 =====
+CDB (10 bytes):
+  28 00 00 00 00 00 00 00 01 00 
+requested_data=2048 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=16.940 sg_duration_ms=17
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+
+===== SG_IO: READ(10), DVD LBA 16 =====
+CDB (10 bytes):
+  28 00 00 00 00 10 00 00 01 00 
+requested_data=2048 timeout_ms=15000 direction=FROM_DEVICE
+ioctl_rc=0 errno=0 (Success) wall_ms=13.017 sg_duration_ms=13
+scsi_status=0x02 masked_status=0x01 msg_status=0x00 host_status=0x0000 driver_status=0x0008 info=0x00000001 resid=0 sb_len_wr=18
+SENSE (18 bytes):
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 
+  00 00 
+sense_decode: response=0x70 key=0x2 asc=0x30 ascq=0x00
+[exit=0]
+Counters immediately after raw SG_IO sequence:
+time=2026-08-26T18:22:44,687068875+00:00 iorequest_cnt=0xd0a iodone_cnt=0xd0a ioerr_cnt=0x6 iotmo_cnt=0x406 
+
+
+###############################################################################
+# STANDARD SCSI/MMC MEDIA COMMANDS AND FULL SENSE DECODING
+###############################################################################
+
+===== TIMED COMMAND: sg_turs --num=5 --delay=250 -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    test unit ready cdb: [00 00 00 00 00 00]
+test unit ready:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+    test unit ready cdb: [00 00 00 00 00 00]
+test unit ready:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+    test unit ready cdb: [00 00 00 00 00 00]
+test unit ready:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+    test unit ready cdb: [00 00 00 00 00 00]
+test unit ready:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+    test unit ready cdb: [00 00 00 00 00 00]
+test unit ready:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+device not ready
+device not ready
+device not ready
+device not ready
+device not ready
+Completed 5 Test Unit Ready commands with 5 errors
+time_wall_seconds=1.33 time_exit=0
+[wrapper_exit=0]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 /dev/sg3 00 00 00 00 00 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Test Unit Ready [00 00 00 00 00 00]
+SCSI Status: Check Condition 
+
+Sense Information:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+
+Device not ready, type: sense key
+Attempt to decode cdb name: Test Unit Ready
+[exit=2]
+
+===== COMMAND: sg_requests --hex --maxlen=252 -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    cdb: Request Sense [03 00 00 00 fc 00]
+ 00     70 00 00 00 00 00 00 0a  00 00 00 00 00 00 00 00
+ 10     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 20     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 30     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 40     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 50     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 60     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 70     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 80     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ 90     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ a0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ b0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ c0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ d0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ e0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+ f0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+[exit=0]
+
+===== TIMED COMMAND: sg_start --start --readonly -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    start stop unit cdb: [1b 00 00 00 01 00]
+start stop unit:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+START STOP UNIT command failed
+Command exited with non-zero status 2
+time_wall_seconds=0.01 time_exit=2
+[wrapper_exit=2]
+
+===== TIMED COMMAND: sg_readcap -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    read capacity(10) cdb: [25 00 00 00 00 00 00 00 00 00]
+read capacity(10):
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+READ CAPACITY (10) failed: Device not ready, type: sense key
+Command exited with non-zero status 2
+time_wall_seconds=0.01 time_exit=2
+[wrapper_exit=2]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 32 /dev/sg3 43 00 00 00 00 00 00 00 20 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Read TOC/PMA/ATIP [43 00 00 00 00 00 00 00 20 00]
+SCSI Status: Check Condition 
+
+Sense Information:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+
+Error 2 occurred, no data received
+Device not ready, type: sense key
+Attempt to decode cdb name: Read TOC/PMA/ATIP
+[exit=2]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 32 /dev/sg3 43 00 01 00 00 00 00 00 20 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Read TOC/PMA/ATIP [43 00 01 00 00 00 00 00 20 00]
+SCSI Status: Check Condition 
+
+Sense Information:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+
+Error 2 occurred, no data received
+Device not ready, type: sense key
+Attempt to decode cdb name: Read TOC/PMA/ATIP
+[exit=2]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 34 /dev/sg3 51 00 00 00 00 00 00 00 22 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Xpwrite(10) [51 00 00 00 00 00 00 00 22 00]
+SCSI Status: Check Condition 
+
+Sense Information:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+
+Error 2 occurred, no data received
+Device not ready, type: sense key
+Attempt to decode cdb name: Xpwrite(10)
+[exit=2]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 36 /dev/sg3 52 01 00 00 00 01 00 00 24 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Xdread(10) [52 01 00 00 00 01 00 00 24 00]
+SCSI Status: Check Condition 
+
+Sense Information:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+
+Error 2 occurred, no data received
+Device not ready, type: sense key
+Attempt to decode cdb name: Xdread(10)
+[exit=2]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 252 /dev/sg3 23 00 00 00 00 00 00 00 fc 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Read Format capacities [23 00 00 00 00 00 00 00 fc 00]
+SCSI Status: Good 
+
+Received 252 bytes of data:
+ 00     00 00 00 08 00 3f a0 c0  03 00 08 00 00 00 00 00    .....?..........
+ 10     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ 20     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ 30     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ 40     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ 50     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ 60     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ 70     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ 80     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ 90     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ a0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ b0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ c0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ d0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ e0     00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00    ................
+ f0     00 00 00 00 00 00 00 00  00 00 00 00                ............
+No errors, may also convey true
+Attempt to decode cdb name: Read Format capacities
+[exit=0]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 32 /dev/sg3 ad 00 00 00 00 00 00 00 00 20 00 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Read DVD/BD structure [ad 00 00 00 00 00 00 00 00 20 00 00]
+SCSI Status: Check Condition 
+
+Sense Information:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+
+Error 2 occurred, no data received
+Device not ready, type: sense key
+Attempt to decode cdb name: Read DVD/BD structure
+[exit=2]
+
+
+###############################################################################
+# READ-ONLY DVD SECTOR ATTEMPTS
+###############################################################################
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 2048 /dev/sg3 28 00 00 00 00 00 00 00 01 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Read(10) [28 00 00 00 00 00 00 00 01 00]
+SCSI Status: Check Condition 
+
+Sense Information:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+
+Error 2 occurred, no data received
+Device not ready, type: sense key
+Attempt to decode cdb name: Read(10)
+[exit=2]
+
+===== COMMAND: sg_raw --readonly -vv -t 15 -r 2048 /dev/sg3 28 00 00 00 00 10 00 00 01 00 =====
+open /dev/sg3 with flags=0x800
+    cdb to send: Read(10) [28 00 00 00 00 10 00 00 01 00]
+SCSI Status: Check Condition 
+
+Sense Information:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+
+Error 2 occurred, no data received
+Device not ready, type: sense key
+Attempt to decode cdb name: Read(10)
+[exit=2]
+
+===== TIMED COMMAND: dd if=/dev/sr0 of=/dev/null bs=2048 count=1 iflag=direct status=none =====
+dd: failed to open '/dev/sr0': No medium found
+Command exited with non-zero status 1
+time_wall_seconds=0.05 time_exit=1
+[wrapper_exit=1]
+
+===== TIMED COMMAND: dd if=/dev/sr0 of=/dev/null bs=2048 skip=16 count=1 iflag=direct status=none =====
+dd: failed to open '/dev/sr0': No medium found
+Command exited with non-zero status 1
+time_wall_seconds=0.04 time_exit=1
+[wrapper_exit=1]
+
+===== COMMAND: blkid -p /dev/sr0 =====
+blkid: error: /dev/sr0: No medium found
+[exit=2]
+
+===== COMMAND: blockdev --getsize64 /dev/sr0 =====
+blockdev: cannot open /dev/sr0: No medium found
+[exit=1]
+
+===== COMMAND: file -s /dev/sr0 =====
+/dev/sr0: ERROR: cannot read `/dev/sr0' (Input/output error)
+[exit=1]
+
+
+###############################################################################
+# LINUX CD-ROM IOCTL STATUS
+###############################################################################
+
+===== COMMAND: python3 -c $'import os,fcntl\nfd=os.open("/dev/sr0",os.O_RDONLY|os.O_NONBLOCK)\nnames={0:"CDS_NO_INFO",1:"CDS_NO_DISC",2:"CDS_TRAY_OPEN",3:"CDS_DRIVE_NOT_READY",4:"CDS_DISC_OK",100:"CDS_AUDIO",101:"CDS_DATA_1",102:"CDS_DATA_2",103:"CDS_XA_2_1",104:"CDS_XA_2_2",105:"CDS_MIXED"}\nfor name,op,arg in [("CDROM_DRIVE_STATUS",0x5326,0x7fffffff),("CDROM_DISC_STATUS",0x5327,0x7fffffff),("CDROM_MEDIA_CHANGED",0x5325,0x7fffffff),("CDROM_GET_CAPABILITY",0x5331,0)]:\n    try:\n        value=fcntl.ioctl(fd,op,arg)\n        print(name,"=",value,names.get(value,"") if name!="CDROM_GET_CAPABILITY" else "capability bitmask")\n    except OSError as e:\n        print(name,"ERROR",e.errno,e.strerror)\nos.close(fd)' =====
+CDROM_DRIVE_STATUS = 1 CDS_NO_DISC
+CDROM_DISC_STATUS = 1 CDS_NO_DISC
+CDROM_MEDIA_CHANGED = 0 CDS_NO_INFO
+CDROM_GET_CAPABILITY = 2227183 capability bitmask
+[exit=0]
+
+
+###############################################################################
+# INDEPENDENT OPTICAL UTILITIES
+###############################################################################
+
+===== COMMAND: dvd+rw-mediainfo /dev/sr0 =====
+:-( no media mounted, exiting...
+INQUIRY:                [Optiarc ][DVD RW AD-5260S ][1.00]
+GET [CURRENT] CONFIGURATION:
+[exit=251]
+
+===== COMMAND: cd-info --cdrom-device=/dev/sr0 --debug=3 =====
+cd-info version 2.1.0 x86_64-pc-linux-gnu
+Copyright (c) 2003-2005, 2007-2008, 2011-2015, 2017 R. Bernstein
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+   INFO: found driver GNU/Linux
+CD location   : /dev/sr0
+CD driver name: GNU/Linux
+   access mode: IOCTL
+
+Vendor                      : Optiarc 
+Model                       : DVD RW AD-5260S 
+Revision                    : 1.00
+Hardware                                  : CD-ROM or DVD
+Can eject                                 : Yes
+Can close tray                            : Yes
+Can disable manual eject                  : Yes
+Can select juke-box disc                  : No
+
+Can set drive speed                       : No
+Can read multiple sessions (e.g. PhotoCD) : Yes
+Can hard reset device                     : Yes
+
+Reading....
+  Can read Mode 2 Form 1                  : Yes
+  Can read Mode 2 Form 2                  : Yes
+  Can read (S)VCD (i.e. Mode 2 Form 1/2)  : Yes
+  Can read C2 Errors                      : Yes
+  Can read IRSC                           : Yes
+  Can read Media Channel Number (or UPC)  : Yes
+  Can play audio                          : Yes
+  Can read CD-DA                          : Yes
+  Can read CD-R                           : Yes
+  Can read CD-RW                          : Yes
+  Can read DVD-ROM                        : Yes
+
+Writing....
+  Can write CD-RW                         : Yes
+  Can write DVD-R                         : Yes
+  Can write DVD-RAM                       : No
+  Can write DVD-RW                        : No
+  Can write DVD+RW                        : No
+__________________________________
+
+   INFO: ioctl CDROM_SEND_PACKET for command READ TOC (0x43) failed:
+	Input/output error
+Disc mode is listed as: Error in getting information
+++ WARN: error in ioctl CDROMREADTOCHDR: No medium found
+
+cd-info: Can't get first track number. I give up.
+[exit=1]
+
+===== COMMAND: wodim dev=/dev/sr0 -toc =====
+Device type    : Removable CD-ROM
+Version        : 5
+Response Format: 2
+Capabilities   : 
+Vendor_info    : 'Optiarc '
+Identification : 'DVD RW AD-5260S '
+Revision       : '1.00'
+Device seems to be: Generic mmc2 DVD-R/DVD-RW.
+Using generic SCSI-3/mmc   CD-R/CD-RW driver (mmc_cdr).
+Driver flags   : MMC-3 SWABAUDIO BURNFREE 
+Supported modes: TAO PACKET SAO SAO/R96R RAW/R16 RAW/R96P RAW/R96R
+Errno: 5 (Input/output error), test unit ready scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 0A 00 00 00 00 30 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x30 Qual 0x00 (incompatible medium installed) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.012s timeout 40s
+wodim: No disk / Wrong disk!
+[exit=255]
+
+===== COMMAND: wodim dev=/dev/sr0 -atip =====
+Device type    : Removable CD-ROM
+Version        : 5
+Response Format: 2
+Capabilities   : 
+Vendor_info    : 'Optiarc '
+Identification : 'DVD RW AD-5260S '
+Revision       : '1.00'
+Device seems to be: Generic mmc2 DVD-R/DVD-RW.
+Using generic SCSI-3/mmc   CD-R/CD-RW driver (mmc_cdr).
+Driver flags   : MMC-3 SWABAUDIO BURNFREE 
+Supported modes: TAO PACKET SAO SAO/R96R RAW/R16 RAW/R96P RAW/R96R
+Errno: 5 (Input/output error), test unit ready scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 0A 00 00 00 00 30 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x30 Qual 0x00 (incompatible medium installed) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.015s timeout 40s
+wodim: No disk / Wrong disk!
+[exit=255]
+
+===== COMMAND: readom dev=/dev/sr0 -fulltoc retries=1 -v =====
+scsidev: '/dev/sr0'
+devname: '/dev/sr0'
+scsibus: -2 target: -2 lun: -2
+Linux sg driver version: 3.5.27
+Read  speed:  8467 kB/s (CD  48x, DVD  6x).
+Write speed:  8467 kB/s (CD  48x, DVD  6x).
+Errno: 5 (Input/output error), test unit ready scsi sendcmd: no error
+CDB:  00 00 00 00 00 00
+status: 0x2 (CHECK CONDITION)
+Sense Bytes: 70 00 02 00 00 00 00 0A 00 00 00 00 30 00 00 00
+Sense Key: 0x2 Not Ready, Segment 0
+Sense Code: 0x30 Qual 0x00 (incompatible medium installed) Fru 0x0
+Sense flags: Blk 0 (not valid) 
+cmd finished after 0.031s timeout 40s
+readom: Device not ready.
+[exit=255]
+
+===== COMMAND: smartctl -x /dev/sr0 =====
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.8.0-138-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               Optiarc
+Product:              DVD RW AD-5260S
+Revision:             1.00
+Compliance:           SPC-3
+Device type:          CD/DVD
+Local Time is:        Wed Aug 26 18:22:49 2026 UTC
+device is NOT READY (e.g. spun down, busy)
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+[exit=2]
+
+===== COMMAND: eject -X -v /dev/sr0 =====
+eject: device name is `/dev/sr0'
+eject: /dev/sr0: not mounted
+eject: /dev/sr0: is whole-disk device
+eject: /dev/sr0: listing CD-ROM speed
+48 
+[exit=0]
+
+
+###############################################################################
+# TIMEOUT-COUNTER CONTROL OBSERVATION
+###############################################################################
+Idle five-second observation (background polling may add requests):
+time=2026-08-26T18:22:49,602189748+00:00 iorequest_cnt=0xe8c iodone_cnt=0xe8b ioerr_cnt=0x7 iotmo_cnt=0x4d5 
+time=2026-08-26T18:22:54,607661623+00:00 iorequest_cnt=0xe8e iodone_cnt=0xe8e ioerr_cnt=0x7 iotmo_cnt=0x4d6 
+
+One explicitly timed TUR with counter snapshots:
+time=2026-08-26T18:22:54,611857047+00:00 iorequest_cnt=0xe8e iodone_cnt=0xe8e ioerr_cnt=0x7 iotmo_cnt=0x4d6 
+
+===== TIMED COMMAND: sg_turs -vv /dev/sg3 =====
+open /dev/sg3 with flags=0x800
+    test unit ready cdb: [00 00 00 00 00 00]
+test unit ready:
+Fixed format, current; Sense key: Not Ready
+Additional sense: Incompatible medium installed
+ Raw sense data (in hex), sb_len=18, embedded_len=18
+        70 00 02 00 00 00 00 0a  00 00 00 00 30 00 00 00
+        00 00
+device not ready
+Completed 1 Test Unit Ready commands with 1 errors
+Command exited with non-zero status 2
+time_wall_seconds=0.02 time_exit=2
+[wrapper_exit=2]
+time=2026-08-26T18:22:54,644869697+00:00 iorequest_cnt=0xe8f iodone_cnt=0xe8f ioerr_cnt=0x7 iotmo_cnt=0x4d7 
+Interpretation guardrail: an iotmo_cnt increment is recorded, but SG_IO captures
+show coherent target CHECK CONDITION with host_status=0 and wall times in tens of
+milliseconds, not expiry of the supplied 15000 ms userspace timeout. Therefore this
+counter must not be treated here as proof of a SATA/link timeout.
+
+
+###############################################################################
+# POST-PROBE KERNEL, UDEV, AND UDISKS STATE
+###############################################################################
+Relevant kernel journal during the DVD test window:
+2026-08-26T18:19:56.235958+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#5 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=0s
+2026-08-26T18:19:56.236209+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#5 Sense Key : Not Ready [current] 
+2026-08-26T18:19:56.236336+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#5 Add. Sense: Incompatible medium installed
+2026-08-26T18:19:56.236453+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#5 CDB: Read(10) 28 00 00 00 00 00 00 00 40 00
+2026-08-26T18:19:56.236568+00:00 maxoo-pc kernel: I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x80700 phys_seg 4 prio class 2
+2026-08-26T18:19:56.255635+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#6 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=0s
+2026-08-26T18:19:56.255823+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#6 Sense Key : Not Ready [current] 
+2026-08-26T18:19:56.255985+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#6 Add. Sense: Incompatible medium installed
+2026-08-26T18:19:56.256132+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#6 CDB: Read(10) 28 00 00 00 00 00 00 00 02 00
+2026-08-26T18:19:56.256275+00:00 maxoo-pc kernel: I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 8 prio class 2
+2026-08-26T18:19:56.256293+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 0, async page read
+2026-08-26T18:19:56.256309+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 1, async page read
+2026-08-26T18:19:56.256327+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 2, async page read
+2026-08-26T18:19:56.256343+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 3, async page read
+2026-08-26T18:19:56.257243+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 4, async page read
+2026-08-26T18:19:56.257264+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 5, async page read
+2026-08-26T18:19:56.258145+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 6, async page read
+2026-08-26T18:19:56.258165+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 7, async page read
+2026-08-26T18:22:46.488432+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#17 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=0s
+2026-08-26T18:22:46.488741+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#17 Sense Key : Not Ready [current] 
+2026-08-26T18:22:46.488897+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#17 Add. Sense: Incompatible medium installed
+2026-08-26T18:22:46.489078+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#17 CDB: Read(10) 28 00 00 00 00 00 00 00 40 00
+2026-08-26T18:22:46.489240+00:00 maxoo-pc kernel: I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x80700 phys_seg 30 prio class 2
+2026-08-26T18:22:46.508258+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#18 FAILED Result: hostbyte=DID_OK driverbyte=DRIVER_OK cmd_age=0s
+2026-08-26T18:22:46.508561+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#18 Sense Key : Not Ready [current] 
+2026-08-26T18:22:46.508730+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#18 Add. Sense: Incompatible medium installed
+2026-08-26T18:22:46.508885+00:00 maxoo-pc kernel: sr 5:0:0:0: [sr0] tag#18 CDB: Read(10) 28 00 00 00 00 00 00 00 02 00
+2026-08-26T18:22:46.509052+00:00 maxoo-pc kernel: I/O error, dev sr0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 8 prio class 2
+2026-08-26T18:22:46.509070+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 0, async page read
+2026-08-26T18:22:46.509086+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 1, async page read
+2026-08-26T18:22:46.510291+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 2, async page read
+2026-08-26T18:22:46.510308+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 3, async page read
+2026-08-26T18:22:46.510323+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 4, async page read
+2026-08-26T18:22:46.510337+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 5, async page read
+2026-08-26T18:22:46.511044+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 6, async page read
+2026-08-26T18:22:46.511071+00:00 maxoo-pc kernel: Buffer I/O error on dev sr0, logical block 7, async page read
+
+===== COMMAND: udevadm info --query=all --name=/dev/sr0 =====
+P: /devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata6/host5/target5:0:0/5:0:0:0/block/sr0
+M: sr0
+R: 0
+U: block
+T: disk
+D: b 11:0
+N: sr0
+L: -100
+S: disk/by-path/pci-0000:03:00.1-ata-6.0
+S: disk/by-diskseq/34
+S: disk/by-id/ata-Optiarc_DVD_RW_AD-5260S
+S: cdrom
+S: disk/by-path/pci-0000:03:00.1-ata-6
+Q: 34
+E: DEVPATH=/devices/pci0000:00/0000:00:01.3/0000:03:00.1/ata6/host5/target5:0:0/5:0:0:0/block/sr0
+E: DEVNAME=/dev/sr0
+E: DEVTYPE=disk
+E: DISKSEQ=34
+E: MAJOR=11
+E: MINOR=0
+E: SUBSYSTEM=block
+E: USEC_INITIALIZED=1444361988
+E: SCSI_TPGS=0
+E: SCSI_TYPE=cd/dvd
+E: SCSI_VENDOR=Optiarc
+E: SCSI_VENDOR_ENC=Optiarc\x20
+E: SCSI_MODEL=DVD_RW_AD-5260S
+E: SCSI_MODEL_ENC=DVD\x20RW\x20AD-5260S\x20
+E: SCSI_REVISION=1.00
+E: ID_SCSI=1
+E: ID_SCSI_INQUIRY=1
+E: ID_VENDOR=Optiarc
+E: ID_VENDOR_ENC=Optiarc\x20
+E: ID_MODEL=Optiarc_DVD_RW_AD-5260S
+E: ID_MODEL_ENC=Optiarc\x20DVD\x20RW\x20AD-5260S\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+E: ID_REVISION=1.00
+E: ID_TYPE=cd
+E: ID_CDROM=1
+E: SYSTEMD_MOUNT_DEVICE_BOUND=1
+E: ID_CDROM_CD_R=1
+E: ID_CDROM_CD_RW=1
+E: ID_CDROM_DVD=1
+E: ID_CDROM_DVD_R=1
+E: ID_CDROM_DVD_PLUS_R_DL=1
+E: ID_CDROM_DVD_PLUS_R=1
+E: ID_CDROM_DVD_PLUS_RW=1
+E: ID_CDROM_DVD_R_DL_JR=1
+E: ID_CDROM_DVD_R_DL_SEQ=1
+E: ID_CDROM_DVD_RW_SEQ=1
+E: ID_CDROM_DVD_RW_RO=1
+E: ID_CDROM_CD=1
+E: ID_CDROM_DVD_RW=1
+E: ID_CDROM_DVD_R_DL=1
+E: SYSTEMD_READY=0
+E: ID_ATA=1
+E: ID_BUS=ata
+E: ID_SERIAL=Optiarc_DVD_RW_AD-5260S
+E: ID_ATA_FEATURE_SET_PM=1
+E: ID_ATA_FEATURE_SET_PM_ENABLED=1
+E: ID_ATA_SATA=1
+E: ID_ATA_SATA_SIGNAL_RATE_GEN1=1
+E: ID_ATA_PERIPHERAL_DEVICE_TYPE=5
+E: ID_PATH=pci-0000:03:00.1-ata-6.0
+E: ID_PATH_TAG=pci-0000_03_00_1-ata-6_0
+E: ID_PATH_ATA_COMPAT=pci-0000:03:00.1-ata-6
+E: ID_FOR_SEAT=block-pci-0000_03_00_1-ata-6_0
+E: DEVLINKS=/dev/disk/by-path/pci-0000:03:00.1-ata-6.0 /dev/disk/by-diskseq/34 /dev/disk/by-id/ata-Optiarc_DVD_RW_AD-5260S /dev/cdrom /dev/disk/by-path/pci-0000:03:00.1-ata-6
+E: TAGS=:systemd:seat:uaccess:
+E: CURRENT_TAGS=:systemd:seat:uaccess:
+
+[exit=0]
+
+===== COMMAND: udisksctl info -b /dev/sr0 =====
+/org/freedesktop/UDisks2/block_devices/sr0:
+  org.freedesktop.UDisks2.Block:
+    Configuration:              []
+    CryptoBackingDevice:        '/'
+    Device:                     /dev/sr0
+    DeviceNumber:               2816
+    Drive:                      '/org/freedesktop/UDisks2/drives/Optiarc_DVD_RW_AD_5260S_Optiarc_DVD_RW_AD_5260S'
+    HintAuto:                   true
+    HintIconName:               
+    HintIgnore:                 false
+    HintName:                   
+    HintPartitionable:          false
+    HintSymbolicIconName:       
+    HintSystem:                 false
+    Id:                         
+    IdLabel:                    
+    IdType:                     
+    IdUUID:                     
+    IdUsage:                    
+    IdVersion:                  
+    MDRaid:                     '/'
+    MDRaidMember:               '/'
+    PreferredDevice:            /dev/sr0
+    ReadOnly:                   true
+    Size:                       0
+    Symlinks:                   /dev/cdrom
+                                /dev/disk/by-diskseq/34
+                                /dev/disk/by-id/ata-Optiarc_DVD_RW_AD-5260S
+                                /dev/disk/by-path/pci-0000:03:00.1-ata-6
+                                /dev/disk/by-path/pci-0000:03:00.1-ata-6.0
+    UserspaceMountOptions:      
+[exit=0]
+Final counters:
+time=2026-08-26T18:22:54,682188151+00:00 iorequest_cnt=0xe8f iodone_cnt=0xe8f ioerr_cnt=0x7 iotmo_cnt=0x4d7 
+
+
+###############################################################################
+# COMPARISON: PREVIOUS AUDIO CD VS CURRENT PRESSED DVD
+###############################################################################
+Observation                         | Previous audio CD         | Current pressed DVD      
+----------------------------------------------------------------------------------------------------
+GET CONFIG current profile          | none / 0x0000             | none / 0x0000            
+TUR                                 | 02/30/00                  | 02/30/00                 
+START spindle request               | 02/30/00                  | 02/30/00                 
+READ CAPACITY                       | 02/30/00                  | 02/30/00                 
+READ TOC / DISC INFO                | 02/30/00                  | 02/30/00                 
+Sector read                         | 02/30/00                  | 02/30/00                 
+GET EVENT bytes                     | 00 06 04 5e 00 00 00 00   | 00 06 04 5e 00 00 00 00  
+Linux CDROM status                  | CDS_NO_DISC               | CDS_NO_DISC              
+UDisks size/media ID                | 0 / none                  | 0 / none                 
+Kernel SATA CRC/reset errors        | none                      | none                     
+
+
+###############################################################################
+# CONCLUSION
+###############################################################################
+The factory-pressed DVD changes nothing at the firmware interface.
+The drive never establishes a current DVD-ROM profile and never exposes capacity,
+DVD physical structure, TOC/session information, disc information, or readable sectors.
+The exact same fixed sense is returned throughout:
+  70 00 02 00 00 00 00 0a 00 00 00 00 30 00 00 00 00 00
+  Sense Key 0x02 NOT READY; ASC/ASCQ 0x30/0x00 INCOMPATIBLE MEDIUM INSTALLED.
+GET CONFIGURATION header is 00 00 00 70 00 00 00 00 (current profile 0x0000).
+GET EVENT is unchanged at 00 06 04 5e 00 00 00 00 (tray closed, media-present clear).
+READ FORMAT CAPACITIES returns descriptor code 3, which denotes no recognized medium.
+Raw failed commands return CHECK CONDITION in about 10-30 ms with host_status=0
+and driver_status=0x0008 (DRIVER_SENSE), rather than reaching the 15000 ms timeout.
+Block-layer read attempts do create kernel I/O-error lines, but those explicitly say
+hostbyte=DID_OK, driverbyte=DRIVER_OK, cmd_age=0s and then decode the same 30/00 sense.
+There is no observed host/SATA transport timeout, CRC error, or link reset.
+
+Hardware diagnosis:
+- A bad/special audio CD is now effectively excluded by the known factory-pressed DVD.
+- The fault is inside the drive or its power feed, before media identification completes.
+- Software-visible data cannot uniquely separate failure to obtain focus lock from failure
+  of the spindle motor/driver, because this firmware exposes no focus-lock bit or vendor
+  servo log and collapses the failure into generic 30/00.
+- The media-present bit remains clear and the drive returns a no-medium capacity descriptor.
+  This places the failure at or before reflected-light/focus-based disc identification.
+- A Sony DVD service sequence for another mechanism documents laser focus search and
+  reflected-light disc identification before normal spindle rotation. It is not proof of
+  the AD-5260S sequence, but shows that no rotation is fully compatible with no focus lock.
+  Reference: https://manualzilla.com/doc/6976479/sony-dvp-s530d-user-s-manual
+- The complete absence of even a spindle twitch still keeps the spindle motor, motor driver,
+  connector/power path, or seized bearing equally serious suspects.
+- The decisive hardware split is measurement during tray-close recognition: spindle-drive
+  voltage/current plus FOK/FE/RF-envelope signals. Motor drive present with no motion points
+  to motor/mechanics; no motor drive together with failed FOK/FE points to pickup/focus/RF.
+- Stable INQUIRY/GET CONFIG traffic and clean ata6 logs make SATA data/controller failure
+  unlikely. Check an alternate SATA power connector/PSU rail before condemning the drive.
+
+No write, burn, erase, firmware update, controller reset, or destructive operation occurred.
+
+
+###############################################################################
+# END OF REPORT
+###############################################################################
+
+===== COMMAND: date --iso-8601=ns =====
+2026-08-26T18:22:54,688122416+00:00
+[exit=0]

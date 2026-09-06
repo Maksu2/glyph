@@ -1,0 +1,207 @@
+{
+  "run_id": "glyph100_v2_4_1_1k_20260716",
+  "status": "complete",
+  "scope": "from-scratch proxy run; optimizer steps 1-1000 only",
+  "continued_training_started": false,
+  "dataset": "glyph100_dataset_v2_4_1_core",
+  "log_path": "logs/glyph-100m-v2_4_1-1k/train.log",
+  "checkpoint_dir": "checkpoints/glyph-100m-v2_4_1-1k",
+  "start_time": "2026-07-16 14:50:29",
+  "end_time": "2026-07-16 16:14:49",
+  "duration_seconds": 5060.0,
+  "duration_human": "1h 24m",
+  "start_step": 0,
+  "end_step": 1000,
+  "tokens_processed": 16384000,
+  "wall_tokens_per_second": 3237.94,
+  "logged_tokens_per_second_mean": 3260.83,
+  "steady_tokens_per_second_median": 3287,
+  "train_loss": {
+    "first_logged": 9.8182,
+    "last_logged": 6.5533,
+    "minimum": 6.5043,
+    "maximum": 9.8182,
+    "steps_10_100_avg": 9.1391,
+    "steps_450_550_avg": 7.3637,
+    "steps_910_1000_avg": 6.5769
+  },
+  "validation": {
+    "points": [
+      {
+        "timestamp": "2026-07-16 15:11:36",
+        "step": 250,
+        "val_loss": 7.9565
+      },
+      {
+        "timestamp": "2026-07-16 15:32:40",
+        "step": 500,
+        "val_loss": 7.3277
+      },
+      {
+        "timestamp": "2026-07-16 15:53:41",
+        "step": 750,
+        "val_loss": 6.8266
+      },
+      {
+        "timestamp": "2026-07-16 16:14:49",
+        "step": 1000,
+        "val_loss": 6.4298
+      }
+    ],
+    "trend": "falling"
+  },
+  "stability": {
+    "errors": [],
+    "nan_inf_oom_crash_count": 0,
+    "gpu": {
+      "samples": 74,
+      "edge_c_min": 64.0,
+      "edge_c_max": 67.0,
+      "junction_c_min": 75.0,
+      "junction_c_max": 95.0,
+      "power_w_max": 127.0,
+      "fan_rpm_max": 2587
+    }
+  },
+  "checkpoint": {
+    "latest": {
+      "path": "checkpoints/glyph-100m-v2_4_1-1k/latest.pt",
+      "size_bytes": 1175126927,
+      "step": 1000,
+      "current_step": 1000,
+      "variant": "glyph-100m",
+      "model_config": {
+        "vocab_size": 16000,
+        "context_len": 512,
+        "d_model": 768,
+        "n_heads": 12,
+        "n_layers": 12,
+        "ffn_mult": 4,
+        "dropout": 0.1
+      },
+      "dataset_name": "glyph100_dataset_v2_4_1_core",
+      "dataset_metadata_path": "data/processed/glyph100_v2_4_1_metadata.json",
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "context_length": 512,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "sampler_state": {
+        "version": 1,
+        "sampling": "shuffled_blocks",
+        "seed": 2026,
+        "length": 278089665,
+        "block_size": 512,
+        "num_blocks": 543143,
+        "epoch": 0,
+        "cursor": 32000
+      },
+      "model_tensor_sha256": "fd3d7c40ade08b4e03af8628a908c9429f614dd325088fc17cb7cbc4eee8df0c"
+    },
+    "step_1000": {
+      "path": "checkpoints/glyph-100m-v2_4_1-1k/step_0001000.pt",
+      "size_bytes": 1175127345,
+      "step": 1000,
+      "current_step": 1000,
+      "variant": "glyph-100m",
+      "model_config": {
+        "vocab_size": 16000,
+        "context_len": 512,
+        "d_model": 768,
+        "n_heads": 12,
+        "n_layers": 12,
+        "ffn_mult": 4,
+        "dropout": 0.1
+      },
+      "dataset_name": "glyph100_dataset_v2_4_1_core",
+      "dataset_metadata_path": "data/processed/glyph100_v2_4_1_metadata.json",
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "context_length": 512,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "sampler_state": {
+        "version": 1,
+        "sampling": "shuffled_blocks",
+        "seed": 2026,
+        "length": 278089665,
+        "block_size": 512,
+        "num_blocks": 543143,
+        "epoch": 0,
+        "cursor": 32000
+      },
+      "model_tensor_sha256": "fd3d7c40ade08b4e03af8628a908c9429f614dd325088fc17cb7cbc4eee8df0c"
+    },
+    "metadata_ok": true,
+    "latest_matches_step_1000_model_tensors": true,
+    "files": [
+      "latest.pt",
+      "step_0000500.pt",
+      "step_0001000.pt"
+    ],
+    "directory_size_bytes": 3525381617,
+    "directory_size_human": "3.3 GiB"
+  },
+  "resume_check": {
+    "log_path": "logs/glyph-100m-v2_4_1-1k/resume_check.log",
+    "performed": true,
+    "loaded_step_1000": true,
+    "eval_only_completed": true
+  },
+  "generation_eval_summary": {
+    "preset_summary": {
+      "normal": {
+        "count": 8,
+        "avg_tokens_per_second": 69.11,
+        "web_garbage_samples": 0,
+        "repetition_samples": 1,
+        "natural_endings": 1,
+        "avg_alphabetic_ratio": 0.679
+      },
+      "creative": {
+        "count": 8,
+        "avg_tokens_per_second": 71.84,
+        "web_garbage_samples": 0,
+        "repetition_samples": 0,
+        "natural_endings": 0,
+        "avg_alphabetic_ratio": 0.697
+      }
+    }
+  },
+  "generation_eval_assessment": {
+    "run_id": "glyph100_v2_4_1_1k_20260716",
+    "checkpoint": "checkpoints/glyph-100m-v2_4_1-1k/latest.pt",
+    "checkpoint_step": 1000,
+    "scope": "early base-LM continuation sanity; not assistant evaluation",
+    "prompt_count": 8,
+    "sample_count": 16,
+    "presets": [
+      "normal",
+      "creative"
+    ],
+    "max_new_tokens": 80,
+    "manual_counts": {
+      "meaningful_coherent_continuations": 0,
+      "cutoff_like": 15,
+      "natural_endings": 1,
+      "literal_repetition": 1,
+      "pseudo_encyclopedic_or_date_place_residue": 5,
+      "url_html_seo_residue": 0
+    },
+    "interpretation": {
+      "pipeline_signal": "positive: checkpoint can generate and Polish token/phrase structure is emerging",
+      "quality_signal": "too early: outputs remain semantically incoherent and usually exhaust the token budget",
+      "preset_observation": "normal is less erratic than creative, but neither is useful at step 1000",
+      "decision": "treat 1k as successful mechanical validation only; do not call it a usable language model"
+    }
+  },
+  "recommendation": "The 1k proxy is mechanically healthy. Treat it as pipeline validation only; do not start 5k without an explicit decision based on validation, samples, and available runtime."
+}

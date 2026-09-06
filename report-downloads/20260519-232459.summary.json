@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-20T00:39:24.802974+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260519-232459.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260519-232459.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.933,
+  "averages": {
+    "continuation_fit": 3.3,
+    "polish": 3.433,
+    "coherence": 2.933,
+    "repetition": 2.683,
+    "safety": 5.0,
+    "overall": 2.933
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.933/5 na 60/60 próbkach. Trening: step=142320, train_loss=3.6958, val_loss=4.4116, lr=8.27e-05. Najsłabsze średnie: repetition=2.68, coherence=2.93; najmocniejsza metryka: polish=3.43.",
+  "training_stats": {
+    "step": 142320,
+    "total_steps": 200000,
+    "progress_pct": 71.16,
+    "loss": 3.6958,
+    "lr": 8.27e-05,
+    "last_eval": {
+      "ts": "2026-05-19 18:43:45",
+      "step": 142000,
+      "val_loss": 4.4116
+    },
+    "tokens_m": 1165.89
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.933/5. Najsłabsze metryki to 'repetition' (2.683) oraz 'coherence' (2.933). W kontekście treningowym, train_loss (3.6958) jest niższy niż val_loss (4.4116), co sugeruje niewielki rozjazd między wydajnością na danych treningowych a walidacyjnych. Model wykazuje tendencję do generowania powtarzających się fraz i nagłych, niepowiązanych skoków tematycznych, co jest widoczne w próbkach (np. powtórzenia 'wkroczył do miasta').",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.933/5. Najsłabsze metryki to 'repetition' (2.683) oraz 'coherence' (2.933). W kontekście treningowym, train_loss (3.6958) jest niższy niż val_loss (4.4116), co sugeruje niewielki rozjazd między wydajnością na danych treningowych a walidacyjnych. Model wykazuje tendencję do generowania powtarzających się fraz i nagłych, niepowiązanych skoków tematycznych, co jest widoczne w próbkach (np. powtórzenia 'wkroczył do miasta').\"\n}\n```"
+}

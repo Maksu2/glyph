@@ -1,0 +1,35 @@
+{
+  "created_at_utc": "2026-06-17T09:04:22+00:00",
+  "status": "planned_only_not_started",
+  "model": "Glyph-100M",
+  "base_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+  "output_dir": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke",
+  "dataset_size_examples": {
+    "min": 1000,
+    "max": 3000
+  },
+  "dataset_requirements": [
+    "very clean Polish examples",
+    "short direct answers",
+    "rewrite/summarize output-only tasks",
+    "missing-data answers with varied wording",
+    "no automatic publication"
+  ],
+  "goal": "Check whether the 44k base model can learn the format of simple answers without damaging the base checkpoints.",
+  "eval": {
+    "before": "base LM continuation and small instruction probe on 44k",
+    "after": "same prompts after SFT smoke checkpoint",
+    "compare": [
+      "format following",
+      "topic adherence",
+      "repetition",
+      "generic-template drift"
+    ]
+  },
+  "checkpoint_policy": {
+    "separate_output_dir": true,
+    "do_not_overwrite_pretraining_checkpoints": true,
+    "do_not_publish_automatically": true
+  },
+  "not_run_by_this_plan": true
+}

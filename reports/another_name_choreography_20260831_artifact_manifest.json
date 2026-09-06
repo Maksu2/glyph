@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "work_batch": "another_name_choreography_20260831",
+  "status": "design_only_non_executable",
+  "source_audio": {
+    "path": "/home/maksu/.codex/attachments/c4da231d-7fd9-4dc9-baae-2a1f42a58225/Another Name.mp3",
+    "sha256": "d0311089770db56dd4d7d9d2049c0b980a57ea4f921f8aca29504b354cef8008",
+    "included_in_archive": false
+  },
+  "counts": {
+    "macro_cues": 14,
+    "micro_patterns": 4,
+    "selected_micro_events": 20,
+    "detected_transients": 212,
+    "structural_candidates": 11
+  },
+  "primary_artifacts": [
+    {
+      "path": "analysis_report.md",
+      "sha256": "aadb2e6635837df167404891c381b4c00ad5b17c9e5030196d370ec27ee07310"
+    },
+    {
+      "path": "cue_sheet.md",
+      "sha256": "23f72f8821f3a0d3bb07670cfccf22dc65ff254572278399dda74dd3e56748ad"
+    },
+    {
+      "path": "another_name_cues.yaml",
+      "sha256": "4c10002f694bbacde6038269da6cdee481e3ea0cb9cf11803aa553358492a81e"
+    },
+    {
+      "path": "analysis_summary.json",
+      "sha256": "bc14a936acf31f24510fa7752dc8876e31e0b73ead42a0b0d53c9677109de3f4"
+    },
+    {
+      "path": "analysis_overview.png",
+      "sha256": "f2f61c9646dc66d7fb7ff963893a678b50c6c238734b048e2bd4b54936ca367d"
+    },
+    {
+      "path": "analyze_another_name.py",
+      "sha256": "32b98cb832d37fe033f070f43e24286cecd38f19d86061e87fd7e4ba53e651b4"
+    },
+    {
+      "path": "another_name_choreography_20260831_artifacts.tar.gz",
+      "size_bytes": 4460566,
+      "sha256": "e83814765a0f7e24fe2a98085ac6165cf800a3bfdb1a0028f6aea2a1ade30f59"
+    }
+  ],
+  "safety_assertions": {
+    "audio_playback_performed": false,
+    "light_commands_sent": false,
+    "home_assistant_configuration_changed": false,
+    "automation_created": false,
+    "schedule_or_timer_created": false
+  }
+}

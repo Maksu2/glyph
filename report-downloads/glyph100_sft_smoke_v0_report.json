@@ -1,0 +1,87 @@
+{
+  "dataset": "glyph100_sft_smoke_v0",
+  "purpose": "small controlled SFT smoke test for Glyph-100M 44k checkpoint",
+  "context_len": 512,
+  "output": "data/sft/glyph100_sft_smoke_v0.jsonl",
+  "tokenizer": "data/processed/tokenizer.model",
+  "stats": {
+    "examples": 1500,
+    "categories": {
+      "anty_petle": 150,
+      "krotkie_poprawki_tekstu": 150,
+      "ostrozne_odpowiedzi_przy_niepewnosci": 150,
+      "codzienne_proste_pytania": 150,
+      "proste_techniczne_wyjasnienia": 150,
+      "brak_danych": 150,
+      "krotkie_definicje": 150,
+      "mini_streszczenia": 150,
+      "naturalne_zakonczenia": 150,
+      "mvp_first_project_advice": 150
+    },
+    "qualities": {
+      "approved": 1500
+    },
+    "sources": {
+      "synthetic_curated_sft_smoke": 1500
+    },
+    "instruction_chars_avg": 60.196666666666665,
+    "response_chars_avg": 74.586,
+    "instruction_words_avg": 8.744,
+    "response_words_avg": 10.662,
+    "instruction_words_total": 13116,
+    "response_words_total": 15993,
+    "total_words": 29109,
+    "instruction_duplicate_extra": 0,
+    "instruction_response_duplicate_extra": 0,
+    "bad_patterns": {
+      "empty_instruction": 0,
+      "empty_response": 0,
+      "very_short_response_lt_8_words": 300,
+      "very_long_response_gt_120_words": 0,
+      "control_chars": 0,
+      "as_language_model_phrase": 0,
+      "english_pattern": 0
+    },
+    "token_stats": {
+      "template_total_tokens": 57865,
+      "template_min": 21,
+      "template_max": 65,
+      "template_avg": 38.57666666666667,
+      "template_p50": 39.0,
+      "template_p90": 47.0,
+      "template_p95": 50.0,
+      "template_p99": 55.00999999999999,
+      "instruction_avg_tokens": 15.018666666666666,
+      "response_avg_tokens": 17.558,
+      "fits_context": 1500,
+      "over_context": 0,
+      "over_context_lines": []
+    }
+  },
+  "duplicates": {
+    "duplicate_instructions_extra": 0,
+    "duplicate_pairs_extra": 0
+  },
+  "empty_fields": [],
+  "suspicious_phrase_counts": {
+    "w latach 1975-1998": 0,
+    "w latach 1975–1998": 0,
+    "gminie": 0,
+    "powiecie": 0,
+    "strona główna": 0,
+    "cookies": 0,
+    "kup teraz": 0,
+    "dodaj do koszyka": 0,
+    "zaloguj": 0,
+    "zarejestruj": 0,
+    "polityka prywatności": 0,
+    "jako model językowy": 0,
+    "jako sztuczna inteligencja": 0
+  },
+  "quality_notes": [
+    "Polish-only synthetic curated examples.",
+    "Short answers with natural endings.",
+    "No pseudo-encyclopedic demographic/date patterns.",
+    "No web/forum/commerce/cookie residue phrases."
+  ]
+}

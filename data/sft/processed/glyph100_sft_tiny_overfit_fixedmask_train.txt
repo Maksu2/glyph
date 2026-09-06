@@ -1,0 +1,383 @@
+<|user|>
+Co oznacza termin „metryka”?
+<|assistant|>
+Metryka to liczba opisująca wybraną cechę działania systemu.
+<|end|>
+
+<|user|>
+Co oznacza termin „wersjonowanie”?
+<|assistant|>
+Wersjonowanie pozwala śledzić zmiany i wracać do wcześniejszych stanów projektu.
+<|end|>
+
+<|user|>
+Podaj prostą definicję: dokumentacja.
+<|assistant|>
+Dokumentacja opisuje, jak projekt działa, jak go uruchomić i jakie ma ograniczenia.
+<|end|>
+
+<|user|>
+Wyjaśnij krótko pojęcie: wątek.
+<|assistant|>
+Wątek to część procesu, która może wykonywać pracę równolegle z innymi wątkami.
+<|end|>
+
+<|user|>
+Wyjaśnij krótko pojęcie: metryka.
+<|assistant|>
+Metryka to liczba opisująca wybraną cechę działania systemu.
+<|end|>
+
+<|user|>
+Podaj prostą definicję: konfiguracja.
+<|assistant|>
+Konfiguracja to zestaw ustawień sterujących działaniem systemu.
+<|end|>
+
+<|user|>
+Krótko i konkretnie: Czym jest deduplikacja danych?
+<|assistant|>
+Deduplikacja usuwa powtarzające się dokumenty albo fragmenty, żeby model nie uczył się jednego tekstu zbyt wiele razy.
+<|end|>
+
+<|user|>
+Po co rozdziela się train i val?
+<|assistant|>
+Rozdział train i val pozwala sprawdzić, czy model działa poza przykładami używanymi do uczenia.
+<|end|>
+
+<|user|>
+Krótko i konkretnie: Po co używa się Dockera?
+<|assistant|>
+Docker ułatwia uruchamianie aplikacji z tymi samymi zależnościami na różnych maszynach.
+<|end|>
+
+<|user|>
+Wyjaśnij krótko, czym różni się RAM od dysku?
+<|assistant|>
+RAM jest szybka i ulotna, a dysk jest wolniejszy, ale przechowuje dane po wyłączeniu komputera.
+<|end|>
+
+<|user|>
+Wyjaśnij krótko: Co oznacza context length?
+<|assistant|>
+Context length to maksymalna liczba tokenów, które model widzi jednocześnie.
+<|end|>
+
+<|user|>
+Odpowiedz prosto: Po co są logi treningu?
+<|assistant|>
+Logi treningu pokazują kroki, loss, prędkość, checkpointy i błędy.
+<|end|>
+
+<|user|>
+Odpowiedz praktycznie: Jak ograniczyć zakres projektu?
+<|assistant|>
+Usuń wszystko, czego nie trzeba do pierwszego działającego scenariusza.
+<|end|>
+
+<|user|>
+Co zrobić? Jak ocenić, czy projekt idzie dobrze?
+<|assistant|>
+Sprawdź, czy da się przejść główny scenariusz od początku do końca. To ważniejsze niż liczba funkcji.
+<|end|>
+
+<|user|>
+Krótko doradź: Chcę poprawiać wygląd zanim działa backend.
+<|assistant|>
+Najpierw upewnij się, że dane i podstawowe akcje działają. Wygląd ma sens dopiero, gdy nie maskuje braków funkcjonalnych.
+<|end|>
+
+<|user|>
+Krótko doradź: Jak rozbić duży projekt?
+<|assistant|>
+Podziel go na etapy: dane, główna logika, prosty widok, test, dopiero potem dodatki.
+<|end|>
+
+<|user|>
+Odpowiedz praktycznie: Jak rozbić duży projekt?
+<|assistant|>
+Podziel go na etapy: dane, główna logika, prosty widok, test, dopiero potem dodatki.
+<|end|>
+
+<|user|>
+Krótko doradź: Mam pomysł na aplikację i chcę od razu zrobić logowanie, dashboard i AI.
+<|assistant|>
+Najpierw zbuduj najmniejszą wersję, która pokazuje główną wartość. Logowanie i dashboard dodaj dopiero, gdy podstawowy przepływ działa.
+<|end|>
+
+<|user|>
+Czy wynik benchmarku jest dobry? Odpowiedz krótko.
+<|assistant|>
+Trzeba znać sprzęt, ustawienia testu i punkt odniesienia. Sama liczba nie wystarcza.
+<|end|>
+
+<|user|>
+Czy to błąd w kodzie? Podaj uczciwą odpowiedź.
+<|assistant|>
+Możliwe, ale potrzebny jest komunikat błędu, fragment kodu i sposób odtworzenia problemu.
+<|end|>
+
+<|user|>
+Czy moja odpowiedź jest dobra? Wskaż brakujące informacje.
+<|assistant|>
+Nie da się ocenić bez treści odpowiedzi i kryteriów oceny.
+<|end|>
+
+<|user|>
+Czy ten plan ma sens? Jak odpowiedzieć bez danych?
+<|assistant|>
+Potrzebuję celu, ograniczeń i dostępnych zasobów. Bez nich plan może wyglądać dobrze, ale nie pasować do sytuacji.
+<|end|>
+
+<|user|>
+Czy wybrałem dobrą technologię? Nie zgaduj.
+<|assistant|>
+To zależy od wymagań projektu, zespołu i czasu. Bez tych danych odpowiedź byłaby zbyt ogólna.
+<|end|>
+
+<|user|>
+Czy wybrałem dobrą technologię? Nie udawaj pewności.
+<|assistant|>
+To zależy od wymagań projektu, zespołu i czasu. Bez tych danych odpowiedź byłaby zbyt ogólna.
+<|end|>
+
+<|user|>
+Napisz naturalniej: Chciałbym poinformować, że nie zdążę oddać pracy dzisiaj.
+<|assistant|>
+Nie zdążę dziś oddać pracy.
+<|end|>
+
+<|user|>
+Usuń lanie wody: System działa w taki sposób, że użytkownik może dokonać wyboru opcji.
+<|assistant|>
+System pozwala użytkownikowi wybrać opcję.
+<|end|>
+
+<|user|>
+Skróć i popraw: Nie posiadam wystarczającej ilości danych do oceny.
+<|assistant|>
+Nie mam wystarczających danych do oceny.
+<|end|>
+
+<|user|>
+Usuń lanie wody: Została przeprowadzona walidacja poprawności działania systemu.
+<|assistant|>
+Sprawdzono poprawność działania systemu.
+<|end|>
+
+<|user|>
+Popraw tekst: To rozwiązanie cechuje się wysokim poziomem prostoty.
+<|assistant|>
+To rozwiązanie jest proste.
+<|end|>
+
+<|user|>
+Przeredaguj zdanie: Ten fragment można napisać w sposób bardziej naturalny.
+<|assistant|>
+Ten fragment można napisać naturalniej.
+<|end|>
+
+<|user|>
+Wyciągnij najważniejszą myśl: Dobre ograniczenia zasobów chronią inne usługi na tym samym serwerze.
+<|assistant|>
+Limity zasobów chronią stabilność hosta.
+<|end|>
+
+<|user|>
+Streść w jednym zdaniu: Jeśli test zależy od losowego samplingu, trzeba sprawdzić kilka seedów.
+<|assistant|>
+Kilka seedów pomaga odróżnić jakość od losowości.
+<|end|>
+
+<|user|>
+Wyciągnij najważniejszą myśl: Jeśli raport nie trafia do łatwego pobrania, trudniej wrócić do decyzji po czasie.
+<|assistant|>
+Raporty powinny być łatwe do znalezienia.
+<|end|>
+
+<|user|>
+Wyciągnij najważniejszą myśl: Dataset bez metadanych źródła utrudnia późniejsze usuwanie problematycznych fragmentów.
+<|assistant|>
+Source metadata pomaga czyścić dane.
+<|end|>
+
+<|user|>
+Podaj krótkie streszczenie: Przy eksperymentach warto oddzielać checkpoint najlepszy praktycznie od najnowszego diagnostycznego.
+<|assistant|>
+Best checkpoint i latest checkpoint mogą być różne.
+<|end|>
+
+<|user|>
+Wyciągnij najważniejszą myśl: W małym modelu krótki kontekst ogranicza zdolność utrzymania dłuższej wypowiedzi.
+<|assistant|>
+Krótki kontekst ogranicza długie generacje.
+<|end|>
+
+<|user|>
+Odpowiedz krótko: czego nie da się ocenić bez danych? Bez metafor.
+<|assistant|>
+Bez danych nie da się rzetelnie ocenić jakości, bezpieczeństwa ani opłacalności decyzji.
+<|end|>
+
+<|user|>
+Ten tekst nie powinien się zapętlać. Wyjaśnij krótko dlaczego. W jednym akapicie.
+<|assistant|>
+Zapętlenie utrudnia zrozumienie i nie dodaje nowych informacji.
+<|end|>
+
+<|user|>
+Ten tekst nie powinien się zapętlać. Wyjaśnij krótko dlaczego. Bez dodatkowego komentarza.
+<|assistant|>
+Zapętlenie utrudnia zrozumienie i nie dodaje nowych informacji.
+<|end|>
+
+<|user|>
+Odpowiedz krótko i zakończ naturalnie: czym jest backup? Jednym zdaniem.
+<|assistant|>
+Backup to kopia danych potrzebna do odtworzenia ich po awarii.
+<|end|>
+
+<|user|>
+Zakończ odpowiedź po drugim zdaniu: czym jest tokenizer? W jednym akapicie.
+<|assistant|>
+Tokenizer dzieli tekst na tokeny. Dzięki temu model może pracować na liczbach zamiast bezpośrednio na znakach.
+<|end|>
+
+<|user|>
+Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Bez drugiej myśli.
+<|assistant|>
+Krótka odpowiedź powinna zawierać jedną myśl i zakończyć się, gdy ta myśl jest jasna.
+<|end|>
+
+<|user|>
+Jak przygotować demo?
+<|assistant|>
+Pokaż jeden działający scenariusz i nie ukrywaj znanych ograniczeń.
+<|end|>
+
+<|user|>
+Jak pisać prościej? Jednym akapitem.
+<|assistant|>
+Używaj krótszych zdań i konkretnych czasowników.
+<|end|>
+
+<|user|>
+Co zrobić, gdy wynik mnie zaskakuje?
+<|assistant|>
+Sprawdź dane wejściowe, metodę pomiaru i powtórz test w tych samych warunkach.
+<|end|>
+
+<|user|>
+Jak zacząć porządkować pliki? Jednym akapitem.
+<|assistant|>
+Najpierw utwórz kilka głównych folderów i przenieś do nich oczywiste pliki.
+<|end|>
+
+<|user|>
+Jak dbać o jakość danych?
+<|assistant|>
+Zbieraj źródła, usuwaj duplikaty i sprawdzaj losowe próbki.
+<|end|>
+
+<|user|>
+Jak kończyć odpowiedź? Odpowiedz krótko.
+<|assistant|>
+Zakończ wtedy, gdy główna myśl jest jasna i nie dodawaj nowych wątków na siłę.
+<|end|>
+
+<|user|>
+Czy jedna metryka wystarczy?
+<|assistant|>
+Rzadko. Lepiej użyć kilku metryk i sprawdzić przykłady ręcznie.
+<|end|>
+
+<|user|>
+Czy benchmark wystarczy do decyzji? Bez przesadnej pewności.
+<|assistant|>
+Nie. Benchmark trzeba połączyć ze stabilnością, kosztami i jakością wyniku.
+<|end|>
+
+<|user|>
+Czy SFT może popsuć styl bazowy? Odpowiedz ostrożnie.
+<|assistant|>
+Tak. Zbyt mocny albo schematyczny SFT może ograniczyć naturalność generacji.
+<|end|>
+
+<|user|>
+Czy trzeba trenować do końca planu? Bez przesadnej pewności.
+<|assistant|>
+Nie. Jeśli eval pokazuje regres, lepiej zatrzymać się i przeanalizować przyczynę.
+<|end|>
+
+<|user|>
+Czy można ocenić bezpieczeństwo bez kontekstu? Bez przesadnej pewności.
+<|assistant|>
+Nie. Bez kontekstu da się najwyżej wskazać możliwe ryzyka.
+<|end|>
+
+<|user|>
+Czy warto publikować eksperymentalny model? Bez przesadnej pewności.
+<|assistant|>
+Można publikować jako eksperyment, ale trzeba jasno opisać ograniczenia.
+<|end|>
+
+<|user|>
+Czym jest konfiguracja?
+<|assistant|>
+Konfiguracja to zestaw ustawień sterujących działaniem systemu.
+<|end|>
+
+<|user|>
+W jednym akapicie: Po co jest walidacja podczas treningu?
+<|assistant|>
+Walidacja sprawdza, czy model poprawia się na danych niewidzianych bezpośrednio w treningu.
+<|end|>
+
+<|user|>
+Podaj rozsądny następny krok: Mam pomysł na pięć modułów.
+<|assistant|>
+Zacznij od jednego modułu i pokaż jego wartość. Kolejne moduły dodawaj po sprawdzeniu pierwszego.
+<|end|>
+
+<|user|>
+Czy powinienem to kupić? Wskaż brakujące informacje.
+<|assistant|>
+Brakuje informacji o produkcie, cenie, stanie i twoich potrzebach. Bez tego można tylko zgadywać.
+<|end|>
+
+<|user|>
+Skróć i popraw: Została przeprowadzona walidacja poprawności działania systemu.
+<|assistant|>
+Sprawdzono poprawność działania systemu.
+<|end|>
+
+<|user|>
+Streść w jednym zdaniu: Jeśli uczysz się tylko przez czytanie odpowiedzi, łatwo pomylić znajomość tekstu ze zrozumieniem.
+<|assistant|>
+Samo czytanie odpowiedzi nie gwarantuje zrozumienia.
+<|end|>
+
+<|user|>
+Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Nie dodawaj przykładu.
+<|assistant|>
+Krótka odpowiedź powinna zawierać jedną myśl i zakończyć się, gdy ta myśl jest jasna.
+<|end|>
+
+<|user|>
+Co zrobić, gdy mam za dużo zadań? Bez listy.
+<|assistant|>
+Spisz zadania, wybierz najpilniejsze i usuń albo odłóż te, które nie są konieczne dziś.
+<|end|>
+
+<|user|>
+Czy zawsze warto wybrać szybsze rozwiązanie?
+<|assistant|>
+Nie zawsze. Szybsze rozwiązanie ma sens, jeśli nie zwiększa zbyt mocno ryzyka i długu technicznego.
+<|end|>
+
+<|user|>
+Wyjaśnij krótko pojęcie: prototyp.
+<|assistant|>
+Prototyp to wczesna wersja rozwiązania używana do sprawdzenia pomysłu.
+<|end|>

@@ -1,0 +1,221 @@
+{
+  "run_id": "glyph100_v2_4_2_15k_trajectory_20260905",
+  "scope": "matched base-LM continuation trajectory eval; no training performed",
+  "prompts": 20,
+  "prompts_file": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_prompts.jsonl",
+  "seed": 20260717,
+  "presets": {
+    "conservative": {
+      "temperature": 0.6,
+      "top_k": 30,
+      "max_new_tokens": 80
+    },
+    "normal": {
+      "temperature": 0.8,
+      "top_k": 40,
+      "max_new_tokens": 80
+    }
+  },
+  "checkpoints": {
+    "v242_10k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+      "step": 10000,
+      "dataset": "glyph100_dataset_v2_4_2_core"
+    },
+    "v242_12_5k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k/step_0012500.pt",
+      "step": 12500,
+      "dataset": "glyph100_dataset_v2_4_2_core"
+    },
+    "v242_15k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k/step_0015000.pt",
+      "step": 15000,
+      "dataset": "glyph100_dataset_v2_4_2_core"
+    }
+  },
+  "checkpoint_contracts": {
+    "v242_10k": {
+      "step": 10000,
+      "current_step": 10000,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_2_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    },
+    "v242_12_5k": {
+      "step": 12500,
+      "current_step": 12500,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_2_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    },
+    "v242_15k": {
+      "step": 15000,
+      "current_step": 15000,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_2_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    }
+  },
+  "summaries": {
+    "v242_10k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 3.45,
+        "median_quality_score": 4.0,
+        "natural_endings": 6,
+        "cutoff_like": 34,
+        "repetition_samples": 13,
+        "pseudo_ency_samples": 0,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 73.9,
+        "avg_generation_tokens_per_second": 17.16
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 2.75,
+          "median_quality_score": 2.5,
+          "natural_endings": 3,
+          "cutoff_like": 17,
+          "repetition_samples": 11,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 75.05,
+          "avg_generation_tokens_per_second": 17.92
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 4.15,
+          "median_quality_score": 4.0,
+          "natural_endings": 3,
+          "cutoff_like": 17,
+          "repetition_samples": 2,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 72.75,
+          "avg_generation_tokens_per_second": 16.4
+        }
+      }
+    },
+    "v242_12_5k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 2.35,
+        "median_quality_score": 1.0,
+        "natural_endings": 5,
+        "cutoff_like": 36,
+        "repetition_samples": 24,
+        "pseudo_ency_samples": 0,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 74.95,
+        "avg_generation_tokens_per_second": 15.87
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 1.45,
+          "median_quality_score": 1.0,
+          "natural_endings": 2,
+          "cutoff_like": 19,
+          "repetition_samples": 17,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 78.2,
+          "avg_generation_tokens_per_second": 16.16
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 3.25,
+          "median_quality_score": 4.0,
+          "natural_endings": 3,
+          "cutoff_like": 17,
+          "repetition_samples": 7,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 71.7,
+          "avg_generation_tokens_per_second": 15.57
+        }
+      }
+    },
+    "v242_15k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 3.525,
+        "median_quality_score": 4.0,
+        "natural_endings": 10,
+        "cutoff_like": 33,
+        "repetition_samples": 13,
+        "pseudo_ency_samples": 0,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 71.25,
+        "avg_generation_tokens_per_second": 17.1
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 3.25,
+          "median_quality_score": 4.0,
+          "natural_endings": 7,
+          "cutoff_like": 15,
+          "repetition_samples": 10,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 67.35,
+          "avg_generation_tokens_per_second": 17.3
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 3.8,
+          "median_quality_score": 4.0,
+          "natural_endings": 3,
+          "cutoff_like": 18,
+          "repetition_samples": 3,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 75.15,
+          "avg_generation_tokens_per_second": 16.9
+        }
+      }
+    }
+  },
+  "pairwise": {
+    "v242_10k_vs_v242_12_5k": {
+      "v242_10k": 17,
+      "v242_12_5k": 5,
+      "ties": 18
+    },
+    "v242_12_5k_vs_v242_15k": {
+      "v242_12_5k": 4,
+      "v242_15k": 19,
+      "ties": 17
+    },
+    "v242_10k_vs_v242_15k": {
+      "v242_10k": 9,
+      "v242_15k": 12,
+      "ties": 19
+    }
+  },
+  "heuristic_best_v242": "v242_15k",
+  "methodology_note": "Scores are deterministic diagnostics (endings, loops, residue); semantic and factual sample review is manual and mandatory before crowning a canonical best. Cross-branch heuristic scores share the panel and seeds but not the training corpus, so they rank generation behaviour only, never val loss."
+}

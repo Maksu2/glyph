@@ -1,0 +1,273 @@
+[
+  {
+    "path": "data/sft/glyph100_sft_smoke_v0.jsonl",
+    "invalid_json": [],
+    "missing_fields": [],
+    "stats": {
+      "examples": 1500,
+      "categories": {
+        "anty_petle": 150,
+        "krotkie_poprawki_tekstu": 150,
+        "ostrozne_odpowiedzi_przy_niepewnosci": 150,
+        "codzienne_proste_pytania": 150,
+        "proste_techniczne_wyjasnienia": 150,
+        "brak_danych": 150,
+        "krotkie_definicje": 150,
+        "mini_streszczenia": 150,
+        "naturalne_zakonczenia": 150,
+        "mvp_first_project_advice": 150
+      },
+      "qualities": {
+        "approved": 1500
+      },
+      "sources": {
+        "synthetic_curated_sft_smoke": 1500
+      },
+      "instruction_chars_avg": 60.196666666666665,
+      "response_chars_avg": 74.586,
+      "instruction_words_avg": 8.744,
+      "response_words_avg": 10.662,
+      "instruction_words_total": 13116,
+      "response_words_total": 15993,
+      "total_words": 29109,
+      "instruction_duplicate_extra": 0,
+      "instruction_response_duplicate_extra": 0,
+      "bad_patterns": {
+        "empty_instruction": 0,
+        "empty_response": 0,
+        "very_short_response_lt_8_words": 300,
+        "very_long_response_gt_120_words": 0,
+        "control_chars": 0,
+        "as_language_model_phrase": 0,
+        "english_pattern": 0
+      },
+      "token_stats": {
+        "template_total_tokens": 57865,
+        "template_min": 21,
+        "template_max": 65,
+        "template_avg": 38.57666666666667,
+        "template_p50": 39.0,
+        "template_p90": 47.0,
+        "template_p95": 50.0,
+        "template_p99": 55.00999999999999,
+        "instruction_avg_tokens": 15.018666666666666,
+        "response_avg_tokens": 17.558,
+        "fits_context": 1500,
+        "over_context": 0,
+        "over_context_lines": []
+      }
+    },
+    "similar_instruction_pairs": [
+      {
+        "score": 0.889,
+        "line_a": 46,
+        "line_b": 1487,
+        "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Zwięźle.",
+        "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+      },
+      {
+        "score": 0.889,
+        "line_a": 203,
+        "line_b": 1487,
+        "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez metafor.",
+        "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+      },
+      {
+        "score": 0.889,
+        "line_a": 687,
+        "line_b": 1487,
+        "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez listy.",
+        "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+      },
+      {
+        "score": 0.889,
+        "line_a": 1331,
+        "line_b": 1487,
+        "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Nie powtarzaj.",
+        "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+      },
+      {
+        "score": 0.889,
+        "line_a": 1379,
+        "line_b": 1487,
+        "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez dygresji.",
+        "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+      },
+      {
+        "score": 0.917,
+        "line_a": 4,
+        "line_b": 166,
+        "instruction_a": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?",
+        "instruction_b": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Odpowiedz wprost."
+      },
+      {
+        "score": 0.917,
+        "line_a": 4,
+        "line_b": 1268,
+        "instruction_a": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?",
+        "instruction_b": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Zwięźle."
+      },
+      {
+        "score": 0.917,
+        "line_a": 4,
+        "line_b": 1295,
+        "instruction_a": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?",
+        "instruction_b": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Jednym zdaniem."
+      },
+      {
+        "score": 0.889,
+        "line_a": 162,
+        "line_b": 689,
+        "instruction_a": "Czy można porównać modele bez tych samych promptów?",
+        "instruction_b": "Czy można porównać modele bez tych samych promptów? Krótko."
+      },
+      {
+        "score": 0.9,
+        "line_a": 466,
+        "line_b": 990,
+        "instruction_a": "Napisz krótką wiadomość do nauczyciela, że nie zdążę oddać pracy dzisiaj.",
+        "instruction_b": "Napisz krótką wiadomość do nauczyciela, że nie zdążę oddać pracy dzisiaj. Naturalnie."
+      },
+      {
+        "score": 0.9,
+        "line_a": 466,
+        "line_b": 1021,
+        "instruction_a": "Napisz krótką wiadomość do nauczyciela, że nie zdążę oddać pracy dzisiaj.",
+        "instruction_b": "Napisz krótką wiadomość do nauczyciela, że nie zdążę oddać pracy dzisiaj. Zwięźle."
+      },
+      {
+        "score": 0.9,
+        "line_a": 466,
+        "line_b": 1051,
+        "instruction_a": "Napisz krótką wiadomość do nauczyciela, że nie zdążę oddać pracy dzisiaj.",
+        "instruction_b": "Napisz krótką wiadomość do nauczyciela, że nie zdążę oddać pracy dzisiaj. Prosto."
+      },
+      {
+        "score": 0.889,
+        "line_a": 267,
+        "line_b": 286,
+        "instruction_a": "Czy wynik 50k musi być lepszy niż 44k?",
+        "instruction_b": "Czy wynik 50k musi być lepszy niż 44k? Krótko."
+      },
+      {
+        "score": 1.0,
+        "line_a": 41,
+        "line_b": 863,
+        "instruction_a": "W jednym akapicie: Czym jest top-p sampling?",
+        "instruction_b": "W jednym akapicie: Czym jest top-k sampling?"
+      },
+      {
+        "score": 0.889,
+        "line_a": 261,
+        "line_b": 1400,
+        "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez metafor.",
+        "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+      },
+      {
+        "score": 0.889,
+        "line_a": 261,
+        "line_b": 1441,
+        "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez metafor.",
+        "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży?"
+      },
+      {
+        "score": 0.889,
+        "line_a": 714,
+        "line_b": 1400,
+        "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Zwięźle.",
+        "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+      },
+      {
+        "score": 0.889,
+        "line_a": 714,
+        "line_b": 1441,
+        "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Zwięźle.",
+        "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży?"
+      },
+      {
+        "score": 0.889,
+        "line_a": 1323,
+        "line_b": 1400,
+        "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez dygresji.",
+        "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+      },
+      {
+        "score": 0.889,
+        "line_a": 1323,
+        "line_b": 1441,
+        "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez dygresji.",
+        "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży?"
+      },
+      {
+        "score": 1.0,
+        "line_a": 1400,
+        "line_b": 1441,
+        "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy.",
+        "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży?"
+      },
+      {
+        "score": 1.0,
+        "line_a": 43,
+        "line_b": 370,
+        "instruction_a": "Co zrobić, gdy pomysł nie działa?",
+        "instruction_b": "Co zrobić? Co zrobić, gdy pomysł nie działa?"
+      },
+      {
+        "score": 1.0,
+        "line_a": 54,
+        "line_b": 808,
+        "instruction_a": "Jak zrobić projekt portfolio?",
+        "instruction_b": "Co zrobić? Jak zrobić projekt portfolio?"
+      },
+      {
+        "score": 0.909,
+        "line_a": 344,
+        "line_b": 588,
+        "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+        "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Prosto."
+      },
+      {
+        "score": 0.909,
+        "line_a": 344,
+        "line_b": 1170,
+        "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+        "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Zwięźle."
+      },
+      {
+        "score": 0.909,
+        "line_a": 344,
+        "line_b": 1406,
+        "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+        "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Naturalnie."
+      },
+      {
+        "score": 1.0,
+        "line_a": 319,
+        "line_b": 840,
+        "instruction_a": "Czym jest top-k sampling?",
+        "instruction_b": "Czym jest top-p sampling?"
+      },
+      {
+        "score": 1.0,
+        "line_a": 600,
+        "line_b": 1036,
+        "instruction_a": "Krótko i konkretnie: Czym jest top-p sampling?",
+        "instruction_b": "Krótko i konkretnie: Czym jest top-k sampling?"
+      },
+      {
+        "score": 1.0,
+        "line_a": 914,
+        "line_b": 1318,
+        "instruction_a": "Odpowiedz prosto: Czym jest top-k sampling?",
+        "instruction_b": "Odpowiedz prosto: Czym jest top-p sampling?"
+      },
+      {
+        "score": 1.0,
+        "line_a": 978,
+        "line_b": 1217,
+        "instruction_a": "Wyjaśnij prosto, czym jest log. Prosto.",
+        "instruction_b": "Wyjaśnij prosto, czym jest log."
+      }
+    ]
+  }
+]

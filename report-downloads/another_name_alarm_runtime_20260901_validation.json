@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "work_batch": "another_name_alarm_runtime_20260901",
+  "validated_at_utc": "2026-09-01T06:57:03Z",
+  "home_assistant": {
+    "version": "2026.8.3",
+    "timezone": "Europe/Warsaw",
+    "check_config_exit_code": 0,
+    "schedule": {
+      "config_id": "another_name_alarm_schedule_v1",
+      "entity_id": "automation.another_name_budzik_06_00",
+      "state": "on",
+      "prewake": "05:59:40",
+      "start": "06:00:00",
+      "weekdays": ["mon", "tue", "wed", "thu", "fri"],
+      "presence_condition": "person.maksu in zone.home",
+      "next_eligible_trigger": "2026-09-02T05:59:40+02:00"
+    },
+    "light_bridge": {
+      "config_id": "another_name_light_bridge_v1",
+      "entity_id": "automation.another_name_most_cue_mqtt",
+      "state": "on",
+      "negative_probe_blocked": true,
+      "allowed_light_state_changed_by_probe": false
+    },
+    "replaced_automations": [
+      {
+        "config_id": "1779980853585",
+        "entity_id": "automation.pobudka_tasma",
+        "state": "off"
+      },
+      {
+        "config_id": "1779980923954",
+        "entity_id": "automation.nowa_automatyzacja",
+        "friendly_name": "Uruchamianie dużego światła o 6:00",
+        "state": "off"
+      }
+    ]
+  },
+  "host_runtime": {
+    "dispatcher_unit": "another-name-alarm-dispatcher.service",
+    "enabled": true,
+    "active": true,
+    "restart_count": 0,
+    "user_linger": true,
+    "pulseaudio_socket_enabled": true,
+    "pulseaudio_socket_active": true,
+    "bluetooth_service_active": true
+  },
+  "dry_run": {
+    "exit_code": 0,
+    "effects": "none",
+    "scheduled_event_count": 59,
+    "micro_pulse_count": 16,
+    "micro_macro_transition_overlaps": 0,
+    "aqara_target": "TBD",
+    "aqara_event_count": 0,
+    "home_assistant_http": 200,
+    "speaker_connected_after_test": false,
+    "speaker_sink_present_after_test": false,
+    "full_show_executed": false,
+    "audio_playback_started": false,
+    "allowed_light_commands_sent": false
+  },
+  "mocked_execute_path": {
+    "success_path_passed": true,
+    "success_path_total_publishes": 65,
+    "success_path_breakdown": {
+      "initial_scene": 3,
+      "scheduled_events": 59,
+      "final_reassert": 3
+    },
+    "speaker_failure_failsafe_passed": true,
+    "audio_start_failure_failsafe_passed": true,
+    "mocked_device_or_audio_effects": false
+  },
+  "mqtt_publisher_roundtrip": {
+    "topic": "audio-alarm/another-name/validation",
+    "payload_received": "publisher-pass",
+    "passed": true,
+    "retained": false
+  },
+  "hashes": {
+    "source_mp3_sha256": "d0311089770db56dd4d7d9d2049c0b980a57ea4f921f8aca29504b354cef8008",
+    "playback_wav_sha256": "dfe7815b417a824abea2b92f2b1585ac86a23c4e10befff6f371cec3991a5745",
+    "silent_keepalive_sha256": "24531c2dcc0037bb3d807c288f5caf0c4532ba1d54ab636cf66d7df12dd6d1af",
+    "runner_sha256": "33475f1dabab275d2fdbc300aee571c2f97f76a896375286f5ed3cac13faf1e6",
+    "dispatcher_sha256": "ed53324bda7c21bb8d223b30105b67e64d73468345401a2b79dff24734db50e9",
+    "cue_yaml_sha256": "28c015ac3f767924789180ef6074b6f87c85fc28e01c1efc5708bf822217f62e",
+    "deployed_ha_automations_sha256": "ba966cd2599ce734ba8b5582f6d13b4efbfc291c9cedf2dfb068fa43b0885861",
+    "deployed_systemd_unit_sha256": "2bcbb498009aa1894f8b5f9e41d3a80db4a572e764cabdf9e385d816dbb63d62"
+  },
+  "backup": {
+    "directory": "/home/maksu/audio-alarm-lab/backups/ha-another-name-20260901T062437Z",
+    "automations_before_sha256": "7ff0781dab82039f12d481c57e442b6ffa1c4b32ad06745c353eb1c395252c7f",
+    "configuration_before_sha256": "059cdfdd606b83ff2e59dbd5b8abb46226e7189fd693ecc7803835aa428e4d34"
+  }
+}

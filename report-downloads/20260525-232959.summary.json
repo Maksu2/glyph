@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-25T23:37:27.172195+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260525-232959.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260525-232959.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.833,
+  "averages": {
+    "continuation_fit": 3.167,
+    "polish": 3.183,
+    "coherence": 2.883,
+    "repetition": 2.583,
+    "safety": 4.917,
+    "overall": 2.833
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.833/5 na 60/60 próbkach. Trening: step=200000, train_loss=3.6068, val_loss=4.3489, lr=3e-05. Najsłabsze średnie: repetition=2.58, coherence=2.88; najmocniejsza metryka: polish=3.18.",
+  "training_stats": {
+    "step": 200000,
+    "total_steps": 200000,
+    "progress_pct": 100.0,
+    "loss": 3.6068,
+    "lr": 3e-05,
+    "last_eval": {
+      "ts": "2026-05-22 04:17:49",
+      "step": 200000,
+      "val_loss": 4.3489
+    },
+    "tokens_m": 1638.4
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.833. Najsłabsze metryki to 'repetition' (2.583) i 'coherence' (2.883), co sugeruje niestabilność w utrzymaniu spójności tematycznej i powtarzaniu fraz. W kontekście treningowym, train_loss (3.6068) jest niższy niż val_loss (4.3489), co jest oczekiwane, ale różnica wskazuje na potencjalny rozjazd między wydajnością na danych treningowych a walidacyjnych. W próbkach widoczna jest tendencja do generowania niepoprawnych formatowań dat i skrótów oraz powtarzania fraz kluczowych dla kontekstu.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.833. Najsłabsze metryki to 'repetition' (2.583) i 'coherence' (2.883), co sugeruje niestabilność w utrzymaniu spójności tematycznej i powtarzaniu fraz. W kontekście treningowym, train_loss (3.6068) jest niższy niż val_loss (4.3489), co jest oczekiwane, ale różnica wskazuje na potencjalny rozjazd między wydajnością na danych treningowych a walidacyjnych. W próbkach widoczna jest tendencja do generowania niepoprawnych formatowań dat i skrótów oraz powtarzania fraz kluczowych dla kontekstu.\"\n}\n```"
+}

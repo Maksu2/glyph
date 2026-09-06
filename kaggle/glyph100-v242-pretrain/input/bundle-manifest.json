@@ -1,0 +1,88 @@
+{
+  "bundle_version": "glyph100-v242-kaggle-pretrain-v1",
+  "created_at_utc": "2026-08-08T11:27:47.025912+00:00",
+  "purpose": "Private P100 resume smoke at 5k followed by gated continuation to 10k total",
+  "checkpoint_contract": {
+    "step": 5000,
+    "current_step": 5000,
+    "variant": "glyph-100m",
+    "dataset_name": "glyph100_dataset_v2_4_2_core",
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "context_length": 512,
+    "model_tensors": 113,
+    "optimizer_state_present": true,
+    "scheduler_state_present": true,
+    "sampler_state_present": true
+  },
+  "dataset": {
+    "name": "glyph100_dataset_v2_4_2_core",
+    "metadata_path": "data/processed/glyph100_v2_4_2_metadata.json",
+    "train_tokens": 231494339,
+    "val_tokens": 1176728,
+    "total_tokens": 232671067
+  },
+  "members": [
+    {
+      "path": "config.py",
+      "size": 5281,
+      "sha256": "c5fdade589b48a0a59a0a4370d518125e6733f88385a69d3d2439cf3d903fe56"
+    },
+    {
+      "path": "train.py",
+      "size": 45499,
+      "sha256": "4742fcc78f07c33966022b6dd0031063262831226842d301613d6753dbcef059"
+    },
+    {
+      "path": "model/__init__.py",
+      "size": 29,
+      "sha256": "04998bdfabedce73cb75f048afaaf8a662f86408e49134c46ec36e5d38b45912"
+    },
+    {
+      "path": "model/transformer.py",
+      "size": 9935,
+      "sha256": "671a59049a268e109551a4ee8ee0a91001847714301437e2a0782acb3d9c2ecd"
+    },
+    {
+      "path": "data/processed/tokenizer.model",
+      "size": 498704,
+      "sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029"
+    },
+    {
+      "path": "data/processed/glyph100_v2_4_2_train.bin",
+      "size": 462988678,
+      "sha256": "7fc525a394ee01a1426d421c018d0f54e30a83edd7096dc121b1f894f6fad1d6"
+    },
+    {
+      "path": "data/processed/glyph100_v2_4_2_val.bin",
+      "size": 2353456,
+      "sha256": "e711e5bc2363e56f722f4c0d25ea039d45fec91b09e7193f1837f89a7777a766"
+    },
+    {
+      "path": "data/processed/glyph100_v2_4_2_metadata.json",
+      "size": 4522,
+      "sha256": "ecb39a0313463e9914cacf2def9a79c7dd52759763e1eb0332fc2cb914d7ff21"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0005000.pt",
+      "size": 1175127345,
+      "sha256": "aad89bc2827a4d626092f8da827ecc549afe6c414e837c94b7543ac9ffafc09a"
+    }
+  ],
+  "uncompressed_bytes": 1641033449,
+  "excluded": [
+    "all SFT checkpoints",
+    "v2.3.1 checkpoints",
+    "50k diagnostic checkpoint",
+    "historical logs and reports",
+    "raw document stores",
+    "secrets and credentials"
+  ],
+  "archive": {
+    "path": "glyph100-v242-pretrain-input.tar.gz",
+    "size": 1421247113,
+    "sha256": "e86938a44bd999cb774776b6e4cbd226e3fde30a5e79d41aa03366a6626b5a9a"
+  }
+}

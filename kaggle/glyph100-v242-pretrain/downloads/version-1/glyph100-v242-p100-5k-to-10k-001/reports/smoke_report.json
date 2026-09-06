@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "run_id": "glyph100-v242-p100-5k-to-10k-001",
+  "start_step": 5000,
+  "end_step": 5100,
+  "duration_seconds": 186.93943890599996,
+  "average_tokens_per_second": 9483.8,
+  "validation": [
+    {
+      "step": 5050,
+      "val_loss": 4.6221
+    },
+    {
+      "step": 5100,
+      "val_loss": 4.6002
+    }
+  ],
+  "checkpoint": {
+    "step": 5100,
+    "current_step": 5100,
+    "variant": "glyph-100m",
+    "dataset_name": "glyph100_dataset_v2_4_2_core",
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "context_length": 512,
+    "path": "/kaggle/working/glyph100-v242-p100-5k-to-10k-001/smoke/checkpoints/step_0005100.pt",
+    "size": 1175129201,
+    "sha256": "31e51e9b38e5bb381f808609206d2b94170f58f8b36cbc9a06a28a73e473f9bf",
+    "model_tensors": 113,
+    "optimizer_state_present": true,
+    "scheduler_state_present": true,
+    "sampler_state_present": true
+  },
+  "bad_terms": [],
+  "training_continuation_allowed": true,
+  "smoke_log": {
+    "train_rows": [
+      {
+        "step": 5010,
+        "loss": 4.768,
+        "lr": 0.0002,
+        "tokens_per_second": 9567
+      },
+      {
+        "step": 5020,
+        "loss": 4.7419,
+        "lr": 0.0002,
+        "tokens_per_second": 9679
+      },
+      {
+        "step": 5030,
+        "loss": 4.7432,
+        "lr": 0.0002,
+        "tokens_per_second": 9679
+      },
+      {
+        "step": 5040,
+        "loss": 4.7263,
+        "lr": 0.0002,
+        "tokens_per_second": 9680
+      },
+      {
+        "step": 5050,
+        "loss": 4.7684,
+        "lr": 0.0002,
+        "tokens_per_second": 9682
+      },
+      {
+        "step": 5060,
+        "loss": 4.7736,
+        "lr": 0.0002,
+        "tokens_per_second": 7829
+      },
+      {
+        "step": 5070,
+        "loss": 4.7581,
+        "lr": 0.0002,
+        "tokens_per_second": 9680
+      },
+      {
+        "step": 5080,
+        "loss": 4.7204,
+        "lr": 0.0002,
+        "tokens_per_second": 9679
+      },
+      {
+        "step": 5090,
+        "loss": 4.7217,
+        "lr": 0.0002,
+        "tokens_per_second": 9681
+      },
+      {
+        "step": 5100,
+        "loss": 4.7585,
+        "lr": 0.0002,
+        "tokens_per_second": 9682
+      }
+    ],
+    "validation": [
+      {
+        "step": 5050,
+        "val_loss": 4.6221
+      },
+      {
+        "step": 5100,
+        "val_loss": 4.6002
+      }
+    ],
+    "bad_terms": [],
+    "average_tokens_per_second": 9483.8
+  }
+}

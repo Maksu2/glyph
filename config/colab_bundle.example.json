@@ -1,0 +1,37 @@
+{
+  "drive_root": "/content/drive/MyDrive/Glyph/colab",
+  "local_code_root": "/content/glyph",
+  "local_input_root": "/content/glyph-input",
+  "local_output_root": "/content/glyph-output",
+  "run_id": "glyph100-sft-colab-001",
+  "archives": {
+    "code": "glyph-code-YYYYMMDDTHHMMSSZ.tar.zst",
+    "tokenizer": "glyph-tokenizer-YYYYMMDDTHHMMSSZ.tar.zst",
+    "base_checkpoint": "glyph-base44k-YYYYMMDDTHHMMSSZ.tar.zst",
+    "dataset": "glyph-sft-data-YYYYMMDDTHHMMSSZ.tar.zst",
+    "reports": "glyph-reports-YYYYMMDDTHHMMSSZ.tar.zst"
+  },
+  "expected": {
+    "variant": "glyph-100m",
+    "base_step": 44000,
+    "context_length": 512,
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "checkpoint_50k_is_base": false,
+    "label_mask_boundary": "i < assistant_pos"
+  },
+  "training_defaults": {
+    "enabled": false,
+    "precision": "fp32",
+    "batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 1e-05,
+    "min_lr": 1e-06,
+    "weight_decay": 0.0,
+    "grad_clip": 0.5,
+    "max_steps": 400,
+    "eval_interval": 50,
+    "checkpoint_interval": 100,
+    "log_interval": 5,
+    "save_best_on_val": true
+  }
+}

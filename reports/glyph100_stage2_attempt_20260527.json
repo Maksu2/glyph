@@ -1,0 +1,23 @@
+{
+  "variant": "glyph-100m",
+  "stage": "stage 2",
+  "started_at": "2026-05-27T04:59:21Z",
+  "stopped_at": "2026-05-27T04:59:33Z",
+  "resume_checkpoint": "checkpoints/glyph-100m/latest.pt",
+  "resume_step": 1000,
+  "target_step": 10000,
+  "batch_size": 4,
+  "gradient_accumulation_steps": 8,
+  "effective_tokens_per_step": 16384,
+  "dataset_name": "glyph100_stage1_candidate",
+  "status": "stopped",
+  "stop_reason": "non_finite_loss",
+  "stop_step": 1002,
+  "stop_micro_step": 1,
+  "loss": "nan",
+  "latest_checkpoint_overwritten": false,
+  "latest_checkpoint_step": 1000,
+  "emergency_report": "logs/glyph-100m/emergency_stop.json",
+  "new_checkpoints": [],
+  "recommendation": "Do not retry blindly. Diagnose resumed optimizer/update path before continuing stage 2."
+}

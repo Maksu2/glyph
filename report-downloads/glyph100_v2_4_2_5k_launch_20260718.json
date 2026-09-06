@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-07-18T05:03:11Z",
+  "status": "running",
+  "decision": "dataset_passed_and_fresh_5k_proxy_started",
+  "dataset": {
+    "name": "glyph100_dataset_v2_4_2_core",
+    "train_tokens": 231494339,
+    "val_tokens": 1176728,
+    "documents": 159579,
+    "literature_share": 0.543906,
+    "wikipedia_share": 0.408306,
+    "parliamentary_share": 0.025832,
+    "legacy_share": 0.0,
+    "exact_duplicates": 0,
+    "normalized_duplicates": 0,
+    "parent_split_leakage": 0,
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029"
+  },
+  "training": {
+    "variant": "glyph-100m",
+    "fresh_initialization": true,
+    "resume_checkpoint": null,
+    "target_step": 5000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "context_length": 512,
+    "max_learning_rate": 0.0002,
+    "min_learning_rate": 0.00002,
+    "warmup_steps": 2000,
+    "train_sampling": "shuffled_blocks",
+    "data_seed": 2026,
+    "eval_seed": 2026,
+    "eval_interval": 500,
+    "checkpoint_interval": 1000,
+    "checkpoint_dir": "checkpoints/glyph-100m-v2_4_2-5k",
+    "log_file": "logs/glyph-100m-v2_4_2-5k/train.log",
+    "auto_continue_after_5k": false
+  },
+  "confirmed_start": {
+    "started_at": "2026-07-18T04:59:47Z",
+    "latest_confirmed_step": 40,
+    "step_10_loss": 9.8008,
+    "step_10_tokens_per_second": 3218,
+    "step_40_loss": 9.1715,
+    "step_40_tokens_per_second": 3277,
+    "nan": false,
+    "inf": false,
+    "oom": false,
+    "crash": false
+  },
+  "gpu_initial": {
+    "name": "AMD Radeon RX 5500 XT",
+    "backend": "ROCm/HIP",
+    "load_percent": 99,
+    "vram_gb": 5.23,
+    "edge_c": 59,
+    "hotspot_c": 85,
+    "power_w": 122
+  },
+  "next_gate": "stop_at_5000_and_run_matched_checkpoint_evaluation"
+}

@@ -1,0 +1,33 @@
+{
+  "dataset_name": "glyph100_dataset_v2_4_1_core",
+  "description": "v2.4 core plus a capped train-only Wikisource supplement",
+  "seed": 2026,
+  "tokenizer": "data/processed/tokenizer.model",
+  "base_metadata": "data/processed/glyph100_v2_4_metadata.json",
+  "base_train_bin": "data/processed/glyph100_v2_4_train.bin",
+  "base_val_bin": "data/processed/glyph100_v2_4_val.bin",
+  "base_docs": "data/processed/glyph100_v2_4_docs.jsonl",
+  "raw_root": "data/raw/polish-dynaword",
+  "work_root": "data/raw/glyph100_v2_4_1_work",
+  "minimum_ready_tokens": 275000000,
+  "supplement": {
+    "name": "wikisource",
+    "target_tokens": 30000000,
+    "candidate_fraction": 0.30,
+    "validation_policy": "train_only_due_to_missing_parent_work_metadata",
+    "expected_bytes": 983059726,
+    "url": "https://huggingface.co/datasets/SlayerLab/polish-dynaword/resolve/main/data/wikisource/wikisource.parquet"
+  },
+  "outputs": {
+    "train_bin": "data/processed/glyph100_v2_4_1_train.bin",
+    "val_bin": "data/processed/glyph100_v2_4_1_val.bin",
+    "metadata": "data/processed/glyph100_v2_4_1_metadata.json",
+    "docs_store": "data/raw/glyph100_v2_4_1/glyph100_v2_4_1_docs.jsonl",
+    "docs_link": "data/processed/glyph100_v2_4_1_docs.jsonl",
+    "stats": "data/reports/glyph100_dataset_v2_4_1_stats.json",
+    "report": "data/reports/glyph100_dataset_v2_4_1_report.md",
+    "accepted_samples": "data/reports/glyph100_dataset_v2_4_1_samples_accepted.jsonl",
+    "rejected_samples": "data/reports/glyph100_dataset_v2_4_1_samples_rejected.jsonl",
+    "final_samples": "data/reports/glyph100_dataset_v2_4_1_samples_final_random.jsonl"
+  }
+}

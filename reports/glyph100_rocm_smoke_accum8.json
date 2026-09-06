@@ -1,0 +1,82 @@
+{
+  "variant": "glyph-100m",
+  "model": {
+    "display_name": "Glyph-100M",
+    "vocab_size": 16000,
+    "context_len": 512,
+    "d_model": 768,
+    "n_heads": 12,
+    "n_layers": 12,
+    "ffn_mult": 4,
+    "dropout": 0.1,
+    "variant": "glyph-100m",
+    "model_config": {
+      "vocab_size": 16000,
+      "context_len": 512,
+      "d_model": 768,
+      "n_heads": 12,
+      "n_layers": 12,
+      "ffn_mult": 4,
+      "dropout": 0.1
+    },
+    "ffn_dim": 3072,
+    "norm": "pre-layernorm",
+    "activation": "GELU",
+    "weight_tying": true
+  },
+  "torch": "2.12.0+rocm7.14.0a20260521",
+  "hip": "7.13.0",
+  "gpu": "AMD Radeon RX 5500 XT",
+  "gradient_accumulation_steps": 8,
+  "batches": [
+    {
+      "batch_size": 4,
+      "context_len": 512,
+      "gradient_accumulation_steps": 8,
+      "tokens_per_microstep": 2048,
+      "tokens_per_step": 16384,
+      "ok": true,
+      "nan": false,
+      "error": null,
+      "steps": [
+        {
+          "step": 0,
+          "loss": 9.834372401237488,
+          "seconds": 5.283609007950872,
+          "tokens_per_second": 3100.9107553842564,
+          "allocated_mib": 1694.36767578125,
+          "reserved_mib": 3954.0,
+          "max_allocated_mib": 3833.47021484375,
+          "rss_mib": 1108.76953125
+        }
+      ],
+      "checkpoint_save_load_ok": null,
+      "rocm_smi_before": {
+        "card0": {
+          "Temperature (Sensor edge) (C)": "34.0",
+          "Temperature (Sensor junction) (C)": "35.0",
+          "Temperature (Sensor memory) (C)": "0.0",
+          "GPU Memory Allocated (VRAM%)": "0",
+          "GPU Memory Read/Write Activity (%)": "0",
+          "Memory Activity": "N/A",
+          "Avg. Memory Bandwidth": "0"
+        }
+      },
+      "avg_seconds_excluding_warmup": 5.283609007950872,
+      "avg_tokens_per_second_excluding_warmup": 3100.9107553842564,
+      "duration_seconds": 7.162621635012329,
+      "rocm_smi_after": {
+        "card0": {
+          "Temperature (Sensor edge) (C)": "39.0",
+          "Temperature (Sensor junction) (C)": "39.0",
+          "Temperature (Sensor memory) (C)": "0.0",
+          "GPU Memory Allocated (VRAM%)": "51",
+          "GPU Memory Read/Write Activity (%)": "0",
+          "Memory Activity": "N/A",
+          "Avg. Memory Bandwidth": "0"
+        }
+      }
+    }
+  ],
+  "max_ok_batch_size": 4
+}

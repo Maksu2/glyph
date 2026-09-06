@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-31T20:39:04Z",
+  "clock": {
+    "name": "time.monotonic_ns",
+    "implementation": "clock_gettime(CLOCK_MONOTONIC)",
+    "resolution_s": 1e-09,
+    "adjustable": false
+  },
+  "measurement_label": "measured end-to-end acoustic latency including microphone/capture path",
+  "measurement_start": "monotonic timestamp immediately before spawning paplay",
+  "measurement_end": "matched acoustic marker delivered in continuous parecord capture",
+  "includes": [
+    "paplay process startup",
+    "PulseAudio output path",
+    "BlueZ/A2DP and Bluetooth radio",
+    "speaker buffering and DSP",
+    "acoustic propagation",
+    "microphone and ADC",
+    "ALSA/PulseAudio capture buffering",
+    "parecord delivery"
+  ],
+  "does_not_claim": "pure Bluetooth latency",
+  "sink": "bluez_sink.04_21_44_06_6B_B9.a2dp_sink",
+  "source": "alsa_input.pci-0000_2a_00.4.analog-stereo",
+  "rate_hz": 48000,
+  "channels": 2,
+  "trials_requested": 1,
+  "interval_s": 7.0,
+  "warmup_s": 65.0,
+  "tail_s": 2.0,
+  "capture_latency_request_ms": 10,
+  "capture_process_request_ms": 5,
+  "click_amplitude_linear": 0.4,
+  "click_signal_duration_ms": 12.0,
+  "click_file_duration_ms": 40.0,
+  "minimum_correlation": 0.05,
+  "pulse_latency_snapshots": [
+    {
+      "label": "capture_started",
+      "monotonic_ns": 2118913482599,
+      "source": {
+        "state": "RUNNING",
+        "latency_usec": 675,
+        "configured_latency_usec": 10000,
+        "sample_specification": "s16le 2ch 48000Hz"
+      },
+      "sink": {
+        "state": "SUSPENDED",
+        "latency_usec": 0,
+        "configured_latency_usec": 0,
+        "sample_specification": "float32le 2ch 44100Hz"
+      }
+    },
+    {
+      "label": "after_trial_1",
+      "monotonic_ns": 2184018788414,
+      "source": {
+        "state": "RUNNING",
+        "latency_usec": 2419,
+        "configured_latency_usec": 10000,
+        "sample_specification": "s16le 2ch 48000Hz"
+      },
+      "sink": {
+        "state": "IDLE",
+        "latency_usec": 36366,
+        "configured_latency_usec": 30804,
+        "sample_specification": "float32le 2ch 44100Hz"
+      }
+    },
+    {
+      "label": "before_capture_stop",
+      "monotonic_ns": 2186024599190,
+      "source": {
+        "state": "RUNNING",
+        "latency_usec": 687,
+        "configured_latency_usec": 10000,
+        "sample_specification": "s16le 2ch 48000Hz"
+      },
+      "sink": {
+        "state": "IDLE",
+        "latency_usec": 33257,
+        "configured_latency_usec": 30804,
+        "sample_specification": "float32le 2ch 44100Hz"
+      }
+    }
+  ],
+  "capture_mapping": {
+    "method": "5th percentile of chunk read-end minus nominal frame time",
+    "anchor_ns": 2118908815977,
+    "anchor_median_ns": 2118908911670,
+    "anchor_p05_ns": 2118908815977,
+    "anchor_p95_ns": 2118909431248,
+    "anchor_p05_to_p95_ms": 0.6152711501464844,
+    "nominal_rate_hz": 48000,
+    "chunk_count": 25660
+  },
+  "statistics": {
+    "valid_trials": 1,
+    "total_trials": 1,
+    "min_ms": 233.753329,
+    "median_ms": 233.753329,
+    "mean_ms": 233.753329,
+    "p95_ms": 233.753329,
+    "max_ms": 233.753329,
+    "stddev_ms": 0.0,
+    "peak_to_peak_jitter_ms": 0.0
+  },
+  "results": [
+    {
+      "trial": 1,
+      "target_monotonic_ns": 2183919460061,
+      "request_monotonic_ns": 2183919625148,
+      "popen_return_monotonic_ns": 2183919969758,
+      "complete_monotonic_ns": 2184018764684,
+      "schedule_lateness_ms": 0.165087,
+      "paplay_runtime_ms": 99.139536,
+      "returncode": 0,
+      "stderr": "",
+      "detected_frame": 3131739,
+      "detected_monotonic_ns": 2184153378477,
+      "detected_local_receipt_ns": 2184153428520,
+      "latency_ms": 233.753329,
+      "correlation": 0.8282970220160688,
+      "event_peak_dbfs": -43.15030175918528,
+      "event_rms_dbfs": -58.43426711398219,
+      "noise_rms_dbfs": -78.44222077995128,
+      "snr_db": 20.007953665969104,
+      "capture_mapping_delta_ms": 0.050043,
+      "valid": true,
+      "edge_detection": false
+    }
+  ]
+}

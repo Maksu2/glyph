@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "title": "Glyph — Polish Transformer trained from scratch",
+    "description": "Glyph is a Polish decoder-only model project trained from scratch: Glyph-27M as a milestone and Glyph-100M with v2.3.1 pretraining stopped, using 44k as the eval-selected best checkpoint."
+  },
+  "nav": [
+    [
+      "model-card",
+      "Specs"
+    ],
+    [
+      "demo",
+      "Demo"
+    ],
+    [
+      "training",
+      "Training"
+    ],
+    [
+      "dataset",
+      "Dataset"
+    ],
+    [
+      "evaluation",
+      "Evaluation"
+    ],
+    [
+      "samples",
+      "Samples"
+    ],
+    [
+      "limitations",
+      "Limits"
+    ],
+    [
+      "roadmap",
+      "Roadmap"
+    ]
+  ],
+  "hero": {
+    "eyebrow": "Glyph-27M completed · Glyph-100M 44k best · v2.3.1 stopped",
+    "title": "Glyph",
+    "lead": "A small Polish language model trained from scratch on a homelab.",
+    "body": "After the Glyph-27M experiments, the project moved to Glyph-100M. The diagnostic v2.3.1 run reached 50k, but evaluation showed that 44k remains the best practical checkpoint; further pretraining on this dataset has been stopped.",
+    "author": {
+      "text": "A project by Maksymilian Puta",
+      "linkLabel": "maksu.online",
+      "url": "https://www.maksu.online"
+    },
+    "metrics": [
+      "27M completed",
+      "100M best 44k",
+      "50k diagnostic",
+      "Polish",
+      "Decoder-only Transformer",
+      "SentencePiece BPE",
+      "Context 512"
+    ],
+    "ctas": [
+      [
+        "model-card",
+        "Model card"
+      ],
+      [
+        "samples",
+        "Samples"
+      ],
+      [
+        "evaluation",
+        "Evaluation"
+      ],
+      [
+        "training",
+        "Training notes"
+      ]
+    ]
+  },
+  "sections": {
+    "specs": {
+      "kicker": "Architecture",
+      "title": "Small enough to understand, complete enough to learn from.",
+      "body": "Glyph-100M uses a larger but still inspectable GPT-style decoder stack. Glyph-27M proved the pipeline; 100M tests whether more capacity and a longer context improve Polish base-model training.",
+      "diagram": [
+        "tokens",
+        "embeddings",
+        "transformer blocks ×12",
+        "logits"
+      ]
+    },
+    "why": {
+      "kicker": "Why it exists",
+      "title": "Not an API wrapper. Not a fine-tune of someone else’s model.",
+      "body": "Glyph exists to document what it takes to train a language model from scratch in a small, local environment. It is a learning, engineering and evaluation project: the value is in the pipeline as much as in the checkpoint."
+    },
+    "demo": {
+      "kicker": "Inference demo",
+      "title": "Try Glyph",
+      "body": "This small public text-completion demo currently uses the Glyph-27M checkpoint. Glyph-100M has a 10k checkpoint, but it has no public demo and no quality promise yet.",
+      "disclaimer": "This demo is limited and should not be used for reliable advice or factual answers. SFT v0 improves format and instruction following, but it does not add large amounts of knowledge.",
+      "privacy": "For rate limiting, basic request metadata such as time, prompt length and status may be stored. Prompt contents are not stored by default.",
+      "limits": "Limits: 500 prompt characters, one generation at a time, a fixed sampling preset and strict rate limits.",
+      "promptLabel": "Prompt",
+      "placeholder": "Type the beginning of a text for Glyph to continue...",
+      "generate": "Generate",
+      "generating": "Generating...",
+      "outputLabel": "Output",
+      "emptyOutput": "The result will appear here.",
+      "examplesLabel": "Examples",
+      "examples": [
+        "W pokoju panowała cisza, którą przerywał tylko",
+        "Pierwsze wzmianki o tej osadzie pojawiły się w",
+        "System operacyjny zarządza procesami, pamięcią i"
+      ],
+      "errors": {
+        "rate_limited": "The request limit has been reached. Try again later.",
+        "queue_full": "The demo is busy right now. Try again soon.",
+        "disabled": "The demo is temporarily disabled.",
+        "timeout": "Generation took too long. Try a shorter prompt.",
+        "invalid_prompt": "The prompt is empty or too long.",
+        "internal_error": "Generation failed. Try again later."
+      }
+    },
+    "training": {
+      "kicker": "Training",
+      "title": "Glyph-100M stopped v2.3.1 pretraining; 44k is the best checkpoint.",
+      "body": "Glyph-27M remains the completed proof-of-pipeline milestone. Glyph-100M went through controlled runs up to 50k steps on dataset v2.3.1. The 50k checkpoint was technically healthy, but it did not beat 44k qualitatively, so the best checkpoint is selected by eval rather than latest loss.",
+      "sftTitle": "Glyph-27M SFT v0",
+      "sftBody": "Glyph-27M now has a separate experimental SFT v0 stage. The goal is not to add large amounts of knowledge, but to improve instruction following: shorter answers, better topic adherence, honest uncertainty and less generic assistant tone.",
+      "sftEvalNote": "SFT v0/v2 evaluation: SFT improves endings and reduces web artifacts, but the stricter eval still shows drift, repetition and template-like tone.",
+      "glyph100Title": "Glyph-100M",
+      "glyph100Body": "Glyph-100M is the larger base-model experiment after proving the pipeline on 27M. The best practical checkpoint is 44k; 50k remains the latest diagnostic checkpoint only. The model is still a base LM, not a chatbot or a ready assistant."
+    },
+    "dataset": {
+      "kicker": "Dataset",
+      "title": "Dataset v2.3.1: cleaner than earlier builds, but not a reason for more pretraining.",
+      "body": "`glyph100_v2_3_1` reduced legacy and web residue compared with earlier attempts, but the diagnostic 50k result showed rising validation loss and no quality win over 44k. The next sensible path is a small SFT smoke test on 44k or dataset v2.4 work, not blind 55k/60k continuation.",
+      "sources": [
+        [
+          "Polish Wikipedia",
+          "encyclopedic structure and broad coverage"
+        ],
+        [
+          "mC4 / OSCAR PL fallback",
+          "web-scale variety, with noise"
+        ],
+        [
+          "Wolne Lektury",
+          "public-domain literary Polish"
+        ]
+      ]
+    },
+    "evaluation": {
+      "kicker": "Evaluation",
+      "title": "Gemma Judge over fixed continuation prompts.",
+      "body": "Evaluation compares checkpoints with fixed continuation prompts, broad eval and seed sensitivity. In v2.3.1, 50k was technically healthy, but 44k kept the higher average quality; the project selects the best checkpoint by eval, not latest loss alone.",
+      "failureTitle": "Where it fails"
+    },
+    "samples": {
+      "kicker": "Samples",
+      "title": "Representative generations from the latest nightly evaluation.",
+      "body": "These are real examples from the current base checkpoint, refreshed automatically after the nightly Gemma Judge run. They are continuations, not assistant replies. Weak samples are included on purpose."
+    },
+    "limitations": {
+      "kicker": "Limitations",
+      "title": "Glyph-100M is still a base model, not a chatbot.",
+      "body": "The best practical Glyph-100M checkpoint is 44k, but it is still a base LM without SFT. It may repeat, cut off generations, drift, hallucinate and produce pseudo-encyclopedic style. It is not ready for a public assistant demo.",
+      "items": [
+        "small model",
+        "Glyph-27M has a short 256-token context",
+        "Glyph-100M only has a 10k checkpoint",
+        "may repeat phrases",
+        "may drift off topic",
+        "may hallucinate",
+        "SFT v0 can over-style responses",
+        "dataset noise",
+        "not for safety-critical use"
+      ]
+    },
+    "roadmap": {
+      "kicker": "Roadmap",
+      "title": "v2.3.1 pretraining is stopped; next decision is SFT smoke or dataset v2.4.",
+      "groups": [
+        [
+          "Short term",
+          [
+            "keep Glyph-27M as proof of pipeline",
+            "mark 44k as the best practical checkpoint",
+            "keep 50k as diagnostic latest, not best",
+            "do not run 55k/60k without a new decision"
+          ]
+        ],
+        [
+          "Medium term",
+          [
+            "small SFT smoke test on a copy of 44k",
+            "or dataset v2.4 before more pretraining",
+            "keep base LM eval separate from instruction eval",
+            "do not publish it as a ready assistant"
+          ]
+        ],
+        [
+          "Long term",
+          [
+            "larger Glyph variant",
+            "longer context",
+            "better Polish technical data"
+          ]
+        ]
+      ]
+    }
+  },
+  "labels": {
+    "modelCard": "Model card",
+    "publicSnapshot": "Public snapshot",
+    "snapshot": "Snapshot",
+    "score": "score",
+    "overall": "overall",
+    "prompt": "Prompt",
+    "output": "Glyph-27M output",
+    "judge": "Gemma Judge note",
+    "step": "step",
+    "settings": "sampling",
+    "good": "Good sample",
+    "typical": "Typical sample",
+    "failure": "Failure sample",
+    "footer": "Glyph · Built by Maksymilian Puta · experimental project"
+  }
+}

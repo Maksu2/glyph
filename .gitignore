@@ -1,0 +1,17 @@
+# v2.5 baseline: wagi, dane binarne i logi poza repo
+checkpoints/
+data/raw/
+data/processed/*.bin
+data/processed/*.model
+runs/
+logs/
+*.pt
+*.bin
+__pycache__/
+# dopisane: archiwa/bundle/venv zaśmieciłyby baseline (3 GB+)
+.venv/
+.cache/
+dist/
+*.tar.gz
+*.zip
+*.zst

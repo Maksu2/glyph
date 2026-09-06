@@ -1,0 +1,60 @@
+{
+  "status": "waiting_for_approval",
+  "training_started": false,
+  "question": "Do you approve starting Glyph-100M stage 1 training for 1,000 optimizer steps?",
+  "accepted_replies": {
+    "APPROVE_STAGE1": "Codex may start only stage 1 / 1k steps.",
+    "STOP": "Codex must not train.",
+    "CHANGES": "Codex should wait for further instructions."
+  },
+  "artifacts": {
+    "base_checkpoint": "checkpoints/final.pt",
+    "sft_checkpoint": "checkpoints/sft-v0/glyph-27m-sft-v0-final.pt",
+    "parameter_report": "reports/glyph100_parameter_report.json",
+    "rocm_smoke_report": "reports/glyph100_rocm_smoke.json",
+    "dataset_report": "data/reports/glyph_100m_dataset_report.md",
+    "dataset_stats": "data/reports/glyph_100m_dataset_stats.json",
+    "training_plan": "docs/glyph-100m-plan.md",
+    "eval_prompts": "eval/glyph-100m/base_continuation_prompts.jsonl"
+  },
+  "glyph100": {
+    "unique_trainable_parameters": 97654272,
+    "logical_parameters": 109942272,
+    "context_length": 512,
+    "vocab_size": 16000,
+    "layers": 12,
+    "heads": 12,
+    "embedding_dim": 768,
+    "ffn_dim": 3072
+  },
+  "rocm_smoke": {
+    "gpu": "AMD Radeon RX 5500 XT",
+    "max_ok_microbatch": 8,
+    "oom_microbatch": 16,
+    "recommended_microbatch": 4,
+    "recommended_gradient_accumulation_steps": 8,
+    "effective_tokens_per_optimizer_step": 16384,
+    "reason": "batch 8 worked in synthetic smoke but used very high VRAM; batch 4 with accumulation 8 keeps the same effective tokens with safer headroom"
+  },
+  "dataset_candidate": {
+    "name": "glyph100_stage1_candidate",
+    "scope": "stage 1 sanity candidate; not final cleaner corpus for 10k+ runs",
+    "train_bin": "data/processed/glyph100_train.bin",
+    "val_bin": "data/processed/glyph100_val.bin",
+    "documents_seen": 289973,
+    "accepted_documents": 250000,
+    "rejected_documents": 39973,
+    "train_tokens": 117870679,
+    "val_tokens": 1239948,
+    "recommendation": "Acceptable for a 1k-step Glyph-100M sanity run; process the full corpus before longer stages."
+  },
+  "command_not_executed": [
+    "docker compose -f docker-compose.train.rocm.yml run --rm --no-deps trainer-rocm",
+    "python train.py --variant glyph-100m --device cuda --max-steps 1000 --batch-size 4 --gradient-accumulation-steps 8 --learning-rate 2e-4 --min-lr 2e-5 --checkpoint-dir checkpoints/glyph-100m --log-dir logs/glyph-100m --dataset-name glyph100_stage1_candidate --dataset-metadata-path data/processed/glyph100_metadata.json --eval-interval 250 --checkpoint-interval 500 --log-interval 10"
+  ],
+  "openclaw_handoff": {
+    "attempted": true,
+    "result": "not_sent",
+    "reason": "OpenClaw gateway was available, but no safe message target was returned by directory peers/groups."
+  }
+}

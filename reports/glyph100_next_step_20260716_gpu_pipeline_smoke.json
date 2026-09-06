@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-07-16T07:20:40+00:00",
+  "verdict": "PASS",
+  "training_started": false,
+  "purpose": "single-optimizer-step end-to-end ROCm pipeline validation",
+  "model": {
+    "variant": "glyph-100m",
+    "unique_trainable_parameters": 97654272,
+    "logical_parameters": 109942272,
+    "context_length": 512
+  },
+  "dataset": {
+    "name": "glyph100_dataset_v2_4_1_core",
+    "train_tokens": 278089665,
+    "validation_tokens": 1406736,
+    "metadata": "data/processed/glyph100_v2_4_1_metadata.json"
+  },
+  "runtime": {
+    "device": "AMD Radeon RX 5500 XT",
+    "backend": "PyTorch HIP 7.13.0",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "train_sampling": "shuffled_blocks",
+    "data_seed": 2026,
+    "eval_seed": 2026,
+    "optimizer": "AdamW",
+    "optimizer_foreach": true
+  },
+  "result": {
+    "start_step": 1,
+    "end_step": 1,
+    "loss": 9.8369,
+    "learning_rate": 1e-7,
+    "tokens_per_second": 2864,
+    "nan_inf": false,
+    "oom": false,
+    "crash": false,
+    "hang": false,
+    "checkpoint_written": false,
+    "gpu_edge_before_c": 28,
+    "gpu_hotspot_before_c": 28,
+    "gpu_edge_after_c": 30,
+    "gpu_hotspot_after_c": 30,
+    "peak_vram_measured": false
+  },
+  "next_gate": "explicit approval for a from-scratch 1k proxy; no automatic long run"
+}

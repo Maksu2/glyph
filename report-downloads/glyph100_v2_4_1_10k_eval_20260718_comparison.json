@@ -1,0 +1,319 @@
+{
+  "run_id": "glyph100_v2_4_1_10k_eval_20260718",
+  "scope": "v2.4.1 base-LM trajectory; no training performed",
+  "prompts": 20,
+  "presets": {
+    "conservative": {
+      "temperature": 0.6,
+      "top_k": 30,
+      "max_new_tokens": 80
+    },
+    "normal": {
+      "temperature": 0.8,
+      "top_k": 40,
+      "max_new_tokens": 80
+    }
+  },
+  "checkpoints": {
+    "5k": "checkpoints/glyph-100m-v2_4_1-5k/step_0005000.pt",
+    "7.5k": "checkpoints/glyph-100m-v2_4_1-10k/step_0007500.pt",
+    "10k": "checkpoints/glyph-100m-v2_4_1-10k/step_0010000.pt"
+  },
+  "checkpoint_contracts": {
+    "5k": {
+      "step": 5000,
+      "current_step": 5000,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_1_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    },
+    "7.5k": {
+      "step": 7500,
+      "current_step": 7500,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_1_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    },
+    "10k": {
+      "step": 10000,
+      "current_step": 10000,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_1_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    }
+  },
+  "validation_losses": [
+    {
+      "step": 250,
+      "val_loss": 7.9565,
+      "log": "logs/glyph-100m-v2_4_1-1k/train.log"
+    },
+    {
+      "step": 500,
+      "val_loss": 7.3277,
+      "log": "logs/glyph-100m-v2_4_1-1k/train.log"
+    },
+    {
+      "step": 750,
+      "val_loss": 6.8266,
+      "log": "logs/glyph-100m-v2_4_1-1k/train.log"
+    },
+    {
+      "step": 1000,
+      "val_loss": 6.4298,
+      "log": "logs/glyph-100m-v2_4_1-1k/train.log"
+    },
+    {
+      "step": 1500,
+      "val_loss": 5.922,
+      "log": "logs/glyph-100m-v2_4_1-5k/train.log"
+    },
+    {
+      "step": 2000,
+      "val_loss": 5.6551,
+      "log": "logs/glyph-100m-v2_4_1-5k/train.log"
+    },
+    {
+      "step": 2500,
+      "val_loss": 5.3442,
+      "log": "logs/glyph-100m-v2_4_1-5k/train.log"
+    },
+    {
+      "step": 3000,
+      "val_loss": 5.0933,
+      "log": "logs/glyph-100m-v2_4_1-5k/train.log"
+    },
+    {
+      "step": 3500,
+      "val_loss": 4.911,
+      "log": "logs/glyph-100m-v2_4_1-5k/train.log"
+    },
+    {
+      "step": 4000,
+      "val_loss": 4.7702,
+      "log": "logs/glyph-100m-v2_4_1-5k/train.log"
+    },
+    {
+      "step": 4500,
+      "val_loss": 4.6665,
+      "log": "logs/glyph-100m-v2_4_1-5k/train.log"
+    },
+    {
+      "step": 5000,
+      "val_loss": 4.5902,
+      "log": "logs/glyph-100m-v2_4_1-5k/train.log"
+    },
+    {
+      "step": 5500,
+      "val_loss": 4.5096,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 6000,
+      "val_loss": 4.4387,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 6500,
+      "val_loss": 4.3872,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 7000,
+      "val_loss": 4.3601,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 7500,
+      "val_loss": 4.3126,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 8000,
+      "val_loss": 4.2606,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 8500,
+      "val_loss": 4.2473,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 9000,
+      "val_loss": 4.1908,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 9500,
+      "val_loss": 4.1548,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    },
+    {
+      "step": 10000,
+      "val_loss": 4.11,
+      "log": "logs/glyph-100m-v2_4_1-10k/train.log"
+    }
+  ],
+  "summaries": {
+    "5k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 3.0,
+        "median_quality_score": 4.0,
+        "natural_endings": 6,
+        "cutoff_like": 40,
+        "repetition_samples": 13,
+        "pseudo_ency_samples": 7,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 80,
+        "avg_generation_tokens_per_second": 70.97
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 2.7,
+          "median_quality_score": 3.0,
+          "natural_endings": 4,
+          "cutoff_like": 20,
+          "repetition_samples": 9,
+          "pseudo_ency_samples": 4,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 70.22
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 3.3,
+          "median_quality_score": 4.0,
+          "natural_endings": 2,
+          "cutoff_like": 20,
+          "repetition_samples": 4,
+          "pseudo_ency_samples": 3,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.73
+        }
+      }
+    },
+    "7.5k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 3.0,
+        "median_quality_score": 4.0,
+        "natural_endings": 2,
+        "cutoff_like": 39,
+        "repetition_samples": 13,
+        "pseudo_ency_samples": 4,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 79.22,
+        "avg_generation_tokens_per_second": 71.96
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 2.45,
+          "median_quality_score": 1.5,
+          "natural_endings": 1,
+          "cutoff_like": 20,
+          "repetition_samples": 10,
+          "pseudo_ency_samples": 2,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.86
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 3.55,
+          "median_quality_score": 4.0,
+          "natural_endings": 1,
+          "cutoff_like": 19,
+          "repetition_samples": 3,
+          "pseudo_ency_samples": 2,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 78.45,
+          "avg_generation_tokens_per_second": 72.06
+        }
+      }
+    },
+    "10k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 3.025,
+        "median_quality_score": 4.0,
+        "natural_endings": 4,
+        "cutoff_like": 37,
+        "repetition_samples": 14,
+        "pseudo_ency_samples": 2,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 76.08,
+        "avg_generation_tokens_per_second": 72.5
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 2.65,
+          "median_quality_score": 3.5,
+          "natural_endings": 3,
+          "cutoff_like": 17,
+          "repetition_samples": 11,
+          "pseudo_ency_samples": 1,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 72.15,
+          "avg_generation_tokens_per_second": 73.15
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 3.4,
+          "median_quality_score": 4.0,
+          "natural_endings": 1,
+          "cutoff_like": 20,
+          "repetition_samples": 3,
+          "pseudo_ency_samples": 1,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.86
+        }
+      }
+    }
+  },
+  "pairwise": {
+    "5k_vs_7.5k": {
+      "5k": 12,
+      "7.5k": 12,
+      "ties": 16
+    },
+    "7.5k_vs_10k": {
+      "7.5k": 11,
+      "10k": 11,
+      "ties": 18
+    },
+    "5k_vs_10k": {
+      "5k": 13,
+      "10k": 15,
+      "ties": 12
+    }
+  },
+  "heuristic_best_checkpoint": "10k",
+  "methodology_note": "Diagnostic heuristic only; manual semantic review is required."
+}

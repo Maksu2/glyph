@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-17T01:42:03.646605+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260517-013042.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260517-013042.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.717,
+  "averages": {
+    "continuation_fit": 2.933,
+    "polish": 3.1,
+    "coherence": 2.717,
+    "repetition": 2.467,
+    "safety": 5.0,
+    "overall": 2.717
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.717/5 na 60/60 próbkach. Trening: step=104680, train_loss=3.8541, val_loss=4.5106, lr=0.000157. Najsłabsze średnie: repetition=2.47, coherence=2.72; najmocniejsza metryka: polish=3.10.",
+  "training_stats": {
+    "step": 104680,
+    "total_steps": 200000,
+    "progress_pct": 52.339999999999996,
+    "loss": 3.8541,
+    "lr": 0.000157,
+    "last_eval": {
+      "ts": "2026-05-17 01:13:30",
+      "step": 104500,
+      "val_loss": 4.5106
+    },
+    "tokens_m": 857.54
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.72/5. Najsłabsze metryki to 'coherence' (2.72/5) oraz 'repetition' (2.47/5). Wskaźnik straty treningowej (3.85) jest niższy niż walidacyjnej (4.51), co jest oczekiwane, ale różnica sugeruje nadmierne dopasowanie do danych treningowych. Model wykazuje powtarzanie się elementów i niestabilność kontekstowa, co manifestuje się w gwałtownych, niepowiązanych skokach tematycznych (np. z literatury do tematyki sportowej/reklamowej).",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.72/5. Najsłabsze metryki to 'coherence' (2.72/5) oraz 'repetition' (2.47/5). Wskaźnik straty treningowej (3.85) jest niższy niż walidacyjnej (4.51), co jest oczekiwane, ale różnica sugeruje nadmierne dopasowanie do danych treningowych. Model wykazuje powtarzanie się elementów i niestabilność kontekstowa, co manifestuje się w gwałtownych, niepowiązanych skokach tematycznych (np. z literatury do tematyki sportowej/reklamowej).\"\n}\n```"
+}

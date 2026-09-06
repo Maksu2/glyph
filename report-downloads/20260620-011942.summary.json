@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-20T01:26:59.426793+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260620-011942.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260620-011942.jsonl",
+  "count": 60,
+  "valid_count": 59,
+  "overall_avg": 2.797,
+  "averages": {
+    "continuation_fit": 3.237,
+    "polish": 3.305,
+    "coherence": 2.932,
+    "repetition": 2.61,
+    "safety": 5.0,
+    "overall": 2.797
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.797/5 na 59/60 próbkach. Trening: step=50000, train_loss=3.2214, val_loss=3.3927, lr=0.000175. Najsłabsze średnie: repetition=2.61, coherence=2.93; najmocniejsza metryka: polish=3.31.",
+  "training_stats": {
+    "step": 50000,
+    "total_steps": 50000,
+    "progress_pct": 100.0,
+    "loss": 3.2214,
+    "lr": 0.000175,
+    "last_eval": {
+      "ts": "2026-06-12 04:02:44",
+      "step": 50000,
+      "val_loss": 3.3927
+    },
+    "tokens_m": 819.2
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.797, co wskazuje na podstawowy poziom zdolności do kontynuacji tekstu. Najsłabsze metryki to 'repetition' (2.61) i 'coherence' (2.932), co sugeruje problemy z utrzymaniem spójności i nadmiernym powtarzaniem fraz. W kontekście treningowym, różnica między train_loss (3.2214) a val_loss (3.3927) jest niewielka, a współczynnik uczenia (0.000175) jest stabilny. Typowym błędem widocznym w próbkach jest powstawanie niepasujących semantycznie fraz lub nagłe zmiany tematu, co wymaga interwencji na poziomie SFT.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.797, co wskazuje na podstawowy poziom zdolności do kontynuacji tekstu. Najsłabsze metryki to 'repetition' (2.61) i 'coherence' (2.932), co sugeruje problemy z utrzymaniem spójności i nadmiernym powtarzaniem fraz. W kontekście treningowym, różnica między train_loss (3.2214) a val_loss (3.3927) jest niewielka, a współczynnik uczenia (0.000175) jest stabilny. Typowym błędem widocznym w próbkach jest powstawanie niepasujących semantycznie fraz lub nagłe zmiany tematu, co wymaga interwencji na poziomie SFT.\"\n}\n```"
+}

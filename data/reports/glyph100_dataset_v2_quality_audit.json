@@ -1,0 +1,181 @@
+{
+  "verdict": "not approved for stage 3 yet",
+  "accepted_pattern_counts": {
+    "forum": 9246,
+    "ogłoszenia": 6735,
+    "na sprzedaż": 5541,
+    "sklep": 4686,
+    "koszyk": 1472,
+    "komentarz": 1185,
+    "anonimowy": 1025,
+    "cena za m²": 661,
+    "tanie loty": 475,
+    "pożyczki": 253,
+    "promocyjne": 178,
+    "allegro": 98,
+    "gazetki": 54,
+    "horoskop": 41,
+    "sprzedano za": 32,
+    "home/": 10,
+    "no comment": 5,
+    "userfiles": 1
+  },
+  "accepted_pattern_counts_by_source": {
+    "home/": {
+      "wikipedia_pl": 10
+    },
+    "sprzedano za": {
+      "wikipedia_pl": 32
+    },
+    "gazetki": {
+      "wikipedia_pl": 54
+    },
+    "sklep": {
+      "wolne_lektury": 143,
+      "wikipedia_pl": 4543
+    },
+    "allegro": {
+      "wikipedia_pl": 98
+    },
+    "pożyczki": {
+      "wolne_lektury": 5,
+      "wikipedia_pl": 248
+    },
+    "horoskop": {
+      "wikipedia_pl": 41
+    },
+    "no comment": {
+      "wolne_lektury": 4,
+      "wikipedia_pl": 1
+    },
+    "promocyjne": {
+      "wikipedia_pl": 178
+    },
+    "komentarz": {
+      "wolne_lektury": 24,
+      "wikipedia_pl": 1161
+    },
+    "anonimowy": {
+      "wolne_lektury": 2,
+      "wikipedia_pl": 274,
+      "legacy_mixed_corpus": 749
+    },
+    "koszyk": {
+      "wolne_lektury": 30,
+      "wikipedia_pl": 1442
+    },
+    "userfiles": {
+      "legacy_mixed_corpus": 1
+    },
+    "forum": {
+      "wolne_lektury": 1,
+      "wikipedia_pl": 1118,
+      "legacy_mixed_corpus": 8127
+    },
+    "ogłoszenia": {
+      "wolne_lektury": 5,
+      "wikipedia_pl": 516,
+      "legacy_mixed_corpus": 6214
+    },
+    "tanie loty": {
+      "wikipedia_pl": 1,
+      "legacy_mixed_corpus": 474
+    },
+    "na sprzedaż": {
+      "wolne_lektury": 7,
+      "wikipedia_pl": 400,
+      "legacy_mixed_corpus": 5134
+    },
+    "cena za m²": {
+      "legacy_mixed_corpus": 661
+    }
+  },
+  "legacy_examples": [
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "Dolomity - Cortina D'Ampezzo - Page 2 - Relacje z wyjazdów forumowiczów na narty - skionline.pl - forum narciarskie Jeszcze lepiej trzymaja trasy w Faloria I Monte Cristallo w Cortinie, bajka w tym trasa olimpijska, w chmurach wlaśnie sie kumuluje mega opad, w Dolomity narciarze czem predzej. Jestem jescze jutro Na Folaria, rezygnuje z Val Gardeny,"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "ogłoszenia"
+      ],
+      "text": "Salony kosmetyczne, fryzjerskie Jarocin Centrum Urody w Jarocinie. Baza firm > Salony kosmetyczne, fryzjerskie Jarocin. Ogłoszenia i usługi > Salony kosmetyczne, fryzjerskie - Polki.pl Podobne - Jarocin (2)Podobne - wielkopolskie (119)Inne - Salony... (1421)Salon Kosmetyczny z Solarium \"Orchidea\"Manicure,pedicure,makijaż,peeling kawitacyjny,mikrode"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "Fortnite na PlayStation 4 umożliwia zabawę z posiadaczami Xboksa One [news zaktualizowany] | GRYOnline.pl Wiadomość gry 19 września 2017, 08:57 Studio Epic Games poinformowało, że faktycznie w ostatnich dniach osoby posiadające Fortnite w wersji na PlayStation 4 mogły grać z posiadaczami Xboksa One i na odwrót. Niestety złe wieści są takie, że był "
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "Forum: Rozwód..i co dalej? - nie chce mi się już żyć.. Forum: Depresja - Axyven Forum: Depresja - axyven i skutki uboczne Forum: Depresja - walczycie? przemęcz. Ja biorę axyven i mam jedynie nawroty \"do opanowania\" i nie tak długie jak kiedyś (przy asentrze). Kilka dni temu jednak bezmyślnie i beztrosko spóżniłam wizytę u lekarza i wykupienie kolej"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "Forum Budownictwa Śląskiego to wspólna inicjatywa przedstawicieli samorządów zawodowych, gospodarczych oraz organizacji pozarządowych działającychwsektorze budownictwa województwa śląskiego. Utworzyły gowlutym br. Śląska OkręgowaIzba Inżynierów Budownictwa; Izba Budownictwa z siedzibą w Katowicach; Polska Izba Przemysłowo-Handlowa Budownictwa, Oddz"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "Forum Zarządzania Internetem 2017 » Fintek.pl Fintek.pl / Forum Zarządzania Internetem 2017 Opublikowano: 9 sierpnia 2017, 14:56 Aktualizacja: 9 sierpnia 2017, 14:56 Tegoroczne Forum to niepowtarzalna okazja, by w otwartej atmosferze porozmawiać o najważniejszych zagadnieniach związanych z funkcjonowaniem Internetu, a także kontynuować dyskusje zap"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "na sprzedaż"
+      ],
+      "text": "SHEYK NIKODEM KOBIELA Dobrogoszcz 14 | 83-400, Kościerzyna 504189460 Zobacz lokalizacja E-mail Bardziej szczegółowe informacje na Sheyk Nikodem Kobiela Benzyna i olej napędowy są bardzo trwałe i sprawdzają się w każdych warunkach użytkowania pojazdu. Są idealnym materiałem napędowym dla silników spalinowych. Największą zaletą tego rodzaju paliwa je"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "Rysujemy proste prostopadłe i równoległe - ćwiczenia. Scenariusz lekcji matematyki w klasie V Ewelina StachuraWłosienicaNumer publikacji: 9986Dział: Szkoła podstawowa - kl. IV-VIRozmiar tekstu: A A A Dzień: 25.11.2009r.Temat: Rysujemy proste prostopadłe i równoległe - ćwiczenia.Klasa: VProwadzący : Ewelina StachuraCele ogólne: Uczeń:- Zna symbolikę"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "ogłoszenia",
+        "na sprzedaż"
+      ],
+      "text": "Mieszkanie m2 z oddzielną kuchnią 51 m² na sprzedaż Olsztyn 269 000 zł 51 m² 5 274,51 zł/m² Cena: 269 000 zł (5 274,51 zł/m²) numer ogłoszenia: 11087/3685/OMS Mieszkanie położone na 4 piętrze znajduje się przy ul.Iwaszkiewicza. Na osiedlu znajduje się duży plac zabaw dla małych mieszkańców. (...) Proszę o kontakt, potrzebuję uzyskać więcej szczegół"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "Flex – Fuga BOTAMENT® nagrodzona!, Laureat konkursu Łazienka Wybór Roku 2017 - LivingRoom24 Tekst Anita Gawlik • Zdjęcia Botament \"Łazienka - Wybór Roku\" to coroczny konkurs, organizowany przez przedstawicieli branży łazienkowej. Jego celem jest wyróżnienie najciekawszych osiągnięć w dziedzinie aranżacji łazienkowych wnętrz. Laureatem 16. edycji ko"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "Mini chłodziarka samochodowa – 1982 rok : Nowości Toyoty i przegląd wydarzeń 20 Wrz 2019, 14:58 Każdy, kto miał okazję jeździć Toyotą Land Cruiser J200, zauważył, że w schowku ukrytym w podłokietniku między przednimi siedzeniami znajduje się chłodziarka na napoje. Urządzenie to doskonale spełnia swoją funkcję w trasie, schładzając puszki lub butelk"
+    },
+    {
+      "source": "legacy_mixed_corpus",
+      "patterns": [
+        "forum"
+      ],
+      "text": "ARGOMENTO: viagra bez recepty cena viagra bez recepty cena 2 Settimane, 3 Giorni fa #956788 viagra forum opinie Sondaż: rozstrojenia erekcji, brzydsza niezłomność płciowa, regres gorliwości na współwystępowanie. Wytłumaczenie: nadnaturalna rajska pastylka. Jednakowoż szczerze Viagra wesprze? Niby wolno ją zapracować i o czym trzeba wypominać podcza"
+    }
+  ],
+  "notes": "The v2 rebuild is source-aware and reaches 300M tokens, but manual sample review still finds accepted legacy_mixed_corpus rows that look like web listings, forums, ads, travel/product pages and other non-neutral pages. This is cleaner than glyph100_stage1_candidate and useful as a reproducible candidate, but I do not recommend approving stage 3 / 50k on it without either reducing legacy_mixed_corpus or adding cleaner source-aware data such as audited educational corpora."
+}

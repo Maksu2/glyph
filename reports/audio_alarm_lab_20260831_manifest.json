@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-08-31T20:51:45+00:00",
+  "work_batch": "audio_alarm_lab_20260831",
+  "measurement_label": "measured end-to-end acoustic latency including microphone/capture path",
+  "primary_result": {
+    "valid_trials": 24,
+    "trials_requested": 24,
+    "min_ms": 213.655511,
+    "median_ms": 243.2214535,
+    "mean_ms": 243.22415850000002,
+    "p95_ms": 262.2925274,
+    "max_ms": 300.752099,
+    "stddev_ms": 17.875700904051833,
+    "peak_to_peak_jitter_ms": 87.096588
+  },
+  "files": [
+    {
+      "path": "audio_alarm_lab_20260831_artifacts.tar.gz",
+      "size_bytes": 19384597,
+      "sha256": "50e33868683f044a755ae9f0b2cebd09c653b94486350108f4dc0dc9d9b0920b"
+    },
+    {
+      "path": "report-2026-08-31.md",
+      "sha256": "48d32f6402aa895a83a3813a7338c43d8d2d49f406c78e9f64344ed524b1dbd2"
+    },
+    {
+      "path": "preflight-2026-08-31.md",
+      "sha256": "e9c1279dea99964a1a65eb515a103248001be41bf690488d9d43c2e4cce84d80"
+    },
+    {
+      "path": "latency_test.py",
+      "sha256": "24a187d87b64474e8be62fed17f8abb974fe9b0142c8e952d131d1e63e59d518"
+    },
+    {
+      "path": "artifacts/2026-08-31/latency-main/click.wav",
+      "sha256": "0d07635033942b8fd18708e8b3bcb395d55f5f88ec88d61073b1295a42be4a3b"
+    },
+    {
+      "path": "artifacts/2026-08-31/latency-main/raw_capture.wav",
+      "size_bytes": 33046824,
+      "sha256": "867ac71b84272022efa620f1230214e7e105e4e8275d3451518556645e162b23"
+    },
+    {
+      "path": "artifacts/2026-08-31/latency-main/results.csv",
+      "sha256": "d5de480bd32c62246fd0433eb70bcefebd2de5e8abf0391415c4f1c2675f5dea"
+    },
+    {
+      "path": "artifacts/2026-08-31/latency-main/results.json",
+      "sha256": "ba62e188f06a3fd97e32144eaba18bbf2fa3ca520ea0b17b596b13b87121e80a"
+    },
+    {
+      "path": "artifacts/2026-08-31/latency-main/capture_timing.json",
+      "sha256": "71224cfb566df7fad635a28bbed2b221eb48644b3e1f7126be47b608407c92a4"
+    },
+    {
+      "path": "artifacts/2026-08-31/latency-main/latency_plot.png",
+      "sha256": "ce3722e5a5ec6934bdcab731fca08c96ba1d6b7c04af4f6be455e23a910b1555"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Colab already provides a CUDA-enabled PyTorch build. Do not add torch here.
+numpy>=1.24,<3
+sentencepiece>=0.2,<1
+psutil>=5.9,<8
+zstandard>=0.22,<1

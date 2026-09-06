@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-17T23:41:18.984282+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260517-232942.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260517-232942.jsonl",
+  "count": 60,
+  "valid_count": 59,
+  "overall_avg": 2.831,
+  "averages": {
+    "continuation_fit": 3.068,
+    "polish": 3.153,
+    "coherence": 2.847,
+    "repetition": 2.576,
+    "safety": 4.932,
+    "overall": 2.831
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.831/5 na 59/60 próbkach. Trening: step=117110, train_loss=3.6842, val_loss=4.5175, lr=0.000131. Najsłabsze średnie: repetition=2.58, coherence=2.85; najmocniejsza metryka: polish=3.15.",
+  "training_stats": {
+    "step": 117110,
+    "total_steps": 200000,
+    "progress_pct": 58.555,
+    "loss": 3.6842,
+    "lr": 0.000131,
+    "last_eval": {
+      "ts": "2026-05-17 23:19:17",
+      "step": 117000,
+      "val_loss": 4.5175
+    },
+    "tokens_m": 959.37
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.831. Najsłabsze metryki to 'repetition' (2.576) oraz 'coherence' (2.847). Wskaźniki straty (train_loss=3.6842, val_loss=4.5175) wskazują na zauważalną rozbieżność między wydajnością treningową a walidacyjną. W próbkach widoczny jest powtarzający się błąd polegający na nagłym, nieuzasadnionym przejściu tematycznym (topic drift), co obniża spójność kontekstu.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.831. Najsłabsze metryki to 'repetition' (2.576) oraz 'coherence' (2.847). Wskaźniki straty (train_loss=3.6842, val_loss=4.5175) wskazują na zauważalną rozbieżność między wydajnością treningową a walidacyjną. W próbkach widoczny jest powtarzający się błąd polegający na nagłym, nieuzasadnionym przejściu tematycznym (topic drift), co obniża spójność kontekstu.\"\n}\n```"
+}

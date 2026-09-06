@@ -1,0 +1,90 @@
+{
+  "created_at_utc": "2026-06-11T20:58:36+00:00",
+  "decision": "50k is diagnostic only; 44k remains best before experiment",
+  "dataset": "glyph100_v2_3_1",
+  "tokenizer_path": "data/processed/tokenizer.model",
+  "expected_tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+  "actual_tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+  "start_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/latest.pt",
+  "target_step": 50000,
+  "stage_name": "v2_3_1_diagnostic_45k_to_50k",
+  "output_checkpoint_dir": "checkpoints/glyph-100m-v2_3_1-50k",
+  "output_log_dir": "logs/glyph-100m-v2_3_1-50k",
+  "checkpoints": {
+    "best_practical_checkpoint_before_50k": {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+      "exists": true,
+      "size_bytes": 1175128433,
+      "variant": "glyph-100m",
+      "step": 44000,
+      "current_step": 44000,
+      "dataset_name": "glyph100_v2_3_1",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "context_length": 512,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "scheduler_state": {
+        "type": "linear_warmup_cosine_decay",
+        "step": 44000,
+        "max_steps": 200000,
+        "warmup_steps": 2000,
+        "max_lr": 0.0002,
+        "min_lr": 2e-05
+      }
+    },
+    "latest_checkpoint_before_50k": {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/latest.pt",
+      "exists": true,
+      "size_bytes": 1175128015,
+      "variant": "glyph-100m",
+      "step": 45000,
+      "current_step": 45000,
+      "dataset_name": "glyph100_v2_3_1",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "context_length": 512,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "scheduler_state": {
+        "type": "linear_warmup_cosine_decay",
+        "step": 45000,
+        "max_steps": 200000,
+        "warmup_steps": 2000,
+        "max_lr": 0.0002,
+        "min_lr": 2e-05
+      }
+    },
+    "step_45k_checkpoint": {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0045000.pt",
+      "exists": true,
+      "size_bytes": 1175128433,
+      "variant": "glyph-100m",
+      "step": 45000,
+      "current_step": 45000,
+      "dataset_name": "glyph100_v2_3_1",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "context_length": 512,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "scheduler_state": {
+        "type": "linear_warmup_cosine_decay",
+        "step": 45000,
+        "max_steps": 200000,
+        "warmup_steps": 2000,
+        "max_lr": 0.0002,
+        "min_lr": 2e-05
+      }
+    }
+  }
+}

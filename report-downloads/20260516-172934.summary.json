@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-16T17:38:38.897519+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260516-172934.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260516-172934.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.683,
+  "averages": {
+    "continuation_fit": 3.05,
+    "polish": 3.25,
+    "coherence": 2.733,
+    "repetition": 2.383,
+    "safety": 5.0,
+    "overall": 2.683
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.683/5 na 60/60 próbkach. Trening: step=100060, train_loss=3.7134, val_loss=4.5349, lr=0.000167. Najsłabsze średnie: repetition=2.38, coherence=2.73; najmocniejsza metryka: polish=3.25.",
+  "training_stats": {
+    "step": 100060,
+    "total_steps": 200000,
+    "progress_pct": 50.029999999999994,
+    "loss": 3.7134,
+    "lr": 0.000167,
+    "last_eval": {
+      "ts": "2026-05-16 17:24:59",
+      "step": 100000,
+      "val_loss": 4.5349
+    },
+    "tokens_m": 819.69
+  },
+  "gemma_description": "Ogólna wydajność modelu na benchmarku kontynuacji tekstu jest umiarkowana, z ogólnym wynikiem 2.683. Najsłabsze metryki to spójność (coherence: 2.733) i powtórzenia (repetition: 2.383). Wskaźniki treningowe (train_loss=3.7134 vs val_loss=4.5349) wskazują na rozbieżność, gdzie walidacja jest znacząco wyższa, co sugeruje nadmierne dopasowanie do danych treningowych. W próbkach widoczny jest powtarzający się problem z nagłymi skokami tematycznymi i dezorganizacją narracyjną, co jest typowe dla modelu bazowego przed SFT.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólna wydajność modelu na benchmarku kontynuacji tekstu jest umiarkowana, z ogólnym wynikiem 2.683. Najsłabsze metryki to spójność (coherence: 2.733) i powtórzenia (repetition: 2.383). Wskaźniki treningowe (train_loss=3.7134 vs val_loss=4.5349) wskazują na rozbieżność, gdzie walidacja jest znacząco wyższa, co sugeruje nadmierne dopasowanie do danych treningowych. W próbkach widoczny jest powtarzający się problem z nagłymi skokami tematycznymi i dezorganizacją narracyjną, co jest typowe dla modelu bazowego przed SFT.\"\n}\n```"
+}

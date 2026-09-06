@@ -1,0 +1,123 @@
+{
+  "report_id": "glyph100_v2_4_2_10k_15k_run_20260905",
+  "generated_at_utc": "2026-09-05T00:00:00Z",
+  "report_type": "final_run_report",
+  "status": "complete",
+  "model": "Glyph-100M",
+  "variant": "glyph-100m",
+  "stage": "v2_4_2_continue_10k_to_15k",
+  "training": {
+    "started_at_utc": "2026-09-01T11:37:49Z",
+    "finished_at_utc": "2026-09-01T18:37:33Z",
+    "duration_seconds": 25184,
+    "duration_human": "6h 59m 44s",
+    "exit_code": 0,
+    "resume_checkpoint": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+    "resume_last_loss": 4.0289,
+    "resume_sampler_cursor": 320000,
+    "start_step": 10001,
+    "end_step": 15000,
+    "steps_done": 5000,
+    "launch_command": "scripts/run_glyph100_v242_10k_to_15k.sh (docker compose trainer-rocm, train.py --variant glyph-100m --device cuda --resume <10k> --max-steps 15000, ...)",
+    "hardware": "AMD Radeon RX 5500 XT, HIP 7.13.0, AdamW foreach=True",
+    "log_markers": {
+      "traceback": 0,
+      "non_finite": 0,
+      "oom": 0,
+      "cuda_error": 0,
+      "note": "case-insensitive regex scan of logs/glyph-100m-v2_4_2-15k/train.log on 2026-09-05; log is clean"
+    }
+  },
+  "config": {
+    "context_length": 512,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "learning_rate_first_logged": 0.000199,
+    "learning_rate_last_logged": 0.000198,
+    "lr_schedule_note": "LR effectively flat (~1.99e-4 -> ~1.98e-4) across 10k-15k: max_lr 2e-4, min_lr 2e-5, warmup 2000 already passed",
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "eval_interval": 500,
+    "eval_batches": 64,
+    "checkpoint_interval": 2500,
+    "log_interval": 10,
+    "train_sampling": "shuffled_blocks",
+    "data_seed": 2026,
+    "eval_seed": 2027
+  },
+  "tokens": {
+    "stage_tokens": 81920000,
+    "total_effective_tokens_at_15k": 245760000,
+    "train_corpus_tokens": 231494339,
+    "corpus_passes_at_15k": 1.06163,
+    "steady_tokens_per_second": 3275,
+    "end_to_end_tokens_per_second": 3252.7,
+    "note": "end-to-end includes eval (64 batches / 500 steps) and checkpoint overhead; post-eval steps log ~2426-2501 tok/s"
+  },
+  "train_loss": {
+    "first_logged_step": 10010,
+    "first_logged": 4.2312,
+    "early_minimum": 3.9868,
+    "early_minimum_step": 10160,
+    "final_step": 15000,
+    "final": 4.094,
+    "late_band": "approx 4.09-4.20 from ~12k on",
+    "trend": "rising across the run: early window ~4.0-4.1, late window ~4.1-4.2"
+  },
+  "validation_loss": {
+    "10500": 3.9557,
+    "11000": 3.9538,
+    "11500": 3.9577,
+    "12000": 3.9777,
+    "12500": 3.9883,
+    "13000": 3.9889,
+    "13500": 4.0068,
+    "14000": 3.9884,
+    "14500": 3.9876,
+    "15000": 3.9755,
+    "within_run_minimum": {"step": 11000, "value": 3.9538},
+    "within_run_maximum": {"step": 13500, "value": 4.0068},
+    "trend": "minimum at 11k, then plateau ~3.976-4.007 through 15k; final 15k (3.9755) below 12.5k-14.5k but above the 11k minimum",
+    "cross_run_caveat": "10k val 3.9023 comes from the Kaggle P100 run report, 10.5k val 3.9557 from this local run; same eval_seed (2027) and eval_batches (64) but different run/hardware, so the 10k->10.5k step is not a strictly continuous curve"
+  },
+  "checkpoints": {
+    "step_0012500.pt": {"saved_at_utc": "2026-09-01T15:07:29Z", "logged_loss": 4.1851},
+    "step_0015000.pt": {"saved_at_utc": "2026-09-01T18:37:13Z", "logged_loss": 4.2417},
+    "latest_pt": "checkpoints/glyph-100m-v2_4_2-15k/latest.pt (= 15k; strict load + finite params verified in 2026-09-05 audit)",
+    "no_11k_checkpoint": "checkpoint_interval 2500, so the 11k val minimum has no saved checkpoint; ranked candidates are 10k / 12.5k / 15k",
+    "limited_run_note": "train.log ends with 'Limited run complete; no final checkpoint was written' (no extra final.pt beyond step checkpoints)"
+  },
+  "gpu": {
+    "vram_used_bytes_steady": 5295341568,
+    "vram_gib_approx": 4.93,
+    "gpu_busy_pct_typical": 99,
+    "launch_snapshot": {"edge_avg_c": 60.4, "edge_max_c": 66.0, "hotspot_avg_c": 83.7, "hotspot_max_c": 95.0},
+    "full_series": "logs/glyph-100m-v2_4_2-15k/gpu_metrics.log (CSV: timestamp,edge_c,hotspot_c,fan_rpm,power_w,gpu_busy_pct,vram_used_bytes)",
+    "source_launch_snapshot": "reports/glyph100_v2_4_2_15k_launch_20260901.json"
+  },
+  "dataset": {
+    "name": "glyph100_dataset_v2_4_2_core",
+    "train_tokens": 231494339,
+    "val_tokens": 1176728,
+    "documents": 159579,
+    "wikipedia_share": 0.4083,
+    "literature_share": 0.5439,
+    "parliamentary_share": 0.0258,
+    "known_gap": "Wikisource 27,607,311 train tokens, 0 val tokens"
+  },
+  "verdict": "Run 10k->15k finished cleanly (exit 0, no NaN/Inf/OOM, both step checkpoints saved), but loss signals are a plateau, not progress: train loss drifted up across the run and val loss bottomed at 11k, ending at 15k above that minimum. 15k must NOT be treated as best without the matched generation eval.",
+  "recommendation": "Do not train beyond 15k. Run scripts/eval_glyph100_v242_15k_trajectory.py (10k vs 12.5k vs 15k, same prompts/presets/seeds) with manual semantic review, then crown the canonical v2.4.2 best; only then decide about any controlled 20k.",
+  "training_beyond_15k_started": false,
+  "artifacts": [
+    "logs/glyph-100m-v2_4_2-15k/train.log",
+    "logs/glyph-100m-v2_4_2-15k/launcher.log",
+    "logs/glyph-100m-v2_4_2-15k/gpu_metrics.log",
+    "checkpoints/glyph-100m-v2_4_2-15k/step_0012500.pt",
+    "checkpoints/glyph-100m-v2_4_2-15k/step_0015000.pt",
+    "checkpoints/glyph-100m-v2_4_2-15k/latest.pt",
+    "reports/glyph100_v2_4_2_15k_launch_20260901.json",
+    "reports/glyph100_v2_4_2_10k_15k_run_20260905.json",
+    "reports/glyph100_v2_4_2_10k_15k_run_20260905.md"
+  ]
+}

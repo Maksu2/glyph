@@ -1,0 +1,295 @@
+{
+  "checkpoints": {
+    "44k": {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+      "exists": true,
+      "size_bytes": 1175128433,
+      "variant": "glyph-100m",
+      "step": 44000,
+      "current_step": 44000,
+      "dataset_name": "glyph100_v2_3_1",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "context_length": 512,
+      "loss": 3.4402835369110107,
+      "optimizer_state_present": true,
+      "optimizer_keys": [
+        "state",
+        "param_groups"
+      ],
+      "scheduler_state_present": true,
+      "scheduler_state": {
+        "type": "linear_warmup_cosine_decay",
+        "step": 44000,
+        "max_steps": 200000,
+        "warmup_steps": 2000,
+        "max_lr": 0.0002,
+        "min_lr": 2e-05
+      },
+      "top_level_keys": [
+        "batch_size",
+        "checkpoint_metadata",
+        "context_length",
+        "current_step",
+        "dataset_metadata_path",
+        "dataset_name",
+        "effective_tokens_per_step",
+        "gradient_accumulation_steps",
+        "loss",
+        "model",
+        "model_config",
+        "optimizer",
+        "scheduler_state",
+        "step",
+        "tokenizer_path",
+        "tokenizer_sha256",
+        "train_config",
+        "variant"
+      ]
+    },
+    "45k_step": {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0045000.pt",
+      "exists": true,
+      "size_bytes": 1175128433,
+      "variant": "glyph-100m",
+      "step": 45000,
+      "current_step": 45000,
+      "dataset_name": "glyph100_v2_3_1",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "context_length": 512,
+      "loss": 3.420155853033066,
+      "optimizer_state_present": true,
+      "optimizer_keys": [
+        "state",
+        "param_groups"
+      ],
+      "scheduler_state_present": true,
+      "scheduler_state": {
+        "type": "linear_warmup_cosine_decay",
+        "step": 45000,
+        "max_steps": 200000,
+        "warmup_steps": 2000,
+        "max_lr": 0.0002,
+        "min_lr": 2e-05
+      },
+      "top_level_keys": [
+        "batch_size",
+        "checkpoint_metadata",
+        "context_length",
+        "current_step",
+        "dataset_metadata_path",
+        "dataset_name",
+        "effective_tokens_per_step",
+        "gradient_accumulation_steps",
+        "loss",
+        "model",
+        "model_config",
+        "optimizer",
+        "scheduler_state",
+        "step",
+        "tokenizer_path",
+        "tokenizer_sha256",
+        "train_config",
+        "variant"
+      ]
+    },
+    "45k_latest": {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/latest.pt",
+      "exists": true,
+      "size_bytes": 1175128015,
+      "variant": "glyph-100m",
+      "step": 45000,
+      "current_step": 45000,
+      "dataset_name": "glyph100_v2_3_1",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "context_length": 512,
+      "loss": 3.420155853033066,
+      "optimizer_state_present": true,
+      "optimizer_keys": [
+        "state",
+        "param_groups"
+      ],
+      "scheduler_state_present": true,
+      "scheduler_state": {
+        "type": "linear_warmup_cosine_decay",
+        "step": 45000,
+        "max_steps": 200000,
+        "warmup_steps": 2000,
+        "max_lr": 0.0002,
+        "min_lr": 2e-05
+      },
+      "top_level_keys": [
+        "batch_size",
+        "checkpoint_metadata",
+        "context_length",
+        "current_step",
+        "dataset_metadata_path",
+        "dataset_name",
+        "effective_tokens_per_step",
+        "gradient_accumulation_steps",
+        "loss",
+        "model",
+        "model_config",
+        "optimizer",
+        "scheduler_state",
+        "step",
+        "tokenizer_path",
+        "tokenizer_sha256",
+        "train_config",
+        "variant"
+      ]
+    }
+  },
+  "checkpoint_validation": {
+    "44k": {
+      "ok": true,
+      "errors": []
+    },
+    "45k_step": {
+      "ok": true,
+      "errors": []
+    },
+    "45k_latest": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  "latest_model_matches_step_45000": true,
+  "log": {
+    "path": "logs/glyph-100m-v2_3_1-45k/train.log",
+    "windows": {
+      "43000_44000": {
+        "count": 101,
+        "start_step": 43000,
+        "end_step": 44000,
+        "start_ts": "2026-06-10 00:26:27",
+        "end_ts": "2026-06-10 01:53:09",
+        "loss_min": 3.1969,
+        "loss_max": 3.3899,
+        "loss_avg": 3.286674,
+        "lr_min": 0.000181,
+        "lr_max": 0.000182,
+        "toks_avg": 3174.94
+      },
+      "44000_45000": {
+        "count": 101,
+        "start_step": 44000,
+        "end_step": 45000,
+        "start_ts": "2026-06-10 01:53:09",
+        "end_ts": "2026-06-10 03:16:13",
+        "loss_min": 3.1851,
+        "loss_max": 3.3526,
+        "loss_avg": 3.283262,
+        "lr_min": 0.00018,
+        "lr_max": 0.000181,
+        "toks_avg": 3287.64
+      },
+      "43500_44000": {
+        "count": 51,
+        "start_step": 43500,
+        "end_step": 44000,
+        "start_ts": "2026-06-10 01:08:03",
+        "end_ts": "2026-06-10 01:53:09",
+        "loss_min": 3.2167,
+        "loss_max": 3.3832,
+        "loss_avg": 3.287773,
+        "lr_min": 0.000181,
+        "lr_max": 0.000181,
+        "toks_avg": 3069.1
+      },
+      "44000_44500": {
+        "count": 51,
+        "start_step": 44000,
+        "end_step": 44500,
+        "start_ts": "2026-06-10 01:53:09",
+        "end_ts": "2026-06-10 02:34:43",
+        "loss_min": 3.1851,
+        "loss_max": 3.3526,
+        "loss_avg": 3.284453,
+        "lr_min": 0.00018,
+        "lr_max": 0.000181,
+        "toks_avg": 3285.04
+      },
+      "44500_45000": {
+        "count": 51,
+        "start_step": 44500,
+        "end_step": 45000,
+        "start_ts": "2026-06-10 02:34:43",
+        "end_ts": "2026-06-10 03:16:13",
+        "loss_min": 3.2235,
+        "loss_max": 3.3476,
+        "loss_avg": 3.281984,
+        "lr_min": 0.00018,
+        "lr_max": 0.00018,
+        "toks_avg": 3290.33
+      }
+    },
+    "val_losses": {
+      "43500": {
+        "ts": "2026-06-10 01:08:04",
+        "step": 43500,
+        "val_loss": 3.3672
+      },
+      "44000": {
+        "ts": "2026-06-10 01:53:15",
+        "step": 44000,
+        "val_loss": 3.2275
+      },
+      "44500": {
+        "ts": "2026-06-10 02:34:45",
+        "step": 44500,
+        "val_loss": 3.2263
+      },
+      "45000": {
+        "ts": "2026-06-10 03:16:19",
+        "step": 45000,
+        "val_loss": 3.1953
+      }
+    },
+    "checkpoint_saves": {
+      "44000": {
+        "ts": "2026-06-10 01:53:14",
+        "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+        "loss": 3.4403
+      },
+      "45000": {
+        "ts": "2026-06-10 03:16:18",
+        "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0045000.pt",
+        "loss": 3.4202
+      }
+    },
+    "markers": {
+      "resume": [
+        "2026-06-09 13:18:26   Resumed from step 35,000 (last loss=3.5198)"
+      ],
+      "range": [
+        "2026-06-09 13:18:26 Training from step 35,001 to 45,000"
+      ],
+      "limited_run": [
+        "2026-06-09 13:18:26 Limited run enabled: target step 45,000",
+        "2026-06-10 03:16:19 Limited run complete; no final checkpoint was written."
+      ],
+      "nan_inf": [],
+      "oom": [],
+      "crash": [],
+      "dataset_or_config": [
+        "2026-06-09 13:18:23 Model config: ModelConfig(vocab_size=16000, context_len=512, d_model=768, n_heads=12, n_layers=12, ffn_mult=4, dropout=0.1)",
+        "2026-06-09 13:18:23 Train config: TrainConfig(data_path='data/processed/glyph100_v2_3_1_train.bin', val_data_path='data/processed/glyph100_v2_3_1_val.bin', checkpoint_dir='checkpoints/glyph-100m-v2_3_1-45k', log_dir='logs/glyph-100m-v2_3_1-45k', tokenizer_path='data/processed/tokenizer.model', dataset_metadata_path='data/processed/glyph100_v2_3_1_metadata.json', dataset_name='glyph100_v2_3_1', batch_size=4, max_lr=0.0002, min_lr=2e-05, weight_decay=0.1, beta1=0.9, beta2=0.95, grad_clip=1.0, gradient_accumulation_steps=8, max_steps=200000, warmup_steps=2000, log_interval=10, eval_interval=500, eval_batches=5, checkpoint_interval=1000)",
+        "2026-06-09 13:18:23 Dataset name: glyph100_v2_3_1"
+      ],
+      "emergency": []
+    }
+  },
+  "technical_verdict": "healthy"
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "path": "data/sft/raw/glyph_sft_v0_seed_1500.jsonl",
+    "invalid_json": [],
+    "missing_fields": [],
+    "stats": {
+      "examples": 1500,
+      "categories": {
+        "proste_wyjasnienia": 250,
+        "techniczne_proste": 100,
+        "codzienne_decyzje": 600,
+        "pisanie_i_streszczanie": 300,
+        "brak_danych": 150,
+        "korekta_zalozen": 100
+      },
+      "qualities": {
+        "approved": 1500
+      },
+      "sources": {
+        "synthetic_curated": 1500
+      },
+      "instruction_chars_avg": 63.248,
+      "response_chars_avg": 169.20266666666666,
+      "instruction_words_avg": 9.357333333333333,
+      "response_words_avg": 24.976,
+      "instruction_words_total": 14036,
+      "response_words_total": 37464,
+      "total_words": 51500,
+      "instruction_duplicate_extra": 782,
+      "instruction_response_duplicate_extra": 0,
+      "bad_patterns": {
+        "empty_instruction": 0,
+        "empty_response": 0,
+        "very_short_response_lt_8_words": 27,
+        "very_long_response_gt_120_words": 0,
+        "control_chars": 0,
+        "as_language_model_phrase": 0,
+        "english_pattern": 0
+      },
+      "token_stats": {
+        "template_total_tokens": 90272,
+        "template_min": 31,
+        "template_max": 101,
+        "template_avg": 60.181333333333335,
+        "template_p50": 63.0,
+        "template_p90": 72.0,
+        "template_p95": 74.0,
+        "template_p99": 81.0,
+        "instruction_avg_tokens": 15.258666666666667,
+        "response_avg_tokens": 38.922666666666665,
+        "fits_context": 1500,
+        "over_context": 0,
+        "over_context_lines": []
+      }
+    },
+    "similar_instruction_pairs": []
+  },
+  {
+    "path": "data/sft/raw/glyph_sft_v0_seed_1500_expanded.jsonl",
+    "invalid_json": [],
+    "missing_fields": [],
+    "stats": {
+      "examples": 1500,
+      "categories": {
+        "proste_wyjasnienia": 250,
+        "techniczne_proste": 100,
+        "codzienne_decyzje": 600,
+        "pisanie_i_streszczanie": 300,
+        "brak_danych": 150,
+        "korekta_zalozen": 100
+      },
+      "qualities": {
+        "approved": 1500
+      },
+      "sources": {
+        "synthetic_curated": 1500
+      },
+      "instruction_chars_avg": 63.248,
+      "response_chars_avg": 290.44266666666664,
+      "instruction_words_avg": 9.357333333333333,
+      "response_words_avg": 42.699333333333335,
+      "instruction_words_total": 14036,
+      "response_words_total": 64049,
+      "total_words": 78085,
+      "instruction_duplicate_extra": 782,
+      "instruction_response_duplicate_extra": 0,
+      "bad_patterns": {
+        "empty_instruction": 0,
+        "empty_response": 0,
+        "very_short_response_lt_8_words": 0,
+        "very_long_response_gt_120_words": 0,
+        "control_chars": 0,
+        "as_language_model_phrase": 0,
+        "english_pattern": 0
+      },
+      "token_stats": {
+        "template_total_tokens": 130803,
+        "template_min": 53,
+        "template_max": 124,
+        "template_avg": 87.202,
+        "template_p50": 89.0,
+        "template_p90": 99.0,
+        "template_p95": 102.0,
+        "template_p99": 108.0,
+        "instruction_avg_tokens": 15.258666666666667,
+        "response_avg_tokens": 65.94333333333333,
+        "fits_context": 1500,
+        "over_context": 0,
+        "over_context_lines": []
+      }
+    },
+    "similar_instruction_pairs": []
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "snapshotDate": "2026-09-06 19:35 CEST",
+  "snapshotAt": "2026-09-06T17:35:13.464655+00:00",
+  "status": "Glyph-100M v2.4.2 15k checkpoint complete; eval pending",
+  "step": 15000,
+  "totalSteps": 15000,
+  "progressPct": 100.0,
+  "trainLoss": "4.0940",
+  "validationLoss": "3.9755",
+  "tokensProcessed": "245.76M",
+  "learningRate": "1.98e-04",
+  "throughput": "~3.28k tok/s",
+  "stepsPerHour": 720,
+  "lastLogAt": "2026-09-01 20:37 CEST",
+  "lastValidationAt": "2026-09-01 20:37 CEST",
+  "checkpoint": "glyph-100m-v2_4_2-15k-latest",
+  "checkpointUpdatedAt": "2026-09-01 20:37 CEST",
+  "notes": "Glyph-100M v2.4.2 reached 15k. Matched checkpoint evaluation is pending. Public snapshot only; operational details are intentionally excluded.",
+  "sft": {
+    "phase": "SFT v0",
+    "status": "complete",
+    "dataset": "glyph_sft_v0_seed_1500_expanded",
+    "examples": 1500,
+    "split": "1350 / 150",
+    "tokens": "130,803",
+    "step": 85,
+    "epoch": 1,
+    "trainLoss": "2.3826",
+    "validationLoss": "2.0562",
+    "learningRate": "2.00e-06",
+    "throughput": "~11.18k tok/s",
+    "device": "ROCm / RX 5500 XT",
+    "baseCheckpoint": "glyph-27m-base-final",
+    "checkpoint": "glyph-27m-sft-v0-final",
+    "notes": "One small epoch over a synthetic curated dataset. It improves instruction format, but sample quality still needs review."
+  },
+  "glyph100": {
+    "status": "v2.4.2 15k checkpoint complete · eval pending",
+    "parameters": "97.65M unique / 109.94M logical",
+    "context": "512",
+    "dataset": "glyph100_dataset_v2_4_2_core",
+    "datasetScope": "v2.4.2 corrective source mix; controlled continuation from 10k to 15k total with an automatic stop for checkpoint evaluation.",
+    "trainTokens": "231.5M",
+    "valTokens": "1.18M",
+    "device": "ROCm / RX 5500 XT",
+    "rocmSmoke": "batch 4 accum 8 ok · batch 8 ok but tight · batch 16 OOM",
+    "effectiveBatch": "4 × 512 × accum 8 = 16,384",
+    "stage": {
+      "step": 15000,
+      "totalSteps": 15000,
+      "loss": 4.094,
+      "validationLoss": 3.9755,
+      "tokensProcessed": 245.76,
+      "log": "logs/glyph-100m-v2_4_2-15k/train.log",
+      "error": null
+    },
+    "readiness": "v2.4.2 15k checkpoint complete; matched checkpoint evaluation required before any continuation",
+    "notes": "Glyph-100M v2.4.2 reached 15k. Matched checkpoint evaluation is required before any continuation.",
+    "nextDataset": {
+      "name": "glyph100_dataset_v2_4_2_core",
+      "trainTokens": "231.5M",
+      "valTokens": "1.18M",
+      "status": "candidate built",
+      "recommendation": "READY FOR INDEPENDENT VALIDATION AND A FRESH 5K PROXY: all source-mix, residue, split, dedup and tokenizer gates passed."
+    },
+    "checkpoint": {
+      "label": "glyph-100m-v2_4_2-15k-latest",
+      "updatedAt": "2026-09-01 20:37 CEST"
+    }
+  }
+}

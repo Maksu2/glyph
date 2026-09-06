@@ -1,0 +1,40 @@
+{
+  "dataset_name": "glyph100_dataset_v2_4_2_core",
+  "description": "Corrective source-aware corpus derived from v2.4.1 with capped parliamentary text and filtered Wikipedia locality templates",
+  "seed": 2026,
+  "tokenizer": "data/processed/tokenizer.model",
+  "input_metadata": "data/processed/glyph100_v2_4_1_metadata.json",
+  "input_docs": "data/processed/glyph100_v2_4_1_docs.jsonl",
+  "minimum_ready_tokens": 220000000,
+  "source_targets": {
+    "wikipedia_pl": 95000000,
+    "wolne_lektury": null,
+    "1000_novels": null,
+    "eltec_pol": null,
+    "parliamentary": 6000000,
+    "wikibooks": null,
+    "wikinews": 1500000,
+    "wikisource": null
+  },
+  "quality_gates": {
+    "minimum_literature_share": 0.52,
+    "maximum_wikipedia_share": 0.42,
+    "maximum_parliamentary_share": 0.03,
+    "maximum_web_residue_docs": 0,
+    "maximum_strong_locality_template_docs": 0,
+    "maximum_parent_leakage": 0,
+    "maximum_duplicate_ids": 0
+  },
+  "outputs": {
+    "train_bin": "data/processed/glyph100_v2_4_2_train.bin",
+    "val_bin": "data/processed/glyph100_v2_4_2_val.bin",
+    "metadata": "data/processed/glyph100_v2_4_2_metadata.json",
+    "docs_store": "data/raw/glyph100_v2_4_2/glyph100_v2_4_2_docs.jsonl",
+    "docs_link": "data/processed/glyph100_v2_4_2_docs.jsonl",
+    "stats": "data/reports/glyph100_dataset_v2_4_2_stats.json",
+    "report": "data/reports/glyph100_dataset_v2_4_2_report.md",
+    "accepted_samples": "data/reports/glyph100_dataset_v2_4_2_samples_accepted.jsonl",
+    "rejected_samples": "data/reports/glyph100_dataset_v2_4_2_samples_rejected.jsonl",
+    "final_samples": "data/reports/glyph100_dataset_v2_4_2_samples_final_random.jsonl"
+  }
+}

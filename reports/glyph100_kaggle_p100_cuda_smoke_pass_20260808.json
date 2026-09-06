@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "purpose": "Glyph-100M Kaggle P100 CUDA compatibility and throughput smoke",
+  "quality_training_run": false,
+  "kernel": "maksymilianputa/glyph-100m-v0-3-p100-cuda-smoke",
+  "kernel_version": 9,
+  "gpu": {
+    "name": "Tesla P100-PCIE-16GB",
+    "compute_capability": "6.0",
+    "total_vram_bytes": 17059545088,
+    "initial_temperature_c": 34,
+    "pytorch": "2.10.0+cu126",
+    "cuda": "12.6",
+    "peak_allocated_bytes": 1198790656,
+    "peak_reserved_bytes": 1935671296
+  },
+  "compatibility_fix": {
+    "kaggle_original_pytorch": "2.10.0+cu128",
+    "original_supported_arch_min": "sm_70",
+    "p100_arch": "sm_60",
+    "installed_pytorch": "2.10.0+cu126",
+    "homelab_packages_changed": false
+  },
+  "preflight": {
+    "status": "PASS",
+    "base_step": 44000,
+    "variant": "glyph-100m",
+    "dataset": "glyph100_v2_3_1",
+    "context_length": 512,
+    "unique_parameters": 97654272,
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "strict_state_load": true,
+    "label_mask_boundary": "i < assistant_pos",
+    "first_assistant_token_supervised": true,
+    "end_token_supervised": true,
+    "prompt_not_supervised": true,
+    "padding_ignore_index_minus_100": true
+  },
+  "training": {
+    "status": "COMPLETE",
+    "start_step": 0,
+    "end_step": 25,
+    "precision": "fp32",
+    "batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "effective_examples_per_step": 4,
+    "duration_seconds_including_eval_and_checkpoint": 15.970388146999994,
+    "optimizer_steps_per_second_at_end": 8.573931815581672,
+    "train_loss_start": 4.311751365661621,
+    "train_loss_end": 3.858225405216217,
+    "val_loss": 3.743634581565857,
+    "input_tokens": 3794,
+    "supervised_tokens": 1980,
+    "input_tokens_per_second_training_only": 1301.1798923326746,
+    "supervised_tokens_per_second_training_only": 679.0553997940684,
+    "nan": false,
+    "inf": false,
+    "oom": false,
+    "crash": false
+  },
+  "comparison": {
+    "rx5500xt_early_step25_input_tokens_per_second": 540.0,
+    "p100_vs_rx_early_ratio": 2.4095923932086567,
+    "p100_vs_rx_early_percent_faster": 140.95923932086566,
+    "rx5500xt_full_run_average_tokens_per_second": 416.702479338843,
+    "p100_vs_rx_full_average_ratio": 3.1225633559876567,
+    "caveat": "The full-run RX average includes more evaluation and checkpoint overhead"
+  },
+  "checkpoint": {
+    "full_optimizer_checkpoint_roundtrip_validated": true,
+    "full_optimizer_checkpoint_persisted": false,
+    "model_only_path": "kaggle/glyph100-cuda-smoke/downloads/version-9/glyph100-v03-p100-fp32-smoke-001/glyph100-v03-p100-smoke-model-only.pt",
+    "model_only_size_bytes": 393809523,
+    "model_only_sha256": "ce65c410535c02d7d36ae71f497bbcd3f42be88e18568cb1a1baa8b61f7c4a23",
+    "local_strict_load": true,
+    "all_parameters_finite": true,
+    "diagnostic_only": true
+  },
+  "quota": {
+    "before_gpu_hours_remaining": 30.0,
+    "after_gpu_hours_remaining": 29.93,
+    "charged_money": false
+  },
+  "recommendation": "Use Kaggle P100 for a new decision-relevant experiment; do not duplicate the already completed SFT v0.3 run"
+}
+

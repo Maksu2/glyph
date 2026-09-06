@@ -1,0 +1,11 @@
+{
+  "title": "Glyph-100M CUDA smoke input",
+  "id": "maksymilianputa/glyph100-sft-cuda-smoke-input",
+  "subtitle": "Private input bundle for a short Glyph-100M CUDA compatibility test",
+  "description": "Private code, approved 44k base checkpoint, tokenizer, and SFT v0.3 splits for a non-quality compatibility benchmark.",
+  "licenses": [
+    {
+      "name": "other"
+    }
+  ]
+}

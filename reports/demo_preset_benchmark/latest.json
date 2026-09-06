@@ -1,0 +1,304 @@
+{
+  "generated_at": "2026-05-17T19:53:35.499040+00:00",
+  "checkpoint": "checkpoints/public-demo.pt",
+  "threads": 6,
+  "presets": {
+    "strict": {
+      "temperature": 0.6,
+      "top_k": 30,
+      "top_p": 0.9,
+      "max_new_tokens": 80,
+      "repetition_penalty": 1.15,
+      "no_repeat_ngram_size": 4
+    },
+    "balanced": {
+      "temperature": 0.75,
+      "top_k": 40,
+      "top_p": 0.92,
+      "max_new_tokens": 100,
+      "repetition_penalty": 1.15,
+      "no_repeat_ngram_size": 4
+    },
+    "creative": {
+      "temperature": 0.9,
+      "top_k": 50,
+      "top_p": 0.95,
+      "max_new_tokens": 120,
+      "repetition_penalty": 1.2,
+      "no_repeat_ngram_size": 4
+    }
+  },
+  "summary": {
+    "strict": {
+      "count": 8,
+      "avg_duration_seconds": 20.547,
+      "avg_tokens_per_second": 3.93,
+      "flag_count": 1,
+      "flags": [
+        "repeated-ngrams"
+      ]
+    },
+    "balanced": {
+      "count": 8,
+      "avg_duration_seconds": 24.306,
+      "avg_tokens_per_second": 4.16,
+      "flag_count": 1,
+      "flags": [
+        "repeated-ngrams"
+      ]
+    },
+    "creative": {
+      "count": 8,
+      "avg_duration_seconds": 33.224,
+      "avg_tokens_per_second": 3.66,
+      "flag_count": 0,
+      "flags": []
+    }
+  },
+  "rows": [
+    {
+      "preset": "strict",
+      "prompt_id": "pl_capital",
+      "prompt": "Stolica Polski to",
+      "output": "Stolica Polski to miejsce, w którym można było zobaczyć, jak wyglądała nasza ojczyzna, a w szczególności w okresie letnim, kiedy w mieście znajduje się również wiele atrakcji turystycznych i rekreacyjnych. W tym roku odwiedziliśmy również naszą stronę internetową, która została założona w 1898 roku. Do tego czasu odwiedzaliśmy w niej wiele obiektów noclegowych, takich jak: Bazylika i WiFi, Ka",
+      "duration_seconds": 20.591,
+      "generated_tokens": 80,
+      "tokens_per_second": 3.89,
+      "flags": []
+    },
+    {
+      "preset": "strict",
+      "prompt_id": "pl_robotics",
+      "prompt": "Robotyka to dziedzina, która",
+      "output": "Robotyka to dziedzina, która w Polsce jest bardzo ważna dla każdego. To nie jest tak, że na przykład, jak się okazuje, nie tylko w Europie. Co prawda, po raz kolejny, ale również w Polsce, po raz drugi, nie był w stanie wypracować tego tematu, a nie innego... Czytaj dalej » Czytając \"Dziennik Gazeta Prawna\": Nie wiem, co się dzieje, ale nie wiem",
+      "duration_seconds": 17.923,
+      "generated_tokens": 80,
+      "tokens_per_second": 4.46,
+      "flags": []
+    },
+    {
+      "preset": "strict",
+      "prompt_id": "pl_lm",
+      "prompt": "Model językowy działa w ten sposób, że",
+      "output": "Model językowy działa w ten sposób, że do tej pory nie można było dotrzeć do nich. W związku z tym, że w czasie wojny nie udało się zrzucić wszystkich swoich pieniędzy. Aż do tego, że w czasach PRL-u, w którym w latach 1975–1998 miejscowość administracyjnie należała do województwa białostockiego, w którym mieszkała, były to tereny dawnej wsi i gminne. W czasach PRL-owłosieckiej",
+      "duration_seconds": 22.475,
+      "generated_tokens": 80,
+      "tokens_per_second": 3.56,
+      "flags": []
+    },
+    {
+      "preset": "strict",
+      "prompt_id": "pl_linux_cpu",
+      "prompt": "W systemie Linux wysokie użycie CPU nie zawsze oznacza problem, ponieważ",
+      "output": "W systemie Linux wysokie użycie CPU nie zawsze oznacza problem, ponieważ jest to bardzo możliwe. Zmiana CPU nie powinna być zbyt mała, gdyż posiada ona dużą wytrzymałość, a co za tym idzie, jest bardzo wytrzymała. Przykładowe elementy CPU są bardzo lekkie i nie wymagają stosowania. Aby uzyskać więcej danych, należy skontaktować się z naszym doradcą. EGZA: Coś dla Ciebie? - Forum dyskusyjne | Gazeta.",
+      "duration_seconds": 18.346,
+      "generated_tokens": 80,
+      "tokens_per_second": 4.36,
+      "flags": []
+    },
+    {
+      "preset": "strict",
+      "prompt_id": "pl_warsaw_story",
+      "prompt": "Pewnego dnia w Warszawie",
+      "output": "Pewnego dnia w Warszawie w Warszawie w związku z epidemią koronawirusa. Do zdarzenia doszło w Warszawie w piątek wieczorem w Warszawie w godzinach popołudniowych w warszawskiej sali widowiskowej w Warszawie. W poniedziałek, 29 listopada w Warszawie w sali widowisko-sportowej w Warszawie odbędą się spotkania informacyjne o stanie zdrowia mieszkańców Warszawy. W czwartek, 29 grudnia w Warszawie w ramach akcji „Nasz Dziennik” na temat",
+      "duration_seconds": 19.057,
+      "generated_tokens": 80,
+      "tokens_per_second": 4.2,
+      "flags": [
+        "repeated-ngrams"
+      ]
+    },
+    {
+      "preset": "strict",
+      "prompt_id": "pl_no_loop",
+      "prompt": "Ten tekst nie powinien się zapętlać, ponieważ",
+      "output": "Ten tekst nie powinien się zapętlać, ponieważ nie ma sensu. W tej chwili natknąłem się na to, że w tym artykule mam do czynienia z tekstem, który jest w stanie wynieść tyle samo co w kontekście tekstu. Jeśli jednak nie jest to jednak tekst, to musi być to tekst, który jest bardzo prosty w obsłudze. Nie wiem czy jest to tekst, czy jest to dodatek do tego tekstu. I tak",
+      "duration_seconds": 21.673,
+      "generated_tokens": 80,
+      "tokens_per_second": 3.69,
+      "flags": []
+    },
+    {
+      "preset": "strict",
+      "prompt_id": "en_transformer",
+      "prompt": "A transformer language model learns by",
+      "output": "A transformer language model learns by Evans, including details of the results. The conditions only will be able to may be able for a development. If there is a decided to received the existing of category of the research and a completely including the rese",
+      "duration_seconds": 23.903,
+      "generated_tokens": 80,
+      "tokens_per_second": 3.35,
+      "flags": []
+    },
+    {
+      "preset": "strict",
+      "prompt_id": "en_os",
+      "prompt": "Operating systems are interesting because",
+      "output": "Operating systems are interesting because the country of responsibility. The accommodation was individually a secondly developer the next. They were clearly and accommodores, may be a comparative and accommonly helpfully. They are a details and",
+      "duration_seconds": 20.409,
+      "generated_tokens": 80,
+      "tokens_per_second": 3.92,
+      "flags": []
+    },
+    {
+      "preset": "balanced",
+      "prompt_id": "pl_capital",
+      "prompt": "Stolica Polski to",
+      "output": "Stolica Polski to miejsce, gdzie można podziwiać w wielu miejscach, co jest bardzo wygodne i niedrogie. Jest to miejsce, którego nie ma dla nas wiele atrakcji. Dzięki temu, że nie jest to miejsce, które nie tylko dla osób kochających nasze miasta, ale również dla osób niepełnosprawnych. Apoteo.pl - Strona 2 z 15 | Bonusy | Wycieczki, wyprawy, wyprawki, wycieczki, wycieczki, atrakcje - To miejsce, gdzie warto zwiedzić Tuli",
+      "duration_seconds": 23.481,
+      "generated_tokens": 100,
+      "tokens_per_second": 4.26,
+      "flags": []
+    },
+    {
+      "preset": "balanced",
+      "prompt_id": "pl_robotics",
+      "prompt": "Robotyka to dziedzina, która",
+      "output": "Robotyka to dziedzina, która jest jednym z najbardziej znanych i najpotężniejszych elementów polskiej gospodarki. Jest on tak samo ważna, że do tej pory nie była ona w stanie uczyć się różnych aspektów gospodarczych oraz takich jak gospodarka, czy też państwo, które u nas jest na tyle duże. Ale nie tylko. Na pewno jednak trzeba mieć świadomość, że z jednej strony, bo po pierwsze, nie zawsze można po prostu mieć pewność, że w Polsce jesteśmy nie tylko politykami - ale też o wiele lepszych niż",
+      "duration_seconds": 20.17,
+      "generated_tokens": 100,
+      "tokens_per_second": 4.96,
+      "flags": []
+    },
+    {
+      "preset": "balanced",
+      "prompt_id": "pl_lm",
+      "prompt": "Model językowy działa w ten sposób, że",
+      "output": "Model językowy działa w ten sposób, że język angielski ma znaczący wpływ na to, co język angielski ma znaczenie. Z jednej strony język angielski ma duże znaczenie i jest bardzo pomocny w nauce. Jednak dla języków obcych język angielski ma pochodzenie języka angielskiego. W języku angielskim oznacza to, że język niemiecki jest bardzo szybki i nie posiada w nim żadnych przyzwoitych danych. Język angielski jest bardzo łatwy w użyciu. Na przykład język angielski jest bardzo prosty w obsłudze, jednak może być on bardzo prosty w użyciu. Nie należy też używać",
+      "duration_seconds": 25.114,
+      "generated_tokens": 100,
+      "tokens_per_second": 3.98,
+      "flags": []
+    },
+    {
+      "preset": "balanced",
+      "prompt_id": "pl_linux_cpu",
+      "prompt": "W systemie Linux wysokie użycie CPU nie zawsze oznacza problem, ponieważ",
+      "output": "W systemie Linux wysokie użycie CPU nie zawsze oznacza problem, ponieważ jest to tylko jeden element. Do tego dochodzi wiele różnych elementów, np. przy użyciu odpowiednich urządzeń. Jak wiadomo, w przypadku GNS, z powodu braku usterki, wystarczy otworzyć je na inny typ danych. Po pierwsze, jeśli w tym momencie, w momencie uruchomienia plików, wystarczy otworzyć plik CPU (w przypadku GNSS), a następnie włączyć pliki. Następnie, gdy w razie potrzeby uruchomiomy plik CPU, zostanie uruchomiony, lub ponownie od razu wyłączony",
+      "duration_seconds": 20.603,
+      "generated_tokens": 100,
+      "tokens_per_second": 4.85,
+      "flags": []
+    },
+    {
+      "preset": "balanced",
+      "prompt_id": "pl_warsaw_story",
+      "prompt": "Pewnego dnia w Warszawie",
+      "output": "Pewnego dnia w Warszawie odbyła się uroczysta kolacja dla dorosłych z tej samej serii. W tym roku na stoisku pojawiło się także wiele atrakcji dla dzieci, które odwiedziły nas przed rejsem i wspólnie spędziłyśmy czas przy ceremonii wręczenia nagród. W dniach 10-13 grudnia na stoisku odbędzie się ogólnopolski konkurs plastyczny pt. „Europa, która będzie miała miejsce podczas uroczystości „Miasto i Mazury”. W konkursie można było wybrać się na wycieczkę po Europie, Hiszpanii i",
+      "duration_seconds": 25.812,
+      "generated_tokens": 100,
+      "tokens_per_second": 3.87,
+      "flags": []
+    },
+    {
+      "preset": "balanced",
+      "prompt_id": "pl_no_loop",
+      "prompt": "Ten tekst nie powinien się zapętlać, ponieważ",
+      "output": "Ten tekst nie powinien się zapętlać, ponieważ w tym kontekście można ją wyeliminować. W związku z tym, że jeśli jesteś na etapie uczenia, to nie ma żadnego problemu. Warto jednak podkreślić, że to jest to praca z dzieckiem, która z pewnością nie będzie z nią korzystać. Na co zwracać uwagę? Oczywiście, to jest tak, jakby nie było to możliwe, ale jeśli masz ochotę na naukę języka angielskiego, to nie da Ci się oprzeć. Może to być po prostu proste, bo to nie jest",
+      "duration_seconds": 27.035,
+      "generated_tokens": 100,
+      "tokens_per_second": 3.7,
+      "flags": []
+    },
+    {
+      "preset": "balanced",
+      "prompt_id": "en_transformer",
+      "prompt": "A transformer language model learns by",
+      "output": "A transformer language model learns by a couple, ecute and there was also consumed. The performance of the development is also continuous. We expectedly results, and introduced a result of local activity, and these was local accessfully responsibles. I am very where. Through their research for",
+      "duration_seconds": 27.044,
+      "generated_tokens": 100,
+      "tokens_per_second": 3.7,
+      "flags": []
+    },
+    {
+      "preset": "balanced",
+      "prompt_id": "en_os",
+      "prompt": "Operating systems are interesting because",
+      "output": "Operating systems are interesting because a which when they will be determinated in the system of the many them with the process of the residentiation and system of the system of hard-hand-healthy, and the system of aircross and were impactives for the system of investment and research in the system. The whole in any and the system was enabled in the",
+      "duration_seconds": 25.188,
+      "generated_tokens": 100,
+      "tokens_per_second": 3.97,
+      "flags": [
+        "repeated-ngrams"
+      ]
+    },
+    {
+      "preset": "creative",
+      "prompt_id": "pl_capital",
+      "prompt": "Stolica Polski to",
+      "output": "Stolica Polski to stolica gminy Skalsko i okolic. Jest to przychodnie, w którym góruje część wsi, która ma bardzo duży dopływowypływ, który na północ południa jest zabytkowa. Od północy stolice i wzgórza tworzą z niej trzy duże stoki turystyczne z tego samego końca – czyli górnicze ulice w Skalicach i Skalsowie. Historia W czasach II Rzeczypospolitej w początkach XXI wieku wraz z rozległą miejscowością w województwie podkarpackim (pod względem administracyjnym województwa) w 1 połowie XX wieku należała do powiatu przemyskiego we wsi Świer",
+      "duration_seconds": 28.337,
+      "generated_tokens": 120,
+      "tokens_per_second": 4.23,
+      "flags": []
+    },
+    {
+      "preset": "creative",
+      "prompt_id": "pl_robotics",
+      "prompt": "Robotyka to dziedzina, która",
+      "output": "Robotyka to dziedzina, która jest coraz lepiej rozwijająca się społeczność. W takich sytuacjach jest wiele elementów - mentalnie, i w wielu kulturach jak i kulturach - każda praca będzie pasować do różnych rodzajów działalności kulturalnej (np. kulturystyki lub sztuki, teatru). I tego rodzaju działania mają wiele wspólnego, co jest dla nich ważne - to są tylko forma współpracy z ludźmi kulturalnymi. Jeśli chodzi o rozwój artystyczny, to jednak nie ma potrzeby prowadzenia zajęć, które trzeba przeprowadzić na przykład poprzez przygotowanie filmów ani też odbywanie przez uczestników, którzy ich prowadzą zajęcia z teatrami; są one szczególnie ważne jeśli",
+      "duration_seconds": 33.737,
+      "generated_tokens": 120,
+      "tokens_per_second": 3.56,
+      "flags": []
+    },
+    {
+      "preset": "creative",
+      "prompt_id": "pl_lm",
+      "prompt": "Model językowy działa w ten sposób, że",
+      "output": "Model językowy działa w ten sposób, że język angielski jest użyty do tłumaczenia angielskiego. Wynika to z faktu, że język niemiecki może być inny, ale jak widać język angielski ma inne znaczenie. W języku angielskim i w języku angielskim występują język rosyjski, np. angielski. Język angielski, którego języki są używane w języku polskim. Ponadto język angielski ma inną nazwę niż język angielski. Jeśli język angielski jest inny, język angielski nie ma innej nazwy (zob. polder) i oznacza tylko język angielski, np. język angielski. Słowo francuskie oznacza tylko język rosyjski, lecz są używane od innych języków obcych, które są związane z",
+      "duration_seconds": 29.194,
+      "generated_tokens": 120,
+      "tokens_per_second": 4.11,
+      "flags": []
+    },
+    {
+      "preset": "creative",
+      "prompt_id": "pl_linux_cpu",
+      "prompt": "W systemie Linux wysokie użycie CPU nie zawsze oznacza problem, ponieważ",
+      "output": "W systemie Linux wysokie użycie CPU nie zawsze oznacza problem, ponieważ użytkownik może korzystać z plików. Poniższy link jest to, że program do obsługi ekranu odpowiada bezpośrednio na liście. Jeśli posiadasz pełną wersję do systemu Linux i nie będziesz w stanie go używać, wybierz jedną z opcji – po co Ci dany czas. Następnie wyliczamy opcję „Mandala” oraz „Apokalipsa”. Kliknij aby dodać więcej czasu. Teraz możesz dodać więcej czasu na usunięcie Twojego programu. Przenośne narzędzie do tworzenia listy plików, które zostały przekierowane przez Urządzenia. Ikonografia HTML Engine Miernik Do",
+      "duration_seconds": 36.75,
+      "generated_tokens": 120,
+      "tokens_per_second": 3.27,
+      "flags": []
+    },
+    {
+      "preset": "creative",
+      "prompt_id": "pl_warsaw_story",
+      "prompt": "Pewnego dnia w Warszawie",
+      "output": "Pewnego dnia w Warszawie (obecnie Centrum Promocji Rekrutacji), gdzie uczniowie dowiedzieli się o planowanych i realizowanych przez nich przedsięwzięciach związanych z prowadzeniem szkoleń. – W ramach projektu przedstawiono również elementy dotyczące realizacji Projektu pn.: Inicjatyw Rekrutacyjnych Gminy Maćkowo w ramach Programu Operacyjnego Infrastruktura i Środowisko przyrodnicze, w tym przygotowania do budowy drogi gminnej przy ul. Zawajskiej – mówi Piotr Gałacz, burmistrz miasta Warszawa – Dyrektor Biura Promocji Rekromacji i Rozwoju w Warszawie. – Celem programu jest przygotowanie dokumentacji oraz zapewnienie właści",
+      "duration_seconds": 37.278,
+      "generated_tokens": 120,
+      "tokens_per_second": 3.22,
+      "flags": []
+    },
+    {
+      "preset": "creative",
+      "prompt_id": "pl_no_loop",
+      "prompt": "Ten tekst nie powinien się zapętlać, ponieważ",
+      "output": "Ten tekst nie powinien się zapętlać, ponieważ w momencie wyboru jest ono wystarczająco dobrze wygenerowane i na tyle przyjemne, aby było ono bardzo przyjemnie w stanie zrobić nawet kilka minut. W tej sytuacji, kiedy już w pierwszym artykule, można zauważyć, że w pierwszym artykulu chodzi o to, czy nie jest to tak skomplikowane i jak się okazuje, to wszystko musi być dobrze wypromowane, a czasami nawet nie tak, jakby to wyglądało, tak i tak jak powinno się zdarzyć. Do tego czasu można też w wielu miejscach przekładać przykładowo takie wpisy jak: blog, teksty, teksty, obrazki",
+      "duration_seconds": 29.205,
+      "generated_tokens": 120,
+      "tokens_per_second": 4.11,
+      "flags": []
+    },
+    {
+      "preset": "creative",
+      "prompt_id": "en_transformer",
+      "prompt": "A transformer language model learns by",
+      "output": "A transformer language model learns by the evolution. The contract of a long room request source in a high player of a research for a different and systems of the importance of the christified cause, or a property of the effects of a system of the engineering of an only here a head of the first decided, or a crafting a powder of the system of a big influence. He was v",
+      "duration_seconds": 37.812,
+      "generated_tokens": 120,
+      "tokens_per_second": 3.17,
+      "flags": []
+    },
+    {
+      "preset": "creative",
+      "prompt_id": "en_os",
+      "prompt": "Operating systems are interesting because",
+      "output": "Operating systems are interesting becausely of a computation of development and the system of the system of second system. Where may not be a high-end their assessment is only individually in their restaurants which is a big sites of the acquirements. Thanks for one of the printed and rooms. Anythic paper was also had a conforced at the chandler. The printed to review is al",
+      "duration_seconds": 33.475,
+      "generated_tokens": 120,
+      "tokens_per_second": 3.58,
+      "flags": []
+    }
+  ]
+}

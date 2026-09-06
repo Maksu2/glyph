@@ -1,0 +1,111 @@
+{
+  "status": "design_only_non_executable",
+  "macro_cues": [
+    {
+      "id": "M00",
+      "track_time_s": 0.0,
+      "short_label": "pre-roll glow",
+      "cue_type": "gradual"
+    },
+    {
+      "id": "M01",
+      "track_time_s": 8.521723356,
+      "short_label": "first breath",
+      "cue_type": "gradual"
+    },
+    {
+      "id": "M02",
+      "track_time_s": 14.651791383,
+      "short_label": "warm motif",
+      "cue_type": "structural"
+    },
+    {
+      "id": "M03",
+      "track_time_s": 26.610068027,
+      "short_label": "near light",
+      "cue_type": "structural"
+    },
+    {
+      "id": "M04",
+      "track_time_s": 39.868662132,
+      "short_label": "rhythmic lift",
+      "cue_type": "structural"
+    },
+    {
+      "id": "M05",
+      "track_time_s": 45.627210884,
+      "short_label": "far light",
+      "cue_type": "gradual"
+    },
+    {
+      "id": "M06",
+      "track_time_s": 51.873378685,
+      "short_label": "first strike",
+      "cue_type": "accent"
+    },
+    {
+      "id": "M07",
+      "track_time_s": 54.381133787,
+      "short_label": "bass opening",
+      "cue_type": "structural"
+    },
+    {
+      "id": "M08",
+      "track_time_s": 71.819319728,
+      "short_label": "room opens",
+      "cue_type": "structural"
+    },
+    {
+      "id": "M09",
+      "track_time_s": 86.958730159,
+      "short_label": "kinetic climax",
+      "cue_type": "climax"
+    },
+    {
+      "id": "M10",
+      "track_time_s": 90.650702948,
+      "short_label": "Aqara 1",
+      "cue_type": "accent"
+    },
+    {
+      "id": "M11",
+      "track_time_s": 93.715736961,
+      "short_label": "Aqara 2",
+      "cue_type": "climax"
+    },
+    {
+      "id": "M12",
+      "track_time_s": 96.664671202,
+      "short_label": "morning settle",
+      "cue_type": "ending"
+    },
+    {
+      "id": "M13",
+      "track_time_s": 103.932517007,
+      "short_label": "hold final",
+      "cue_type": "ending"
+    }
+  ],
+  "selected_micro_times_s": [
+    28.328344671,
+    31.463038549,
+    34.411972789,
+    37.291247166,
+    40.286621315,
+    43.281995465,
+    51.873378685,
+    54.125714286,
+    57.864126984,
+    58.119546485,
+    61.091700680,
+    63.970975057,
+    66.943129252,
+    70.054603175,
+    72.887437642,
+    75.882811791,
+    78.901405896,
+    81.873560091,
+    84.892154195,
+    87.887528345
+  ]
+}

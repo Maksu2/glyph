@@ -1,0 +1,181 @@
+{
+  "variant": "glyph-100m",
+  "model": {
+    "display_name": "Glyph-100M",
+    "vocab_size": 16000,
+    "context_len": 512,
+    "d_model": 768,
+    "n_heads": 12,
+    "n_layers": 12,
+    "ffn_mult": 4,
+    "dropout": 0.1,
+    "variant": "glyph-100m",
+    "model_config": {
+      "vocab_size": 16000,
+      "context_len": 512,
+      "d_model": 768,
+      "n_heads": 12,
+      "n_layers": 12,
+      "ffn_mult": 4,
+      "dropout": 0.1
+    },
+    "ffn_dim": 3072,
+    "norm": "pre-layernorm",
+    "activation": "GELU",
+    "weight_tying": true
+  },
+  "torch": "2.12.0+rocm7.14.0a20260521",
+  "hip": "7.13.0",
+  "gpu": "AMD Radeon RX 5500 XT",
+  "batches": [
+    {
+      "batch_size": 4,
+      "context_len": 512,
+      "tokens_per_step": 2048,
+      "ok": true,
+      "nan": false,
+      "error": null,
+      "steps": [
+        {
+          "step": 0,
+          "loss": 9.842568397521973,
+          "seconds": 0.9496043480467051,
+          "tokens_per_second": 2156.6876817830994,
+          "allocated_mib": 1695.86767578125,
+          "reserved_mib": 3496.0,
+          "max_allocated_mib": 3422.4482421875,
+          "rss_mib": 1236.1796875
+        },
+        {
+          "step": 1,
+          "loss": 9.829245567321777,
+          "seconds": 0.6593096840661019,
+          "tokens_per_second": 3106.2792637437874,
+          "allocated_mib": 1696.86767578125,
+          "reserved_mib": 4672.0,
+          "max_allocated_mib": 4465.76318359375,
+          "rss_mib": 1236.4609375
+        }
+      ],
+      "checkpoint_save_load_ok": true,
+      "rocm_smi_before": {
+        "card0": {
+          "Temperature (Sensor edge) (C)": "27.0",
+          "Temperature (Sensor junction) (C)": "27.0",
+          "Temperature (Sensor memory) (C)": "0.0",
+          "GPU Memory Allocated (VRAM%)": "0",
+          "GPU Memory Read/Write Activity (%)": "0",
+          "Memory Activity": "N/A",
+          "Avg. Memory Bandwidth": "0"
+        }
+      },
+      "checkpoint_path": "reports/glyph100_smoke_checkpoint.pt",
+      "checkpoint_size_bytes": 393807083,
+      "avg_seconds_excluding_warmup": 0.6593096840661019,
+      "avg_tokens_per_second_excluding_warmup": 3106.2792637437874,
+      "duration_seconds": 5.0568899440113455,
+      "rocm_smi_after": {
+        "card0": {
+          "Temperature (Sensor edge) (C)": "28.0",
+          "Temperature (Sensor junction) (C)": "28.0",
+          "Temperature (Sensor memory) (C)": "0.0",
+          "GPU Memory Allocated (VRAM%)": "60",
+          "GPU Memory Read/Write Activity (%)": "0",
+          "Memory Activity": "N/A",
+          "Avg. Memory Bandwidth": "0"
+        }
+      }
+    },
+    {
+      "batch_size": 8,
+      "context_len": 512,
+      "tokens_per_step": 4096,
+      "ok": true,
+      "nan": false,
+      "error": null,
+      "steps": [
+        {
+          "step": 0,
+          "loss": 9.828325271606445,
+          "seconds": 1.5858382669975981,
+          "tokens_per_second": 2582.8611184637302,
+          "allocated_mib": 1836.27392578125,
+          "reserved_mib": 6516.0,
+          "max_allocated_mib": 6435.9951171875,
+          "rss_mib": 1323.06640625
+        },
+        {
+          "step": 1,
+          "loss": 9.826726913452148,
+          "seconds": 1.2466720219235867,
+          "tokens_per_second": 3285.5473837296554,
+          "allocated_mib": 1835.02392578125,
+          "reserved_mib": 7818.0,
+          "max_allocated_mib": 7345.56005859375,
+          "rss_mib": 1323.06640625
+        }
+      ],
+      "checkpoint_save_load_ok": null,
+      "rocm_smi_before": {
+        "card0": {
+          "Temperature (Sensor edge) (C)": "30.0",
+          "Temperature (Sensor junction) (C)": "30.0",
+          "Temperature (Sensor memory) (C)": "0.0",
+          "GPU Memory Allocated (VRAM%)": "5",
+          "GPU Memory Read/Write Activity (%)": "0",
+          "Memory Activity": "N/A",
+          "Avg. Memory Bandwidth": "0"
+        }
+      },
+      "avg_seconds_excluding_warmup": 1.2466720219235867,
+      "avg_tokens_per_second_excluding_warmup": 3285.5473837296554,
+      "duration_seconds": 3.9278231769567356,
+      "rocm_smi_after": {
+        "card0": {
+          "Temperature (Sensor edge) (C)": "31.0",
+          "Temperature (Sensor junction) (C)": "31.0",
+          "Temperature (Sensor memory) (C)": "0.0",
+          "GPU Memory Allocated (VRAM%)": "98",
+          "GPU Memory Read/Write Activity (%)": "0",
+          "Memory Activity": "N/A",
+          "Avg. Memory Bandwidth": "0"
+        }
+      }
+    },
+    {
+      "batch_size": 16,
+      "context_len": 512,
+      "tokens_per_step": 8192,
+      "ok": false,
+      "nan": false,
+      "error": "CUDA out of memory. Tried to allocate 96.00 MiB. GPU 0 has a total capacity of 7.98 GiB of which 0 bytes is free. Of the allocated memory 7.64 GiB is allocated by PyTorch, and 48.60 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-c",
+      "steps": [],
+      "checkpoint_save_load_ok": null,
+      "rocm_smi_before": {
+        "card0": {
+          "Temperature (Sensor edge) (C)": "32.0",
+          "Temperature (Sensor junction) (C)": "32.0",
+          "Temperature (Sensor memory) (C)": "0.0",
+          "GPU Memory Allocated (VRAM%)": "5",
+          "GPU Memory Read/Write Activity (%)": "0",
+          "Memory Activity": "N/A",
+          "Avg. Memory Bandwidth": "0"
+        }
+      },
+      "oom": true,
+      "duration_seconds": 1.760107237030752,
+      "rocm_smi_after": {
+        "card0": {
+          "Temperature (Sensor edge) (C)": "31.0",
+          "Temperature (Sensor junction) (C)": "31.0",
+          "Temperature (Sensor memory) (C)": "0.0",
+          "GPU Memory Allocated (VRAM%)": "98",
+          "GPU Memory Read/Write Activity (%)": "0",
+          "Memory Activity": "N/A",
+          "Avg. Memory Bandwidth": "0"
+        }
+      }
+    }
+  ],
+  "max_ok_batch_size": 8
+}

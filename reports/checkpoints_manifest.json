@@ -1,0 +1,345 @@
+{
+  "generated_at_utc": "2026-09-06T17:30:46.762242+00:00",
+  "checkpoints": [
+    {
+      "path": "checkpoints/final.pt",
+      "bytes": 326978459,
+      "mtime": "2026-05-22T04:17:49.572212+00:00",
+      "sha256": "8c8d45df3c4594da5743c0c743ff81a4061800ce14aad723503a14eedd4c9a15",
+      "step": 200000,
+      "variant": null,
+      "tokenizer_sha256": null,
+      "dataset_name": null
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm-latest.pt",
+      "bytes": 1175147247,
+      "mtime": "2026-06-24T19:27:51.066308+00:00",
+      "sha256": "3ab638dcccd2753a49ab84e47bb8d73c56297d4574175ff23e2600890cf40c88",
+      "step": 400,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_sft_smoke_v0"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-best.pt",
+      "bytes": 1175145993,
+      "mtime": "2026-06-24T19:51:54.288051+00:00",
+      "sha256": "dfcb0df37403bac0692459408cd8564f4f7118357d413c6b2c120ea4712c1ff9",
+      "step": 462,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_sft_smoke_v0_2"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-best.pt",
+      "bytes": 1175145993,
+      "mtime": "2026-06-25T06:24:38.770062+00:00",
+      "sha256": "27df6dd855003e6c3bc082bc71062e3e353410b5740ceabd9b79a9b160fbd059",
+      "step": 450,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_sft_smoke_v0_3"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-final-step_000586.pt",
+      "bytes": 1175158019,
+      "mtime": "2026-06-25T06:25:29.986364+00:00",
+      "sha256": "1c9ae70288c6cc42138303a61c688e7b47a10bf820f5febb026de97dbc35e585",
+      "step": 586,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_sft_smoke_v0_3"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+      "bytes": 1175128433,
+      "mtime": "2026-06-10T01:53:10.555145+00:00",
+      "sha256": "5c24f234eb8550bb6b44e3e3cbe87e109ff5665a58220b0dd59566b330a120c6",
+      "step": 44000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_v2_3_1"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/latest.pt",
+      "bytes": 1175128015,
+      "mtime": "2026-06-12T04:02:38.624176+00:00",
+      "sha256": "18e766d4cd2720521744398e4881b63a216b232e7bb5fa947391525a33e8b352",
+      "step": 50000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_v2_3_1"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-10k/latest.pt",
+      "bytes": 1175128335,
+      "mtime": "2026-07-17T21:17:41.563842+00:00",
+      "sha256": "dc21dc42af64bdba15c283f6ba72b5fb994e6220dc0d3c2482dc96fd833d45ea",
+      "step": 10000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-10k/step_0007500.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-07-17T17:48:27.555222+00:00",
+      "sha256": "b7a506931c75e787a1da0a56e3c935fb032b091290730c3f9a98c2fd4068f5f4",
+      "step": 7500,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-10k/step_0010000.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-07-17T21:17:40.547835+00:00",
+      "sha256": "9c03e76b2b4ca6cca070c3b4f7ebad10f19e8baf3550f58b9e10749d10ac6f9e",
+      "step": 10000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-1k/latest.pt",
+      "bytes": 1175126927,
+      "mtime": "2026-07-16T16:14:29.835302+00:00",
+      "sha256": "f6f90c96e1ac00e607941b1e53bdd2da2df709f409110ac5c56761a0bc886127",
+      "step": 1000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-1k/step_0000500.pt",
+      "bytes": 1175127345,
+      "mtime": "2026-07-16T15:32:24.257180+00:00",
+      "sha256": "2e77a8297bb046a2199017539c300e92e4553aeae2d98b8aa345c0c144277254",
+      "step": 500,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-1k/step_0001000.pt",
+      "bytes": 1175127345,
+      "mtime": "2026-07-16T16:14:28.891295+00:00",
+      "sha256": "6a5ad188dafa69ef21cebf84fd1f6aa48e4c6afd5596fb550f89bcef59f64cf9",
+      "step": 1000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-5k/latest.pt",
+      "bytes": 1175128335,
+      "mtime": "2026-07-17T00:45:22.920330+00:00",
+      "sha256": "9022256b85b621cbba7f172aa4ea03be1668d5ca23801f369c83b0948c762190",
+      "step": 5000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-5k/step_0002000.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-07-16T20:34:03.110980+00:00",
+      "sha256": "a8fee4a7419a99343651bb92874e7e3d87f41fda5a47700b9a7bacaad752c32c",
+      "step": 2000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-5k/step_0003000.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-07-16T21:57:49.161456+00:00",
+      "sha256": "81cac96806e7dc2543536165d9fa5732fa9e53e0d0b43bc7a8bf51584336af6f",
+      "step": 3000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-5k/step_0004000.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-07-16T23:21:35.845408+00:00",
+      "sha256": "b0a13af01274413802d3be2dd117172d9e2d90a9f53b9984359c783776b0748e",
+      "step": 4000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_1-5k/step_0005000.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-07-17T00:45:21.958324+00:00",
+      "sha256": "1cfb8d4bb1be8148a168bdee2b8aeedac69e66e2ac2ac0a2e933539a7bd6839e",
+      "step": 5000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_1_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+      "bytes": 1175129265,
+      "mtime": "2026-08-08T14:05:01.773100+00:00",
+      "sha256": "e32d34baff7c522a77a83c5ec1812dd83798c31c8b4cdefe93c729a4441ab4ce",
+      "step": 10000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k/latest.pt",
+      "bytes": 1175128335,
+      "mtime": "2026-09-01T18:37:11.236672+00:00",
+      "sha256": "c6672901dde3eebe6680579aef6f323578e01a88b99ec12c731d4b2d11241bb9",
+      "step": 15000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k/step_0012500.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-09-01T15:07:28.667867+00:00",
+      "sha256": "2bf8b0148be92958974297df41349a45a6a83f51aaaadfb6ce909daceec30132",
+      "step": 12500,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k/step_0015000.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-09-01T18:37:10.227672+00:00",
+      "sha256": "58aab9dfc763bc9c3b41212c92253f6a222f3c6dc7a2ae8cf02a51d4e2106150",
+      "step": 15000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k-cooldown/latest.pt",
+      "bytes": 1175128399,
+      "mtime": "2026-09-06T10:07:36.327407+00:00",
+      "sha256": "d849ea59b465c20d74bfcc1eee7bb065d14fd9d3727e2c07be174bc9171c7030",
+      "step": 16500,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k-cooldown/step_0015500.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-09-06T08:42:58.591806+00:00",
+      "sha256": "c4a9f601c2e4433ed03235a7efa5fae54ddc071be45a96809ec3a7b3c7ab51d8",
+      "step": 15500,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k-cooldown/step_0016000.pt",
+      "bytes": 1175128753,
+      "mtime": "2026-09-06T09:25:15.853607+00:00",
+      "sha256": "6b820a9b1b3f2ce89a6e47093835cefdbe7fbfb23a44a52360285fe27412f0a2",
+      "step": 16000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k-cooldown/step_0016500.pt",
+      "bytes": 1175128817,
+      "mtime": "2026-09-06T10:07:35.237407+00:00",
+      "sha256": "f5b3694b3c1981fdb9a70f2b38b5a40410cbda74135977079dd2dd00ba1a0b40",
+      "step": 16500,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/latest.pt",
+      "bytes": 1175126927,
+      "mtime": "2026-07-18T11:57:52.302108+00:00",
+      "sha256": "534a96fc25ec1b3edfb8aa6cf1c05eb0fc2202668bd44adc7103f21e64ce8d80",
+      "step": 5000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0001000.pt",
+      "bytes": 1175127345,
+      "mtime": "2026-07-18T06:23:13.594055+00:00",
+      "sha256": "7d77378b681bdce9d2a0c861f7700d189e37f6e12528437cb9920ea93b2d134e",
+      "step": 1000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0002000.pt",
+      "bytes": 1175127345,
+      "mtime": "2026-07-18T07:46:50.482418+00:00",
+      "sha256": "ca088ae34a78c90d77be0976d16a935fd85e7464d6f9e1336a9d25d0bd5099f7",
+      "step": 2000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0003000.pt",
+      "bytes": 1175127345,
+      "mtime": "2026-07-18T09:10:31.786418+00:00",
+      "sha256": "fab27c2c6acc07e5d1305db2dd8c2e13f6a75a61001d8859aeabe821393ba2a9",
+      "step": 3000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0004000.pt",
+      "bytes": 1175127345,
+      "mtime": "2026-07-18T10:34:11.812642+00:00",
+      "sha256": "e15b7d39d96820f06edc13451ea36ffc46345e1eef0a9c3677211a2f287c1a1e",
+      "step": 4000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0005000.pt",
+      "bytes": 1175127345,
+      "mtime": "2026-07-18T11:57:51.334101+00:00",
+      "sha256": "aad89bc2827a4d626092f8da827ecc549afe6c414e837c94b7543ac9ffafc09a",
+      "step": 5000,
+      "variant": "glyph-100m",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "dataset_name": "glyph100_dataset_v2_4_2_core"
+    },
+    {
+      "path": "checkpoints/public-demo.pt",
+      "bytes": 326987359,
+      "mtime": "2026-05-17T19:38:43.041839+00:00",
+      "sha256": "1317e077ed4e58112fea453116e869e7af468612d6d9dd79c96f6cce9e07ea29",
+      "step": 115000,
+      "variant": null,
+      "tokenizer_sha256": null,
+      "dataset_name": null
+    },
+    {
+      "path": "checkpoints/sft-v0/glyph-27m-sft-v0-final.pt",
+      "bytes": 326991051,
+      "mtime": "2026-05-25T17:08:06.903415+00:00",
+      "sha256": "be3b7245bc98f3bd2b81a354c6171206fe430a8bfc16b0fa361650dcda8ad0dc",
+      "step": 85,
+      "variant": null,
+      "tokenizer_sha256": null,
+      "dataset_name": null
+    }
+  ]
+}

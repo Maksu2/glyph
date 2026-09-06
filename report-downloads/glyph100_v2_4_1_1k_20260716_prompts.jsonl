@@ -1,0 +1,8 @@
+{"id":"v241-1k-001","category":"krotka_kontynuacja","prompt":"Warszawa to","expected":"Krótka polska kontynuacja zdania."}
+{"id":"v241-1k-002","category":"krotka_kontynuacja","prompt":"Polska jest","expected":"Spójne polskie zdanie bez forumowego tonu."}
+{"id":"v241-1k-003","category":"edukacyjny","prompt":"W fizyce energia","expected":"Prosty tekst edukacyjny bez udawania asystenta."}
+{"id":"v241-1k-004","category":"edukacyjny","prompt":"Sztuczna inteligencja jest","expected":"Definicyjna kontynuacja w języku polskim."}
+{"id":"v241-1k-005","category":"skladnia","prompt":"Rower składa się z","expected":"Składniowo sensowna kontynuacja."}
+{"id":"v241-1k-006","category":"web_garbage","prompt":"Według najnowszych danych","expected":"Kontynuacja bez linków, menu i SEO."}
+{"id":"v241-1k-007","category":"projektowy","prompt":"Najważniejszym problemem tego projektu jest","expected":"Kontynuacja bez dryfu i powtarzania."}
+{"id":"v241-1k-008","category":"petle","prompt":"Ten tekst nie powinien powtarzać tego samego zdania, ponieważ","expected":"Kontynuacja bez widocznej pętli fraz."}

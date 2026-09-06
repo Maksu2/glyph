@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-16T01:26:37.499779+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260516-011544.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260516-011544.jsonl",
+  "count": 60,
+  "valid_count": 59,
+  "overall_avg": 2.763,
+  "averages": {
+    "continuation_fit": 3.017,
+    "polish": 3.119,
+    "coherence": 2.831,
+    "repetition": 2.559,
+    "safety": 5.0,
+    "overall": 2.763
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.763/5 na 59/60 próbkach. Trening: step=90580, train_loss=3.947, val_loss=4.4991, lr=0.000187. Najsłabsze średnie: repetition=2.56, coherence=2.83; najmocniejsza metryka: polish=3.12. Podejrzane powtórzenia widać m.in. w próbkach: base_tech_03, base_dialog_05, base_fragment_07.",
+  "training_stats": {
+    "step": 90580,
+    "total_steps": 200000,
+    "progress_pct": 45.29,
+    "loss": 3.947,
+    "lr": 0.000187,
+    "last_eval": {
+      "ts": "2026-05-16 01:09:24",
+      "step": 90500,
+      "val_loss": 4.4991
+    },
+    "tokens_m": 742.03
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.763, co wskazuje na niestabilną zdolność do kontynuacji tekstu na poziomie bazowym. Najsłabsze metryki to 'repetition' (2.559) i 'coherence' (2.831), co sugeruje problemy z utrzymaniem spójności tematycznej i nadmiernym powtarzaniem fraz. W kontekście treningowym, rozbieżność między train_loss (3.947) a val_loss (4.4991) przy niskiej wartości LR (0.000187) sugeruje, że model nie generalizuje efektywnie na danych walidacyjnych. Typowym błędem widocznym w próbkach jest niestabilność kontekstowa i pojawianie się niepoprawnych konstrukcji gramatycznych, co wymaga dalszej stabilizacji na danych tekstowych.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarkowy wynosi 2.763, co wskazuje na niestabilną zdolność do kontynuacji tekstu na poziomie bazowym. Najsłabsze metryki to 'repetition' (2.559) i 'coherence' (2.831), co sugeruje problemy z utrzymaniem spójności tematycznej i nadmiernym powtarzaniem fraz. W kontekście treningowym, rozbieżność między train_loss (3.947) a val_loss (4.4991) przy niskiej wartości LR (0.000187) sugeruje, że model nie generalizuje efektywnie na danych walidacyjnych. Typowym błędem widocznym w próbkach jest niestabilność kontekstowa i pojawianie się niepoprawnych konstrukcji gramatycznych, co wymaga dalszej stabilizacji na danych tekstowych.\"\n}\n```"
+}

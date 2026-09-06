@@ -1,0 +1,277 @@
+{
+  "generated_at": "2026-05-31T20:05:55.013081+00:00",
+  "variant": "glyph-100m",
+  "stage": "stage 2",
+  "status": "complete",
+  "start_step": 1000,
+  "end_step": 10000,
+  "duration_seconds": 44852.0,
+  "duration_human": "12h 27m 32s",
+  "total_tokens_at_10k": 163840000,
+  "stage2_additional_tokens": 147456000,
+  "effective_tokens_per_step": 16384,
+  "avg_toks_per_sec_last_30": 3293.5,
+  "train_loss": {
+    "step_1000": 6.3248,
+    "step_10000": 3.6795
+  },
+  "val_losses": [
+    {
+      "ts": "2026-05-26 18:13:35",
+      "step": 1000,
+      "val_loss": 6.2177
+    },
+    {
+      "ts": "2026-05-27 06:02:33",
+      "step": 1500,
+      "val_loss": 5.411
+    },
+    {
+      "ts": "2026-05-27 06:44:08",
+      "step": 2000,
+      "val_loss": 5.3611
+    },
+    {
+      "ts": "2026-05-27 07:25:37",
+      "step": 2500,
+      "val_loss": 5.0758
+    },
+    {
+      "ts": "2026-05-27 08:07:11",
+      "step": 3000,
+      "val_loss": 4.8474
+    },
+    {
+      "ts": "2026-05-27 08:48:41",
+      "step": 3500,
+      "val_loss": 4.2752
+    },
+    {
+      "ts": "2026-05-27 09:30:16",
+      "step": 4000,
+      "val_loss": 4.2509
+    },
+    {
+      "ts": "2026-05-27 10:11:45",
+      "step": 4500,
+      "val_loss": 4.1242
+    },
+    {
+      "ts": "2026-05-27 10:53:19",
+      "step": 5000,
+      "val_loss": 3.6223
+    },
+    {
+      "ts": "2026-05-27 11:34:48",
+      "step": 5500,
+      "val_loss": 3.9339
+    },
+    {
+      "ts": "2026-05-27 12:16:22",
+      "step": 6000,
+      "val_loss": 3.867
+    },
+    {
+      "ts": "2026-05-27 12:57:51",
+      "step": 6500,
+      "val_loss": 3.686
+    },
+    {
+      "ts": "2026-05-27 13:39:24",
+      "step": 7000,
+      "val_loss": 3.9593
+    },
+    {
+      "ts": "2026-05-27 14:20:53",
+      "step": 7500,
+      "val_loss": 3.5324
+    },
+    {
+      "ts": "2026-05-27 15:02:27",
+      "step": 8000,
+      "val_loss": 3.913
+    },
+    {
+      "ts": "2026-05-27 15:43:56",
+      "step": 8500,
+      "val_loss": 3.7152
+    },
+    {
+      "ts": "2026-05-27 16:25:29",
+      "step": 9000,
+      "val_loss": 3.8426
+    },
+    {
+      "ts": "2026-05-27 17:06:58",
+      "step": 9500,
+      "val_loss": 3.5437
+    },
+    {
+      "ts": "2026-05-27 17:48:31",
+      "step": 10000,
+      "val_loss": 3.3527
+    }
+  ],
+  "last_eval": {
+    "ts": "2026-05-27 17:48:31",
+    "step": 10000,
+    "val_loss": 3.3527
+  },
+  "checkpoints": [
+    {
+      "ts": "2026-05-26 17:32:02",
+      "path": "checkpoints/glyph-100m/step_0000500.pt",
+      "loss": 7.3908
+    },
+    {
+      "ts": "2026-05-26 18:13:33",
+      "path": "checkpoints/glyph-100m/step_0001000.pt",
+      "loss": 6.2372
+    },
+    {
+      "ts": "2026-05-27 06:44:07",
+      "path": "checkpoints/glyph-100m/step_0002000.pt",
+      "loss": 5.0632
+    },
+    {
+      "ts": "2026-05-27 08:07:10",
+      "path": "checkpoints/glyph-100m/step_0003000.pt",
+      "loss": 4.6626
+    },
+    {
+      "ts": "2026-05-27 09:30:15",
+      "path": "checkpoints/glyph-100m/step_0004000.pt",
+      "loss": 4.2677
+    },
+    {
+      "ts": "2026-05-27 10:53:17",
+      "path": "checkpoints/glyph-100m/step_0005000.pt",
+      "loss": 4.0864
+    },
+    {
+      "ts": "2026-05-27 12:16:21",
+      "path": "checkpoints/glyph-100m/step_0006000.pt",
+      "loss": 3.954
+    },
+    {
+      "ts": "2026-05-27 13:39:23",
+      "path": "checkpoints/glyph-100m/step_0007000.pt",
+      "loss": 3.9266
+    },
+    {
+      "ts": "2026-05-27 15:02:26",
+      "path": "checkpoints/glyph-100m/step_0008000.pt",
+      "loss": 3.7973
+    },
+    {
+      "ts": "2026-05-27 16:25:28",
+      "path": "checkpoints/glyph-100m/step_0009000.pt",
+      "loss": 3.327
+    },
+    {
+      "ts": "2026-05-27 17:48:30",
+      "path": "checkpoints/glyph-100m/step_0010000.pt",
+      "loss": 3.827
+    }
+  ],
+  "checkpoint_dir_size": "14G",
+  "nan_inf_oom_crash_hang": "none after recovery; initial failed resume attempt produced non_finite_loss at step 1002 and was recovered with AdamW foreach=false + SDPA math",
+  "observed_gpu": {
+    "edge_c": 59,
+    "junction_c": 79,
+    "vram_percent": 61,
+    "gpu_use_percent": 99,
+    "note": "observed during recovered stage2 around step 1040; final temperature was not sampled because container exited cleanly"
+  },
+  "dataset": {
+    "name": "glyph100_stage1_candidate",
+    "train_tokens": 117870679,
+    "val_tokens": 1239948,
+    "token_budgets": {
+      "10000": 163840000,
+      "50000": 819200000,
+      "100000": 1638400000,
+      "200000": 3276800000
+    },
+    "token_equivalent_epochs": {
+      "10000": 1.39,
+      "50000": 6.95,
+      "100000": 13.9,
+      "200000": 27.8
+    }
+  },
+  "eval_summary": {
+    "conservative": {
+      "count": 12,
+      "avg_tokens_per_second": 64.28,
+      "web_garbage_samples": 0,
+      "repetition_samples": 10,
+      "natural_endings": 0,
+      "avg_alphabetic_ratio": 0.77
+    },
+    "normal": {
+      "count": 12,
+      "avg_tokens_per_second": 66.38,
+      "web_garbage_samples": 0,
+      "repetition_samples": 6,
+      "natural_endings": 1,
+      "avg_alphabetic_ratio": 0.791
+    },
+    "creative": {
+      "count": 12,
+      "avg_tokens_per_second": 66.41,
+      "web_garbage_samples": 0,
+      "repetition_samples": 4,
+      "natural_endings": 0,
+      "avg_alphabetic_ratio": 0.734
+    }
+  },
+  "cleanup_proposal": {
+    "keep": [
+      "checkpoints/glyph-100m/latest.pt",
+      "checkpoints/glyph-100m/step_0010000.pt",
+      "checkpoints/glyph-100m/step_0005000.pt"
+    ],
+    "remove_candidates": [
+      {
+        "path": "checkpoints/glyph-100m/step_0000500.pt",
+        "size_bytes": 1175127025
+      },
+      {
+        "path": "checkpoints/glyph-100m/step_0001000.pt",
+        "size_bytes": 1175127025
+      },
+      {
+        "path": "checkpoints/glyph-100m/step_0002000.pt",
+        "size_bytes": 1175128433
+      },
+      {
+        "path": "checkpoints/glyph-100m/step_0003000.pt",
+        "size_bytes": 1175128433
+      },
+      {
+        "path": "checkpoints/glyph-100m/step_0004000.pt",
+        "size_bytes": 1175128433
+      },
+      {
+        "path": "checkpoints/glyph-100m/step_0006000.pt",
+        "size_bytes": 1175128433
+      },
+      {
+        "path": "checkpoints/glyph-100m/step_0007000.pt",
+        "size_bytes": 1175128433
+      },
+      {
+        "path": "checkpoints/glyph-100m/step_0008000.pt",
+        "size_bytes": 1175128433
+      },
+      {
+        "path": "checkpoints/glyph-100m/step_0009000.pt",
+        "size_bytes": 1175128433
+      }
+    ],
+    "estimated_reclaim_bytes": 10576153081,
+    "estimated_reclaim_gib": 9.85
+  },
+  "recommendation": "B: source-aware dataset rebuild before stage 3 / 50k"
+}

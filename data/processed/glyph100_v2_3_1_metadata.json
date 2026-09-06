@@ -1,0 +1,74 @@
+{
+  "variant": "glyph-100m",
+  "dataset_name": "glyph100_dataset_v2_3_1",
+  "selected_variant": "v2_3_cleanup_fineweb2_domain_page_quality",
+  "scope": "cleanup of glyph100_dataset_v2_3; no training has been run on it",
+  "train_bin": "data/processed/glyph100_v2_3_1_train.bin",
+  "val_bin": "data/processed/glyph100_v2_3_1_val.bin",
+  "docs_jsonl": "data/processed/glyph100_v2_3_1_docs.jsonl",
+  "tokenizer": "data/processed/tokenizer.model",
+  "vocab_size": 16000,
+  "train_docs": 237776,
+  "val_docs": 1218,
+  "train_tokens": 174962162,
+  "val_tokens": 976337,
+  "total_tokens": 175938499,
+  "source_mix": {
+    "wolne_lektury": {
+      "docs": 1525,
+      "tokens": 3143341,
+      "train_docs": 1517,
+      "val_docs": 8,
+      "train_tokens": 3126624,
+      "val_tokens": 16717
+    },
+    "wikipedia_pl": {
+      "docs": 184466,
+      "tokens": 127929637,
+      "train_docs": 183493,
+      "val_docs": 973,
+      "train_tokens": 127166956,
+      "val_tokens": 762681
+    },
+    "allegro_summaries_source": {
+      "docs": 539,
+      "tokens": 1368381,
+      "train_docs": 538,
+      "val_docs": 1,
+      "train_tokens": 1364804,
+      "val_tokens": 3577
+    },
+    "wikibooks_pl": {
+      "docs": 5388,
+      "tokens": 4328329,
+      "train_docs": 5364,
+      "val_docs": 24,
+      "train_tokens": 4312133,
+      "val_tokens": 16196
+    },
+    "wikisource_pl": {
+      "docs": 1543,
+      "tokens": 2272465,
+      "train_docs": 1535,
+      "val_docs": 8,
+      "train_tokens": 2263878,
+      "val_tokens": 8587
+    },
+    "fineweb2_pl": {
+      "docs": 45533,
+      "tokens": 36896346,
+      "train_docs": 45329,
+      "val_docs": 204,
+      "train_tokens": 36727767,
+      "val_tokens": 168579
+    }
+  },
+  "wikipedia_share": 0.7271270229490818,
+  "fineweb2_share": 0.2097116106463998,
+  "legacy_share": 0.0,
+  "stage3_50k_epochs": 4.656172495821964,
+  "created_at": "2026-06-06T20:46:02.952740+00:00",
+  "stats_json": "data/reports/glyph100_dataset_v2_3_1_stats.json",
+  "report": "data/reports/glyph100_dataset_v2_3_1_report.md",
+  "split_note": "document-level stable source/doc hash split with at least one validation document per source; v2.3.1 cleanup of FineWeb2 PL; no legacy source included"
+}

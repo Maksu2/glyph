@@ -1,0 +1,110 @@
+[{"stream_name":"stdout","time":1.8950713449999999,"data":"+ /opt/bin/nvidia-smi\n"}
+,{"stream_name":"stdout","time":1.946103574,"data":"Sat Aug  8 14:53:11 2026       \n"}
+,{"stream_name":"stdout","time":1.9462809060000001,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":1.946296266,"data":"| NVIDIA-SMI 580.159.04             Driver Version: 580.159.04     CUDA Version: 13.0     |\n"}
+,{"stream_name":"stdout","time":1.9463020549999999,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":1.9463068209999999,"data":"| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n"}
+,{"stream_name":"stdout","time":1.946311336,"data":"| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n"}
+,{"stream_name":"stdout","time":1.946315506,"data":"|                                         |                        |               MIG M. |\n"}
+,{"stream_name":"stdout","time":1.9463200170000001,"data":"|=========================================+========================+======================|\n"}
+,{"stream_name":"stdout","time":2.010239572,"data":"|   0  Tesla P100-PCIE-16GB           Off |   00000000:00:04.0 Off |                    0 |\n"}
+,{"stream_name":"stdout","time":2.010290945,"data":"| N/A   34C    P0             28W /  250W |       0MiB /  16384MiB |      0%      Default |\n"}
+,{"stream_name":"stdout","time":2.010297277,"data":"|                                         |                        |                  N/A |\n"}
+,{"stream_name":"stdout","time":2.01030163,"data":"+-----------------------------------------+------------------------+----------------------+\n"}
+,{"stream_name":"stdout","time":2.010305854,"data":"\n"}
+,{"stream_name":"stdout","time":2.010309841,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stdout","time":2.010313927,"data":"| Processes:                                                                              |\n"}
+,{"stream_name":"stdout","time":2.010318037,"data":"|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n"}
+,{"stream_name":"stdout","time":2.010322184,"data":"|        ID   ID                                                               Usage      |\n"}
+,{"stream_name":"stdout","time":2.010326217,"data":"|=========================================================================================|\n"}
+,{"stream_name":"stdout","time":2.010330272,"data":"|  No running processes found                                                             |\n"}
+,{"stream_name":"stdout","time":2.010334522,"data":"+-----------------------------------------------------------------------------------------+\n"}
+,{"stream_name":"stderr","time":16.637156734,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":16.637214968,"data":"    Found GPU0 Tesla P100-PCIE-16GB which is of cuda capability 6.0.\n"}
+,{"stream_name":"stderr","time":16.637219727,"data":"    Minimum and Maximum cuda capability supported by this version of PyTorch is\n"}
+,{"stream_name":"stderr","time":16.637222986,"data":"    (7.0) - (12.0)\n"}
+,{"stream_name":"stderr","time":16.637225979,"data":"    \n"}
+,{"stream_name":"stderr","time":16.637228919000002,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":16.637231857,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":16.637235043,"data":"    Please install PyTorch with a following CUDA\n"}
+,{"stream_name":"stderr","time":16.637249325,"data":"    configurations:  12.6 following instructions at\n"}
+,{"stream_name":"stderr","time":16.637251926,"data":"    https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":16.637254254,"data":"    \n"}
+,{"stream_name":"stderr","time":16.637261645,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":16.637516752,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":16.637524865,"data":"Tesla P100-PCIE-16GB with CUDA capability sm_60 is not compatible with the current PyTorch installation.\n"}
+,{"stream_name":"stderr","time":16.637529006,"data":"The current PyTorch install supports CUDA capabilities sm_70 sm_75 sm_80 sm_86 sm_90 sm_100 sm_120.\n"}
+,{"stream_name":"stderr","time":16.637532945,"data":"If you want to use the Tesla P100-PCIE-16GB GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":16.637536586,"data":"\n"}
+,{"stream_name":"stderr","time":16.637539832999998,"data":"  queued_call()\n"}
+,{"stream_name":"stdout","time":16.810467548,"data":"+ /usr/bin/python3 /kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/scripts/colab_preflight.py --run-id glyph100-v03-p100-fp32-smoke-001 --checkpoint /kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/checkpoints/glyph-100m-base44k.pt --tokenizer /kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/data/processed/tokenizer.model --dataset /kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/data/sft/glyph100_sft_smoke_v0_3.jsonl --reports-dir /kaggle/working/glyph100-v03-p100-fp32-smoke-001/preflight-reports --expected-step 44000 --expected-variant glyph-100m --expected-context 512 --expected-dataset glyph100_v2_3_1 --expected-tokenizer-sha 21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029 --minimum-free-vram-gb 10 --precision fp32\n"}
+,{"stream_name":"stderr","time":18.680644224,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":18.680687206,"data":"    Found GPU0 Tesla P100-PCIE-16GB which is of cuda capability 6.0.\n"}
+,{"stream_name":"stderr","time":18.680705641,"data":"    Minimum and Maximum cuda capability supported by this version of PyTorch is\n"}
+,{"stream_name":"stderr","time":18.680712731,"data":"    (7.0) - (12.0)\n"}
+,{"stream_name":"stderr","time":18.680718624,"data":"    \n"}
+,{"stream_name":"stderr","time":18.680724488,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":18.680730672,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":18.680735944,"data":"    Please install PyTorch with a following CUDA\n"}
+,{"stream_name":"stderr","time":18.680741037,"data":"    configurations:  12.6 following instructions at\n"}
+,{"stream_name":"stderr","time":18.680746157,"data":"    https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":18.680751342,"data":"    \n"}
+,{"stream_name":"stderr","time":18.680759441,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":18.680936427,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":18.680948342,"data":"Tesla P100-PCIE-16GB with CUDA capability sm_60 is not compatible with the current PyTorch installation.\n"}
+,{"stream_name":"stderr","time":18.680953943,"data":"The current PyTorch install supports CUDA capabilities sm_70 sm_75 sm_80 sm_86 sm_90 sm_100 sm_120.\n"}
+,{"stream_name":"stderr","time":18.680960321,"data":"If you want to use the Tesla P100-PCIE-16GB GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":18.680981609,"data":"\n"}
+,{"stream_name":"stderr","time":18.680986654,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":21.919544759,"data":"2026-08-08 14:53:31 SFT dataset /kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/data/sft/glyph100_sft_smoke_v0_3.jsonl: usable=2,753 skipped_over_context=0 skipped_no_assistant=0 skipped_empty=0\n"}
+,{"stream_name":"stdout","time":22.257209201,"data":"GPT initialized | layers=12 heads=12 d_model=768 vocab=16000 ctx=512\n"}
+,{"stream_name":"stdout","time":22.257239738,"data":"Parameters: 109.94M logical, 97.65M unique/trainable (weight tying)\n"}
+,{"stream_name":"stdout","time":22.257245555,"data":"{\n"}
+,{"stream_name":"stdout","time":22.257249189,"data":"  \"status\": \"FAIL\",\n"}
+,{"stream_name":"stdout","time":22.257252922,"data":"  \"run_id\": \"glyph100-v03-p100-fp32-smoke-001\",\n"}
+,{"stream_name":"stdout","time":22.257256558999998,"data":"  \"environment\": {\n"}
+,{"stream_name":"stdout","time":22.257259996,"data":"    \"timestamp_utc\": \"2026-08-08T14:53:31.992746+00:00\",\n"}
+,{"stream_name":"stdout","time":22.25726361,"data":"    \"python\": \"3.12.13\",\n"}
+,{"stream_name":"stdout","time":22.257267073,"data":"    \"pytorch\": \"2.10.0+cu128\",\n"}
+,{"stream_name":"stdout","time":22.257270776,"data":"    \"cuda_available\": true,\n"}
+,{"stream_name":"stdout","time":22.257277014,"data":"    \"torch_cuda\": \"12.8\",\n"}
+,{"stream_name":"stdout","time":22.257279379,"data":"    \"torch_hip\": null,\n"}
+,{"stream_name":"stdout","time":22.257281622,"data":"    \"cudnn\": 91002,\n"}
+,{"stream_name":"stdout","time":22.257283844,"data":"    \"gpu\": {\n"}
+,{"stream_name":"stdout","time":22.257286075,"data":"      \"name\": \"Tesla P100-PCIE-16GB\",\n"}
+,{"stream_name":"stdout","time":22.257288497,"data":"      \"compute_capability\": \"6.0\",\n"}
+,{"stream_name":"stdout","time":22.257290894,"data":"      \"total_vram_bytes\": 17059545088,\n"}
+,{"stream_name":"stdout","time":22.257293257,"data":"      \"free_vram_bytes\": 16088432640,\n"}
+,{"stream_name":"stdout","time":22.25729568,"data":"      \"bf16_supported\": true\n"}
+,{"stream_name":"stdout","time":22.257298048,"data":"    },\n"}
+,{"stream_name":"stdout","time":22.257300285,"data":"    \"ram_total_bytes\": 33659379712,\n"}
+,{"stream_name":"stdout","time":22.25730272,"data":"    \"ram_available_bytes\": 31208787968,\n"}
+,{"stream_name":"stdout","time":22.257305096,"data":"    \"content_disk_total_bytes\": 8656922775552,\n"}
+,{"stream_name":"stdout","time":22.257307392,"data":"    \"content_disk_free_bytes\": 1102540840960,\n"}
+,{"stream_name":"stdout","time":22.257309643,"data":"    \"platform\": \"Linux-6.12.90+-x86_64-with-glibc2.35\"\n"}
+,{"stream_name":"stdout","time":22.257312764,"data":"  },\n"}
+,{"stream_name":"stdout","time":22.257323758,"data":"  \"checkpoint\": null,\n"}
+,{"stream_name":"stdout","time":22.257327797,"data":"  \"label_audit\": null,\n"}
+,{"stream_name":"stdout","time":22.257331797,"data":"  \"inference_smoke\": [],\n"}
+,{"stream_name":"stdout","time":22.257335708,"data":"  \"warnings\": [\n"}
+,{"stream_name":"stdout","time":22.257340669,"data":"    \"AcceleratorError: CUDA error: no kernel image is available for execution on the device\\nSearch for `cudaErrorNoKernelImageForDevice' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n\"\n"}
+,{"stream_name":"stdout","time":22.257360153,"data":"  ],\n"}
+,{"stream_name":"stdout","time":22.257363533,"data":"  \"training_performed\": false\n"}
+,{"stream_name":"stdout","time":22.257366946,"data":"}\n"}
+,{"stream_name":"stderr","time":25.209667505,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":25.209734602,"data":"  File \"/kaggle/src/script.py\", line 352, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":25.209769361,"data":"    main()\n"}
+,{"stream_name":"stderr","time":25.209873331,"data":"  File \"/kaggle/src/script.py\", line 205, in main\n"}
+,{"stream_name":"stderr","time":25.210015331,"data":"    run(\n"}
+,{"stream_name":"stderr","time":25.21003297,"data":"  File \"/kaggle/src/script.py\", line 40, in run\n"}
+,{"stream_name":"stderr","time":25.210072512,"data":"    subprocess.run(command, cwd=cwd, check=True)\n"}
+,{"stream_name":"stderr","time":25.210179665,"data":"  File \"/usr/lib/python3.12/subprocess.py\", line 571, in run\n"}
+,{"stream_name":"stderr","time":25.213168287,"data":"    raise CalledProcessError(retcode, process.args,\n"}
+,{"stream_name":"stderr","time":25.213185112,"data":"subprocess.CalledProcessError: Command '['/usr/bin/python3', '/kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/scripts/colab_preflight.py', '--run-id', 'glyph100-v03-p100-fp32-smoke-001', '--checkpoint', '/kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/checkpoints/glyph-100m-base44k.pt', '--tokenizer', '/kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/data/processed/tokenizer.model', '--dataset', '/kaggle/input/datasets/maksymilianputa/glyph100-sft-cuda-smoke-input/data/sft/glyph100_sft_smoke_v0_3.jsonl', '--reports-dir', '/kaggle/working/glyph100-v03-p100-fp32-smoke-001/preflight-reports', '--expected-step', '44000', '--expected-variant', 'glyph-100m', '--expected-context', '512', '--expected-dataset', 'glyph100_v2_3_1', '--expected-tokenizer-sha', '21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029', '--minimum-free-vram-gb', '10', '--precision', 'fp32']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stderr","time":28.160119965,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":28.160172283,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":28.602297866,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":28.602328264,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":29.361901094,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":31.016963304,"data":"[NbConvertApp] Writing 330067 bytes to __results__.html\n"}
+]

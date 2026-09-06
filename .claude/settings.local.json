@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cloudflared --version)",
+      "Bash(cloudflared tunnel:*)",
+      "Read(//home/maksu/.cloudflared/**)",
+      "Bash(chmod +x /home/maksu/ai-model/web/start.sh)",
+      "Bash(bash web/start.sh)",
+      "Bash(curl -s http://localhost:8080/api/stats)",
+      "Bash(sudo systemctl:*)",
+      "Bash(systemctl is-active:*)",
+      "Bash(sudo tee:*)",
+      "Bash(host trening.maksu.online)",
+      "Bash(curl -s https://trening.maksu.online/api/stats)",
+      "Bash(systemctl --user daemon-reload)",
+      "Bash(systemctl --user enable polish-gpt-dashboard cloudflared-training)",
+      "Bash(systemctl --user start polish-gpt-dashboard cloudflared-training)",
+      "Bash(systemctl --user status polish-gpt-dashboard cloudflared-training --no-pager)",
+      "Bash(systemctl --user status cloudflared-training --no-pager)",
+      "Bash(systemctl --user status polish-gpt-dashboard --no-pager)"
+    ]
+  }
+}

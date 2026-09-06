@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-09T01:49:11.718137+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260609-013125.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260609-013125.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.933,
+  "averages": {
+    "continuation_fit": 3.317,
+    "polish": 3.317,
+    "coherence": 2.983,
+    "repetition": 2.667,
+    "safety": 5.0,
+    "overall": 2.933
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.933/5 na 60/60 próbkach. Trening: step=32720, train_loss=3.3851, val_loss=3.224, lr=0.00019. Najsłabsze średnie: repetition=2.67, coherence=2.98; najmocniejsza metryka: continuation_fit=3.32.",
+  "training_stats": {
+    "step": 32720,
+    "total_steps": 35000,
+    "progress_pct": 93.48571428571428,
+    "loss": 3.3851,
+    "lr": 0.00019,
+    "last_eval": {
+      "ts": "2026-06-09 01:14:59",
+      "step": 32500,
+      "val_loss": 3.224
+    },
+    "tokens_m": 536.08
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.933. Najsłabsze metryki to 'repetition' (2.667) oraz 'coherence' (2.983). Wskaźniki treningowe (train_loss=3.3851, val_loss=3.224) wykazują niewielką różnicę, co sugeruje stabilny, ale nieoptymalny proces uczenia. Model wykazuje tendencję do generowania niepotrzebnych, powtarzających się fraz oraz wprowadzania niepowiązanych elementów fabularnych, co jest widoczne w próbkach (np. powtórzenia 'miasteczko' lub nagłe fakty historyczne).",
+  "raw_description_output": "```json\n{\n  \"description\": \"Ogólny wynik benchmarku wynosi 2.933. Najsłabsze metryki to 'repetition' (2.667) oraz 'coherence' (2.983). Wskaźniki treningowe (train_loss=3.3851, val_loss=3.224) wykazują niewielką różnicę, co sugeruje stabilny, ale nieoptymalny proces uczenia. Model wykazuje tendencję do generowania niepotrzebnych, powtarzających się fraz oraz wprowadzania niepowiązanych elementów fabularnych, co jest widoczne w próbkach (np. powtórzenia 'miasteczko' lub nagłe fakty historyczne).\"\n}\n```"
+}

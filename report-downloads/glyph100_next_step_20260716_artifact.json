@@ -1,0 +1,243 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Glyph-100M: następny duży krok",
+    "description": "Techniczna decyzja o korpusie v2.4.1 i kontrolowanym restarcie treningu.",
+    "generatedAt": "2026-07-16T07:20:40Z",
+    "cards": [
+      {
+        "id": "corpus_tokens",
+        "description": "Łączny rozmiar zweryfikowanego korpusu v2.4.1.",
+        "dataset": "headline",
+        "sourceId": "dataset_metadata",
+        "metrics": [
+          {"label": "Korpus, mln tokenów", "field": "total_tokens_m", "format": "number"}
+        ]
+      },
+      {
+        "id": "wikipedia_share",
+        "description": "Udział Wikipedii po ograniczeniu dominacji jednego stylu.",
+        "dataset": "headline",
+        "sourceId": "dataset_metadata",
+        "metrics": [
+          {"label": "Wikipedia", "field": "wikipedia_share", "format": "percent"}
+        ]
+      },
+      {
+        "id": "parent_leakage",
+        "description": "Liczba dokumentów nadrzędnych obecnych jednocześnie w train i val.",
+        "dataset": "headline",
+        "sourceId": "dataset_validation",
+        "metrics": [
+          {"label": "Przeciek rodziców", "field": "parent_leakage", "format": "number"}
+        ]
+      },
+      {
+        "id": "gpu_smoke",
+        "description": "Jednokrokowy test pełnego forward/backward/optimizer na ROCm.",
+        "dataset": "headline",
+        "sourceId": "gpu_smoke_report",
+        "metrics": [
+          {"label": "GPU smoke, tok/s", "field": "gpu_tokens_per_second", "format": "number"}
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "source_mix_chart",
+        "title": "Tokeny według źródła",
+        "subtitle": "v2.4.1, 279,5 mln tokenów; legacy i web crawl wyłączone",
+        "type": "bar",
+        "dataset": "source_mix",
+        "sourceId": "dataset_metadata",
+        "valueFormat": "number",
+        "settings": {"orientation": "horizontal"},
+        "encodings": {
+          "x": {"field": "source", "type": "nominal", "label": "Źródło"},
+          "y": {"field": "tokens_m", "type": "quantitative", "label": "Tokeny, mln"},
+          "tooltip": [
+            {"field": "share", "type": "quantitative", "label": "Udział", "format": "percent"},
+            {"field": "documents", "type": "quantitative", "label": "Dokumenty"},
+            {"field": "validation_policy", "type": "text", "label": "Walidacja"}
+          ]
+        }
+      },
+      {
+        "id": "training_exposure_chart",
+        "title": "Ekspozycja korpusu według punktu kontrolnego",
+        "subtitle": "Przejścia po 278,09 mln tokenów train przy 16 384 tokenach na krok",
+        "type": "bar",
+        "dataset": "training_gates",
+        "sourceId": "dataset_metadata",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {"field": "stage", "type": "ordinal", "label": "Punkt kontrolny"},
+          "y": {"field": "train_passes", "type": "quantitative", "label": "Przejścia po train"},
+          "tooltip": [
+            {"field": "tokens_m", "type": "quantitative", "label": "Tokeny, mln"},
+            {"field": "approval", "type": "text", "label": "Status"}
+          ]
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "validation_table",
+        "title": "Niezależne twarde kontrole",
+        "subtitle": "Ponowne obliczenie z JSONL, binariów uint16 i metadanych",
+        "dataset": "validation_checks",
+        "sourceId": "dataset_validation",
+        "defaultSort": {"field": "order", "direction": "asc"},
+        "columns": [
+          {"field": "order", "label": "#", "format": "number"},
+          {"field": "check", "label": "Kontrola", "type": "text"},
+          {"field": "status", "label": "Wynik", "type": "text"}
+        ]
+      },
+      {
+        "id": "eos_table",
+        "title": "EOS-aware recheck checkpointów 44k i 50k",
+        "subtitle": "60 promptów na preset; cutoff liczony po rzeczywistym EOS",
+        "dataset": "eos_recheck",
+        "sourceId": "eos_recheck_report",
+        "defaultSort": {"field": "order", "direction": "asc"},
+        "columns": [
+          {"field": "order", "label": "#", "format": "number"},
+          {"field": "checkpoint", "label": "Checkpoint", "type": "text"},
+          {"field": "preset", "label": "Preset", "type": "text"},
+          {"field": "avg_quality", "label": "Śr. jakość", "format": "number"},
+          {"field": "eos_endings", "label": "EOS", "format": "number"},
+          {"field": "repetitions", "label": "Powtórzenia", "format": "number"},
+          {"field": "cutoffs", "label": "Cutoff", "format": "number"}
+        ]
+      }
+    ],
+    "sources": [
+      {"id": "dataset_metadata", "label": "Glyph-100M v2.4.1 metadata query", "path": "reports/glyph100_next_step_20260716_dataset_source.sql"},
+      {"id": "dataset_validation", "label": "Glyph-100M v2.4.1 validation query", "path": "reports/glyph100_next_step_20260716_validation_source.sql"},
+      {"id": "gpu_smoke_report", "label": "Glyph-100M v2.4.1 GPU smoke query", "path": "reports/glyph100_next_step_20260716_gpu_source.sql"},
+      {"id": "eos_recheck_report", "label": "Glyph-100M EOS recheck query", "path": "reports/glyph100_next_step_20260716_eos_source.sql"},
+      {"id": "dynaword", "label": "Polish Dynaword", "href": "https://huggingface.co/datasets/SlayerLab/polish-dynaword"},
+      {"id": "hplt3", "label": "HPLT 3.0", "href": "https://hplt-project.org/hplt-v3-dataset"},
+      {"id": "fineweb2_hq", "label": "FineWeb2-HQ", "href": "https://huggingface.co/datasets/epfml/FineWeb2-HQ"}
+    ],
+    "blocks": [
+      {"id": "title", "type": "markdown", "body": "# Glyph-100M: następny duży krok"},
+      {
+        "id": "technical_summary",
+        "type": "markdown",
+        "body": "## Techniczny werdykt\n\n**Największym sensownym krokiem nie jest dziś większy model, lecz restart tego samego Glyph-100M od zera na korpusie v2.4.1.** Dataset, sampler, split dokumentowy i EOS-aware eval są gotowe do osobno zatwierdzonego proxy 1k, a potem 5k. Pełny trening nie został uruchomiony.\n\nNowy korpus usuwa legacy/web crawl, obniża Wikipedię poniżej 45% i dodaje dużo literatury oraz kontrolowany język formalny. Jednocześnie jeden krok ROCm potwierdził, że finalne binaria przechodzą przez prawdziwy forward, backward i optimizer na RX 5500 XT."
+      },
+      {"id": "headline_metrics", "type": "metric-strip", "cardIds": ["corpus_tokens", "wikipedia_share", "parent_leakage", "gpu_smoke"]},
+      {
+        "id": "source_mix_finding",
+        "type": "markdown",
+        "body": "## Dane publiczne zastępują brudny crawl\n\n**v2.4.1 ma 279,50 mln tokenów i nie zawiera legacy ani FineWeb/HPLT.** Największym źródłem pozostaje Wikipedia, ale łączna literatura stanowi 46,20%. Publiczny Polish Dynaword pozwolił zbudować ten mix bez gated FinetextPL-Edu.\n\nWikisource jest świadomie train-only: upstream nie zachowuje wiarygodnego identyfikatora całego dzieła, więc pozorny split val groziłby przeciekiem chunków tej samej książki.",
+        "sourceId": "dataset_metadata"
+      },
+      {"id": "source_mix_visual", "type": "chart", "chartId": "source_mix_chart"},
+      {
+        "id": "validation_finding",
+        "type": "markdown",
+        "body": "## Struktura datasetu przechodzi wszystkie twarde bramki\n\n**Niezależny walidator zaliczył 9 z 9 kontroli.** Ponownie policzył 201 746 dokumentów i 279 496 401 tokenów, porównał je z rozmiarami binariów uint16 i nie znalazł ani jednego rodzica obecnego jednocześnie w train i val.\n\nHeurystyki jakości pozostają konserwatywne: 1 638 dopasowań web-residue pochodzi wyłącznie z Wikipedii, a ręczne próbki pokazują głównie fałszywe trafienia słowa „forum” lub prawidłowy styl encyklopedyczny.",
+        "sourceId": "dataset_validation"
+      },
+      {"id": "validation_detail", "type": "table", "tableId": "validation_table"},
+      {
+        "id": "training_gate_finding",
+        "type": "markdown",
+        "body": "## 1k i 5k są bramkami, nie ukrytym pełnym runem\n\n**1k obejmuje tylko 0,06 przejścia po train, a 5k około 0,29.** Pierwszy punkt ma sprawdzić stabilność, checkpoint i loss; drugi jest pierwszym proxy jakościowym. 20k i 50k wymagają nowych decyzji i nie są automatycznie zatwierdzone."
+      },
+      {"id": "training_exposure_visual", "type": "chart", "chartId": "training_exposure_chart"},
+      {
+        "id": "gpu_finding",
+        "type": "markdown",
+        "body": "## Finalne binaria działają w pełnym pipeline ROCm\n\n**Jednokrokowy smoke zakończył się bez NaN, OOM, crasha i bez zapisu checkpointu.** Model miał 97 654 272 unikalne trenowalne parametry, batch 4, accumulation 8 i 16 384 tokeny efektywne na krok. Zaobserwowano 2 864 tok/s; temperatura edge/junction wzrosła z 28°C do 30°C.\n\nTo potwierdza mechanikę, ale nie wielogodzinną stabilność ani konwergencję. Peak VRAM nie był osobno próbkowany.",
+        "sourceId": "gpu_smoke_report"
+      },
+      {
+        "id": "eos_finding",
+        "type": "markdown",
+        "body": "## EOS zmienia pomiar, ale nie odwraca decyzji o 44k\n\n**Stary eval przeceniał liczbę ucięć, bo nie rozpoznawał tokenu EOS.** Po naprawie 44k wygrał 52 pary, 50k wygrał 44, a 84 zakończyły się remisem. Repetition penalty 1.15 usuwał literalne pętle w obu checkpointach, lecz dryf tematyczny pozostawał. 44k nadal jest bezpiecznym best practical checkpointem starej gałęzi.",
+        "sourceId": "eos_recheck_report"
+      },
+      {"id": "eos_detail", "type": "table", "tableId": "eos_table"},
+      {
+        "id": "methodology",
+        "type": "markdown",
+        "body": "## Jak zbudowano i sprawdzono v2.4.1\n\nDokumenty przechodzą source-specific cleanup, filtry językowe i jakościowe, exact/normalized/near dedup oraz selekcję całymi rodzicami. Split jest deterministyczny i dokumentowy. Tokeny policzono istniejącym SentencePiece 16k, a train zapisano jako uint16.\n\nSampler treningowy tasuje niepokrywające się bloki bez zwracania i zapisuje dokładny stan w checkpointach. Walidacja używa stałego panelu niezależnego od stanu treningowego. Generator kończy na EOS i raportuje rzeczywistą długość outputu."
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "body": "## Ryzyka pozostają realne\n\n- **Archaiczny styl:** literatura to 46,2% tokenów.\n- **Luka walidacyjna:** 30,05 mln tokenów Wikisource nie ma reprezentacji w val.\n- **Styl encyklopedyczny:** Wikipedia nadal jest największym pojedynczym źródłem.\n- **Ton urzędowy:** parlament stanowi 8,5% korpusu.\n- **Mała pojemność:** 97,65 mln parametrów pozostaje twardym ograniczeniem jakości.\n- **Krótki smoke:** jeden krok nie dowodzi stabilności wielogodzinnego runu."
+      },
+      {
+        "id": "recommended_steps",
+        "type": "markdown",
+        "body": "## Następny krok wymaga osobnej zgody\n\n1. Uruchomić from-scratch 1k w nowym katalogu checkpointów i logów.\n2. Zatrzymać się i sprawdzić loss, val, temperatury, checkpoint oraz resume.\n3. Tylko po zdrowym 1k kontynuować do 5k total.\n4. Porównać checkpointy przy równej ekspozycji tokenów, tym samym EOS-aware evalem i kilkoma seedami.\n5. Dopiero wtedy zdecydować o 20k; nie uruchamiać automatycznie 50k."
+      },
+      {
+        "id": "further_questions",
+        "type": "markdown",
+        "body": "## Pytania do rozstrzygnięcia po 5k\n\n- Czy literatura poprawia naturalny polski, czy zbyt mocno archaizuje styl?\n- Czy val bez Wikisource przewiduje jakość generacji wystarczająco dobrze?\n- Czy model v2.4.1 przy tej samej ekspozycji tokenów pokonuje historyczną gałąź v2.3.1?\n- Czy zysk uzasadnia 20k, czy ograniczeniem pozostaje pojemność 100M?"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-16T07:20:40Z",
+    "status": "ready",
+    "datasets": {
+      "headline": [
+        {"total_tokens_m": 279.496401, "wikipedia_share": 0.4293545089, "parent_leakage": 0, "gpu_tokens_per_second": 2864}
+      ],
+      "source_mix": [
+        {"source": "Wikipedia PL", "tokens_m": 120.00304, "share": 0.4293545089, "documents": 132712, "validation_policy": "train + val", "rank": 1},
+        {"source": "Wolne Lektury", "tokens_m": 55.0371, "share": 0.1969152392, "documents": 7174, "validation_policy": "train + val", "rank": 2},
+        {"source": "1000 powieści", "tokens_m": 30.19649, "share": 0.1080389215, "documents": 2776, "validation_policy": "train + val", "rank": 3},
+        {"source": "Wikisource", "tokens_m": 30.048511, "share": 0.1075094738, "documents": 33787, "validation_policy": "train only", "rank": 4},
+        {"source": "Parlament", "tokens_m": 23.852526, "share": 0.0853410825, "documents": 11575, "validation_policy": "train + val", "rank": 5},
+        {"source": "ELTeC PL", "tokens_m": 13.841376, "share": 0.0495225568, "documents": 1058, "validation_policy": "train + val", "rank": 6},
+        {"source": "Wikibooks PL", "tokens_m": 3.772313, "share": 0.0134968213, "documents": 4286, "validation_policy": "train + val", "rank": 7},
+        {"source": "Wikinews PL", "tokens_m": 2.745045, "share": 0.0098213781, "documents": 8378, "validation_policy": "train + val", "rank": 8}
+      ],
+      "validation_checks": [
+        {"order": 1, "check": "Metadata total = JSONL", "status": "PASS"},
+        {"order": 2, "check": "Metadata train = JSONL", "status": "PASS"},
+        {"order": 3, "check": "Metadata val = JSONL", "status": "PASS"},
+        {"order": 4, "check": "Train bytes = uint16 token count", "status": "PASS"},
+        {"order": 5, "check": "Val bytes = uint16 token count", "status": "PASS"},
+        {"order": 6, "check": "Document count matches", "status": "PASS"},
+        {"order": 7, "check": "Document IDs unique", "status": "PASS"},
+        {"order": 8, "check": "No parent train-val leakage", "status": "PASS"},
+        {"order": 9, "check": "Minimum token floor met", "status": "PASS"}
+      ],
+      "training_gates": [
+        {"stage": "1k", "steps": 1000, "tokens_m": 16.384, "train_passes": 0.0589, "approval": "next gate"},
+        {"stage": "5k", "steps": 5000, "tokens_m": 81.92, "train_passes": 0.2946, "approval": "after healthy 1k"},
+        {"stage": "20k", "steps": 20000, "tokens_m": 327.68, "train_passes": 1.1783, "approval": "not approved"},
+        {"stage": "50k", "steps": 50000, "tokens_m": 819.2, "train_passes": 2.9458, "approval": "not approved"}
+      ],
+      "eos_recheck": [
+        {"order": 1, "checkpoint": "44k", "preset": "normal", "avg_quality": 7.833, "eos_endings": 16, "repetitions": 18, "cutoffs": 44},
+        {"order": 2, "checkpoint": "50k", "preset": "normal", "avg_quality": 7.95, "eos_endings": 8, "repetitions": 18, "cutoffs": 52},
+        {"order": 3, "checkpoint": "44k", "preset": "rep. guard", "avg_quality": 8.617, "eos_endings": 21, "repetitions": 0, "cutoffs": 39},
+        {"order": 4, "checkpoint": "50k", "preset": "rep. guard", "avg_quality": 9.167, "eos_endings": 18, "repetitions": 0, "cutoffs": 42},
+        {"order": 5, "checkpoint": "44k", "preset": "greedy", "avg_quality": 2.7, "eos_endings": 14, "repetitions": 51, "cutoffs": 46},
+        {"order": 6, "checkpoint": "50k", "preset": "greedy", "avg_quality": 1.567, "eos_endings": 8, "repetitions": 55, "cutoffs": 52}
+      ]
+    }
+  },
+  "sources": [
+    {"id": "dataset_metadata", "path": "reports/glyph100_next_step_20260716_dataset_source.sql"},
+    {"id": "dataset_validation", "path": "reports/glyph100_next_step_20260716_validation_source.sql"},
+    {"id": "gpu_smoke_report", "path": "reports/glyph100_next_step_20260716_gpu_source.sql"},
+    {"id": "eos_recheck_report", "path": "reports/glyph100_next_step_20260716_eos_source.sql"},
+    {"id": "dynaword", "href": "https://huggingface.co/datasets/SlayerLab/polish-dynaword"},
+    {"id": "hplt3", "href": "https://hplt-project.org/hplt-v3-dataset"},
+    {"id": "fineweb2_hq", "href": "https://huggingface.co/datasets/epfml/FineWeb2-HQ"}
+  ]
+}

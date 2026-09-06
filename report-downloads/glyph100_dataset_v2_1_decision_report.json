@@ -1,0 +1,1796 @@
+{
+  "generated_at": "2026-06-01T05:04:22.395021+00:00",
+  "verdict": "B: v2.1 is cleaner than v2 and is the best current candidate, but 50k would still be 6.10 epochs. I recommend approving only a short stage-3 preflight or adding more clean sources before full 50k.",
+  "selected_variant": "D",
+  "total_tokens": 134188933,
+  "stage3_50k_epochs": 6.104825350984794,
+  "variants": {
+    "A": {
+      "variant": "A",
+      "docs": 214726,
+      "train_docs": 213598,
+      "val_docs": 1128,
+      "train_tokens": 148236057,
+      "val_tokens": 862745,
+      "total_tokens": 149098802,
+      "tokens_per_source": {
+        "wolne_lektury": {
+          "docs": 1525,
+          "tokens": 3143341,
+          "train_tokens": 3128722,
+          "val_tokens": 14619
+        },
+        "wikipedia_pl": {
+          "docs": 184466,
+          "tokens": 127929637,
+          "train_tokens": 127169999,
+          "val_tokens": 759638
+        },
+        "wikisource_pl": {
+          "docs": 2430,
+          "tokens": 3115955,
+          "train_tokens": 3103048,
+          "val_tokens": 12907
+        },
+        "legacy_mixed_corpus": {
+          "docs": 26305,
+          "tokens": 14909869,
+          "train_tokens": 14834288,
+          "val_tokens": 75581
+        }
+      },
+      "stage3_50k_epochs": 5.494343274468429,
+      "stage4_100k_epochs": 10.988686548936858,
+      "stage5_200k_epochs": 21.977373097873716,
+      "doc_token_percentiles": {
+        "p50": 350.5,
+        "p75": 720.0,
+        "p90": 1530.0,
+        "p95": 2404.0,
+        "p99": 6196.75
+      },
+      "samples": [
+        {
+          "id": "glyph100-v2-f1ebd65a380b0dd9eee62ed1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2065109",
+          "title": "",
+          "text": "Pełne imię i nazwisko Robert William Robson Data i miejsce śmierci 31 lipca 2009 1950–1956 Fulham 152 (68) 1956–1962 West Bromwich Albion 239 (56) 1962–1967 Fulham 192 (9) 1967–1968 Vancouver Royals - (-) 1957–1962 Anglia 20 (4) 1969–1982 Ipswich Town 1999–2004 Newcastle United 2006–2007 Irlandia (konsultant) Po Mundialu 1982 zdymisjonowany został selekcjoner reprezentacji Ron Greenwood. Na jego następcę wybrany został Robson, który podobnie jak Alf Ramsey, trener mistrzowskiej drużyny z 1966, do kadry narodowej trafił z Ipswich Town. Robson prowadził drużynę „Albionu” w dwóch finałach mistrzostw świata – w 1986 i w 1990, za każdym razem Anglicy przegrywali z późniejszym triumfatorem. Najpierw wyeliminowała ich Argentyna (po dwóch bramkach Diego Maradony, w tym tzw. \"ręce Boga\"), a cztery lata później odpadli w półfinale po rzutach karnych z RFN. Mimo to, wynik uzyskany we Włoszech (I...",
+          "token_count": 600
+        },
+        {
+          "id": "glyph100-v2-a114c6cfa50dc738d6a5b3c4",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2158158",
+          "title": "",
+          "text": "Batman i chaos - Recenzja - Batman Metal #03: Mroczny wczechświat - Aleja Komiksu Tomasz Kleszcz recenzuje Batman Metal #03: Mroczny wczechświat Wielkie nazwiska i wielkie postaci powracają w trzeciej odsłonie cyklu Metal. Szkoda, że to, co mają do zaproponowania, wielkim już w zasadzie nie jest. Wypadałoby w tym miejscu przedstawić kilka zdań streszczenia, ale nie do końca wiem, od czego zacząć. Trzeci tom serii Metal cierpi bowiem na często pojawiającą się w komiksach z wielkimi nazwiskami i wielkimi postaciami przypadłość. Mianowicie przerost formy nad treścią i zwyczajny narracyjny chaos, który ma zaciemnić obraz i przykryć miałkość historii. Znajdziemy tu bowiem jednocześnie wszystko i nic. Herosi walczą, poświęcają się, rzucają kwiecistymi, górnolotnymi hasłami i komentują wszystko, co robią. Jest jeszcze skakanie od postaci do postaci, brak wyraźnej linii fabularnej, próba uczy...",
+          "token_count": 763
+        },
+        {
+          "id": "glyph100-v2-e994b6d9dd8b8d34f2006fbb",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1707219",
+          "title": "",
+          "text": "w nadkrwistość. Chorzy tracą też na wadze, mają podwyższone ciśnienie oraz intensywnie się pocą, zwłaszcza nocą. Pierwsze badania laboratoryjne wykazują także: wzrost ilości czerwonych krwinek RBC wzrost poziomu wapnia we krwi podwyższone OB zespoły paraneoplazmatyczne zapalenie wielomięśniowe pozostałe problemy - podwyższona kreatynina (nieznacznie) i mocznik (prawdopodobnie w wyniku odwodnienia) oraz eozynofile we krwi (wartość 10 czy jakoś tak). Przyczyn tego ostatniego może być kilka m.in. zarobaczenie. Wet kazał przynieść kupę, tylko skąd ją wziąć, skoro kot nie je. Nie wiem, czy to Mam psa z problemem nerkowym, więc chciałabym Ci podsunąć parę pomysłów do sprawdzenia: 1) Potwierdź tą diagnozę u weta nefrologa (namiary mogę podać). Zaawansowanie niewydolności nerek (przewlekłej) ocenia się na podstawie stężenia kreatyniny we krwi. W fazie pierwszej jest ono w normie , ze anemia m...",
+          "token_count": 441
+        },
+        {
+          "id": "glyph100-v2-7f8fc692e724b0cd121ee0c9",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1880344",
+          "title": "",
+          "text": "Corso Vittorio Emanuele 133, Neapol, Włochy Usytuowany w samym centrum Neapolu, 3-gwiazdkowy Britannique Hotel oferuje pokoje dla niepalących oraz solarium i taras na dachu. 5-piętrowy budynek hotelu wybudowano w 1870 roku i odnowiono w 1986 roku. Zaledwie 2 km od centrum Neapolu, znanego z PAN, Palazzo delle Arti Napoli, Christ Church i Villa Pignatelli. Muzeum, zamek i teatr znajdują się w niedalekiej odległości od hotelu. Zatoka Neapolitańska znajduje się w 26.1 km od obiektu, wtenczas gdy Naples Capodichino International Airport jest w 6.3 km stąd. Z myślą o dobrym samopoczuciu odwiedzających, Britannique Hotel przygotował 86 pokoi. Takie udogodnienia jak TV, bezpośrednie połączenie telefoniczne, sejf, klimatyzacja i wysoki sufit zapewnią pełen komfort pobytu w Neapolu. Niektóre z pokoi mają piękny widok na Zatokę Neapolitańska. Goście mogą korzystać z suszarki do włosów i pryszni...",
+          "token_count": 582
+        },
+        {
+          "id": "glyph100-v2-738fd2e0ac6e1b6320aabc37",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2119456",
+          "title": "",
+          "text": "Oświata / Negocjacje W Szkolnych Sytuacjach Kryzysowych – Pak-Team Negocjacje w sytuacjach Szkolenie przeznaczone dla osób pracujących w szkołach różnego typu – nauczycieli, wychowawców, pedagogów, psychologów oraz kadry administracyjnej i innych osób, realizujących swoje obowiązki zawodowe na terenie placówki edukacyjnej. Celem szkolenia jest wyposażenie uczestników w umiejętności radzenia sobie w sytuacjach kryzysowych, związanych ze specyfiką pracy w szkole. Osoby biorące udział w szkoleniu zostaną zapoznane z zasadami oraz przećwiczą w praktyce radzenie sobie w różnych sytuacjach, spowodowanych agresją ucznia, kierowaną do wewnątrz (sytuacja samobójcza) lub za zewnątrz (uczeń agresywny; uzbrojony; tzw. aktywny strzelec) Nawiązywanie profesjonalnej relacji pomocowej ze sprawcą sytuacji kryzysowej (uczniem deklarującym popełnienie samobójstwa lub uczniem prezentującym agresywne zach...",
+          "token_count": 498
+        },
+        {
+          "id": "glyph100-v2-ecb688e1a4ee5d05922e8f64",
+          "source": "wikipedia_pl",
+          "source_id": "572655",
+          "title": "(1515) Perrotin",
+          "text": "(1515) Perrotin – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 4 lat i 46 dni w średniej odległości 2,57 au. Została odkryta 15 listopada 1936 roku w Observatoire de Nice przez André Patry. Nazwa planetoidy pochodzi od Henriego Perrotina (1845-1904), francuskiego astronoma. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (1515) 1936 VG.",
+          "token_count": 96
+        },
+        {
+          "id": "glyph100-v2-673c381b07aa043f647222ce",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2037069",
+          "title": "",
+          "text": "Jubileusz | kronikarz100i ← Bańka Opublikowano 28 lutego, 2016 by kronikarz100i Luty 28 Niedziela Romana Makarego Józefa W dzisiejsze zachmurzone południe w parku Hrabiny panuje pustka , ludzi nie ma, ptaki pochowane nawet kaczek nie uświadczysz na stawie. Temperatur około 9,5 0 C, ciśnienie barometryczne 990 hPa, wilgotność 71%, wiatr zachodnio-północny o prędkości 7 km/h, nie tłumaczą te parametry panującej pustki. Nasze towarzystwo psiarzy zatrzymało się przy częściowo odremontowanym budynku bywszego spichlerza. Wczoraj jechałam gładką asfaltową drogą- Genia wspomina- z jednej strony ląduje samolot, z drugie jakiś cały oszklony budynek. Pomyślałam, świetna hala do uprawiania łucznictwa, które obchodzi w tym roku okrągły jubileusz. Wreszcie ktoś poszedł po rozum do głowy- zawyrokował Wania- hala przyciągnie młodych i starych do uprawiania tego „rycerskiego” sportu. Sport łucznicy je...",
+          "token_count": 687
+        },
+        {
+          "id": "glyph100-v2-207a793a5f10b19b21b9573d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2177627",
+          "title": "",
+          "text": "Wyszukiwarka Flotea to wygodne rozwiązanie, które umożliwia wyszukanie najtańszej oferty Toruń - Munich . Przeglądając porównywarkę Flotea, możesz wybierać pomiędzy ofertami firm przewozowych oferujących przewozy w całej Europie. Na jednej stronie gromadzimy oferty wielu zestawić ze sobą. Możesz serwis Flotea oferty i ceny, więc to także porównywarka cen biletów na przejazdy autobusowe . Poznaj działanie nowoczesnego i wygodnego systemu rezerwacji przejazdów i zakupu biletów na przejazdy Toruń - Munich oraz w całej Europie. Możesz skorzystać z dwóch podstawowych opcji. Możesz dokonać rezerwacji biletu online i zapłacić kierowcy podczas przejazdu albo błyskawicznie zapłacić za bilet przez internet poprzez bezpieczny system płatnościinternetowych. Po zakupie bilet możesz wydrukować lub ściągnąć na smartfon. Na stronie Flotea.pl możesz wybierać spośród ofert wielu firm przewozowych. Dzię...",
+          "token_count": 335
+        },
+        {
+          "id": "glyph100-v2-f9d2ccd098ce64cc4cdd1d82",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1625322",
+          "title": "",
+          "text": "Przechowywanie alkoholi - Inetlogic.pl Przechowywanie alkoholi Alkohol to znany od wieków trunek chętnie pity przez kobiety i mężczyzn. Dla osób młodych, nastolatków, jest to owoc zakazany, dla dorosłych-nieodłączny element spotkań i wyjść. Szczególnie mężczyźni upodobali sobie mocniejsze trunki jak wódka, rum czy whisky, kobiety natomiast częściej sięgają po kieliszek wina, martini czy koniak. Przechowywanie alkoholu w domu jest bardzo ważne, ponieważ nie może znajdować się na oczach dzieci i kusić je do otwarcia zakazanego napoju, nie może też być bardzo ukryty, tak aby był łatwo dostępny podczas wizyty gości. Czy warto zaaranżować specjalne pomieszczenie lub stojak do przechowywania napojów wyskokowych? Im większy budżet, tym ciekawsze projekty, a takim z całą pewnością jest pomysł na zejście do piwniczki krętymi bądź prostymi bezpośrednio z kuchni. Drzwi w podłodze, zamykane na kl...",
+          "token_count": 568
+        },
+        {
+          "id": "glyph100-v2-321c9b1eb938f422f4e21163",
+          "source": "wikipedia_pl",
+          "source_id": "478019",
+          "title": "Alojzy Koziełek",
+          "text": "Alojzy Koziełek (ur. 2 lutego 1879 w Jaroniowie zm. 20 listopada 1949 w Knurowie) – ksiądz katolicki. Życiorys Urodził się 2 lutego 1879 r. w Jaroniowie k. Baborowa. Po ukończeniu szkoły powszechnej i gimnazjum studiował teologię i ekonomię społeczną na uniwersytetach we Wrocławiu i Monachium. Po otrzymaniu święceń kapłańskich 20 czerwca 1903 r., pełnił obowiązki wikarego w Katowicach, Pszczynie i Berlinie. W latach 1908–1923 był proboszczem w Szerokiej, a następnie w Miedźnej k. Pszczyny (1923–1928). W latach 1922–1923 pełnił obowiązki inspektora w śląskim kuratorium oświaty. 31 maja 1928 r. został proboszczem w parafii św. św. Cyryla i Metodego w Knurowie. Wraz z bratem ks. Janem w latach 1924 i 1932 brał czynny udział w kongresach pansłowiańskich odbywających się w Velehradzie. W czasie okupacji ukrywał się w okolicach Pszczyny oraz prawdopodobnie w Kochłowicach. Po zakończeniu II...",
+          "token_count": 322
+        },
+        {
+          "id": "glyph100-v2-8220aa76cfe5e3b53ca713a5",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2145750",
+          "title": "",
+          "text": "Maszyna do masturbacji z zestawu Mindstorm – Jak nie należy używać klocków Lego [+18] | Gadżetomania.pl Klocki Lego to zabawka dla każdego. Można z nich zbudować prawie wszystko. Zestawy Mindstorm poszerzają grono zwolenników klocków o wszystkich domorosłych inżynierów. Jak się okazuje pomysły, które przychodzą do głowy w długie samotne wieczory potrafią być naprawdę „oryginalne” W dalszej części tekstu znajdziecie film przedstawiający maszynę w akcji. Niestety po obejrzeniu tego nagrania Wasze spojrzenie na klocki lego może się nieodwracalnie zmienić. Urządzenie posiada wyświetlacz oraz regulację prędkości. Do jego budowy użyto zestawu z serii Lego Mindstorms NXT. Oczywiście nie zalecamy nikomu budowania podobnych urządzeń. Pomijając wątpliwości natury moralnej i zdrowotnej (chyba nie chcecie zabijać małych kociąt, a potem oślepnąć i mieć dłoni porośniętych włosami?) pozostaje kwesti...",
+          "token_count": 412
+        },
+        {
+          "id": "glyph100-v2-f8331b90fc6ba6f959918934",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1687653",
+          "title": "",
+          "text": "Promy na Bałtyku. Nie tylko na cumach. Frachty w serwisach – Głos Gdyni MS BIRKA and VIKING LINE fot. Marek GRZYBOWSKI koronawirus Morskie sprawy by Marek Grzybowski 25/03/2020 16/04/2020 0 Pandemia koronawirusa dotknęła wiele połączeń żeglugowych na całym świecie. Operatorzy promowi na Bałtyku mocno odczuli restrykcje wprowadzone przez rządy. Ograniczenia w ruchu pasażerskim sprawiły, że szereg operatorów zatrzymało statki na cumach, a wszyscy ograniczyli operacje do przewozów ro-ro. Marienhamn (Maarianhamina) na Wyspach Alandzkich jest jednym z portów bałtyckich najsilniej dotkniętych ograniczeniami w ruchu pasażerów. Położony między Finlandią a Szwecją jest szczególnie atrakcyjny dla turystów ze względu na działającą tu strefę bezcłową. Stąd liczne rejsy ze Sztokholmu, Turku i innych portów Morza Bałtyckiego. Od połowy marca niektórzy armatorzy całkowicie zawiesili rejsy, a inni zn...",
+          "token_count": 2089
+        },
+        {
+          "id": "glyph100-v2-9f8d839a5e4b464edfd92052",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2262759",
+          "title": "",
+          "text": "Blachy trapezowe - CENTROSTAL-WROCŁAW SA „CENTROSTAL-WROCŁAW” S.A. jest autoryzowanym dystrybutorem najlepszych krajowych i zagranicznych producentów blach trapezowych. Dzięki temu posiadamy w ofercie blachy trapezowe w absolutnie pełnym asortymencie począwszy od profili optycznych o przetłoczeniu (2mm) do profili konstrukcyjnych (200mm) oraz łukowych blach trapezowych. Jako wieloletni i doświadczony dystrybutor blach trapezowych jesteśmy w stanie zaproponować bardzo konkurencyjną ofertę. Dostarczamy blachy trapezowe do realizacji inwestycji wszelkiego typu: od niewielkich do dużych takich jak centra handlowe, czy zakłady produkcyjne. Współpracujemy z uznanymi firmami budowlanymi, realizującymi zlecenia wykonawcze na terenie Polski, Unii Europejskiej i krajów Europy Wschodniej. Blachy trapezowe znajdują wszechstronne zastosowanie w pokryciu ścian i dachów w realizacji wszelkiego typu...",
+          "token_count": 638
+        },
+        {
+          "id": "glyph100-v2-8e5d9bf58a28f418cb749be4",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2182341",
+          "title": "",
+          "text": "Piosenki Ruch Chorzów - PrawicowyInternet.pl Home Muzyka Stadionów Piosenki Ruch Chorzów Ruch-Chorzów-Logo Piosenki Ruchu Chorzów. Ruch Chorzów – polski klub sportowy założony 20 kwietnia 1920 w Bismarkhucie (niem. Bismarckhütte, od 1 stycznia 1923 Hajduki Wielkie; dziś Chorzów Batory, dzielnica Chorzowa) jako jednosekcyjny klub piłkarski. Jeden z najbardziej utytułowanych klubów piłkarskich w Polsce. 14-krotny mistrz Polski, 3-krotny zdobywca Pucharu Polski oraz jeden z dwóch polskich ćwierćfinalistów Pucharu UEFA w historii (edycja 1973/74). Zajmuje pierwsze miejsce w klasyfikacji medalowej Mistrzostw Polski w piłce nożnej. Obecnie gra w ekstraklasie (70 sezon w historii). W tabeli wszech czasów tych rozgrywek prowadził do połowy lat 90., aktualnie plasuje się na 3 miejscu. Do sezonu 1986/87 był jedynym klubem, jaki uczestniczył we wszystkich sezonach polskiej ekstraklasy. Zapraszam...",
+          "token_count": 433
+        },
+        {
+          "id": "glyph100-v2-5029838d94204dcc70290335",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1588547",
+          "title": "",
+          "text": "Msza ważniejsza niż koronawirus. Episkopat apeluje o ich zwiększenie Dlaczego Kościół katolicki w Polsce chce wykończyć swoich wiernych? Niezrozumiałe działania Episkopatu Polski Gorące tematy Społeczeństwo dołącz do dyskusji (2370) 11.03.2020 Msza jest ważniejsza niż koronawirus. Taki wniosek można wysnuć z wypowiedzi Przewodniczącego Konferencji Episkopatu Polski arcybiskupa Stanisława Gądeckiego, który apeluje o większą liczbę mszy. Stało się to co zakładano i trochę oczekiwano. Koronawirus przekroczył granice Polski. Liczba zarażonych rośnie z dnia na dzień. Zaraził się nawet generał Jarosław Mika, Dowódca Generalny Sił Zbrojnych. Cały kraj zastanawia się jak skutecznie ograniczyć potencjalne ryzyka nowych zarażeń. Na konferencji prasowej premier Mateusz Morawiecki poinformował, że odwołane zostaną imprezy masowe. Niektóre miasta zamykają szkoły. Uniwersytety odwołują zajęcia. Kur...",
+          "token_count": 1271
+        },
+        {
+          "id": "glyph100-v2-2282bb3aaad7f8dfab784b6a",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2129287",
+          "title": "",
+          "text": "Ślubna pamiątka - przegląd szablonów fotoobrazów Ślubna migawka - od portretu dziadków po fotoobrazy Wysłane przez Aśka w wt., 09/08/2015 - 14:46 Wielomiesięczne przygotowania, wybór idealnej kreacji, kwiatów, dodatków, zaproszeń, menu… Wszystko po to, by jak najlepiej wspominać jeden wyjątkowy dzień. Dzień twojego ślubu. Trudno wyobrazić sobie planowanie wesela bez wzięcia pod wagę współpracy z fotografem, a skoro fotograf to należy pomyśleć w jaki sposób wyeksponować najpiękniejsze zdjęcia. Od wyblakłych portretów dziadków po fotografię cyfrową Jeszcze kilkadziesiąt lat temu nie było mowy o profesjonalnym fotografie przemykającym z aparatem wśród gości. Po ślubną pamiątkę trzeba było zgłosić się do atelie w jednym z większych miast. Z pewnością choć raz widziałaś nieco zakurzone portrety ślubne dziadków wiszące u wezgłowia małżeńskiego łóżka. A może nawet natknęłaś się na tzw. monid...",
+          "token_count": 531
+        },
+        {
+          "id": "glyph100-v2-5dcfb379b6511a822471b6f3",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1928322",
+          "title": "",
+          "text": "Urządzanie pomieszczeń ciekawymi fototapetami | Typowe Projekty Urządzanie pomieszczeń ciekawymi fototapetami Fototapety są niezwykle ciekawym oraz często nowatorskim sposobem na wykonanie fachowej aranżacji wnętrza. Świetnym pomysłem dla pomieszczeń biurowych lub innych miejsc przeznaczenia publicznego są fototapety miasta. W takich bowiem miejscach jak biuro, możemy dzięki takiej fototapecie zagwarantować niezwykłe wrażenie. Wychodzi na jaw albowiem, iż pomieszczenia w biurowcach, szczególnie tych nowo zbudowanych, często są o wiele wyższe oraz jest to fantastyczny powód, dla jakiego przyklejenie niniejszej fototapety ma naprawdę głębszy sens. Wybierając fototapety miasta możemy spowodować, iż będąc w takim pomieszczeniu np. będziemy odnosić wrażenie spaceru po Nowym Jorku lub innym wielkim mieście. [fixar.pl/fototapety/miasta] W dużej skali efekt naklejenia fototapet ukazujących wi...",
+          "token_count": 496
+        },
+        {
+          "id": "glyph100-v2-2fc3f40a7609234b979c6763",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1809410",
+          "title": "",
+          "text": "Fines Operator Bankowy - Franchising.pl - franczyza, pomysł na własny biznes Fines jest obecnie największym w Polsce, niezależnym operatorem sieci agencji kredytowych. Działając na rynku od 2005 roku przyjęliśmy kierunek i styl działania opierający się na maksymalnie przejrzystych zasadach oraz partnerskich relacjach z Partnerami. Od chwili rozpoczęcia działalności rozwinęliśmy naszą sieć do ponad 3 tysiące aktywnych Agentów, którzy sprzedając kredyty wybrali nas jako najbardziej zaufanego i sprawdzonego partnera. W sieci agencji kredytowych współpracujących z Fines klienci mają dostęp do oferty wielu banków i firm pozabankowych. Różnorodność ofert wiodących banków oraz sprawdzonych i zaufanych firm pożyczkowych, umożliwia porównanie oraz wybranie najlepiej dopasowanej oferty kredytowej. A jest to możliwe już podczas jednego spotkania w biurze kredytowym, bez konieczności szukania ofe...",
+          "token_count": 524
+        },
+        {
+          "id": "glyph100-v2-7355b4a0a81a07aa15639a5f",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1824107",
+          "title": "",
+          "text": "Authentic Melbourne Tours (Australia) - opinie - TripAdvisor Atrakcje w pobliżu obiektu Authentic Melbourne Tours Authentic Melbourne Tours opinie Nr 255 wśród 472 Wycieczki w lokalizacji Melbourne Fantastyczne wprowadzenie na ulice Melbourne Nauczyłem się wielu historii i ogólnych informacji o wielu ścieżkach w Melbourne i naprawdę czerpałem przyjemność z odkrywania tego wyjątkowego kulturowego elementu miasta. Polecam Melbourne Laneways Tour każdemu, kto chce dowiedzieć się więcej o tej części miasta. Angażując kulturalnej wycieczki po Melbourne Poszedłem na \"kulturalnej stolicy Tour\". Przebyliśmy dobry wachlarz tematów i chodziliśmy po okolicy wielu Melbourne galerie, teatry i deptaków. Nasz przewodnik był bardzo kompetentny i bardzo wyraźnie pasją miasta. Jeśli w ogóle interesuje kulturalne historia z Melbourne, jest to świetna wycieczka. Bardzo przyjemna wycieczka po Melbourne -...",
+          "token_count": 435
+        },
+        {
+          "id": "glyph100-v2-0262097c89438dd9303a1afd",
+          "source": "wikipedia_pl",
+          "source_id": "564389",
+          "title": "Święty Izydor",
+          "text": "św. Izydor z Sewilli (ur. ok. 560, zm. 636) – biskup Sewilli, patron internetu, internautów, informatyków, programistów, wspomnienie 4 kwietnia św. Izydor Oracz (ur. ok. 1080, zm. ok. 1130) – pobożny mieszkaniec Madrytu, patron tego miasta oraz rolników, wspomnienie 15 maja św. Izydor z Chios (ur. III w, zm. 251) – święty i męczennik Kościoła katolickiego i Cerkwi prawosławnej, wspomnienie 15 maja",
+          "token_count": 129
+        },
+        {
+          "id": "glyph100-v2-73881e427523aa0dcaa0f751",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1626879",
+          "title": "",
+          "text": "Wymagane specjalizacje jako trener personalny - Pozytywny zawód Nie da się ukryć, że zdrowy styl życia wkroczył na dobre do codzienności Polaków. Aktywność fizyczna stała się przyjemnością, a nie przykrym obowiązkiem. Zdrowa, kolorowa i urozmaicona dieta przyciąga, a nie straszy. Specjaliści do spraw dietetyki i trenerzy personalni nie martwią się o klientów, ponieważ coraz więcej osób szuka profesjonalnej pomocy w walce o nowe, lepsze życie. Trener personalny to osoba, która tworzy programy treningowe, opracowuje diety i wdraża je w życie swoich klientów. Działania te mają na celu głównie osiągnięcie zdrowej, szczupłej sylwetki. Często jest to długi, kilkumiesięczny i wieloetapowy proces. Rozpoczyna się on od szczegółowego wywiadu z potencjalnym klientem. Pytania bywają bardzo osobiste. Dotyczą one zarówno zdrowia fizycznego, psychicznego, nawyków oraz przyzwyczajeń i upodobań. Ważny...",
+          "token_count": 552
+        },
+        {
+          "id": "glyph100-v2-71a8a522f4e0b8db4057956d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2210210",
+          "title": "",
+          "text": "Sukcesy malarzy z Trzcińska - Starostwo Powiatowe w Gryfinie Sukcesy malarzy z Trzcińska W piątek 8 lutego br. w galerii M odbył się doroczny „Przegląd Plastyki Myśliborskiej- Myślibórz 2013”. Wzięło w nim udział ponad 30 artystów malarzy z terenu powiatów myśliborskiego i gryfińskiego. Wśród zgromadzonych w muzeum prac przeważały obrazy tworzone farbami olejnymi, ale także zobaczyć można było ciekawe akwarele i pastele. Tematyka prac obejmowała bardzo duże spektrum – od przepięknych pejzaży przyrody, przez martwą naturę po zabytki architektury lokalnej. Tegoroczny poziom prac był wysoki, co sprawiło, że komisja oceniająca je miała dużą trudność w wyborze najlepszych. Jedną z trzech głównych prestiżowych nagród przeglądu – nagrodę Przewodniczącego Rady Miasta Myśliborza – otrzymał reprezentujący Trzcińsko-Zdrój Krzysztof Stanisławski. Kapituła przeglądu doceniła jego nienaganną techni...",
+          "token_count": 529
+        },
+        {
+          "id": "glyph100-v2-220bb5f5655c8fe4dbc8f1c3",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2200613",
+          "title": "",
+          "text": "Łazienka to pomieszczenie bardzo istotne w każdym domu. Z jednej strony przygotowujemy się w niej do wyjścia, robimy makijaż, czeszemy włosy, spełniamy wiadome potrzeby fizjologiczne, a z drugiej strony oddajemy się w niej błogiemu relaksowi. O ile na własną rękę projektowanie domu ma to do siebie, że możemy poddać się fantazji i zapewnić sobie łazienkę o sporej powierzchni, o tyle w blokach mieszkalnych, a także wielu domach, łazienki często mają małą powierzchnię. Mieszkania posiadające swój własny ogródek - czy jest to w ogóle prawdopodobne? Kupując mieszkanie niewiarygodnie wielu spośród nas wręcz marzy jednakże o czymś innym - o domku z kawałkiem ogródka, ze sporym naciskiem przede wszystkim na to drugie. Zakup mieszkania zwykle odbiera naszym osobom tę konkretną możliwość - chyba, iż swój \"ogródek\" wyprawimy na balkonie, o ile tak naprawdę go oczywiście mamy. Co można wymyślić,...",
+          "token_count": 270
+        },
+        {
+          "id": "glyph100-v2-d9bf8e1a95cbf3cc113347c6",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1728001",
+          "title": "",
+          "text": "Hotel Groman Sękocin Stary Al. Krakowska 76 uczę się z serwisem tel. (22) 720-25-55, (22) 797 43 00 tel. kom. 501-121-630 Hotel Groman na Facebooku Liczba odwiedzin od 01.01.2015: 12299 razy N = 52* 06` 37\" E = 20* 53` 16\" Hotel Groman Posiada pokoje 2, 3 i 4 osobowe oraz klimatyzowane apartamenty. możliwość skorzystania z hotelowej restauracji (śniadania nie są wliczone w cenę pokoju) komplet ręczników oraz płynów do kąpieli możliwość skorzystania z ogrodu przeznaczonego do dyspozycji gości, tarasów znajdujących się przy hotelu, a także patio na II piętrze grill za dodatkową opłatą kręgle, bilard, darty za dodatkową opłatą Restauracja hotelowa poleca dania kuchni polskiej, Cocktail bar oferuje wyszukane drinki. W okresie letnim zapraszamy na urządzone tarasy wokół budynku. Uprzejma i profesjonalna obsługa gwarantuje Państwu prawdziwą gościnność w naszej restauracji. Serdecznie zapras...",
+          "token_count": 722
+        },
+        {
+          "id": "glyph100-v2-6d1608ebdcfad159080d0f47",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1827988",
+          "title": "",
+          "text": "Plotki o gwiazdach | NetMama.pl Czy lubicie słuchać, oglądać i czytać o gwiazdach? Czy fascynuje Was ich życie, które się tak bardzo różni od naszego? Co sądzicie o serwisach i czasopismach plotkarskich? Ania 03.02.2009 03:19 mnie nie interesoje swiat gwiaz bo rozni sie od mojego i to bardzo! nie interesuję się plotkami o gwiazdach... Czasem się tego nie da uniknąć - chociażby w radio czy nawet owierając jaki kolwiek portal informacyjny typu onet czy interia mimochodem rzuca się nam w oczy nagłówek że Kasia Cichopek jest w ciąży... ale jednym okiem czy uchem wpada drugim wypada. Na pewno nie żyję tym na codzień. nie interesuje się tym co robią i z kim są znane gwiazdy chociaż aż huczy nie raz od plotek na temat ich na czymś ktoś musi zarabiać kasę a na plotka się naj lepiej zarabia Czasami czytam portal Pudelek, jak się chcę pośmiać, tam dopiero bzdury piszą!!! Czasem zerknę :) Wyznaj...",
+          "token_count": 696
+        },
+        {
+          "id": "glyph100-v2-7e76411c4328a130fa6385f4",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1713840",
+          "title": "",
+          "text": "Bynamite - Download Bynamite dla Firefox 1.02 Kontroluj Wielkiego Brata w Firefoksie Bynamite to dodatek do przeglądarek Firefox i Google Chrome pozwalający kontrolować dane na Twój temat zbierane podczas przeglądania Internetu. Bynamite nie blokuje reklam, zapewnia jedynie informację na temat wiedzy internetowych reklamodawców na Twój temat. Można wyłaczyć reklamy Viagry Wymaga rezygnacji z niektórych ustawień prywatności Program Bynamite jest równiez kompatybilny z: dla Firefox 1.02 Po instalacji Twoja przeglądarka wzbogaca się o ikonę Bynamite. Jeśli ją klikniesz, zobaczysz co Twoje zwyczaje internetowe mówią o Tobie reklamodawcom. Bynamite nie tylko zbiera dane na Twój temat, ale pozwala także na ich kontrolę. Możesz usunąć zainteresowania, na temat których nie chcesz otrzymywać reklam. Bynamite może Cię informować, kiedy na podstawie Twoich działań wykryje jakieś nowe zainteresow...",
+          "token_count": 347
+        },
+        {
+          "id": "glyph100-v2-95d296d4d8089ca3fb667a61",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2344873",
+          "title": "",
+          "text": "Monachium: szef chińskiej dyplomacji wyraził Watykanowi wdzięczność | Niedziela.pl Podziękowałem Stolicy Apostolskiej za solidarność w czasie, gdy cały naród walczy z epidemią koronawirusa – powiedział rządowej agencji Xinhua po wczorajszym spotkaniu z sekretarzem ds. stosunków z Państwami, abp. Paulem Richardem Gallagherem minister spraw zagranicznych ChRL Wang Yi. Było to pierwsze na tak wysokim szczeblu spotkanie przedstawicieli obydwu stron. Zdaniem szefa chińskiej dyplomacji Stolica Apostolska prawdopodobnie odegra konstruktywną rolę w tej nadzwyczajnej sytuacji, zachęcając wspólnotę międzynarodową do wspierania wysiłków Chin w walce z epidemią. Taka współpraca, jak zaznaczył, przyda się do zwalczania wirusa w obiektywny, racjonalny i naukowy sposób, w celu ochrony globalnego bezpieczeństwa zdrowotnego. Przypomniał, że Ojciec Święty wiele razy wyrażał swą miłość i solidarność z C...",
+          "token_count": 306
+        },
+        {
+          "id": "glyph100-v2-3d0c2b526e5a442d7087bd61",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2129729",
+          "title": "",
+          "text": "Conchita Wurst już tak nie wygląda! Zobaczcie jej nowe wydanie. Drag queen może Was zaskoczyć! Thomas Neuwirth zrobił prawdziwą karierę jako drag queen - Conchita Wurst. Jest on przede wszystkim piosenkarzem, który upodobał sobie jazz, pop i soul, ale to również społeczny działacz, który wspiera środowisko LGBT. Na co dzień mówi o sobie jak o mężczyźnie, natomiast gdy zamienia się Conchitę, staje się - jego zdaniem - kobietą. Conchita Wurst prawdziwe zasłynęła w momencie, gdy roku 2014 reprezentowała Austrię w konkursie Piosenki Eurowizji. Zdobyła wówczas 290 punktów i wygrała. Conchita od zawsze walczy o równe traktowanie Miała nadzieję, że jej zwycięstwo w konkursie będzie pierwszym krokiem do zażegnania dyskryminacji. Ona nie wstydzi się swojej inności i dzielnie wspiera środowisko LGBT, choć często spotyka się z falą hejtu. Conchita to artysta Jest wielu fanów jej muzyki, ale osta...",
+          "token_count": 449
+        },
+        {
+          "id": "glyph100-v2-3423abd1cf8f73753a02aaf0",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2280446",
+          "title": "",
+          "text": "Nowoczesne domy parterowe – tynki i posadzki Published on 15 kwietnia 2016 5 lipca 2019 by Viola Nowoczesne budownictwo charakteryzuje się wysokim poziomem innowacyjności oraz wykorzystania technologii. Cechą takich domów jest przede wszystkim ich indywidualny charakter oraz oryginalność, nawet wówczas kiedy dom jest budowany na podstawie gotowego projektu. W nowoczesnym budownictwie dużą popularnością cieszą się zwłaszcza domy parterowe. W odróżnieniu od budynków wielokondygnacyjnych są one mniej skomplikowane w budowie, stosunkowo tańsze i bardziej ekonomiczne. Domy parterowe lepiej nadają się też do stosowania nowoczesnych rozwiązań. Dużo domów parterowych, które powstały w obecnym czasie, jest już energooszczędna. Jest to możliwe m. in. dzięki specyfice takiego domu, w którym cała powierzchnia użytkowa jest rozmieszczona na jednym poziomie. Z uwagi na ten fakt bardzo łatwo mozna z...",
+          "token_count": 337
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-635755",
+          "source": "wikisource_pl",
+          "source_id": "635755",
+          "title": "Sonet III (Shakespeare)",
+          "text": "tekst oryginalny — Williama Shakespeare'a według krytycznej edycji z 1883 roku Williama Jamesa Rolfe'a tłumaczenie z 1913 roku — Marii Sułkowskiej (MUS) ze zbioru Sonety Shakespeare’a tłumaczenie z 1922 roku — Jana Kasprowicza ze zbioru Sonety tłumaczenie z 1948 roku — Władysława Tarnawskiego z rękopisu więziennego Sonety Szekspira",
+          "token_count": 98
+        },
+        {
+          "id": "glyph100-v2-7a7f3cf343e00d20e0a61eb1",
+          "source": "wikipedia_pl",
+          "source_id": "572656",
+          "title": "(1540) Kevola",
+          "text": "(1540) Kevola – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 4 lat i 298 dni w średniej odległości 2,85 au. Została odkryta 16 listopada 1938 roku w Obserwatorium Iso-Heikkilä w Turku przez Liisi Otermę. Nazwa planetoidy pochodzi od miejscowości Kevola, gdzie znajduje się Obserwatorium Kevola. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (1540) 1938 WK.",
+          "token_count": 104
+        },
+        {
+          "id": "glyph100-v2-4518ad9a7ac61f750d2befa1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1909656",
+          "title": "",
+          "text": "Z wiceliderem. 20.05.2017 (sobota), 0-1 Krystian Bator 22 - gol samobójczy 0-2 Jakub Sarad 57 0-3 Marcin Darwacz 76 0-4 Sławomir Stec 80 0-5 Jakub Sarad 81 Żółta kartka: K. Żuchowicz Wisła: 1-Szczepan Kołton - 18-Marek Trójniak, 94-Dawid Dynak, 13-Krystian Bator, 91-Adam Gmyr - 22-Przemysław Krupa (65 14-Maksymilian Żuchowicz), 11-Tomasz Zieliński, 8-Sebastian Bednarz, 17-Tomasz Mątwicki (58 10-Mateusz Łabuz), 7-Jakub Młodziński - 9-Kamil Żuchowicz. Tuchovia: 89-Łukasz Chwistek - 6-Kordian Damian, 17-Mateusz Niewola, 3-Krzysztfo Różycki, 2-Piotr Bobak - 18-Szczepan Baran, 14-Marcin Darwacz, 8-Krystian Baran, 7-Damian Świątek - 9-Karol Dziża (71 15-Sławomir Stec), 10-Filip Płachno (50 16-Jakub Sarad). Trener: Bronisław Bartkowski. Wicelider rozgrywek przyjechał do Szczucina i pewnie zgarnął trzy punkty. Wiślacy byli tylko tłem dla rywala, ale trudno się gra w eksperymentalnym składzie,...",
+          "token_count": 867
+        },
+        {
+          "id": "glyph100-v2-fdc4b259f9049f7a8e4b81c7",
+          "source": "wikipedia_pl",
+          "source_id": "572725",
+          "title": "(1567) Alikoski",
+          "text": "(1567) Alikoski – planetoida należąca do zewnętrznej części pasa głównego asteroid okrążająca Słońce w ciągu 5 lat i 276 dni w średniej odległości 3,21 au. Została odkryta 22 kwietnia 1941 roku w Obserwatorium Iso-Heikkilä przez Yrjö Väisälä. Nazwa planetoidy pochodzi od Heikki Alikoskiego, fińskiego astronoma. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (1567) 1941 HN.",
+          "token_count": 108
+        },
+        {
+          "id": "glyph100-v2-1d3a4b30695b8b9d3e0d36c3",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2331409",
+          "title": "",
+          "text": "black1 | Vers-24 Warsaw Restaurant Week(end) „Wyjątkowe miasto- Najlepsze restauracje – Najciekawsze smaki” Tekst: Moni­ka Koryś Zdję­cia: mate­ria­ly pra­so­we, Vers-24 “Tygo­dnie Restau­ra­cji” cie­szą się ogrom­nym powo­dze­niem w naj­więk­szych i naj­bar­dziej dyna­micz­nych metro­po­liach całe­go świa­ta. Naj­waż­niej­sze to New York… Suche, zniszczone, wyczerpane? Twoje włosy wołają o pomoc? Spe­cjal­nie dla naszych czy­tel­ni­czek wraz z Eki­pą “U Fry­zje­rów” przy­go­to­wa­li­śmy dla was porad­nik jak zadbać o wło­sy po lecie! To nie wszyst­ko! Spe­cja­li­ści salo­nu “u Fry­zje­rów” nauczą was jak szyb­ko i spraw­nie przy­go­to­wać zawsze mod­ne fry­zu­ry na jesień! Pomysł na świąteczne pisanki od Vers-24 Wiel­ka­noc zbli­ża się wiel­ki­mi kro­ka­mi. W naszym codzien­nym zabie­ga­niu war­to zna­leźć chwi­lę, by w gro­nie rodzi­ny i przy­ja­ciół przy­go­to­wać wła­sno­ręcz­nie...",
+          "token_count": 438
+        },
+        {
+          "id": "glyph100-v2-5ddcf722c48b715d50d0f3cd",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2342821",
+          "title": "",
+          "text": "Agnieszka Radwańska w 1/8 finału French Open. Teraz Kuzniecowa Sport Sport.pl 30.05.2009 14:24 Relacja Z czuba: Jest kolejne przełamanie Polki, ale tym razem...» Agnieszka Radwańska nie dała szans Katerinie Bondarenko w trzeciej rundzie turnieju na kortach Rolanda Garrosa. Mecz rozpoczął się bardzo nerwowo. Bondarenko w pierwszym gemie popełniała błąd za błędem. W kolejnym to Radwańska zaczęła się mylić. Zagrała zbyt krótko wolejem przy siatce i później zdekoncentrowała się kompletnie. Dopiero w trzecim gemie zawodniczki zaczęły grać spokojniej. Wtedy jednak inicjatywę przejęła Polka, która przestała się mylić. Dało to efekt - Radwńska w ekspresowym tempie skończyła partię (6:2). W drugim secie Bondanerko zaczęła grać agresywniej i podjęła ryzyko. Na nic się to jednak zdało, ponieważ Radwańska była bardzo spokojna i kontrolowała sytuację na korcie. Polka mogła wygrać szybciej, ale wyk...",
+          "token_count": 392
+        },
+        {
+          "id": "glyph100-v2-24d114f9898cf9c40ccb26fa",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2336318",
+          "title": "",
+          "text": "Prowadząca: Grzegorz Adaszewski Koło szachów japońskich \"King\" Podczas zajęć koła uczestnicy poznawać będą rozwijać swoje wiedzę i umiejętności w zakresie Shogi- czyli japońskich szachów. Dyscyplina ta choć młoda w Polsce na całym świecie zyskuje na coraz większej popularności. Shogi różni się od tradycyjnych szachów wielkością szachownicy, ilością i różnorodnością dostępnych figur, a przede wszystkim możliwością przywrócenia w trakcie gry zbitych figur przeciwnika jako własnych. Zasada ta wprowadza większą liczbę możliwych kombinacji. Dzięki temu uczestnik zajęć rozwija umiejętność planowania, przewidywania konsekwencji swoich działań, a także usprawnia swoje funkcje poznawcze. Należy również zaznaczyć, że nauka Shogi to przede wszystkim dobra zabawa i poznawanie kultury innego kraju. Szachy japońskie to nie tylko sport Japończyków. Udowodniła to chociażby Karolina Styczyńska, która...",
+          "token_count": 251
+        },
+        {
+          "id": "glyph100-v2-bdf88599c4250dbfcd4782d2",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1613050",
+          "title": "",
+          "text": "Trudne powroty …. – My life My way Kochani moi, wróciliśmy. Mam wrażenie, że już dawno temu. Jak nam szybko te dwa tygodnie minęły, to chyba nawet nie muszę pisać. Każdy wie, jak czas leci na urlopie. Nieubłaganie. Spędziliśmy dwa cudowne i słoneczne tygodnie na Santorini. Wyspa ta całkowicie skradła moje serce i mimo tego, że byliśmy tam rok temu, okazuje się, że wiele jeszcze zostało do odkrycia. Kto regularnie czyta mojego bloga, zauważył pewnie, że wspominałam o tym, że wybieramy się raz jeszcze na Santorini. Teraz już wszystkim mogę zdradzić, że głównym celem naszej podróży był nasz ślub. Podobnie jak, w roku ubiegłym, lecieliśmy z Warszawy, tyle, że tym razem nie sami, a w 14 osób. Od początku było wesoło. Plan był, taki, żeby każdy z nas maksymalnie sobie wypoczął, spędził czas według własnego uznania, bo przed nami rysowała się wizja, pełnej wrażeń, soboty. Pytaniem, które naj...",
+          "token_count": 973
+        },
+        {
+          "id": "glyph100-v2-683a84e8069dabf629a559c7",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1934792",
+          "title": "",
+          "text": "Kompleksowa obsługa księgowo-podatkowo-prawna dla firm z całego kraju to podstawa naszej działalności. W kancelarii Proffesional oferuje indywidualne podejście do każdego zlecenia, dotrzymywanie terminów i konkurencyjne ceny. Nasza siedziba znajduje się w Katowicach, a początku działalności sięgają 2010 roku. Jesteśmy biurem rachunkowym, które świadczy kompleksową obsługę księgowo-podatkową w zakresie rachunkowości pełnej oraz uproszczonej – a także obsługę kadrowo - płacową i doradztwo prawno - podatkowe dla firm o różnej formie prawnej. W kancelarii Professional obsługujemy zarówno jednoosobowe firmy (MŚP), jak też średnie i duże spółki, oraz stowarzyszenia i organizacje pozarządowe. Służymy też usługami kadrowo płacowymi, w tym sporządzaniem list płac i kartotek wynagrodzenia pracowniczego. Nasi klienci mogą również zlecić rozliczanie podatku dochodowego od pracowników i Doradztwo...",
+          "token_count": 414
+        },
+        {
+          "id": "glyph100-v2-54639e73426ba018f62d628f",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2200615",
+          "title": "",
+          "text": "2.1. Nieodpłatne świadczenia pracownicze w TK 2013-10-22 W dniu 21 października Naczelny Sąd Administracyjny skierował pytanie do Trybunału Konstytucyjnego o zgodność z konstytucją przepisów dot. opodatkowania tzw. nieodpłatnych świadczeń. Właśnie dlatego NSA nie wydał jeszcze uchwały ws. imprez integracyjnych pracowników. Sędzia Grzegorz Krzymień wyjaśnił, że NSA zawiesił wydanie uchwały ws. imprez integracyjnych do czasu rozpatrzenia sprawy przez Trybunał, ponieważ \"TK prezentuje nowe spojrzenie na prawo podatkowe\". Mimo tego, że sprawa, która stała się przyczyną skierowania wniosku do Trybunału dotyczyła tylko finansowania dojazdów pracowniczych, jego zdaniem TK powinien w ogóle odnieść się do pojęcia nieodpłatnych świadczeń. Opodatkowanie tzw. nieodpłatnych świadczeń (bezpłatny transport z pracy i do pracy, koszty zakwaterowania, wyżywienia i dojazdu na firmowe imprezy integracyjn...",
+          "token_count": 783
+        },
+        {
+          "id": "glyph100-v2-688a67c08707be2c3a1958be",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2352250",
+          "title": "",
+          "text": "Niebezpieczne rośliny – Ekoupominki Grudzień 3, 2018 Luty 24, 2019 przez admin Niektóre, bardzo popularne gatunki roślin, mogą okazać się szkodliwe dla dzieci, które z natury są bardzo ciekawe otaczającego świata. Warto wiedzieć na co zrwócić szczególną uwagę, aby Twój maluch był naprawdę bezpieczny w domu. Część roślin doniczkowych zawiera toksyczne substancje, które mogą spowodować podrażnienia skóry albo zatrucie pokarmowe, zaburzenia oddychania lub problemy z pracą serca, jeśli dziecko zje fragment rośliny. Do najbardziej popularnych, ale niebezpiecznych roślin doniczkowych zalicza się m.in. • Diffenbachia – egzotyczna i przepiękna, ale niebezpieczna roślina. Jej sok podrażnia skórę, a spożyta może spowodować problemy z oddychaniem. • Gwiazda betlejemska tak chętnie kupowana w okresie bożonarodzeniowym, ma trujący, biały sok, który wywołuje podrażnienia w kontakcie ze skórą i ocza...",
+          "token_count": 543
+        },
+        {
+          "id": "glyph100-v2-f06a669dc46fa9c21df1c869",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2306922",
+          "title": "",
+          "text": "Fryzura idealna - Ślubny poradnik Czy w ogóle jesteśmy sobie w stanie wyobrazić przyjęcie weselne bez odpowiednich przygotowań, do których zalicza się między innymi misternie układana fryzura? Wiele osób nadal nie jest w stanie sobie tego wyobrazić. Co prawda, zauważalny jest od paru lat trend, który zakłada, że przygotowania do wesela nie są aż tak ważne i kładzie nacisk na minimalizm, także w zakresie układania fryzury. Jednakże nadal wyraźnie zauważalna jest tendencja do bardziej tradycyjnego podejścia do tematu i przykładania do takich przygotowań bardzo dużo czasu i uwagi. Oba podejścia mogą być dobre, w zależności od tego, jakiego typu wesele chcemy urządzić. Jeśli ma odbyć się ono w bardziej kameralnej atmosferze, bez dużej liczby gości, a raczej tylko w gronie najbliższej rodziny i przyjaciół, ewentualne niedociągnięcia, także te w wyglądzie, mogą zejść na boczny plan. Natomia...",
+          "token_count": 711
+        },
+        {
+          "id": "glyph100-v2-cd2843c073a3544ac1b3266c",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1604133",
+          "title": "",
+          "text": "Historia pustki \"Historia znikania\" - reż. Krzysztof Popiołek - Teatr Lalki i Aktora Kubuś w Kielcach Teatr dla dzieci nie może być wyłącznie teatrem zabawy, rozrywki, mówił przed premierą \"Historii znikania\" w Teatrze Lalki i Aktora \"Kubuś\" w Kielcach autor i reżyser sztuki Krzysztof Popiołek i rzeczywiście przedstawiony w sobotę prapremierowy spektakl od początku do niemal końca niósł w sobie niepokój, smutne niedopowiedzenie, jakiś ciężar widoczny dosłownie w interludiach z trzema szarymi postaciami i niedosłownie obecny w monologach i dialogach dwojga głównych bohaterów. \"Historia znikania\" jest próbą teatralnego przedstawienia traumatycznej pustki, która pojawia się w życiu dziecka ale też życiu rodzica, gdy nagle zabraknie najbliższej im osoby. Paradoksalnie w naszej codzienności bywa tak, że niejako łatwiej pogodzić się z ową pustką, gdy najbliższa osoba umiera - ktoś był i wie...",
+          "token_count": 963
+        },
+        {
+          "id": "glyph100-v2-60f67d30b7779afd5bccd443",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2044581",
+          "title": "",
+          "text": "dodane 08.08.2019 09:25 Radio eM Andrzej Sznajder: to, że Górny Śląsk będzie polski, nie było oczywiste 16 sierpnia świętujemy 100. rocznicę wybuchu I powstania śląskiego. Wiedza na temat walk toczonych na Górnym Śląsku w latach 1919-1922 jest minimalna zarówno w naszym regionie, jak i w Polsce - zauważa Andrzej Sznajder. W Rozmowie Poranka mówił o tym, jak IPN próbuje dotrzeć z wiedzą historyczną do szerokiego kręgu odbiorców. Dyrektor Oddziału IPN w Katowicach przywołał też apel prezesa IPN dr. Jarosława Szarka do samorządowców, w którym zachęca do tego, by wywiesić biało-czerwone flagi na powstańczych ulicach: \"Z naszej strony chcielibyśmy zaproponować i zachęcić do realizacji przedsięwzięcia polegającego na wywieszeniu biało-czerwonych flag na ulicach, których nazwy związane są z wydarzeniami pierwszego powstania śląskiego (na przykład: Powstańców Śląskich, Alfonsa Zgrzebnioka, Jó...",
+          "token_count": 402
+        },
+        {
+          "id": "glyph100-v2-9f2e22a43bf9b458a6ad0f83",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1987450",
+          "title": "",
+          "text": "12. II Liga Polska to oddzielne rozgrywki specjalnie przygotowane, aby drużyny o statusie Non-League mogły grać w lidze i pucharze. Na tym poziomie ligowym udział bierze 9 zespołów Non-League oraz 1 klub vacat dla uzyskania wymaganej parzystej liczby drużyn w lidze. Na każdy sezon wybiera się jedną z metod na rozstrzyganie meczów z klubem vacat. Metoda I zakłada, że klub vacat każdy mecz przegra walkowerem 0-5. Teoretycznych strzelców pięciu bramek jak zwykle w takim przypadku ustala system. Rozpoznanie strzelców jest możliwe po meczu, z porównania przyrostu goli dla poszczególnych zawodników w planszy składu, dlatego przydaje się też wcześniejszy stan goli. Aby walkower był możliwy w spotkaniu Coach-Coach, to taki mecz poprzedza tymczasowa zmiana w hex edytorze statusu z Coach na Computer w pliku *.sea dla drużyny, która pauzuje (wygrywa). Metoda II zakłada, że klub vacat każdy mecz...",
+          "token_count": 400
+        },
+        {
+          "id": "glyph100-v2-42f23c394d96ec8b2e75977f",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2209292",
+          "title": "",
+          "text": "Rycyk (szlamnik rycyk) - Limosa limosa Długonogi ptak o długości ok. 40 cm. Stroi przed lęgami swą szyję i pierś na kolor rdzawoczerwony, a spód ciała w ciemne pręgi. Pilnując lęgów często siada w wysokim miejscu - na ogrodzeniu, kamieniu (jak na jednym z moich zdjęć). Ma prosty dziób, biały pas na skrzydłach - bardzo dobrze widoczny w czasie lotu. Jest łatwy do rozpoznania w czasie lotu właśnie poprzez ten pas, oraz długie wystające poza ciało nogi. Odżywia się owadami, larwami a nawet dżdżownicami wyskubując je z miękkiej ziemi i mułu. Lęgi ma na przełomie kwietnia i maja, jego gniazdo to wyłożony suchymi liśćmi i patykami dołek, wśród traw, często na kępie wystającej z wody. Rycyki potrzebują rozległych łąk, zalewanych przez wiosenne roztopy, lub przestrzeni z wodami gdzie nie brak mulistych, piaszczystych płycizn. Są miejsca w Polsce gdzie zniknął zupełnie, ale są i takie gdzie li...",
+          "token_count": 443
+        },
+        {
+          "id": "glyph100-v2-b919963001e6b951aeac0054",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2333026",
+          "title": "",
+          "text": "Jak dobrze wyglądać w sukience koronkowej? – Szepto – najciekawsze informacje Koronkowe sukienki wyglądają elegancko, dodają lekkości, lecz jednocześnie mogą prezentować się też bardzo zadziornie. Koronkowe wstawki sprawiają, że nawet najzwyklejsza sukienka nabiera niebanalnego charakteru, dzięki czemu nie będą Ci już potrzebne żadne dodatki, i biżuteria. Koronka kojarzy się z romantyczną, zwiewną stylizacją, dodaje klasy i elegancji, dlatego też nigdy nie wychodzi z mody. Warto jednak wiedzieć, jakiego rodzaju koronkowe sukienki są najlepsze, a także na co zwracać uwagę, kupując koronkową sukienkę, by nie narazić się na modową wpadkę. Do kogo pasują koronkowe sukienki? Koronkowe sukienki lub sukienki z koronkowymi wstawkami zazwyczaj same w sobie są bardzo wyrazistym elementem stylizacji, dlatego też jeśli zdecydujesz się na taki strój, uważaj na to, by nie przesadzić z krzykliwymi d...",
+          "token_count": 1234
+        },
+        {
+          "id": "glyph100-v2-180bc2aed71845b25ead125e",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2075284",
+          "title": "",
+          "text": "Mondo Hotel Glasgow jest 3-gwiazdkowym designerskim hotelem zapewniającym luksusowe pokoje w kilku minutach od M & D's Scotland Theme Park, Glasgow Museums Resource Centre i Clapper Bridge. Obiekt zapewnia 44 pokoi wyposażonych w zestaw do prasowania, darmowe wi-fi, urządzenia do parzenia kawy/herbaty, fotele i telewizję z kanałami satelitarnymi. Jest tam także prywatna łazienka z szlafrokami, prysznicem i suszarką do włosów. Dojazd na lotnisko Glasgow z Mondo Hotel Glasgow zajmie jedynie 30 minut. Hotel oferuje usługę prasowania, całodobową recepcję i czyszczenie chemiczne oraz parking, windę i skrytkę depozytową dla komfortu gości. Mondo Hotel Glasgow, Wielka Brytania Sherbrooke Castle Hotel Euro Hostel Glasgow Westerwood Alba Hostel Glasgow George Square Glasgow Premier Inn Glasgow Pacific Quay Crowwood Hotel Glasgow Abode Glasgow Hotel Radstone Hotel Glasgow Clifton Hotel Glasgow...",
+          "token_count": 706
+        },
+        {
+          "id": "glyph100-v2-ad46427351b1a8e32ea6578d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2267806",
+          "title": "",
+          "text": "garaże projekty Na lata naj, naj... - projekty domów PRO-ARTE.pl Najtrwalsza i najbardziej praktyczna. Ma ładnie wyglądać i nie sprawiać problemów w konserwacji. Podłogi zmieniamy niezwykle rzadko, dlatego warto wybrać taką, która posłuży przez lata. Posadzka z płytek ceramicznych - czy na pewno jest taka „naj”? Choć dobre płytki posadzkowe przy zakupie są nieco droższe niż panele czy wykładzina PCV, to - jak wynika z przeprowadzonych testów - posadzka ceramiczna wypada najkorzystniej jeśli chodzi o koszty utrzymania i eksploatacji. - W ciągu przyjętego, co najmniej 40 letniego okresu trwałości, nie trzeba przeprowadzać żadnych prac konserwacyjnych i renowacyjnych. Takiej gwarancji nie daje żaden inny materiał na podłogę – podkreśla Krzysztof Omilian, inżynier w zakładach Röben. A wszystko dzięki specjalnemu procesowi produkcji. - Podstawowym surowcem jest naturalna glina. Każdą płytk...",
+          "token_count": 528
+        },
+        {
+          "id": "glyph100-v2-233db08828ae85a7ec0df03c",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2386008",
+          "title": "",
+          "text": "Grunt to dobre przygotowanie | Z Życia RedNacza Przyszedł czas na kolejny błąd popełniany przez początkujących autorów. Zawiera się on w mojej zasadzie trzech „R”, mowa o researchu czyli odpowiednim przygotowaniu do pisania. Bardzo często zdarza mi się czytać teksty mocno osadzone w pewnej epoce, w których pojawiają się przedmioty czy instytucje jeszcze wtedy nie istniejące. W przypadku niektórych gautunków jest to dopuszczalne, ale tak naprawdę niewielu. Kilka lat temu pisałem tekst o II wojnie światowej, którego akcja się działa w miasteczku Calais. W tym czasie znajdowały się tam główne umocnienia Wału Atlantyckiego i chciałem wykorzystać ten motyw. Zanim jednak zabrałem się za pisanie poświęciłem trochę czasu na poszukiwania dokładniejszych danych pomocnych do opisania miasta, jego okolic oraz tego co mogli napotkać na swej drodze żołnierze wysłani tam przeze mnie. Gdzieś można zn...",
+          "token_count": 849
+        },
+        {
+          "id": "glyph100-v2-44b26cdeb5c9ad980aca69ef",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2151421",
+          "title": "",
+          "text": "UniCredit wybiera Szczecin | Oficjalny Portal Miasta Szczecin czwartek, 08/01/2009 Szczecin centrum usług Miasto Szczecin przyjęło w 2006 roku strategię pozyskiwania inwestorów tak, aby w perspektywie kilku lat stać się centrum usługowym dla krajów Europy Zachodniej. Główne działania w tej sferze skupiają się na lokowaniu w Szczecinie firm typu business proces outsourcing oraz shared services center. Szczecin dąży do rozwoju przedsiębiorczości, głównie tej z branży IT i ICT. Realizacji tego celu służy m.in. Szczeciński Park Naukowo – Technologiczny, który jest miejscem inkubacji wszelkiego rodzaju firm stworzonych przez dobrze wykształconych absolwentów studiów wyższych. Międzynarodowy bank europejski z siedzibą w Mediolanie obsługujący ponad 40 mln klientów w 22 krajach Europy. Spółka akcyjna notowana na giełdach w Mediolanie i we Frankfurcie w tym na platformie XETRA, a od 2007 roku...",
+          "token_count": 541
+        }
+      ],
+      "risk": "best quality compromise; legacy capped near 10%"
+    },
+    "B": {
+      "variant": "B",
+      "docs": 278210,
+      "train_docs": 276755,
+      "val_docs": 1455,
+      "train_tokens": 166781769,
+      "val_tokens": 954393,
+      "total_tokens": 167736162,
+      "tokens_per_source": {
+        "wolne_lektury": {
+          "docs": 1525,
+          "tokens": 3143341,
+          "train_tokens": 3128722,
+          "val_tokens": 14619
+        },
+        "wikipedia_pl": {
+          "docs": 184466,
+          "tokens": 127929637,
+          "train_tokens": 127169999,
+          "val_tokens": 759638
+        },
+        "wikisource_pl": {
+          "docs": 2430,
+          "tokens": 3115955,
+          "train_tokens": 3103048,
+          "val_tokens": 12907
+        },
+        "legacy_mixed_corpus": {
+          "docs": 89789,
+          "tokens": 33547229,
+          "train_tokens": 33380000,
+          "val_tokens": 167229
+        }
+      },
+      "stage3_50k_epochs": 4.883860404532208,
+      "stage4_100k_epochs": 9.767720809064416,
+      "stage5_200k_epochs": 19.535441618128832,
+      "doc_token_percentiles": {
+        "p50": 298.0,
+        "p75": 611.0,
+        "p90": 1271.0,
+        "p95": 2122.0,
+        "p99": 5398.0
+      },
+      "samples": [
+        {
+          "id": "glyph100-v2-c333ed159fff00339e9b2336",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1797920",
+          "title": "",
+          "text": "Deluxe Guitar Play-Along Volume 6: Red Hot Chili Peppers (+ audio online) - nuty i tabulatura na gitarę elektryczną Nuty na gitarę elektryczną, dla średnio-zaawansowanych, 15 utworów zespołu Red Hot Chili Peppers. Disney Songs - Jazz Guitar Chord Melody Solos - nuty na gitarę z tabulaturą Najpopularniejsze piosenki z disneyowskich produkcji w opracowaniu na gitarę - akordy, nuty i tabulatura, dla średnio-zaawansowanych",
+          "token_count": 135
+        },
+        {
+          "id": "glyph100-v2-877837a4c8f6e43b7dc17a4b",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2386377",
+          "title": "",
+          "text": "gromko - definicja, synonimy, przykłady użycia gromki «donośny lub hałaśliwy» • gromko ... dodał mu animuszu. Forsując drugi parkan miał wielką ochotę zaśpiewać gromko, a zarazem rzewnie i już nawet otworzył usta, zamierzając wydać... ... A można wiedzieć, kto mówi? - Co, nie poznajesz? - ryczało nadal gromko. - Tak od razu zważniałeś czy co? Wywiadów już udzielasz? Autografy... ... shirtach reklamujących filmowe przeboje minionych sezonów obracali głowy za ryczącą gromko maszyną, bydło nawet się nie przestraszyło. Kilku miało karabiny, ale...",
+          "token_count": 164
+        },
+        {
+          "id": "glyph100-v2-166c73f4b5cd95131ca269b1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2203715",
+          "title": "",
+          "text": "Indeks: WFBIKE1 ean-13: 853988006379 KICKR BIKE to nie tylko inteligentny rower - to maszyna treningowa, która zaciera granicę między wirtualnością a rzeczywistością. Moc maksymalna: 2200 Wat Zasilanie: 100-240V, 50/60 Hz, 2.5A Wahoo trenażer KICKR Snap Bike Trainer + GRATIS opona Vittoria Wahoo mata pod trenażer KICKR Trainer FloorMat Wahoo biurko KICKR Desk",
+          "token_count": 130
+        },
+        {
+          "id": "glyph100-v2-9d30c6aa2b993d81599e5604",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2117078",
+          "title": "",
+          "text": "Kancelaria Radcy Prawnego Katarzyny Brodziak-Grzyb - Bezpłatne Ogłoszenia - Kredyty dla firm dodano: 2018.09.24 ważne do: 2046.02.08 wyświetleń: 236 Potrzebujesz pomocy w zakresie zapłaty odszkodowania i zadośćuczynienia? Kancelaria Radcy Prawnego Katarzyny Brodziak-Grzyb świadczy pomoc w zakresie prowadzenia spraw w postępowaniu egzekucyjnym. Reprezentujemy Klienta nie tylko w Sądzie, ale także w urzędach czy innych instytucjach. Nasz zespół radców prawnych wykonuje swoje zadania nie tylko w Częstochowie, ale także na terenie całego kraju. W naszej kancelarii uzyskasz pomoc także w zakresie prawa administracyjnego, rodzinnego czy cywilnego. Strona WWW:",
+          "token_count": 153
+        },
+        {
+          "id": "glyph100-v2-b881b8273577f4064eb10963",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2319799",
+          "title": "",
+          "text": "WPK » Nowy MAN u Zagozdy Nowy MAN u Zagozdy Tagi: tabor, Zagozda – Dodał: Piotr Wiśniewski Wysokopodłogowy MAN pochodzi najprawdopodobniej z niemieckiej Westfalii, o czym informuje napis umieszczony na pojeździe. Uwagę zwracają zaprogramowane wyświetlacze oraz numer taborowy 14, który tym razem nie został odziedziczony po poprzednim właścicielu.",
+          "token_count": 92
+        },
+        {
+          "id": "glyph100-v2-94aac4507dd9ddd9df922473",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2192657",
+          "title": "",
+          "text": "Pianino - spotkanie organizacyjne - MGOKiSMGOKiS Pianino – spotkanie organizacyjne Dnia 10.10.2019 r. (czwartek) o godz. 18.00 w MGOKiS w Stąporkowie odbędzie się spotkanie organizacyjne w sprawie tegorocznych lekcji gry na pianinie prowadzone przez instruktora Sebastiana Moczarskiego. Kółko Szachowe- zmiana terminu spotkań XIV Przegląd Rękodzieła Artystycznego i Ludowego MLF Stąporków",
+          "token_count": 107
+        },
+        {
+          "id": "glyph100-v2-b55da919d81f5d5335f21812",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2190523",
+          "title": "",
+          "text": "Tag: konsutant ślubny - Ślubny Impresariat konsutant ślubny 16 kwietnia 2012 19 września 2017 Ślubny Impressariat 0 Comments konsultanci ślubni Kraków, konsutant ślubny, Mowa weselna, organizacja ślubu kraków, organizacja wesela Kraków, przyjęcie weselne, ślubnej, Słodki upominek dla gości, wedding planner krakow, winietki Aby przyjęcie weselne miało niezapomniany, wyjątkowy charakter, warto pamiętać o kilku drobiazgach, które składają się na wspaniałą, uroczystą atmosferę tego",
+          "token_count": 123
+        },
+        {
+          "id": "glyph100-v2-1bd141bed2a65caec2681701",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2335817",
+          "title": "",
+          "text": "Archiwa: przepisy - Strona 36 z 44 - annatoannatamto.pl Posted 25 listopada 2015 by Ania Traczyk Posted 21 listopada 2015 by Ania Traczyk “Kołem się toczy”/ Przepis na gruzińskie roladki z bakłażana-Patridżiani Posted 14 listopada 2015 by Ania Traczyk „Książka Karola Wernera Kołem się toczy. Przez Kaukaz i Bliski Wschód to opowieść o ludziach zamieszkujących kraje być może geograficznie niezbyt dalekie, lecz odległe obyczajowo.” Ów kontrast i różnice kulturowe bardzo mocno widać ale absolutnie nie przeszkadza to w dogadywaniu się, wręcz przeciwnie Karol Werner otrzymuje wiele ciepłych słów podczas podróży i wiele ciepłych herbacianych… Read more » Posted 7 listopada 2015 by Ania Traczyk “Polska znana i mniej znana” W mojej kolekcji książek podróżniczych oraz przewodników, których mam dość sporo rzadko można spotkać książkę o Polsce. Nie ukrywam nasz kraj nie wydawał mi się tak atrakcy...",
+          "token_count": 376
+        },
+        {
+          "id": "glyph100-v2-2bd663faa53b978b1888396a",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1989462",
+          "title": "",
+          "text": "Skomentuj swoje uwagiA jeszcze co do typu obozuDodane przez Janusz Sikorski, w dniu - 26-04-2011 08:20 Kiedyś dawniej była taka kategoria w ZHP. Nazywało się to - Obóz wędrowny ze stałą bazą. Jakiś mózg obciął te kategorie do 2. Obóz stacjonarny i obóz wędrowny. To do której kategorii zaliczymy obóz wędrowny ze stałą bazą ? Do stacjonarnych czy do wędrownych skoro z samej nazwy jest obozem wędrownym ? Nie sądzę by samo miejsce spania czy przygotowania posiłków miało determinować jaki to rodzaj obozu. Raczej ilość i rodzaje aktywności powinny wskazywać co to jest.",
+          "token_count": 150
+        },
+        {
+          "id": "glyph100-v2-dd28d4c2e5b2466ed56cdde5",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2366374",
+          "title": "",
+          "text": "Zasada jedności i jednomyślności | wyszukiwarka | strona 12 | Notatek.pl Ważne! Ta strona wykorzystuje pliki cookie. Zasada jedności i jednomyślności - strona 12 elity przywódcze usiłowały wykorzystać dawne idee jedności świata arabskiego. Dlatego zaczęto odwoływać... Pobierz notatkę Zasada głosząca, że ważna jest wiedza o istotności... Pobierz notatkę Może odbywać się przy zastosowaniu zasady jednomyślności albo większości głosów. a) Jednomyślność Zaletą... Poprzednia 1 ...",
+          "token_count": 116
+        },
+        {
+          "id": "glyph100-v2-a0732fdfaba124a587a9182e",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1683889",
+          "title": "",
+          "text": "Inżynieria - Stargard Szczeciński - Oferty Pracy - 17 | Adzuna Inżynieria - Stargard Szczeciński - Oferty Pracy LEASINGTEAM GROUP - STARGARD LeasingTeam Professional wspiera polskie i globalne przedsiębiorstwa w pozyskiwaniu kluczowych pracowników i zarządzaniu zasobami ludzkimi. Agencja specjalizuje się w rekrutacjach stałych na stanowiska średniego i wyższego szczebla oraz outsourcingu white-... Opis stanowiska: Koordynacja procesu zawierania, zgłaszania do Zamawiającego oraz realizacji umów z Podwykonawcami, Usługodawcami, Dostawcami i ich dalszymi podwykonawcami. Opracowanie projektów umów, zleceń i zamówień. Ewidencjonowanie zawartych umów, zleceń ... Asystent/ka ds. planowania produkcji Dla firmy CARGOTEC, lidera w zakresie produkcji maszyn do przeładunku kontenerów, automatyki portowej i serwisu, poszukamy dynamicznych kandydatów o analitycznym sposobie myślenia na stanowisko a...",
+          "token_count": 533
+        },
+        {
+          "id": "glyph100-v2-ebb026e68e7c49ae2348474d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2012229",
+          "title": "",
+          "text": "SAP WPDC /ABAP wpdc /abap co to jest n Transakcja WPDC w SE38. Wywołanie WPDC \\o w SAPie. Znaczenie wpdc /abap definicja. Transakcja SAP WPDC Wywołanie transakcji, użycie: \\nWPDC po angielsku: SRS - PDC Processing po niemiecku: SRS - MDE-Verarbeitung po francusku: SRS - Traitement CMD po holendersku: SRS - HTI-verwerking Użycie WPDC w SAP Jak użyć transakcji WPDC? Zastosowanie w SE38 w SAPie. Wykorzystanie transakcji WPDC w SE38 - Szkolenie, tutorial. SAP Cdpw Definicja wpdc /abap co to znaczy.",
+          "token_count": 204
+        },
+        {
+          "id": "glyph100-v2-1e06cb3170dc73c853fb102c",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2151385",
+          "title": "",
+          "text": "Zasnęli na torach, maszynista towarowego był bez szans. Koszmar w... Zasnęli na torach, maszynista towarowego był bez szans. Koszmar w Aleksandrowie Kujawskim 17/10/2019 kk Dwóch mężczyzn w wieku 25 i 30 lat zginęło na torach w Aleksandrowie Kujawskim w województwie kujawsko-pomorskim. Przejechał po nich pociąg towarowy. Wypadek miał miejsce w nocy z 12 na 13 października na torach nieopodal ulicy Wojska Polskiego. Kilka minut po północy maszynista pociągu towarowego zobaczył na torach dwóch mężczyzn. Awaryjne hamowanie nie pomogło i zostali oni potrąceni. Zginęli na miejscu. ZOBACZ TEŻ: 9-latka nigdy nie dotarła do szkoły. W opuszczonych garażach wydarzył się koszmar Sprawę bada policja i prokuratura. Służby bardzo oszczędnie dozują informacje o sprawie. Jak napisali dziennikarze portalu aleksandrowkujawski.naszemiasto.pl, nieoficjalnie mówi się, że mężczyźni mogli po prostu zasnąć n...",
+          "token_count": 287
+        },
+        {
+          "id": "glyph100-v2-1c1483538db717dd7bed60b0",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2153430",
+          "title": "",
+          "text": "Rookie Color Set - Rookie Color Set - Fineliner - Markery - molotow.com.pl Zestaw markerów typu \"Sketch'n'go\" w wersji kieszonkowej. Trzy markery z 9 kolorami w zestawie. Markery na bazie tuszu wodnego, intensywne kolory, transparentne, szybko schnące, bezzapachowe, bezpieczne dla dzieci (EN 71-3, ASTM D-4236), do użytku wewnętrznego. Filce o grubości 1-2mm, kompatybilne z Blender Pro, łączone.",
+          "token_count": 130
+        },
+        {
+          "id": "glyph100-v2-478749d91243a318f4a208b3",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2393347",
+          "title": "",
+          "text": "Bezpieczeństwo zewnętrzne i wewnętrzne | wyszukiwarka | strona 62 | Notatek.pl Ważne! Ta strona wykorzystuje pliki cookie. Bezpieczeństwo zewnętrzne i wewnętrzne - strona 62 Systemy „q” Dla klienta zewnętrznego zastosowanie dokumentu. Istnieją trzy podejścia do pisania księgi jakości: wewnętrzne, zewnętrzne oraz mieszane... Pobierz notatkę HSA stworzył Amerykański Departament Bezpieczeństwa Wewnętrznego i nowy gabinet szczebla stanowisko... Pobierz notatkę Zniesienie kontroli na granicach wewnętrznych oznacza, że na granicach pomiędzy... Pobierz notatkę albo terytorium. Ochrona ta dotyczy zarówno zagrożenia zewnętrznego, jak i wewnętrznego. Oprócz zapewnienia... Poprzednia 1 ...",
+          "token_count": 133
+        },
+        {
+          "id": "glyph100-v2-4aa1986dff728eb3c8fe1b28",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2073378",
+          "title": "",
+          "text": "Wszystko o środkach z Unii Europejskiej - Zabrze informacje dla przedsiębiorców Dodano: 2015-11-18 09:45 Informacji będą udzielać konsultanci z Punktu Informacyjnego Funduszy Europejskich w Katowicach, a mowa będzie o funduszach w ramach nowej perspektywie finansowej 2014-2020. Konsultacje odbędą się w siedzibie ZCRP przy ul. Powstańców Śląskich 3. NABUCCO - opera z udziałem włoskich solistów!dodano 20 godz. temu",
+          "token_count": 95
+        },
+        {
+          "id": "glyph100-v2-2d2d9968380684589ddb6922",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2385207",
+          "title": "",
+          "text": "KLUCZ KRZYŻAKOWY DO KÓŁ CR-V 17X19X21X22 YATO_ - metalowy24 YT-0800 YATO D Symbol YT0800 D Krzyżakowy klucz do kół samochodowych. Wykonany z wysokiej jakości stali chromo-wanadowej. Posiada 4 ramiona z nasadkami, dostosowanymi do wszystkich sześciokątnych, metrycznych rodzajów śrub i nakrętek stosowanych w samochodach osobowych i lekkich dostawczych. Krzyżak został wzmocniony dodatkowo podwójną, nitowaną blachą stalową. Podnosi bezpieczeństwo i komfort użytkowania. Klucz szczególnie polecany do serwisów opon oraz jako wyposażenie samochodów osobowych.",
+          "token_count": 146
+        },
+        {
+          "id": "glyph100-v2-1894b3153e7d2ad888429f4d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1960972",
+          "title": "",
+          "text": "Ślub na zimę - suknia ślubna, dekoracje i kwiaty - Blog ślubny. Inspiracje na śluby, wesela, zaręczyny. Organizacja ślubów i wesel. Tags: dekoracje na ślub zimą, kwiaty na ślub i wesele zimą, Organizacja ślubu i wesela zimą, Suknia Ślubna, Ślub i wesele zimą, Trendy Ślubne, Zimowy Ślub",
+          "token_count": 89
+        },
+        {
+          "id": "glyph100-v2-af9ecb6abbd899d3d5c6a576",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2291127",
+          "title": "",
+          "text": "Niskie ceny porzeczek - wiadomości sadownicze ze słowem kluczowym - Sady Ogrody NISKIE CENY PORZECZEK 11 lipca 2019 09:06 Szef PO na Podkarpaciu poseł Zdzisław Gawlik zapowiedział we wtorek, że zwróci się do ministra rolnictwa o interwencyjny skup owoców. Nie powinno dochodzić do takich sytuacji, że rolnikowi nie opłaca się zbierać owoców, które są już na krzakach - oświadczył. ŚR 15:03 Jabłka Idared spod Brodnicy wzbogacą ofertę Biedronki",
+          "token_count": 119
+        },
+        {
+          "id": "glyph100-v2-07a7e15be568d3a6b669ba34",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2040677",
+          "title": "",
+          "text": "Dlaczego warto wybrać „BEZPIECZEŃSTWO WEWNĘTRZNE” w WSPiA? / Aktualności :: Sanok w Sanok 24.pl » Aktualności / Dlaczego warto wybrać „BEZPIECZEŃSTWO WEWNĘTRZNE” w WSPiA? WSPiA przygotowała atrakcyjną i - co najważniejsze - dostosowaną do potrzeb rynku pracy ofertę dydaktyczną. Kandydaci na studia mogą wybrać jedną z 6 specjalności: służby ochrony bezpieczeństwa publicznego, przeciwdziałanie przestępczości zorganizowanej, zarządzanie kryzysowe, bezpieczeństwo narodowe oraz NOWOŚCI: kryminalistyka i kryminologia oraz cyberbezpieczeństwo. Studenci studiów II stopnia na kierunku „BEZPIECZEŃSTWO WEWNĘTRZNE” w WSPiA tajników zawodu uczyą się pod okiem najwyższej klasy fachowców głównie praktyków. Ćwiczenia i wykłady prowadza m.in.: gen. Józef Gdański - b. Podkarpacki i olsztyński komendant wojewódzki Policji; gen. Dominik Tracz - b. komendant główny Straży Granicznej; mgr Grzegorz Świszcz...",
+          "token_count": 439
+        },
+        {
+          "id": "glyph100-v2-cebe17ebcba1818af8e1db47",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2283964",
+          "title": "",
+          "text": "#trójkąt#siadanie na twarzy#masturbacja ręką#lesbijki #rozmawianie#podwójna penetracja#dymanie stopami#zero pieprzenia #ssanie jąder#lizanie#lesbijki#ohmibod #zabawa analna#obciąganie#dymanie tyłka#fisting #dymanie#masturbacja#mineta owłosionej cipki#stymulacja łechtaczki #pokaz przed kamerą#ssanie#sperma w cipce#kobieca dominacja #ssanie fiuta#lizanie#kokietowanie#Cam2Cam Prime #azjatycki masaż#zabawa dildo#siadanie na twarzy#rozbieranie #kochanie się#masturbacja#rozbieranie#ohmibod #wytrysk na twarz#dymanie stopami#całowanie#ohmibod #lodzik#pokaz przed kamerą#sperma w ustach#stymulacja łechtaczki #maszyny do dymania#rimming#rozbieranie#stymulacja łechtaczki #ssanie fiuta#maszyny do dymania#kobieca dominacja#dymanie cipki #trójkąt#tańczenie#marzenie#kobieca dominacja #sperma w ustach#podwójna penetracja#ssanie#lovense #obciąganie#podwójna penetracja#rozkoszowanie się#szarpanie #zabaw...",
+          "token_count": 789
+        },
+        {
+          "id": "glyph100-v2-c1c81d4a8311f9aee63f8139",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1805496",
+          "title": "",
+          "text": "Choroby autoimmunologiczne a chłoniaki - Chłoniak – przyczyny, objawy, rokowanie | parenting.pl 5. Choroby autoimmunologiczne a chłoniaki Dostrzeżono ponadto związek pomiędzy zachorowaniem na chłoniaki nieziarnicze a chorobami autoimmunologicznymi o przebiegu miejscowym lub układowym. Dotyczy to choćby choroby Hashimoto i zespołu Sjögrena. Czujność należy zachować również w przebiegu reumatoidalnego zapalenia stawów oraz SLE (toczeń rumieniowaty układowy). Rozwój chłoniaka żołądkowego w pewnym stopniu wiąże się z kolei z zakażeniem Helicobacter pylori. Justyna92 • ostatni post 14 minut temu",
+          "token_count": 160
+        },
+        {
+          "id": "glyph100-v2-19e24d2e5871e03946c9574e",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2016978",
+          "title": "",
+          "text": "Warner's Distillery (Harrington, Anglia) - opinie - TripAdvisor Restauracje w pobliżu lokalizacji: Warner's Distillery Atrakcje w pobliżu obiektu Warner's Distillery Kanał o podróżach: Harrington Warner's Distillery opinie, Harrington Uzyskaj szybką odpowiedź od pracowników i klientów obiektu Warner's Distillery.",
+          "token_count": 88
+        },
+        {
+          "id": "glyph100-v2-276b1920fd1a3c5ca00efaa1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1874631",
+          "title": "",
+          "text": "Podkategoria: Kursy,szkolenia,warsztaty - strona 1 - Londyn Katalog Stron | Polskie Firmy Londyn,Anglia Podkategoria: Kursy,szkolenia,warsztaty Nasza firma funkcjonuje na rynku w tej chwili od paru lat. Frapujemy się ogromnie zrozumianym szkoleniem z obrębu autoprezentacji. Na czym polegają nasze działania? Polskich klientów przygotowujemy do rozmów kwalifikacyjnych, narad, spotkań biznesowy ... Najnowsze tagi związane z podkategorią: Kursy,szkolenia,warsztaty Londyn (2), koparki (1), Birmingham (1) Kursy,szkolenia,warsztaty - nowa strona:",
+          "token_count": 141
+        },
+        {
+          "id": "glyph100-v2-c0d1e774fc5ddfb95f317026",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2165129",
+          "title": "",
+          "text": "Włodzimierz Marciniak - zobacz wszystko na temat Włodzimierz Marciniak | DlaPolski.pl Wszystko w temacie: Włodzimierz Marciniak 8 września 2014 | DlaPolski.PL | Polityka. Debata Wyszukaj: debata Michał Kuź Rosja Tomasz Herbich Witold Jurasz Włodzimierz Marciniak Putin, Rosja, KGB – analiza wybitnego politologa 29 marca 2012 | DlaPolski.PL | Pozostałe. Prof. Włodzimierz Marciniak z Instytutu Studiów Politycznych PAN o mechanizmach władzy w Rosji Wyszukaj: analiza KGB Putin Rosja Włodzimierz Marciniak Szukaj na stronie",
+          "token_count": 137
+        },
+        {
+          "id": "glyph100-v2-7da5ad94bbb72a26a73d6fbe",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1977227",
+          "title": "",
+          "text": "Oferta pracy - Cieśla budowlany - Islandia, Islandia | infoPraca.pl Bądź na bieżąco z rynkiem pracy. Otrzymuj podobne oferty na e-mail: Cieśla budowlany - Islandia - Islandia Czy wiesz, że możesz otrzymać nowe oferty pracy dla Cieśla budowlany - Islandia w miejscowości Islandia ? Wpisz swój adres email: Spawacz Mig/Mag/Tig Szczytno Operator wózka elektrycznego i widłowego Żywiec",
+          "token_count": 102
+        },
+        {
+          "id": "glyph100-v2-b4d493889d52ae1297b9fce5",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2119764",
+          "title": "",
+          "text": "Można przyjść/przyjechać ze znajomymi i rodzinami. Można też przekazać to zaproszenie dalej, za co z góry dziękuję J FOTORELACJE Z OSTATNICH PLENERÓW: KONKURS OM ZPFP I WYSTAWA W MUZEUM ZIEMI: Bardzo ładnie przygotowany katalog, w którym przedstawione są wszystkie nagrodzone prace oraz sylwetki laureatów i jurorów Konkursu na Fotografa Roku ZPFP: Można ściągnąć w formie PDFa. A wystawa w Muzeum Ziemi jest do 2 kwietnia. 48 606-141-688",
+          "token_count": 133
+        },
+        {
+          "id": "glyph100-v2-554ad67edfaf472650d63c1a",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2204944",
+          "title": "",
+          "text": "BIP - Urząd Miejski w Paczkowie: Zgromadzenia publiczne ZGROMADZENIA PUBLICZNE » Informacje Organizator zgromadzenia zawiadamia Burmistrza Gminy Paczków o zamiarze zorganizowania zgromadzenia w taki sposób, aby wiadomość dotarła do organu nie wcześniej niż na 30 dni i nie później niż 6 dni przed planowaną datą zgromadzenia, pisemnie, za pomocą faksu, ustnie do protokołu lub za pomocą środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2013r. poz. 1422). e-mail: zgromadzenia@paczkow.pl 4. SPOSÓB I TERMIN ZAŁATWIENIA Data wprowadzenia: 2015-11-26 08:12:38 Data publikacji: 2015-11-26 08:31:31 Ostatnia zmiana: 2015-11-26 08:39:34",
+          "token_count": 188
+        },
+        {
+          "id": "glyph100-v2-4d67fd90a91adaeaf26d5a85",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2050466",
+          "title": "",
+          "text": "ŁUKÓW - Region - 115 tabletów trafi do uczniów z powiatu łukowskiego 2020-04-10 10:05:43 Artykuł czytany 282 razy Do Starostwa Powiatowego w Łukowie trafiło już 115 tabletów. Zostały przekazane przez Lubelski Urząd Marszałkowski. Tablety z dostępem do internetu zostaną przekazane uczniom ze szkół podstawowych i średnich z powiatu łukowskiego. Urząd Marszałkowski w Lublinie w ramach wsparcia uczniów zobowiązanych do nauki on-line postanowił zakupić tablety z dostępem do internetu. Informacje o zapotrzebowaniu na sprzęt zbierano za pośrednictwem Kuratorium Oświaty. Do szkół powiatu łukowskiego w pierwszej wersji miało trafić 63 tablety. Ostatecznie przekazano ich 115. Z Lublina odebrali je starosta Dariusz Szustek i radny wojewódzki Ryszard Szczygieł. Wszystkie tablety będą rozdysponowane wśród uczniów szkół podstawowych i średnich z terenu całego powiatu. Jeżeli chodzi o łukowskie pods...",
+          "token_count": 317
+        },
+        {
+          "id": "glyph100-v2-88d8ef157724d3fa36cdc91c",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2245222",
+          "title": "",
+          "text": "Wersja 3.4 – magazyn i przedmioty | News | World of Tanks Blitz Europe Wersja 3.4 – magazyn i przedmioty Pragniemy przetestować nową funkcję jak najszybciej, dlatego w aktualizacji 3.4 dajemy Wam bonus. 3 grudnia do Waszego magazynu trafią cztery atesty: trzy z nich będą mogły być wymienione na jedną godzinę konta premium każdy, a jeden pozostały – na dziewięć godzin. Mądrze je wykorzystajcie! Zajrzyjcie do nas jutro i dowiedzcie się więcej o nowych funkcjach w aktualizacji 3.4!",
+          "token_count": 116
+        },
+        {
+          "id": "glyph100-v2-c29ee732837cbb75dc3267be",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2374065",
+          "title": "",
+          "text": "Kod pocztowy 75-848 Koszalin •• mapa, urząd pocztowy Kody pocztowe » 75-848 Kod pocztowy 75-848 75-848 Koszalin Lubuszan Koszalin Koszalin zachodniopomorskie 75-848 Kod pocztowy 75-848 przypisany jest do miejscowości: Koszalin i ulic: Lubuszan. W wielu przypadkach Urząd pocztowy i godziny otwarcia podane są na stronie a mapa wyświetla lokalizację urzędu.",
+          "token_count": 84
+        },
+        {
+          "id": "glyph100-v2-d9e2011ac7c28c6cdddaf9a1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2268678",
+          "title": "",
+          "text": "Trader MateuszDudek - pomysły tradingowe i wykresy — TradingView 0 Reputacja 544 wyświetlenia 1 Opublikowany 2 Polubienia 0 Obserwujący Linia trendu wzrostowego i korekta Fibo MateuszDudek 544 obejrzenia ・ Znajdujemy się na lini trendu wzrostowego, korekty fibo i lini oporu co daje dużą szansę na odbicie się kursu i powędrowanie w górę.",
+          "token_count": 98
+        },
+        {
+          "id": "glyph100-v2-ca5aeb8c191d656b8d365985",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2409117",
+          "title": "",
+          "text": "Liga Mistrzyń siatkarek - encyklopedia.biolog.pl Plik:PDB 1d7k EBI.jpg Plik:Cissus woodrowii (Woodrow's Grape Tree) in Keesaraguda, AP W IMG 9153.jpg Z Wikipedii, wolnej encyklopedii (Przekierowano z Liga Mistrzyń siatkarek) Przejdź do nawigacji Przejdź do wyszukiwania Na podstawie artykułu: \"Liga Mistrzyń siatkarek\" pochodzącego z Wikipedii",
+          "token_count": 118
+        },
+        {
+          "id": "glyph100-v2-54cecd44156e497865697533",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2172062",
+          "title": "",
+          "text": "Zarządca Rejonu- ofpr/17/0133 Praca Dam pracę Ogłoszenia - Miejski serwis informacyjny: Wałbrzych, Boguszów-Gorce, Jedlina-Zdrój, Szczawno-Zdrój, Czarny Bór Zarządca Rejonu- ofpr/17/0133 Pełna treść ogłoszenia na: urzadpracy.pl/pl/oferty-pracy/oferty-pracy-na-rynku/propozycja-urzedu/23867,Zarzadca-Rejonu-ofpr170133.html",
+          "token_count": 123
+        },
+        {
+          "id": "glyph100-v2-07e8b096ab47f7c4fa536f53",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2315492",
+          "title": "",
+          "text": "Psychologia finansów i kryptowalut : Psychologia - SkpProfi- skp-profi.ru Kierunek dostępny też na wydziale: POZNAŃ, GDAŃSK, GLIWICE Specjalność: Psychologia finansów i kryptowalut Absolwent tej specjalności posiada umiejętności związane z programowaniem kryptowalut oraz ich zarządzaniem. Posiada wiedzę i rozeznanie w rynkach walutowych, jak również orientuje się w regulacjach prawnych obrotu kryptowalutami. WYBRANE PRZEDMIOTY na specjalności Psychologia finansów i kryptowalut Bezpieczeństwo systemów kryptograficznych Kryptowaluty na rozwijających się rynkach Kryptowaluty w praktyce Programowanie kryptowalut Zasady destrukcyjnych innowacji Inne kierunki w Giżycku AKTUALNOŚCI Z GIŻYCKA:",
+          "token_count": 191
+        },
+        {
+          "id": "glyph100-v2-a43ad9c3bc7dc323b9aef15f",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2315402",
+          "title": "",
+          "text": "Połock, Mińsk i Grodno – Stowarzyszenie Pracownia Etnograficzna › Połock, Mińsk i Grodno Połock, Mińsk i Grodno 20/10/2014 | Filed under: relacja and tagged with: Muzeum Aktywne Warsztaty w Połockim Narodowym Kulturowo-Historycznym Muzeum. fot. Anna Czyżewska 10 dni w podróży, 1820 kilometrów, 6 dni intensywnej pracy, ponad 40 godzin warsztatów, 3 otwarte wykłady i przede wszystkim ponad 60 muzealników i muzealniczek z białoruskich muzeów uczestniczących w Muzeum Aktywnym – to rezultaty tegorocznej edycji projektu realizowanego przez Stowarzyszenie „Pracownia Etnograficzna”. Od 3 lat SPE współpracuje z białoruskimi muzeami dzieląc się doświadczeniami polskich instytucji kultury. Warsztaty w Muzeum-Pracowni Zaira Azgura w Mińsku. fot. Anna Czyżewska Warsztaty w Mińsku. fot. Anna Czyżewska Połockie Narodowe Kulturowo-Historyczne Muzeum – Rezerwat Projekt „Muzeum Aktywne. Warsztaty Obudź...",
+          "token_count": 467
+        },
+        {
+          "id": "glyph100-v2-4b7dcb124bfea3815b3f2ce4",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2366100",
+          "title": "",
+          "text": "Adriatica A1076.5224CH - timestyle.pl Adriatica A1076.5224CH męski zegarek szwajcarski zasilany baterią. Koperta stalowa do której został przymocowany skórzany pasek. Czasomierz posiada szkło mineralne pod którym widnieje czarny cyferblat z datownikiem oraz chronographem. Wodoodporność 10 ATM - można pływać. Mechanizm kwarcowy, zasilany baterią Ronda 5040",
+          "token_count": 109
+        },
+        {
+          "id": "glyph100-v2-c5d737456b53f3d34282e703",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1994529",
+          "title": "",
+          "text": "Spotkanie informacyjne dla przedsiębiorców - Urząd Miejski w Lęborku Utworzono: 09-01-2019 Warunkiem uczestnictwa w spotkaniu jest przesłanie do dnia 30 stycznia 2019 r. wypełnionego formularza zgłoszeniowego na adres: slupsk.pife [AT] pomorskie [DOT] eu lub zgłoszenie telefoniczne pod numerem: 59 714 18 44 lub 59 714 18 45. Otrzymanie potwierdzenia przyjęcia zgłoszenia jest równoznaczne z wpisaniem na listę uczestników spotkania.",
+          "token_count": 103
+        },
+        {
+          "id": "glyph100-v2-e4cff722051a5f2a9f5c229d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2046767",
+          "title": "",
+          "text": "﻿ Koncepcja Kontrast Obraz Stock - Obraz: 124971 kitny czerwie chmura wiatr dramat kny ka azjata szalik wietrzny niebo br styl dzie natura hairball z d pi b glassful ugi chmury kwiaty Kolor tła ubrania kontrastu włosy s niezwykłej kobiety 2 freightened piękno 4 niebieski 3 podział sekretu kobieta atitude",
+          "token_count": 87
+        },
+        {
+          "id": "glyph100-v2-40e23e5f20b443a12460ffb1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2156027",
+          "title": "",
+          "text": "Bellator Maszyny Budowlane sp. z o.o. | Lider Budowlany Aleja Rodziny Gürtlerów 101, tel. +48 32 340 80 57 Email: biuro@bellator-mb.pl WWW: BELLATOR Maszyny Budowlane Sp. z o.o. jest wyłącznym autoryzowanym dystrybutorem na Polskę maszyn firmy schäfer technic – producenta maszyn do budowy i remontów dróg oraz partnerem MOBA – dostawcy kompletnych systemów pomiarowych i niwelacji do maszyn drogowych i budowlanych. Nasza oferta to również bogata paleta markowych, starannie wybranych i wyselekcjonowanych maszyn używanych, pewnego pochodzenia. Zajmujemy się frezowaniem nawierzchni asfaltowych i betonowych. Posiadamy pełną gamę frezarek o różnych szerokościach agregatów frezujących od 1000 mm do 2000 mm wraz z własnym transportem do dowolnego miejsca w kraju. Terminowość i solidność wykonywanych prac gwarantują doświadczeni operatorzy. Prowadzimy sprzedaż części zamiennych do większości ty...",
+          "token_count": 580
+        },
+        {
+          "id": "glyph100-v2-12e88926ec4a92165441fe5a",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2121015",
+          "title": "",
+          "text": "Posłuchajcie Świętujący. 15 kazań okolicznościowych, ks. Tomasz Ważny | kmt.pl Wydawnictwo FIDES Kraków 2005 ISBN: 83-89016-54-0 format: 118x168, stron: 90, oprawa: miękka INDEKS: FID0027B13245 Katalog możliwych okazji, czy też - inaczej mówiąc - okoliczności, które stanowić mogą powód spotkania wiernych przy ołtarzu Pańskim, jest naprawdę imponujący. Stąd niniejszy tomik, zawierający piętnaście kazań okolicznościowych stanowi (…) próbę przekazania treści, które - moim zdaniem - powinny się znaleźć w egzortach wygłaszanych w czasie sprawowania Mszy świętych.",
+          "token_count": 151
+        },
+        {
+          "id": "glyph100-v2-3b4162b998077ca5aa658cc4",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1678096",
+          "title": "",
+          "text": "Afryka. Najwyższe szczyty (Africa. The Highest Peaks) - mapę turystyczną Kilimandżaro (Kibo) 1:50 000 z pełną treścią topograficzną (drogi, hydrografia, bogate nazewnictwo), - zgodność z GPS – współrzędne geograficzne w układzie WGS‑84, - trwałość – laminowana mapa sprawdzi się nawet w najtrudniejszych warunkach atmosferycznych panujących na szlakach. ISBN: 978-83-61155-28-7",
+          "token_count": 113
+        },
+        {
+          "id": "glyph100-v2-5ae9960055063687baeeb2f1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1930580",
+          "title": "",
+          "text": "NEETs in polish sounds like nothing - Zamojskie Studia i Materiały – Seria Pedagogika - Volume 15 (2013) - CEJSH - Yadda 2013 | 15 | 75-80 NEETs brzmi w języku polskim jak \"nic\" młodzież nie ucząca się nie pracująca lub nie szkoląca się Organizacja Współpracy Gospodarczej i Rozwoju Unia Europejska Not in Education Employment or Training (NEET) Organization for Economic Cooperation and Development European Union bwmeta1.element.desklight-20e74a4b-b146-4203-a75b-c130152e8e88",
+          "token_count": 165
+        },
+        {
+          "id": "glyph100-v2-cc3044ca96062fa55d26159f",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2243579",
+          "title": "",
+          "text": "﻿ Anna Cieplak i Włodzimierz Nowak w żorskiej bibliotece - Silesia Kultura - Informator kulturalny. Śląsk bogaty w wydarzenia, imprezy, wystawy 11.10.2018, godz. 18.00 / Anna Cieplak i Włodzimierz Nowak będą w najbliższych dniach gośćmi żorskiej biblioteki. 11 października o godz. 18.00 w ramach projektu Klasa kobiet. W stulecie prawa wyborczego kobiet. będziemy gościć Annę Cieplak, animatorkę kultury, aktywistkę miejską i pisarkę. Szczegóły na stronie 18 października o godz. 18.00 w ramach cyklu Mistrzowie współczesnego reportażu w Miejskiej Bibliotece Publicznej w Żorach pojawi się Włodzimierz Nowak, jeden z najbardziej cenionych polskich reporterów. Spotkanie poprowadzi Artur Madaliński - krytyk literacki, publicysta i propagator czytelnictwa; autor licznych esejów, recenzji i rozmów z pisarzami publikowanymi w różnych polskich czasopismach. kategorie: Żory/literatura",
+          "token_count": 207
+        },
+        {
+          "id": "glyph100-v2-e90963ae5af823e023fc37ef",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1685453",
+          "title": "",
+          "text": "Lodołamacze - konkurs dla osób i instytucji wrażliwych społecznie - Gospodarka - Radio Kraków Lodołamacze - konkurs dla osób i instytucji wrażliwych społecznie Wtorek, 26 czerwca 2018, 18:28 posłuchaj Jana Zająca Jak mówi Jan Zając, prezes Polskiej Organizacji Pracodawców Osób Niepełnosprawnych, gdy organizatorzy ruszali z pierwszym konkursem, po wpisaniu w internetowej wyszukiwarce hasła \"Lodołamacz\" jako pierwsza pojawiała się definicja statku kruszącego lody. Dziś jest inaczej - często pojawia się hasło: konkurs dla pracodawców wrażliwych społecznie. To cieszy, że to tak tak przebiło się do naszej świadomości. Jak dodaje Jan Zając, w tym roku konkurs poszerzony jest o trzy kategorie: zdrowa firma, dziennikarz i przyjazna przestrzeń. Do konkursu przez ostatnie trzynaście edycji przystąpiło ponad 4100 firm, a nagrody odebrało ponad 590 przedsiębiorstw z całej Polski. Wnioski można zg...",
+          "token_count": 210
+        },
+        {
+          "id": "glyph100-v2-2ede8652de8f545d65d8e91d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2310027",
+          "title": "",
+          "text": "Landsat - GeekWeek.pl Gadżety Kategoria: Landsat GRU6 SztukasatelitalistaLandsatUNESCO Zdjęcia z satelity dziedzictwem kulturowym 6 grudnia 2011, 10:00 Krzysiek Dzieliński Co łączy Biblię Gutenberga, osobistą bibliotekę Tołstoja, Księgę z Kells i zdjęcia z satelity Landsat? Tworzą one kolekcję 245 międzynarodowych dokumentów wpisanych na listę Światowego Dziedzictwa UNESCO.",
+          "token_count": 105
+        },
+        {
+          "id": "glyph100-v2-7e7793a6d260aa284c4022e0",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1660041",
+          "title": "",
+          "text": "Firmy z kategorii Restauracje - w Katalogu Webtree.com.pl - strona 12 Pizzeria Nowy Sącz - martipizza.pl Jeżeli jesteście Państwo głodni, a do tego zamieszkujecie Nowy Sącz, zapraszamy do zapoznania się z ofertą pizzerii Marti Pizza. Możemy zagwarantować wszystkim miłośnikom pizzy jedzenie na najwyższym... czytaj dalej Już teraz zapraszamy Państwa do naszego klubu Bella Vista, który znajduje się w miejscowości Ustronie Morskie. Jesteśmy miejscem z klimatyczną muzyką, z występami na żywo, znakomitą kuchnią. Jesteśmy... czytaj dalej",
+          "token_count": 131
+        },
+        {
+          "id": "glyph100-v2-5abcbd8443a34d25aef6bc46",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2083450",
+          "title": "",
+          "text": "Termometr elektroniczny microlife MT 700 (kaczuszka) - RodzinaZdrowia.pl Termometr elektroniczny microlife MT 700 (kaczuszka) Metody pomiarowe / Bazowa temperatura ciała W ustach (oral) / 35,5 - 37,5 °C Termometr należy umieścić pod językiem, z prawej lub lewej strony jamy ustnej. Czujnik pomiarowy musi mieć dobry kontakt z tkanką. Ponadto usta powinny być zamknięte - oddychamy nosem. W ten sposób unikniemy przedostania się powietrza do ust podczas pomiaru temperatury, co mogłoby spowodować przekłamania w uzyskanym wyniku pomiaru temperatury. Przybliżony czas pomiaru: 30 sekund! Rektalna (rectal) / 36,6 - 38,0 °C Metoda ta daje najbardziej dokładny wynik, szczególnie w przypadku niemowląt i dzieci. Ostrożnie umieść czujnik pomiarowy w odbycie na głębokość ok. 2-3 cm. Pod pachą (axillary) / 34,7 - 37,3 °C Aby uzyskać bardziej wiarygodny wynik, zaleca się wykonanie pomiaru w ustach lub...",
+          "token_count": 510
+        },
+        {
+          "id": "glyph100-v2-c6078c9e0f3f9618c2270f77",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2004594",
+          "title": "",
+          "text": "dla ustawień zapłonu, do mocowania do Vespa potrzebny jest uchwyt łożysko głowicy kierownicy, u góry, Ø 40x30x2,6 mm, Tuleje filtra powietrza MALO.. ..SSI dla skrzynek filtra długość 25 mm, s 15 mm Guma zasysania PIAGGIO skrzy.. ..nka filtra powietrza, dla dla kątowego emblematu PIAGGIO, Mark I, dla Vespa 36x47 mm, tworzywo sztuczne, chrom, łukowaty,",
+          "token_count": 120
+        },
+        {
+          "id": "glyph100-v2-172148ab8104a405a785fd4d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1884198",
+          "title": "",
+          "text": "Trasa Uniejów - Polanów, jak dojechać z Uniejowa do Polanów, czas dojazdu Trasa Uniejów-Polanów Trasa Uniejów - Polanów Szukasz najlepszej trasy dojazdu z Uniejowa do Polanów? Pomożemy Ci wybrać odpowiednią trasę oraz obliczymy odległość i ile wyniesie przybliżony czas dojazdu do Polanów. Możesz także skorzystać z naszego narzędzia i obliczyć ile wyniesie koszt paliwa, jeżeli zdecydujesz się podróżować swoim samochodem. Podziel się wskazówkami dla trasy Uniejów - Polanów",
+          "token_count": 126
+        }
+      ],
+      "risk": "more data, more legacy risk"
+    },
+    "C": {
+      "variant": "C",
+      "docs": 281495,
+      "train_docs": 280029,
+      "val_docs": 1466,
+      "train_tokens": 167554434,
+      "val_tokens": 956326,
+      "total_tokens": 168510760,
+      "tokens_per_source": {
+        "wolne_lektury": {
+          "docs": 1525,
+          "tokens": 3143341,
+          "train_tokens": 3128722,
+          "val_tokens": 14619
+        },
+        "wikipedia_pl": {
+          "docs": 184466,
+          "tokens": 127929637,
+          "train_tokens": 127169999,
+          "val_tokens": 759638
+        },
+        "wikisource_pl": {
+          "docs": 2430,
+          "tokens": 3115955,
+          "train_tokens": 3103048,
+          "val_tokens": 12907
+        },
+        "legacy_mixed_corpus": {
+          "docs": 93074,
+          "tokens": 34321827,
+          "train_tokens": 34152665,
+          "val_tokens": 169162
+        }
+      },
+      "stage3_50k_epochs": 4.861410630395353,
+      "stage4_100k_epochs": 9.722821260790706,
+      "stage5_200k_epochs": 19.445642521581412,
+      "doc_token_percentiles": {
+        "p50": 295.0,
+        "p75": 606.0,
+        "p90": 1261.0,
+        "p95": 2110.0,
+        "p99": 5373.0
+      },
+      "samples": [
+        {
+          "id": "glyph100-v2-7ee8bcabe0947792e22465d2",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1968343",
+          "title": "",
+          "text": "Shotcut (Linux) 14.02.12 PC World - Testy i Ceny sprzętu PC, RTV, Foto, Porady IT, Download, Aktualności Facebook Shotcut (Linux) 14.02.12 Shotcut (Linux) 14.02.12 Maciej Kępka, 13.02.2014, godz. 09:50 edycja wideo Shotcut oferuje takie narzędzia edycyjne jak zmiana ostrości obrazu, nakładanie efektów, balans kolorów, dodawanie tekstów, itp. Stworzone materiały możemy zmontować i zapisać jako pliki wideo w popularnych formatach lub też jako klipy flash. Niestety, brak polskiej edycji językowej. W tym wydaniu usprawniono działanie wielu funkcji. × Rozmiar:140.16 MB Nazwa pliku: shotcut-debian7-x86-140212.tar.bz2",
+          "token_count": 178
+        },
+        {
+          "id": "glyph100-v2-06261e1ea6a98237358505e7",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1851037",
+          "title": "",
+          "text": "Referendum wrzesień 2015 - Biuletyn Informacji Publicznej Gminy Pieniężno Przejdź do głównego menu Referendum wrzesień 2015 Menu O Pieniężnie Prawo lokalne Lokalizacja i mapy Historia i zabytki Wybory Informacje o obwodach i okręgach wyborczych Archiwum Wybory samorządowe - 2010 Samorządowe - 2006 Referendum wrzesień 2015 Uzupełniające do Rady Miejskiej 09-05-2010 Wybory do izb rolniczych 2011 Wybory do Senatu 2007 Wybory parlamentarne 2011 Wybory do Parlamentu Europejskiego 2014 Wybory samorządowe 2014 Wybory uzupełniające do Rady Miejskiej w Pieniężnie - 2013 Wybory prezydenckie 2015 Wybory do Sejmu i Senatu RP 2015 Związki i stowarzyszenia Oświadczenia o stanie kontroli zarządczej Plany i strategie rozwoju Dotacje i programy pomocowe Inwestycje Projekty programów Inne Gospodarka komunalna Zgromadzenia publiczne Kontakt NIP: 582-156-21-96 REGON: 170748005 Referendum wrzesień 2015 19...",
+          "token_count": 435
+        },
+        {
+          "id": "glyph100-v2-166c73f4b5cd95131ca269b1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2203715",
+          "title": "",
+          "text": "Indeks: WFBIKE1 ean-13: 853988006379 KICKR BIKE to nie tylko inteligentny rower - to maszyna treningowa, która zaciera granicę między wirtualnością a rzeczywistością. Moc maksymalna: 2200 Wat Zasilanie: 100-240V, 50/60 Hz, 2.5A Wahoo trenażer KICKR Snap Bike Trainer + GRATIS opona Vittoria Wahoo mata pod trenażer KICKR Trainer FloorMat Wahoo biurko KICKR Desk",
+          "token_count": 130
+        },
+        {
+          "id": "glyph100-v2-0c63a953cccab73796b9caaa",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1613222",
+          "title": "",
+          "text": "W świecie wikingów na 12. urodziny - ziemiadebicka.pl 11 czerwca 2019 | 15:34 W dniach 7-9 czerwca 2019 r. 70 harcerek i harcerzy 7 Szczepu Drużyn Dębickich im. gen. Mariusza Zaruskiego biwakowało w Jaworzu Górnym. Harcerze z tego szczepu zawsze na wiosnę jadą pod namioty aby uczcić urodziny swojego środowiska. Dwunaste urodziny harcerze spędzili w krainie wikingów.",
+          "token_count": 106
+        },
+        {
+          "id": "glyph100-v2-b881b8273577f4064eb10963",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2319799",
+          "title": "",
+          "text": "WPK » Nowy MAN u Zagozdy Nowy MAN u Zagozdy Tagi: tabor, Zagozda – Dodał: Piotr Wiśniewski Wysokopodłogowy MAN pochodzi najprawdopodobniej z niemieckiej Westfalii, o czym informuje napis umieszczony na pojeździe. Uwagę zwracają zaprogramowane wyświetlacze oraz numer taborowy 14, który tym razem nie został odziedziczony po poprzednim właścicielu.",
+          "token_count": 92
+        },
+        {
+          "id": "glyph100-v2-94aac4507dd9ddd9df922473",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2192657",
+          "title": "",
+          "text": "Pianino - spotkanie organizacyjne - MGOKiSMGOKiS Pianino – spotkanie organizacyjne Dnia 10.10.2019 r. (czwartek) o godz. 18.00 w MGOKiS w Stąporkowie odbędzie się spotkanie organizacyjne w sprawie tegorocznych lekcji gry na pianinie prowadzone przez instruktora Sebastiana Moczarskiego. Kółko Szachowe- zmiana terminu spotkań XIV Przegląd Rękodzieła Artystycznego i Ludowego MLF Stąporków",
+          "token_count": 107
+        },
+        {
+          "id": "glyph100-v2-b55da919d81f5d5335f21812",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2190523",
+          "title": "",
+          "text": "Tag: konsutant ślubny - Ślubny Impresariat konsutant ślubny 16 kwietnia 2012 19 września 2017 Ślubny Impressariat 0 Comments konsultanci ślubni Kraków, konsutant ślubny, Mowa weselna, organizacja ślubu kraków, organizacja wesela Kraków, przyjęcie weselne, ślubnej, Słodki upominek dla gości, wedding planner krakow, winietki Aby przyjęcie weselne miało niezapomniany, wyjątkowy charakter, warto pamiętać o kilku drobiazgach, które składają się na wspaniałą, uroczystą atmosferę tego",
+          "token_count": 123
+        },
+        {
+          "id": "glyph100-v2-88db6ad5e2b0c57e62d65c0f",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1636629",
+          "title": "",
+          "text": "Steppe - Jelonek - pobierz mp3, download mp3 Data dodania: 15.09.2010 15:26:13 Tagi: Jelonek, Steppe, metal, 2007 Jelonek_-_Steppe.mp3 JELONEK - 05 - Steppe Rozmiar pliku mp3, który aktualnie słuchasz to mniejwięcej osiem i jeden setnych megabajta. Długość oscyluje na cztery minuty i pięćdziesiąt trzy sekundy. To jeden z piosenek wykonawcy Jelonek, której tytuł to Steppe. W środę, 18 pazdziernika 2017 roku plik został zaindeksowany do naszej bazy danych. Nie ma jak na razie dołączonego klipu do tego pliku mp3. Byliśbyśmy zatem wdzięczni, gdybyś go dodał. Żaden odwiedzający nie ściągnął utworu muzycznego Jelonek - Steppe do tej pory. Żaden odwiedzający do tej pory nie miał ochoty skomentować tej piosenki. Plik mp3 Jelonek - Steppe do pobrania możesz wyszukać wpisując: Jelonek - Steppe download, download Jelonek - Steppe, pobierz Jelonek - Steppe, Jelonek - Steppe pobierz, pobierz mp3 J...",
+          "token_count": 344
+        },
+        {
+          "id": "glyph100-v2-7897c768fb90748221212e4c",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1941442",
+          "title": "",
+          "text": "dzieci Pułtusk - Tag | wiadomości i opinie z pultusk24.pl dzieci Pułtusk - Tag Zmiana godziny pokazów na plaży - start o godz. 10! O wodzie przy kawie Chcemy chronić nasze dzieci – mieszkańcy kontra koncerny telefoniczne Ferie zimowe w pułtuskim Muzeum Aktywne ferie w mieście – poznaj 7 możliwości Dzień Babci i Dziadka w Pobyłkowie Dużym Karnawałowe szaleństwo przedszkolaków z Piątki Dzień Babci i Dziadka w miejskiej Piątce",
+          "token_count": 116
+        },
+        {
+          "id": "glyph100-v2-dd28d4c2e5b2466ed56cdde5",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2366374",
+          "title": "",
+          "text": "Zasada jedności i jednomyślności | wyszukiwarka | strona 12 | Notatek.pl Ważne! Ta strona wykorzystuje pliki cookie. Zasada jedności i jednomyślności - strona 12 elity przywódcze usiłowały wykorzystać dawne idee jedności świata arabskiego. Dlatego zaczęto odwoływać... Pobierz notatkę Zasada głosząca, że ważna jest wiedza o istotności... Pobierz notatkę Może odbywać się przy zastosowaniu zasady jednomyślności albo większości głosów. a) Jednomyślność Zaletą... Poprzednia 1 ...",
+          "token_count": 116
+        },
+        {
+          "id": "glyph100-v2-a0732fdfaba124a587a9182e",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1683889",
+          "title": "",
+          "text": "Inżynieria - Stargard Szczeciński - Oferty Pracy - 17 | Adzuna Inżynieria - Stargard Szczeciński - Oferty Pracy LEASINGTEAM GROUP - STARGARD LeasingTeam Professional wspiera polskie i globalne przedsiębiorstwa w pozyskiwaniu kluczowych pracowników i zarządzaniu zasobami ludzkimi. Agencja specjalizuje się w rekrutacjach stałych na stanowiska średniego i wyższego szczebla oraz outsourcingu white-... Opis stanowiska: Koordynacja procesu zawierania, zgłaszania do Zamawiającego oraz realizacji umów z Podwykonawcami, Usługodawcami, Dostawcami i ich dalszymi podwykonawcami. Opracowanie projektów umów, zleceń i zamówień. Ewidencjonowanie zawartych umów, zleceń ... Asystent/ka ds. planowania produkcji Dla firmy CARGOTEC, lidera w zakresie produkcji maszyn do przeładunku kontenerów, automatyki portowej i serwisu, poszukamy dynamicznych kandydatów o analitycznym sposobie myślenia na stanowisko a...",
+          "token_count": 533
+        },
+        {
+          "id": "glyph100-v2-ebb026e68e7c49ae2348474d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2012229",
+          "title": "",
+          "text": "SAP WPDC /ABAP wpdc /abap co to jest n Transakcja WPDC w SE38. Wywołanie WPDC \\o w SAPie. Znaczenie wpdc /abap definicja. Transakcja SAP WPDC Wywołanie transakcji, użycie: \\nWPDC po angielsku: SRS - PDC Processing po niemiecku: SRS - MDE-Verarbeitung po francusku: SRS - Traitement CMD po holendersku: SRS - HTI-verwerking Użycie WPDC w SAP Jak użyć transakcji WPDC? Zastosowanie w SE38 w SAPie. Wykorzystanie transakcji WPDC w SE38 - Szkolenie, tutorial. SAP Cdpw Definicja wpdc /abap co to znaczy.",
+          "token_count": 204
+        },
+        {
+          "id": "glyph100-v2-1e06cb3170dc73c853fb102c",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2151385",
+          "title": "",
+          "text": "Zasnęli na torach, maszynista towarowego był bez szans. Koszmar w... Zasnęli na torach, maszynista towarowego był bez szans. Koszmar w Aleksandrowie Kujawskim 17/10/2019 kk Dwóch mężczyzn w wieku 25 i 30 lat zginęło na torach w Aleksandrowie Kujawskim w województwie kujawsko-pomorskim. Przejechał po nich pociąg towarowy. Wypadek miał miejsce w nocy z 12 na 13 października na torach nieopodal ulicy Wojska Polskiego. Kilka minut po północy maszynista pociągu towarowego zobaczył na torach dwóch mężczyzn. Awaryjne hamowanie nie pomogło i zostali oni potrąceni. Zginęli na miejscu. ZOBACZ TEŻ: 9-latka nigdy nie dotarła do szkoły. W opuszczonych garażach wydarzył się koszmar Sprawę bada policja i prokuratura. Służby bardzo oszczędnie dozują informacje o sprawie. Jak napisali dziennikarze portalu aleksandrowkujawski.naszemiasto.pl, nieoficjalnie mówi się, że mężczyźni mogli po prostu zasnąć n...",
+          "token_count": 287
+        },
+        {
+          "id": "glyph100-v2-1c1483538db717dd7bed60b0",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2153430",
+          "title": "",
+          "text": "Rookie Color Set - Rookie Color Set - Fineliner - Markery - molotow.com.pl Zestaw markerów typu \"Sketch'n'go\" w wersji kieszonkowej. Trzy markery z 9 kolorami w zestawie. Markery na bazie tuszu wodnego, intensywne kolory, transparentne, szybko schnące, bezzapachowe, bezpieczne dla dzieci (EN 71-3, ASTM D-4236), do użytku wewnętrznego. Filce o grubości 1-2mm, kompatybilne z Blender Pro, łączone.",
+          "token_count": 130
+        },
+        {
+          "id": "glyph100-v2-478749d91243a318f4a208b3",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2393347",
+          "title": "",
+          "text": "Bezpieczeństwo zewnętrzne i wewnętrzne | wyszukiwarka | strona 62 | Notatek.pl Ważne! Ta strona wykorzystuje pliki cookie. Bezpieczeństwo zewnętrzne i wewnętrzne - strona 62 Systemy „q” Dla klienta zewnętrznego zastosowanie dokumentu. Istnieją trzy podejścia do pisania księgi jakości: wewnętrzne, zewnętrzne oraz mieszane... Pobierz notatkę HSA stworzył Amerykański Departament Bezpieczeństwa Wewnętrznego i nowy gabinet szczebla stanowisko... Pobierz notatkę Zniesienie kontroli na granicach wewnętrznych oznacza, że na granicach pomiędzy... Pobierz notatkę albo terytorium. Ochrona ta dotyczy zarówno zagrożenia zewnętrznego, jak i wewnętrznego. Oprócz zapewnienia... Poprzednia 1 ...",
+          "token_count": 133
+        },
+        {
+          "id": "glyph100-v2-4aa1986dff728eb3c8fe1b28",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2073378",
+          "title": "",
+          "text": "Wszystko o środkach z Unii Europejskiej - Zabrze informacje dla przedsiębiorców Dodano: 2015-11-18 09:45 Informacji będą udzielać konsultanci z Punktu Informacyjnego Funduszy Europejskich w Katowicach, a mowa będzie o funduszach w ramach nowej perspektywie finansowej 2014-2020. Konsultacje odbędą się w siedzibie ZCRP przy ul. Powstańców Śląskich 3. NABUCCO - opera z udziałem włoskich solistów!dodano 20 godz. temu",
+          "token_count": 95
+        },
+        {
+          "id": "glyph100-v2-2d2d9968380684589ddb6922",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2385207",
+          "title": "",
+          "text": "KLUCZ KRZYŻAKOWY DO KÓŁ CR-V 17X19X21X22 YATO_ - metalowy24 YT-0800 YATO D Symbol YT0800 D Krzyżakowy klucz do kół samochodowych. Wykonany z wysokiej jakości stali chromo-wanadowej. Posiada 4 ramiona z nasadkami, dostosowanymi do wszystkich sześciokątnych, metrycznych rodzajów śrub i nakrętek stosowanych w samochodach osobowych i lekkich dostawczych. Krzyżak został wzmocniony dodatkowo podwójną, nitowaną blachą stalową. Podnosi bezpieczeństwo i komfort użytkowania. Klucz szczególnie polecany do serwisów opon oraz jako wyposażenie samochodów osobowych.",
+          "token_count": 146
+        },
+        {
+          "id": "glyph100-v2-ad5ba767f493a9f06587fb73",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2068979",
+          "title": "",
+          "text": "Zestaw do zrobienia bałwana | WHAM-O | Jula Zestaw do zrobienia bałwana Nr. art: 799201 Dzięki temu odpornemu na działanie warunków atmosferycznych zestawowi zrobisz najładniejszego bałwana w dzielnicy! Zawiera parę rękawiczek, szalik, kapelusz, parę oczu, parę brwi, nos, usta, narzędzie do modelowania śniegu i dziesięć plastikowych gwoździ. Numer artykułu 799201",
+          "token_count": 100
+        },
+        {
+          "id": "glyph100-v2-af9ecb6abbd899d3d5c6a576",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2291127",
+          "title": "",
+          "text": "Niskie ceny porzeczek - wiadomości sadownicze ze słowem kluczowym - Sady Ogrody NISKIE CENY PORZECZEK 11 lipca 2019 09:06 Szef PO na Podkarpaciu poseł Zdzisław Gawlik zapowiedział we wtorek, że zwróci się do ministra rolnictwa o interwencyjny skup owoców. Nie powinno dochodzić do takich sytuacji, że rolnikowi nie opłaca się zbierać owoców, które są już na krzakach - oświadczył. ŚR 15:03 Jabłka Idared spod Brodnicy wzbogacą ofertę Biedronki",
+          "token_count": 119
+        },
+        {
+          "id": "glyph100-v2-07a7e15be568d3a6b669ba34",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2040677",
+          "title": "",
+          "text": "Dlaczego warto wybrać „BEZPIECZEŃSTWO WEWNĘTRZNE” w WSPiA? / Aktualności :: Sanok w Sanok 24.pl » Aktualności / Dlaczego warto wybrać „BEZPIECZEŃSTWO WEWNĘTRZNE” w WSPiA? WSPiA przygotowała atrakcyjną i - co najważniejsze - dostosowaną do potrzeb rynku pracy ofertę dydaktyczną. Kandydaci na studia mogą wybrać jedną z 6 specjalności: służby ochrony bezpieczeństwa publicznego, przeciwdziałanie przestępczości zorganizowanej, zarządzanie kryzysowe, bezpieczeństwo narodowe oraz NOWOŚCI: kryminalistyka i kryminologia oraz cyberbezpieczeństwo. Studenci studiów II stopnia na kierunku „BEZPIECZEŃSTWO WEWNĘTRZNE” w WSPiA tajników zawodu uczyą się pod okiem najwyższej klasy fachowców głównie praktyków. Ćwiczenia i wykłady prowadza m.in.: gen. Józef Gdański - b. Podkarpacki i olsztyński komendant wojewódzki Policji; gen. Dominik Tracz - b. komendant główny Straży Granicznej; mgr Grzegorz Świszcz...",
+          "token_count": 439
+        },
+        {
+          "id": "glyph100-v2-cebe17ebcba1818af8e1db47",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2283964",
+          "title": "",
+          "text": "#trójkąt#siadanie na twarzy#masturbacja ręką#lesbijki #rozmawianie#podwójna penetracja#dymanie stopami#zero pieprzenia #ssanie jąder#lizanie#lesbijki#ohmibod #zabawa analna#obciąganie#dymanie tyłka#fisting #dymanie#masturbacja#mineta owłosionej cipki#stymulacja łechtaczki #pokaz przed kamerą#ssanie#sperma w cipce#kobieca dominacja #ssanie fiuta#lizanie#kokietowanie#Cam2Cam Prime #azjatycki masaż#zabawa dildo#siadanie na twarzy#rozbieranie #kochanie się#masturbacja#rozbieranie#ohmibod #wytrysk na twarz#dymanie stopami#całowanie#ohmibod #lodzik#pokaz przed kamerą#sperma w ustach#stymulacja łechtaczki #maszyny do dymania#rimming#rozbieranie#stymulacja łechtaczki #ssanie fiuta#maszyny do dymania#kobieca dominacja#dymanie cipki #trójkąt#tańczenie#marzenie#kobieca dominacja #sperma w ustach#podwójna penetracja#ssanie#lovense #obciąganie#podwójna penetracja#rozkoszowanie się#szarpanie #zabaw...",
+          "token_count": 789
+        },
+        {
+          "id": "glyph100-v2-c1c81d4a8311f9aee63f8139",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1805496",
+          "title": "",
+          "text": "Choroby autoimmunologiczne a chłoniaki - Chłoniak – przyczyny, objawy, rokowanie | parenting.pl 5. Choroby autoimmunologiczne a chłoniaki Dostrzeżono ponadto związek pomiędzy zachorowaniem na chłoniaki nieziarnicze a chorobami autoimmunologicznymi o przebiegu miejscowym lub układowym. Dotyczy to choćby choroby Hashimoto i zespołu Sjögrena. Czujność należy zachować również w przebiegu reumatoidalnego zapalenia stawów oraz SLE (toczeń rumieniowaty układowy). Rozwój chłoniaka żołądkowego w pewnym stopniu wiąże się z kolei z zakażeniem Helicobacter pylori. Justyna92 • ostatni post 14 minut temu",
+          "token_count": 160
+        },
+        {
+          "id": "glyph100-v2-19e24d2e5871e03946c9574e",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2016978",
+          "title": "",
+          "text": "Warner's Distillery (Harrington, Anglia) - opinie - TripAdvisor Restauracje w pobliżu lokalizacji: Warner's Distillery Atrakcje w pobliżu obiektu Warner's Distillery Kanał o podróżach: Harrington Warner's Distillery opinie, Harrington Uzyskaj szybką odpowiedź od pracowników i klientów obiektu Warner's Distillery.",
+          "token_count": 88
+        },
+        {
+          "id": "glyph100-v2-ec63c1eafd534c3c55557250",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2094510",
+          "title": "",
+          "text": "XML Skargi i wnioski Na podstawie Ustawy z 27 lipca 2001r. prawo o ustroju sądów powszechnych (Dz.U.2015.133) oraz Rozporządzenia Ministra Sprawiedliwości z dnia 9 maja 2012r. w sprawie skarg i wniosków dotyczących działalności sądów powszechnych (Dz. U. z 16 maja 2012 r. poz. 524) skargi i wnioski dotyczące działalności sądów powszechnych okręgu krakowskiego można wnosić do Sądu Okręgowego w Krakowie: Prezes Sądu Okręgowego jest organem właściwym do rozpatrzenia skarg i wniosków dotyczących działalności Sądu Okręgowego lub Sądu Okręgowego i Rejonowego oraz skarg dotyczących działalności prezesów sądów rejonowych okręgu krakowskiego. Podmiot publikującySąd Okręgowy w Krakowie WytworzyłSąd Okręgowy w Krakowie2013-01-07 Admin Administrator 2016-07-15 15:42",
+          "token_count": 178
+        },
+        {
+          "id": "glyph100-v2-62d2f6ffd1a5cd70fa529329",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1839417",
+          "title": "",
+          "text": "Policjantki i Policjanci, odc. 506. s07e506 Policjantki i Policjanci, odc. 506 Patrol 5. rozwiązuje zagadkę zniknięcia karetki pogotowia. Rusza też tropem tajemniczych motocyklistów. Za ich sprawą policjanci wpadają na trop zapomnianego gangu i muszą zmierzyć się z niebezpiecznym przestępcą. Białacha odwiedza na jego odludziu nieufna uciekinierka wraz ze swoim dzieckiem. Stróż prawa chce im pomóc.",
+          "token_count": 108
+        },
+        {
+          "id": "glyph100-v2-0745fcc5268d8a901f966b76",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1925543",
+          "title": "",
+          "text": "Mocktail. Drink dla kobiet w ciąży | Dzień Dobry TVN Wojciech Urbański to mistrz świata w przygotowywaniu drinków. W studiu Dzień Dobry TVN przygotował dla Anny Kalczyńskiej i Roberta Kantereita smaczne drinki. Oczywiście bezalkoholowe, czyli mocktaile. Piękne podane i dobrze zmieszane. Rozmaryn, dżin i róża. To mieszanka wybuchowa! Drink Dzień Dobry TVN Drinki bezalkoholowe Dzień Dobry TVN Wojciech Urbański mistrz świata, barman Dzień Dobry TVN",
+          "token_count": 125
+        },
+        {
+          "id": "glyph100-v2-b4d493889d52ae1297b9fce5",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2119764",
+          "title": "",
+          "text": "Można przyjść/przyjechać ze znajomymi i rodzinami. Można też przekazać to zaproszenie dalej, za co z góry dziękuję J FOTORELACJE Z OSTATNICH PLENERÓW: KONKURS OM ZPFP I WYSTAWA W MUZEUM ZIEMI: Bardzo ładnie przygotowany katalog, w którym przedstawione są wszystkie nagrodzone prace oraz sylwetki laureatów i jurorów Konkursu na Fotografa Roku ZPFP: Można ściągnąć w formie PDFa. A wystawa w Muzeum Ziemi jest do 2 kwietnia. 48 606-141-688",
+          "token_count": 133
+        },
+        {
+          "id": "glyph100-v2-554ad67edfaf472650d63c1a",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2204944",
+          "title": "",
+          "text": "BIP - Urząd Miejski w Paczkowie: Zgromadzenia publiczne ZGROMADZENIA PUBLICZNE » Informacje Organizator zgromadzenia zawiadamia Burmistrza Gminy Paczków o zamiarze zorganizowania zgromadzenia w taki sposób, aby wiadomość dotarła do organu nie wcześniej niż na 30 dni i nie później niż 6 dni przed planowaną datą zgromadzenia, pisemnie, za pomocą faksu, ustnie do protokołu lub za pomocą środków komunikacji elektronicznej w rozumieniu art. 2 pkt 5 ustawy z dnia 18 lipca 2002r. o świadczeniu usług drogą elektroniczną (Dz. U. z 2013r. poz. 1422). e-mail: zgromadzenia@paczkow.pl 4. SPOSÓB I TERMIN ZAŁATWIENIA Data wprowadzenia: 2015-11-26 08:12:38 Data publikacji: 2015-11-26 08:31:31 Ostatnia zmiana: 2015-11-26 08:39:34",
+          "token_count": 188
+        },
+        {
+          "id": "glyph100-v2-97b488758338b27b9de8821d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2260999",
+          "title": "",
+          "text": "For Glorious Equestria: Fanfik Tygodnia II - Wspomnienia, czyli dawno temu w Equestrii Fanfik Tygodnia II - Wspomnienia, czyli dawno temu w Equestrii Szukacie dobrego fanfika do przeczytania, a nie wiecie co wybrać? Zapraszam do posta - w tej serii, co tydzień, przedstawię jeden fanfik, który osobiście polecam przeczytać. Będą to różne utwory - krótkie, długie, autorstwa naszych rodzimych pisarzy, ale też i nie zabraknie tłumaczeń, czy wręcz angielskojęzycznych fanfików. Postaram się też krótko uzasadnić swój wybór. Fanfikiem tego tygodnia będzie: Wspomnienia, czyli dawno temu w Equestrii Fanfik mający już swoje lata,a mimo to będący świetnym przykładem dzieł, które się nie zestarzały. zachwycająca kreacja sióstr w tym fanfiku i mimo iż wprawny czytelnik momentalnie odkryje, kim są Lilianna i Flawia, będzie się doskonale przy tym bawił. Powód? Prostym sposobem autor wykreował tak dobr...",
+          "token_count": 545
+        },
+        {
+          "id": "glyph100-v2-88d8ef157724d3fa36cdc91c",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2245222",
+          "title": "",
+          "text": "Wersja 3.4 – magazyn i przedmioty | News | World of Tanks Blitz Europe Wersja 3.4 – magazyn i przedmioty Pragniemy przetestować nową funkcję jak najszybciej, dlatego w aktualizacji 3.4 dajemy Wam bonus. 3 grudnia do Waszego magazynu trafią cztery atesty: trzy z nich będą mogły być wymienione na jedną godzinę konta premium każdy, a jeden pozostały – na dziewięć godzin. Mądrze je wykorzystajcie! Zajrzyjcie do nas jutro i dowiedzcie się więcej o nowych funkcjach w aktualizacji 3.4!",
+          "token_count": 116
+        },
+        {
+          "id": "glyph100-v2-c29ee732837cbb75dc3267be",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2374065",
+          "title": "",
+          "text": "Kod pocztowy 75-848 Koszalin •• mapa, urząd pocztowy Kody pocztowe » 75-848 Kod pocztowy 75-848 75-848 Koszalin Lubuszan Koszalin Koszalin zachodniopomorskie 75-848 Kod pocztowy 75-848 przypisany jest do miejscowości: Koszalin i ulic: Lubuszan. W wielu przypadkach Urząd pocztowy i godziny otwarcia podane są na stronie a mapa wyświetla lokalizację urzędu.",
+          "token_count": 84
+        },
+        {
+          "id": "glyph100-v2-4b336a90d8eb242abf00d3f4",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2033701",
+          "title": "",
+          "text": "Martynka w krainie baśni. Zbiór opowiadań | Publicat S.A. Grupa Wydawnicza Bestseller w wielu krajach świata! Zabawne i pouczające przygody sympatycznej dziewczynki wzruszają i bawią jej rówieśniczki na całym świecie. Pełne uroku, przyciagające uwagę ilustracje oraz dowcipny tekst tworzą niepowtarzalny, ciepły nastrój. W tym zbiorze znajdziecie 8 opowiadań: Martynka w krainie baśni, Martynka wsiada na konia, Martynka zajmuje się dziećmi, Martynka uczy się pływać, Martynka szuka Pufka, Martynka poznaje ptaki, Martynka leci balonem, Martynka i wróbelek. Premiera: 05.01.2006 ISBN: 978-83-245-9898-4",
+          "token_count": 178
+        },
+        {
+          "id": "glyph100-v2-6e16e17f1678f3088dc041d1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1842079",
+          "title": "",
+          "text": "Męska koszulka piłkarska Inter Milan 2019/20 Stadium Home. Nike.com PL TWOJA DRUŻYNA. TWOJE BARWY Ozdobiona emblematami drużyny koszulka Inter Milan 2019/20 Stadium Home jest wykonana z niezwykle przewiewnego materiału, który zapewnia suchość i ochłodę na boisku oraz podczas kibicowania na trybunach. Materiał Nike Breathe daje uczucie suchości i ochłody. Technologia Dri-FIT odpowiada za suchość i wygodę. Materiał: 100% poliester z recyklingu.",
+          "token_count": 125
+        },
+        {
+          "id": "glyph100-v2-54cecd44156e497865697533",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2172062",
+          "title": "",
+          "text": "Zarządca Rejonu- ofpr/17/0133 Praca Dam pracę Ogłoszenia - Miejski serwis informacyjny: Wałbrzych, Boguszów-Gorce, Jedlina-Zdrój, Szczawno-Zdrój, Czarny Bór Zarządca Rejonu- ofpr/17/0133 Pełna treść ogłoszenia na: urzadpracy.pl/pl/oferty-pracy/oferty-pracy-na-rynku/propozycja-urzedu/23867,Zarzadca-Rejonu-ofpr170133.html",
+          "token_count": 123
+        },
+        {
+          "id": "glyph100-v2-7d15d71c366d2a317f97cc28",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2148327",
+          "title": "",
+          "text": "PŚ Lahti: Tochimoto najdalej w serii próbnej - skoki narciarskie Shohei Tochimoto oddał najdalszy skok podczas serii próbnej przed drużynowym konkursem skoków narciarskich w Lahti. Japończyk lądował na 131 metrze, dzięki czemu pokonał reprezentanta gospodarzy Harriego Olli (129,5 m) i Andersa Bardala (126 m). Dalekie skoki oddali też Robert Kranjec, Takanobu Okabe (po 125,5 m), Wolfgang Loitzl (125 m) i Tom Hilde (124 m). Spośród Polaków najlepiej spisał się Adam Małysz (118,5 m - czternaste miejsce). Dużo bliżej lądowali pozostali nasi reprezentanci - Stefan Hula i Kamil Stoch uzyskali po 112,5 m(26 lokata), a Łukasz Rutkowski 109,5 m (31 pozycja). W serii próbnej nie startowało sześciu zawodników, m. in. Jakub Janda, Michael Uhrmann, Martin Schmitt i Bill Demong, który w tym czasie walczył o zwycięstwo w kombinacji norweskiej - ostatecznie zajął trzecie miejsce. Z pewnością tak nie...",
+          "token_count": 301
+        },
+        {
+          "id": "glyph100-v2-a43ad9c3bc7dc323b9aef15f",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2315402",
+          "title": "",
+          "text": "Połock, Mińsk i Grodno – Stowarzyszenie Pracownia Etnograficzna › Połock, Mińsk i Grodno Połock, Mińsk i Grodno 20/10/2014 | Filed under: relacja and tagged with: Muzeum Aktywne Warsztaty w Połockim Narodowym Kulturowo-Historycznym Muzeum. fot. Anna Czyżewska 10 dni w podróży, 1820 kilometrów, 6 dni intensywnej pracy, ponad 40 godzin warsztatów, 3 otwarte wykłady i przede wszystkim ponad 60 muzealników i muzealniczek z białoruskich muzeów uczestniczących w Muzeum Aktywnym – to rezultaty tegorocznej edycji projektu realizowanego przez Stowarzyszenie „Pracownia Etnograficzna”. Od 3 lat SPE współpracuje z białoruskimi muzeami dzieląc się doświadczeniami polskich instytucji kultury. Warsztaty w Muzeum-Pracowni Zaira Azgura w Mińsku. fot. Anna Czyżewska Warsztaty w Mińsku. fot. Anna Czyżewska Połockie Narodowe Kulturowo-Historyczne Muzeum – Rezerwat Projekt „Muzeum Aktywne. Warsztaty Obudź...",
+          "token_count": 467
+        },
+        {
+          "id": "glyph100-v2-b51b786bb0f955835289ff03",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2350382",
+          "title": "",
+          "text": "Ostatnia prosta PKO Grand Prix Gdyni 2018 | Cyklo 4 lipiec 2018 | Ogólna Wystartuj w znanym i lubianym cykl biegowy PKO Grand Prix Gdyni! Aby znaleźć się wśród uczestników, wystarczy wejść na stronę internetową gpx.gdyniasport.pl i zapisać się! ← Cyklo Strzepcz 2018 z rekordem frekwencji Po raz drugi Salon Rowerowy Żuchliński jedzie z CYKLO! →",
+          "token_count": 96
+        },
+        {
+          "id": "glyph100-v2-c5d737456b53f3d34282e703",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1994529",
+          "title": "",
+          "text": "Spotkanie informacyjne dla przedsiębiorców - Urząd Miejski w Lęborku Utworzono: 09-01-2019 Warunkiem uczestnictwa w spotkaniu jest przesłanie do dnia 30 stycznia 2019 r. wypełnionego formularza zgłoszeniowego na adres: slupsk.pife [AT] pomorskie [DOT] eu lub zgłoszenie telefoniczne pod numerem: 59 714 18 44 lub 59 714 18 45. Otrzymanie potwierdzenia przyjęcia zgłoszenia jest równoznaczne z wpisaniem na listę uczestników spotkania.",
+          "token_count": 103
+        },
+        {
+          "id": "glyph100-v2-0f4121a3e2e130318193f4df",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2254839",
+          "title": "",
+          "text": "Profilaktyka i rozwiązywanie problemów alkoholowych - Ropa Zarządzenie nr 185/17 Wójta Gminy Ropa z dnia 26 maja 2017 w sprawie ogłoszenia wyniku konkursu ofert na realizację zadania publicznego prowadzonego przez Gminę Ropa w zakresie profilaktyki, rozwiązywania problemów alkoholowych oraz przeciwdziałania narkomanii w 2017r. Czwartek, 1 czerwca 2017 więcej Wójt Gminy Ropa ogłasza konkurs ofert na realizację zadania z zakresu profilaktyki, rozwiązywania problemów alkoholowych oraz przeciwdziałania uzależnieniom w roku 2017 na terenie gminy Ropa. W ramach konkursu przewiduje się dofinansowanie zadania pn. „Prowadzenie świetlicy środowiskowej”. Zlecenie realizacji zadania nastąpi w formie powierzenia zadania wraz z udzieleniem dotacji na dofinansowanie jego realizacji. Wtorek, 9 maja 2017 więcej",
+          "token_count": 169
+        },
+        {
+          "id": "glyph100-v2-40e23e5f20b443a12460ffb1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2156027",
+          "title": "",
+          "text": "Bellator Maszyny Budowlane sp. z o.o. | Lider Budowlany Aleja Rodziny Gürtlerów 101, tel. +48 32 340 80 57 Email: biuro@bellator-mb.pl WWW: BELLATOR Maszyny Budowlane Sp. z o.o. jest wyłącznym autoryzowanym dystrybutorem na Polskę maszyn firmy schäfer technic – producenta maszyn do budowy i remontów dróg oraz partnerem MOBA – dostawcy kompletnych systemów pomiarowych i niwelacji do maszyn drogowych i budowlanych. Nasza oferta to również bogata paleta markowych, starannie wybranych i wyselekcjonowanych maszyn używanych, pewnego pochodzenia. Zajmujemy się frezowaniem nawierzchni asfaltowych i betonowych. Posiadamy pełną gamę frezarek o różnych szerokościach agregatów frezujących od 1000 mm do 2000 mm wraz z własnym transportem do dowolnego miejsca w kraju. Terminowość i solidność wykonywanych prac gwarantują doświadczeni operatorzy. Prowadzimy sprzedaż części zamiennych do większości ty...",
+          "token_count": 580
+        },
+        {
+          "id": "glyph100-v2-38be489464c319ef9a84106f",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2146803",
+          "title": "",
+          "text": "PIŁA POPRZECZNA STROMAB-4255 - Ogłoszenia, Darmowe Ogłoszenia - Ogłoszenia Lokalne, Darmowe Ogłoszenia. Bezpłatne Ogłoszenia. Anonse i Ogłoszenia Drobne, Ogłoszenia Lokalne - OgloszeniaLokalne.eu PIŁA POPRZECZNA STROMAB-... PIŁA POPRZECZNA STROMAB-4255 dodano: 2018.08.09 ważne do: 2019.12.01 wyświetleń: 9 szerokość robocza 600mm wysokość robocza 170mm stół podawczy o długości 2m stół odbiorczy o długości 2m maksymalna średnica tarczy 600mm",
+          "token_count": 128
+        },
+        {
+          "id": "glyph100-v2-3b4162b998077ca5aa658cc4",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1678096",
+          "title": "",
+          "text": "Afryka. Najwyższe szczyty (Africa. The Highest Peaks) - mapę turystyczną Kilimandżaro (Kibo) 1:50 000 z pełną treścią topograficzną (drogi, hydrografia, bogate nazewnictwo), - zgodność z GPS – współrzędne geograficzne w układzie WGS‑84, - trwałość – laminowana mapa sprawdzi się nawet w najtrudniejszych warunkach atmosferycznych panujących na szlakach. ISBN: 978-83-61155-28-7",
+          "token_count": 113
+        },
+        {
+          "id": "glyph100-v2-5ae9960055063687baeeb2f1",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1930580",
+          "title": "",
+          "text": "NEETs in polish sounds like nothing - Zamojskie Studia i Materiały – Seria Pedagogika - Volume 15 (2013) - CEJSH - Yadda 2013 | 15 | 75-80 NEETs brzmi w języku polskim jak \"nic\" młodzież nie ucząca się nie pracująca lub nie szkoląca się Organizacja Współpracy Gospodarczej i Rozwoju Unia Europejska Not in Education Employment or Training (NEET) Organization for Economic Cooperation and Development European Union bwmeta1.element.desklight-20e74a4b-b146-4203-a75b-c130152e8e88",
+          "token_count": 165
+        },
+        {
+          "id": "glyph100-v2-d24731fe9d0d8d17c8db7af6",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1716048",
+          "title": "",
+          "text": "Kiszonki zdrowie na talerzu - Książka - Księgarnia Internetowa PWN Kiszonki zdrowie na talerzu(Twarda) EAN: 9788380598621 Średniowieczne ogrody przyklasztorne były niezwykłymi miejscami. Każdy ogród był bowiem częścią normalnego gospodarstwa, które miało zapewnić mnichom samowystarczalność, a jednocześnie urządzano go tak, by jego poszczególne element...",
+          "token_count": 87
+        },
+        {
+          "id": "glyph100-v2-e90963ae5af823e023fc37ef",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1685453",
+          "title": "",
+          "text": "Lodołamacze - konkurs dla osób i instytucji wrażliwych społecznie - Gospodarka - Radio Kraków Lodołamacze - konkurs dla osób i instytucji wrażliwych społecznie Wtorek, 26 czerwca 2018, 18:28 posłuchaj Jana Zająca Jak mówi Jan Zając, prezes Polskiej Organizacji Pracodawców Osób Niepełnosprawnych, gdy organizatorzy ruszali z pierwszym konkursem, po wpisaniu w internetowej wyszukiwarce hasła \"Lodołamacz\" jako pierwsza pojawiała się definicja statku kruszącego lody. Dziś jest inaczej - często pojawia się hasło: konkurs dla pracodawców wrażliwych społecznie. To cieszy, że to tak tak przebiło się do naszej świadomości. Jak dodaje Jan Zając, w tym roku konkurs poszerzony jest o trzy kategorie: zdrowa firma, dziennikarz i przyjazna przestrzeń. Do konkursu przez ostatnie trzynaście edycji przystąpiło ponad 4100 firm, a nagrody odebrało ponad 590 przedsiębiorstw z całej Polski. Wnioski można zg...",
+          "token_count": 210
+        },
+        {
+          "id": "glyph100-v2-2ede8652de8f545d65d8e91d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2310027",
+          "title": "",
+          "text": "Landsat - GeekWeek.pl Gadżety Kategoria: Landsat GRU6 SztukasatelitalistaLandsatUNESCO Zdjęcia z satelity dziedzictwem kulturowym 6 grudnia 2011, 10:00 Krzysiek Dzieliński Co łączy Biblię Gutenberga, osobistą bibliotekę Tołstoja, Księgę z Kells i zdjęcia z satelity Landsat? Tworzą one kolekcję 245 międzynarodowych dokumentów wpisanych na listę Światowego Dziedzictwa UNESCO.",
+          "token_count": 105
+        },
+        {
+          "id": "glyph100-v2-7e7793a6d260aa284c4022e0",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1660041",
+          "title": "",
+          "text": "Firmy z kategorii Restauracje - w Katalogu Webtree.com.pl - strona 12 Pizzeria Nowy Sącz - martipizza.pl Jeżeli jesteście Państwo głodni, a do tego zamieszkujecie Nowy Sącz, zapraszamy do zapoznania się z ofertą pizzerii Marti Pizza. Możemy zagwarantować wszystkim miłośnikom pizzy jedzenie na najwyższym... czytaj dalej Już teraz zapraszamy Państwa do naszego klubu Bella Vista, który znajduje się w miejscowości Ustronie Morskie. Jesteśmy miejscem z klimatyczną muzyką, z występami na żywo, znakomitą kuchnią. Jesteśmy... czytaj dalej",
+          "token_count": 131
+        },
+        {
+          "id": "glyph100-v2-5abcbd8443a34d25aef6bc46",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2083450",
+          "title": "",
+          "text": "Termometr elektroniczny microlife MT 700 (kaczuszka) - RodzinaZdrowia.pl Termometr elektroniczny microlife MT 700 (kaczuszka) Metody pomiarowe / Bazowa temperatura ciała W ustach (oral) / 35,5 - 37,5 °C Termometr należy umieścić pod językiem, z prawej lub lewej strony jamy ustnej. Czujnik pomiarowy musi mieć dobry kontakt z tkanką. Ponadto usta powinny być zamknięte - oddychamy nosem. W ten sposób unikniemy przedostania się powietrza do ust podczas pomiaru temperatury, co mogłoby spowodować przekłamania w uzyskanym wyniku pomiaru temperatury. Przybliżony czas pomiaru: 30 sekund! Rektalna (rectal) / 36,6 - 38,0 °C Metoda ta daje najbardziej dokładny wynik, szczególnie w przypadku niemowląt i dzieci. Ostrożnie umieść czujnik pomiarowy w odbycie na głębokość ok. 2-3 cm. Pod pachą (axillary) / 34,7 - 37,3 °C Aby uzyskać bardziej wiarygodny wynik, zaleca się wykonanie pomiaru w ustach lub...",
+          "token_count": 510
+        },
+        {
+          "id": "glyph100-v2-c6078c9e0f3f9618c2270f77",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-2004594",
+          "title": "",
+          "text": "dla ustawień zapłonu, do mocowania do Vespa potrzebny jest uchwyt łożysko głowicy kierownicy, u góry, Ø 40x30x2,6 mm, Tuleje filtra powietrza MALO.. ..SSI dla skrzynek filtra długość 25 mm, s 15 mm Guma zasysania PIAGGIO skrzy.. ..nka filtra powietrza, dla dla kątowego emblematu PIAGGIO, Mark I, dla Vespa 36x47 mm, tworzywo sztuczne, chrom, łukowaty,",
+          "token_count": 120
+        },
+        {
+          "id": "glyph100-v2-172148ab8104a405a785fd4d",
+          "source": "legacy_mixed_corpus",
+          "source_id": "corpus-line-1884198",
+          "title": "",
+          "text": "Trasa Uniejów - Polanów, jak dojechać z Uniejowa do Polanów, czas dojazdu Trasa Uniejów-Polanów Trasa Uniejów - Polanów Szukasz najlepszej trasy dojazdu z Uniejowa do Polanów? Pomożemy Ci wybrać odpowiednią trasę oraz obliczymy odległość i ile wyniesie przybliżony czas dojazdu do Polanów. Możesz także skorzystać z naszego narzędzia i obliczyć ile wyniesie koszt paliwa, jeżeli zdecydujesz się podróżować swoim samochodem. Podziel się wskazówkami dla trasy Uniejów - Polanów",
+          "token_count": 126
+        }
+      ],
+      "risk": "legacy still too influential"
+    },
+    "D": {
+      "variant": "D",
+      "docs": 188421,
+      "train_docs": 187431,
+      "val_docs": 990,
+      "train_tokens": 133401769,
+      "val_tokens": 787164,
+      "total_tokens": 134188933,
+      "tokens_per_source": {
+        "wolne_lektury": {
+          "docs": 1525,
+          "tokens": 3143341,
+          "train_tokens": 3128722,
+          "val_tokens": 14619
+        },
+        "wikipedia_pl": {
+          "docs": 184466,
+          "tokens": 127929637,
+          "train_tokens": 127169999,
+          "val_tokens": 759638
+        },
+        "wikisource_pl": {
+          "docs": 2430,
+          "tokens": 3115955,
+          "train_tokens": 3103048,
+          "val_tokens": 12907
+        }
+      },
+      "stage3_50k_epochs": 6.104825350984794,
+      "stage4_100k_epochs": 12.209650701969588,
+      "stage5_200k_epochs": 24.419301403939176,
+      "doc_token_percentiles": {
+        "p50": 299.0,
+        "p75": 741.0,
+        "p90": 1671.0,
+        "p95": 2609.0,
+        "p99": 6598.799999999988
+      },
+      "samples": [
+        {
+          "id": "glyph100-v2-baa1ffa9f14d96564c043f42",
+          "source": "wikipedia_pl",
+          "source_id": "548578",
+          "title": "Beno Budar",
+          "text": "Beno Budar (ur. 19 marca 1946 w Kulow, niem. Wittichenau, Saksonia, zm. 8 października 2023) – górnołużycki pisarz, tłumacz i publicysta. Studiował slawistykę na Uniwersytecie w Lipsku. Od 1991 redaktor naczelny czasopisma dla dzieci „Płomjo”. Uprawiał tradycyjną w formie poezję (m.in. zbiór Spać w meji měli zakazać 1983), pisał współczesne opowiadania z życia Łużyczan (np. tom Mjez nami prajene 1989). Tłumaczył utwory z literatur słowiańskich, w tym polskiej.",
+          "token_count": 142
+        },
+        {
+          "id": "glyph100-v2-ba8eec57cb39fefca86c6bbd",
+          "source": "wikipedia_pl",
+          "source_id": "570866",
+          "title": "(279) Thule",
+          "text": "(279) Thule – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 8 lat i 307 dni w średniej odległości 4,27 j.a. Została odkryta 25 października 1888 roku w Obserwatorium Uniwersyteckim w Wiedniu przez Johanna Palisę. Nazwa planetoidy pochodzi od mitycznej krainy Thule położonej na północ od Wysp Brytyjskich.",
+          "token_count": 83
+        },
+        {
+          "id": "glyph100-v2-3ea6cb34dfd947d5a6dc4d98",
+          "source": "wikipedia_pl",
+          "source_id": "560811",
+          "title": "Yellowcake",
+          "text": "Yellowcake (dosł. \"żółte ciasto\") – potoczna nazwa półproduktu otrzymywanego w trakcie obróbki rud uranu. Nazwa pochodzi od charakterystycznego zabarwienia sproszkowanego produktu uzyskiwanego tradycyjnymi metodami. Yellowcake otrzymywany jest poprzez ługowanie zmielonej rudy uranowej stężonymi kwasami, zasadami i nadtlenkami. Po odfiltrowaniu i osuszeniu otrzymuje się brunatny lub czarny osad. W zależności od składu surowej rudy i metody ługowania zawiera on 70-90% ośmiotlenku trójuranu(V) (U3O8). Inne zidentyfikowane składniki to: trójtlenek uranu (UO3), dwutlenek uranu (UO2), wodorotlenek uranylu (UO2(OH)2), siarczan uranylu (UO2SO4), uranian sodu (Na2O (UO3)2·6H2O), nadtlenek uranu (UO4·nH2O). Yellowcake jest układem stabilnym chemicznie i może być w tej postaci przechowywany lub transportowany. Podobnie jak naturalne rudy uranu, zawiera ok. 0,72% izotopu 235U. Jest to dopiero jed...",
+          "token_count": 491
+        },
+        {
+          "id": "glyph100-v2-07618967e51f9d156b56b697",
+          "source": "wikipedia_pl",
+          "source_id": "530484",
+          "title": "Øyvind Leonhardsen",
+          "text": "Øyvind Leonhardsen (ur. 17 sierpnia 1970 w Kristiansund) – norweski piłkarz grający na pozycji pomocnika, 86-krotny reprezentant swojego kraju. Leonhardsen zaczynał karierę w ekipie Clausenengen FK, tam gdzie w drużynie o klasę młodszej grał Ole Gunnar Solskjær. W 1989 przeniósł się do 1 ligi, do drużyny Molde FK. Dwa lata później został kupiony przez mistrza kraju Rosenborg BK. Grając dla tej drużyny, został wybrany jako najlepszym norweskim piłkarzem w roku 1994. W następnym sezonie przeniósł się do Premier League, do drużyny Wimbledon F.C., gdzie wywarł wielki wpływ na grę zespołu. W lecie 1997 został kupiony przez Liverpool F.C. Po epizodzie w tym klubie spędził także parę sezonów w Tottenhamie Hotspur, a także w Aston Villi. W 2004 Leonhardsen powrócił do Norwegii do zespołu Lyn Fotball, gdzie był kapitanem tej drużyny. Rok później podpisał dwuletni kontrakt z drużyną Strømsgodse...",
+          "token_count": 305
+        },
+        {
+          "id": "glyph100-v2-938160d5c49531a6571d103a",
+          "source": "wikipedia_pl",
+          "source_id": "527121",
+          "title": "Claude Adrien Helvétius",
+          "text": "Claude Adrien Helvétius, Helwecjusz (ur. 26 lutego 1715 w Paryżu, zm. 26 października 1771 w Paryżu) – francuski filozof i literat, jeden z twórców Wielkiej Encyklopedii Francuskiej. Życiorys Pochodził z naturalizowanej we Francji rodziny lekarzy noszących nazwisko Schweitzer (zlatynizowana forma Schweitzer to właśnie Helvétius). Jego dziad, Johann Friedrich Schweitzer (1630–1709) rozpowszechnił stosowanie ipekakuany jako środka odkrztuśnego, ojciec zaś był lekarzem Marii Leszczyńskiej, przyszłej królowej Francji. Młody Helwecjusz przysposabiał się do zawodu finansisty, w wolnych chwilach parając się poezją. W wieku 23 lat, za protekcją królowej przyznano mu urząd generalnego dzierżawcy dóbr królewskich, przynoszący znaczne dochody. Mieszkał w Château de Voré (Collines des Perches, Loir-et-Cher) oraz w Paryżu w domu przy rue Sainte-Anne. Zabezpieczony od strony materialnej, mógł w peł...",
+          "token_count": 737
+        },
+        {
+          "id": "glyph100-v2-ecb688e1a4ee5d05922e8f64",
+          "source": "wikipedia_pl",
+          "source_id": "572655",
+          "title": "(1515) Perrotin",
+          "text": "(1515) Perrotin – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 4 lat i 46 dni w średniej odległości 2,57 au. Została odkryta 15 listopada 1936 roku w Observatoire de Nice przez André Patry. Nazwa planetoidy pochodzi od Henriego Perrotina (1845-1904), francuskiego astronoma. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (1515) 1936 VG.",
+          "token_count": 96
+        },
+        {
+          "id": "glyph100-v2-3ac263bc0d07b682d6019ee2",
+          "source": "wikipedia_pl",
+          "source_id": "554446",
+          "title": "Mroczne godziny",
+          "text": "Mroczne godziny () – kanadyjski thriller (z elementami horroru) powstały w 2005 roku. Film ze względu na bardzo drastyczne sceny (m.in. samookaleczenia) oraz wulgarny język dozwolony jest w Polsce dla osób pełnoletnich. Opis fabuły Film traktuje o chorej na nowotwór mózgu lekarce, która − chcąc przetestować lek na tę chorobę − eksperymentuje na socjopacie i gwałcicielu zamkniętym w szpitalu psychiatrycznym. Pewnego dnia lekarka, chcąc odreagować stresy pracy, wyjeżdża na weekend (do domku w lesie) do męża − pisarza, co przynosi szereg skomplikowanych konsekwencji. Obsada Źródło: Filmweb Kate Greenhouse - Samantha Goodman Gordon Currie - David Goodman Aidan Devine - Harlan Pyne Trevor Hayes - Lekarz Dov Tiefenbach - Adrian Jeff Seymour - Radiolog i inni.",
+          "token_count": 223
+        },
+        {
+          "id": "glyph100-v2-2096889d29ed749cacfed77a",
+          "source": "wikipedia_pl",
+          "source_id": "572076",
+          "title": "Cesare Pavese",
+          "text": "Cesare Pavese (ur. 9 września 1908 w Santo Stefano Belbo, zm. 27 sierpnia 1950 w Turynie) – włoski powieściopisarz, poeta i tłumacz. Pochodził z Piemontu, prowadził żywot włóczęgi w Turynie. Zadebiutował w 1936 roku tomem poezji Praca męczy (ukazał się on ponownie w 1943 roku). W czasach faszyzmu przebywał na wygnaniu. Później opublikował kilka powieści oraz tom medytacji zatytułowany Dialogi z Leuke. Tłumaczył także dzieła literatury amerykańskiej na język włoski. Zginął śmiercią samobójczą.",
+          "token_count": 139
+        },
+        {
+          "id": "glyph100-v2-a4160b793bdb349e28b7808c",
+          "source": "wikipedia_pl",
+          "source_id": "526196",
+          "title": "Karabin Springfield M21",
+          "text": "Springfield M21 – amerykański karabin wyborowy. Produkowana na rynek cywilny i policyjny klon karabinu M21. Historia konstrukcji W 1975 roku do uzbrojenia US Army przyjęto karabin wyborowy M21. Była to produkowana w zakładach Rock Island Arsenal wersja sportowego karabinu M14NM, który z kolei był odmianą M14, przepisowego karabinu armii amerykańskiej. Zalety tej broni sprawiły, że w prywatnej firmie Springfield Armory uruchomiono produkcję podobnego karabinu, także opartego na konstrukcji M14. W odróżnieniu od oryginalnego M21, karabin Springfield M21 posiada ciężką lufę (firmy Douglas), kolbę z regulowaną poduszką podpoliczkową (baką), dwójnóg i celownik optyczny Leupold o powiększeniu zmiennym w zakresie 3,5 do 10x. Opis konstrukcji Springfield M21 jest bronią samopowtarzalną. Zasada działania oparta o odprowadzanie części gazów prochowych przez boczny otwór lufy, z krótkim ruchem t...",
+          "token_count": 385
+        },
+        {
+          "id": "glyph100-v2-321c9b1eb938f422f4e21163",
+          "source": "wikipedia_pl",
+          "source_id": "478019",
+          "title": "Alojzy Koziełek",
+          "text": "Alojzy Koziełek (ur. 2 lutego 1879 w Jaroniowie zm. 20 listopada 1949 w Knurowie) – ksiądz katolicki. Życiorys Urodził się 2 lutego 1879 r. w Jaroniowie k. Baborowa. Po ukończeniu szkoły powszechnej i gimnazjum studiował teologię i ekonomię społeczną na uniwersytetach we Wrocławiu i Monachium. Po otrzymaniu święceń kapłańskich 20 czerwca 1903 r., pełnił obowiązki wikarego w Katowicach, Pszczynie i Berlinie. W latach 1908–1923 był proboszczem w Szerokiej, a następnie w Miedźnej k. Pszczyny (1923–1928). W latach 1922–1923 pełnił obowiązki inspektora w śląskim kuratorium oświaty. 31 maja 1928 r. został proboszczem w parafii św. św. Cyryla i Metodego w Knurowie. Wraz z bratem ks. Janem w latach 1924 i 1932 brał czynny udział w kongresach pansłowiańskich odbywających się w Velehradzie. W czasie okupacji ukrywał się w okolicach Pszczyny oraz prawdopodobnie w Kochłowicach. Po zakończeniu II...",
+          "token_count": 322
+        },
+        {
+          "id": "glyph100-v2-f23d625c872f9b720cbf6f27",
+          "source": "wikipedia_pl",
+          "source_id": "571368",
+          "title": "(679) Pax",
+          "text": "(679) Pax – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 4 lat i 61 dni w średniej odległości 2,59 j.a. Została odkryta 28 stycznia 1909 roku w Landessternwarte Heidelberg-Königstuhl w Heidelbergu przez Augusta Kopffa. Nazwa planetoidy pochodzi od Pax, w mitologii rzymskiej bogini pokoju. Przed jej nadaniem planetoida nosiła oznaczenie tymczasowe (679) 1909 FY.",
+          "token_count": 111
+        },
+        {
+          "id": "glyph100-v2-fc9e432296f29c512e920b6a",
+          "source": "wikipedia_pl",
+          "source_id": "564957",
+          "title": "Ordu",
+          "text": "Ordu – miasto w Turcji, położone nad Morzem Czarnym. Siedziba władz prowincji Ordu. Znane było w starożytnej Grecji pod nazwą Κοτύωρα (Kotyora). Według danych na rok 2014 miasto zamieszkiwało 195 817 osób, a całą prowincję ok. 741 371 osób. Gęstość zaludnienia w prowincji wynosiła ok. 150 osób na km². Miasta w Turcji Miejscowości w prowincji Ordu",
+          "token_count": 85
+        },
+        {
+          "id": "glyph100-v2-e681a7cbd6f4aee1538de89a",
+          "source": "wikipedia_pl",
+          "source_id": "496697",
+          "title": "Caprese",
+          "text": "Caprese – rodzaj sałatki pochodzącej z regionu Kampania w południowych Włoszech. Przyrządza się ją z pokrojonych w plastry pomidorów oraz mozzarelli przełożonych na przemian, polanych oliwą z oliwek posypanych grubo zmielonym pieprzem i udekorowanych liśćmi bazylii. Ma ona odzwierciedlać włoską flagę. Kuchnia włoska Potrawy z serów Sałatki",
+          "token_count": 97
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-636331",
+          "source": "wikisource_pl",
+          "source_id": "636331",
+          "title": "Sonet XCV (Shakespeare)",
+          "text": "tekst oryginalny — Williama Shakespeare'a według krytycznej edycji z 1883 roku Williama Jamesa Rolfe'a tłumaczenie z 1850 roku — Konstantego Piotrowskiego ze zbioru Wybór sonetów Szekspira, Miltona i lorda Bajrona tłumaczenie z 1913 roku — Marii Sułkowskiej (MUS) ze zbioru Sonety Shakespeare’a tłumaczenie z 1922 roku — Jana Kasprowicza ze zbioru Sonety tłumaczenie z 1948 roku — Władysława Tarnawskiego z rękopisu więziennego Sonety Szekspira",
+          "token_count": 129
+        },
+        {
+          "id": "glyph100-v2-e0fa1c74d274e94d5f5a0ca8",
+          "source": "wikipedia_pl",
+          "source_id": "571165",
+          "title": "(524) Fidelio",
+          "text": "(524) Fidelio – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 4 lat i 192 dni w średniej odległości 2,63 j.a. Została odkryta 14 marca 1904 roku w Landessternwarte Heidelberg-Königstuhl, w Heidelbergu przez Maxa Wolfa. Nazwa planetoidy pochodzi od pseudonimu Leonory w jedynej operze Ludwiga van Beethovena, Fidelio. Przed jej nadaniem planetoida nosiła oznaczenie tymczasowe (524) 1904 NN.",
+          "token_count": 125
+        },
+        {
+          "id": "glyph100-v2-5cc0a98d9825402a982fbe74",
+          "source": "wikipedia_pl",
+          "source_id": "551749",
+          "title": "Krajowy Związek Lokatorów i Spółdzielców",
+          "text": "Krajowy Związek Lokatorów i Spółdzielców (KZLiS) – polska organizacja społeczno-polityczna zarejestrowana jako stowarzyszenie o ogólnokrajowym zasięgu działania, która powstała na bazie niezadowolenia zaistniałego w spółdzielczości mieszkaniowej po wejściu w życie ustawy z dnia 30 listopada 1995 r. o pomocy państwa w spłacie niektórych kredytów mieszkaniowych. Rejestracja stowarzyszenia KZLiS jako organizacji ogólnopolskiej miała miejsce 17 lutego 1997 w Sądzie Wojewódzkim w Koninie. Działania stowarzyszenia zmierzają do wyzwolenia w spółdzielcach wiary w potrzebę dokonywania zmian w przepisach, które mają służyć spółdzielcom, a nie działać na ich niekorzyść. Należy zauważyć, że Związek liczy ponad 50 oddziałów w całym kraju, w których zrzesza kilkanaście tysięcy członków oraz licznych sympatyków. Cała działalność odbywa się bez żadnych dotacji. Podstawą bytu są składki i środki własn...",
+          "token_count": 213
+        },
+        {
+          "id": "glyph100-v2-17655c29d3934da3b440a870",
+          "source": "wikipedia_pl",
+          "source_id": "532011",
+          "title": "Roland Barthes",
+          "text": "Roland Barthes fr: ʀɔlɑ̃: baʀt, (ur. 12 listopada 1915 w Cherbourgu, zm. 25 marca 1980 w Paryżu) – francuski filozof, krytyk literacki, pisarz, czołowy przedstawiciel strukturalizmu i poststrukturalizmu francuskiego, teoretyk semiologii. Życiorys Urodził się jako syn Louisa Barthes’a, służącego wówczas w marynarce wojennej, oraz jego towarzyszki życia Henriette Binger. Ojca stracił wcześnie – Louis Barthes poległ podczas bitwy morskiej na Morzu Północnym. Lata dzieciństwa spędził w Bajonnie, wychowywany przez matkę i ciotkę, kobietę bardzo muzykalną, która udzielała mu lekcji gry na fortepianie; w 1924 roku razem z matką przeprowadzili się do Paryża. W autobiograficznym tekście Barthes wspomina: \"W mojej przeszłości najbardziej fascynuje mnie dzieciństwo; to właśnie ono – i tylko ono – kiedy spoglądam wstecz – sprawia, że nie żałuję czasu minionego\". Przez całe życie wielkie znaczenie...",
+          "token_count": 3258
+        },
+        {
+          "id": "glyph100-v2-2ab2de5dbec04612a024d123",
+          "source": "wikipedia_pl",
+          "source_id": "481755",
+          "title": "Jerzy Katlewicz",
+          "text": "Jerzy Józef Katlewicz (ur. 2 kwietnia 1927 w Bochni, zm. 16 listopada 2015 w Krakowie) – polski dyrygent i pedagog, profesor Akademii Muzycznej w Krakowie. Życiorys Pierwszych lekcji muzyki udzielał mu ojciec, Stanisław Katlewicz, wieloletni (1919–1962) organista kościoła parafialnego pw. św. Mikołaja, który przed przeprowadzką do Bochni był organistą w katedrze lwowskiej. Stanisław prowadził również przez wiele lat Chór Koronacyjny w Bochni. Następnie Jerzy pobierał naukę w prywatnej szkole muzycznej pani Gnoińskiej, później był uczniem prof. Jerzego Żurawlewa – inicjatora konkursów chopinowskich, który, wysiedlony z Warszawy po upadku Powstania Warszawskiego, do 1946 mieszkał w Bochni. W 1952 ukończył z odznaczeniem dyrygenturę w Państwowej Wyższej Szkole Muzycznej w Krakowie (obecnie Akademia Muzyczna) w klasie Artura Malawskiego, także studiował w jego klasie kompozycję oraz forte...",
+          "token_count": 1755
+        },
+        {
+          "id": "glyph100-v2-b88a175b5bdcd56ed717cc7f",
+          "source": "wikipedia_pl",
+          "source_id": "501197",
+          "title": "Huntington (Wirginia Zachodnia)",
+          "text": "Huntington - miasto w Stanach Zjednoczonych, w stanie Wirginia Zachodnia, port nad rzeką Ohio. W 2005 r. miasto liczyło ok. 48 tys. mieszkańców. Urodził się tu Carwood C. Lipton, znany z książki i serialu \"Kompania Braci\". W mieście rozwinął się przemysł metalowy, taboru kolejowego oraz hutniczy.",
+          "token_count": 81
+        },
+        {
+          "id": "glyph100-v2-0262097c89438dd9303a1afd",
+          "source": "wikipedia_pl",
+          "source_id": "564389",
+          "title": "Święty Izydor",
+          "text": "św. Izydor z Sewilli (ur. ok. 560, zm. 636) – biskup Sewilli, patron internetu, internautów, informatyków, programistów, wspomnienie 4 kwietnia św. Izydor Oracz (ur. ok. 1080, zm. ok. 1130) – pobożny mieszkaniec Madrytu, patron tego miasta oraz rolników, wspomnienie 15 maja św. Izydor z Chios (ur. III w, zm. 251) – święty i męczennik Kościoła katolickiego i Cerkwi prawosławnej, wspomnienie 15 maja",
+          "token_count": 129
+        },
+        {
+          "id": "glyph100-v2-3775133d9825ef647ffe9aa7",
+          "source": "wikipedia_pl",
+          "source_id": "491779",
+          "title": "Cięcie cesarskie",
+          "text": "Cięcie cesarskie () – zabieg chirurgiczny, polegający na rozcięciu powłok brzusznych oraz macicy (dawniej pionowo, obecnie coraz częściej poziomo na granicy trzonu i szyjki macicy) i wydobyciu dziecka. Zazwyczaj wykonuje się go, gdy naturalny poród jest niemożliwy. Gdy zabieg jest planowany, przeprowadza się go w znieczuleniu (zewnątrzoponowo lub podpajęczynówkowo). Jeśli zabieg wykonuje się w trybie ostrym (nieplanowo), najczęściej znieczula się ogólnie (narkoza). Według zaleceń Światowej Organizacji Zdrowia (WHO) odsetek ciąż rozwiązywanych przez cięcie cesarskie w żadnym kraju nie powinien przekraczać 15%. W 2006 roku w USA wyniósł on 31,1%. W Polsce wg raportu z 2015 wskaźnik ten wynosi 43%. Wskazania Wskazania do cięcia cesarskiego stanowią przedmiot dużych kontrowersji w piśmiennictwie medycznym. Według rekomendacji Polskiego Towarzystwa Ginekologicznego wskazania do cięcia są n...",
+          "token_count": 1521
+        },
+        {
+          "id": "glyph100-v2-db8ba48762983aa1bbf6478c",
+          "source": "wikipedia_pl",
+          "source_id": "574136",
+          "title": "(2940) Bacon",
+          "text": "(2940) Bacon – planetoida z grupy pasa głównego asteroid okrążająca Słońce w ciągu 4 lat i 236 dni w średniej odległości 2,78 j.a. Została odkryta 24 września 1960 roku w Obserwatorium Palomar w programie Palomar-Leiden-Survey. Nazwa planetoidy pochodzi od Francis Bacona, angielskiego filozofa i eseisty. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (2940) 3042 P-L.",
+          "token_count": 108
+        },
+        {
+          "id": "glyph100-v2-66dbf6ed0e7a5ca3a12fc5c8",
+          "source": "wikipedia_pl",
+          "source_id": "458385",
+          "title": "Kalendarium powstania warszawskiego – 23 września",
+          "text": "23 września, sobota Pogorszenie sytuacji wojska i ludności na Żoliborzu, bombardowanie dzielnicy. Także silnie atakowany rejon obecnej al. Niepodległości na Mokotowie. Niemcy wzmacniają atak w celu zdobycia tej dzielnicy. Ciężkie walki na Solcu (Górnym Czerniakowie) – niektóre oddziały przechodzą stamtąd do Śródmieścia. Zgrupowanie „Kryska” wraz z żołnierzami „Radosława” i „Siekiery” od 10 września wciąż broni wcześniej opanowanych terenów jednak sytuacja pogarsza się. Tego dnia ciężkie walki o przyczółek czerniakowski. Resztki batalionów „Zośka” i „Parasol” oraz żołnierzy 1 Armii WP tracą ostatni silnie przez nich broniony i długo utrzymywany dom na ul. Wilanowskiej 1. W rejonie tej ulicy oddziały niemieckie wzięły do niewoli 470 żołnierzy - obrońców Czerniakowa. Z nich zamordowały 200 rannych powstańców i berlingowców, wieszając część na pasach transmisyjnych. Reszta AK-owców i żołn...",
+          "token_count": 542
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-13149",
+          "source": "wikisource_pl",
+          "source_id": "13149",
+          "title": "Numa Pompiliusz",
+          "text": "Pompiliusz, w którymś romansie podobno, Coś u ostatniej gdzieś karty, Z Numą się wreszcie ożenił nadobną, Żeby zakończyć tom czwarty. W miejscu tym w książce przypada okładka, Ja jednak pociągnę dalej, Bo to istotnie rzecz dziwna i rzadka, Jak się ci ludzie kochali. Czego on nie chciał i ona nie chciała, To samo chciał on, co ona; Przedziwna wspólność duszy czy też ciała, Której i śmierć nie pokona. Bo aż i w zgonie (któż się nie zaduma? My już dziś takich nie mamy!) Kiedy Pompiliusz umarł, wraz i Numa Umarła chwili tej samej. Jednak wstrzymajcie słuszne niepokoje... Przykładny ten mąż i żona Był jeden człowiek po prostu, nie dwoje, Tylko że dwa miał imiona. Felicjan Faleński Liryka",
+          "token_count": 195
+        },
+        {
+          "id": "glyph100-v2-2588349a09813496a1e7386a",
+          "source": "wikipedia_pl",
+          "source_id": "417595",
+          "title": "Pierścieniakowate",
+          "text": "Pierścieniakowate (Strophariaceae Singer & A.H. Sm.) – rodzina grzybów z rzędu pieczarkowców. Charakterystyka Grzyby z rodziny Strophariaceae wytwarzają mięsiste owocniki o hymenoforze blaszkowym, z trzonami często opatrzonymi pierścieniem. Zarodniki pierścieniakowatych są gładkie, a ich wysyp ciemno zabarwiony. Systematyka Według aktualizowanej klasyfikacji CABI databases bazującej na Dictionary of the Fungi do rodziny tej należą rodzaje: Agrocybe Fayod 1889 – polówka Bogbodia Redhead 2013 Brauniella Rick ex Singer 1955 Deconica (W.G. Sm.) P. Karst. 1879 Hypholoma (Fr.) P. Kumm. 1871 Kuehneromyces Singer & A.H. Sm. 1946 Leratiomyces Bresinsky & Manfr. Binder ex Bridge, Spooner, Beever & D.C. Park 2008 Melanotus Pat. 1900 Pachylepyrium Singer 1958 Pholiota (Fr.) P. Kumm. 1871 – łuskwiak Protostropharia Redhead, Moncalvo & Vilgalys 201 Pseudogymnopilus Raithelh. 1974 Pyrrhulomyces E.J....",
+          "token_count": 352
+        },
+        {
+          "id": "glyph100-v2-e0b93427e750c0061902b44d",
+          "source": "wikipedia_pl",
+          "source_id": "549064",
+          "title": "Wimbledon 2000",
+          "text": "Wimbledon 2000 – trzeci w sezonie wielkoszlemowy turniej tenisowy, który rozegrano w dniach 26 czerwca – 9 lipca, na kortach londyńskiego All England Lawn Tennis and Croquet Club. Mistrzem zawodów singlowych został Pete Sampras, który zarazem obronił tytuł z poprzedniej edycji rozgrywek. Ponadto był to ostatni tytuł Amerykanina spośród siedmiu zdobytych na londyńskich kortach. Nową zwyciężczynią gry pojedynczej u kobiet została Venus Williams, wygrywając swój pierwszy wielkoszlemowy tytuł w karierze. Dodatkowo Williams wygrała konkurencję debla razem ze swoją siostrą Sereną. Australijczycy Todd Woodbridge i Mark Woodforde zdobyli razem podczas tej edycji swój szósty tytuł na wimbledońskich kortach. Turnieje seniorskie Gra pojedyncza mężczyzn Gra pojedyncza kobiet Gra podwójna mężczyzn Gra podwójna kobiet Gra mieszana Turnieje juniorskie Gra pojedyncza chłopców Gra pojedyncza dziewcząt...",
+          "token_count": 225
+        },
+        {
+          "id": "glyph100-v2-265b7681fbc63e013eb9d6dd",
+          "source": "wikipedia_pl",
+          "source_id": "528185",
+          "title": "Mario Pio Gaspari",
+          "text": "Mario Pio Gaspari (ur. 8 kwietnia 1918, zm. 23 czerwca 1983) – włoski duchowny katolicki, dyplomata watykański, arcybiskup tytularny. Święcenia kapłańskie otrzymał 21 lipca 1940. W czerwcu 1973 został mianowany delegatem apostolskim w Meksyku, z arcybiskupią stolicą tytularną Numida. Sakry biskupiej udzielił mu 29 czerwca 1973 papież Paweł VI z towarzyszeniem arcybiskupów Agostino Casaroli i Barnardina Gantina. W listopadzie 1977 został przeniesiony na stanowisko pronuncjusza apostolskiego w Japonii. W kwietniu 1982 przewodniczył uroczystościom pogrzebowym polskiego misjonarza franciszkańskiego w Japonii, Zenona Żebrowskiego.",
+          "token_count": 160
+        },
+        {
+          "id": "glyph100-v2-564a7a447d45d6f551e32d07",
+          "source": "wikipedia_pl",
+          "source_id": "491023",
+          "title": "Dora Boothby",
+          "text": "Penelope Dora Harvey Boothby, zamężna Geen (ur. 2 sierpnia 1881 w Finchley, zm. 22 lutego 1970 w Londynie) – tenisistka brytyjska, zwyciężczyni Wimbledonu w grze pojedynczej i podwójnej. Czołowa zawodniczka brytyjska w okresie tuż przed I wojną światową, praworęczna, zdobyła wicemistrzostwo olimpijskie w Londynie (1908) w turnieju na kortach otwartych (przegrała w finale z Dorotheą Douglass Chambers). W turnieju na kortach krytych odpadła w ćwierćfinale po przegranej z Alice Greene. Boothby triumfowała w grze pojedynczej na Wimbledonie w 1909, pokonując w finale specjalistkę deblową Agnes Morton 6:4, 4:6, 8:6. Rok później walczyła o zwycięstwo jako obrończyni tytułu w tzw. challenge round (z zawodniczką wyłonioną w turnieju pretendentek), ulegając zdecydowanie rodaczce Dorothei Douglass Chambers 2:6, 2:6. Z tą samą przeciwniczką przegrała w challenge round w 1911, kiedy role się odwró...",
+          "token_count": 437
+        },
+        {
+          "id": "glyph100-v2-de1355736b5ababaa68198d7",
+          "source": "wikipedia_pl",
+          "source_id": "527099",
+          "title": "Institutio religionis christianae",
+          "text": "Institutio religionis christianae lub Institutio Christianae religionis nunc uere demum suo titulo respondens (fr. L’Institution de la religion chrétienne, pol. Istota (Ustanowienie lub Nauka) religii chrześcijańskiej) – traktat teologiczny, napisany przez Jana Kalwina w 1536. . . . Historia powstania dzieła Arcydzieło to wyszło spod pióra Kalwina niczym „Minerva, która w pełnym rynsztunku wyskoczyła z głowy Jowisza”. Usunęło ono w cień wcześniejsze podręczniki teologii protestanckiej: Melanchtona Loci Communes, a także komentarz o prawdziwej i fałszywej religii Zwingliego Kommentar über die wahre und die falsche Religion. Kalwin wielokrotnie uzupełniał i poprawiał to dzieło, jednak jego zasadnicza treść pozostała niezmienna – w kolejnych wersjach dzieła nigdy nie zmienił swoich zasadniczych tez. Dzieło to poprzedza obszerna dedykacja do króla Francji Franciszka I, w której autor bron...",
+          "token_count": 1284
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-635755",
+          "source": "wikisource_pl",
+          "source_id": "635755",
+          "title": "Sonet III (Shakespeare)",
+          "text": "tekst oryginalny — Williama Shakespeare'a według krytycznej edycji z 1883 roku Williama Jamesa Rolfe'a tłumaczenie z 1913 roku — Marii Sułkowskiej (MUS) ze zbioru Sonety Shakespeare’a tłumaczenie z 1922 roku — Jana Kasprowicza ze zbioru Sonety tłumaczenie z 1948 roku — Władysława Tarnawskiego z rękopisu więziennego Sonety Szekspira",
+          "token_count": 98
+        },
+        {
+          "id": "glyph100-v2-7a7f3cf343e00d20e0a61eb1",
+          "source": "wikipedia_pl",
+          "source_id": "572656",
+          "title": "(1540) Kevola",
+          "text": "(1540) Kevola – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 4 lat i 298 dni w średniej odległości 2,85 au. Została odkryta 16 listopada 1938 roku w Obserwatorium Iso-Heikkilä w Turku przez Liisi Otermę. Nazwa planetoidy pochodzi od miejscowości Kevola, gdzie znajduje się Obserwatorium Kevola. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (1540) 1938 WK.",
+          "token_count": 104
+        },
+        {
+          "id": "glyph100-v2-9eb25c42b1c8069c7d18e270",
+          "source": "wikipedia_pl",
+          "source_id": "552347",
+          "title": "Juan Ramón López Caro",
+          "text": "Juan Ramón López Caro (ur. 23 marca 1963 w Lebriji) – hiszpański trener piłkarski. Życiorys W 2001 objął rezerwową drużynę Realu Madryt – Real Madryt B (obecnie Real Madryt Castilla), z którą awansował do Segunda División. 5 grudnia 2005 został następcą Vanderleia Luxemburgo na stanowisku pierwszego trenera Realu Madryt. 27 maja 2006 ogłoszono, że zostanie trenerem Racingu Santander, ale jeszcze przed rozpoczęciem sezonu 2006/2007 odszedł do Levante. Od 8 października 2007 do 10 marca 2008 pełnił funkcję trenera Celty Vigo. Hiszpańscy trenerzy piłkarscy Trenerzy piłkarzy Realu Madryt Castilla Trenerzy piłkarzy Realu Madryt Trenerzy piłkarzy Racingu Santander Trenerzy piłkarzy Levante UD Trenerzy piłkarzy Celty Vigo Trenerzy piłkarzy Dalian Professional Selekcjonerzy reprezentacji Arabii Saudyjskiej w piłce nożnej mężczyzn Selekcjonerzy reprezentacji Omanu w piłce nożnej mężczyzn Urodz...",
+          "token_count": 226
+        },
+        {
+          "id": "glyph100-v2-fdc4b259f9049f7a8e4b81c7",
+          "source": "wikipedia_pl",
+          "source_id": "572725",
+          "title": "(1567) Alikoski",
+          "text": "(1567) Alikoski – planetoida należąca do zewnętrznej części pasa głównego asteroid okrążająca Słońce w ciągu 5 lat i 276 dni w średniej odległości 3,21 au. Została odkryta 22 kwietnia 1941 roku w Obserwatorium Iso-Heikkilä przez Yrjö Väisälä. Nazwa planetoidy pochodzi od Heikki Alikoskiego, fińskiego astronoma. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (1567) 1941 HN.",
+          "token_count": 108
+        },
+        {
+          "id": "glyph100-v2-40badecb1fe9b522bde649b0",
+          "source": "wikipedia_pl",
+          "source_id": "574014",
+          "title": "(2745) San Martin",
+          "text": "(2745) San Martin – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 3 lat i 170 dni w średniej odległości 2,29 j.a. Została odkryta 25 września 1976 roku w Obserwatorium Féliksa Aguilara. Nazwa planetoidy pochodzi od José de San Martína (1778-1850), argentyńskiego generała. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (2745) 1976 SR10.",
+          "token_count": 101
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-121922",
+          "source": "wikisource_pl",
+          "source_id": "121922",
+          "title": "Trzecie rozporządzenie o ograniczeniu pobytu w Generalnym Gubernatorstwie",
+          "text": "Trzecie rozporządzenie o ograniczeniu pobytu w Generalnym Gubernatorstwie z 15 października 1941 r. Na podstawie § 5 ust. 1 Dekretu Führera z dnia 12 października 1939 r. („Dz.U. Rzeszy Niem.” I, str. 2077) rozporządzam: § 1 W rozporządzeniu o ograniczeniach pobytu Generalnym Gubernatorstwie z dnia 13 września 1940 r. („Dz. Rozp. GG” I, str. 288) ze zmianami drugiego rozporządzenia o ograniczeniach pobytu w Generalnym Gubernatorstwie z dnia 29 kwietnia 1941 r. („Dz. Rozp. GG”, str. 274) wstawia się po § 4a następujący § 4b: (1) Żydzi, którzy bez upoważnienia opuszczają wyznaczoną im dzielnicę, podlegają karze śmierci. Tej samej karze podlegają osoby, które takim Żydom świadomie dają kryjówkę. (2) Podżegacze i pomocnicy podlegają tej samej karze jak sprawca, czyn usiłowany karany będzie jak czyn dokonany. W lżejszych wypadkach można orzec ciężkie więzienie lub więzienie. (3) Zawyrokowa...",
+          "token_count": 286
+        },
+        {
+          "id": "glyph100-v2-0197b324d4527976849d9631",
+          "source": "wikipedia_pl",
+          "source_id": "488054",
+          "title": "Algorytm Grahama",
+          "text": "Algorytm Grahama – efektywny algorytm wyszukiwania otoczki wypukłej skończonego zbioru punktów płaszczyzny; nie istnieją warianty dla przestrzeni o wyższych wymiarach. Pomysłodawcą algorytmu jest Ronald Graham. Czasowa złożoność obliczeniowa wynosi Algorytm przebiega następująco: Wybierz punkt (ozn. O) o najniższej wartości współrzędnej y. Przesuń wszystkie punkty tak, by punkt O pokrył się z początkiem układu współrzędnych. Posortuj punkty leksykograficznie względem: kąta pomiędzy wektorem a dodatnią osią układu współrzędnych, odległości punktu od początku układu współrzędnych. Wybierz punkt (ozn. S) o najmniejszej współrzędnej y; jeśli kilka punktów ma tę samą współrzędną y, wybierz spośród nich ten o najmniejszej współrzędnej x. Przeglądaj listę posortowanych punktów poczynając od punktu S: Od bieżącej pozycji weź trzy kolejne punkty (ozn. A, B, C). Jeśli punkt B leży na zewnątrz t...",
+          "token_count": 423
+        },
+        {
+          "id": "glyph100-v2-ae250753b84c23a372484baf",
+          "source": "wikipedia_pl",
+          "source_id": "536176",
+          "title": "Dicken",
+          "text": "Dicken (od niem. dick - gruby), srebrna moneta emitowana od końca XV w. przez szwajcarskie kantony i w państwach południowoniemieckich, będąca naśladownictwem północnowłoskiego testona. Wprowadzona w celu zaspokojenia dotkliwego dla wymiany handlowej braku grubszej monety srebrnej, w związku z wypadnięciem z tej roli grosza, który po II wiekach od zaistnienia był już monetą drobną, w wyniku spadku ceny srebra i zaniżania wagi przez emitentów. Wartość dickena ustaliła się początkowo na trzecią część złotego guldena, później (XVI w.), w związku ze spadkiem wartości srebra, na guldena potrzebne były cztery dickeny. Podobnie jak teston, moneta charakteryzowała się wysokim poziomem wykonania stempli, odzwerciedlającym postęp, który nastąpił w sztuce menniczej, szczególnie w początkach XVI w. Awers monety przedstawiał popiersie władcy, rewers herb. Dickena wybito po raz pierwszy w Bernie w...",
+          "token_count": 325
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-8778",
+          "source": "wikisource_pl",
+          "source_id": "8778",
+          "title": "Biblia Gdańska/Księga Ezechiela 17",
+          "text": "Ez 17 1 Stało się zaś słowo Pańskie do mnie, mówiąc: 2 Synu człowieczy! zadaj zagadkę, a mów w podobieństwie o domu Izraelskim, 3 I rzecz: Tak mówi panujący Pan: Orzeł wielki z wielkiemi skrzydłami i z długiemi pióry, pełen pierza pstrego, przyleciał na Liban, i wziął wierzch cedru. 4 Wierzch młodocianych latorośli jego ułamał, i zaniósł go do ziemi kupieckiej, a w mieście kupieckiem położył go. 5 Wziął też nasienia onej ziemi, a wsadził je na polu urodzajnem, a wsadził je bardzo ostrożnie przy wodach wielkich; 6 Które weszłoby było, i byłoby winną macicą bujną, choć niskiego wzrostu; i byłyby latorośli jej ku niemu, a korzenie jej byłyby mu poddane. A tak byłoby było macicą winną, któraby była wydała latorośli, i wypuściła gałązki. 7 Ale był orzeł jeden wielki z wielkiemi skrzydłami i z gęstem pierzem, a oto ona winna macica przypoiła korzenie swoje ku niemu, i gałązki swe rozciągnęł...",
+          "token_count": 1134
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-939851",
+          "source": "wikisource_pl",
+          "source_id": "939851",
+          "title": "Paryż (Zola)/całość",
+          "text": "[] [] []Chemik obejrzał mechanizm, a przekonawszy się, iż motor funkcyonuje wskutek zastosowania materyału wybuchowego, uradowany uściskał Wilhelma i Tomasza, bo wprowadzili oni w czyn ideę, którą szerzył oddawna, zachęcając dotąd napróżno do poszukiwań w tym kierunku. — Stworzyliście cudo, moi drodzy! — wołał, zapalając się w podziwie. Zastosowanie tego systemu będzie miało nieobliczone znaczenie społeczne! Tak, tak, możecie mi wierzyć! W oczekiwaniu na udoskonalony, uproszczony motor elektryczny, wasz wynalazek urzeczywistnia ideał, napróżno dotąd szukany. Wasz motor da siłę pociągową wozom wszelkiego rodzaju, ułatwi rozwiązanie żeglugi powietrznej i znajdzie szerokie zastosowanie w drobnych warsztatach wszelkiego rodzaju. Każdy będzie mógł mieć siłę poruszającą na swoje usługi! Jest to olbrzymi krok naprzód w pogoni za ułatwieniem dobrobytu społecznego, zaoszczędzenie sił ludzkich,...",
+          "token_count": 3249
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-76592",
+          "source": "wikisource_pl",
+          "source_id": "76592",
+          "title": "Źródło",
+          "text": "Źródło – wiersz José María de Heredii Źródło – wiersz Cypriana Kamila Norwida Źródło – wiersz Kazimierza Przerwy-Tetmajera ze zbioru Erotyki Źródło – wiersz Lucjana Rydla Źródło – opowiadanie dla dzieci Christofa von Schmida w przekładzie Jana Chęcińskiego Źródło – opowiadanie Stefana Żeromskiego ze zbioru Rozdziobią nas kruki, wrony",
+          "token_count": 98
+        },
+        {
+          "id": "glyph100-v2-46dcf2e50775062c189343f3",
+          "source": "wikipedia_pl",
+          "source_id": "488436",
+          "title": "Kuczum",
+          "text": "Kuczum, Kyczym lub Kuczuma (zm. ok. 1600) – ostatni chan Chanatu Syberyjskiego, syn Murtazy z dynastii Szejbanidów. W 1563, po dziewięciu latach walk, po zgładzeniu w odwecie za śmierć dziadka swego poprzednika Jedigera zagarnął władzę w państwie. Od 1571 zaprzestał składania Rosji daniny, a w dwa lata później zaatakował Perm. Spowodowało to trwające od 1579 najazdy Kozaków pod dowództwem Jermaka Timofiejewicza. Po utracie jesienią 1582 stolicy chanatu, Kaszłyku, nadal prowadził uporczywą walkę, w której w 1585 poległ Jermak, a stolica została przejściowo odzyskana. Do 1589 wojska rosyjskie dokonały jednak ostatecznego podboju chanatu, a Kuczum musiał się wycofać na terytorium Ordy Nogajskiej w obecnym Kazachstanie. Prowadząc walkę o odzyskanie państwa, został ostatecznie pokonany przez gubernatora Andrieja Wojejkowa w 1598, a większość jego rodziny dostała się do niewoli. Zamordowany...",
+          "token_count": 324
+        },
+        {
+          "id": "glyph100-v2-97922dda80436dfdc52addb5",
+          "source": "wikipedia_pl",
+          "source_id": "556390",
+          "title": "Ołoj",
+          "text": "Ołoj (ros. Олой) – rzeka w azjatyckiej części Rosji, w Czukockim Okręgu Autonomicznym; prawy i zarazem najdłuższy dopływ Omołonu. Długość 471 km, powierzchnia dorzecza 23 100 km². Powstaje w Górach Kołymskich z połączenia rzek Lewy Ołoj i Prawy Ołoj; płynie w kierunku północno-zachodnim w szerokiej dolinie między grzbietami górskimi (pasma Uszurechen i Ołojskie). Zasilanie śniegowo-deszczowe; zamarza od października do końca maja.",
+          "token_count": 134
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-707914",
+          "source": "wikisource_pl",
+          "source_id": "707914",
+          "title": "Antychryst",
+          "text": "Utwory literackie: Antychryst. Opowieść z ostatnich dni świata – powieść Jana Łady z 1920 Antychryst – wiersz Wiktora Hugo ze zbioru Wybór poezyj pomniejszych Wiktora Hugo w przekładzie Brunona Kicińskiego Antychryst – część powieści Piotr i Aleksy (1904, tłum. pol. 1907), ostatniej z trylogii powieściowej Chrystus i Antychryst Dmitrija Mereżkowskiego Antychryst – rozdział tej powieści Antychryst! – artykuł Władysława Rabskiego opublikowany w tygodniku \"Świat\" Hasła słownikowe i encyklopedyczne: Antychryst – w Encyklopedji Kościelnej (1873) Antychryst – w Encyklopedii staropolskiej (1900–1903) Antychryst – w M. Arcta Słowniku ilustrowanym języka polskiego (1916) antichrist – w Słowniku „Dux-Liliput“ angielsko-polskim (1923) antychryst – w Słowniku etymologicznym języka polskiego (1927) Zobacz też Chrystus i Antychryst – trylogia powieściowa Dmitrija Mereżkowskiego „Antychryst idzie!...“",
+          "token_count": 271
+        },
+        {
+          "id": "glyph100-v2-bf4190a2ba804f8abe650600",
+          "source": "wikipedia_pl",
+          "source_id": "572102",
+          "title": "(1087) Arabis",
+          "text": "(1087) Arabis – planetoida z pasa głównego asteroid okrążająca Słońce w ciągu 5 lat i 86 dni w średniej odległości 3,01 au. Została odkryta 2 września 1927 roku w Landessternwarte Heidelberg-Königstuhl w Heidelbergu przez Karla Reinmutha. Nazwa planetoidy pochodzi od łacińskiej nazwy gęsiówki, rośliny z rodzaju kapustowatych. Przed nadaniem nazwy planetoida nosiła oznaczenie tymczasowe (1087) 1927 RD.",
+          "token_count": 111
+        },
+        {
+          "id": "glyph100-v2-5ec02b2e6539e22e175191d7",
+          "source": "wikipedia_pl",
+          "source_id": "570972",
+          "title": "(361) Bononia",
+          "text": "(361) Bononia – planetoida z grupy pasa głównego asteroid. Odkrycie Została odkryta 11 marca 1893 roku w Observatoire de Nice w Nicei przez Auguste Charloisa. Nazwa planetoidy pochodzi od łacińskiej nazwy miasta Bolonia jak również francuskiego miasta Boulogne-sur-Mer. Przed jej nadaniem planetoida nosiła oznaczenie tymczasowe (361) 1893 P. Orbita Okrążająca Słońce w ciągu 7 lat i 318 dni w średniej odległości 3,96 j.a. (361) Bononia należy do planetoid z rodziny Hilda, poruszających się po zbliżonych orbitach i pozostających w rezonansie 3:2 z Jowiszem.",
+          "token_count": 159
+        },
+        {
+          "id": "glyph100-v2-965c50453ffeb45c2174a3f0",
+          "source": "wikipedia_pl",
+          "source_id": "570726",
+          "title": "(157) Dejanira",
+          "text": "(157) Dejanira – planetoida z grupy pasa głównego asteroid. Odkrycie Została odkryta 1 grudnia 1875 roku w Marsylii przez Alphonse’a Borrelly’ego. Nazwa planetoidy pochodzi od Dejaniry, córki Altei i Ojneusa, drugiej żony Heraklesa w mitologii greckiej. Orbita (157) Dejanira okrąża Słońce w ciągu 4 lat i 54 dni w średniej odległości 2,58 j.a. Od tej planetoidy wzięła nazwę rodzina planetoidy Dejanira.",
+          "token_count": 120
+        },
+        {
+          "id": "glyph100-v2-94bccb3c0e9f549e503509e0",
+          "source": "wikipedia_pl",
+          "source_id": "430688",
+          "title": "El Hadji Diouf",
+          "text": "El Hadji Ousseynou Diouf (ur. 15 stycznia 1981 w Dakarze) – senegalski piłkarz grający na pozycji napastnika. Pierwotnie urodził się jako Ousseynou Diouf, zaś imię El Hadji przyjął po pielgrzymce do Mekki. W przeszłości występował w klubach: Stade Rennais, RC Lens, Liverpool, Bolton Wanderers i Sunderlandzie. Grał w Pucharze Narodów Afryki w 2002, 2006 i 2008 oraz na Mistrzostwach Świata 2002. Od 2011 do 2012 był zawodnikiem Doncaster Rovers. Grał też w Leeds United i Sabah FA. Został umieszczony przez Pelégo na jego liście 100 najlepszych żyjących piłkarzy świata. Jego osoba została wymieniona w dialogu 1. odcinka brytyjskiego serialu tv Okupacja z 2009 roku.",
+          "token_count": 187
+        },
+        {
+          "id": "glyph100-v2-b3c3538d074600c956c47539",
+          "source": "wikipedia_pl",
+          "source_id": "569491",
+          "title": "Bitwa pod Falkirk (1746)",
+          "text": "Bitwa pod Falkirk – starcie zbrojne, które miało miejsce 17 stycznia 1746 roku podczas powstania jakobickiego 1745 roku. Wstęp Po porażce pod Prestonpans, generał Cope został zastąpiony przez generała-porucznika Henry’ego Hawleya na stanowisku dowódcy królewskich sił zbrojnych w Szkocji. W tym czasie, w ostatnich miesiącach 1745 roku armia jakobicka ruszyła na południe w kierunku Londynu. Dotarła ona do Derby po czym, po otrzymaniu wieści o przeważających siłach królewskich zagradzających jej drogę – zawróciła na północ do Szkocji gdzie połączyła się z siłami Jakobitów oblegającymi królewskiego generała Blakeneya na zamku Stirling. W trakcie odwrotu – 18 grudnia 1745 roku armia jakobicka stoczyła zwycięską potyczkę pod Clifton Moor (zginęło 10 żołnierzy królewskich, zaś 21 zostało rannych, podczas gdy buntownicy stracili 5 zabitych). Hawley poprowadził swą armię z okolic Edynburga w c...",
+          "token_count": 1021
+        },
+        {
+          "id": "glyph100-v2-1-wikisource-7288",
+          "source": "wikisource_pl",
+          "source_id": "7288",
+          "title": "Biblia Gdańska/Druga Księga Królewska 25",
+          "text": "2 Krl 25 1 I stało się roku dziewiątego królowania jego, miesiąca dziesiątego, dnia dziesiątego tegoż miesiąca, że przyciągnął Nabuchodonozor, król Babiloński, on i wszystko wojsko jego przeciw Jeruzalemowi, i położył się obozem u niego, a porobił przeciwko niemu szańce w około. 2 A tak oblężone było miasto aż do jedenastego roku króla Sedekijasza. 3 Tedy dnia dziewiątego czwartego miesiąca był wielki głód w mieście, a nie miał chleba lud ziemi. 4 I przełamano mur miejski, a wszyscy ludzie rycerscy uciekli w nocy drogą, kędy idą do bramy, która jest między dwoma murami, które były podle ogrodu królewskiego; a Chaldejczycy leżeli około miasta, a król uszedł drogą do pustyni. 5 I goniło wojsko Chaldejskie króla, i pojmało go na polach Jerycho; a wszystko wojsko jego rozpierzchnęło się od niego. 6 A tak pojmawszy króla przywiedli go do króla Babilońskiego do Rebli, kędy o nim uczynili są...",
+          "token_count": 1469
+        },
+        {
+          "id": "glyph100-v2-a2ef0d0d9773bc22e62c322e",
+          "source": "wikipedia_pl",
+          "source_id": "495914",
+          "title": "Ibrahim Ferrer",
+          "text": "Ibrahim Ferrer (ur. 20 lutego 1927 w San Luis, zm. 6 sierpnia 2005 w Hawanie) – kubański muzyk i wokalista. Już od 12. roku życia, po śmierci matki, zarabiał śpiewając na ulicach. Rok później wraz z kuzynem założył swój pierwszy zespół muzyczny. Od 1953 roku śpiewał w grupie wraz z Pacho Alonso. W 1959 roku grupa przeniosła się do Hawany i odtąd nazywała się Los Bocucos. Międzynarodową sławę zyskał Ibrahim Ferrer dopiero dzięki płycie Buena Vista Social Club nagranej wraz z Ryem Cooderem w 1997 roku oraz filmowi pod tym samym tytułem w reżyserii Wima Wendersa, który powstał w 1999 roku. W tym samym roku ukazał się też jego pierwszy solowy album. Buena Vista Social Club Kubańscy wokaliści Urodzeni w 1927 Zmarli w 2005",
+          "token_count": 198
+        }
+      ],
+      "risk": "cleanest but small; many repeated epochs at 50k"
+    }
+  },
+  "next_decision": "User approval required before any stage 3 training."
+}

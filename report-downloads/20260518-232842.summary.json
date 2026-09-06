@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-18T23:40:03.925873+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260518-232842.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260518-232842.jsonl",
+  "count": 60,
+  "valid_count": 58,
+  "overall_avg": 2.897,
+  "averages": {
+    "continuation_fit": 3.207,
+    "polish": 3.345,
+    "coherence": 2.931,
+    "repetition": 2.552,
+    "safety": 5.0,
+    "overall": 2.897
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.897/5 na 58/60 próbkach. Trening: step=130790, train_loss=3.7252, val_loss=4.5182, lr=0.000104. Najsłabsze średnie: repetition=2.55, coherence=2.93; najmocniejsza metryka: polish=3.35.",
+  "training_stats": {
+    "step": 130790,
+    "total_steps": 200000,
+    "progress_pct": 65.39500000000001,
+    "loss": 3.7252,
+    "lr": 0.000104,
+    "last_eval": {
+      "ts": "2026-05-18 23:00:49",
+      "step": 130500,
+      "val_loss": 4.5182
+    },
+    "tokens_m": 1071.43
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.897. Najsłabsze metryki to 'repetition' (2.552) oraz 'coherence' (2.931). W kontekście treningowym, train_loss (3.7252) jest niższy niż val_loss (4.5182), co sugeruje potencjalne przeuczenie na danych treningowych. Model wykazuje powtarzanie fraz i elementów narracyjnych (np. 'w małym miasteczku nad rzeką'), co obniża spójność i płynność tekstu.",
+  "raw_description_output": "```json\n{\n  \"description\": \"Ogólny wynik benchmarkowy wynosi 2.897. Najsłabsze metryki to 'repetition' (2.552) oraz 'coherence' (2.931). W kontekście treningowym, train_loss (3.7252) jest niższy niż val_loss (4.5182), co sugeruje potencjalne przeuczenie na danych treningowych. Model wykazuje powtarzanie fraz i elementów narracyjnych (np. 'w małym miasteczku nad rzeką'), co obniża spójność i płynność tekstu.\"\n}\n```"
+}

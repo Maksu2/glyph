@@ -1,0 +1,784 @@
+{
+  "dataset": "glyph100_sft_smoke_v0_2",
+  "purpose": "corrected small SFT smoke dataset focused on repetition, end-token behavior and answer diversity",
+  "input_v0": "data/sft/glyph100_sft_smoke_v0.jsonl",
+  "output": "data/sft/glyph100_sft_smoke_v0_2.jsonl",
+  "tokenizer": "data/processed/tokenizer.model",
+  "context_len": 512,
+  "stats": {
+    "examples": 2176,
+    "categories": {
+      "anty_powtorzenia_i_konczenie": 360,
+      "ostrozne_odpowiedzi_przy_niepewnosci": 150,
+      "krotkie_poprawki_tekstu": 186,
+      "proste_techniczne_wyjasnienia": 150,
+      "mvp_first_project_advice": 150,
+      "naturalne_zakonczenia": 246,
+      "brak_danych": 270,
+      "codzienne_proste_pytania": 150,
+      "krotkie_definicje": 214,
+      "anty_petle": 150,
+      "mini_streszczenia": 150
+    },
+    "qualities": {
+      "approved": 2176
+    },
+    "sources": {
+      "synthetic_curated_sft_smoke_v0_2": 2176
+    },
+    "instruction_chars_avg": 59.8203125,
+    "response_chars_avg": 77.12545955882354,
+    "instruction_words_avg": 8.763327205882353,
+    "response_words_avg": 11.057444852941176,
+    "instruction_words_total": 19069,
+    "response_words_total": 24061,
+    "total_words": 43130,
+    "instruction_duplicate_extra": 0,
+    "instruction_response_duplicate_extra": 0,
+    "bad_patterns": {
+      "empty_instruction": 0,
+      "empty_response": 0,
+      "very_short_response_lt_8_words": 356,
+      "very_long_response_gt_120_words": 0,
+      "control_chars": 0,
+      "as_language_model_phrase": 0,
+      "english_pattern": 0
+    },
+    "token_stats": {
+      "template_total_tokens": 86013,
+      "template_min": 21,
+      "template_max": 76,
+      "template_avg": 39.5280330882353,
+      "template_p50": 39.0,
+      "template_p90": 48.0,
+      "template_p95": 54.0,
+      "template_p99": 68.0,
+      "instruction_avg_tokens": 15.2265625,
+      "response_avg_tokens": 18.301470588235293,
+      "fits_context": 2176,
+      "over_context": 0,
+      "over_context_lines": []
+    }
+  },
+  "split_counts": {
+    "train": 1846,
+    "val": 218,
+    "test": 112
+  },
+  "split_paths": {
+    "train_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_2_train.jsonl",
+    "val_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_2_val.jsonl",
+    "test_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_2_test.jsonl",
+    "train_txt": "data/sft/processed/glyph100_sft_smoke_v0_2_train.txt",
+    "val_txt": "data/sft/processed/glyph100_sft_smoke_v0_2_val.txt",
+    "test_txt": "data/sft/processed/glyph100_sft_smoke_v0_2_test.txt"
+  },
+  "duplicates": {
+    "pair_extra": 0,
+    "instruction_extra": 0
+  },
+  "near_duplicates": [
+    {
+      "score": 1.0,
+      "line_a": 1028,
+      "line_b": 1313,
+      "instruction_a": "Odpowiedz jednym akapitem: co oznacza overfit?",
+      "instruction_b": "Odpowiedz jednym akapitem: co oznacza overfit? Jednym akapitem."
+    },
+    {
+      "score": 1.0,
+      "line_a": 1281,
+      "line_b": 1634,
+      "instruction_a": "Krótko i do końca: czy loss wystarczy?",
+      "instruction_b": "Krótko i do końca: czy loss wystarczy? Krótko."
+    },
+    {
+      "score": 0.909,
+      "line_a": 58,
+      "line_b": 104,
+      "instruction_a": "Popraw tekst: Ten tekst jest napisany w sposób niezbyt dobry i trzeba go poprawić.",
+      "instruction_b": "Skróć i popraw: Ten tekst jest napisany w sposób niezbyt dobry i trzeba go poprawić."
+    },
+    {
+      "score": 0.889,
+      "line_a": 264,
+      "line_b": 459,
+      "instruction_a": "Odpowiedz jednym zdaniem i zakończ: co zrobić, gdy brakuje danych? Krótko.",
+      "instruction_b": "Odpowiedz jednym zdaniem i zakończ: co zrobić, gdy brakuje danych?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 459,
+      "line_b": 1177,
+      "instruction_a": "Odpowiedz jednym zdaniem i zakończ: co zrobić, gdy brakuje danych?",
+      "instruction_b": "Odpowiedz jednym zdaniem i zakończ: co zrobić, gdy brakuje danych? Odpowiedz wprost."
+    },
+    {
+      "score": 0.889,
+      "line_a": 459,
+      "line_b": 1433,
+      "instruction_a": "Odpowiedz jednym zdaniem i zakończ: co zrobić, gdy brakuje danych?",
+      "instruction_b": "Odpowiedz jednym zdaniem i zakończ: co zrobić, gdy brakuje danych? Zakończ naturalnie."
+    },
+    {
+      "score": 1.0,
+      "line_a": 250,
+      "line_b": 615,
+      "instruction_a": "Odpowiedz krótko i zakończ naturalnie: czym jest backup? Zakończ naturalnie.",
+      "instruction_b": "Odpowiedz krótko i zakończ naturalnie: czym jest backup?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 641,
+      "line_b": 816,
+      "instruction_a": "W jednym akapicie: Czym jest top-p sampling?",
+      "instruction_b": "W jednym akapicie: Czym jest top-k sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 65,
+      "line_b": 146,
+      "instruction_a": "Czym jest top-p sampling?",
+      "instruction_b": "Czym jest top-k sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 239,
+      "line_b": 351,
+      "instruction_a": "Wyjaśnij krótko, czym jest top-k sampling?",
+      "instruction_b": "Wyjaśnij krótko, czym jest top-p sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 385,
+      "line_b": 1420,
+      "instruction_a": "Zakończ naturalnie: czym jest prototyp? Naturalnie.",
+      "instruction_b": "Zakończ naturalnie: czym jest prototyp?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 431,
+      "line_b": 1127,
+      "instruction_a": "Krótko i konkretnie: Czym jest top-p sampling?",
+      "instruction_b": "Krótko i konkretnie: Czym jest top-k sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 585,
+      "line_b": 1856,
+      "instruction_a": "Odpowiedz prosto: Czym jest top-k sampling?",
+      "instruction_b": "Odpowiedz prosto: Czym jest top-p sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 954,
+      "line_b": 1410,
+      "instruction_a": "Wyjaśnij prosto, czym jest log. Prosto.",
+      "instruction_b": "Wyjaśnij prosto, czym jest log."
+    },
+    {
+      "score": 1.0,
+      "line_a": 1190,
+      "line_b": 1441,
+      "instruction_a": "Czym jest prompt?",
+      "instruction_b": "Czym jest prompt? (2)"
+    },
+    {
+      "score": 1.0,
+      "line_a": 555,
+      "line_b": 1853,
+      "instruction_a": "Odpowiedz krótko: kiedy dataset jest za słaby? Krótko.",
+      "instruction_b": "Odpowiedz krótko: kiedy dataset jest za słaby?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 387,
+      "line_b": 1216,
+      "instruction_a": "Krótko: czy można ocenić laptop bez modelu?",
+      "instruction_b": "Krótko: czy można ocenić laptop bez modelu? Krótko."
+    },
+    {
+      "score": 0.889,
+      "line_a": 476,
+      "line_b": 1335,
+      "instruction_a": "Czy można porównać modele bez tych samych promptów? Krótko.",
+      "instruction_b": "Czy można porównać modele bez tych samych promptów?"
+    },
+    {
+      "score": 0.9,
+      "line_a": 699,
+      "line_b": 861,
+      "instruction_a": "Nie powtarzaj frazy: czy warto trenować dalej bez evala?",
+      "instruction_b": "Nie powtarzaj frazy: czy warto trenować dalej bez evala? Bez dygresji."
+    },
+    {
+      "score": 0.9,
+      "line_a": 699,
+      "line_b": 1099,
+      "instruction_a": "Nie powtarzaj frazy: czy warto trenować dalej bez evala?",
+      "instruction_b": "Nie powtarzaj frazy: czy warto trenować dalej bez evala? Krótko."
+    },
+    {
+      "score": 0.9,
+      "line_a": 699,
+      "line_b": 1399,
+      "instruction_a": "Nie powtarzaj frazy: czy warto trenować dalej bez evala?",
+      "instruction_b": "Nie powtarzaj frazy: czy warto trenować dalej bez evala? Bez powtarzania."
+    },
+    {
+      "score": 0.889,
+      "line_a": 73,
+      "line_b": 1700,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez dygresji.",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 653,
+      "line_b": 1700,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Nie powtarzaj.",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 1085,
+      "line_b": 1700,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Zwięźle.",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 1452,
+      "line_b": 1700,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez listy.",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 1700,
+      "line_b": 1752,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez metafor."
+    },
+    {
+      "score": 0.889,
+      "line_a": 75,
+      "line_b": 377,
+      "instruction_a": "Wyjaśnij w trzech zdaniach, dlaczego czysty dataset jest ważny.",
+      "instruction_b": "Wyjaśnij w trzech zdaniach, dlaczego czysty dataset jest ważny. Naturalnie."
+    },
+    {
+      "score": 1.0,
+      "line_a": 82,
+      "line_b": 2118,
+      "instruction_a": "Co zrobić, gdy pomysł nie działa?",
+      "instruction_b": "Co zrobić? Co zrobić, gdy pomysł nie działa?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 83,
+      "line_b": 271,
+      "instruction_a": "Co zrobić? Jak zrobić projekt portfolio?",
+      "instruction_b": "Jak zrobić projekt portfolio?"
+    },
+    {
+      "score": 0.909,
+      "line_a": 865,
+      "line_b": 1154,
+      "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+      "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Naturalnie."
+    },
+    {
+      "score": 0.909,
+      "line_a": 865,
+      "line_b": 1197,
+      "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+      "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Prosto."
+    },
+    {
+      "score": 0.909,
+      "line_a": 865,
+      "line_b": 2105,
+      "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+      "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Zwięźle."
+    },
+    {
+      "score": 0.889,
+      "line_a": 287,
+      "line_b": 1568,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych? Odpowiedz wprost.",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 725,
+      "line_b": 1568,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych? Bez listy.",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 1568,
+      "line_b": 1838,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych?",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych? Bez dygresji."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1568,
+      "line_b": 1934,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych?",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych? Nie powtarzaj."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1568,
+      "line_b": 2114,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych?",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych? Zwięźle."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1568,
+      "line_b": 2120,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych?",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych? Bez metafor."
+    },
+    {
+      "score": 1.0,
+      "line_a": 228,
+      "line_b": 842,
+      "instruction_a": "Zakończ naturalnie: czy większy model zawsze pomaga?",
+      "instruction_b": "Zakończ naturalnie: czy większy model zawsze pomaga? Zakończ naturalnie."
+    },
+    {
+      "score": 0.889,
+      "line_a": 523,
+      "line_b": 871,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Zwięźle.",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 523,
+      "line_b": 2162,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Zwięźle.",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+    },
+    {
+      "score": 0.889,
+      "line_a": 871,
+      "line_b": 889,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży?",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez metafor."
+    },
+    {
+      "score": 0.889,
+      "line_a": 871,
+      "line_b": 1252,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży?",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez dygresji."
+    },
+    {
+      "score": 1.0,
+      "line_a": 871,
+      "line_b": 2162,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży?",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+    },
+    {
+      "score": 0.889,
+      "line_a": 889,
+      "line_b": 2162,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez metafor.",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1252,
+      "line_b": 2162,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez dygresji.",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+    },
+    {
+      "score": 0.9,
+      "line_a": 509,
+      "line_b": 595,
+      "instruction_a": "Wyjaśnij w dwóch zdaniach, czemu nie oceniać modelu po jednym samplu.",
+      "instruction_b": "Wyjaśnij w dwóch zdaniach, czemu nie oceniać modelu po jednym samplu. Naturalnie."
+    },
+    {
+      "score": 0.9,
+      "line_a": 141,
+      "line_b": 1859,
+      "instruction_a": "Ten tekst nie powinien się zapętlać. Wyjaśnij krótko dlaczego. Zwięźle.",
+      "instruction_b": "Ten tekst nie powinien się zapętlać. Wyjaśnij krótko dlaczego."
+    },
+    {
+      "score": 0.9,
+      "line_a": 210,
+      "line_b": 1859,
+      "instruction_a": "Ten tekst nie powinien się zapętlać. Wyjaśnij krótko dlaczego. Nie powtarzaj.",
+      "instruction_b": "Ten tekst nie powinien się zapętlać. Wyjaśnij krótko dlaczego."
+    },
+    {
+      "score": 0.889,
+      "line_a": 261,
+      "line_b": 1300,
+      "instruction_a": "Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Nie powtarzaj.",
+      "instruction_b": "Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Zwięźle."
+    }
+  ],
+  "first_response_words": [
+    [
+      "Nie",
+      155
+    ],
+    [
+      "Nie,",
+      75
+    ],
+    [
+      "Trzeba",
+      75
+    ],
+    [
+      "Checkpoint",
+      46
+    ],
+    [
+      "Walidacja",
+      44
+    ],
+    [
+      "Bez",
+      42
+    ],
+    [
+      "Backup",
+      41
+    ],
+    [
+      "Model",
+      39
+    ],
+    [
+      "Najpierw",
+      36
+    ],
+    [
+      "Tokenizer",
+      36
+    ],
+    [
+      "Smoke",
+      34
+    ],
+    [
+      "Brakuje",
+      32
+    ],
+    [
+      "Wybierz",
+      30
+    ],
+    [
+      "Raport",
+      28
+    ],
+    [
+      "Zacznij",
+      27
+    ],
+    [
+      "To",
+      25
+    ],
+    [
+      "Usuń",
+      22
+    ],
+    [
+      "Potrzebny",
+      22
+    ],
+    [
+      "Potrzebne",
+      22
+    ],
+    [
+      "Log",
+      22
+    ],
+    [
+      "Sprawdź",
+      22
+    ],
+    [
+      "Ten",
+      21
+    ],
+    [
+      "Odpowiedź",
+      21
+    ],
+    [
+      "Projekt",
+      20
+    ],
+    [
+      "Raczej",
+      20
+    ],
+    [
+      "Na",
+      18
+    ],
+    [
+      "Powiedz,",
+      17
+    ],
+    [
+      "SFT",
+      17
+    ],
+    [
+      "Loss",
+      17
+    ],
+    [
+      "Zakończ",
+      17
+    ],
+    [
+      "Zbiór",
+      16
+    ],
+    [
+      "Overfit",
+      16
+    ],
+    [
+      "Tylko",
+      15
+    ],
+    [
+      "Testy",
+      15
+    ],
+    [
+      "Dodaj",
+      15
+    ],
+    [
+      "Krótka",
+      15
+    ],
+    [
+      "Pokaż",
+      15
+    ],
+    [
+      "Tak,",
+      15
+    ],
+    [
+      "Zapętlenie",
+      15
+    ],
+    [
+      "Lepsza",
+      15
+    ]
+  ],
+  "top_response_4grams": [
+    [
+      "nie da się tego",
+      37
+    ],
+    [
+      "backup to kopia danych",
+      31
+    ],
+    [
+      "to kopia danych potrzebna",
+      27
+    ],
+    [
+      "kopia danych potrzebna do",
+      27
+    ],
+    [
+      "danych potrzebna do odtworzenia",
+      27
+    ],
+    [
+      "potrzebna do odtworzenia ich",
+      27
+    ],
+    [
+      "do odtworzenia ich po",
+      27
+    ],
+    [
+      "odtworzenia ich po awarii",
+      27
+    ],
+    [
+      "checkpoint to zapis stanu",
+      26
+    ],
+    [
+      "to zapis stanu modelu",
+      26
+    ],
+    [
+      "potrzebny jest model cena",
+      24
+    ],
+    [
+      "zapis stanu modelu do",
+      22
+    ],
+    [
+      "stanu modelu do którego",
+      22
+    ],
+    [
+      "modelu do którego można",
+      22
+    ],
+    [
+      "do którego można wrócić",
+      22
+    ],
+    [
+      "którego można wrócić później",
+      22
+    ],
+    [
+      "raport zapisuje wynik ustawienia",
+      22
+    ],
+    [
+      "zapisuje wynik ustawienia i",
+      22
+    ],
+    [
+      "da się tego ocenić",
+      22
+    ],
+    [
+      "się tego ocenić bez",
+      22
+    ],
+    [
+      "większy model nadal zależy",
+      22
+    ],
+    [
+      "model nadal zależy od",
+      22
+    ],
+    [
+      "nadal zależy od jakości",
+      22
+    ],
+    [
+      "zależy od jakości danych",
+      22
+    ],
+    [
+      "nie da się ocenić",
+      20
+    ],
+    [
+      "da się ocenić bez",
+      20
+    ],
+    [
+      "zmniejsza szansę powtarzania tych",
+      17
+    ],
+    [
+      "szansę powtarzania tych samych",
+      17
+    ],
+    [
+      "powtarzania tych samych tokenów",
+      17
+    ],
+    [
+      "tych samych tokenów lub",
+      17
+    ],
+    [
+      "samych tokenów lub fraz",
+      17
+    ],
+    [
+      "jakość danych jest ważniejsza",
+      17
+    ],
+    [
+      "danych jest ważniejsza niż",
+      17
+    ],
+    [
+      "wtedy gdy główna myśl",
+      17
+    ],
+    [
+      "gdy główna myśl jest",
+      17
+    ],
+    [
+      "główna myśl jest jasna",
+      17
+    ],
+    [
+      "smoke test to krótka",
+      17
+    ],
+    [
+      "test to krótka próba",
+      17
+    ],
+    [
+      "to krótka próba sprawdzająca",
+      17
+    ],
+    [
+      "krótka próba sprawdzająca czy",
+      17
+    ]
+  ],
+  "suspicious_phrase_counts": {
+    "w latach 1975-1998": 0,
+    "w latach 1975–1998": 0,
+    "gminie": 0,
+    "powiecie": 0,
+    "województwie": 0,
+    "strona główna": 0,
+    "cookies": 0,
+    "kup teraz": 0,
+    "dodaj do koszyka": 0,
+    "zaloguj": 0,
+    "zarejestruj": 0,
+    "polityka prywatności": 0,
+    "jako model językowy": 0,
+    "jako sztuczna inteligencja": 0,
+    "kliknij": 0
+  },
+  "end_token_supervised_sanity": {
+    "checked_examples": 100,
+    "end_token_as_last_predictable_token": 100,
+    "end_token_id": 6
+  },
+  "quality_notes": [
+    "Derived from v0 with repaired repeated openings and added anti-repetition/end-token examples.",
+    "Includes one-sentence and 2-4 sentence responses.",
+    "Adds category anty_powtorzenia_i_konczenie.",
+    "No full SFT intent; this is a smoke-test dataset only."
+  ]
+}

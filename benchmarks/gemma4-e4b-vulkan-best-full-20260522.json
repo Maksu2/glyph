@@ -1,0 +1,208 @@
+{
+  "created_at": "2026-05-22T20:05:50.263229+00:00",
+  "image": "ghcr.io/ggml-org/llama.cpp:server-vulkan",
+  "results": [
+    {
+      "name": "best_vulkan_fa_batch_poll",
+      "args": [
+        "-c",
+        "4096",
+        "-b",
+        "2048",
+        "-ub",
+        "512",
+        "-ngl",
+        "99",
+        "-fa",
+        "on",
+        "--parallel",
+        "1",
+        "--threads",
+        "2",
+        "--threads-batch",
+        "2",
+        "--cache-ram",
+        "0",
+        "--no-cont-batching",
+        "--poll",
+        "100",
+        "--poll-batch",
+        "1"
+      ],
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "repeat": 1,
+          "elapsed_ms": 2939,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 123.342,
+            "prompt_per_token_ms": 5.606454545454546,
+            "prompt_per_second": 178.36584456227402,
+            "predicted_n": 128,
+            "predicted_ms": 2814.359,
+            "predicted_per_token_ms": 21.9871796875,
+            "predicted_per_second": 45.48104914831406
+          },
+          "content_len": 397
+        },
+        {
+          "prompt_id": "pl_tech",
+          "repeat": 1,
+          "elapsed_ms": 2935,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 28,
+            "prompt_ms": 126.444,
+            "prompt_per_token_ms": 4.515857142857143,
+            "prompt_per_second": 221.44190313498464,
+            "predicted_n": 128,
+            "predicted_ms": 2806.751,
+            "predicted_per_token_ms": 21.9277421875,
+            "predicted_per_second": 45.60433041620008
+          },
+          "content_len": 440
+        },
+        {
+          "prompt_id": "pl_writing",
+          "repeat": 1,
+          "elapsed_ms": 2934,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 27,
+            "prompt_ms": 125.358,
+            "prompt_per_token_ms": 4.642888888888889,
+            "prompt_per_second": 215.38314267936627,
+            "predicted_n": 128,
+            "predicted_ms": 2807.313,
+            "predicted_per_token_ms": 21.9321328125,
+            "predicted_per_second": 45.595200820143674
+          },
+          "content_len": 479
+        },
+        {
+          "prompt_id": "en_inference",
+          "repeat": 1,
+          "elapsed_ms": 3081,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 12,
+            "prompt_ms": 275.104,
+            "prompt_per_token_ms": 22.92533333333333,
+            "prompt_per_second": 43.61986739560312,
+            "predicted_n": 128,
+            "predicted_ms": 2804.235,
+            "predicted_per_token_ms": 21.9080859375,
+            "predicted_per_second": 45.645247277778076
+          },
+          "content_len": 595
+        }
+      ],
+      "error": "RemoteDisconnected('Remote end closed connection without response')",
+      "logs_tail": "CalledProcessError(1, ['docker', 'logs', '--tail', '80', 'gemma-e4b-best-best_vulkan_fa_batch_poll-7631d6'])"
+    },
+    {
+      "name": "best_vulkan_ngram_map_k",
+      "args": [
+        "-c",
+        "4096",
+        "-b",
+        "2048",
+        "-ub",
+        "512",
+        "-ngl",
+        "99",
+        "-fa",
+        "on",
+        "--parallel",
+        "1",
+        "--threads",
+        "2",
+        "--threads-batch",
+        "2",
+        "--cache-ram",
+        "0",
+        "--no-cont-batching",
+        "--poll",
+        "100",
+        "--poll-batch",
+        "1",
+        "--spec-type",
+        "ngram-map-k"
+      ],
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "repeat": 1,
+          "elapsed_ms": 2928,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 124.301,
+            "prompt_per_token_ms": 5.650045454545455,
+            "prompt_per_second": 176.9897265508725,
+            "predicted_n": 128,
+            "predicted_ms": 2801.986,
+            "predicted_per_token_ms": 21.890515625,
+            "predicted_per_second": 45.68188420641645
+          },
+          "content_len": 397
+        },
+        {
+          "prompt_id": "pl_tech",
+          "repeat": 1,
+          "elapsed_ms": 2938,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 28,
+            "prompt_ms": 126.883,
+            "prompt_per_token_ms": 4.531535714285714,
+            "prompt_per_second": 220.67574064295454,
+            "predicted_n": 128,
+            "predicted_ms": 2809.466,
+            "predicted_per_token_ms": 21.948953125,
+            "predicted_per_second": 45.56025949415298
+          },
+          "content_len": 440
+        },
+        {
+          "prompt_id": "pl_writing",
+          "repeat": 1,
+          "elapsed_ms": 2936,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 27,
+            "prompt_ms": 125.64,
+            "prompt_per_token_ms": 4.653333333333333,
+            "prompt_per_second": 214.8997134670487,
+            "predicted_n": 128,
+            "predicted_ms": 2808.338,
+            "predicted_per_token_ms": 21.940140625,
+            "predicted_per_second": 45.57855927598458
+          },
+          "content_len": 479
+        },
+        {
+          "prompt_id": "en_inference",
+          "repeat": 1,
+          "elapsed_ms": 3083,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 12,
+            "prompt_ms": 274.212,
+            "prompt_per_token_ms": 22.851,
+            "prompt_per_second": 43.761760973261566,
+            "predicted_n": 128,
+            "predicted_ms": 2807.178,
+            "predicted_per_token_ms": 21.931078125,
+            "predicted_per_second": 45.59739353899183
+          },
+          "content_len": 595
+        }
+      ],
+      "error": "RemoteDisconnected('Remote end closed connection without response')",
+      "logs_tail": "CalledProcessError(1, ['docker', 'logs', '--tail', '80', 'gemma-e4b-best-best_vulkan_ngram_map_k-1e9701'])"
+    }
+  ]
+}

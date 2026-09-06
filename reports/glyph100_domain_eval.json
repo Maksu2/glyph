@@ -1,0 +1,351 @@
+{
+  "protocol": {
+    "block": 512,
+    "batch_size": 4,
+    "dtype": "fp32",
+    "device": "cpu",
+    "order": "sequential from offset 0, remainder dropped",
+    "loss": "token-weighted exact mean CE",
+    "ppl": "exp(loss)"
+  },
+  "checkpoints": {
+    "10k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+      "step": 10000,
+      "cells": {
+        "wikipedia": {
+          "loss": 3.7179565279779814,
+          "ppl": 41.18015757056142,
+          "blocks": 494,
+          "tokens_total": 253239,
+          "tokens_scored": 252434,
+          "tokens_dropped": 311
+        },
+        "wolne_lektury": {
+          "loss": 3.8811968394538896,
+          "ppl": 48.48220577832696,
+          "blocks": 500,
+          "tokens_total": 256117,
+          "tokens_scored": 255500,
+          "tokens_dropped": 117
+        },
+        "1000_novels": {
+          "loss": 4.078604749825465,
+          "ppl": 59.06300466591051,
+          "blocks": 363,
+          "tokens_total": 186215,
+          "tokens_scored": 185493,
+          "tokens_dropped": 359
+        },
+        "eltec": {
+          "loss": 3.8460855192711394,
+          "ppl": 46.80946936293596,
+          "blocks": 263,
+          "tokens_total": 134845,
+          "tokens_scored": 134393,
+          "tokens_dropped": 189
+        },
+        "parlament_clean": {
+          "loss": 3.922992049994253,
+          "ppl": 50.551471255288895,
+          "blocks": 83,
+          "tokens_total": 42994,
+          "tokens_scored": 42413,
+          "tokens_dropped": 498
+        },
+        "wikibooks": {
+          "loss": 4.329661735607748,
+          "ppl": 75.91860166563502,
+          "blocks": 38,
+          "tokens_total": 19588,
+          "tokens_scored": 19418,
+          "tokens_dropped": 132
+        },
+        "aggregate": {
+          "loss": 3.8900930087965486,
+          "ppl": 48.915435877987285,
+          "blocks": 2298,
+          "tokens_total": 1176728,
+          "tokens_scored": 1174278,
+          "tokens_dropped": 152
+        }
+      },
+      "spread": {
+        "easiest": "wikipedia",
+        "easiest_loss": 3.7179565279779814,
+        "hardest": "wikibooks",
+        "hardest_loss": 4.329661735607748,
+        "delta": 0.6117052076297664
+      }
+    },
+    "12.5k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k/step_0012500.pt",
+      "step": 12500,
+      "cells": {
+        "wikipedia": {
+          "loss": 3.823842723494062,
+          "ppl": 45.779789823112644,
+          "blocks": 494,
+          "tokens_total": 253239,
+          "tokens_scored": 252434,
+          "tokens_dropped": 311
+        },
+        "wolne_lektury": {
+          "loss": 3.9567761416799168,
+          "ppl": 52.288483271060414,
+          "blocks": 500,
+          "tokens_total": 256117,
+          "tokens_scored": 255500,
+          "tokens_dropped": 117
+        },
+        "1000_novels": {
+          "loss": 4.143738222369746,
+          "ppl": 63.038031721468606,
+          "blocks": 363,
+          "tokens_total": 186215,
+          "tokens_scored": 185493,
+          "tokens_dropped": 359
+        },
+        "eltec": {
+          "loss": 3.914162097850381,
+          "ppl": 50.10706909563082,
+          "blocks": 263,
+          "tokens_total": 134845,
+          "tokens_scored": 134393,
+          "tokens_dropped": 189
+        },
+        "parlament_clean": {
+          "loss": 4.007812373362088,
+          "ppl": 55.02636166272245,
+          "blocks": 83,
+          "tokens_total": 42994,
+          "tokens_scored": 42413,
+          "tokens_dropped": 498
+        },
+        "wikibooks": {
+          "loss": 4.398447055406066,
+          "ppl": 81.32447814294328,
+          "blocks": 38,
+          "tokens_total": 19588,
+          "tokens_scored": 19418,
+          "tokens_dropped": 132
+        },
+        "aggregate": {
+          "loss": 3.974524560167902,
+          "ppl": 53.224805696550064,
+          "blocks": 2298,
+          "tokens_total": 1176728,
+          "tokens_scored": 1174278,
+          "tokens_dropped": 152
+        }
+      },
+      "spread": {
+        "easiest": "wikipedia",
+        "easiest_loss": 3.823842723494062,
+        "hardest": "wikibooks",
+        "hardest_loss": 4.398447055406066,
+        "delta": 0.5746043319120044
+      }
+    },
+    "15k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k/latest.pt",
+      "step": 15000,
+      "cells": {
+        "wikipedia": {
+          "loss": 3.802251002017792,
+          "ppl": 44.80192028549292,
+          "blocks": 494,
+          "tokens_total": 253239,
+          "tokens_scored": 252434,
+          "tokens_dropped": 311
+        },
+        "wolne_lektury": {
+          "loss": 3.9415851711564334,
+          "ppl": 51.500173219858574,
+          "blocks": 500,
+          "tokens_total": 256117,
+          "tokens_scored": 255500,
+          "tokens_dropped": 117
+        },
+        "1000_novels": {
+          "loss": 4.1425429332028365,
+          "ppl": 62.962728058840376,
+          "blocks": 363,
+          "tokens_total": 186215,
+          "tokens_scored": 185493,
+          "tokens_dropped": 359
+        },
+        "eltec": {
+          "loss": 3.902610723685618,
+          "ppl": 49.53159375668449,
+          "blocks": 263,
+          "tokens_total": 134845,
+          "tokens_scored": 134393,
+          "tokens_dropped": 189
+        },
+        "parlament_clean": {
+          "loss": 3.9996417989104165,
+          "ppl": 54.578596418585214,
+          "blocks": 83,
+          "tokens_total": 42994,
+          "tokens_scored": 42413,
+          "tokens_dropped": 498
+        },
+        "wikibooks": {
+          "loss": 4.366029837409234,
+          "ppl": 78.7304377567753,
+          "blocks": 38,
+          "tokens_total": 19588,
+          "tokens_scored": 19418,
+          "tokens_dropped": 132
+        },
+        "aggregate": {
+          "loss": 3.9594489290706716,
+          "ppl": 52.42842620537387,
+          "blocks": 2298,
+          "tokens_total": 1176728,
+          "tokens_scored": 1174278,
+          "tokens_dropped": 152
+        }
+      },
+      "repeat_delta_aggregate": 0.0,
+      "spread": {
+        "easiest": "wikipedia",
+        "easiest_loss": 3.802251002017792,
+        "hardest": "wikibooks",
+        "hardest_loss": 4.366029837409234,
+        "delta": 0.5637788353914415
+      }
+    },
+    "cooldown": {
+      "path": "checkpoints/glyph-100m-v2_4_2-15k-cooldown/latest.pt",
+      "step": 16500,
+      "cells": {
+        "wikipedia": {
+          "loss": 3.5883824160241513,
+          "ppl": 36.17551164496961,
+          "blocks": 494,
+          "tokens_total": 253239,
+          "tokens_scored": 252434,
+          "tokens_dropped": 311
+        },
+        "wolne_lektury": {
+          "loss": 3.779092523085861,
+          "ppl": 43.776297725343355,
+          "blocks": 500,
+          "tokens_total": 256117,
+          "tokens_scored": 255500,
+          "tokens_dropped": 117
+        },
+        "1000_novels": {
+          "loss": 3.966636960146407,
+          "ppl": 52.806641043736704,
+          "blocks": 363,
+          "tokens_total": 186215,
+          "tokens_scored": 185493,
+          "tokens_dropped": 359
+        },
+        "eltec": {
+          "loss": 3.7350041998734587,
+          "ppl": 41.88820148787895,
+          "blocks": 263,
+          "tokens_total": 134845,
+          "tokens_scored": 134393,
+          "tokens_dropped": 189
+        },
+        "parlament_clean": {
+          "loss": 3.7935878597253496,
+          "ppl": 44.415471223605905,
+          "blocks": 83,
+          "tokens_total": 42994,
+          "tokens_scored": 42413,
+          "tokens_dropped": 498
+        },
+        "wikibooks": {
+          "loss": 4.170672603021359,
+          "ppl": 64.75899455776938,
+          "blocks": 38,
+          "tokens_total": 19588,
+          "tokens_scored": 19418,
+          "tokens_dropped": 132
+        },
+        "aggregate": {
+          "loss": 3.769088415974406,
+          "ppl": 43.34053828034349,
+          "blocks": 2298,
+          "tokens_total": 1176728,
+          "tokens_scored": 1174278,
+          "tokens_dropped": 152
+        }
+      },
+      "spread": {
+        "easiest": "wikipedia",
+        "easiest_loss": 3.5883824160241513,
+        "hardest": "wikibooks",
+        "hardest_loss": 4.170672603021359,
+        "delta": 0.5822901869972075
+      }
+    }
+  },
+  "domains": {
+    "wikipedia": {
+      "tokens": 253239,
+      "blocks": 494
+    },
+    "wolne_lektury": {
+      "tokens": 256117,
+      "blocks": 500
+    },
+    "1000_novels": {
+      "tokens": 186215,
+      "blocks": 363
+    },
+    "eltec": {
+      "tokens": 134845,
+      "blocks": 263
+    },
+    "parlament_clean": {
+      "tokens": 42994,
+      "blocks": 83
+    },
+    "wikibooks": {
+      "tokens": 19588,
+      "blocks": 38
+    },
+    "aggregate": {
+      "tokens": 1176728,
+      "blocks": 2298
+    }
+  },
+  "domain_deltas": {
+    "wikipedia": {
+      "15k_minus_10k": 0.08429447403981083,
+      "cooldown_minus_15k": -0.2138685859936409
+    },
+    "wolne_lektury": {
+      "15k_minus_10k": 0.06038833170254376,
+      "cooldown_minus_15k": -0.16249264807057218
+    },
+    "1000_novels": {
+      "15k_minus_10k": 0.06393818337737134,
+      "cooldown_minus_15k": -0.1759059730564294
+    },
+    "eltec": {
+      "15k_minus_10k": 0.05652520441447839,
+      "cooldown_minus_15k": -0.16760652381215912
+    },
+    "parlament_clean": {
+      "15k_minus_10k": 0.0766497489161635,
+      "cooldown_minus_15k": -0.20605393918506687
+    },
+    "wikibooks": {
+      "15k_minus_10k": 0.036368101801485864,
+      "cooldown_minus_15k": -0.1953572343878749
+    },
+    "aggregate": {
+      "15k_minus_10k": 0.06935592027412296,
+      "cooldown_minus_15k": -0.19036051309626556
+    }
+  },
+  "elapsed_seconds": 5851.3
+}

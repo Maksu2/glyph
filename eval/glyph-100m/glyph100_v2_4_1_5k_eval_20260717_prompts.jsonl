@@ -1,0 +1,20 @@
+{"id":"v241-5k-001","category":"krotka_kontynuacja","prompt":"Warszawa to","expected":"Spójna krótka kontynuacja po polsku."}
+{"id":"v241-5k-002","category":"krotka_kontynuacja","prompt":"Polska jest","expected":"Spójne zdanie opisowe bez losowych danych."}
+{"id":"v241-5k-003","category":"edukacyjny","prompt":"W fizyce energia","expected":"Prosta kontynuacja edukacyjna."}
+{"id":"v241-5k-004","category":"edukacyjny","prompt":"Sztuczna inteligencja jest","expected":"Definicyjna kontynuacja po polsku."}
+{"id":"v241-5k-005","category":"skladnia","prompt":"Rower składa się z","expected":"Składniowo sensowny opis elementów."}
+{"id":"v241-5k-006","category":"pseudo_ency_trap","prompt":"Według najnowszych danych","expected":"Kontynuacja bez zmyślonych statystyk i losowych dat."}
+{"id":"v241-5k-007","category":"projektowy","prompt":"Najważniejszym problemem tego projektu jest","expected":"Kontynuacja trzymająca temat."}
+{"id":"v241-5k-008","category":"anty_petle","prompt":"Ten tekst nie powinien powtarzać tego samego zdania, ponieważ","expected":"Kontynuacja bez pętli fraz."}
+{"id":"v241-5k-009","category":"historyczny","prompt":"W średniowieczu","expected":"Spójna narracja historyczna bez zlepku metadanych."}
+{"id":"v241-5k-010","category":"naukowy","prompt":"Na początku eksperymentu","expected":"Spójna kontynuacja opisu eksperymentu."}
+{"id":"v241-5k-011","category":"forum_trap","prompt":"Komentarze użytkowników wskazują, że","expected":"Ciągły tekst bez nicków, menu i śmieci forum."}
+{"id":"v241-5k-012","category":"edukacyjny","prompt":"Uczenie maszynowe polega na","expected":"Prosta kontynuacja definicyjna."}
+{"id":"v241-5k-013","category":"fakt_podstawowy","prompt":"Woda jest substancją","expected":"Naturalna i rzeczowa kontynuacja."}
+{"id":"v241-5k-014","category":"fakt_podstawowy","prompt":"Słońce dostarcza Ziemi","expected":"Naturalna kontynuacja edukacyjna."}
+{"id":"v241-5k-015","category":"techniczny","prompt":"Komputer wykonuje","expected":"Krótka techniczna kontynuacja."}
+{"id":"v241-5k-016","category":"techniczny","prompt":"System operacyjny odpowiada za","expected":"Spójna kontynuacja techniczna."}
+{"id":"v241-5k-017","category":"narracyjny","prompt":"Pewnego letniego dnia","expected":"Naturalna kontynuacja narracyjna."}
+{"id":"v241-5k-018","category":"narracyjny","prompt":"Kiedy otworzył drzwi","expected":"Naturalna kontynuacja narracyjna."}
+{"id":"v241-5k-019","category":"naturalne_zakonczenie","prompt":"Po krótkiej rozmowie ustalili, że","expected":"Jedna spójna myśl z naturalnym zakończeniem."}
+{"id":"v241-5k-020","category":"naturalne_zakonczenie","prompt":"Eksperyment zakończył się","expected":"Spójne krótkie zakończenie opisu."}

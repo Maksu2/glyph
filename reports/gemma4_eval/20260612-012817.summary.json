@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-12T01:46:46.982139+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260612-012817.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260612-012817.jsonl",
+  "count": 60,
+  "valid_count": 58,
+  "overall_avg": 2.879,
+  "averages": {
+    "continuation_fit": 3.259,
+    "polish": 3.328,
+    "coherence": 2.948,
+    "repetition": 2.621,
+    "safety": 5.0,
+    "overall": 2.879
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.879/5 na 58/60 próbkach. Trening: step=45000, train_loss=3.2809, val_loss=3.1953, lr=0.00018. Najsłabsze średnie: repetition=2.62, coherence=2.95; najmocniejsza metryka: polish=3.33.",
+  "training_stats": {
+    "step": 45000,
+    "total_steps": 45000,
+    "progress_pct": 100.0,
+    "loss": 3.2809,
+    "lr": 0.00018,
+    "last_eval": {
+      "ts": "2026-06-10 03:16:19",
+      "step": 45000,
+      "val_loss": 3.1953
+    },
+    "tokens_m": 737.28
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.88/5. Najsłabsze metryki to 'repetition' (2.62) i 'coherence' (2.95). Wskaźniki straty (train_loss=3.28, val_loss=3.19) są blisko siebie, co sugeruje minimalny przepaść wydajności między zbiorami, przy użyciu niskiego LR (0.00018). W próbkach widoczny jest powtarzający się problem z niepoprawnymi konstrukcjami składniowymi i przypadkowymi skokami tematycznymi, co obniża płynność narracji.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.88/5. Najsłabsze metryki to 'repetition' (2.62) i 'coherence' (2.95). Wskaźniki straty (train_loss=3.28, val_loss=3.19) są blisko siebie, co sugeruje minimalny przepaść wydajności między zbiorami, przy użyciu niskiego LR (0.00018). W próbkach widoczny jest powtarzający się problem z niepoprawnymi konstrukcjami składniowymi i przypadkowymi skokami tematycznymi, co obniża płynność narracji.\"\n}\n```"
+}

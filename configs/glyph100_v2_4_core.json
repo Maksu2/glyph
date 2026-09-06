@@ -1,0 +1,81 @@
+{
+  "dataset_name": "glyph100_dataset_v2_4_core",
+  "description": "Quality-first, source-aware Polish corpus without web crawl sources",
+  "seed": 2026,
+  "val_per_mille": 5,
+  "tokenizer": "data/processed/tokenizer.model",
+  "existing_wikipedia_docs": "data/processed/glyph100_v2_1_docs.jsonl",
+  "raw_root": "data/raw/polish-dynaword",
+  "work_root": "data/raw/glyph100_v2_4_work",
+  "target_total_tokens": 293000000,
+  "minimum_ready_tokens": 275000000,
+  "sources": [
+    {
+      "name": "wikipedia_pl",
+      "kind": "existing_jsonl",
+      "target_tokens": 120000000,
+      "candidate_fraction": 1.0,
+      "license": "CC BY-SA / GFDL; inherited from the existing source-aware build"
+    },
+    {
+      "name": "wolne_lektury",
+      "kind": "dynaword_parquet",
+      "target_tokens": 55000000,
+      "candidate_fraction": 0.8,
+      "expected_bytes": 128562077,
+      "url": "https://huggingface.co/datasets/SlayerLab/polish-dynaword/resolve/main/data/wolne_lektury/wolne_lektury.parquet"
+    },
+    {
+      "name": "1000_novels",
+      "kind": "dynaword_parquet",
+      "target_tokens": 45000000,
+      "candidate_fraction": 1.0,
+      "expected_bytes": 73419435,
+      "url": "https://huggingface.co/datasets/SlayerLab/polish-dynaword/resolve/main/data/1000_novels/1000_novels.parquet"
+    },
+    {
+      "name": "eltec_pol",
+      "kind": "dynaword_parquet",
+      "target_tokens": 18000000,
+      "candidate_fraction": 1.0,
+      "expected_bytes": 26840612,
+      "url": "https://huggingface.co/datasets/SlayerLab/polish-dynaword/resolve/main/data/eltec_pol/eltec_pol.parquet"
+    },
+    {
+      "name": "parliamentary",
+      "kind": "dynaword_parquet",
+      "target_tokens": 45000000,
+      "candidate_fraction": 0.06,
+      "expected_bytes": 1732312807,
+      "url": "https://huggingface.co/datasets/SlayerLab/polish-dynaword/resolve/main/data/parliamentary/parliamentary.parquet"
+    },
+    {
+      "name": "wikibooks",
+      "kind": "dynaword_parquet",
+      "target_tokens": 5000000,
+      "candidate_fraction": 1.0,
+      "expected_bytes": 14319121,
+      "url": "https://huggingface.co/datasets/SlayerLab/polish-dynaword/resolve/main/data/wikibooks/wikibooks.parquet"
+    },
+    {
+      "name": "wikinews",
+      "kind": "dynaword_parquet",
+      "target_tokens": 5000000,
+      "candidate_fraction": 1.0,
+      "expected_bytes": 14367012,
+      "url": "https://huggingface.co/datasets/SlayerLab/polish-dynaword/resolve/main/data/wikinews/wikinews.parquet"
+    }
+  ],
+  "outputs": {
+    "train_bin": "data/processed/glyph100_v2_4_train.bin",
+    "val_bin": "data/processed/glyph100_v2_4_val.bin",
+    "metadata": "data/processed/glyph100_v2_4_metadata.json",
+    "docs_store": "data/raw/glyph100_v2_4/glyph100_v2_4_docs.jsonl",
+    "docs_link": "data/processed/glyph100_v2_4_docs.jsonl",
+    "stats": "data/reports/glyph100_dataset_v2_4_stats.json",
+    "report": "data/reports/glyph100_dataset_v2_4_report.md",
+    "accepted_samples": "data/reports/glyph100_dataset_v2_4_samples_accepted.jsonl",
+    "rejected_samples": "data/reports/glyph100_dataset_v2_4_samples_rejected.jsonl",
+    "final_samples": "data/reports/glyph100_dataset_v2_4_samples_final_random.jsonl"
+  }
+}

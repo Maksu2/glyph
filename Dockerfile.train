@@ -1,0 +1,35 @@
+FROM python:3.12-slim
+
+ARG TRAIN_UID=1000
+ARG TRAIN_GID=1000
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        bash \
+        ca-certificates \
+        coreutils \
+        procps \
+        util-linux \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt /tmp/requirements.txt
+
+RUN python -m pip install --upgrade pip setuptools wheel \
+    && python -m pip install --index-url https://download.pytorch.org/whl/cpu "torch>=2.1.0" \
+    && grep -vE '^torch([<>= ].*)?$' /tmp/requirements.txt > /tmp/requirements.no-torch.txt \
+    && python -m pip install -r /tmp/requirements.no-torch.txt
+
+RUN groupadd --gid "${TRAIN_GID}" trainer \
+    && useradd --uid "${TRAIN_UID}" --gid "${TRAIN_GID}" --create-home --shell /bin/bash trainer
+
+COPY --chmod=755 scripts/container_entrypoint.sh /usr/local/bin/train-entrypoint
+
+WORKDIR /workspace
+USER trainer
+
+ENTRYPOINT ["/usr/local/bin/train-entrypoint"]
+CMD ["bash"]

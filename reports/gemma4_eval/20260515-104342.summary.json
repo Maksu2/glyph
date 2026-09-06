@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-15T10:54:45.717303+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260515-104342.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260515-104342.jsonl",
+  "count": 60,
+  "valid_count": 59,
+  "overall_avg": 2.525,
+  "averages": {
+    "continuation_fit": 2.831,
+    "polish": 2.983,
+    "coherence": 2.576,
+    "repetition": 2.203,
+    "safety": 4.983,
+    "overall": 2.525
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.525/5 na 59/60 próbkach. Trening: step=82260, train_loss=3.7901, val_loss=4.579, lr=0.000205. Najsłabsze średnie: repetition=2.20, coherence=2.58; najmocniejsza metryka: polish=2.98.",
+  "training_stats": {
+    "step": 82260,
+    "total_steps": 200000,
+    "progress_pct": 41.13,
+    "loss": 3.7901,
+    "lr": 0.000205,
+    "last_eval": {
+      "ts": "2026-05-15 10:19:15",
+      "step": 82000,
+      "val_loss": 4.579
+    },
+    "tokens_m": 673.87
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy (overall) wynosi 2.525. Najsłabsze metryki to 'repetition' (2.203) oraz 'coherence' (2.576). W kontekście treningowym, train_loss (3.7901) jest niższy niż val_loss (4.579), co sugeruje potencjalny overfitting na danych treningowych przy obecnym LR. W próbkach widoczny jest powtarzający się problem z utratą spójności tematycznej i nagłymi skokami kontekstowymi (np. zmiana z opisu sceny na porady dekoracyjne). Model wymaga poprawy w utrzymaniu długoterminowego kontekstu narracyjnego.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarkowy (overall) wynosi 2.525. Najsłabsze metryki to 'repetition' (2.203) oraz 'coherence' (2.576). W kontekście treningowym, train_loss (3.7901) jest niższy niż val_loss (4.579), co sugeruje potencjalny overfitting na danych treningowych przy obecnym LR. W próbkach widoczny jest powtarzający się problem z utratą spójności tematycznej i nagłymi skokami kontekstowymi (np. zmiana z opisu sceny na porady dekoracyjne). Model wymaga poprawy w utrzymaniu długoterminowego kontekstu narracyjnego.\"\n}\n```"
+}

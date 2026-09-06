@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "generated_at_utc": "2026-08-02T00:54:33Z",
+  "training_run": false,
+  "drive_upload_run": false,
+  "bundle": {
+    "directory": "dist/glyph-colab",
+    "zip": "dist/glyph-colab-upload-ready-20260802T005327Z.zip",
+    "zip_size_bytes": 362940589,
+    "zip_size_mib": 346.13,
+    "zip_sha256": "9adbcd341659235f6f69739190ba2807228ef04030ea6bca3244590029aeeb43",
+    "zip_entries": 11,
+    "created_at_utc": "2026-08-02T00:53:30.821124+00:00"
+  },
+  "checkpoint": {
+    "source": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+    "step": 44000,
+    "variant": "glyph-100m",
+    "context_length": 512,
+    "optimizer_free_in_bundle": true,
+    "checkpoint_50k_is_not_base": true,
+    "unique_parameters": 97654272,
+    "strict_cpu_load": "PASS"
+  },
+  "tokenizer": {
+    "path": "data/processed/tokenizer.model",
+    "sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029"
+  },
+  "dataset": {
+    "path": "data/sft/glyph100_sft_smoke_v0_3.jsonl",
+    "examples": 2753
+  },
+  "archives": [
+    {
+      "role": "code",
+      "name": "glyph-code-20260802T005327Z.tar.zst",
+      "size_bytes": 41079,
+      "sha256": "689250653df9fd7efe702f9278b2e535f5b5fc251bb79ef674f5d78672696976"
+    },
+    {
+      "role": "tokenizer",
+      "name": "glyph-tokenizer-20260802T005327Z.tar.zst",
+      "size_bytes": 276569,
+      "sha256": "001f77d150eb4b4435fcad82282ac1e933ccba32a32eb621b8e0c4c24d4d6c6c"
+    },
+    {
+      "role": "base",
+      "name": "glyph-base44k-20260802T005327Z.tar.zst",
+      "size_bytes": 361938453,
+      "sha256": "e219da71e0589174779d1db03ee5f6b591bf4c2d25601929a69c9932ffbfc4b4"
+    },
+    {
+      "role": "dataset",
+      "name": "glyph-sft-data-20260802T005327Z.tar.zst",
+      "size_bytes": 107469,
+      "sha256": "4bffcb08f0adb0c8a89585afbfd516c7c5420228d0c936c85cccd60c303a99a2"
+    },
+    {
+      "role": "reports",
+      "name": "glyph-reports-20260802T005327Z.tar.zst",
+      "size_bytes": 541318,
+      "sha256": "1ae02382c53908330ebc88d1ac2f6921580a96717d2a0253569f1c4de294d40e"
+    }
+  ],
+  "validation": {
+    "zip_crc": "PASS",
+    "bundle_verifier": "PASS",
+    "safe_extraction": "PASS",
+    "label_mask_audit": "PASS",
+    "cpu_inference_smoke": "PASS"
+  },
+  "upload": {
+    "drive_input": "MyDrive/Glyph/colab/input/",
+    "extract_outer_zip_first": true,
+    "notebook_preconfigured": true,
+    "run_training_default": false
+  }
+}

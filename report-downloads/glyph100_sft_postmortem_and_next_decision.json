@@ -1,0 +1,17 @@
+{
+  "verdict": "C",
+  "label": "SFT pipeline has a labels/mask/EOS-related bug before overfit testing",
+  "best_current_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+  "do_not_scale_sft": true,
+  "do_not_continue_pretraining": true,
+  "reason": "Pipeline audit found off-by-one label mask. Larger SFT or tiny overfit would test a known-bad pipeline.",
+  "next_decision_needed": "Approve patch + label audit + CPU tiny overfit rerun, or stop SFT work.",
+  "previous_sft_smoke_quality_status": "invalid-for-quality",
+  "previous_sft_smoke_invalid_reason": "label mask off-by-one bug masked first assistant response token",
+  "fixed_mask_label_audit": "passed",
+  "fixed_mask_cpu_tiny_overfit": "passed",
+  "fixed_mask_cpu_tiny_overfit_report": "reports/glyph100_sft_tiny_overfit_cpu_fixedmask_report.md",
+  "updated_decision": "Do not scale SFT yet; CPU tiny overfit confirms fixed mask works. Next decision is ROCm safe-mode test or improved SFT data.",
+  "tiny_overfit_run_original_postmortem": false,
+  "fixed_mask_cpu_tiny_overfit_run": true
+}

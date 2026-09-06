@@ -1,0 +1,12 @@
+{"id":"g100-eval-001","category":"krotka_kontynuacja","prompt":"Warszawa to","expected":"Krótka polska kontynuacja zdania, najlepiej encyklopedyczna lub opisowa."}
+{"id":"g100-eval-002","category":"krotka_kontynuacja","prompt":"Polska jest","expected":"Spójne polskie zdanie lub akapit bez forumowego tonu."}
+{"id":"g100-eval-003","category":"edukacyjny","prompt":"W fizyce energia","expected":"Prosty tekst edukacyjny, bez udawania asystenta."}
+{"id":"g100-eval-004","category":"edukacyjny","prompt":"Sztuczna inteligencja jest","expected":"Definicyjna kontynuacja w języku polskim."}
+{"id":"g100-eval-005","category":"skladnia","prompt":"Rower składa się z","expected":"Lista lub opis elementów roweru, składnia powinna być sensowna."}
+{"id":"g100-eval-006","category":"web_garbage","prompt":"Według najnowszych danych","expected":"Spójna kontynuacja bez losowych dat, linków, menu ani SEO."}
+{"id":"g100-eval-007","category":"projektowy","prompt":"Najważniejszym problemem tego projektu jest","expected":"Kontynuacja zdania bez dryfu w bełkot lub powtarzanie."}
+{"id":"g100-eval-008","category":"edukacyjny","prompt":"Uczenie maszynowe polega na","expected":"Proste wyjaśnienie lub kontynuacja definicji."}
+{"id":"g100-eval-009","category":"encyklopedyczny","prompt":"W średniowieczu","expected":"Encyklopedyczny lub narracyjny tekst historyczny."}
+{"id":"g100-eval-010","category":"skladnia","prompt":"Na początku eksperymentu","expected":"Spójna kontynuacja tekstu naukowego lub opisowego."}
+{"id":"g100-eval-011","category":"petle","prompt":"Ten tekst nie powinien powtarzać tego samego zdania, ponieważ","expected":"Kontynuacja bez widocznej pętli fraz."}
+{"id":"g100-eval-012","category":"forum_garbage","prompt":"Komentarze użytkowników wskazują, że","expected":"Może kontynuować, ale bez usernames, dat postów, HTML i śmieci forum."}

@@ -1,0 +1,187 @@
+{
+  "run": "glyph100_v2_3_1_45k_to_50k",
+  "status": "complete",
+  "log_path": "logs/glyph-100m-v2_3_1-50k/train.log",
+  "checkpoint_dir": "checkpoints/glyph-100m-v2_3_1-50k",
+  "latest_checkpoint": {
+    "path": "checkpoints/glyph-100m-v2_3_1-50k/latest.pt",
+    "exists": true,
+    "size_bytes": 1175128015,
+    "step": 50000,
+    "current_step": 50000,
+    "variant": "glyph-100m",
+    "model_config": {
+      "vocab_size": 16000,
+      "context_len": 512,
+      "d_model": 768,
+      "n_heads": 12,
+      "n_layers": 12,
+      "ffn_mult": 4,
+      "dropout": 0.1
+    },
+    "tokenizer_path": "data/processed/tokenizer.model",
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "dataset_name": "glyph100_v2_3_1",
+    "dataset_metadata_path": "data/processed/glyph100_v2_3_1_metadata.json",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384
+  },
+  "step_50000_checkpoint": {
+    "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0050000.pt",
+    "exists": true,
+    "size_bytes": 1175128433,
+    "step": 50000,
+    "current_step": 50000,
+    "variant": "glyph-100m",
+    "model_config": {
+      "vocab_size": 16000,
+      "context_len": 512,
+      "d_model": 768,
+      "n_heads": 12,
+      "n_layers": 12,
+      "ffn_mult": 4,
+      "dropout": 0.1
+    },
+    "tokenizer_path": "data/processed/tokenizer.model",
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "dataset_name": "glyph100_v2_3_1",
+    "dataset_metadata_path": "data/processed/glyph100_v2_3_1_metadata.json",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384
+  },
+  "tokenizer_actual_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+  "tokenizer_sha_stored": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+  "start_time": "2026-06-11 21:00:31",
+  "end_time": "2026-06-12 04:02:36",
+  "wall_duration_seconds": 25325.0,
+  "wall_duration_human": "7h 2m",
+  "active_duration_seconds": 25325.0,
+  "active_duration_human": "7h 2m",
+  "start_step": 45000,
+  "end_step": 50000,
+  "stage_tokens_expected": 81920000,
+  "total_tokens_m": 819.2,
+  "avg_tokens_per_second": 3239.78,
+  "train_loss_first_logged": 3.2994,
+  "train_loss_last_logged": 3.2214,
+  "train_loss_start_window_avg": 3.2838,
+  "train_loss_mid_window_avg": 3.2615,
+  "train_loss_end_window_avg": 3.2507,
+  "train_loss_min": 3.1459,
+  "train_loss_max": 3.3619,
+  "val_losses": [
+    {
+      "ts": "2026-06-11 21:41:16",
+      "step": 45500,
+      "val_loss": 3.1731
+    },
+    {
+      "ts": "2026-06-11 22:22:50",
+      "step": 46000,
+      "val_loss": 3.177
+    },
+    {
+      "ts": "2026-06-11 23:04:22",
+      "step": 46500,
+      "val_loss": 3.1255
+    },
+    {
+      "ts": "2026-06-11 23:49:42",
+      "step": 47000,
+      "val_loss": 2.9851
+    },
+    {
+      "ts": "2026-06-12 00:31:14",
+      "step": 47500,
+      "val_loss": 2.9998
+    },
+    {
+      "ts": "2026-06-12 01:12:50",
+      "step": 48000,
+      "val_loss": 3.1695
+    },
+    {
+      "ts": "2026-06-12 01:57:57",
+      "step": 48500,
+      "val_loss": 2.9773
+    },
+    {
+      "ts": "2026-06-12 02:39:33",
+      "step": 49000,
+      "val_loss": 3.1606
+    },
+    {
+      "ts": "2026-06-12 03:21:05",
+      "step": 49500,
+      "val_loss": 3.1279
+    },
+    {
+      "ts": "2026-06-12 04:02:44",
+      "step": 50000,
+      "val_loss": 3.3927
+    }
+  ],
+  "val_loss_trend": "rising",
+  "overfit_signal": "watch_val_loss",
+  "nan_inf": [],
+  "oom": [],
+  "crashes": [],
+  "checkpoint_saves": [
+    {
+      "ts": "2026-06-11 22:22:49",
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0046000.pt",
+      "loss": 3.251
+    },
+    {
+      "ts": "2026-06-11 23:49:41",
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0047000.pt",
+      "loss": 3.2178
+    },
+    {
+      "ts": "2026-06-12 01:12:49",
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0048000.pt",
+      "loss": 3.3825
+    },
+    {
+      "ts": "2026-06-12 02:39:32",
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0049000.pt",
+      "loss": 3.0816
+    },
+    {
+      "ts": "2026-06-12 04:02:42",
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0050000.pt",
+      "loss": 3.2258
+    }
+  ],
+  "checkpoint_files": [
+    "latest.pt",
+    "step_0046000.pt",
+    "step_0047000.pt",
+    "step_0048000.pt",
+    "step_0049000.pt",
+    "step_0050000.pt"
+  ],
+  "checkpoint_dir_size_bytes": 7050770180,
+  "checkpoint_dir_size_human": "6.6 GB",
+  "partial_files_preserved": {
+    "50k_emergency_pt": false,
+    "50k_partial_like_files": [],
+    "35k_step_0026000_pt": true,
+    "35k_emergency_pt": true
+  },
+  "resumes": [
+    45000
+  ],
+  "ranges": [
+    {
+      "start": 45001,
+      "end": 50000,
+      "line": "2026-06-11 20:59:40 Training from step 45,001 to 50,000"
+    }
+  ],
+  "clean_interrupt_seen": false,
+  "gpu_temperatures": "not logged in train.log",
+  "vram_ram": "VRAM/RAM not logged in train.log; runtime telemetry was monitored separately"
+}

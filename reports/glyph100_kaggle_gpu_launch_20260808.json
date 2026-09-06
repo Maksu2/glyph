@@ -1,0 +1,72 @@
+{
+  "timestamp_utc": "2026-08-08T10:05:27Z",
+  "status": "BLOCKED_BEFORE_TRAINING",
+  "kernel": {
+    "id": "maksymilianputa/glyph-100m-v0-3-p100-cuda-smoke",
+    "visibility": "private",
+    "server_enable_gpu": true,
+    "server_machine_shape": "Gpu",
+    "runtime_cuda_available": false
+  },
+  "input_dataset": {
+    "id": "maksymilianputa/glyph100-sft-cuda-smoke-input",
+    "visibility": "private",
+    "base_step": 44000,
+    "sft_dataset": "glyph100_sft_smoke_v0_3"
+  },
+  "planned_run": {
+    "purpose": "CUDA compatibility and throughput smoke",
+    "optimizer_steps": 25,
+    "precision": "fp32",
+    "batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 1e-05
+  },
+  "attempts": [
+    {
+      "kernel_version": 4,
+      "accelerator_request": "enable_gpu=true",
+      "internet": true,
+      "result": "CPU runtime; torch.cuda.is_available() false",
+      "optimizer_steps": 0
+    },
+    {
+      "kernel_version": 5,
+      "accelerator_request": "enable_gpu=true",
+      "internet": false,
+      "result": "CPU runtime; torch.cuda.is_available() false",
+      "optimizer_steps": 0
+    },
+    {
+      "kernel_version": 6,
+      "accelerator_request": "NvidiaTeslaP100",
+      "internet": false,
+      "result": "CPU runtime; torch.cuda.is_available() false",
+      "optimizer_steps": 0
+    },
+    {
+      "kernel_version": 7,
+      "accelerator_request": "NvidiaTeslaT4",
+      "internet": false,
+      "result": "CPU runtime; torch.cuda.is_available() false",
+      "optimizer_steps": 0
+    }
+  ],
+  "quota": {
+    "gpu_total_hours": 30.0,
+    "gpu_remaining_hours": 30.0,
+    "gpu_used_hours": 0.0,
+    "refresh_at": "2026-08-15T00:00:00"
+  },
+  "safety": {
+    "training_started": false,
+    "optimizer_steps": 0,
+    "checkpoints_written": 0,
+    "existing_checkpoints_modified": false,
+    "active_local_training": false,
+    "active_training_containers": false
+  },
+  "diagnosis": "Kaggle scheduler/API accepted accelerator settings but attached no CUDA device",
+  "next_action": "Complete account verification if needed, select GPU once in the Kaggle web UI, then rerun only the 25-step smoke"
+}
+

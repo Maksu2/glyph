@@ -1,0 +1,60 @@
+{"id":"broad-001","category":"krotkie_definicje","prompt":"Grawitacja to","expected_behavior":"Kontynuacja powinna być krótką definicją bez losowych danych administracyjnych."}
+{"id":"broad-002","category":"krotkie_definicje","prompt":"Inflacja oznacza","expected_behavior":"Definicja ekonomiczna, bez porad projektowych i bez pseudo-encyklopedii."}
+{"id":"broad-003","category":"krotkie_definicje","prompt":"Fakt różni się od opinii tym, że","expected_behavior":"Rozróżnienie fakt/opinia, naturalna składnia."}
+{"id":"broad-004","category":"krotkie_definicje","prompt":"Backup to","expected_behavior":"Prosta definicja kopii zapasowej."}
+{"id":"broad-005","category":"krotkie_definicje","prompt":"Algorytm to","expected_behavior":"Prosta definicja algorytmu."}
+{"id":"broad-006","category":"krotkie_definicje","prompt":"Energia w fizyce jest","expected_behavior":"Definicja fizyczna, bez dat, gmin i list."}
+{"id":"broad-007","category":"edukacyjne_fizyka_technika","prompt":"W fizyce prędkość opisuje","expected_behavior":"Edukacyjny opis po polsku."}
+{"id":"broad-008","category":"edukacyjne_fizyka_technika","prompt":"Silnik elektryczny działa w ten sposób, że","expected_behavior":"Techniczna kontynuacja bez commerce i SEO."}
+{"id":"broad-009","category":"edukacyjne_fizyka_technika","prompt":"Komputer składa się z","expected_behavior":"Opis elementów komputera, nie lista sklepu."}
+{"id":"broad-010","category":"edukacyjne_fizyka_technika","prompt":"Sieć komputerowa pozwala","expected_behavior":"Proste wyjaśnienie działania sieci."}
+{"id":"broad-011","category":"edukacyjne_fizyka_technika","prompt":"Uczenie maszynowe polega na","expected_behavior":"Opis ML jako kontynuacja base LM."}
+{"id":"broad-012","category":"edukacyjne_fizyka_technika","prompt":"Model językowy przewiduje","expected_behavior":"Techniczny, ale prosty opis predykcji tokenów."}
+{"id":"broad-013","category":"zdroworozsadkowe_opisy","prompt":"Dobry plan zaczyna się od","expected_behavior":"Naturalny polski opis bez natrętnej mantry projektowej."}
+{"id":"broad-014","category":"zdroworozsadkowe_opisy","prompt":"Kiedy brakuje danych, najlepiej","expected_behavior":"Zdroworozsądkowa kontynuacja bez lania wody."}
+{"id":"broad-015","category":"zdroworozsadkowe_opisy","prompt":"Nie każda decyzja wymaga","expected_behavior":"Spójna kontynuacja zdania."}
+{"id":"broad-016","category":"zdroworozsadkowe_opisy","prompt":"Najpierw warto sprawdzić","expected_behavior":"Kontynuacja bez zapętlenia."}
+{"id":"broad-017","category":"zdroworozsadkowe_opisy","prompt":"Proste rozwiązanie często jest","expected_behavior":"Naturalne zdanie, bez projektowego szablonu."}
+{"id":"broad-018","category":"zdroworozsadkowe_opisy","prompt":"Jeśli coś działa wolno, trzeba","expected_behavior":"Ostrożny opis diagnostyki, nie fałszywe konkrety."}
+{"id":"broad-019","category":"projektowe_techniczne","prompt":"W projekcie informatycznym najważniejsze jest","expected_behavior":"Spójny opis projektowy."}
+{"id":"broad-020","category":"projektowe_techniczne","prompt":"Docker pozwala uruchamiać aplikacje","expected_behavior":"Opis kontenerów, nie mylić z VM."}
+{"id":"broad-021","category":"projektowe_techniczne","prompt":"Test jednostkowy sprawdza","expected_behavior":"Prosta kontynuacja techniczna."}
+{"id":"broad-022","category":"projektowe_techniczne","prompt":"Logi aplikacji pomagają","expected_behavior":"Opis diagnostyczny."}
+{"id":"broad-023","category":"projektowe_techniczne","prompt":"Błąd w konfiguracji może powodować","expected_behavior":"Techniczna kontynuacja bez web garbage."}
+{"id":"broad-024","category":"projektowe_techniczne","prompt":"Wersjonowanie kodu ułatwia","expected_behavior":"Opis git/versioningu."}
+{"id":"broad-025","category":"codzienne_polskie_zdania","prompt":"Rano wyszedłem z domu i","expected_behavior":"Naturalna polska narracja."}
+{"id":"broad-026","category":"codzienne_polskie_zdania","prompt":"Na dworcu było cicho, ponieważ","expected_behavior":"Narracyjna kontynuacja bez encyklopedii."}
+{"id":"broad-027","category":"codzienne_polskie_zdania","prompt":"Kupiłem chleb, wróciłem do domu i","expected_behavior":"Codzienny ciąg zdarzeń."}
+{"id":"broad-028","category":"codzienne_polskie_zdania","prompt":"Podczas spaceru zauważyłem, że","expected_behavior":"Naturalna kontynuacja."}
+{"id":"broad-029","category":"codzienne_polskie_zdania","prompt":"Wieczorem usiadłem przy biurku i","expected_behavior":"Codzienna narracja, bez SEO."}
+{"id":"broad-030","category":"codzienne_polskie_zdania","prompt":"Mama powiedziała, że","expected_behavior":"Naturalny polski dialog/narracja."}
+{"id":"broad-031","category":"anty_petle","prompt":"To zdanie powinno się skończyć po jednej myśli, ponieważ","expected_behavior":"Bez powtarzania tej samej frazy."}
+{"id":"broad-032","category":"anty_petle","prompt":"Nie powtarzaj tego samego zdania. Krótka odpowiedź brzmi","expected_behavior":"Bez pętli i bez wielokrotnego powtórzenia."}
+{"id":"broad-033","category":"anty_petle","prompt":"Krótki tekst jest lepszy, gdy","expected_behavior":"Jedna lub kilka logicznych myśli, bez zapętlenia."}
+{"id":"broad-034","category":"anty_petle","prompt":"Powtarzanie słów sprawia, że tekst","expected_behavior":"Opis problemu powtórzeń bez powtarzania."}
+{"id":"broad-035","category":"anty_petle","prompt":"Odpowiedź powinna być jasna i","expected_behavior":"Naturalny koniec frazy, bez szablonu."}
+{"id":"broad-036","category":"anty_petle","prompt":"Najważniejsza myśl tego akapitu to","expected_behavior":"Nie powinien dryfować ani robić listy."}
+{"id":"broad-037","category":"web_forum_garbage_traps","prompt":"Dodaj do koszyka","expected_behavior":"Model nie powinien kontynuować sklepu internetowego z cenami."}
+{"id":"broad-038","category":"web_forum_garbage_traps","prompt":"Polityka prywatności i cookies","expected_behavior":"Nie powinien wpaść w boilerplate strony."}
+{"id":"broad-039","category":"web_forum_garbage_traps","prompt":"Komentarze: anonimowy napisał","expected_behavior":"Nie powinien generować forum/thread garbage."}
+{"id":"broad-040","category":"web_forum_garbage_traps","prompt":"Zaloguj się, aby odpowiedzieć","expected_behavior":"Nie powinien generować layoutu strony."}
+{"id":"broad-041","category":"web_forum_garbage_traps","prompt":"Cena produktu wynosi","expected_behavior":"Nie powinien dryfować w sklep/cennik."}
+{"id":"broad-042","category":"web_forum_garbage_traps","prompt":"Kategorie: Strona główna","expected_behavior":"Nie powinien kontynuować nawigacji/kategorii."}
+{"id":"broad-043","category":"pseudo_ency_traps","prompt":"Według najnowszych danych","expected_behavior":"Unikać zmyślonych dat i danych demograficznych."}
+{"id":"broad-044","category":"pseudo_ency_traps","prompt":"Miejscowość ta leży w","expected_behavior":"Nie powinien halucynować administracji, jeśli brak kontekstu."}
+{"id":"broad-045","category":"pseudo_ency_traps","prompt":"W latach 1999–2004","expected_behavior":"Nie powinien zmyślać encyklopedycznej historii."}
+{"id":"broad-046","category":"pseudo_ency_traps","prompt":"Powierzchnia wynosi","expected_behavior":"Nie powinien losowo dopowiadać liczb."}
+{"id":"broad-047","category":"pseudo_ency_traps","prompt":"Liczba ludności według spisu","expected_behavior":"Nie powinien produkować fałszywych danych."}
+{"id":"broad-048","category":"pseudo_ency_traps","prompt":"Przypisy i linki zewnętrzne","expected_behavior":"Nie powinien kontynuować wiki boilerplate."}
+{"id":"broad-049","category":"polska_warszawa","prompt":"Warszawa to","expected_behavior":"Opis Warszawy bez mylenia z innym miastem."}
+{"id":"broad-050","category":"polska_warszawa","prompt":"Polska jest państwem","expected_behavior":"Podstawowy opis kraju."}
+{"id":"broad-051","category":"polska_warszawa","prompt":"Wisła przepływa przez","expected_behavior":"Kontynuacja zgodna z ogólną wiedzą."}
+{"id":"broad-052","category":"polska_warszawa","prompt":"Kraków jest znany z","expected_behavior":"Opis miasta bez fałszywych danych administracyjnych."}
+{"id":"broad-053","category":"polska_warszawa","prompt":"Morze Bałtyckie znajduje się","expected_behavior":"Podstawowy opis geograficzny."}
+{"id":"broad-054","category":"polska_warszawa","prompt":"Tatry to góry","expected_behavior":"Opis Tatr, bez pseudo-statystyk."}
+{"id":"broad-055","category":"naturalne_zakonczenia","prompt":"Ten eksperyment pokazuje, że","expected_behavior":"Kontynuacja powinna móc skończyć się naturalnie."}
+{"id":"broad-056","category":"naturalne_zakonczenia","prompt":"Najprostszy wniosek jest taki, że","expected_behavior":"Krótka kontynuacja z naturalnym końcem."}
+{"id":"broad-057","category":"naturalne_zakonczenia","prompt":"W praktyce oznacza to, że","expected_behavior":"Nie zapętlać i nie dryfować."}
+{"id":"broad-058","category":"naturalne_zakonczenia","prompt":"Dlatego warto zachować ostrożność, gdy","expected_behavior":"Spójna końcówka zdania."}
+{"id":"broad-059","category":"naturalne_zakonczenia","prompt":"Krótko mówiąc, problem polega na tym, że","expected_behavior":"Naturalny koniec, bez kilku akapitów dryfu."}
+{"id":"broad-060","category":"naturalne_zakonczenia","prompt":"To wystarczy, żeby zauważyć, że","expected_behavior":"Jedna jasna myśl i koniec."}

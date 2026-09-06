@@ -1,0 +1,207 @@
+{
+  "status": "critical_label_bug_found_no_tiny_overfit_run",
+  "verdict": "C: SFT pipeline has a labels/mask off-by-one bug; do not run larger SFT or tiny overfit until fixed and re-audited.",
+  "critical_findings": [
+    {
+      "id": "labels_off_by_one",
+      "severity": "CRITICAL",
+      "problem": "SFTDataset masks labels with i <= assistant_pos.",
+      "why_it_matters": "At causal LM position assistant_pos, y is the first token after <|assistant|>. Current code masks that token, so the model is not supervised on answer starts.",
+      "recommended_fix": "Change mask boundary to i < assistant_pos and add an audit/unit test proving first response token and <|end|> are supervised."
+    }
+  ],
+  "training_template": "<|user|>\n{instruction}\n<|assistant|>\n{response}\n<|end|>\n",
+  "training_template_examples": [
+    "<|user|>\nNie rozwijaj bez końca: dlaczego warto mierzyć loss? Jednym zdaniem.\n<|assistant|>\nLoss pokazuje, czy model uczy się przewidywać dane treningowe lub walidacyjne.\n<|end|>\n",
+    "<|user|>\nPopraw tekst: Projekt może być ciekawy, ale obecnie ma zbyt wiele funkcji planowanych na start.\n<|assistant|>\nProjekt jest ciekawy, ale ma zbyt szeroki zakres na start.\n<|end|>\n",
+    "<|user|>\nCzy ta diagnoza jest pewna? Wskaż ograniczenie.\n<|assistant|>\nNie. Bez pełnych danych można mówić tylko o najbardziej prawdopodobnym wyjaśnieniu.\n<|end|>\n"
+  ],
+  "eval_generation_template": "<|user|>\n{prompt}\n<|assistant|>\n",
+  "eval_prompt_examples": [
+    "<|user|>\nNie rozwijaj bez końca: dlaczego warto mierzyć loss? Jednym zdaniem.\n<|assistant|>\n",
+    "<|user|>\nPopraw tekst: Projekt może być ciekawy, ale obecnie ma zbyt wiele funkcji planowanych na start.\n<|assistant|>\n",
+    "<|user|>\nCzy ta diagnoza jest pewna? Wskaż ograniczenie.\n<|assistant|>\n"
+  ],
+  "same_template_eval_vs_training": {
+    "instruction_eval": "yes_prefix_matches_training",
+    "continuation_eval": "intentionally_no_sft_template"
+  },
+  "labels": {
+    "assistant_only_masking": "intended, but off-by-one bug masks first response token",
+    "padding_ignore_index": "yes, padding labels are -100",
+    "eos_supervised": "yes, <|end|> is supervised in current examples",
+    "causal_shift": "correct: x=ids[:-1], y=ids[1:]",
+    "off_by_one": "bug: i <= assistant_pos should be i < assistant_pos",
+    "examples_without_assistant_labels": "no, empty-label examples are skipped",
+    "train_usable_examples": 1350,
+    "skipped_over_context": 0,
+    "skipped_no_assistant": 0,
+    "skipped_empty": 0,
+    "min_valid_labels_current": 6,
+    "avg_valid_labels_current": 18.62148148148148
+  },
+  "label_audit_examples": [
+    {
+      "id": "glyph100-sft-smoke-v0-0001",
+      "instruction": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Jednym zdaniem.",
+      "assistant_pos_in_x": 19,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Los",
+      "current_masks_first_response_token": true,
+      "should_supervise_first_response_token": true,
+      "first_supervised_piece_current": "s",
+      "first_supervised_piece_after_fix": "▁Los",
+      "end_token_supervised_current": true,
+      "valid_label_count_current": 21,
+      "valid_label_count_after_fix": 22,
+      "template_token_count": 42
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0002",
+      "instruction": "Popraw tekst: Projekt może być ciekawy, ale obecnie ma zbyt wiele funkcji planowanych na start.",
+      "assistant_pos_in_x": 23,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Projekt",
+      "current_masks_first_response_token": true,
+      "should_supervise_first_response_token": true,
+      "first_supervised_piece_current": "▁jest",
+      "first_supervised_piece_after_fix": "▁Projekt",
+      "end_token_supervised_current": true,
+      "valid_label_count_current": 13,
+      "valid_label_count_after_fix": 14,
+      "template_token_count": 38
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0003",
+      "instruction": "Czy ta diagnoza jest pewna? Wskaż ograniczenie.",
+      "assistant_pos_in_x": 16,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Nie",
+      "current_masks_first_response_token": true,
+      "should_supervise_first_response_token": true,
+      "first_supervised_piece_current": ".",
+      "first_supervised_piece_after_fix": "▁Nie",
+      "end_token_supervised_current": true,
+      "valid_label_count_current": 19,
+      "valid_label_count_after_fix": 20,
+      "template_token_count": 37
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0004",
+      "instruction": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?",
+      "assistant_pos_in_x": 24,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Nie",
+      "current_masks_first_response_token": true,
+      "should_supervise_first_response_token": true,
+      "first_supervised_piece_current": ".",
+      "first_supervised_piece_after_fix": "▁Nie",
+      "end_token_supervised_current": true,
+      "valid_label_count_current": 19,
+      "valid_label_count_after_fix": 20,
+      "template_token_count": 45
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0005",
+      "instruction": "Usuń lanie wody: Warto byłoby dokonać porównania kilku wariantów.",
+      "assistant_pos_in_x": 16,
+      "x_assistant_piece": "<|assistant|>",
+      "y_at_assistant_pos_piece": "▁Warto",
+      "current_masks_first_response_token": true,
+      "should_supervise_first_response_token": true,
+      "first_supervised_piece_current": "▁porówna",
+      "first_supervised_piece_after_fix": "▁Warto",
+      "end_token_supervised_current": true,
+      "valid_label_count_current": 8,
+      "valid_label_count_after_fix": 9,
+      "template_token_count": 26
+    }
+  ],
+  "rocm_nan": {
+    "dtype": "fp32 default",
+    "autocast": "not used",
+    "grad_scaler": "not used",
+    "optimizer": "fresh AdamW foreach=True fused=False",
+    "lr": "5e-6 with warmup",
+    "emergency_stop": {
+      "phase": "sft-smoke",
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_sft_smoke_v0",
+      "step": 3,
+      "epoch": 1,
+      "reason": "non_finite_loss",
+      "loss": "NaN",
+      "latest_checkpoint_not_overwritten": true,
+      "created_at": "2026-06-24T09:20:08.787153+00:00",
+      "run_config": {
+        "base": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+        "resume": null,
+        "train_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_train.jsonl",
+        "val_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_val.jsonl",
+        "tokenizer": "data/processed/tokenizer.model",
+        "output": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke",
+        "log_dir": "logs/glyph-100m-v2_3_1-44k-sft-smoke",
+        "device": "cuda",
+        "batch_size": 4,
+        "epochs": 1,
+        "max_steps": 150,
+        "learning_rate": 5e-06,
+        "min_lr": 1e-06,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "warmup_steps": 10,
+        "checkpoint_interval": 50,
+        "eval_interval": 25,
+        "val_batches": 10,
+        "log_interval": 5,
+        "seed": 2026,
+        "tag": "glyph-100m-v2_3_1-44k-sft-smoke",
+        "context_len": 512,
+        "variant": "glyph-100m",
+        "dataset_name": "glyph100_sft_smoke_v0",
+        "dataset_report": "data/sft/glyph100_sft_smoke_v0_report.json",
+        "expected_base_step": 44000,
+        "expected_tokenizer_sha": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+        "max_loss": 20.0
+      }
+    },
+    "interpretation": "ROCm got NaN at step 3. Manual probes showed finite forward loss but non-finite gradients/parameters after backward/optimizer. CPU was stable. This indicates ROCm SFT backward/update instability, but label bug must be fixed first before deeper ROCm conclusions."
+  },
+  "cpu_smoke_length": {
+    "steps": 150,
+    "batch_size": 4,
+    "examples_seen_estimate": 600,
+    "train_examples": 1350,
+    "fraction_of_epoch": 0.4444444444444444,
+    "avg_response_tokens": 17.558,
+    "estimated_response_tokens_supervised": 10534.8,
+    "interpretation": "Short enough for mechanics only; not enough to expect reliable quality, especially with first response token masked."
+  },
+  "previous_eval_summary": {
+    "base_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+    "sft_checkpoint": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-final.pt",
+    "base_step": 44000,
+    "sft_step": 150,
+    "base_variant": "glyph-100m",
+    "sft_variant": "glyph-100m",
+    "examples": 28,
+    "winners": {
+      "tie": 25,
+      "base": 3
+    },
+    "base_avg_score": 4.214285714285714,
+    "sft_avg_score": 3.7142857142857144,
+    "base_repetition_samples": 0,
+    "sft_repetition_samples": 0,
+    "base_web_residue": 0,
+    "sft_web_residue": 2,
+    "base_pseudo_ency": 1,
+    "sft_pseudo_ency": 0
+  },
+  "tiny_overfit": {
+    "cpu": "not_run",
+    "rocm_safe": "not_run",
+    "reason": "critical template/labels bug found"
+  },
+  "next_step": "Fix labels mask, add label audit test, then rerun tiny overfit CPU only."
+}

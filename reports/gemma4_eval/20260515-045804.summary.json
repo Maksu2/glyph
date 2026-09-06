@@ -1,0 +1,33 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-15T05:08:56.017503+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260515-045804.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260515-045804.jsonl",
+  "count": 60,
+  "valid_count": 58,
+  "overall_avg": 2.569,
+  "averages": {
+    "continuation_fit": 3.0,
+    "polish": 3.0,
+    "coherence": 2.603,
+    "repetition": 2.069,
+    "safety": 5.0,
+    "overall": 2.569
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.569/5 na 58/60 próbkach. Trening: step=78910, train_loss=3.7781, val_loss=4.6063, lr=0.000211. Najsłabsze średnie: repetition=2.07, coherence=2.60; najmocniejsza metryka: continuation_fit=3.00.",
+  "training_stats": {
+    "step": 78910,
+    "total_steps": 200000,
+    "progress_pct": 39.455,
+    "loss": 3.7781,
+    "lr": 0.000211,
+    "last_eval": {
+      "ts": "2026-05-15 04:14:10",
+      "step": 78500,
+      "val_loss": 4.6063
+    },
+    "tokens_m": 646.43
+  },
+  "description_parse_warning": "No JSON object found in judge output"
+}

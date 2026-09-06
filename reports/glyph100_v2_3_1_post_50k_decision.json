@@ -1,0 +1,202 @@
+{
+  "created_at_utc": "2026-06-13T16:35:43+00:00",
+  "verdict": "B",
+  "verdict_label": "44k zostaje best practical checkpoint",
+  "reason": "50k is technically healthy and slightly better than 45k in seed sensitivity, but it does not beat 44k in broad eval or seed mean score.",
+  "best_practical_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+  "latest_diagnostic_checkpoint": "checkpoints/glyph-100m-v2_3_1-50k/latest.pt",
+  "latest_step_checkpoint": "checkpoints/glyph-100m-v2_3_1-50k/step_0050000.pt",
+  "model": "Glyph-100M",
+  "variant": "glyph-100m",
+  "dataset": "glyph100_v2_3_1",
+  "warning": "Base LM only; not an assistant/chatbot and not a final published model.",
+  "training": {
+    "status": "complete",
+    "start_step": 45000,
+    "end_step": 50000,
+    "duration": "7h 2m",
+    "avg_tokens_per_second": 3239.78,
+    "train_loss_first_logged": 3.2994,
+    "train_loss_last_logged": 3.2214,
+    "train_loss_min": 3.1459,
+    "train_loss_max": 3.3619,
+    "val_loss_trend": "rising",
+    "overfit_signal": "watch_val_loss",
+    "val_losses": [
+      {
+        "ts": "2026-06-11 21:41:16",
+        "step": 45500,
+        "val_loss": 3.1731
+      },
+      {
+        "ts": "2026-06-11 22:22:50",
+        "step": 46000,
+        "val_loss": 3.177
+      },
+      {
+        "ts": "2026-06-11 23:04:22",
+        "step": 46500,
+        "val_loss": 3.1255
+      },
+      {
+        "ts": "2026-06-11 23:49:42",
+        "step": 47000,
+        "val_loss": 2.9851
+      },
+      {
+        "ts": "2026-06-12 00:31:14",
+        "step": 47500,
+        "val_loss": 2.9998
+      },
+      {
+        "ts": "2026-06-12 01:12:50",
+        "step": 48000,
+        "val_loss": 3.1695
+      },
+      {
+        "ts": "2026-06-12 01:57:57",
+        "step": 48500,
+        "val_loss": 2.9773
+      },
+      {
+        "ts": "2026-06-12 02:39:33",
+        "step": 49000,
+        "val_loss": 3.1606
+      },
+      {
+        "ts": "2026-06-12 03:21:05",
+        "step": 49500,
+        "val_loss": 3.1279
+      },
+      {
+        "ts": "2026-06-12 04:02:44",
+        "step": 50000,
+        "val_loss": 3.3927
+      }
+    ],
+    "nan_inf_count": 0,
+    "oom_count": 0,
+    "crash_count": 0,
+    "checkpoint_files": [
+      "latest.pt",
+      "step_0046000.pt",
+      "step_0047000.pt",
+      "step_0048000.pt",
+      "step_0049000.pt",
+      "step_0050000.pt"
+    ],
+    "checkpoint_dir_size_human": "6.6 GB"
+  },
+  "eval": {
+    "avg_quality": {
+      "44k": 6.198,
+      "45k": 5.721,
+      "50k": 5.644
+    },
+    "median_quality": {
+      "44k": 8.0,
+      "45k": 6.0,
+      "50k": 6.0
+    },
+    "summary_by_checkpoint": {
+      "44k": {
+        "count": 480,
+        "avg_quality_score": 6.198,
+        "median_quality_score": 8.0,
+        "avg_tokens_per_second": 69.15,
+        "repetition_samples": 214,
+        "natural_endings": 22,
+        "cutoff_like_samples": 458,
+        "web_garbage_samples": 7,
+        "web_residue_samples": 20,
+        "wiki_residue_samples": 3,
+        "pseudo_ency_samples": 58,
+        "geo_history_suspect_samples": 57,
+        "topic_drift_samples": 243,
+        "avg_topic_overlap": 0.115
+      },
+      "45k": {
+        "count": 480,
+        "avg_quality_score": 5.721,
+        "median_quality_score": 6.0,
+        "avg_tokens_per_second": 69.27,
+        "repetition_samples": 223,
+        "natural_endings": 16,
+        "cutoff_like_samples": 464,
+        "web_garbage_samples": 8,
+        "web_residue_samples": 27,
+        "wiki_residue_samples": 2,
+        "pseudo_ency_samples": 61,
+        "geo_history_suspect_samples": 60,
+        "topic_drift_samples": 263,
+        "avg_topic_overlap": 0.103
+      },
+      "50k": {
+        "count": 480,
+        "avg_quality_score": 5.644,
+        "median_quality_score": 6.0,
+        "avg_tokens_per_second": 69.31,
+        "repetition_samples": 237,
+        "natural_endings": 10,
+        "cutoff_like_samples": 470,
+        "web_garbage_samples": 6,
+        "web_residue_samples": 28,
+        "wiki_residue_samples": 1,
+        "pseudo_ency_samples": 62,
+        "geo_history_suspect_samples": 58,
+        "topic_drift_samples": 229,
+        "avg_topic_overlap": 0.15
+      }
+    },
+    "pairwise_wins": {
+      "44k_vs_50k": {
+        "50k": 126,
+        "tie": 194,
+        "44k": 160
+      },
+      "45k_vs_50k": {
+        "50k": 145,
+        "tie": 191,
+        "45k": 144
+      }
+    },
+    "seed_pairwise_wins": {
+      "44k_vs_50k": {
+        "50k": 28,
+        "tie": 38,
+        "44k": 34
+      },
+      "45k_vs_50k": {
+        "50k": 38,
+        "tie": 30,
+        "45k": 32
+      }
+    },
+    "seed_stats": {
+      "44k_vs_50k": {
+        "mean_44k": 8.37,
+        "mean_50k": 7.55,
+        "diff_50k_minus_44k": -0.82,
+        "stdev_44k": 3.8916,
+        "stdev_50k": 4.0211
+      },
+      "45k_vs_50k": {
+        "mean_45k": 7.06,
+        "mean_50k": 7.55,
+        "diff_50k_minus_45k": 0.49,
+        "stdev_45k": 4.483,
+        "stdev_50k": 4.0211
+      },
+      "44k_vs_50k_diff_gt_noise_count": 2,
+      "45k_vs_50k_diff_gt_noise_count": 3
+    }
+  },
+  "artifacts": {
+    "training_report_md": "reports/glyph100_v2_3_1_50k_diagnostic_report.md",
+    "training_report_json": "reports/glyph100_v2_3_1_50k_diagnostic_report.json",
+    "broad_eval_md": "eval/glyph-100m/v2_3_1_44k_45k_50k_eval.md",
+    "broad_eval_json": "eval/glyph-100m/v2_3_1_44k_45k_50k_eval.json",
+    "seed_eval_md": "eval/glyph-100m/v2_3_1_50k_seed_sensitivity.md",
+    "seed_eval_json": "eval/glyph-100m/v2_3_1_50k_seed_sensitivity.json"
+  }
+}

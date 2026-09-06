@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-07-05T19:36:00Z",
+  "source_host": "maxoo-pc",
+  "target": {
+    "operating_system": "Raspberry Pi OS 64-bit / Debian",
+    "architecture": "arm64",
+    "install_root": "/opt/homelab-lite",
+    "runtime": "Docker with Docker Compose"
+  },
+  "status": "capture-complete",
+  "capture_live_data": {
+    "performed": true,
+    "captured_at": "2026-07-05T19:50:45Z",
+    "checksum_file": "checksums/live-data.sha256"
+  },
+  "migrated_services": [
+    {
+      "id": "homeassistant",
+      "name": "Home Assistant Container",
+      "image": "ghcr.io/home-assistant/home-assistant:stable",
+      "arm64_manifest_verified_at": "2026-07-05",
+      "source_paths": [
+        "/home/maksu/docker/homeassistant/docker-compose.yml",
+        "/home/maksu/docker/homeassistant/config"
+      ],
+      "target_paths": [
+        "/opt/homelab-lite/configs/homeassistant"
+      ],
+      "ports": [
+        {
+          "host": 8123,
+          "container": 8123,
+          "protocol": "tcp",
+          "mode": "host_network"
+        }
+      ]
+    },
+    {
+      "id": "mosquitto",
+      "name": "Mosquitto MQTT",
+      "image": "eclipse-mosquitto:2",
+      "arm64_manifest_verified_at": "2026-07-05",
+      "source_paths": [
+        "/home/maksu/zigbee/docker-compose.yml",
+        "/home/maksu/zigbee/mosquitto/config",
+        "/home/maksu/zigbee/mosquitto/data"
+      ],
+      "target_paths": [
+        "/opt/homelab-lite/configs/mosquitto/config",
+        "/opt/homelab-lite/configs/mosquitto/data",
+        "/opt/homelab-lite/configs/mosquitto/log"
+      ],
+      "ports": [
+        {
+          "host": 1883,
+          "container": 1883,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    {
+      "id": "zigbee2mqtt",
+      "name": "Zigbee2MQTT",
+      "image": "koenkk/zigbee2mqtt:latest",
+      "arm64_manifest_verified_at": "2026-07-05",
+      "adapter": "ember",
+      "device_inside_container": "/dev/ttyUSB0",
+      "source_paths": [
+        "/home/maksu/zigbee/docker-compose.yml",
+        "/home/maksu/zigbee/zigbee2mqtt/configuration.yaml",
+        "/home/maksu/zigbee/zigbee2mqtt/database.db",
+        "/home/maksu/zigbee/zigbee2mqtt/state.json",
+        "/home/maksu/zigbee/zigbee2mqtt/coordinator_backup.json",
+        "/home/maksu/zigbee/zigbee2mqtt/configuration_backup_v*.yaml"
+      ],
+      "target_paths": [
+        "/opt/homelab-lite/configs/zigbee2mqtt"
+      ],
+      "ports": [
+        {
+          "host": 8099,
+          "container": 8080,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    {
+      "id": "tailscale_instructions",
+      "name": "Tailscale — new node instructions only",
+      "image": null,
+      "source_paths": [],
+      "target_paths": [],
+      "ports": [],
+      "old_identity_copied": false
+    }
+  ],
+  "intentionally_omitted_services": [
+    "Jellyfin",
+    "Nextcloud",
+    "Frigate",
+    "arr-stack",
+    "qBittorrent",
+    "Minecraft",
+    "Time Machine",
+    "AI/Glyph",
+    "Nginx Proxy Manager",
+    "Uptime Kuma",
+    "Portainer",
+    "Homelab Status",
+    "Homelab Pocket Agent",
+    "Cloudflare"
+  ],
+  "intentionally_omitted_paths": [
+    "/mnt/data",
+    "/var/lib/tailscale/tailscaled.state",
+    "/etc/cloudflared",
+    "/home/maksu/.cloudflared"
+  ],
+  "sensitive_files": [
+    {
+      "path": "configs/homeassistant/secrets.yaml",
+      "type": "Home Assistant secrets",
+      "content": "[REDACTED]"
+    },
+    {
+      "path": "configs/homeassistant/.storage/",
+      "type": "Home Assistant auth, registries and integration state",
+      "content": "[REDACTED]"
+    },
+    {
+      "path": "configs/mosquitto/data/",
+      "type": "MQTT persistent state",
+      "content": "[REDACTED]"
+    },
+    {
+      "path": "configs/zigbee2mqtt/configuration.yaml",
+      "type": "Zigbee and MQTT configuration",
+      "content": "[REDACTED]"
+    },
+    {
+      "path": "configs/zigbee2mqtt/coordinator_backup.json",
+      "type": "Zigbee coordinator and network backup",
+      "content": "[REDACTED]"
+    }
+  ],
+  "kit_files": [
+    "install_on_rpi.sh",
+    "preflight_check.sh",
+    "verify_after_install.sh",
+    "capture_live_data.sh",
+    "README.md",
+    "MIGRATION_NOTES.md",
+    "rollback_notes.md",
+    "manifest.json",
+    "compose/docker-compose.yml"
+  ],
+  "checksums": [
+    {
+      "path": "checksums/prepare-only.sha256",
+      "algorithm": "SHA-256",
+      "scope": "immutable prepare-only skeleton files; manifest and mutable payload/log paths excluded"
+    }
+  ],
+  "security": {
+    "secret_values_recorded_in_manifest": false,
+    "cloudflare_credentials_included": false,
+    "tailscale_identity_included": false,
+    "live_home_assistant_database_copied_during_prepare": false
+  }
+}

@@ -1,0 +1,11 @@
+**
+!Dockerfile.train
+!Dockerfile.inference
+!requirements.txt
+!config.py
+!generate.py
+!model/
+!model/**
+!inference/
+!inference/**
+!scripts/container_entrypoint.sh

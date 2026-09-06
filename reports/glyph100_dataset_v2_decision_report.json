@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-05-31T23:17:30.085613+00:00",
+  "dataset": "glyph100_dataset_v2",
+  "train_tokens": 298401324,
+  "val_tokens": 1598783,
+  "total_tokens": 300000107,
+  "train_docs": 468549,
+  "val_docs": 2395,
+  "sources": {
+    "wolne_lektury": {
+      "seen_docs": 1544,
+      "accepted_docs": 1525,
+      "rejected_docs": 19,
+      "train_docs": 1518,
+      "val_docs": 7,
+      "train_tokens": 3128722,
+      "val_tokens": 14619,
+      "estimated_prefilter_tokens": 3352556,
+      "decision": "use_until_cap",
+      "acceptance_rate": 0.9876943005181347
+    },
+    "wikipedia_pl": {
+      "seen_docs": 250000,
+      "accepted_docs": 184467,
+      "rejected_docs": 65533,
+      "train_docs": 183495,
+      "val_docs": 972,
+      "train_tokens": 127170087,
+      "val_tokens": 759638,
+      "estimated_prefilter_tokens": 158649736,
+      "decision": "use_until_cap",
+      "acceptance_rate": 0.737868
+    },
+    "legacy_mixed_corpus": {
+      "seen_docs": 822122,
+      "accepted_docs": 284952,
+      "rejected_docs": 537170,
+      "train_docs": 283536,
+      "val_docs": 1416,
+      "train_tokens": 168102515,
+      "val_tokens": 824526,
+      "estimated_prefilter_tokens": 691445797,
+      "decision": "use_until_cap",
+      "acceptance_rate": 0.34660549164235965
+    }
+  },
+  "stage3_50k_epochs": 2.7306656927292363,
+  "stage4_100k_epochs": 5.461331385458473,
+  "stage5_200k_epochs": 10.922662770916945,
+  "recommendation": "B: do not approve stage 3 yet; improve/reduce legacy_mixed_corpus or add cleaner source-aware data first.",
+  "reason": "The v2 rebuild is source-aware and reaches 300M tokens, but manual sample review still finds accepted legacy_mixed_corpus rows that look like web listings, forums, ads, travel/product pages and other non-neutral pages. This is cleaner than glyph100_stage1_candidate and useful as a reproducible candidate, but I do not recommend approving stage 3 / 50k on it without either reducing legacy_mixed_corpus or adding cleaner source-aware data such as audited educational corpora.",
+  "files": {
+    "train_bin": "data/processed/glyph100_v2_train.bin",
+    "val_bin": "data/processed/glyph100_v2_val.bin",
+    "metadata": "data/processed/glyph100_v2_metadata.json",
+    "docs_jsonl": "data/processed/glyph100_v2_docs.jsonl",
+    "report": "data/reports/glyph100_dataset_v2_report.md",
+    "stats": "data/reports/glyph100_dataset_v2_stats.json",
+    "quality_audit": "data/reports/glyph100_dataset_v2_quality_audit.md"
+  },
+  "cleanup_estimated_recoverable_gb": 13.3
+}

@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-22T00:15:22.713669+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260521-233459.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260521-233459.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.85,
+  "averages": {
+    "continuation_fit": 3.117,
+    "polish": 3.317,
+    "coherence": 2.9,
+    "repetition": 2.65,
+    "safety": 5.0,
+    "overall": 2.85
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.85/5 na 60/60 próbkach. Trening: step=180290, train_loss=3.711, val_loss=4.3752, lr=3.65e-05. Najsłabsze średnie: repetition=2.65, coherence=2.90; najmocniejsza metryka: polish=3.32.",
+  "training_stats": {
+    "step": 180290,
+    "total_steps": 200000,
+    "progress_pct": 90.145,
+    "loss": 3.711,
+    "lr": 3.65e-05,
+    "last_eval": {
+      "ts": "2026-05-21 23:33:54",
+      "step": 180000,
+      "val_loss": 4.3752
+    },
+    "tokens_m": 1476.94
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.85/5. Najsłabsze metryki to 'coherence' (2.9) oraz 'repetition' (2.65). Wskaźnik straty treningowej (3.711) jest niższy niż walidacyjnej (4.3752), co jest oczekiwane, ale różnica sugeruje nadmierne dopasowanie do danych treningowych. Model wykazuje powtarzanie konstrukcji frazowych i nagłe, niepowiązane skoki tematyczne, co wskazuje na słabą zdolność do utrzymania długoterminowej spójności narracyjnej.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarkowy wynosi 2.85/5. Najsłabsze metryki to 'coherence' (2.9) oraz 'repetition' (2.65). Wskaźnik straty treningowej (3.711) jest niższy niż walidacyjnej (4.3752), co jest oczekiwane, ale różnica sugeruje nadmierne dopasowanie do danych treningowych. Model wykazuje powtarzanie konstrukcji frazowych i nagłe, niepowiązane skoki tematyczne, co wskazuje na słabą zdolność do utrzymania długoterminowej spójności narracyjnej.\"\n}\n```"
+}

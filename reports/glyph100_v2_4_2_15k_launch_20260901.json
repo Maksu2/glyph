@@ -1,0 +1,85 @@
+{
+  "report_type": "controlled_training_launch",
+  "created_at_utc": "2026-09-01T11:45:45Z",
+  "status": "running_healthy",
+  "model": "Glyph-100M",
+  "variant": "glyph-100m",
+  "stage": "v2_4_2_continue_10k_to_15k",
+  "resume_checkpoint": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+  "resume_checkpoint_sha256": "e32d34baff7c522a77a83c5ec1812dd83798c31c8b4cdefe93c729a4441ab4ce",
+  "resume_step": 10000,
+  "target_step": 15000,
+  "automatic_continuation_after_target": false,
+  "dataset": {
+    "name": "glyph100_dataset_v2_4_2_core",
+    "train_tokens": 231494339,
+    "val_tokens": 1176728,
+    "estimated_corpus_passes_at_15k": 1.0616306968
+  },
+  "tokenizer": {
+    "path": "data/processed/tokenizer.model",
+    "sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029"
+  },
+  "training_config": {
+    "context_length": 512,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "learning_rate": 0.0002,
+    "min_lr": 0.00002,
+    "warmup_steps": 2000,
+    "weight_decay": 0.1,
+    "grad_clip": 1.0,
+    "eval_interval": 500,
+    "eval_batches": 64,
+    "checkpoint_interval": 2500,
+    "log_interval": 10,
+    "train_sampling": "shuffled_blocks",
+    "data_seed": 2026,
+    "eval_seed": 2027
+  },
+  "outputs": {
+    "checkpoint_dir": "checkpoints/glyph-100m-v2_4_2-15k",
+    "log_dir": "logs/glyph-100m-v2_4_2-15k",
+    "train_log": "logs/glyph-100m-v2_4_2-15k/train.log",
+    "launcher_log": "logs/glyph-100m-v2_4_2-15k/launcher.log",
+    "gpu_metrics_log": "logs/glyph-100m-v2_4_2-15k/gpu_metrics.log",
+    "tmux_training": "glyph100-v242-15k",
+    "tmux_monitor": "glyph100-v242-15k-monitor"
+  },
+  "observed_start": {
+    "captured_at_utc": "2026-09-01T11:45:45Z",
+    "last_step": 10090,
+    "last_loss": 4.0601,
+    "throughput_tokens_per_second": 3263,
+    "vram_bytes": 5295341568,
+    "gpu_edge_avg_c": 60.4,
+    "gpu_edge_max_c": 66.0,
+    "gpu_hotspot_avg_c": 83.7,
+    "gpu_hotspot_max_c": 95.0,
+    "nan_inf_oom_crash_count": 0,
+    "emergency_stop_present": false
+  },
+  "temperature_watchdog": {
+    "enabled": true,
+    "hotspot_threshold_c": 103,
+    "consecutive_samples_required": 3,
+    "sample_interval_seconds": 30,
+    "stop_action": "SIGINT to training tmux session"
+  },
+  "estimated": {
+    "additional_tokens": 81920000,
+    "total_effective_tokens_at_target": 245760000,
+    "duration_hours_including_eval_and_checkpoint_overhead": 7.17,
+    "finish_utc": "2026-09-01T18:50:00Z",
+    "finish_warsaw": "2026-09-01T20:50:00+02:00"
+  },
+  "dashboard": {
+    "url": "https://trening.maksu.online/",
+    "current_model_only": true,
+    "private_absolute_paths_exposed": false,
+    "verified_publicly": true
+  },
+  "next_gate": "validate checkpoint and run matched 10k_vs_15k evaluation",
+  "training_beyond_15k_started": false
+}

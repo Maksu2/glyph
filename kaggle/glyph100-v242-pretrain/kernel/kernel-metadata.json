@@ -1,0 +1,17 @@
+{
+  "id": "maksymilianputa/glyph-100m-v2-4-2-p100-pretraining-to-10k",
+  "title": "Glyph-100M v2.4.2 P100 pretraining to 10k",
+  "code_file": "glyph100_v242_pretrain.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "maksymilianputa/glyph100-v242-pretrain-input"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

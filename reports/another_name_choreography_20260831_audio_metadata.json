@@ -1,0 +1,100 @@
+{
+  "source_path": "/home/maksu/.codex/attachments/c4da231d-7fd9-4dc9-baae-2a1f42a58225/Another Name.mp3",
+  "source_sha256": "d0311089770db56dd4d7d9d2049c0b980a57ea4f921f8aca29504b354cef8008",
+  "size_bytes": 4448376,
+  "title": "Another Name",
+  "artist": "Ludwig Göransson",
+  "album": "The Odyssey (Original Motion Picture Soundtrack)",
+  "date": "2026",
+  "duration_s_container": 111.177143,
+  "duration_s_decoded": 111.1307029478458,
+  "codec": "mp3",
+  "codec_long_name": "MP3 (MPEG audio layer 3)",
+  "bit_rate_stream_bps": 320000,
+  "bit_rate_container_bps": 320092,
+  "sample_rate_hz": 44100,
+  "channels": 2,
+  "channel_layout": "stereo",
+  "format_name": "mp3",
+  "analysis_decode": {
+    "sample_rate_hz": 22050,
+    "channels": 1,
+    "sample_format": "float32le",
+    "playback_performed": false,
+    "decoder": "jellyfin/jellyfin:latest:/usr/lib/jellyfin-ffmpeg/ffmpeg"
+  },
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "mp3",
+        "codec_long_name": "MP3 (MPEG audio layer 3)",
+        "codec_type": "audio",
+        "codec_tag_string": "[0][0][0][0]",
+        "codec_tag": "0x0000",
+        "sample_fmt": "fltp",
+        "sample_rate": "44100",
+        "channels": 2,
+        "channel_layout": "stereo",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/14112000",
+        "start_pts": 353600,
+        "start_time": "0.025057",
+        "duration_ts": 1568931840,
+        "duration": "111.177143",
+        "bit_rate": "320000",
+        "disposition": {
+          "default": 0,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "encoder": "Lavc61.3."
+        }
+      }
+    ],
+    "chapters": [],
+    "format": {
+      "filename": "/input/Another Name.mp3",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mp3",
+      "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+      "start_time": "0.025057",
+      "duration": "111.177143",
+      "size": "4448376",
+      "bit_rate": "320092",
+      "probe_score": 51,
+      "tags": {
+        "date": "2026",
+        "title": "Another Name",
+        "artist": "Ludwig Göransson",
+        "TOPE": "Ludwig Göransson - Topic",
+        "comment": "",
+        "genre": "Music",
+        "album": "The Odyssey (Original Motion Picture Soundtrack)",
+        "encoder": "Lavf61.1.100"
+      }
+    }
+  }
+}

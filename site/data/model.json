@@ -1,0 +1,37 @@
+{
+  "projectName": "Glyph",
+  "modelName": "Glyph-100M",
+  "variant": "Base / v2.3.1 stopped",
+  "description": "Glyph-100M is the larger Polish decoder-only Transformer experiment after Glyph-27M proved the pipeline. v2.3.1 pretraining reached a diagnostic 50k checkpoint, but evaluation keeps 44k as the best practical checkpoint.",
+  "language": "Polish",
+  "type": "decoder-only Transformer",
+  "framework": "PyTorch",
+  "parameters": {
+    "display": "97.65M unique",
+    "counted": 97654272,
+    "logicalWithTiedHead": "109.94M"
+  },
+  "architecture": {
+    "layers": 12,
+    "heads": 12,
+    "embeddingDim": 768,
+    "ffnDim": 3072,
+    "contextLength": 512,
+    "dropout": 0.1
+  },
+  "tokenizer": {
+    "type": "SentencePiece BPE",
+    "vocabSize": 16000
+  },
+  "training": {
+    "fromScratch": true,
+    "environment": "local homelab",
+    "purpose": "educational, research and portfolio",
+    "baseModel": "Glyph-100M Base",
+    "previousMilestone": "Glyph-27M Base + SFT v0",
+    "stage": "v2.3.1 stopped; best practical checkpoint 44k; latest diagnostic 50k",
+    "sftPurpose": "no Glyph-100M SFT yet; next option is a small smoke test on 44k",
+    "bestCheckpoint": "44k selected by broad eval and seed sensitivity",
+    "latestDiagnosticCheckpoint": "50k healthy but not better"
+  }
+}

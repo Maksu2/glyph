@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-16T23:46:31.185058+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260516-233442.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260516-233442.jsonl",
+  "count": 60,
+  "valid_count": 59,
+  "overall_avg": 2.797,
+  "averages": {
+    "continuation_fit": 3.085,
+    "polish": 3.169,
+    "coherence": 2.864,
+    "repetition": 2.492,
+    "safety": 5.0,
+    "overall": 2.797
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.797/5 na 59/60 próbkach. Trening: step=103600, train_loss=3.7878, val_loss=4.5099, lr=0.000159. Najsłabsze średnie: repetition=2.49, coherence=2.86; najmocniejsza metryka: polish=3.17.",
+  "training_stats": {
+    "step": 103600,
+    "total_steps": 200000,
+    "progress_pct": 51.800000000000004,
+    "loss": 3.7878,
+    "lr": 0.000159,
+    "last_eval": {
+      "ts": "2026-05-16 23:26:37",
+      "step": 103500,
+      "val_loss": 4.5099
+    },
+    "tokens_m": 848.69
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.797. Najsłabsze metryki to 'repetition' (2.492) i 'coherence' (2.864). Wskaźniki treningowe (train_loss=3.7878, val_loss=4.5099) wskazują na rozbieżność, przy czym val_loss jest wyższy. Model wykazuje tendencję do generowania niepowiązanych skoków tematycznych i przełączania kontekstu narracyjnego, co jest typowe dla etapu pretrainingu.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.797. Najsłabsze metryki to 'repetition' (2.492) i 'coherence' (2.864). Wskaźniki treningowe (train_loss=3.7878, val_loss=4.5099) wskazują na rozbieżność, przy czym val_loss jest wyższy. Model wykazuje tendencję do generowania niepowiązanych skoków tematycznych i przełączania kontekstu narracyjnego, co jest typowe dla etapu pretrainingu.\"\n}\n```"
+}

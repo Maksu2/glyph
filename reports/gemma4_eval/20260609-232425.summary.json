@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-09T23:43:05.810824+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260609-232425.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260609-232425.jsonl",
+  "count": 60,
+  "valid_count": 58,
+  "overall_avg": 2.828,
+  "averages": {
+    "continuation_fit": 3.293,
+    "polish": 3.31,
+    "coherence": 2.966,
+    "repetition": 2.655,
+    "safety": 4.983,
+    "overall": 2.828
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.828/5 na 58/60 próbkach. Trening: step=42320, train_loss=3.2864, val_loss=3.3796, lr=0.000182. Najsłabsze średnie: repetition=2.65, coherence=2.97; najmocniejsza metryka: polish=3.31.",
+  "training_stats": {
+    "step": 42320,
+    "total_steps": 45000,
+    "progress_pct": 94.04444444444444,
+    "loss": 3.2864,
+    "lr": 0.000182,
+    "last_eval": {
+      "ts": "2026-06-09 22:59:52",
+      "step": 42000,
+      "val_loss": 3.3796
+    },
+    "tokens_m": 693.37
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.83/5.0. Najniższe średnie oceny to 'repetition' (2.66) i 'coherence' (2.97). Wskaźniki treningowe wykazują niewielką rozbieżność między train_loss (3.29) a val_loss (3.38) przy niskiej szybkości uczenia (1.82e-4). Przykładowe błędy obejmują powtarzanie fraz ('miasteczko', 'port') oraz niestabilność tematyczna z nagłymi, niepowiązanymi elementami narracyjnymi.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.83/5.0. Najniższe średnie oceny to 'repetition' (2.66) i 'coherence' (2.97). Wskaźniki treningowe wykazują niewielką rozbieżność między train_loss (3.29) a val_loss (3.38) przy niskiej szybkości uczenia (1.82e-4). Przykładowe błędy obejmują powtarzanie fraz ('miasteczko', 'port') oraz niestabilność tematyczna z nagłymi, niepowiązanymi elementami narracyjnymi.\"\n}\n```"
+}

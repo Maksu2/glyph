@@ -1,0 +1,73 @@
+{
+  "decision": {
+    "verdict": "B",
+    "label": "v0.2 poprawia częściowo",
+    "recommendation": "Kolejny krok to projekt datasetu v0.3 albo ostrożny plan SFT v1; nie uruchamiać automatycznie."
+  },
+  "eval": {
+    "rows": 100,
+    "modes": [
+      "greedy",
+      "repetition_guard"
+    ],
+    "models": {
+      "base44k": {
+        "repetitions": 73,
+        "pseudo": 0,
+        "web": 6,
+        "first": 0,
+        "avg_score_mean_across_modes": -0.15999999999999998
+      },
+      "sft_v0_1": {
+        "repetitions": 29,
+        "pseudo": 0,
+        "web": 4,
+        "first": 40,
+        "avg_score_mean_across_modes": 2.945
+      },
+      "sft_v0_2": {
+        "repetitions": 12,
+        "pseudo": 0,
+        "web": 13,
+        "first": 49,
+        "avg_score_mean_across_modes": 3.405
+      }
+    },
+    "pairwise_total": {
+      "sft_v0_2_vs_sft_v0_1": {
+        "sft_v0_2": 36,
+        "tie": 145,
+        "sft_v0_1": 19
+      },
+      "sft_v0_2_vs_base44k": {
+        "sft_v0_2": 111,
+        "tie": 83,
+        "base44k": 6
+      },
+      "sft_v0_1_vs_base44k": {
+        "sft_v0_1": 101,
+        "tie": 95,
+        "base44k": 4
+      }
+    }
+  },
+  "training": {
+    "duration_seconds": 198,
+    "loss_start": 4.476641,
+    "loss_end": 1.470514,
+    "best_eval": {
+      "ts": "2026-06-24 19:52:07",
+      "step": 462,
+      "val_loss": 1.213816,
+      "batches": 16
+    },
+    "final_eval": {
+      "ts": "2026-06-24 19:52:07",
+      "step": 462,
+      "val_loss": 1.213816,
+      "batches": 16
+    },
+    "has_nan_or_inf": false,
+    "has_oom_or_crash": false
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "generated_at_utc": "2026-08-02T00:24:53Z",
+  "training_performed": false,
+  "backward_performed": false,
+  "optimizer_steps_performed": 0,
+  "google_drive_upload_performed": false,
+  "google_drive_api_used": false,
+  "existing_checkpoints_modified": false,
+  "best_checkpoint_changed": false,
+  "repo": {
+    "root": "/home/maksu/ai-model",
+    "git_commit": null,
+    "model_config": "config.py",
+    "model_implementation": "model/transformer.py",
+    "sft_pipeline": "finetune.py"
+  },
+  "base_checkpoint": {
+    "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+    "size_bytes": 1175128433,
+    "sha256": "5c24f234eb8550bb6b44e3e3cbe87e109ff5665a58220b0dd59566b330a120c6",
+    "step": 44000,
+    "variant": "glyph-100m",
+    "dataset": "glyph100_v2_3_1",
+    "context_length": 512,
+    "model_tensors": 113,
+    "unique_parameters": 97654272,
+    "strict_load": "PASS",
+    "checkpoint_50k_selected": false,
+    "optimizer_free_bundle_tensor_bytes": 442914816
+  },
+  "tokenizer": {
+    "path": "data/processed/tokenizer.model",
+    "sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029"
+  },
+  "dataset": {
+    "path": "data/sft/glyph100_sft_smoke_v0_3.jsonl",
+    "sha256": "5583e1e8dea7631cafd7156f2da0cf0b96558c38215f2d62a3ffb3365e339121",
+    "examples": 2753,
+    "split": {
+      "train": 2341,
+      "val": 275,
+      "test": 137
+    },
+    "all_fit_context_512": true
+  },
+  "label_contract": {
+    "boundary": "i < assistant_pos",
+    "first_assistant_token_supervised": true,
+    "end_token_supervised": true,
+    "prompt_supervised": false,
+    "padding_ignore_index": -100,
+    "examples_without_assistant_labels": 0
+  },
+  "created_files": [
+    "colab/Glyph_Colab.ipynb",
+    "colab/README.md",
+    "requirements-colab.txt",
+    "config/colab_bundle.example.json",
+    "docs/COLAB_MIGRATION.md",
+    "scripts/colab_bundle_utils.py",
+    "scripts/pack_glyph_colab_bundle.py",
+    "scripts/verify_glyph_colab_bundle.py",
+    "scripts/colab_preflight.py",
+    "scripts/colab_run_sft.py",
+    "scripts/colab_export_results.py",
+    "reports/glyph_colab_migration_preparation.md",
+    "reports/glyph_colab_migration_preparation.json"
+  ],
+  "tests": {
+    "py_compile": "PASS",
+    "notebook_json": "PASS",
+    "notebook_code_cells": "10/10 PASS",
+    "base_checkpoint_strict_load": "PASS",
+    "label_mask_audit": "PASS",
+    "cpu_inference_smoke": "PASS",
+    "packer_dry_run": "PASS",
+    "structural_bundle": "PASS",
+    "bundle_verifier": "PASS",
+    "tamper_detection": "PASS",
+    "checkpoint_50k_rejection": "PASS",
+    "training_confirmation_guard": "PASS",
+    "atomic_checkpoint_save_reload": "PASS",
+    "resume_mismatch_guard": "PASS",
+    "exporter_dry_run": "PASS",
+    "existing_unit_tests": "12/12 PASS"
+  },
+  "estimated_full_bundle": {
+    "uncompressed_model_mib": 422.396484375,
+    "expected_total_gib": 0.42,
+    "full_bundle_created_now": false,
+    "reason": "The requested small structural test exercised packaging without duplicating the full checkpoint."
+  },
+  "commands": {
+    "prepare": ".venv/bin/python scripts/pack_glyph_colab_bundle.py --base-checkpoint checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt --dataset data/sft/glyph100_sft_smoke_v0_3.jsonl --output-dir dist/glyph-colab --include-reports",
+    "verify": ".venv/bin/python scripts/verify_glyph_colab_bundle.py --bundle-dir dist/glyph-colab --cpu-inference --report-json dist/glyph-colab/local-verification.json"
+  },
+  "known_limitations": [
+    "Actual Colab CUDA hardware and preinstalled PyTorch were not available locally.",
+    "fp16 and bf16 paths are opt-in and untested.",
+    "The full model archive was not materialized during this preparation.",
+    "No training has been authorized by this migration preparation."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "run_id": "glyph100_v2_4_1_1k_20260716",
+  "checkpoint": "checkpoints/glyph-100m-v2_4_1-1k/latest.pt",
+  "checkpoint_step": 1000,
+  "scope": "early base-LM continuation sanity; not assistant evaluation",
+  "prompt_count": 8,
+  "sample_count": 16,
+  "presets": ["normal", "creative"],
+  "max_new_tokens": 80,
+  "manual_counts": {
+    "meaningful_coherent_continuations": 0,
+    "cutoff_like": 15,
+    "natural_endings": 1,
+    "literal_repetition": 1,
+    "pseudo_encyclopedic_or_date_place_residue": 5,
+    "url_html_seo_residue": 0
+  },
+  "interpretation": {
+    "pipeline_signal": "positive: checkpoint can generate and Polish token/phrase structure is emerging",
+    "quality_signal": "too early: outputs remain semantically incoherent and usually exhaust the token budget",
+    "preset_observation": "normal is less erratic than creative, but neither is useful at step 1000",
+    "decision": "treat 1k as successful mechanical validation only; do not call it a usable language model"
+  }
+}

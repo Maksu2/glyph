@@ -1,0 +1,88 @@
+{
+  "created_for": "glyph100_sft_smoke_v0_3",
+  "inputs": {
+    "v0_2_decoding_sweep": "eval/glyph-100m/sft_v0_2_decoding_sweep.json",
+    "v0_2_best_decoding_compare": "eval/glyph-100m/sft_v0_1_vs_v0_2_best_decoding.json",
+    "v0_2_error_audit": "reports/glyph100_sft_v0_2_error_and_decoding_audit.json",
+    "v0_2_final_decision": "reports/glyph100_sft_v0_2_final_next_decision.json"
+  },
+  "diagnosis": {
+    "working_categories": [
+      "anty_powtorzenia_i_konczenie",
+      "poprawki_tekstu",
+      "mini_streszczenia"
+    ],
+    "weak_categories": [
+      "krotkie_definicje_poprawne",
+      "sanity_fakty_podstawowe",
+      "not_in_dataset_style_generalization"
+    ],
+    "web_risk": "v0.2 manual audit still found real web-residue cases; v0.3 adds explicit anti_web_residue examples.",
+    "repetition_risk": "no_repeat_ngram_size_3 controls literal loops in decoding, but dataset should still teach natural stopping."
+  },
+  "changes_for_v0_3": {
+    "examples": 2753,
+    "split": {
+      "train": 2341,
+      "val": 275,
+      "test": 137
+    },
+    "categories": {
+      "anty_powtorzenia_i_konczenie": 820,
+      "krotkie_definicje_poprawne": 286,
+      "techniczne_proste_wyjasnienia": 198,
+      "ostrozne_odpowiedzi": 185,
+      "codzienne_proste_pytania": 185,
+      "anty_web_residue": 56,
+      "poprawki_tekstu": 213,
+      "mini_streszczenia": 175,
+      "mvp_first_project_advice": 185,
+      "not_in_dataset_style_generalization": 64,
+      "sanity_fakty_podstawowe": 60,
+      "brak_danych_bez_petli": 326
+    },
+    "first_response_words_top10": [
+      [
+        "nie",
+        275
+      ],
+      [
+        "trzeba",
+        92
+      ],
+      [
+        "checkpoint",
+        59
+      ],
+      [
+        "backup",
+        54
+      ],
+      [
+        "walidacja",
+        50
+      ],
+      [
+        "tokenizer",
+        49
+      ],
+      [
+        "zacznij",
+        46
+      ],
+      [
+        "raczej",
+        45
+      ],
+      [
+        "odpowiedź",
+        43
+      ],
+      [
+        "bez",
+        42
+      ]
+    ],
+    "max_template_tokens": 76
+  }
+}

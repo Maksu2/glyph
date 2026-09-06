@@ -1,0 +1,17 @@
+[{"stream_name":"stdout","time":1.073662241,"data":"nvidia-smi is not present; CUDA validation will use PyTorch\n"}
+,{"stream_name":"stderr","time":10.390461461,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":10.39052485,"data":"  File \"/kaggle/src/script.py\", line 352, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":10.390653006,"data":"    main()\n"}
+,{"stream_name":"stderr","time":10.390663263,"data":"  File \"/kaggle/src/script.py\", line 196, in main\n"}
+,{"stream_name":"stderr","time":10.390905425,"data":"    gpu = gpu_report()\n"}
+,{"stream_name":"stderr","time":10.390927961,"data":"          ^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":10.390933266,"data":"  File \"/kaggle/src/script.py\", line 121, in gpu_report\n"}
+,{"stream_name":"stderr","time":10.391338602,"data":"    raise RuntimeError(\"Kaggle job did not receive a CUDA GPU\")\n"}
+,{"stream_name":"stderr","time":10.39136036,"data":"RuntimeError: Kaggle job did not receive a CUDA GPU\n"}
+,{"stream_name":"stderr","time":13.690342998,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":13.690384498,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":14.061445382,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":14.061477825,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":14.867776798,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":16.605474852,"data":"[NbConvertApp] Writing 330067 bytes to __results__.html\n"}
+]

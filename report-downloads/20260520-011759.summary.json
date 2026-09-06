@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-20T01:25:55.396710+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260520-011759.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260520-011759.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.917,
+  "averages": {
+    "continuation_fit": 3.267,
+    "polish": 3.4,
+    "coherence": 2.967,
+    "repetition": 2.667,
+    "safety": 5.0,
+    "overall": 2.917
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.917/5 na 60/60 próbkach. Trening: step=142320, train_loss=3.6958, val_loss=4.4116, lr=8.27e-05. Najsłabsze średnie: repetition=2.67, coherence=2.97; najmocniejsza metryka: polish=3.40.",
+  "training_stats": {
+    "step": 142320,
+    "total_steps": 200000,
+    "progress_pct": 71.16,
+    "loss": 3.6958,
+    "lr": 8.27e-05,
+    "last_eval": {
+      "ts": "2026-05-19 18:43:45",
+      "step": 142000,
+      "val_loss": 4.4116
+    },
+    "tokens_m": 1165.89
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.917/5. Najsłabsze metryki to 'coherence' (2.967) oraz 'repetition' (2.667), co sugeruje problemy z utrzymaniem spójności narracyjnej i nadmiernym powtarzaniem fraz. W kontekście treningowym, rozbieżność między train_loss (3.6958) a val_loss (4.4116) jest zauważalna, przy stosunkowo niskiej learning rate (8.27e-05). Typowym błędem widocznym w próbkach jest niekontrolowane powtarzanie fraz lub nagłe, niepowiązane przejścia tematyczne, co jest charakterystyczne dla modelu na etapie przed SFT.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarkowy wynosi 2.917/5. Najsłabsze metryki to 'coherence' (2.967) oraz 'repetition' (2.667), co sugeruje problemy z utrzymaniem spójności narracyjnej i nadmiernym powtarzaniem fraz. W kontekście treningowym, rozbieżność między train_loss (3.6958) a val_loss (4.4116) jest zauważalna, przy stosunkowo niskiej learning rate (8.27e-05). Typowym błędem widocznym w próbkach jest niekontrolowane powtarzanie fraz lub nagłe, niepowiązane przejścia tematyczne, co jest charakterystyczne dla modelu na etapie przed SFT.\"\n}\n```"
+}

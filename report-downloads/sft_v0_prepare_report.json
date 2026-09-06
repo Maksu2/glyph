@@ -1,0 +1,41 @@
+{
+  "input": "data/sft/raw/glyph_sft_v0_seed_1500_expanded.jsonl",
+  "tokenizer": "data/processed/tokenizer.model",
+  "context_len": 256,
+  "seed": 2026,
+  "val_fraction": 0.1,
+  "overflow": "drop",
+  "input_examples": 1500,
+  "kept_examples": 1500,
+  "dropped_over_context": 0,
+  "truncated_examples": 0,
+  "train_examples": 1350,
+  "val_examples": 150,
+  "train_tokens": 117770,
+  "val_tokens": 13033,
+  "paths": {
+    "train_jsonl": "data/sft/processed/sft_v0_train.jsonl",
+    "val_jsonl": "data/sft/processed/sft_v0_val.jsonl",
+    "train_txt": "data/sft/processed/sft_v0_train.txt",
+    "val_txt": "data/sft/processed/sft_v0_val.txt",
+    "train_bin": "data/sft/processed/sft_v0_train.bin",
+    "val_bin": "data/sft/processed/sft_v0_val.bin"
+  },
+  "dropped_lines": [],
+  "category_counts_train": {
+    "brak_danych": 135,
+    "codzienne_decyzje": 540,
+    "korekta_zalozen": 90,
+    "pisanie_i_streszczanie": 270,
+    "proste_wyjasnienia": 225,
+    "techniczne_proste": 90
+  },
+  "category_counts_val": {
+    "brak_danych": 15,
+    "codzienne_decyzje": 60,
+    "korekta_zalozen": 10,
+    "pisanie_i_streszczanie": 30,
+    "proste_wyjasnienia": 25,
+    "techniczne_proste": 10
+  }
+}

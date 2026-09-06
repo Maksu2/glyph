@@ -1,0 +1,126 @@
+{
+  "generated_at": "2026-06-08T16:14:46.244043+00:00",
+  "interrupted_run": {
+    "status": "cleanly stopped",
+    "log": "logs/glyph-100m-v2_3_1-35k/train.log",
+    "resume_step": 25000,
+    "train_range": [
+      25001,
+      35000
+    ],
+    "last_logged_step": 26720,
+    "last_logged_loss": 3.5684,
+    "last_eval": {
+      "step": 26500,
+      "val_loss": 3.5991,
+      "line": "2026-06-08 15:43:55 eval step=  26500 | val_loss=3.5991 | batches=5"
+    },
+    "baseline_tok_s_avg_excluding_first": 3289.6,
+    "clean_exit_detected": true,
+    "partial_files": {
+      "partial_35k_latest": {
+        "path": "checkpoints/glyph-100m-v2_3_1-35k/latest.pt",
+        "size_bytes": 1175128015,
+        "size_gib": 1.094,
+        "mtime_utc": "2026-06-08T16:02:52.143478+00:00"
+      },
+      "partial_35k_step_26000": {
+        "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0026000.pt",
+        "size_bytes": 1175128433,
+        "size_gib": 1.094,
+        "mtime_utc": "2026-06-08T15:02:24.194777+00:00"
+      },
+      "partial_35k_emergency": {
+        "path": "checkpoints/glyph-100m-v2_3_1-35k/emergency.pt",
+        "size_bytes": 1175127179,
+        "size_gib": 1.094,
+        "mtime_utc": "2026-06-08T16:02:51.174474+00:00"
+      }
+    }
+  },
+  "benchmark": {
+    "status": "complete",
+    "log": "logs/glyph-100m-v2_3_1-batch8-bench/train.log",
+    "resume_step": 25000,
+    "train_range": [
+      25001,
+      25100
+    ],
+    "config": {
+      "batch_size": 8,
+      "context": 512,
+      "gradient_accumulation_steps": 4,
+      "effective_tokens_per_step": 16384
+    },
+    "first_logged_step": {
+      "step": 25010,
+      "loss": 3.6117,
+      "lr": 0.000194,
+      "tok_s": 3331,
+      "tokens_m": 409.76,
+      "line": "2026-06-08 16:04:46 step=  25010 | loss=3.6117 | lr=1.94e-04 | tok/s=3,331 | tokens=409.76M | data=0.0% fwd=40.7% bwd=57.8% opt=1.1%"
+    },
+    "last_logged_step": {
+      "step": 25100,
+      "loss": 3.5831,
+      "lr": 0.000194,
+      "tok_s": 3375,
+      "tokens_m": 411.24,
+      "line": "2026-06-08 16:12:03 step=  25100 | loss=3.5831 | lr=1.94e-04 | tok/s=3,375 | tokens=411.24M | data=0.0% fwd=40.3% bwd=58.5% opt=1.0%"
+    },
+    "evals": [
+      {
+        "step": 25100,
+        "val_loss": 3.4101,
+        "line": "2026-06-08 16:12:08 eval step=  25100 | val_loss=3.4101 | batches=5"
+      }
+    ],
+    "tok_s_avg_excluding_first": 3373.9,
+    "tok_s_delta_vs_baseline_pct": 2.56,
+    "checkpoint_metadata": {
+      "bench_latest": {
+        "step": 25100,
+        "current_step": 25100,
+        "variant": "glyph-100m",
+        "dataset_name": "glyph100_v2_3_1",
+        "batch_size": 8,
+        "gradient_accumulation_steps": 4
+      },
+      "bench_step_25100": {
+        "step": 25100,
+        "current_step": 25100,
+        "variant": "glyph-100m",
+        "dataset_name": "glyph100_v2_3_1",
+        "batch_size": 8,
+        "gradient_accumulation_steps": 4
+      }
+    },
+    "files": {
+      "batch8_latest": {
+        "path": "checkpoints/glyph-100m-v2_3_1-batch8-bench/latest.pt",
+        "size_bytes": 1175128079,
+        "size_gib": 1.094,
+        "mtime_utc": "2026-06-08T16:12:05.763309+00:00"
+      },
+      "batch8_step_25100": {
+        "path": "checkpoints/glyph-100m-v2_3_1-batch8-bench/step_0025100.pt",
+        "size_bytes": 1175128497,
+        "size_gib": 1.094,
+        "mtime_utc": "2026-06-08T16:12:04.816303+00:00"
+      }
+    },
+    "vram_percent_observed": 98,
+    "gpu_edge_c_observed_max": 64,
+    "gpu_hotspot_c_observed_max": 86,
+    "oom_nan_crash": false
+  },
+  "unchanged_25k_files": {
+    "unchanged_25k_latest": {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/latest.pt",
+      "size_bytes": 1175128015,
+      "size_gib": 1.094,
+      "mtime_utc": "2026-06-08T08:35:49.999296+00:00"
+    }
+  },
+  "recommendation": "B: stay with batch4/accum8 for longer unattended runs; batch8/accum4 is faster but VRAM headroom is too small at 98%. Use batch8 only for supervised short runs or repeat after memory/ROCm safety improvements."
+}

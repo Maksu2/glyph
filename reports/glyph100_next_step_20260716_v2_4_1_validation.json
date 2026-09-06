@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-07-16T07:18:11.592558+00:00",
+  "dataset_name": "glyph100_dataset_v2_4_1_core",
+  "verdict": "PASS: v2.4.1 is mechanically valid and ready for a controlled 1k/5k proxy, not an automatic long run.",
+  "checks": {
+    "metadata token total matches docs JSONL": true,
+    "metadata train tokens match docs JSONL": true,
+    "metadata val tokens match docs JSONL": true,
+    "train binary byte size equals uint16 token count": true,
+    "val binary byte size equals uint16 token count": true,
+    "metadata document count matches docs JSONL": true,
+    "document IDs are unique": true,
+    "parent documents do not cross train and val": true,
+    "minimum token floor is met": true
+  },
+  "observed_docs": 201746,
+  "observed_parents": 193129,
+  "observed_total_tokens": 279496401,
+  "observed_train_tokens": 278089665,
+  "observed_val_tokens": 1406736,
+  "duplicate_ids": 0,
+  "parent_leakage_count": 0,
+  "parent_leakage_examples": [],
+  "web_residue_hits": 1638,
+  "wiki_markup_hits": 149,
+  "pseudo_ency_hits": 30121,
+  "heuristic_hits_by_source": {
+    "1000_novels": {
+      "pseudo_ency_phrase": 210,
+      "wiki_markup": 7
+    },
+    "eltec_pol": {
+      "pseudo_ency_phrase": 101,
+      "wiki_markup": 1
+    },
+    "parliamentary": {
+      "pseudo_ency_phrase": 1134,
+      "wiki_markup": 1
+    },
+    "wikibooks": {
+      "pseudo_ency_phrase": 16
+    },
+    "wikinews": {
+      "pseudo_ency_phrase": 140
+    },
+    "wikipedia_pl": {
+      "web_residue": 1638,
+      "pseudo_ency_phrase": 27925,
+      "wiki_markup": 139
+    },
+    "wikisource": {
+      "pseudo_ency_phrase": 260
+    },
+    "wolne_lektury": {
+      "pseudo_ency_phrase": 335,
+      "wiki_markup": 1
+    }
+  },
+  "observed_sources": {
+    "1000_novels": {
+      "docs": 2776,
+      "tokens": 30196490,
+      "train_tokens": 30010275,
+      "val_tokens": 186215,
+      "train_docs": 2759,
+      "val_docs": 17
+    },
+    "eltec_pol": {
+      "docs": 1058,
+      "tokens": 13841376,
+      "train_tokens": 13706531,
+      "val_tokens": 134845,
+      "train_docs": 1048,
+      "val_docs": 10
+    },
+    "parliamentary": {
+      "docs": 11575,
+      "tokens": 23852526,
+      "train_tokens": 23689194,
+      "val_tokens": 163332,
+      "train_docs": 11497,
+      "val_docs": 78
+    },
+    "wikibooks": {
+      "docs": 4286,
+      "tokens": 3772313,
+      "train_tokens": 3752725,
+      "val_tokens": 19588,
+      "train_docs": 4260,
+      "val_docs": 26
+    },
+    "wikinews": {
+      "docs": 8378,
+      "tokens": 2745045,
+      "train_tokens": 2731314,
+      "val_tokens": 13731,
+      "train_docs": 8333,
+      "val_docs": 45
+    },
+    "wikipedia_pl": {
+      "docs": 132712,
+      "tokens": 120003040,
+      "train_tokens": 119402887,
+      "val_tokens": 600153,
+      "train_docs": 132065,
+      "val_docs": 647
+    },
+    "wikisource": {
+      "docs": 33787,
+      "tokens": 30048511,
+      "train_tokens": 30048511,
+      "val_tokens": 0,
+      "train_docs": 33787,
+      "val_docs": 0
+    },
+    "wolne_lektury": {
+      "docs": 7174,
+      "tokens": 55037100,
+      "train_tokens": 54748228,
+      "val_tokens": 288872,
+      "train_docs": 7125,
+      "val_docs": 49
+    }
+  },
+  "samples_file": "/home/maksu/ai-model/reports/glyph100_next_step_20260716_v2_4_1_samples.json",
+  "all_hard_checks_pass": true
+}

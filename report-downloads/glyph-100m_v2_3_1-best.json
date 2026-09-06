@@ -1,0 +1,10 @@
+{
+  "label": "44k",
+  "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+  "latest_diagnostic_path": "checkpoints/glyph-100m-v2_3_1-50k/latest.pt",
+  "reason": "44k beats 50k in broad eval and seed sensitivity",
+  "dataset": "glyph100_v2_3_1",
+  "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+  "status": "pretraining stopped",
+  "updated_at_utc": "2026-06-17T09:04:22+00:00"
+}

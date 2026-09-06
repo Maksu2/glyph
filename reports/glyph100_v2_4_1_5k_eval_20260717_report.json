@@ -1,0 +1,128 @@
+{
+  "report_id": "glyph100_v2_4_1_5k_eval_20260717",
+  "created_at": "2026-07-17",
+  "status": "complete",
+  "training_started": false,
+  "verdict": {
+    "code": "CONTROLLED_CONTINUATION_TO_10K_IS_JUSTIFIED",
+    "summary": "The 5k run is technically healthy and better than 1k, but generation quality is still poor. Continue only as a controlled 10k checkpoint experiment after separate approval.",
+    "next_training_started": false,
+    "dataset_change_now": false,
+    "sft_now": false
+  },
+  "checkpoint": {
+    "path": "checkpoints/glyph-100m-v2_4_1-5k/latest.pt",
+    "step_checkpoint_path": "checkpoints/glyph-100m-v2_4_1-5k/step_0005000.pt",
+    "variant": "glyph-100m",
+    "step": 5000,
+    "dataset": "glyph100_dataset_v2_4_1_core",
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "context_length": 512,
+    "optimizer_state_present": true,
+    "scheduler_state_present": true,
+    "resume_check_passed": true,
+    "sampler_cursor": 160000,
+    "checkpoint_directory_gib": 5.5
+  },
+  "run": {
+    "total_tokens": 81920000,
+    "train_corpus_tokens": 278089665,
+    "corpus_fraction": 0.2945812459,
+    "continuation_start_step": 1000,
+    "continuation_end_step": 5000,
+    "continuation_duration_seconds": 20110,
+    "total_active_training_duration_approx_seconds": 25170,
+    "stable_training_tokens_per_second": 3283,
+    "end_to_end_tokens_per_second_approx": 3255,
+    "nan": false,
+    "inf": false,
+    "oom": false,
+    "crash": false
+  },
+  "gpu": {
+    "name": "AMD Radeon RX 5500 XT",
+    "backend": "ROCm HIP 7.13.0",
+    "edge_c_avg": 65.87,
+    "edge_c_max": 67.0,
+    "hotspot_c_avg": 88.55,
+    "hotspot_c_max": 95.0,
+    "power_w_avg": 113.87,
+    "power_w_max_observed": 128.0
+  },
+  "validation_loss": {
+    "250": 7.9565,
+    "500": 7.3277,
+    "750": 6.8266,
+    "1000": 6.4298,
+    "1500": 5.9220,
+    "2000": 5.6551,
+    "2500": 5.3442,
+    "3000": 5.0933,
+    "3500": 4.9110,
+    "4000": 4.7702,
+    "4500": 4.6665,
+    "5000": 4.5902
+  },
+  "source_validation": {
+    "1000_novels": {"tokens": 186215, "loss_1k": 6.1635, "loss_5k": 4.7146, "delta": -1.4489},
+    "eltec_pol": {"tokens": 134845, "loss_1k": 6.0083, "loss_5k": 4.5009, "delta": -1.5074},
+    "parliamentary": {"tokens": 163332, "loss_1k": 6.4505, "loss_5k": 4.3750, "delta": -2.0754},
+    "wikibooks": {"tokens": 19588, "loss_1k": 7.0727, "loss_5k": 5.2204, "delta": -1.8523},
+    "wikinews": {"tokens": 13731, "loss_1k": 7.0261, "loss_5k": 5.1516, "delta": -1.8745},
+    "wikipedia_pl": {"tokens": 600153, "loss_1k": 6.7542, "loss_5k": 4.6365, "delta": -2.1176},
+    "wolne_lektury": {"tokens": 288872, "loss_1k": 6.0762, "loss_5k": 4.5322, "delta": -1.5440},
+    "wikisource_note": "train_only_due_to_missing_parent_work_metadata"
+  },
+  "completion_eval": {
+    "prompts": 20,
+    "presets": 2,
+    "samples_per_checkpoint": 40,
+    "checkpoints": {
+      "1k": {"avg_score": 2.15, "natural_endings": 6, "cutoff_like": 37, "repetition": 22, "pseudo_ency": 12, "web_residue": 0},
+      "2k": {"avg_score": 2.975, "natural_endings": 9, "cutoff_like": 33, "repetition": 17, "pseudo_ency": 9, "web_residue": 0},
+      "3k": {"avg_score": 2.825, "natural_endings": 5, "cutoff_like": 37, "repetition": 16, "pseudo_ency": 6, "web_residue": 0},
+      "4k": {"avg_score": 2.875, "natural_endings": 4, "cutoff_like": 39, "repetition": 11, "pseudo_ency": 11, "web_residue": 0},
+      "5k": {"avg_score": 3.0, "natural_endings": 6, "cutoff_like": 40, "repetition": 13, "pseudo_ency": 7, "web_residue": 0}
+    },
+    "pairwise_1k_vs_5k": {"1k_wins": 7, "5k_wins": 21, "ties": 12},
+    "pairwise_4k_vs_5k": {"4k_wins": 10, "5k_wins": 14, "ties": 16},
+    "heuristic_best": "5k",
+    "manual_semantic_assessment": "5k has more Polish-looking surface text than 1k, but remains semantically poor and overuses parliamentary and pseudo-encyclopedic templates."
+  },
+  "dataset_source_shares_percent": {
+    "wikipedia_pl": 42.94,
+    "wolne_lektury": 19.69,
+    "1000_novels": 10.80,
+    "wikisource": 10.75,
+    "parliamentary": 8.53,
+    "eltec_pol": 4.95,
+    "wikibooks": 1.35,
+    "wikinews": 0.98
+  },
+  "risks": [
+    "Parliamentary and Wikipedia validation losses improve fastest, and their low-entropy templates dominate early generations.",
+    "All 40 outputs at 5k hit the 80-token generation limit.",
+    "The checkpoint is not suitable for SFT or a public demo yet.",
+    "A falling aggregate loss alone must not authorize training beyond the next controlled checkpoint."
+  ],
+  "recommended_next_checkpoint": {
+    "target_step": 10000,
+    "total_tokens": 163840000,
+    "corpus_fraction": 0.5891624919,
+    "requires_separate_approval": true,
+    "required_intermediate_eval_step": 7500,
+    "stop_and_rebalance_condition": "At 10k, parliamentary/municipality templates still dominate while semantic quality shows little improvement despite falling validation loss."
+  },
+  "artifacts": [
+    "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_prompts.jsonl",
+    "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_samples.md",
+    "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_samples.json",
+    "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_comparison.md",
+    "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_comparison.json",
+    "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_validation.md",
+    "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_validation.json"
+  ]
+}

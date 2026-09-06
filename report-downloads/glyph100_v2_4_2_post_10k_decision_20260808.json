@@ -1,0 +1,80 @@
+{
+  "verdict": "technically_healthy_but_semantically_weak_early_base_lm",
+  "best_v242_training_checkpoint": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+  "checkpoint_sha256": "e32d34baff7c522a77a83c5ec1812dd83798c31c8b4cdefe93c729a4441ab4ce",
+  "next_training_started": false,
+  "next_recommendation": {
+    "action": "wait_for_explicit_approval_then_optionally_continue_to_15k_total",
+    "reason": "validation and all source losses improve, while semantic generation gains remain modest",
+    "automatic_continuation_allowed": false
+  },
+  "overall_validation": {
+    "v242_5k": 4.5994,
+    "v242_10k": 3.9023,
+    "trend": "falling"
+  },
+  "matched_generation": {
+    "prompts": 20,
+    "presets": 2,
+    "samples_per_checkpoint": 40,
+    "v241_10k": {
+      "avg_quality_score": 3.025,
+      "natural_endings": 4,
+      "cutoff_like": 37,
+      "repetition_samples": 14,
+      "pseudo_ency_samples": 2,
+      "web_residue_samples": 0
+    },
+    "v242_5k": {
+      "avg_quality_score": 3.175,
+      "natural_endings": 5,
+      "cutoff_like": 40,
+      "repetition_samples": 13,
+      "pseudo_ency_samples": 0,
+      "web_residue_samples": 0
+    },
+    "v242_10k": {
+      "avg_quality_score": 3.2,
+      "natural_endings": 9,
+      "cutoff_like": 34,
+      "repetition_samples": 17,
+      "pseudo_ency_samples": 1,
+      "web_residue_samples": 0
+    },
+    "v242_10k_vs_5k": {
+      "v242_10k_wins": 11,
+      "v242_5k_wins": 10,
+      "ties": 19
+    },
+    "v242_10k_vs_v241_10k": {
+      "v242_10k_wins": 9,
+      "v241_10k_wins": 8,
+      "ties": 23
+    },
+    "decoding_observation": "normal decoding improved; conservative decoding loops too often"
+  },
+  "source_validation": {
+    "all_sources_improved_from_v242_5k": true,
+    "v242_10k_lower_than_v241_10k_on_all_sources": true,
+    "losses": {
+      "1000_novels": {"v241_10k": 4.351, "v242_5k": 4.6776, "v242_10k": 4.0814},
+      "eltec_pol": {"v241_10k": 4.1103, "v242_5k": 4.4728, "v242_10k": 3.847},
+      "parliamentary": {"v241_10k": 3.9852, "v242_5k": 4.6581, "v242_10k": 3.9184},
+      "wikibooks": {"v241_10k": 4.6204, "v242_5k": 5.2153, "v242_10k": 4.3293},
+      "wikinews": {"v241_10k": 4.4554, "v242_5k": 5.0649, "v242_10k": 4.2297},
+      "wikipedia_pl": {"v241_10k": 4.0973, "v242_5k": 4.667, "v242_10k": 3.7956},
+      "wolne_lektury": {"v241_10k": 4.1414, "v242_5k": 4.4923, "v242_10k": 3.8876}
+    }
+  },
+  "manual_review": {
+    "semantic_quality_ready": false,
+    "assistant_ready": false,
+    "public_demo_ready": false,
+    "issues": [
+      "basic factual completions remain wrong or incoherent",
+      "invented dates, institutions and technical terms remain common",
+      "conservative decoding increases repetition",
+      "many outputs still run to the token limit"
+    ]
+  }
+}

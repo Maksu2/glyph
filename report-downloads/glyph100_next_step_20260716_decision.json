@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-07-16T07:20:40+00:00",
+  "decision": "prepare a from-scratch Glyph-100M v2.4.1 1k proxy, then a separately gated 5k proxy",
+  "training_started": false,
+  "full_run_approved": false,
+  "verdict": "READY_FOR_CONTROLLED_1K_NOT_LONG_RUN",
+  "model": {
+    "variant": "glyph-100m",
+    "unique_trainable_parameters": 97654272,
+    "logical_parameters": 109942272,
+    "context_length": 512,
+    "vocab_size": 16000,
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029"
+  },
+  "dataset": {
+    "name": "glyph100_dataset_v2_4_1_core",
+    "total_tokens": 279496401,
+    "train_tokens": 278089665,
+    "validation_tokens": 1406736,
+    "documents": 201746,
+    "parent_documents": 193129,
+    "parent_leakage": 0,
+    "duplicate_ids": 0,
+    "wikipedia_share": 0.4293545089333726,
+    "literature_share": 0.4619861885090964,
+    "legacy_share": 0.0,
+    "sources": [
+      {"source": "wikipedia_pl", "tokens": 120003040, "share": 0.4293545089},
+      {"source": "wolne_lektury", "tokens": 55037100, "share": 0.1969152392},
+      {"source": "wikisource", "tokens": 30048511, "share": 0.1075094738, "validation_policy": "train_only"},
+      {"source": "1000_novels", "tokens": 30196490, "share": 0.1080389215},
+      {"source": "parliamentary", "tokens": 23852526, "share": 0.0853410825},
+      {"source": "eltec_pol", "tokens": 13841376, "share": 0.0495225568},
+      {"source": "wikibooks", "tokens": 3772313, "share": 0.0134968213},
+      {"source": "wikinews", "tokens": 2745045, "share": 0.0098213781}
+    ]
+  },
+  "validation": {
+    "hard_checks_passed": 9,
+    "hard_checks_total": 9,
+    "unit_tests_passed": 12,
+    "unit_tests_total": 12,
+    "web_residue_heuristic_hits": 1638,
+    "web_residue_sources": ["wikipedia_pl"],
+    "web_residue_manual_interpretation": "mostly false positives from broad lexical matching, not a 1:1 contamination count",
+    "wiki_markup_hits": 149,
+    "pseudo_ency_phrase_hits": 30121
+  },
+  "gpu_smoke": {
+    "passed": true,
+    "optimizer_steps": 1,
+    "tokens_per_second": 2864,
+    "loss": 9.8369,
+    "nan_inf": false,
+    "oom_crash_hang": false,
+    "checkpoint_written": false
+  },
+  "eos_recheck": {
+    "prompt_count": 60,
+    "presets": 3,
+    "pairwise": {"44k_wins": 52, "50k_wins": 44, "ties": 84},
+    "practical_best_checkpoint": "44k",
+    "finding": "the old cutoff heuristic overcounted EOS-complete outputs, but 44k remains the safer practical checkpoint overall"
+  },
+  "training_exposure": [
+    {"steps": 1000, "tokens": 16384000, "train_passes": 0.0589, "purpose": "stability gate"},
+    {"steps": 5000, "tokens": 81920000, "train_passes": 0.2946, "purpose": "first quality proxy"},
+    {"steps": 20000, "tokens": 327680000, "train_passes": 1.1783, "purpose": "requires separate approval"},
+    {"steps": 50000, "tokens": 819200000, "train_passes": 2.9458, "purpose": "not approved"}
+  ],
+  "risks": [
+    "46.2% literature may bias style toward older Polish",
+    "Wikisource is train-only and absent from validation",
+    "Wikipedia remains the largest individual source at 42.9%",
+    "8.5% parliamentary text may bias toward official language",
+    "one-step ROCm smoke does not prove long-run stability",
+    "97.65M parameters remain a hard capacity limit"
+  ],
+  "next_actions": [
+    "request explicit approval for a new from-scratch 1k run",
+    "audit loss, validation, temperatures, checkpoint and resume at 1k",
+    "only after a healthy 1k, continue to 5k total",
+    "compare matched-token checkpoints with EOS-aware multi-seed evaluation",
+    "make a separate decision before 20k; do not auto-run 50k"
+  ]
+}

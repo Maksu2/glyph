@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "source": {
+    "source_path": "/home/maksu/.codex/attachments/c4da231d-7fd9-4dc9-baae-2a1f42a58225/Another Name.mp3",
+    "source_sha256": "d0311089770db56dd4d7d9d2049c0b980a57ea4f921f8aca29504b354cef8008",
+    "size_bytes": 4448376,
+    "title": "Another Name",
+    "artist": "Ludwig Göransson",
+    "album": "The Odyssey (Original Motion Picture Soundtrack)",
+    "date": "2026",
+    "duration_s_container": 111.177143,
+    "duration_s_decoded": 111.1307029478458,
+    "codec": "mp3",
+    "codec_long_name": "MP3 (MPEG audio layer 3)",
+    "bit_rate_stream_bps": 320000,
+    "bit_rate_container_bps": 320092,
+    "sample_rate_hz": 44100,
+    "channels": 2,
+    "channel_layout": "stereo",
+    "format_name": "mp3",
+    "analysis_decode": {
+      "sample_rate_hz": 22050,
+      "channels": 1,
+      "sample_format": "float32le",
+      "playback_performed": false,
+      "decoder": "jellyfin/jellyfin:latest:/usr/lib/jellyfin-ffmpeg/ffmpeg"
+    },
+    "ffprobe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "mp3",
+          "codec_long_name": "MP3 (MPEG audio layer 3)",
+          "codec_type": "audio",
+          "codec_tag_string": "[0][0][0][0]",
+          "codec_tag": "0x0000",
+          "sample_fmt": "fltp",
+          "sample_rate": "44100",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/14112000",
+          "start_pts": 353600,
+          "start_time": "0.025057",
+          "duration_ts": 1568931840,
+          "duration": "111.177143",
+          "bit_rate": "320000",
+          "disposition": {
+            "default": 0,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "encoder": "Lavc61.3."
+          }
+        }
+      ],
+      "chapters": [],
+      "format": {
+        "filename": "/input/Another Name.mp3",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mp3",
+        "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+        "start_time": "0.025057",
+        "duration": "111.177143",
+        "size": "4448376",
+        "bit_rate": "320092",
+        "probe_score": 51,
+        "tags": {
+          "date": "2026",
+          "title": "Another Name",
+          "artist": "Ludwig Göransson",
+          "TOPE": "Ludwig Göransson - Topic",
+          "comment": "",
+          "genre": "Music",
+          "album": "The Odyssey (Original Motion Picture Soundtrack)",
+          "encoder": "Lavf61.1.100"
+        }
+      }
+    }
+  },
+  "analysis_parameters": {
+    "sample_rate_hz": 22050,
+    "frame_length": 2048,
+    "hop_length": 512,
+    "frame_rate_hz": 43.06640625,
+    "structural_comparison_window_s": 2.5
+  },
+  "signal": {
+    "decoded_duration_s": 111.1307029478458,
+    "sample_peak_dbfs": 3.318093974388055,
+    "integrated_rms_dbfs": -9.902331332734956,
+    "rms_min_smoothed_dbfs": -80.28013233078151,
+    "rms_max_smoothed_dbfs": -6.173546478973256,
+    "rms_dynamic_range_smoothed_db": 74.10658585180826
+  },
+  "rhythm": {
+    "selected_bpm": 80.74951171875,
+    "selected_period_s": 0.7430385487528345,
+    "confidence": "high",
+    "autocorrelation": 0.833991951566818,
+    "grid_alignment_z": 2.094796442097844,
+    "tempo_candidates": [
+      {
+        "bpm": 80.74951171875,
+        "lag_frames": 32,
+        "autocorrelation": 0.833991951566818,
+        "prominence": 0.13694660360040511,
+        "grid_alignment_z": 2.094796442097844,
+        "score": 0.9205985135193655
+      },
+      {
+        "bpm": 112.34714673913044,
+        "lag_frames": 23,
+        "autocorrelation": 0.7281931618756547,
+        "prominence": 0.019114011184127033,
+        "grid_alignment_z": 2.0222205896371244,
+        "score": 0.7835271794126146
+      },
+      {
+        "bpm": 63.02400914634146,
+        "lag_frames": 41,
+        "autocorrelation": 0.7044068210742096,
+        "prominence": 0.011993688737227504,
+        "grid_alignment_z": 1.7091699566949807,
+        "score": 0.750134492175891
+      }
+    ],
+    "downbeat_phase_mod4": 2,
+    "downbeat_phase_means": [
+      0.7001074999055192,
+      0.7094127491710295,
+      0.7477882085761942,
+      0.7113277875623805
+    ],
+    "downbeat_contrast": 2.0048716795379526,
+    "downbeat_confidence": "medium",
+    "beat_count": 150,
+    "first_beat_s": 0.18575963718820862,
+    "last_beat_s": 110.78240362811792
+  },
+  "transients": {
+    "detected_count": 212,
+    "strongest": [
+      {
+        "time_s": 51.87337868480726,
+        "time": "0:51.873",
+        "strength": 1.5765165932801533
+      },
+      {
+        "time_s": 57.86412698412698,
+        "time": "0:57.864",
+        "strength": 1.5626876608841131
+      },
+      {
+        "time_s": 54.12571428571429,
+        "time": "0:54.126",
+        "strength": 1.5611697631396764
+      },
+      {
+        "time_s": 63.135056689342406,
+        "time": "1:03.135",
+        "strength": 1.4896818198923525
+      },
+      {
+        "time_s": 52.61641723356009,
+        "time": "0:52.616",
+        "strength": 1.4807649157806344
+      },
+      {
+        "time_s": 75.88281179138322,
+        "time": "1:15.883",
+        "strength": 1.4517048492984597
+      },
+      {
+        "time_s": 81.13052154195012,
+        "time": "1:21.131",
+        "strength": 1.4490903839431932
+      },
+      {
+        "time_s": 76.62585034013605,
+        "time": "1:16.626",
+        "strength": 1.4467626060168501
+      },
+      {
+        "time_s": 58.63038548752834,
+        "time": "0:58.630",
+        "strength": 1.440028600876923
+      },
+      {
+        "time_s": 84.89215419501134,
+        "time": "1:24.892",
+        "strength": 1.43696410169141
+      },
+      {
+        "time_s": 78.90140589569161,
+        "time": "1:18.901",
+        "strength": 1.4267295733350152
+      },
+      {
+        "time_s": 80.38748299319728,
+        "time": "1:20.387",
+        "strength": 1.4201893724586045
+      },
+      {
+        "time_s": 66.87346938775511,
+        "time": "1:06.873",
+        "strength": 1.410923690392448
+      },
+      {
+        "time_s": 89.39682539682539,
+        "time": "1:29.397",
+        "strength": 1.4105246958604651
+      },
+      {
+        "time_s": 57.12108843537415,
+        "time": "0:57.121",
+        "strength": 1.3946969872439865
+      },
+      {
+        "time_s": 54.89197278911565,
+        "time": "0:54.892",
+        "strength": 1.3940326370362621
+      },
+      {
+        "time_s": 85.63519274376418,
+        "time": "1:25.635",
+        "strength": 1.3869346310527275
+      },
+      {
+        "time_s": 72.12117913832199,
+        "time": "1:12.121",
+        "strength": 1.375538756187714
+      },
+      {
+        "time_s": 87.8875283446712,
+        "time": "1:27.888",
+        "strength": 1.3621608509298622
+      },
+      {
+        "time_s": 72.88743764172335,
+        "time": "1:12.887",
+        "strength": 1.3604383554953277
+      },
+      {
+        "time_s": 67.63972789115647,
+        "time": "1:07.640",
+        "strength": 1.3374327063179112
+      },
+      {
+        "time_s": 90.13986394557823,
+        "time": "1:30.140",
+        "strength": 1.32280100478703
+      },
+      {
+        "time_s": 83.38285714285715,
+        "time": "1:23.383",
+        "strength": 1.308621359045112
+      },
+      {
+        "time_s": 78.13514739229025,
+        "time": "1:18.135",
+        "strength": 1.3011531571552128
+      },
+      {
+        "time_s": 68.3827664399093,
+        "time": "1:08.383",
+        "strength": 1.277747754203554
+      },
+      {
+        "time_s": 63.901315192743766,
+        "time": "1:03.901",
+        "strength": 1.275787359426565
+      },
+      {
+        "time_s": 87.12126984126984,
+        "time": "1:27.121",
+        "strength": 1.267690545731134
+      },
+      {
+        "time_s": 62.368798185941046,
+        "time": "1:02.369",
+        "strength": 1.2569970739464502
+      },
+      {
+        "time_s": 61.62575963718821,
+        "time": "1:01.626",
+        "strength": 1.2531895828194555
+      },
+      {
+        "time_s": 71.9354195011338,
+        "time": "1:11.935",
+        "strength": 1.2337164321523009
+      }
+    ]
+  },
+  "structure": {
+    "boundary_candidates": [
+      {
+        "time_s": 8.52172335600907,
+        "time": "0:08.522",
+        "novelty": 4.298388935391528,
+        "prominence": 3.2623132174413563,
+        "rms_dbfs": -12.814422061507212,
+        "centroid_hz": 353.7930305465455,
+        "low_band_ratio": 0.1579359392790826,
+        "high_band_ratio": 0.0047298418769951
+      },
+      {
+        "time_s": 14.651791383219955,
+        "time": "0:14.652",
+        "novelty": 4.669102340816563,
+        "prominence": 3.9493260574350364,
+        "rms_dbfs": -13.14769233235942,
+        "centroid_hz": 280.5485262027333,
+        "low_band_ratio": 0.36866671226433717,
+        "high_band_ratio": 0.004157321630058514
+      },
+      {
+        "time_s": 26.610068027210886,
+        "time": "0:26.610",
+        "novelty": 4.5732297664593995,
+        "prominence": 3.4310421457562863,
+        "rms_dbfs": -12.367355281992753,
+        "centroid_hz": 382.42917720204576,
+        "low_band_ratio": 0.27890485377362456,
+        "high_band_ratio": 0.007896292814602846
+      },
+      {
+        "time_s": 31.277278911564625,
+        "time": "0:31.277",
+        "novelty": 3.9572293984739115,
+        "prominence": 1.2433893480268732,
+        "rms_dbfs": -11.975299597717905,
+        "centroid_hz": 350.50138385359776,
+        "low_band_ratio": 0.4220744045787038,
+        "high_band_ratio": 0.007921477193955419
+      },
+      {
+        "time_s": 39.86866213151927,
+        "time": "0:39.869",
+        "novelty": 5.492887603669035,
+        "prominence": 3.9672300941189462,
+        "rms_dbfs": -11.581521240752119,
+        "centroid_hz": 439.7314631473786,
+        "low_band_ratio": 0.2882790538915201,
+        "high_band_ratio": 0.012534597000542875
+      },
+      {
+        "time_s": 45.627210884353744,
+        "time": "0:45.627",
+        "novelty": 6.428952264446641,
+        "prominence": 5.751856036967838,
+        "rms_dbfs": -11.488511312657957,
+        "centroid_hz": 492.6987345887414,
+        "low_band_ratio": 0.39756240703103923,
+        "high_band_ratio": 0.020227468091242908
+      },
+      {
+        "time_s": 54.381133786848075,
+        "time": "0:54.381",
+        "novelty": 5.1856858284063625,
+        "prominence": 2.4141059652023547,
+        "rms_dbfs": -10.99101161750509,
+        "centroid_hz": 311.019009178672,
+        "low_band_ratio": 0.7189584951682125,
+        "high_band_ratio": 0.0133691661237866
+      },
+      {
+        "time_s": 71.81931972789116,
+        "time": "1:11.819",
+        "novelty": 3.164132512882022,
+        "prominence": 2.4302526243421476,
+        "rms_dbfs": -8.657291764160268,
+        "centroid_hz": 283.7838010227003,
+        "low_band_ratio": 0.7419803626949326,
+        "high_band_ratio": 0.011509067913719716
+      },
+      {
+        "time_s": 90.39528344671201,
+        "time": "1:30.395",
+        "novelty": 2.288527922168903,
+        "prominence": 1.3311459988411003,
+        "rms_dbfs": -6.3089344282821305,
+        "centroid_hz": 175.76821671424912,
+        "low_band_ratio": 0.742604533717132,
+        "high_band_ratio": 0.007115199850786066
+      },
+      {
+        "time_s": 103.93251700680273,
+        "time": "1:43.933",
+        "novelty": 19.970341449645364,
+        "prominence": 19.970341449645364,
+        "rms_dbfs": -40.62075216735939,
+        "centroid_hz": 328.82910416342787,
+        "low_band_ratio": 0.31714534540341455,
+        "high_band_ratio": 0.006528753939291511
+      },
+      {
+        "time_s": 107.9263492063492,
+        "time": "1:47.926",
+        "novelty": 7.9274344422966605,
+        "prominence": 2.791362214135571,
+        "rms_dbfs": -62.11425178602454,
+        "centroid_hz": 457.2877344085189,
+        "low_band_ratio": 0.01866162733416559,
+        "high_band_ratio": 9.547333122136032e-05
+      }
+    ],
+    "climax_candidate_s": 86.95873015873016,
+    "climax_candidate": "1:26.959",
+    "ending_or_fade_candidate_s": 103.93251700680273,
+    "ending_or_fade_candidate": "1:43.933"
+  },
+  "limitations": [
+    "Tempo and downbeats are estimated from spectral flux without source stems.",
+    "Downbeat phase is tentative and must be checked against musical listening before implementation.",
+    "Section candidates are evidence for editorial decisions, not automatic final cue points.",
+    "No audio playback was performed by this script."
+  ]
+}

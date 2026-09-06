@@ -1,0 +1,154 @@
+{
+  "created_at": "2026-06-25T06:11:23.969726+00:00",
+  "verdict": "D",
+  "label": "główny problem to dataset/repetition",
+  "recommendation": "Zrobić dataset v0.3; nie skalować SFT v0.2.",
+  "evidence": {
+    "best_mode": "no_repeat_ngram_size_3",
+    "best_mode_stats": {
+      "rows": 150,
+      "avg_score": 5.38,
+      "median_score": 4.0,
+      "repetition_samples": 1,
+      "end_token_rate": 1.0,
+      "natural_endings": 142,
+      "pseudo_ency": 0,
+      "web_residue": 4,
+      "topic_drift": 0,
+      "generic_assistant_template": 0,
+      "first_token_correct": 43,
+      "avg_generated_tokens": 80,
+      "too_short_answers": 1,
+      "too_long_answers": 8
+    },
+    "v0_2_vs_v0_1_best_decoding": {
+      "tie": 121,
+      "sft_v0_2": 17,
+      "sft_v0_1": 12
+    },
+    "manual_web_classification_counts": {
+      "real web residue": 13
+    },
+    "checkpoint_audit": {
+      "base44k": {
+        "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+        "exists": true,
+        "size": 1175128433,
+        "variant": "glyph-100m",
+        "step": 44000,
+        "current_step": 44000,
+        "sft_step": null,
+        "base_step": null,
+        "dataset_name": "glyph100_v2_3_1",
+        "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+        "loss": 3.4402835369110107,
+        "val_loss": null,
+        "reason": null,
+        "batch_size": 4,
+        "gradient_accumulation_steps": 8
+      },
+      "sft_v0_1": {
+        "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm-latest.pt",
+        "exists": true,
+        "size": 1175147247,
+        "variant": "glyph-100m",
+        "step": 400,
+        "current_step": 400,
+        "sft_step": 400,
+        "base_step": 44000,
+        "dataset_name": "glyph100_sft_smoke_v0",
+        "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+        "loss": 1.319049820303917,
+        "val_loss": 1.5148357301950455,
+        "reason": "final",
+        "batch_size": 1,
+        "gradient_accumulation_steps": 4
+      },
+      "sft_v0_2_best": {
+        "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-best.pt",
+        "exists": true,
+        "size": 1175145993,
+        "variant": "glyph-100m",
+        "step": 462,
+        "current_step": 462,
+        "sft_step": 462,
+        "base_step": 44000,
+        "dataset_name": "glyph100_sft_smoke_v0_2",
+        "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+        "loss": 0.9426610320806503,
+        "val_loss": 1.2138160867616534,
+        "reason": "best",
+        "batch_size": 1,
+        "gradient_accumulation_steps": 4
+      },
+      "sft_v0_2_final": {
+        "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-final-step_000462.pt",
+        "exists": true,
+        "size": 1175158019,
+        "variant": "glyph-100m",
+        "step": 462,
+        "current_step": 462,
+        "sft_step": 462,
+        "base_step": 44000,
+        "dataset_name": "glyph100_sft_smoke_v0_2",
+        "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+        "loss": 0.9426610320806503,
+        "val_loss": 1.2138160867616534,
+        "reason": "final",
+        "batch_size": 1,
+        "gradient_accumulation_steps": 4
+      },
+      "sft_v0_2_latest": {
+        "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-latest.pt",
+        "exists": true,
+        "size": 1175147311,
+        "variant": "glyph-100m",
+        "step": 462,
+        "current_step": 462,
+        "sft_step": 462,
+        "base_step": 44000,
+        "dataset_name": "glyph100_sft_smoke_v0_2",
+        "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+        "loss": 0.9426610320806503,
+        "val_loss": 1.2138160867616534,
+        "reason": "final",
+        "batch_size": 1,
+        "gradient_accumulation_steps": 4
+      },
+      "best_vs_final_model_tensors": {
+        "same_keys": true,
+        "same_tensors": true,
+        "different_tensors_sample": [],
+        "same_step": [
+          462,
+          462
+        ],
+        "same_val_loss": [
+          1.2138160867616534,
+          1.2138160867616534
+        ]
+      },
+      "best_vs_latest_model_tensors": {
+        "same_keys": true,
+        "same_tensors": true,
+        "different_tensors_sample": [],
+        "same_step": [
+          462,
+          462
+        ],
+        "same_val_loss": [
+          1.2138160867616534,
+          1.2138160867616534
+        ]
+      },
+      "v0_2_best_final_same_checkpoint": true
+    }
+  },
+  "constraints": [
+    "No SFT v1 was run.",
+    "No larger SFT was run.",
+    "No pretraining was run.",
+    "50k was not used as base.",
+    "Model was not published as final."
+  ]
+}

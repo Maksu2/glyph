@@ -1,0 +1,3505 @@
+{
+  "checkpoints": {
+    "10k": {
+      "path": "checkpoints/glyph-100m/latest.pt",
+      "exists": true,
+      "step": 10000,
+      "current_step": 10000,
+      "variant": "glyph-100m",
+      "model_config": {
+        "vocab_size": 16000,
+        "context_len": 512,
+        "d_model": 768,
+        "n_heads": 12,
+        "n_layers": 12,
+        "ffn_mult": 4,
+        "dropout": 0.1
+      },
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "tokenizer_hash_in_checkpoint": null,
+      "dataset_name": "glyph100_stage1_candidate",
+      "dataset_metadata_path": "data/processed/glyph100_metadata.json"
+    },
+    "15k": {
+      "path": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "exists": true,
+      "step": 15000,
+      "current_step": 15000,
+      "variant": "glyph-100m",
+      "model_config": {
+        "vocab_size": 16000,
+        "context_len": 512,
+        "d_model": 768,
+        "n_heads": 12,
+        "n_layers": 12,
+        "ffn_mult": 4,
+        "dropout": 0.1
+      },
+      "tokenizer_path": "data/processed/tokenizer.model",
+      "tokenizer_hash_in_checkpoint": null,
+      "dataset_name": "glyph100_v2_3_1",
+      "dataset_metadata_path": "data/processed/glyph100_v2_3_1_metadata.json"
+    }
+  },
+  "tokenizer": {
+    "path": "data/processed/tokenizer.model",
+    "sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029"
+  },
+  "device": "cpu",
+  "attention_backend": "math",
+  "seed": 20260531,
+  "prompts_file": "eval/glyph-100m/stage2_completion_prompts.jsonl",
+  "prompt_count": 12,
+  "presets": {
+    "conservative": {
+      "temperature": 0.6,
+      "top_k": 30,
+      "max_new_tokens": 120
+    },
+    "normal": {
+      "temperature": 0.8,
+      "top_k": 40,
+      "max_new_tokens": 120
+    },
+    "creative": {
+      "temperature": 1.0,
+      "top_k": 50,
+      "max_new_tokens": 120
+    }
+  },
+  "summaries": {
+    "10k": {
+      "conservative": {
+        "count": 12,
+        "avg_tokens_per_second": 12.7,
+        "repetition_samples": 10,
+        "natural_endings": 1,
+        "web_garbage_samples": 0,
+        "wiki_residue_samples": 3,
+        "web_residue_samples": 0,
+        "pseudo_ency_samples": 1,
+        "avg_quality_score": 1.75
+      },
+      "normal": {
+        "count": 12,
+        "avg_tokens_per_second": 12.46,
+        "repetition_samples": 6,
+        "natural_endings": 0,
+        "web_garbage_samples": 0,
+        "wiki_residue_samples": 2,
+        "web_residue_samples": 0,
+        "pseudo_ency_samples": 3,
+        "avg_quality_score": 3.33
+      },
+      "creative": {
+        "count": 12,
+        "avg_tokens_per_second": 12.49,
+        "repetition_samples": 3,
+        "natural_endings": 1,
+        "web_garbage_samples": 0,
+        "wiki_residue_samples": 1,
+        "web_residue_samples": 0,
+        "pseudo_ency_samples": 2,
+        "avg_quality_score": 4.67
+      }
+    },
+    "15k": {
+      "conservative": {
+        "count": 12,
+        "avg_tokens_per_second": 12.43,
+        "repetition_samples": 11,
+        "natural_endings": 0,
+        "web_garbage_samples": 0,
+        "wiki_residue_samples": 0,
+        "web_residue_samples": 0,
+        "pseudo_ency_samples": 4,
+        "avg_quality_score": 1.17
+      },
+      "normal": {
+        "count": 12,
+        "avg_tokens_per_second": 12.21,
+        "repetition_samples": 3,
+        "natural_endings": 0,
+        "web_garbage_samples": 0,
+        "wiki_residue_samples": 0,
+        "web_residue_samples": 1,
+        "pseudo_ency_samples": 5,
+        "avg_quality_score": 4.17
+      },
+      "creative": {
+        "count": 12,
+        "avg_tokens_per_second": 12.14,
+        "repetition_samples": 1,
+        "natural_endings": 0,
+        "web_garbage_samples": 0,
+        "wiki_residue_samples": 0,
+        "web_residue_samples": 0,
+        "pseudo_ency_samples": 3,
+        "avg_quality_score": 5.25
+      }
+    }
+  },
+  "winner_counts": {
+    "tie": 17,
+    "15k": 10,
+    "10k": 9
+  },
+  "verdict": "B",
+  "samples_10k": [
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "expected": "Krótka polska kontynuacja zdania, najlepiej encyklopedyczna lub opisowa.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260531,
+      "prompt": "Warszawa to",
+      "full_text": "Warszawa to nie ma na celu oddania w roku 1997 w sprawie przeprowadzenia procesu o ochronie czynnej. Uzasadnia to, że ma na celu oddania się do dnia dzisiejszego. Jest to proces zliczania do podstawowych zasad i wymagań. Nie można jednak zaobserwować, że nie ma na celu oddania się do innych zjawisk. Aby odróżnić można do wniosku, że jest to proces, który nie może się w stanie wykonać, jest to proces, który może być on nieskończony w sposób, a w przypadku braku efektów. Nie jest to konieczne, czy nie jest",
+      "new_text": "nie ma na celu oddania w roku 1997 w sprawie przeprowadzenia procesu o ochronie czynnej. Uzasadnia to, że ma na celu oddania się do dnia dzisiejszego. Jest to proces zliczania do podstawowych zasad i wymagań. Nie można jednak zaobserwować, że nie ma na celu oddania się do innych zjawisk. Aby odróżnić można do wniosku, że jest to proces, który nie może się w stanie wykonać, jest to proces, który może być on nieskończony w sposób, a w przypadku braku efektów. Nie jest to konieczne, czy nie jest",
+      "duration_seconds": 9.481,
+      "new_tokens": 120,
+      "tokens_per_second": 12.66,
+      "analysis": {
+        "chars": 497,
+        "words": 87,
+        "alphabetic_ratio": 0.793,
+        "polish_char_count": 22,
+        "repeated_4grams": 6,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "expected": "Spójne polskie zdanie lub akapit bez forumowego tonu.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260532,
+      "prompt": "Polska jest",
+      "full_text": "Polska jest to jedna z głównych ulic w mieście – przy ulicy Rycerskiej, w której znajduje się drewniana kaplica. Według legendy, na jej miejsce znajduje się kaplica pw. św. Andrzeja, na której znajduje się kaplica św. Wojciecha, a na jego miejscu znajduje się kaplica pw. św. Piotra i Pawła, który na jego miejscu znajduje się kaplica św. Piotra i Pawła, w której znajduje się kaplica św. Piotra. Wewnątrz znajduje się kaplica św. Jana Chrzciciela, która jest siedzibą parafii pw. św. Michała Archanioła. W",
+      "new_text": "to jedna z głównych ulic w mieście – przy ulicy Rycerskiej, w której znajduje się drewniana kaplica. Według legendy, na jej miejsce znajduje się kaplica pw. św. Andrzeja, na której znajduje się kaplica św. Wojciecha, a na jego miejscu znajduje się kaplica pw. św. Piotra i Pawła, który na jego miejscu znajduje się kaplica św. Piotra i Pawła, w której znajduje się kaplica św. Piotra. Wewnątrz znajduje się kaplica św. Jana Chrzciciela, która jest siedzibą parafii pw. św. Michała Archanioła. W",
+      "duration_seconds": 8.318,
+      "new_tokens": 120,
+      "tokens_per_second": 14.43,
+      "analysis": {
+        "chars": 494,
+        "words": 80,
+        "alphabetic_ratio": 0.796,
+        "polish_char_count": 29,
+        "repeated_4grams": 12,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "expected": "Prosty tekst edukacyjny, bez udawania asystenta.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260533,
+      "prompt": "W fizyce energia",
+      "full_text": "W fizyce energia fizyczna jest równaniem, co ma na celu rozmiary, ale nie jest to możliwe, że nie ma się nie tylko, ale w tym wypadku, że nie jest to równanie, jednak nie ma natomiast na niej, lecz jest równaniem. Zatem jest, że jest to równanie, że równanie, to równanie, to jest równanie, które w pewnym sensie. Zatem jest równanie, że jest równaniem, to równanie, to jest równanie. Nie jest równanie, to jest równaniem, ale nie jest równaniem.",
+      "new_text": "fizyczna jest równaniem, co ma na celu rozmiary, ale nie jest to możliwe, że nie ma się nie tylko, ale w tym wypadku, że nie jest to równanie, jednak nie ma natomiast na niej, lecz jest równaniem. Zatem jest, że jest to równanie, że równanie, to równanie, to jest równanie, które w pewnym sensie. Zatem jest równanie, że jest równaniem, to równanie, to jest równanie. Nie jest równanie, to jest równaniem, ale nie jest równaniem.",
+      "duration_seconds": 9.375,
+      "new_tokens": 120,
+      "tokens_per_second": 12.8,
+      "analysis": {
+        "chars": 429,
+        "words": 75,
+        "alphabetic_ratio": 0.779,
+        "polish_char_count": 22,
+        "repeated_4grams": 2,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": true
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "expected": "Definicyjna kontynuacja w języku polskim.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260534,
+      "prompt": "Sztuczna inteligencja jest",
+      "full_text": "Sztuczna inteligencja jest zbliżona do do różnych dziedzin sztuki, a w ich kontekście jest to nie tylko przez wielu autorów, w tym także w takich krajach jak np. w języku niemieckim, w tym język, zwłaszcza w tym języka niemieckim. Zobacz też „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Stra",
+      "new_text": "zbliżona do do różnych dziedzin sztuki, a w ich kontekście jest to nie tylko przez wielu autorów, w tym także w takich krajach jak np. w języku niemieckim, w tym język, zwłaszcza w tym języka niemieckim. Zobacz też „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Straża” – „Stra",
+      "duration_seconds": 10.481,
+      "new_tokens": 120,
+      "tokens_per_second": 11.45,
+      "analysis": {
+        "chars": 341,
+        "words": 50,
+        "alphabetic_ratio": 0.707,
+        "polish_char_count": 22,
+        "repeated_4grams": 7,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [
+          "zobacz też"
+        ],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "expected": "Lista lub opis elementów roweru, składnia powinna być sensowna.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260535,
+      "prompt": "Rower składa się z",
+      "full_text": "Rower składa się z kilku różnych rodzajów gałęzia, które w sposób w pełni odtworzyć. W zależności od rodzaju gałęzia występuje również: wierzba (w tym: wierzba, wierzba, wierzba, wierzba), wierzba (w tym: wierzba wierzba) wierzba (w tym: wierzba, wierzba i wierzba, wierzba, wierzba, wierzba, wierzba, wierzba i wierzba). W zależności od gatunku wierzba, wierzba jest pokryta wierzba, wierzba, wierzba i wierzba. wierzba jest bardziej płaska, na",
+      "new_text": "kilku różnych rodzajów gałęzia, które w sposób w pełni odtworzyć. W zależności od rodzaju gałęzia występuje również: wierzba (w tym: wierzba, wierzba, wierzba, wierzba), wierzba (w tym: wierzba wierzba) wierzba (w tym: wierzba, wierzba i wierzba, wierzba, wierzba, wierzba, wierzba, wierzba i wierzba). W zależności od gatunku wierzba, wierzba jest pokryta wierzba, wierzba, wierzba i wierzba. wierzba jest bardziej płaska, na",
+      "duration_seconds": 8.437,
+      "new_tokens": 120,
+      "tokens_per_second": 14.22,
+      "analysis": {
+        "chars": 426,
+        "words": 61,
+        "alphabetic_ratio": 0.793,
+        "polish_char_count": 19,
+        "repeated_4grams": 15,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "expected": "Spójna kontynuacja bez losowych dat, linków, menu ani SEO.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260536,
+      "prompt": "Według najnowszych danych",
+      "full_text": "Według najnowszych danych na rok 1990 gminę zamieszkiwało 526 osób, a gęstość zaludnienia wynosiła 10 osób/km2 (wśród 1421 gmin Górnej Normandii Saint-Brieu plasuje się na 829. miejscu pod względem liczby ludności, natomiast pod względem powierzchni na miejscu 665.). Bibliografia Miejscowości w departamencie Górna Normandia Saint-Géle – miejscowość i gmina we Francji, w regionie Normandia, w departamencie Górna Normandia. Według danych na rok 1990 gminę zamieszkiwało 35 osób, a gęstość zaludnienia wynosiła 10 osób/km2 (wśród 1421 gmin Górnej Normandii Saint",
+      "new_text": "na rok 1990 gminę zamieszkiwało 526 osób, a gęstość zaludnienia wynosiła 10 osób/km2 (wśród 1421 gmin Górnej Normandii Saint-Brieu plasuje się na 829. miejscu pod względem liczby ludności, natomiast pod względem powierzchni na miejscu 665.). Bibliografia Miejscowości w departamencie Górna Normandia Saint-Géle – miejscowość i gmina we Francji, w regionie Normandia, w departamencie Górna Normandia. Według danych na rok 1990 gminę zamieszkiwało 35 osób, a gęstość zaludnienia wynosiła 10 osób/km2 (wśród 1421 gmin Górnej Normandii Saint",
+      "duration_seconds": 10.616,
+      "new_tokens": 120,
+      "tokens_per_second": 11.3,
+      "analysis": {
+        "chars": 537,
+        "words": 79,
+        "alphabetic_ratio": 0.767,
+        "polish_char_count": 32,
+        "repeated_4grams": 14,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [
+          "bibliografia"
+        ],
+        "web": [],
+        "pseudo_ency": [
+          "według danych",
+          "departamencie"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "expected": "Kontynuacja zdania bez dryfu w bełkot lub powtarzanie.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260537,
+      "prompt": "Najważniejszym problemem tego projektu jest",
+      "full_text": "Najważniejszym problemem tego projektu jest zwiększenie wartości, w której znajduje się również planowanie projektowo, która jest w stanie wykonać w nim kilka razy, podczas gdy dobudowano dwie nowe platformy: Obliczenia okładki na dwa sposoby: Obliczenia okładki i pochylenia okładki na dwa sposoby: Obliczenia okładki na końcu i dwa sposoby: Obliczenia okładki na końcu, Obliczenia okładki na końcu, Obliczenia okładki na początku, Obliczenia okładki na końcu, Obliczenia okładki na końcu, Obliczenia okładki na końcu, Obliczenia okładki",
+      "new_text": "zwiększenie wartości, w której znajduje się również planowanie projektowo, która jest w stanie wykonać w nim kilka razy, podczas gdy dobudowano dwie nowe platformy: Obliczenia okładki na dwa sposoby: Obliczenia okładki i pochylenia okładki na dwa sposoby: Obliczenia okładki na końcu i dwa sposoby: Obliczenia okładki na końcu, Obliczenia okładki na końcu, Obliczenia okładki na początku, Obliczenia okładki na końcu, Obliczenia okładki na końcu, Obliczenia okładki na końcu, Obliczenia okładki",
+      "duration_seconds": 10.39,
+      "new_tokens": 120,
+      "tokens_per_second": 11.55,
+      "analysis": {
+        "chars": 494,
+        "words": 70,
+        "alphabetic_ratio": 0.834,
+        "polish_char_count": 26,
+        "repeated_4grams": 21,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "expected": "Proste wyjaśnienie lub kontynuacja definicji.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260538,
+      "prompt": "Uczenie maszynowe polega na",
+      "full_text": "Uczenie maszynowe polega na wyporowaniu luf w celu uzyskania podobieństwa luf w celu zmniejszenia mocy. Zmienne są pokładowe, co powoduje zwiększenie wysokości obrotu na zewnątrz i w zależności od rodzaju luf jest mniejsza niż w przypadku. Zmienne te same są również w stanie podobieństwa luf. Zachowane są na zasadzie bezpiecznika, a w przypadku luf w przypadku luf w przypadku luf w przypadku lufy. Przypisy Bibliografia Anatomia Krótko (niem. Krótko) – wieś w Polsce położona w województwie warmińsko-mazurskim, w",
+      "new_text": "wyporowaniu luf w celu uzyskania podobieństwa luf w celu zmniejszenia mocy. Zmienne są pokładowe, co powoduje zwiększenie wysokości obrotu na zewnątrz i w zależności od rodzaju luf jest mniejsza niż w przypadku. Zmienne te same są również w stanie podobieństwa luf. Zachowane są na zasadzie bezpiecznika, a w przypadku luf w przypadku luf w przypadku luf w przypadku lufy. Przypisy Bibliografia Anatomia Krótko (niem. Krótko) – wieś w Polsce położona w województwie warmińsko-mazurskim, w",
+      "duration_seconds": 8.787,
+      "new_tokens": 120,
+      "tokens_per_second": 13.66,
+      "analysis": {
+        "chars": 488,
+        "words": 74,
+        "alphabetic_ratio": 0.826,
+        "polish_char_count": 21,
+        "repeated_4grams": 5,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [
+          "przypisy",
+          "bibliografia"
+        ],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "expected": "Encyklopedyczny lub narracyjny tekst historyczny.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260539,
+      "prompt": "W średniowieczu",
+      "full_text": "W średniowieczu był jednym z braci, którzy byli wnukami. Od XV wieku w księgach sądowych z rodu von Böln, a później majątku von Böln, a od 1795 roku majątku von Böln. W 1580 roku jako majątek ziemski, w 1799 roku majątek ziemski (dziś von Böln, 178 mórg) należał do rodu von Böln. W 1789 roku majątek ziemski, w tym: dwór, folwark, pałac, dwór,",
+      "new_text": "był jednym z braci, którzy byli wnukami. Od XV wieku w księgach sądowych z rodu von Böln, a później majątku von Böln, a od 1795 roku majątku von Böln. W 1580 roku jako majątek ziemski, w 1799 roku majątek ziemski (dziś von Böln, 178 mórg) należał do rodu von Böln. W 1789 roku majątek ziemski, w tym: dwór, folwark, pałac, dwór,",
+      "duration_seconds": 9.265,
+      "new_tokens": 120,
+      "tokens_per_second": 12.95,
+      "analysis": {
+        "chars": 328,
+        "words": 61,
+        "alphabetic_ratio": 0.71,
+        "polish_char_count": 18,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "expected": "Spójna kontynuacja tekstu naukowego lub opisowego.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260540,
+      "prompt": "Na początku eksperymentu",
+      "full_text": "Na początku eksperymentu, w związku z czym w wyniku depozycji, w trakcie którego wchodziły osoby z grupą „Alesti” i „Chara”. W ten sposób, w związku z czym, w związku z tym, że w związku z tym, że grupa stała się coraz bardziej popularna. W tym samym czasie, w związku z tym, że grupa stała się jedną z wielu grup. Po raz pierwszy, po raz pierwszy, grupa została przyjęta przez koncern, a w 2006 roku grupa została zarejestrowana przez magazyn „Chara” i została zarejestrowana jako „Lon” w",
+      "new_text": ", w związku z czym w wyniku depozycji, w trakcie którego wchodziły osoby z grupą „Alesti” i „Chara”. W ten sposób, w związku z czym, w związku z tym, że w związku z tym, że grupa stała się coraz bardziej popularna. W tym samym czasie, w związku z tym, że grupa stała się jedną z wielu grup. Po raz pierwszy, po raz pierwszy, grupa została przyjęta przez koncern, a w 2006 roku grupa została zarejestrowana przez magazyn „Chara” i została zarejestrowana jako „Lon” w",
+      "duration_seconds": 8.389,
+      "new_tokens": 120,
+      "tokens_per_second": 14.31,
+      "analysis": {
+        "chars": 465,
+        "words": 83,
+        "alphabetic_ratio": 0.766,
+        "polish_char_count": 21,
+        "repeated_4grams": 9,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "expected": "Kontynuacja bez widocznej pętli fraz.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260541,
+      "prompt": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ",
+      "full_text": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ nie może być wyrażony z wyrażony na tekst zdań i nie ma więc jednak do czynienia z niepełnością. Przykładowo, gdy wszystkie słowa są często wyrażone. Przykładowo, gdy zbiór nie jest tak zwane. Przykładowo, gdy: Przykładowo, nie ma żadnego słowa, a nie ma w niej żadnej zdań. Przykładowo, to jest to, że Niech będzie to zbiór, to w to, że zbiór jest niepełna. Przykładowo, to i że to, że zbiór jest niepełna, to jest niepeł",
+      "new_text": "nie może być wyrażony z wyrażony na tekst zdań i nie ma więc jednak do czynienia z niepełnością. Przykładowo, gdy wszystkie słowa są często wyrażone. Przykładowo, gdy zbiór nie jest tak zwane. Przykładowo, gdy: Przykładowo, nie ma żadnego słowa, a nie ma w niej żadnej zdań. Przykładowo, to jest to, że Niech będzie to zbiór, to w to, że zbiór jest niepełna. Przykładowo, to i że to, że zbiór jest niepełna, to jest niepeł",
+      "duration_seconds": 11.198,
+      "new_tokens": 120,
+      "tokens_per_second": 10.72,
+      "analysis": {
+        "chars": 422,
+        "words": 74,
+        "alphabetic_ratio": 0.784,
+        "polish_char_count": 35,
+        "repeated_4grams": 2,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "expected": "Może kontynuować, ale bez usernames, dat postów, HTML i śmieci forum.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260542,
+      "prompt": "Komentarze użytkowników wskazują, że",
+      "full_text": "Komentarze użytkowników wskazują, że nie jest to jednak możliwe zachowanie, dlatego w przypadku wielu innych języków programowania nie ma żadnych możliwości. Przykładem jest to, że ma to być „informatyka” (propor.  ⁇  – „uznawcy” lub „nie”), która jest nie tylko w przypadku „informatyka” (np. „informatyka”), ale również jest to możliwe, że wszystkie są one zdańcze i nie są w pełni wygenerowane. W przypadku gdy nie ma to jednak zgody. Określenie to może być zdańczone w językach programowania, nie ma jednak",
+      "new_text": "nie jest to jednak możliwe zachowanie, dlatego w przypadku wielu innych języków programowania nie ma żadnych możliwości. Przykładem jest to, że ma to być „informatyka” (propor.  ⁇  – „uznawcy” lub „nie”), która jest nie tylko w przypadku „informatyka” (np. „informatyka”), ale również jest to możliwe, że wszystkie są one zdańcze i nie są w pełni wygenerowane. W przypadku gdy nie ma to jednak zgody. Określenie to może być zdańczone w językach programowania, nie ma jednak",
+      "duration_seconds": 9.735,
+      "new_tokens": 120,
+      "tokens_per_second": 12.33,
+      "analysis": {
+        "chars": 473,
+        "words": 73,
+        "alphabetic_ratio": 0.782,
+        "polish_char_count": 23,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "expected": "Krótka polska kontynuacja zdania, najlepiej encyklopedyczna lub opisowa.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260531,
+      "prompt": "Warszawa to",
+      "full_text": "Warszawa to nie doczekało się również w Anglii. Na przełomie lat 70. XX wieku doczekał się on wielu znanych artystów i artystów takich jak: „Odygana” czy „Hoda” czy „Maria” (druga część z nich to także jest na niej również nota). Współcześnie z kolei jego twórczość to m.in. inne utwory, pisane utwory (np. „Wybrodnie”) oraz „Firgen” („Firgen”). Od początku do roku 1988 do roku 1998 roku przez kolejne lata do tego momentu była związana z niemie",
+      "new_text": "nie doczekało się również w Anglii. Na przełomie lat 70. XX wieku doczekał się on wielu znanych artystów i artystów takich jak: „Odygana” czy „Hoda” czy „Maria” (druga część z nich to także jest na niej również nota). Współcześnie z kolei jego twórczość to m.in. inne utwory, pisane utwory (np. „Wybrodnie”) oraz „Firgen” („Firgen”). Od początku do roku 1988 do roku 1998 roku przez kolejne lata do tego momentu była związana z niemie",
+      "duration_seconds": 8.471,
+      "new_tokens": 120,
+      "tokens_per_second": 14.17,
+      "analysis": {
+        "chars": 434,
+        "words": 74,
+        "alphabetic_ratio": 0.749,
+        "polish_char_count": 24,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "expected": "Spójne polskie zdanie lub akapit bez forumowego tonu.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260532,
+      "prompt": "Polska jest",
+      "full_text": "Polska jest to jedna z głównych ulic na której znajduje się cerkiew pw. św. Mikołaja, zwanej wówczas \"połem\" (obecnie zwane \"połem\") oraz \"połem\". W skład osiedla wchodzą również: ulice, osiedla, osiedla i osiedla oraz osiedla. Przy ul. Konopnickiej, ul. Stawińska, ul. Stawińska, pl. Wolnicza, ul. Sienkiewicza, ul. Stawińska, ul. Rawska, ul. Stawińska, ul. Stawińska, ul. Stawińska, ul. Stawińska",
+      "new_text": "to jedna z głównych ulic na której znajduje się cerkiew pw. św. Mikołaja, zwanej wówczas \"połem\" (obecnie zwane \"połem\") oraz \"połem\". W skład osiedla wchodzą również: ulice, osiedla, osiedla i osiedla oraz osiedla. Przy ul. Konopnickiej, ul. Stawińska, ul. Stawińska, pl. Wolnicza, ul. Sienkiewicza, ul. Stawińska, ul. Rawska, ul. Stawińska, ul. Stawińska, ul. Stawińska, ul. Stawińska",
+      "duration_seconds": 10.049,
+      "new_tokens": 120,
+      "tokens_per_second": 11.94,
+      "analysis": {
+        "chars": 386,
+        "words": 56,
+        "alphabetic_ratio": 0.762,
+        "polish_char_count": 21,
+        "repeated_4grams": 4,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "expected": "Prosty tekst edukacyjny, bez udawania asystenta.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260533,
+      "prompt": "W fizyce energia",
+      "full_text": "W fizyce energia fizyczna jest podzbiorem, która oznacza, że podzbiorem jest to liczba punktów; stąd przyczyna nie jest, ani dla każdego z, że można wtedy określić, jeśli jest to równoważne. Nie jest dokładnie to, że można ją zapisać, że będzie „ma” (by to wtedy, gdy w nakładzie współczynnik „ma”) w pewnym sensie. Zachowane podzbiorem fizyki to jest „ma” wektor, czyli „ma” wektor. Jeśli na przestrzeni nie są równe, to, to można oszacować",
+      "new_text": "fizyczna jest podzbiorem, która oznacza, że podzbiorem jest to liczba punktów; stąd przyczyna nie jest, ani dla każdego z, że można wtedy określić, jeśli jest to równoważne. Nie jest dokładnie to, że można ją zapisać, że będzie „ma” (by to wtedy, gdy w nakładzie współczynnik „ma”) w pewnym sensie. Zachowane podzbiorem fizyki to jest „ma” wektor, czyli „ma” wektor. Jeśli na przestrzeni nie są równe, to, to można oszacować",
+      "duration_seconds": 8.885,
+      "new_tokens": 120,
+      "tokens_per_second": 13.51,
+      "analysis": {
+        "chars": 424,
+        "words": 69,
+        "alphabetic_ratio": 0.781,
+        "polish_char_count": 27,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "expected": "Definicyjna kontynuacja w języku polskim.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260534,
+      "prompt": "Sztuczna inteligencja jest",
+      "full_text": "Sztuczna inteligencja jest zrównoważony do deumatycznych, w przeciwieństwie do innych języków. Nie podlegają delegowania do języków programowania – jeśli jest to wiele znacznych efektów. Występują w nim różne języki, które mogą być używane w programach, mogą być używane w wielu językach (np. barate, alfabecie). Przypisy Bibliografia Linki zewnętrzne Protestancje NGC 4731 (również PGC 3179 lub UGC 8171) – galaktyka spiralna z poprzeczką (SBc), znajdująca się w gwiazdozbiorze E",
+      "new_text": "zrównoważony do deumatycznych, w przeciwieństwie do innych języków. Nie podlegają delegowania do języków programowania – jeśli jest to wiele znacznych efektów. Występują w nim różne języki, które mogą być używane w programach, mogą być używane w wielu językach (np. barate, alfabecie). Przypisy Bibliografia Linki zewnętrzne Protestancje NGC 4731 (również PGC 3179 lub UGC 8171) – galaktyka spiralna z poprzeczką (SBc), znajdująca się w gwiazdozbiorze E",
+      "duration_seconds": 10.991,
+      "new_tokens": 120,
+      "tokens_per_second": 10.92,
+      "analysis": {
+        "chars": 453,
+        "words": 63,
+        "alphabetic_ratio": 0.795,
+        "polish_char_count": 29,
+        "repeated_4grams": 1,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [
+          "przypisy",
+          "bibliografia",
+          "linki zewnętrzne"
+        ],
+        "web": [],
+        "pseudo_ency": [
+          "ngc"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "expected": "Lista lub opis elementów roweru, składnia powinna być sensowna.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260535,
+      "prompt": "Rower składa się z",
+      "full_text": "Rower składa się z kilku stron, w których umieszcza się np. na jednej z pojedynczych gałęziach, tzw. gałązkach. W literaturze ta forma ta była w odniesieniu do języków programowania. Według wielu języków programowania na zasadzie „jako” używają inne języki programowania (np. „i”) oraz „wideo” (np. „wideo”) (np. „obok”), „a” i „moll”. W praktyce programowania zapisuje się od słowa „nazywania” i „zawierała możliwość”, „moll”. Na",
+      "new_text": "kilku stron, w których umieszcza się np. na jednej z pojedynczych gałęziach, tzw. gałązkach. W literaturze ta forma ta była w odniesieniu do języków programowania. Według wielu języków programowania na zasadzie „jako” używają inne języki programowania (np. „i”) oraz „wideo” (np. „wideo”) (np. „obok”), „a” i „moll”. W praktyce programowania zapisuje się od słowa „nazywania” i „zawierała możliwość”, „moll”. Na",
+      "duration_seconds": 9.573,
+      "new_tokens": 120,
+      "tokens_per_second": 12.54,
+      "analysis": {
+        "chars": 411,
+        "words": 60,
+        "alphabetic_ratio": 0.762,
+        "polish_char_count": 21,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "expected": "Spójna kontynuacja bez losowych dat, linków, menu ani SEO.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260536,
+      "prompt": "Według najnowszych danych",
+      "full_text": "Według najnowszych danych na rok 2000 gminę zamieszkiwały 234 osoby, a gęstość zaludnienia wynosiła 16 osób/km2. W styczniu 2008 r. gmina została zniszczona przez wojska brytyjskie brytyjskie. W tym czasie doszła do porozumienia z amerykańską firmą Isaac. Według danych na rok 2010 gminę zamieszkiwały 892 osoby, a gęstość zaludnienia wynosiła 6 osób/km2. W styczniu 2009 r. gmina została zniesiona i przyłączona do gminy Bacacacacac. Dane liczbowe Po kolejnej rejdzie gminy Bacac ma obszar 86,4 km2, w tym: użytki ro",
+      "new_text": "na rok 2000 gminę zamieszkiwały 234 osoby, a gęstość zaludnienia wynosiła 16 osób/km2. W styczniu 2008 r. gmina została zniszczona przez wojska brytyjskie brytyjskie. W tym czasie doszła do porozumienia z amerykańską firmą Isaac. Według danych na rok 2010 gminę zamieszkiwały 892 osoby, a gęstość zaludnienia wynosiła 6 osób/km2. W styczniu 2009 r. gmina została zniesiona i przyłączona do gminy Bacacacacac. Dane liczbowe Po kolejnej rejdzie gminy Bacac ma obszar 86,4 km2, w tym: użytki ro",
+      "duration_seconds": 9.551,
+      "new_tokens": 120,
+      "tokens_per_second": 12.56,
+      "analysis": {
+        "chars": 491,
+        "words": 79,
+        "alphabetic_ratio": 0.756,
+        "polish_char_count": 24,
+        "repeated_4grams": 3,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "według danych"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "expected": "Kontynuacja zdania bez dryfu w bełkot lub powtarzanie.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260537,
+      "prompt": "Najważniejszym problemem tego projektu jest",
+      "full_text": "Najważniejszym problemem tego projektu jest zwiększenie wartości, w której znajduje się również plan konstrukcji. Poziom ten jest wtórny, ale poziom, który nie jest jednak nigdy nie dostrzeżony. Jeśli jednak, gdy każdy będzie będzie może być wtórny. W celu uzyskania odpowiedniego projektu, jeśli poziom ten znajduje się wtórny, może on zostać usunięty z pokładu, aby nie będzie on on on jednak zać sobie, musi być ona jednak możliwe przy użyciu. Jeżeli chodzi o kilka pokładów, jeśli połowicie. Poziom ten może wtórny, a po obu stronach może",
+      "new_text": "zwiększenie wartości, w której znajduje się również plan konstrukcji. Poziom ten jest wtórny, ale poziom, który nie jest jednak nigdy nie dostrzeżony. Jeśli jednak, gdy każdy będzie będzie może być wtórny. W celu uzyskania odpowiedniego projektu, jeśli poziom ten znajduje się wtórny, może on zostać usunięty z pokładu, aby nie będzie on on on jednak zać sobie, musi być ona jednak możliwe przy użyciu. Jeżeli chodzi o kilka pokładów, jeśli połowicie. Poziom ten może wtórny, a po obu stronach może",
+      "duration_seconds": 11.158,
+      "new_tokens": 120,
+      "tokens_per_second": 10.75,
+      "analysis": {
+        "chars": 498,
+        "words": 80,
+        "alphabetic_ratio": 0.811,
+        "polish_char_count": 36,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "expected": "Proste wyjaśnienie lub kontynuacja definicji.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260538,
+      "prompt": "Uczenie maszynowe polega na",
+      "full_text": "Uczenie maszynowe polega na obrotowaniu silników, w tym: napędzany napędzany napędzany napędzany napędzany napędzane wałem napędzanego napędzanego napędzanego powietrza napędzanego napędzanego napędzanego napędzanego napędzanego silnikiem o pojemności 122 mm długości oraz kąt zamocowany napędzany napędzany napędzany napędzany napędzany napędzany napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędza",
+      "new_text": "obrotowaniu silników, w tym: napędzany napędzany napędzany napędzany napędzany napędzane wałem napędzanego napędzanego napędzanego powietrza napędzanego napędzanego napędzanego napędzanego napędzanego silnikiem o pojemności 122 mm długości oraz kąt zamocowany napędzany napędzany napędzany napędzany napędzany napędzany napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędzane napędza",
+      "duration_seconds": 10.145,
+      "new_tokens": 120,
+      "tokens_per_second": 11.83,
+      "analysis": {
+        "chars": 437,
+        "words": 47,
+        "alphabetic_ratio": 0.883,
+        "polish_char_count": 38,
+        "repeated_4grams": 13,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "expected": "Encyklopedyczny lub narracyjny tekst historyczny.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260539,
+      "prompt": "W średniowieczu",
+      "full_text": "W średniowieczu był jednym z braci, którzy przybyli do wsi. Około 1207 roku królowie brandenburskiej i jego z braci, którzy pogadrowali je przeciwko ojcuowitomowi. Wieś była własnością księcia wrocławskiego Mikołaja I z Boboli. Założone w 1340 roku przez Krzyżaków, od 1410 roku leżała w powiecie radziejowskim województwa radziejowskiego, a w 1523 roku należała do wsi większych w ówczesnym pruskim powiecie radziejowskim województwa radziejowskiego. W 1448 roku wieś należała do parafii Radziejów, a od",
+      "new_text": "był jednym z braci, którzy przybyli do wsi. Około 1207 roku królowie brandenburskiej i jego z braci, którzy pogadrowali je przeciwko ojcuowitomowi. Wieś była własnością księcia wrocławskiego Mikołaja I z Boboli. Założone w 1340 roku przez Krzyżaków, od 1410 roku leżała w powiecie radziejowskim województwa radziejowskiego, a w 1523 roku należała do wsi większych w ówczesnym pruskim powiecie radziejowskim województwa radziejowskiego. W 1448 roku wieś należała do parafii Radziejów, a od",
+      "duration_seconds": 8.419,
+      "new_tokens": 120,
+      "tokens_per_second": 14.25,
+      "analysis": {
+        "chars": 488,
+        "words": 71,
+        "alphabetic_ratio": 0.797,
+        "polish_char_count": 29,
+        "repeated_4grams": 1,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "województwa",
+          "powiecie"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "expected": "Spójna kontynuacja tekstu naukowego lub opisowego.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260540,
+      "prompt": "Na początku eksperymentu",
+      "full_text": "Na początku eksperymentu, w związku z czym w wyniku depozycji, a w okresie odkształcenia się z tego samego roku, gdy przy produkcji seryjnej, w związku z tym, że wytrącając jej nacisk na zwiększenie oporu i opóźnienie. W czasie próbek ten byłby wtedy rozstawiony przez kilka lat, gdyż gdy w trakcie depozycji byłby rozstawiony, ponieważ nie mógłby być nacjonalnie, lecz w efekcie nie tylko zbyt niżej. Dlatego właśnie na potrzeby seryjnego oporu jest ona jednak bardziej rozstawiony. Zmieniono on",
+      "new_text": ", w związku z czym w wyniku depozycji, a w okresie odkształcenia się z tego samego roku, gdy przy produkcji seryjnej, w związku z tym, że wytrącając jej nacisk na zwiększenie oporu i opóźnienie. W czasie próbek ten byłby wtedy rozstawiony przez kilka lat, gdyż gdy w trakcie depozycji byłby rozstawiony, ponieważ nie mógłby być nacjonalnie, lecz w efekcie nie tylko zbyt niżej. Dlatego właśnie na potrzeby seryjnego oporu jest ona jednak bardziej rozstawiony. Zmieniono on",
+      "duration_seconds": 9.647,
+      "new_tokens": 120,
+      "tokens_per_second": 12.44,
+      "analysis": {
+        "chars": 472,
+        "words": 75,
+        "alphabetic_ratio": 0.818,
+        "polish_char_count": 21,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "expected": "Kontynuacja bez widocznej pętli fraz.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260541,
+      "prompt": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ",
+      "full_text": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ nie może zostać wyrażony z wyrażony na tekst zdań i nie ma więc jednak do czynienia z niepełnością. Takie słowa są to takie słowa jak: \"Wholenie\", \"Szające się\". Stworzenia tego słowa do tego jednak jest to jednak niepełna, nie jest ona jednak bez względu na jego prawdziwą, że po tym, że jest to możliwe to, że istnieje tylko pierwsza część innych elementów, to w topologii, że każdy jest „języczny\". Innym przykładem słowa topologii jest \"złoty, to jest to nie",
+      "new_text": "nie może zostać wyrażony z wyrażony na tekst zdań i nie ma więc jednak do czynienia z niepełnością. Takie słowa są to takie słowa jak: \"Wholenie\", \"Szające się\". Stworzenia tego słowa do tego jednak jest to jednak niepełna, nie jest ona jednak bez względu na jego prawdziwą, że po tym, że jest to możliwe to, że istnieje tylko pierwsza część innych elementów, to w topologii, że każdy jest „języczny\". Innym przykładem słowa topologii jest \"złoty, to jest to nie",
+      "duration_seconds": 11.727,
+      "new_tokens": 120,
+      "tokens_per_second": 10.23,
+      "analysis": {
+        "chars": 462,
+        "words": 79,
+        "alphabetic_ratio": 0.79,
+        "polish_char_count": 32,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "expected": "Może kontynuować, ale bez usernames, dat postów, HTML i śmieci forum.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260542,
+      "prompt": "Komentarze użytkowników wskazują, że",
+      "full_text": "Komentarze użytkowników wskazują, że nie jest to jedna, gdyż część nie jest zbyt wielu. Zobacz też bitwa pod Morzem Czarnym, bitwa pod Morzem Czarnym, bitwa pod Morzem Czarnym, bitwa pod Morzem Czarnym, bitwa pod Morzem Czarnym, bitwa pod Grunwaldem, bitwa pod Morzem Czarnym, bitwa pod Bałtyku Ustanowiona z (Stefos, fos) – gatunek rośliny z rodziny liszczkowatych. Występuje u wszystkich gatunków należących do niej plemienia. Występują od czerwca do czerwca, głównie",
+      "new_text": "nie jest to jedna, gdyż część nie jest zbyt wielu. Zobacz też bitwa pod Morzem Czarnym, bitwa pod Morzem Czarnym, bitwa pod Morzem Czarnym, bitwa pod Morzem Czarnym, bitwa pod Morzem Czarnym, bitwa pod Grunwaldem, bitwa pod Morzem Czarnym, bitwa pod Bałtyku Ustanowiona z (Stefos, fos) – gatunek rośliny z rodziny liszczkowatych. Występuje u wszystkich gatunków należących do niej plemienia. Występują od czerwca do czerwca, głównie",
+      "duration_seconds": 8.371,
+      "new_tokens": 120,
+      "tokens_per_second": 14.34,
+      "analysis": {
+        "chars": 432,
+        "words": 65,
+        "alphabetic_ratio": 0.812,
+        "polish_char_count": 15,
+        "repeated_4grams": 18,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [
+          "zobacz też"
+        ],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "expected": "Krótka polska kontynuacja zdania, najlepiej encyklopedyczna lub opisowa.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260531,
+      "prompt": "Warszawa to",
+      "full_text": "Warszawa to pierwsza seria gier nieistniejących w Anglii: Astronomia Stanów Zjednoczonych – akcja gier wideo Gray Up (TV) Indust Earth Film, grająca w sztukach wideo Gry z serii „Dongs” (1998–2008) Istota na platformie telewizyjnym i film sensacyjnym: Graves in Darkness Made, postać Petera E.C.R.R.D.R.R.F.H.Press, grająca w wersji w dwóch kategoriach filmów, grająca w dwóch kategoriach: Złotego Globu (Wiel",
+      "new_text": "pierwsza seria gier nieistniejących w Anglii: Astronomia Stanów Zjednoczonych – akcja gier wideo Gray Up (TV) Indust Earth Film, grająca w sztukach wideo Gry z serii „Dongs” (1998–2008) Istota na platformie telewizyjnym i film sensacyjnym: Graves in Darkness Made, postać Petera E.C.R.R.D.R.R.F.H.Press, grająca w wersji w dwóch kategoriach filmów, grająca w dwóch kategoriach: Złotego Globu (Wiel",
+      "duration_seconds": 9.467,
+      "new_tokens": 120,
+      "tokens_per_second": 12.68,
+      "analysis": {
+        "chars": 397,
+        "words": 65,
+        "alphabetic_ratio": 0.778,
+        "polish_char_count": 10,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "expected": "Spójne polskie zdanie lub akapit bez forumowego tonu.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260532,
+      "prompt": "Polska jest",
+      "full_text": "Polska jest to jedna z głównych ulic na której łączy się ulicą, natomiast od południowej ściany ul. Głowackiej dolnej ściany znajduje się oś ulic, na ul. Kujawskiej, a w sali znajduje się filipowa tablica, gdzie zbudowano budynek stacji na ulicy Barackiej. Obecnie jest to budowla, która poświęcona została także kaplicę ropuszników, oraz jej część nosi tytuł „Sancer”, jednak została wzniesiona po 1901 przez Adolfa Hirossogo. Po II wojnie światowej budynek został rozebrany przez synagogę. Od lat 90. XX wieku",
+      "new_text": "to jedna z głównych ulic na której łączy się ulicą, natomiast od południowej ściany ul. Głowackiej dolnej ściany znajduje się oś ulic, na ul. Kujawskiej, a w sali znajduje się filipowa tablica, gdzie zbudowano budynek stacji na ulicy Barackiej. Obecnie jest to budowla, która poświęcona została także kaplicę ropuszników, oraz jej część nosi tytuł „Sancer”, jednak została wzniesiona po 1901 przez Adolfa Hirossogo. Po II wojnie światowej budynek został rozebrany przez synagogę. Od lat 90. XX wieku",
+      "duration_seconds": 8.346,
+      "new_tokens": 120,
+      "tokens_per_second": 14.38,
+      "analysis": {
+        "chars": 499,
+        "words": 77,
+        "alphabetic_ratio": 0.806,
+        "polish_char_count": 29,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "expected": "Prosty tekst edukacyjny, bez udawania asystenta.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260533,
+      "prompt": "W fizyce energia",
+      "full_text": "W fizyce energia fizyczna jest podzbiorem, która oznacza, że podzbiorza jest normalny. Przykład wartości: nie jest, ani dla nie będzie, że gdzie będzie dla niej, jeśli ma toby początek „dziedzi”. Jeśli nie jest to prawdziwe, gdy jest, to „ma” (by toby być, jeśli na określony znak), „ma” są w pewnym sensie, to jednak jest to określona jako „ma” (zob. „ma”) wtedy „u” (patrz dwa), gdy są to „pełne, to i są to okreś",
+      "new_text": "fizyczna jest podzbiorem, która oznacza, że podzbiorza jest normalny. Przykład wartości: nie jest, ani dla nie będzie, że gdzie będzie dla niej, jeśli ma toby początek „dziedzi”. Jeśli nie jest to prawdziwe, gdy jest, to „ma” (by toby być, jeśli na określony znak), „ma” są w pewnym sensie, to jednak jest to określona jako „ma” (zob. „ma”) wtedy „u” (patrz dwa), gdy są to „pełne, to i są to okreś",
+      "duration_seconds": 9.995,
+      "new_tokens": 120,
+      "tokens_per_second": 12.01,
+      "analysis": {
+        "chars": 398,
+        "words": 70,
+        "alphabetic_ratio": 0.739,
+        "polish_char_count": 19,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "expected": "Definicyjna kontynuacja w języku polskim.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260534,
+      "prompt": "Sztuczna inteligencja jest",
+      "full_text": "Sztuczna inteligencja jest zrównoważony do deumatycznych (uzupełnień, „instytut czy deumatycznych”) w zasadzie zrównoważonego. Jeżeli to, musi on zostać w stanie wykonać wskutek zniszczenia, to docierając poza nią przez deumatycznych (wydrabiał także przeciwwagi) czynią lub też niekompletne życie. Z czasem jednak do tej sytuacji istnieje deumatycznych, aby uzyskać, po którym wszystkie osoby powinny wykonać za pomoc w stanie. Czynniki społeczne jako leciane nie powinnoby jednak być wykorzystane. Gdy nie musi u",
+      "new_text": "zrównoważony do deumatycznych (uzupełnień, „instytut czy deumatycznych”) w zasadzie zrównoważonego. Jeżeli to, musi on zostać w stanie wykonać wskutek zniszczenia, to docierając poza nią przez deumatycznych (wydrabiał także przeciwwagi) czynią lub też niekompletne życie. Z czasem jednak do tej sytuacji istnieje deumatycznych, aby uzyskać, po którym wszystkie osoby powinny wykonać za pomoc w stanie. Czynniki społeczne jako leciane nie powinnoby jednak być wykorzystane. Gdy nie musi u",
+      "duration_seconds": 11.363,
+      "new_tokens": 120,
+      "tokens_per_second": 10.56,
+      "analysis": {
+        "chars": 487,
+        "words": 67,
+        "alphabetic_ratio": 0.834,
+        "polish_char_count": 21,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "expected": "Lista lub opis elementów roweru, składnia powinna być sensowna.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260535,
+      "prompt": "Rower składa się z",
+      "full_text": "Rower składa się z sześciu stron, w których zginęły tylko dwie osoby. Linki zewnętrzne Informacje polityczne NGC 10701 (również NGC 10759 lub ESO 3408) – galaktyka spiralna (Sab), znajdująca się w gwiazdozbiorze Żyra. Odkrył ją William Herschel 11 maja 1878 roku. Jest to galaktyka eliptyczna (E), znajdująca się w gwiazdozbiorze Ryana. Odkrył ją Lewis Lloyn i innych Galaktyki zaobserwowano supernową SN 2009A. Zobacz też Lista obiektów NGC Przypisy",
+      "new_text": "sześciu stron, w których zginęły tylko dwie osoby. Linki zewnętrzne Informacje polityczne NGC 10701 (również NGC 10759 lub ESO 3408) – galaktyka spiralna (Sab), znajdująca się w gwiazdozbiorze Żyra. Odkrył ją William Herschel 11 maja 1878 roku. Jest to galaktyka eliptyczna (E), znajdująca się w gwiazdozbiorze Ryana. Odkrył ją Lewis Lloyn i innych Galaktyki zaobserwowano supernową SN 2009A. Zobacz też Lista obiektów NGC Przypisy",
+      "duration_seconds": 9.039,
+      "new_tokens": 120,
+      "tokens_per_second": 13.28,
+      "analysis": {
+        "chars": 431,
+        "words": 63,
+        "alphabetic_ratio": 0.763,
+        "polish_char_count": 19,
+        "repeated_4grams": 1,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 1,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [
+          "przypisy",
+          "linki zewnętrzne",
+          "zobacz też"
+        ],
+        "web": [],
+        "pseudo_ency": [
+          "odkrył ją",
+          "ngc"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "expected": "Spójna kontynuacja bez losowych dat, linków, menu ani SEO.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260536,
+      "prompt": "Według najnowszych danych",
+      "full_text": "Według najnowszych danych na rok 2000 gminę zamieszkiwały 234 osoby, a gęstość zaludnienia wynosiła 17 osób/km2. W styczniu 2008 r. Matthe-Balle to miejscowość Sant-Bois de Saint-Cerle – miejscowość i gmina we Francji, w regionie Normandia, w departamencie Alpy i Loara. Według danych na rok 2001 gminę zamieszkiwało 288 osób, a gęstość zaludnienia wynosiła 21 osób/km2. W styczniu 2008 r. Matthe-Ballace Matthe-Balle to miejscowość Nerle to miejscowość Ville – miejscowość Nerle –",
+      "new_text": "na rok 2000 gminę zamieszkiwały 234 osoby, a gęstość zaludnienia wynosiła 17 osób/km2. W styczniu 2008 r. Matthe-Balle to miejscowość Sant-Bois de Saint-Cerle – miejscowość i gmina we Francji, w regionie Normandia, w departamencie Alpy i Loara. Według danych na rok 2001 gminę zamieszkiwało 288 osób, a gęstość zaludnienia wynosiła 21 osób/km2. W styczniu 2008 r. Matthe-Ballace Matthe-Balle to miejscowość Nerle to miejscowość Ville – miejscowość Nerle –",
+      "duration_seconds": 10.005,
+      "new_tokens": 120,
+      "tokens_per_second": 11.99,
+      "analysis": {
+        "chars": 455,
+        "words": 72,
+        "alphabetic_ratio": 0.749,
+        "polish_char_count": 26,
+        "repeated_4grams": 6,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "według danych",
+          "departamencie"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "expected": "Kontynuacja zdania bez dryfu w bełkot lub powtarzanie.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260537,
+      "prompt": "Najważniejszym problemem tego projektu jest",
+      "full_text": "Najważniejszym problemem tego projektu jest zwiększenie wartości przez projekt. Przykładem zbiegu ulic na obrzeżu ulic i schronisku oraz dawnych domów, w których mieszczą się jedynie dwie kapliczki kapliczki. Na przełomie lat 1831–1861 na terenie obiektu znajdują się statepiaki i inne zabytkowe statepiaki w budynku przy Rypinie, a na wzgórzu na stodole wz. Na szczycie zakrystała, połowa z bocznymi rzeźbami rzeźbiarnymi. Jej głównym, zachowała się szkle, przedstawiająca anioła. Zachowały się na niej również dzwo",
+      "new_text": "zwiększenie wartości przez projekt. Przykładem zbiegu ulic na obrzeżu ulic i schronisku oraz dawnych domów, w których mieszczą się jedynie dwie kapliczki kapliczki. Na przełomie lat 1831–1861 na terenie obiektu znajdują się statepiaki i inne zabytkowe statepiaki w budynku przy Rypinie, a na wzgórzu na stodole wz. Na szczycie zakrystała, połowa z bocznymi rzeźbami rzeźbiarnymi. Jej głównym, zachowała się szkle, przedstawiająca anioła. Zachowały się na niej również dzwo",
+      "duration_seconds": 8.84,
+      "new_tokens": 120,
+      "tokens_per_second": 13.57,
+      "analysis": {
+        "chars": 472,
+        "words": 69,
+        "alphabetic_ratio": 0.818,
+        "polish_char_count": 26,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "expected": "Proste wyjaśnienie lub kontynuacja definicji.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260538,
+      "prompt": "Uczenie maszynowe polega na",
+      "full_text": "Uczenie maszynowe polega na obrotowaniu silnika nurtu. W zależności od modelu napędzany silniki o tej przedziale, a następnie zaczepką. Układowe koła napędowe posiada trzy silniki napęjowe, a na jego powierzchni (poziomowe) – podwójniki paliwa. Pręciki są zasilane w dwa zaczepkę, które są całkowicie wyprowadzone z przodu silnika, gdzie tworzyły trzy silniki o mocy: 2 x 16 – napędzany o mocy 2n = 2 KM, – napędzany silnikiem. Pręciki jest bardziej zbliżony.",
+      "new_text": "obrotowaniu silnika nurtu. W zależności od modelu napędzany silniki o tej przedziale, a następnie zaczepką. Układowe koła napędowe posiada trzy silniki napęjowe, a na jego powierzchni (poziomowe) – podwójniki paliwa. Pręciki są zasilane w dwa zaczepkę, które są całkowicie wyprowadzone z przodu silnika, gdzie tworzyły trzy silniki o mocy: 2 x 16 – napędzany o mocy 2n = 2 KM, – napędzany silnikiem. Pręciki jest bardziej zbliżony.",
+      "duration_seconds": 10.152,
+      "new_tokens": 120,
+      "tokens_per_second": 11.82,
+      "analysis": {
+        "chars": 431,
+        "words": 63,
+        "alphabetic_ratio": 0.796,
+        "polish_char_count": 21,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": true
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "expected": "Encyklopedyczny lub narracyjny tekst historyczny.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260539,
+      "prompt": "W średniowieczu",
+      "full_text": "W średniowieczu był jednym z braci, którzy przybyli z klasztoru, gdzie mieszkali w pobliżu Palazów. W 1412 z braci, zmarłych na uboczu wsi wsi. Z tego powodu należały do dóbr: Palazów i Palazów i Ostrów. W 1448 wieś była własnością rodu von Gutzburga, który był własnością rodziny von Ostrowski. Miejscowość liczyła 10 włók. W 1664 (majątki rodowe) dziedzice von Rülfeld nadana przez Macieja von Rülchenburga –",
+      "new_text": "był jednym z braci, którzy przybyli z klasztoru, gdzie mieszkali w pobliżu Palazów. W 1412 z braci, zmarłych na uboczu wsi wsi. Z tego powodu należały do dóbr: Palazów i Palazów i Ostrów. W 1448 wieś była własnością rodu von Gutzburga, który był własnością rodziny von Ostrowski. Miejscowość liczyła 10 włók. W 1664 (majątki rodowe) dziedzice von Rülfeld nadana przez Macieja von Rülchenburga –",
+      "duration_seconds": 9.418,
+      "new_tokens": 120,
+      "tokens_per_second": 12.74,
+      "analysis": {
+        "chars": 394,
+        "words": 63,
+        "alphabetic_ratio": 0.772,
+        "polish_char_count": 27,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "expected": "Spójna kontynuacja tekstu naukowego lub opisowego.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260540,
+      "prompt": "Na początku eksperymentu",
+      "full_text": "Na początku eksperymentu, w związku z czym w wyniku depozycji Lee Vanjeu, wskutek tego zamachu. W ten sposób wstrząsowano akompresjonowane przez grupę wstrząsnę. Prószyński próbował jednak jednak zrównoważyć wszystkie problemy z alkoholem, dlatego też oręczając wiele osób oraz zahamować go z innymi zaburzeniami. Po kilku miesiącach, po torach, że Prószyński, nie tylko sam w ciągu jednego roku, był on nastawiony przez inne kobiety. Na początku lat 50. odkrył w kwaterze",
+      "new_text": ", w związku z czym w wyniku depozycji Lee Vanjeu, wskutek tego zamachu. W ten sposób wstrząsowano akompresjonowane przez grupę wstrząsnę. Prószyński próbował jednak jednak zrównoważyć wszystkie problemy z alkoholem, dlatego też oręczając wiele osób oraz zahamować go z innymi zaburzeniami. Po kilku miesiącach, po torach, że Prószyński, nie tylko sam w ciągu jednego roku, był on nastawiony przez inne kobiety. Na początku lat 50. odkrył w kwaterze",
+      "duration_seconds": 8.269,
+      "new_tokens": 120,
+      "tokens_per_second": 14.51,
+      "analysis": {
+        "chars": 448,
+        "words": 67,
+        "alphabetic_ratio": 0.819,
+        "polish_char_count": 26,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "expected": "Kontynuacja bez widocznej pętli fraz.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260541,
+      "prompt": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ",
+      "full_text": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ nie może powodować, ale z kolei w pewnym sensie zdań i nie ma więc pewności, to czy nie może być tylko jednym z tomów. Często jest to określenie \"kompletne\" (przyjmuje to ono tylko za pomocą tego \"kompletne\", co utrzymują nie tylko jej w tomy za jego prawdziwą”. Z tego powodu jest to proces, a to w tym przypadku zanika to zdań, które w tomie \"eceron\", które są jednak konieczne w procesie tworzenia i komunikacji. Jeżeli na przykład proces, należy do niego w języku, nie",
+      "new_text": "nie może powodować, ale z kolei w pewnym sensie zdań i nie ma więc pewności, to czy nie może być tylko jednym z tomów. Często jest to określenie \"kompletne\" (przyjmuje to ono tylko za pomocą tego \"kompletne\", co utrzymują nie tylko jej w tomy za jego prawdziwą”. Z tego powodu jest to proces, a to w tym przypadku zanika to zdań, które w tomie \"eceron\", które są jednak konieczne w procesie tworzenia i komunikacji. Jeżeli na przykład proces, należy do niego w języku, nie",
+      "duration_seconds": 10.221,
+      "new_tokens": 120,
+      "tokens_per_second": 11.74,
+      "analysis": {
+        "chars": 472,
+        "words": 84,
+        "alphabetic_ratio": 0.784,
+        "polish_char_count": 21,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "10k",
+      "checkpoint": "checkpoints/glyph-100m/latest.pt",
+      "checkpoint_step": 10000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "expected": "Może kontynuować, ale bez usernames, dat postów, HTML i śmieci forum.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260542,
+      "prompt": "Komentarze użytkowników wskazują, że",
+      "full_text": "Komentarze użytkowników wskazują, że nie potrafi on być tworzone przez osoby w sprawie zachowania. Okres termin „Sen” oznacza „wikującą” termin „Sen” określa się jako „Sen” oznacza „ja”. Nieudawane są natomiast nazwy „Dol, Nol, Nol, Nol, Nol, Nol, Nol, Nol) i Nol. Umawiają, że „Sen” określa je jako „w przypadku Nol” w ten sposób jako „wyciężycie” w celu odróżnienia „zdun od” oraz \"jednego",
+      "new_text": "nie potrafi on być tworzone przez osoby w sprawie zachowania. Okres termin „Sen” oznacza „wikującą” termin „Sen” określa się jako „Sen” oznacza „ja”. Nieudawane są natomiast nazwy „Dol, Nol, Nol, Nol, Nol, Nol, Nol, Nol) i Nol. Umawiają, że „Sen” określa je jako „w przypadku Nol” w ten sposób jako „wyciężycie” w celu odróżnienia „zdun od” oraz \"jednego",
+      "duration_seconds": 11.27,
+      "new_tokens": 120,
+      "tokens_per_second": 10.65,
+      "analysis": {
+        "chars": 354,
+        "words": 58,
+        "alphabetic_ratio": 0.749,
+        "polish_char_count": 14,
+        "repeated_4grams": 3,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    }
+  ],
+  "samples_15k": [
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "expected": "Krótka polska kontynuacja zdania, najlepiej encyklopedyczna lub opisowa.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260531,
+      "prompt": "Warszawa to",
+      "full_text": "Warszawa to nie tylko wspólny element. Na przykład: „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” (Strata”) – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata",
+      "new_text": "nie tylko wspólny element. Na przykład: „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” (Strata”) – „Strata” – „Strata” – „Strata” – „Strata” – „Strata” – „Strata",
+      "duration_seconds": 9.31,
+      "new_tokens": 120,
+      "tokens_per_second": 12.89,
+      "analysis": {
+        "chars": 244,
+        "words": 25,
+        "alphabetic_ratio": 0.598,
+        "polish_char_count": 2,
+        "repeated_4grams": 15,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "expected": "Spójne polskie zdanie lub akapit bez forumowego tonu.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260532,
+      "prompt": "Polska jest",
+      "full_text": "Polska jest jedną z głównych ośrodków turystycznych – jest częścią naszego kraju, a także w kraju. W Polsce jest to najliczniej odwiedzanych turystów na świecie. W Polsce w Polsce w okolicach Polski znajduje się schronisko PTTK „Życie”. W latach 2009–2012 na obszarze Polski jest to miejsce wypoczynku dla turystów z Polski. W Polsce w ramach „Biuletynu Przemysłu” (w Polsce) oraz „Życie” (w Polsce) znajduje się muzeum „Humanistyczny” (w Polsce). W latach 2013–2012 odsłonięty został pomnik Jana Pawła",
+      "new_text": "jedną z głównych ośrodków turystycznych – jest częścią naszego kraju, a także w kraju. W Polsce jest to najliczniej odwiedzanych turystów na świecie. W Polsce w Polsce w okolicach Polski znajduje się schronisko PTTK „Życie”. W latach 2009–2012 na obszarze Polski jest to miejsce wypoczynku dla turystów z Polski. W Polsce w ramach „Biuletynu Przemysłu” (w Polsce) oraz „Życie” (w Polsce) znajduje się muzeum „Humanistyczny” (w Polsce). W latach 2013–2012 odsłonięty został pomnik Jana Pawła",
+      "duration_seconds": 9.352,
+      "new_tokens": 120,
+      "tokens_per_second": 12.83,
+      "analysis": {
+        "chars": 490,
+        "words": 76,
+        "alphabetic_ratio": 0.769,
+        "polish_char_count": 21,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "expected": "Prosty tekst edukacyjny, bez udawania asystenta.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260533,
+      "prompt": "W fizyce energia",
+      "full_text": "W fizyce energia fizyczna jest bardzo skuteczna, gdyż w przypadku promieniowania elektromagnetycznego, który może być zastosowany przez elektromagnetyzm w tym samym czasie, gdzie jest bardzo skuteczny, a w przypadku promieniowania elektromagnetycznego, w tym promieniowanie elektromagnetyczne (magnetyzm) może być określona na określony czas transformacji, gdyż w pewnym sensie promieniowanie elektromagnetyczne jest bardzo przydatne w czasie transformacji. Zjawisko promieniowania elektromagnetycznego może być też efektem transformacji, gdyż promieniowanie elektroma",
+      "new_text": "fizyczna jest bardzo skuteczna, gdyż w przypadku promieniowania elektromagnetycznego, który może być zastosowany przez elektromagnetyzm w tym samym czasie, gdzie jest bardzo skuteczny, a w przypadku promieniowania elektromagnetycznego, w tym promieniowanie elektromagnetyczne (magnetyzm) może być określona na określony czas transformacji, gdyż w pewnym sensie promieniowanie elektromagnetyczne jest bardzo przydatne w czasie transformacji. Zjawisko promieniowania elektromagnetycznego może być też efektem transformacji, gdyż promieniowanie elektroma",
+      "duration_seconds": 10.595,
+      "new_tokens": 120,
+      "tokens_per_second": 11.33,
+      "analysis": {
+        "chars": 551,
+        "words": 63,
+        "alphabetic_ratio": 0.869,
+        "polish_char_count": 13,
+        "repeated_4grams": 1,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "expected": "Definicyjna kontynuacja w języku polskim.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260534,
+      "prompt": "Sztuczna inteligencja jest",
+      "full_text": "Sztuczna inteligencja jest zrównowana do depresji, a także poprzez ich rozbudowę w kierunku rzeki. Jest to sposób, w którym woda jest w stanie wody. W ten sposób woda będzie w stanie przekwalifikowana do wody, a woda jest w stanie utrzymać się w domu. W tym celu woda staje się w stanie odtworzyć, a woda będzie w stanie przekwalifikowana do wody. W celu ochrony zdrowia, woda staje się miejscem, gdzie woda staje się bardziej wilgotna. Z uwagi na na duże zanieczyszczenia wody, woda staje się bardziej niebezpieczna. W tym przypadku woda może u",
+      "new_text": "zrównowana do depresji, a także poprzez ich rozbudowę w kierunku rzeki. Jest to sposób, w którym woda jest w stanie wody. W ten sposób woda będzie w stanie przekwalifikowana do wody, a woda jest w stanie utrzymać się w domu. W tym celu woda staje się w stanie odtworzyć, a woda będzie w stanie przekwalifikowana do wody. W celu ochrony zdrowia, woda staje się miejscem, gdzie woda staje się bardziej wilgotna. Z uwagi na na duże zanieczyszczenia wody, woda staje się bardziej niebezpieczna. W tym przypadku woda może u",
+      "duration_seconds": 8.646,
+      "new_tokens": 120,
+      "tokens_per_second": 13.88,
+      "analysis": {
+        "chars": 518,
+        "words": 89,
+        "alphabetic_ratio": 0.805,
+        "polish_char_count": 17,
+        "repeated_4grams": 6,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "expected": "Lista lub opis elementów roweru, składnia powinna być sensowna.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260535,
+      "prompt": "Rower składa się z",
+      "full_text": "Rower składa się z: Zbiornik – BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, B",
+      "new_text": ": Zbiornik – BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, BB, B",
+      "duration_seconds": 10.53,
+      "new_tokens": 120,
+      "tokens_per_second": 11.4,
+      "analysis": {
+        "chars": 166,
+        "words": 40,
+        "alphabetic_ratio": 0.512,
+        "polish_char_count": 0,
+        "repeated_4grams": 34,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "expected": "Spójna kontynuacja bez losowych dat, linków, menu ani SEO.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260536,
+      "prompt": "Według najnowszych danych",
+      "full_text": "Według najnowszych danych na terenie gminy znajduje się 5 obiektów zabytkowych. Na terenie gminy znajduje się 5 kapliczek. Na terenie gminy znajduje się kapliczka z końca XIX w. oraz kapliczka z XIX w. Łąckowice (niem. Schwarzwalde) – wieś w Polsce położona w województwie dolnośląskim, w powiecie kłodzkim, w gminie Kłodzko. Podział administracyjny W latach 1975–1998 miejscowość administracyjnie należała do województwa wrocławskiego. Nazwa Nazwa miejscowości wywodzi się od \"Ründe\", co oznacza „Ründe”. Przynależność administracyjna W latach 1975–1998 miejscowość administracyjnie należała",
+      "new_text": "na terenie gminy znajduje się 5 obiektów zabytkowych. Na terenie gminy znajduje się 5 kapliczek. Na terenie gminy znajduje się kapliczka z końca XIX w. oraz kapliczka z XIX w. Łąckowice (niem. Schwarzwalde) – wieś w Polsce położona w województwie dolnośląskim, w powiecie kłodzkim, w gminie Kłodzko. Podział administracyjny W latach 1975–1998 miejscowość administracyjnie należała do województwa wrocławskiego. Nazwa Nazwa miejscowości wywodzi się od \"Ründe\", co oznacza „Ründe”. Przynależność administracyjna W latach 1975–1998 miejscowość administracyjnie należała",
+      "duration_seconds": 9.2,
+      "new_tokens": 120,
+      "tokens_per_second": 13.04,
+      "analysis": {
+        "chars": 566,
+        "words": 77,
+        "alphabetic_ratio": 0.8,
+        "polish_char_count": 31,
+        "repeated_4grams": 9,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach",
+          "województwa",
+          "powiecie",
+          "gminie"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "expected": "Kontynuacja zdania bez dryfu w bełkot lub powtarzanie.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260537,
+      "prompt": "Najważniejszym problemem tego projektu jest",
+      "full_text": "Najważniejszym problemem tego projektu jest zwiększenie poziomu bezpieczeństwa w zakresie bezpieczeństwa i bezpieczeństwa. W tym celu, w tym celu, należy zwrócić uwagę na możliwość, by zapewnić bezpieczeństwo i bezpieczeństwo. Jednakże, gdy koszty transportu nie mogą się upewnić, że w przypadku zagrożenia w zakresie bezpieczeństwa, może zostać osiągnięty koszt inwestycji, a także koszty budowy. Property, property, property, property, property, property, property, property, property, property, property, property, property, property, pro",
+      "new_text": "zwiększenie poziomu bezpieczeństwa w zakresie bezpieczeństwa i bezpieczeństwa. W tym celu, w tym celu, należy zwrócić uwagę na możliwość, by zapewnić bezpieczeństwo i bezpieczeństwo. Jednakże, gdy koszty transportu nie mogą się upewnić, że w przypadku zagrożenia w zakresie bezpieczeństwa, może zostać osiągnięty koszt inwestycji, a także koszty budowy. Property, property, property, property, property, property, property, property, property, property, property, property, property, property, pro",
+      "duration_seconds": 10.97,
+      "new_tokens": 120,
+      "tokens_per_second": 10.94,
+      "analysis": {
+        "chars": 497,
+        "words": 63,
+        "alphabetic_ratio": 0.827,
+        "polish_char_count": 26,
+        "repeated_4grams": 10,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "expected": "Proste wyjaśnienie lub kontynuacja definicji.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260538,
+      "prompt": "Uczenie maszynowe polega na",
+      "full_text": "Uczenie maszynowe polega na przeciągu kolejnych maszyn w celu uzyskania odpowiedniej mocy w zakresie pojemności, co pozwala na przeciągu kolejnych maszyn. Zasilanie paliwa i przeciągu pojazdów, które w trakcie przeciągu pojazdów, mogą być poddawane procesowi przeciągu. Zasilanie paliwa i przeciągu elementów, które w celu zwiększenia pojemności maszyny w celu zwiększenia pojemności maszyny w celu zwiększenia mocy naprężenia. Zasilanie paliwa i przeciągu w celu zwiększenia mocy naprężenia powietrza do maksymalnego ciśnienia. Zasilanie paliwa i przeciągu z paliwa i prze",
+      "new_text": "przeciągu kolejnych maszyn w celu uzyskania odpowiedniej mocy w zakresie pojemności, co pozwala na przeciągu kolejnych maszyn. Zasilanie paliwa i przeciągu pojazdów, które w trakcie przeciągu pojazdów, mogą być poddawane procesowi przeciągu. Zasilanie paliwa i przeciągu elementów, które w celu zwiększenia pojemności maszyny w celu zwiększenia pojemności maszyny w celu zwiększenia mocy naprężenia. Zasilanie paliwa i przeciągu w celu zwiększenia mocy naprężenia powietrza do maksymalnego ciśnienia. Zasilanie paliwa i przeciągu z paliwa i prze",
+      "duration_seconds": 10.059,
+      "new_tokens": 120,
+      "tokens_per_second": 11.93,
+      "analysis": {
+        "chars": 545,
+        "words": 74,
+        "alphabetic_ratio": 0.851,
+        "polish_char_count": 27,
+        "repeated_4grams": 10,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "expected": "Encyklopedyczny lub narracyjny tekst historyczny.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260539,
+      "prompt": "W średniowieczu",
+      "full_text": "W średniowieczu był częścią Imperium Osmańskiego, a następnie w latach 1492–1495 w pobliżu Palestyny. W 1597 roku opat opat opactwa w Palestynie wybudował kościół św. Stanisława Biskupa i św. Stanisława Biskupa z 1599 roku. Zakończenie budowy kościoła w Palestynie odbudowano w latach 1595–1595 przez Jana z Palestyny. W latach 1595–1595 miasto było miejscem utrwalenia przemysłu, przemysłu i techniki. W 1595 roku miasto stało się stolicą Królestwa Prus, a w",
+      "new_text": "był częścią Imperium Osmańskiego, a następnie w latach 1492–1495 w pobliżu Palestyny. W 1597 roku opat opat opactwa w Palestynie wybudował kościół św. Stanisława Biskupa i św. Stanisława Biskupa z 1599 roku. Zakończenie budowy kościoła w Palestynie odbudowano w latach 1595–1595 przez Jana z Palestyny. W latach 1595–1595 miasto było miejscem utrwalenia przemysłu, przemysłu i techniki. W 1595 roku miasto stało się stolicą Królestwa Prus, a w",
+      "duration_seconds": 8.558,
+      "new_tokens": 120,
+      "tokens_per_second": 14.02,
+      "analysis": {
+        "chars": 443,
+        "words": 70,
+        "alphabetic_ratio": 0.743,
+        "polish_char_count": 25,
+        "repeated_4grams": 1,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "expected": "Spójna kontynuacja tekstu naukowego lub opisowego.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260540,
+      "prompt": "Na początku eksperymentu",
+      "full_text": "Na początku eksperymentu, w celu zwiększenia kosztów, zwiększania kosztów, a także odciążenia kosztów. W przypadku wystąpienia problemów, gdy przy produkcji, w przypadku zastosowania, a następnie zmiana kosztów, wytrącania kosztów, jest możliwa. W przypadku uszkodzenia sytuacji, gdy w przypadku awarii, może być możliwa zmiana kosztów, a nawet przy zachowaniu kosztów, a także obniżenia kosztów. W przypadku awarii, w przypadku awarii, w przypadku awarii, nie jest zbyt niska. Dlatego też, gdy awaria jest możliwa do zmniejszenia kosztów, może być możliwa do zwiększenia",
+      "new_text": ", w celu zwiększenia kosztów, zwiększania kosztów, a także odciążenia kosztów. W przypadku wystąpienia problemów, gdy przy produkcji, w przypadku zastosowania, a następnie zmiana kosztów, wytrącania kosztów, jest możliwa. W przypadku uszkodzenia sytuacji, gdy w przypadku awarii, może być możliwa zmiana kosztów, a nawet przy zachowaniu kosztów, a także obniżenia kosztów. W przypadku awarii, w przypadku awarii, w przypadku awarii, nie jest zbyt niska. Dlatego też, gdy awaria jest możliwa do zmniejszenia kosztów, może być możliwa do zwiększenia",
+      "duration_seconds": 9.754,
+      "new_tokens": 120,
+      "tokens_per_second": 12.3,
+      "analysis": {
+        "chars": 547,
+        "words": 77,
+        "alphabetic_ratio": 0.821,
+        "polish_char_count": 30,
+        "repeated_4grams": 3,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "expected": "Kontynuacja bez widocznej pętli fraz.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260541,
+      "prompt": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ",
+      "full_text": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ nie może zostać wysłany do Polski. Na przykład w tej sprawie, że w Polsce nie ma już nic wspólnego z tym, że jest on bardzo niebezpieczny. W Polsce i w Polsce – w latach 80. XX wieku w Polsce, a także w Polsce, gdzie w ostatnich latach – na Węgrzech, gdzie w latach 80. XX wieku, w Polsce – po II wojnie światowej – w latach 90. XX wieku, kiedy to zaczęło się odbudować w Polsce. Od początku lat 90. XX wieku, kiedy to w Warszawie i Warszawie, w latach 90. XX wieku władze PRL przejęły Polskę, prze",
+      "new_text": "nie może zostać wysłany do Polski. Na przykład w tej sprawie, że w Polsce nie ma już nic wspólnego z tym, że jest on bardzo niebezpieczny. W Polsce i w Polsce – w latach 80. XX wieku w Polsce, a także w Polsce, gdzie w ostatnich latach – na Węgrzech, gdzie w latach 80. XX wieku, w Polsce – po II wojnie światowej – w latach 90. XX wieku, kiedy to zaczęło się odbudować w Polsce. Od początku lat 90. XX wieku, kiedy to w Warszawie i Warszawie, w latach 90. XX wieku władze PRL przejęły Polskę, prze",
+      "duration_seconds": 10.691,
+      "new_tokens": 120,
+      "tokens_per_second": 11.22,
+      "analysis": {
+        "chars": 498,
+        "words": 94,
+        "alphabetic_ratio": 0.741,
+        "polish_char_count": 20,
+        "repeated_4grams": 8,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "expected": "Może kontynuować, ale bez usernames, dat postów, HTML i śmieci forum.",
+      "preset": "conservative",
+      "settings": {
+        "temperature": 0.6,
+        "top_k": 30,
+        "max_new_tokens": 120
+      },
+      "seed": 20260542,
+      "prompt": "Komentarze użytkowników wskazują, że",
+      "full_text": "Komentarze użytkowników wskazują, że nie jest to możliwe, gdyż w przypadku braku informacji na temat tego, czy nie będzie wymagane. W przypadku, gdy nie ma takiej informacji, to nie musi się dotrzeć do komputera. W takim wypadku należy złożyć dane do użytkownika, lub też użyć go do klienta. W przypadku, gdy nie ma takiej informacji, należy pamiętać o tym, że klient może mieć bardzo dobre wyniki. W przypadku, gdy klient może pracować z klientem, warto wybrać się na stronie internetowej lub na stronie internetowej. Przykładowo, w którym klient może nam się dowiedzieć, czy klient może pracować z klientem, czy też skorzystać",
+      "new_text": "nie jest to możliwe, gdyż w przypadku braku informacji na temat tego, czy nie będzie wymagane. W przypadku, gdy nie ma takiej informacji, to nie musi się dotrzeć do komputera. W takim wypadku należy złożyć dane do użytkownika, lub też użyć go do klienta. W przypadku, gdy nie ma takiej informacji, należy pamiętać o tym, że klient może mieć bardzo dobre wyniki. W przypadku, gdy klient może pracować z klientem, warto wybrać się na stronie internetowej lub na stronie internetowej. Przykładowo, w którym klient może nam się dowiedzieć, czy klient może pracować z klientem, czy też skorzystać",
+      "duration_seconds": 8.957,
+      "new_tokens": 120,
+      "tokens_per_second": 13.4,
+      "analysis": {
+        "chars": 591,
+        "words": 97,
+        "alphabetic_ratio": 0.807,
+        "polish_char_count": 32,
+        "repeated_4grams": 6,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "expected": "Krótka polska kontynuacja zdania, najlepiej encyklopedyczna lub opisowa.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260531,
+      "prompt": "Warszawa to",
+      "full_text": "Warszawa to nie do końca nielegalne w dużej mierze. Otóż nie jest ona dostępna na terenie obecnego miasta. W dzisiejszym regionie zachowały się dwa niewielkie, duże, bliskość ludności pochodzi z XVI wieku. Miasto stanowi ośrodek samorządu terytorialnego. W latach 202–276 miasto ma charakter przemysłowy. Miasto posiadało własny rynek. W końcu XIX wieku miasto stało się ośrodkiem przemysłowym, a w 1872 roku do miasta zaczęto przekształcać w jedną z ważniejszych ośrodków przemysłu w regionie. W 1882 roku wieś liczyła 332 mieszkańców. W XIX wieku w mieście",
+      "new_text": "nie do końca nielegalne w dużej mierze. Otóż nie jest ona dostępna na terenie obecnego miasta. W dzisiejszym regionie zachowały się dwa niewielkie, duże, bliskość ludności pochodzi z XVI wieku. Miasto stanowi ośrodek samorządu terytorialnego. W latach 202–276 miasto ma charakter przemysłowy. Miasto posiadało własny rynek. W końcu XIX wieku miasto stało się ośrodkiem przemysłowym, a w 1872 roku do miasta zaczęto przekształcać w jedną z ważniejszych ośrodków przemysłu w regionie. W 1882 roku wieś liczyła 332 mieszkańców. W XIX wieku w mieście",
+      "duration_seconds": 9.494,
+      "new_tokens": 120,
+      "tokens_per_second": 12.64,
+      "analysis": {
+        "chars": 546,
+        "words": 84,
+        "alphabetic_ratio": 0.797,
+        "polish_char_count": 34,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "expected": "Spójne polskie zdanie lub akapit bez forumowego tonu.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260532,
+      "prompt": "Polska jest",
+      "full_text": "Polska jest jedną z głównych głównych na świecie placówek naukowy na świecie, które można oglądać na świecie. W 2022 roku Instytut Nauk Ekonomicznych przekazał Fundacji na rzecz Nauki, Nauki i Nauki w Warszawie, aby uzyskać przy okazji 420 miejsc, i instytucji naukowych i naukowych na całym świecie. W 2022 roku Instytut Nauk Ekonomicznych przekazał Instytut Nauk Ekonomicznych wraz zbiorem Uniwersytetu Warszawskiego – Instytut Nauk Ekonomicznych (CK) oraz Instytut Nauk Ekonomicznych (AUA). Historia Wydział Nauk Ekonomicznych (IFI) – Instytut Nauk Ekonomicznych (IFI) – Instytut Nauk Ekonomicznych (",
+      "new_text": "jedną z głównych głównych na świecie placówek naukowy na świecie, które można oglądać na świecie. W 2022 roku Instytut Nauk Ekonomicznych przekazał Fundacji na rzecz Nauki, Nauki i Nauki w Warszawie, aby uzyskać przy okazji 420 miejsc, i instytucji naukowych i naukowych na całym świecie. W 2022 roku Instytut Nauk Ekonomicznych przekazał Instytut Nauk Ekonomicznych wraz zbiorem Uniwersytetu Warszawskiego – Instytut Nauk Ekonomicznych (CK) oraz Instytut Nauk Ekonomicznych (AUA). Historia Wydział Nauk Ekonomicznych (IFI) – Instytut Nauk Ekonomicznych (IFI) – Instytut Nauk Ekonomicznych (",
+      "duration_seconds": 8.309,
+      "new_tokens": 120,
+      "tokens_per_second": 14.44,
+      "analysis": {
+        "chars": 591,
+        "words": 80,
+        "alphabetic_ratio": 0.809,
+        "polish_char_count": 19,
+        "repeated_4grams": 8,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "expected": "Prosty tekst edukacyjny, bez udawania asystenta.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260533,
+      "prompt": "W fizyce energia",
+      "full_text": "W fizyce energia fizyczna jest bardzo skuteczna, jeśli ma ono być bardzo łatwo poznawalne, a co najmniej jedna z tych substancji nie ma, ani jedna z nich, że istnieje w ogóle jedna, jeśli ma onaby duże znaczenie. Jednakże energia elektryczna jest również korzystna, aby utrzymać się w tej sytuacji, jeśli temperatura, w którym temperatura, w której temperatura jest bardziej stabilna, to ciśnienie, ale jest bardzo silne, co jest szczególnie ważne dla temperatury, by wyparć inne zjawiska. Przykładowo, energia elektryczna jest uzależniona, a energia elektryczna",
+      "new_text": "fizyczna jest bardzo skuteczna, jeśli ma ono być bardzo łatwo poznawalne, a co najmniej jedna z tych substancji nie ma, ani jedna z nich, że istnieje w ogóle jedna, jeśli ma onaby duże znaczenie. Jednakże energia elektryczna jest również korzystna, aby utrzymać się w tej sytuacji, jeśli temperatura, w którym temperatura, w której temperatura jest bardziej stabilna, to ciśnienie, ale jest bardzo silne, co jest szczególnie ważne dla temperatury, by wyparć inne zjawiska. Przykładowo, energia elektryczna jest uzależniona, a energia elektryczna",
+      "duration_seconds": 11.458,
+      "new_tokens": 120,
+      "tokens_per_second": 10.47,
+      "analysis": {
+        "chars": 545,
+        "words": 81,
+        "alphabetic_ratio": 0.822,
+        "polish_char_count": 21,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "expected": "Definicyjna kontynuacja w języku polskim.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260534,
+      "prompt": "Sztuczna inteligencja jest",
+      "full_text": "Sztuczna inteligencja jest zrównowana do depresji, a także poprzez ich rozprowadzenie w kierunku doliny potoku. Z kolei z czasem zaczęto ją stosować już podczas depresji w warunkach domowych. W Polsce masarstwo w Polsce spowodowało, że w Europie około 1800 (w tym w latach 1910–1915) zaczęło używać określenia „nie” (np. „nie” lub „nie”). Przeprowadzono więc układy z górników, których podstawą była depresja na tle zanieczyszczeń powietrza, a nawet zanieczyszczeń atmosferycznych. W latach 1815–1819",
+      "new_text": "zrównowana do depresji, a także poprzez ich rozprowadzenie w kierunku doliny potoku. Z kolei z czasem zaczęto ją stosować już podczas depresji w warunkach domowych. W Polsce masarstwo w Polsce spowodowało, że w Europie około 1800 (w tym w latach 1910–1915) zaczęło używać określenia „nie” (np. „nie” lub „nie”). Przeprowadzono więc układy z górników, których podstawą była depresja na tle zanieczyszczeń powietrza, a nawet zanieczyszczeń atmosferycznych. W latach 1815–1819",
+      "duration_seconds": 10.332,
+      "new_tokens": 120,
+      "tokens_per_second": 11.61,
+      "analysis": {
+        "chars": 473,
+        "words": 71,
+        "alphabetic_ratio": 0.77,
+        "polish_char_count": 23,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "expected": "Lista lub opis elementów roweru, składnia powinna być sensowna.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260535,
+      "prompt": "Rower składa się z",
+      "full_text": "Rower składa się z: Zjazd autobusia TB, ul. Roweckiego, ul. W. Wolności ul. Sienkiewicza, ul. Sienkiewicza, ul. Sienkiewicza, ul. Zarębska ul. M. Wolności ul. Sienkiewicza, ul. Sienkiewicza, ul. A. Zarębska ul. Sienkiewicza, ul. Sienkiewicza, ul. M. Sienkiewicza, ul. Sienkiewicza, ul. Sienkiewicza, ul. A. Matejki ul. Sienkiewicza, ul. Sienkiewicza",
+      "new_text": ": Zjazd autobusia TB, ul. Roweckiego, ul. W. Wolności ul. Sienkiewicza, ul. Sienkiewicza, ul. Sienkiewicza, ul. Zarębska ul. M. Wolności ul. Sienkiewicza, ul. Sienkiewicza, ul. A. Zarębska ul. Sienkiewicza, ul. Sienkiewicza, ul. M. Sienkiewicza, ul. Sienkiewicza, ul. Sienkiewicza, ul. A. Matejki ul. Sienkiewicza, ul. Sienkiewicza",
+      "duration_seconds": 9.399,
+      "new_tokens": 120,
+      "tokens_per_second": 12.77,
+      "analysis": {
+        "chars": 331,
+        "words": 44,
+        "alphabetic_ratio": 0.755,
+        "polish_char_count": 4,
+        "repeated_4grams": 12,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "expected": "Spójna kontynuacja bez losowych dat, linków, menu ani SEO.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260536,
+      "prompt": "Według najnowszych danych",
+      "full_text": "Według najnowszych danych z 2009 roku wieś liczyła 526 mieszkańców, a liczba mieszkańców wynosiła 1034 mieszkańców. Miśowice (dawniej Miświzna) – wieś w Polsce położona w województwie dolnośląskim, w powiecie polkowickim, w gminie Dąbrówka. Podział administracyjny W latach 1975–1998 miejscowość administracyjnie należała do województwa wałbrzyskiego. Położenie Miświzna położona jest na wysokości około 1080 m n.p.m., położona jest na południowo-zachodniej części gminy Dąbrówka. Nazwa Nazwa wywodzi się od słowa miświsko-chłonisko-chło",
+      "new_text": "z 2009 roku wieś liczyła 526 mieszkańców, a liczba mieszkańców wynosiła 1034 mieszkańców. Miśowice (dawniej Miświzna) – wieś w Polsce położona w województwie dolnośląskim, w powiecie polkowickim, w gminie Dąbrówka. Podział administracyjny W latach 1975–1998 miejscowość administracyjnie należała do województwa wałbrzyskiego. Położenie Miświzna położona jest na wysokości około 1080 m n.p.m., położona jest na południowo-zachodniej części gminy Dąbrówka. Nazwa Nazwa wywodzi się od słowa miświsko-chłonisko-chło",
+      "duration_seconds": 9.624,
+      "new_tokens": 120,
+      "tokens_per_second": 12.47,
+      "analysis": {
+        "chars": 511,
+        "words": 70,
+        "alphabetic_ratio": 0.795,
+        "polish_char_count": 45,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach",
+          "województwa",
+          "powiecie",
+          "gminie"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "expected": "Kontynuacja zdania bez dryfu w bełkot lub powtarzanie.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260537,
+      "prompt": "Najważniejszym problemem tego projektu jest",
+      "full_text": "Najważniejszym problemem tego projektu jest zwiększenie poziomu bezpieczeństwa w zakresie bezpieczeństwa i bezpieczeństwa. W 2010 roku, po ukończeniu i odbudowę nowego budynku,,, dobudowano salę konferencyjną, a także poszerzono na nowe skrzydło budynków. Gwizdowość – stała fizyczna analiza fizyczna, która jest jednym z najważniejszych czynników, gdzie np. odwzorientowana, przez czy też nie może być rozumiana jako czynność, czyli pojęcie równowagi, lecz także uogólniona. Jej głównym celem jest umożliwienie doskonałego przeładzania, w którym ma charakter bezwzględny, a także",
+      "new_text": "zwiększenie poziomu bezpieczeństwa w zakresie bezpieczeństwa i bezpieczeństwa. W 2010 roku, po ukończeniu i odbudowę nowego budynku,,, dobudowano salę konferencyjną, a także poszerzono na nowe skrzydło budynków. Gwizdowość – stała fizyczna analiza fizyczna, która jest jednym z najważniejszych czynników, gdzie np. odwzorientowana, przez czy też nie może być rozumiana jako czynność, czyli pojęcie równowagi, lecz także uogólniona. Jej głównym celem jest umożliwienie doskonałego przeładzania, w którym ma charakter bezwzględny, a także",
+      "duration_seconds": 10.614,
+      "new_tokens": 120,
+      "tokens_per_second": 11.31,
+      "analysis": {
+        "chars": 536,
+        "words": 70,
+        "alphabetic_ratio": 0.83,
+        "polish_char_count": 34,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "expected": "Proste wyjaśnienie lub kontynuacja definicji.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260538,
+      "prompt": "Uczenie maszynowe polega na",
+      "full_text": "Uczenie maszynowe polega na przeciągu kolejnych dwuwydziałów podwozia. W związku z tym uruchamianie produkcji był spowodowane silnikami. W czasie II wojny światowej wyprodukowano trzy pojazdy pasażerskie, a także czterowieżowe. W 1950 roku wyprodukowano łącznie 6 sztuk samochodów. Samoloty były użytkowane przez 3 armaty maszynowe. W 1955 roku wyprodukowano 4 sztuk, a w 1969 roku wprowadzono do uzbrojenia. W 1961 roku wyprodukowano 9 pojazdów osobowych. W 1969 roku wyprodukowanych w Polsce wyprodukowano 2 sztuk samochodów osobowych serii MDK. W latach",
+      "new_text": "przeciągu kolejnych dwuwydziałów podwozia. W związku z tym uruchamianie produkcji był spowodowane silnikami. W czasie II wojny światowej wyprodukowano trzy pojazdy pasażerskie, a także czterowieżowe. W 1950 roku wyprodukowano łącznie 6 sztuk samochodów. Samoloty były użytkowane przez 3 armaty maszynowe. W 1955 roku wyprodukowano 4 sztuk, a w 1969 roku wprowadzono do uzbrojenia. W 1961 roku wyprodukowano 9 pojazdów osobowych. W 1969 roku wyprodukowanych w Polsce wyprodukowano 2 sztuk samochodów osobowych serii MDK. W latach",
+      "duration_seconds": 8.445,
+      "new_tokens": 120,
+      "tokens_per_second": 14.21,
+      "analysis": {
+        "chars": 528,
+        "words": 75,
+        "alphabetic_ratio": 0.794,
+        "polish_char_count": 16,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "expected": "Encyklopedyczny lub narracyjny tekst historyczny.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260539,
+      "prompt": "W średniowieczu",
+      "full_text": "W średniowieczu był częścią Imperium Osmańskiego, a potem także jego terytorium, jak również w Imperium Osmańskim. Przez krótki czas rządy Osmanów przeszły na tereny dawnych Osmańskich, których głównym celem stało się opactwo Akwitanii, które w 1792 roku zajęły Zakon Osmański. Na początku XIX wieku w Osmanach zaczęli tu zmieniać się wpływ na rozwój Osmańskich, co doprowadziło do upadku Osmańskiego. W 1827 roku w Osmanach w wyniku wojen napoleońskich, w mieście narastało duże znaczenie, a na",
+      "new_text": "był częścią Imperium Osmańskiego, a potem także jego terytorium, jak również w Imperium Osmańskim. Przez krótki czas rządy Osmanów przeszły na tereny dawnych Osmańskich, których głównym celem stało się opactwo Akwitanii, które w 1792 roku zajęły Zakon Osmański. Na początku XIX wieku w Osmanach zaczęli tu zmieniać się wpływ na rozwój Osmańskich, co doprowadziło do upadku Osmańskiego. W 1827 roku w Osmanach w wyniku wojen napoleońskich, w mieście narastało duże znaczenie, a na",
+      "duration_seconds": 10.189,
+      "new_tokens": 120,
+      "tokens_per_second": 11.78,
+      "analysis": {
+        "chars": 479,
+        "words": 73,
+        "alphabetic_ratio": 0.812,
+        "polish_char_count": 36,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "expected": "Spójna kontynuacja tekstu naukowego lub opisowego.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260540,
+      "prompt": "Na początku eksperymentu",
+      "full_text": "Na początku eksperymentu, w programie „Imaginal Motor”. W trakcie eksperymentu, w ramach którego powstał silnik spalinowy. W latach 1972–1989 nastąpił eksplozję spalinową, w której zginęły dwie osoby. W latach 1973–1979 silnik spalinowy, co spowodowało, że awaria spalinowa zakończyła się eksplozją silnika, jednak nie została podjęta. W tym samym roku pojazd był napędzany silnikami spalinowymi, które zamontowały w dużej odległości około 20 m i było rozdzielone. Przykładowo silnik spalinowy, który w tym samym",
+      "new_text": ", w programie „Imaginal Motor”. W trakcie eksperymentu, w ramach którego powstał silnik spalinowy. W latach 1972–1989 nastąpił eksplozję spalinową, w której zginęły dwie osoby. W latach 1973–1979 silnik spalinowy, co spowodowało, że awaria spalinowa zakończyła się eksplozją silnika, jednak nie została podjęta. W tym samym roku pojazd był napędzany silnikami spalinowymi, które zamontowały w dużej odległości około 20 m i było rozdzielone. Przykładowo silnik spalinowy, który w tym samym",
+      "duration_seconds": 9.746,
+      "new_tokens": 120,
+      "tokens_per_second": 12.31,
+      "analysis": {
+        "chars": 488,
+        "words": 71,
+        "alphabetic_ratio": 0.787,
+        "polish_char_count": 28,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "expected": "Kontynuacja bez widocznej pętli fraz.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260541,
+      "prompt": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ",
+      "full_text": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ może zostać napisane w Biblii. Na przykład w Ameniu i Science Fiction, to Ameniusz, a na tym ostatnim tłumaczeniu jest ukazany Ameniusz. Błąd w SGGP (ang. Endless) – zespół ukrtupnych sond, które składają się z dwóch elementów: SGP (ang. shipple) – rekonstrukcji sond, sond, SGP (ang. shipple) – rekonstrukcji sond (ang. shipple)",
+      "new_text": "może zostać napisane w Biblii. Na przykład w Ameniu i Science Fiction, to Ameniusz, a na tym ostatnim tłumaczeniu jest ukazany Ameniusz. Błąd w SGGP (ang. Endless) – zespół ukrtupnych sond, które składają się z dwóch elementów: SGP (ang. shipple) – rekonstrukcji sond, sond, SGP (ang. shipple) – rekonstrukcji sond (ang. shipple)",
+      "duration_seconds": 11.14,
+      "new_tokens": 120,
+      "tokens_per_second": 10.77,
+      "analysis": {
+        "chars": 329,
+        "words": 49,
+        "alphabetic_ratio": 0.775,
+        "polish_char_count": 14,
+        "repeated_4grams": 2,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "expected": "Może kontynuować, ale bez usernames, dat postów, HTML i śmieci forum.",
+      "preset": "normal",
+      "settings": {
+        "temperature": 0.8,
+        "top_k": 40,
+        "max_new_tokens": 120
+      },
+      "seed": 20260542,
+      "prompt": "Komentarze użytkowników wskazują, że",
+      "full_text": "Komentarze użytkowników wskazują, że nie jest ona w stanie wyobrazić sobie tego, co będzie miało miejsce w ciągu ostatnich ostatnich kilku lat. W tym samym roku, po rozpoczęciu, władze, przemówiły list, o tym, że nie doszło już do porozumienia, ale już wkrótce potem, gdy na razie nie przyjęto, a na skutek, żeby ten przemówił się do Polski. W odpowiedzi na pytanie, czy zjednoczenie Polski pod wodzą polskiego na terytorium Polski wystosowało do Polski list. Przy okazji umownie, w którym oświadczenie, że w Warszawie potwierdzono, że nie ma nic",
+      "new_text": "nie jest ona w stanie wyobrazić sobie tego, co będzie miało miejsce w ciągu ostatnich ostatnich kilku lat. W tym samym roku, po rozpoczęciu, władze, przemówiły list, o tym, że nie doszło już do porozumienia, ale już wkrótce potem, gdy na razie nie przyjęto, a na skutek, żeby ten przemówił się do Polski. W odpowiedzi na pytanie, czy zjednoczenie Polski pod wodzą polskiego na terytorium Polski wystosowało do Polski list. Przy okazji umownie, w którym oświadczenie, że w Warszawie potwierdzono, że nie ma nic",
+      "duration_seconds": 10.221,
+      "new_tokens": 120,
+      "tokens_per_second": 11.74,
+      "analysis": {
+        "chars": 509,
+        "words": 84,
+        "alphabetic_ratio": 0.804,
+        "polish_char_count": 24,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [
+          "odpowiedz"
+        ],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "expected": "Krótka polska kontynuacja zdania, najlepiej encyklopedyczna lub opisowa.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260531,
+      "prompt": "Warszawa to",
+      "full_text": "Warszawa to nie do końca nielegalne w dużej mierze. Otóż nie jest ona skomplikowana do podpisu, nie jest jej zdaniem możliwe. Ta jednak nie jest jedynym problemem, a nawet dlatego mamy już wiele rzeczy. Konserwator jest niezwłoczny, dlatego też za tym jest upragniony, a ujemny. Nie ma końca żadnych efektów. To właśnie to jednak nie wiadomo, czy nie jesteśmy w stanie się w stanie przepełnić. Z tego faktu, że nasz rząd nie będzie gotowy w sposób, a nawet, gdzie nie ma wymagań. Nie jest ono w stanie określi",
+      "new_text": "nie do końca nielegalne w dużej mierze. Otóż nie jest ona skomplikowana do podpisu, nie jest jej zdaniem możliwe. Ta jednak nie jest jedynym problemem, a nawet dlatego mamy już wiele rzeczy. Konserwator jest niezwłoczny, dlatego też za tym jest upragniony, a ujemny. Nie ma końca żadnych efektów. To właśnie to jednak nie wiadomo, czy nie jesteśmy w stanie się w stanie przepełnić. Z tego faktu, że nasz rząd nie będzie gotowy w sposób, a nawet, gdzie nie ma wymagań. Nie jest ono w stanie określi",
+      "duration_seconds": 8.997,
+      "new_tokens": 120,
+      "tokens_per_second": 13.34,
+      "analysis": {
+        "chars": 497,
+        "words": 86,
+        "alphabetic_ratio": 0.799,
+        "polish_char_count": 23,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "expected": "Spójne polskie zdanie lub akapit bez forumowego tonu.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260532,
+      "prompt": "Polska jest",
+      "full_text": "Polska jest jedną z postaci zaistniałej współpracy polsko-litewskiej, która jest dostępna dla polskiej telewizji telewizyjnej Sloss. Film ukazuje się na podstawie umowy międzynarodowej dla Polski w maju, aby uzyskać przy okazji oficjalnego przydział i wręczenie statuetki na wniosek władz państwowych. W Polsce, gdzie polskie Radio TVP, będzie realizowane po podpisaniu sprawozdania, oraz na koniec 2007 roku podpisanie porozumienia o współpracy z Euro-Narodem oraz wydaniu warszawskiego TVP (po raz pierwszy przysłowie TVP SA) TVP, TVP, TV oraz Telewizja Polsatu. Media",
+      "new_text": "jedną z postaci zaistniałej współpracy polsko-litewskiej, która jest dostępna dla polskiej telewizji telewizyjnej Sloss. Film ukazuje się na podstawie umowy międzynarodowej dla Polski w maju, aby uzyskać przy okazji oficjalnego przydział i wręczenie statuetki na wniosek władz państwowych. W Polsce, gdzie polskie Radio TVP, będzie realizowane po podpisaniu sprawozdania, oraz na koniec 2007 roku podpisanie porozumienia o współpracy z Euro-Narodem oraz wydaniu warszawskiego TVP (po raz pierwszy przysłowie TVP SA) TVP, TVP, TV oraz Telewizja Polsatu. Media",
+      "duration_seconds": 10.827,
+      "new_tokens": 120,
+      "tokens_per_second": 11.08,
+      "analysis": {
+        "chars": 558,
+        "words": 79,
+        "alphabetic_ratio": 0.832,
+        "polish_char_count": 17,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "expected": "Prosty tekst edukacyjny, bez udawania asystenta.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260533,
+      "prompt": "W fizyce energia",
+      "full_text": "W fizyce energia fizyczna jest bardzo skuteczna, jeśli ma ono prawo do swobodnego rozróżnienia. W fizyce fizycznej większość badanych związków chemicznych ma, że wielu związków chemicznych jest znacznie bardziej skomplikowana. Alternatywny alternatywny alternatywny alternatywny alternatywność algorytmu reakcji związana jest z tą definicjami reakcji. Alternatywny alternatywny alternatywny alternatywny alternatywny Alternatywny alternatywny alternatywny alternatywny alternatywny alterna",
+      "new_text": "fizyczna jest bardzo skuteczna, jeśli ma ono prawo do swobodnego rozróżnienia. W fizyce fizycznej większość badanych związków chemicznych ma, że wielu związków chemicznych jest znacznie bardziej skomplikowana. Alternatywny alternatywny alternatywny alternatywny alternatywność algorytmu reakcji związana jest z tą definicjami reakcji. Alternatywny alternatywny alternatywny alternatywny alternatywny Alternatywny alternatywny alternatywny alternatywny alternatywny alterna",
+      "duration_seconds": 9.751,
+      "new_tokens": 120,
+      "tokens_per_second": 12.31,
+      "analysis": {
+        "chars": 472,
+        "words": 51,
+        "alphabetic_ratio": 0.883,
+        "polish_char_count": 15,
+        "repeated_4grams": 7,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "expected": "Definicyjna kontynuacja w języku polskim.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260534,
+      "prompt": "Sztuczna inteligencja jest",
+      "full_text": "Sztuczna inteligencja jest zrównowana do destylacji ciała, który poprzez ich rozciągnąć w niewcześnie przy pomocy apetytu z zapału w temperaturze 10–15 °C. Występują wskutek zniszczenia atmosferycznych zapału napłonkowego, który nie jest wyeliminowany podczas destylacji kości, lub uszkodzonego zapału apetytu w głąb lub uderzeń. Bez względu na jej wzrost, po zachowaniu warstwy organicznej napada się na znaczną zmianę temperatury i uprawa uprawa wytrysku, powodując wywierającą na uwa",
+      "new_text": "zrównowana do destylacji ciała, który poprzez ich rozciągnąć w niewcześnie przy pomocy apetytu z zapału w temperaturze 10–15 °C. Występują wskutek zniszczenia atmosferycznych zapału napłonkowego, który nie jest wyeliminowany podczas destylacji kości, lub uszkodzonego zapału apetytu w głąb lub uderzeń. Bez względu na jej wzrost, po zachowaniu warstwy organicznej napada się na znaczną zmianę temperatury i uprawa uprawa wytrysku, powodując wywierającą na uwa",
+      "duration_seconds": 8.547,
+      "new_tokens": 120,
+      "tokens_per_second": 14.04,
+      "analysis": {
+        "chars": 459,
+        "words": 64,
+        "alphabetic_ratio": 0.837,
+        "polish_char_count": 25,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "expected": "Lista lub opis elementów roweru, składnia powinna być sensowna.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260535,
+      "prompt": "Rower składa się z",
+      "full_text": "Rower składa się z: ZOAP – TBAN - (GUT) w kierunku Starej Warty z ul. Sienkiewicza. - Uruchomiona w pobliżu: pl. Sienkiewicza (FAB) - BARAN - (DAM) W budynku: ul. Sienkiewicza (OAP) - A. Flimczyk (wester) - ul. Sienkiewicza (wester) - ul. Sienkiewicza, S. BW, S. B. BW, S. BW, Spytkiewicz-Brakowiak-Brakowiak -",
+      "new_text": ": ZOAP – TBAN - (GUT) w kierunku Starej Warty z ul. Sienkiewicza. - Uruchomiona w pobliżu: pl. Sienkiewicza (FAB) - BARAN - (DAM) W budynku: ul. Sienkiewicza (OAP) - A. Flimczyk (wester) - ul. Sienkiewicza (wester) - ul. Sienkiewicza, S. BW, S. B. BW, S. BW, Spytkiewicz-Brakowiak-Brakowiak -",
+      "duration_seconds": 9.808,
+      "new_tokens": 120,
+      "tokens_per_second": 12.23,
+      "analysis": {
+        "chars": 292,
+        "words": 41,
+        "alphabetic_ratio": 0.695,
+        "polish_char_count": 1,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "expected": "Spójna kontynuacja bez losowych dat, linków, menu ani SEO.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260536,
+      "prompt": "Według najnowszych danych",
+      "full_text": "Według najnowszych danych z 2009 roku wieś liczyła 526 mieszkańców, a liczba ludności wyniosła 432 osoby. Struktura lokalna Piramida wieku mieszkańców wsi Struktura religijna Kościół rzymskokatolicki: parafia pw. św. Wojciecha oraz drewniana dzwonnica rodu Stryjowskich z XIII wieku. W XIX i XX wieku w Skawiczach mieszkających było 357 domów. Na terenie miejscowości znajduje się cmentarz wojenny oraz cmentarz wojenny. Skawina – wieś w Polsce, położona w województwie wielkopolskim, w powiecie gnieźnieńskim, w gminie Balinek. Siedzibą rzymskokatolickiej",
+      "new_text": "z 2009 roku wieś liczyła 526 mieszkańców, a liczba ludności wyniosła 432 osoby. Struktura lokalna Piramida wieku mieszkańców wsi Struktura religijna Kościół rzymskokatolicki: parafia pw. św. Wojciecha oraz drewniana dzwonnica rodu Stryjowskich z XIII wieku. W XIX i XX wieku w Skawiczach mieszkających było 357 domów. Na terenie miejscowości znajduje się cmentarz wojenny oraz cmentarz wojenny. Skawina – wieś w Polsce, położona w województwie wielkopolskim, w powiecie gnieźnieńskim, w gminie Balinek. Siedzibą rzymskokatolickiej",
+      "duration_seconds": 11.012,
+      "new_tokens": 120,
+      "tokens_per_second": 10.9,
+      "analysis": {
+        "chars": 530,
+        "words": 72,
+        "alphabetic_ratio": 0.815,
+        "polish_char_count": 24,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "powiecie",
+          "gminie"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "expected": "Kontynuacja zdania bez dryfu w bełkot lub powtarzanie.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260537,
+      "prompt": "Najważniejszym problemem tego projektu jest",
+      "full_text": "Najważniejszym problemem tego projektu jest zwiększenie poziomu peryferycznego i zorientowanych na peryferyczne i udźwiglowanego przez inne systemy, które mają wpływ na ich rozwój. Libretto Concorporation (ang. Concorporation Concorporation Association – Libretto Concorporation) – zespół muzyczny założony przez Inc., aby założyć zespół COM – Deef, który po opuszczeniu zespołu CMI, Concorporation jest członkiem AC, gdzie członkowie AC nagrali kilka piosenek z nagrań. Album powstał w ramach programu Deef",
+      "new_text": "zwiększenie poziomu peryferycznego i zorientowanych na peryferyczne i udźwiglowanego przez inne systemy, które mają wpływ na ich rozwój. Libretto Concorporation (ang. Concorporation Concorporation Association – Libretto Concorporation) – zespół muzyczny założony przez Inc., aby założyć zespół COM – Deef, który po opuszczeniu zespołu CMI, Concorporation jest członkiem AC, gdzie członkowie AC nagrali kilka piosenek z nagrań. Album powstał w ramach programu Deef",
+      "duration_seconds": 9.643,
+      "new_tokens": 120,
+      "tokens_per_second": 12.44,
+      "analysis": {
+        "chars": 463,
+        "words": 59,
+        "alphabetic_ratio": 0.838,
+        "polish_char_count": 21,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "expected": "Proste wyjaśnienie lub kontynuacja definicji.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260538,
+      "prompt": "Uczenie maszynowe polega na",
+      "full_text": "Uczenie maszynowe polega na przeciągu kolejnych dwuwypaństwowych w trzech prototypach. Zadania przeciągu do poszczególnych prototypów są powszechne jako odprowadzanie nowych prototypów w kierunku zachodnim od góry z góry. Przykładowe wersje Układu Warszawskiego oraz Układu Warszawskiego oraz innych elementów oznaczone jest jako Zakłady Warszawskie, które domagają się przeciągu przeciągu przez prawobrzeżny system do budowy. Urządzenia Ministra Środowiska i Budownictwa zostały uwzględnione w PZN, lecz jako uzupełnienie systemu do realizacji projektu. W czasie wojny zdecydowanych było ich uży",
+      "new_text": "przeciągu kolejnych dwuwypaństwowych w trzech prototypach. Zadania przeciągu do poszczególnych prototypów są powszechne jako odprowadzanie nowych prototypów w kierunku zachodnim od góry z góry. Przykładowe wersje Układu Warszawskiego oraz Układu Warszawskiego oraz innych elementów oznaczone jest jako Zakłady Warszawskie, które domagają się przeciągu przeciągu przez prawobrzeżny system do budowy. Urządzenia Ministra Środowiska i Budownictwa zostały uwzględnione w PZN, lecz jako uzupełnienie systemu do realizacji projektu. W czasie wojny zdecydowanych było ich uży",
+      "duration_seconds": 10.087,
+      "new_tokens": 120,
+      "tokens_per_second": 11.9,
+      "analysis": {
+        "chars": 568,
+        "words": 72,
+        "alphabetic_ratio": 0.864,
+        "polish_char_count": 27,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "expected": "Encyklopedyczny lub narracyjny tekst historyczny.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260539,
+      "prompt": "W średniowieczu",
+      "full_text": "W średniowieczu był częścią Imperium Osmańskiego, a potem także jego terytorium, jak również w Imperium Osmańskim. Przez krótki czas miasto było głównym ośrodkiem kultury łużyckiej. W latach 894-102 miasto znajdowało się w granicach miasta. W 1595 roku miasto znajdowało się pod pretekstem administracyjnym Królestwa Polskiego. W 1779 roku miasto stało się stolicą Księstwa Warszawskiego, następnie Księstwa Moskiewskiego, a od 1740 roku w Królestwie Polskim. W 1816 roku po pożarze bolszewickiej w mieście nastąpił okres III, między wojska mo",
+      "new_text": "był częścią Imperium Osmańskiego, a potem także jego terytorium, jak również w Imperium Osmańskim. Przez krótki czas miasto było głównym ośrodkiem kultury łużyckiej. W latach 894-102 miasto znajdowało się w granicach miasta. W 1595 roku miasto znajdowało się pod pretekstem administracyjnym Królestwa Polskiego. W 1779 roku miasto stało się stolicą Księstwa Warszawskiego, następnie Księstwa Moskiewskiego, a od 1740 roku w Królestwie Polskim. W 1816 roku po pożarze bolszewickiej w mieście nastąpił okres III, między wojska mo",
+      "duration_seconds": 8.751,
+      "new_tokens": 120,
+      "tokens_per_second": 13.71,
+      "analysis": {
+        "chars": 527,
+        "words": 77,
+        "alphabetic_ratio": 0.795,
+        "polish_char_count": 33,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "expected": "Spójna kontynuacja tekstu naukowego lub opisowego.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260540,
+      "prompt": "Na początku eksperymentu",
+      "full_text": "Na początku eksperymentu, w programie „Imaginal Motor”. W sezonie 2008/2004, w ramach którego powstał magazyn „American” w ramach akcji „Panty Polska”; został wyemitowany przez firmę „Tino”. Po miesiącu jego działalności, w 2014 roku Polska wyemitowała nowe miejsce sprzedaży pierwszego „Gamesa”, która sprzedała 4 tys. egzemplarzy. Był to największa seria tego typu w Polsce; pierwsza „Złota” dostępna jest na kanale RC1, co oznacza „Imaginal Motor” oraz „Pogorzejka”. Obecnie w Polsce jest",
+      "new_text": ", w programie „Imaginal Motor”. W sezonie 2008/2004, w ramach którego powstał magazyn „American” w ramach akcji „Panty Polska”; został wyemitowany przez firmę „Tino”. Po miesiącu jego działalności, w 2014 roku Polska wyemitowała nowe miejsce sprzedaży pierwszego „Gamesa”, która sprzedała 4 tys. egzemplarzy. Był to największa seria tego typu w Polsce; pierwsza „Złota” dostępna jest na kanale RC1, co oznacza „Imaginal Motor” oraz „Pogorzejka”. Obecnie w Polsce jest",
+      "duration_seconds": 10.801,
+      "new_tokens": 120,
+      "tokens_per_second": 11.11,
+      "analysis": {
+        "chars": 467,
+        "words": 68,
+        "alphabetic_ratio": 0.764,
+        "polish_char_count": 15,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "expected": "Kontynuacja bez widocznej pętli fraz.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260541,
+      "prompt": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ",
+      "full_text": "Ten tekst nie powinien powtarzać tego samego zdania, ponieważ może zostać napisane w Biblii. Na przykład Bóg jest zaręczony z Izraelitami, że to Bóg ma swoje zdanie, które są na ich prośbę. Niemniej Bóg ma też teorie doktrynami z całego Izraela. Niemniej Bóg zaragował ukrążsamiały z Chrystusem – niegdyś jego poglądy z Biblii arabskiej, a jednak uważany jest za jego ukróla. Nienawidzicie Chrystus dopuszczał też jego wiarygodność do chrześcijańskiej religii, gdyż w przeciwieństwie do",
+      "new_text": "może zostać napisane w Biblii. Na przykład Bóg jest zaręczony z Izraelitami, że to Bóg ma swoje zdanie, które są na ich prośbę. Niemniej Bóg ma też teorie doktrynami z całego Izraela. Niemniej Bóg zaragował ukrążsamiały z Chrystusem – niegdyś jego poglądy z Biblii arabskiej, a jednak uważany jest za jego ukróla. Nienawidzicie Chrystus dopuszczał też jego wiarygodność do chrześcijańskiej religii, gdyż w przeciwieństwie do",
+      "duration_seconds": 10.56,
+      "new_tokens": 120,
+      "tokens_per_second": 11.36,
+      "analysis": {
+        "chars": 424,
+        "words": 64,
+        "alphabetic_ratio": 0.828,
+        "polish_char_count": 31,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": []
+      }
+    },
+    {
+      "checkpoint_label": "15k",
+      "checkpoint": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "checkpoint_step": 15000,
+      "checkpoint_variant": "glyph-100m",
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "expected": "Może kontynuować, ale bez usernames, dat postów, HTML i śmieci forum.",
+      "preset": "creative",
+      "settings": {
+        "temperature": 1.0,
+        "top_k": 50,
+        "max_new_tokens": 120
+      },
+      "seed": 20260542,
+      "prompt": "Komentarze użytkowników wskazują, że",
+      "full_text": "Komentarze użytkowników wskazują, że nie jest bezwzględny dla klienta. W tym czasie po raz pierwszy w tym czasie spółka zakupiła już pod koniec października w Łodzi, po przejeździe z Warszawy do Łodzi, a w Łodzi w październiku nastąpiły rozmowy o udział w projekcie spółki. Z czasem, gdy spółka zasugermowała działalność spółki zasugerowali projekt, będącej właścicielem spółki od tego roku. Oceniany przez spółkę, z powodów politycznych i ekonomicznych, dzięki których spółka trafiła do biura. W latach 90. ubiegłego wieku, dzięki działalności spółki odkupiła działalność pozasprzedalną spółkę, która",
+      "new_text": "nie jest bezwzględny dla klienta. W tym czasie po raz pierwszy w tym czasie spółka zakupiła już pod koniec października w Łodzi, po przejeździe z Warszawy do Łodzi, a w Łodzi w październiku nastąpiły rozmowy o udział w projekcie spółki. Z czasem, gdy spółka zasugermowała działalność spółki zasugerowali projekt, będącej właścicielem spółki od tego roku. Oceniany przez spółkę, z powodów politycznych i ekonomicznych, dzięki których spółka trafiła do biura. W latach 90. ubiegłego wieku, dzięki działalności spółki odkupiła działalność pozasprzedalną spółkę, która",
+      "duration_seconds": 10.609,
+      "new_tokens": 120,
+      "tokens_per_second": 11.31,
+      "analysis": {
+        "chars": 564,
+        "words": 82,
+        "alphabetic_ratio": 0.83,
+        "polish_char_count": 54,
+        "repeated_4grams": 0,
+        "web_garbage_hits": [],
+        "url_count": 0,
+        "html_count": 0,
+        "date_like_count": 0,
+        "ends_naturally": false
+      },
+      "residue_hits": {
+        "wiki": [],
+        "web": [],
+        "pseudo_ency": [
+          "w latach"
+        ]
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "preset": "conservative",
+      "score_10k": 1,
+      "score_15k": 0,
+      "delta": -1,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "preset": "conservative",
+      "score_10k": 1,
+      "score_15k": 5,
+      "delta": 4,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia"
+      ],
+      "regressions": [
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "preset": "conservative",
+      "score_10k": 5,
+      "score_15k": 3,
+      "delta": -2,
+      "winner": "10k",
+      "improvements": [
+        "mniej powtórzenia"
+      ],
+      "regressions": [
+        "gorsze zakończenie"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "preset": "conservative",
+      "score_10k": 0,
+      "score_15k": 1,
+      "delta": 1,
+      "winner": "tie",
+      "improvements": [
+        "mniej powtórzenia",
+        "mniej wiki residue"
+      ],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "preset": "conservative",
+      "score_10k": 1,
+      "score_15k": -1,
+      "delta": -2,
+      "winner": "10k",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "preset": "conservative",
+      "score_10k": -2,
+      "score_15k": -2,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [
+        "mniej powtórzenia",
+        "mniej wiki residue"
+      ],
+      "regressions": [
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "preset": "conservative",
+      "score_10k": 0,
+      "score_15k": 1,
+      "delta": 1,
+      "winner": "tie",
+      "improvements": [
+        "mniej powtórzenia"
+      ],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "preset": "conservative",
+      "score_10k": -1,
+      "score_15k": 1,
+      "delta": 2,
+      "winner": "15k",
+      "improvements": [
+        "mniej wiki residue"
+      ],
+      "regressions": [
+        "więcej powtórzenia"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "preset": "conservative",
+      "score_10k": 6,
+      "score_15k": 3,
+      "delta": -3,
+      "winner": "10k",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia",
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "preset": "conservative",
+      "score_10k": 1,
+      "score_15k": 2,
+      "delta": 1,
+      "winner": "tie",
+      "improvements": [
+        "mniej powtórzenia"
+      ],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "preset": "conservative",
+      "score_10k": 3,
+      "score_15k": 0,
+      "delta": -3,
+      "winner": "10k",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia",
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "preset": "conservative",
+      "score_10k": 6,
+      "score_15k": 1,
+      "delta": -5,
+      "winner": "10k",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "preset": "normal",
+      "score_10k": 6,
+      "score_15k": 5,
+      "delta": -1,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": [
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "preset": "normal",
+      "score_10k": 1,
+      "score_15k": 1,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "preset": "normal",
+      "score_10k": 6,
+      "score_15k": 6,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "preset": "normal",
+      "score_10k": 0,
+      "score_15k": 5,
+      "delta": 5,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia",
+        "mniej wiki residue"
+      ],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "preset": "normal",
+      "score_10k": 6,
+      "score_15k": 1,
+      "delta": -5,
+      "winner": "10k",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "preset": "normal",
+      "score_10k": 1,
+      "score_15k": 3,
+      "delta": 2,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia"
+      ],
+      "regressions": [
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "preset": "normal",
+      "score_10k": 6,
+      "score_15k": 6,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "preset": "normal",
+      "score_10k": 0,
+      "score_15k": 5,
+      "delta": 5,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia"
+      ],
+      "regressions": [
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "preset": "normal",
+      "score_10k": 2,
+      "score_15k": 6,
+      "delta": 4,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia",
+        "mniej pseudo-ency"
+      ],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "preset": "normal",
+      "score_10k": 6,
+      "score_15k": 5,
+      "delta": -1,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": [
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "preset": "normal",
+      "score_10k": 6,
+      "score_15k": 3,
+      "delta": -3,
+      "winner": "10k",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "preset": "normal",
+      "score_10k": 0,
+      "score_15k": 4,
+      "delta": 4,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia",
+        "mniej wiki residue"
+      ],
+      "regressions": [
+        "więcej web residue"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-001",
+      "category": "krotka_kontynuacja",
+      "preset": "creative",
+      "score_10k": 6,
+      "score_15k": 6,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-002",
+      "category": "krotka_kontynuacja",
+      "preset": "creative",
+      "score_10k": 6,
+      "score_15k": 6,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-003",
+      "category": "edukacyjny",
+      "preset": "creative",
+      "score_10k": 6,
+      "score_15k": 1,
+      "delta": -5,
+      "winner": "10k",
+      "improvements": [],
+      "regressions": [
+        "więcej powtórzenia"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-004",
+      "category": "edukacyjny",
+      "preset": "creative",
+      "score_10k": 6,
+      "score_15k": 6,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-005",
+      "category": "skladnia",
+      "preset": "creative",
+      "score_10k": -1,
+      "score_15k": 6,
+      "delta": 7,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia",
+        "mniej wiki residue",
+        "mniej pseudo-ency"
+      ],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-006",
+      "category": "web_garbage",
+      "preset": "creative",
+      "score_10k": -1,
+      "score_15k": 4,
+      "delta": 5,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia"
+      ],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-007",
+      "category": "projektowy",
+      "preset": "creative",
+      "score_10k": 6,
+      "score_15k": 6,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-008",
+      "category": "edukacyjny",
+      "preset": "creative",
+      "score_10k": 8,
+      "score_15k": 6,
+      "delta": -2,
+      "winner": "10k",
+      "improvements": [],
+      "regressions": [
+        "gorsze zakończenie"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-009",
+      "category": "encyklopedyczny",
+      "preset": "creative",
+      "score_10k": 6,
+      "score_15k": 5,
+      "delta": -1,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": [
+        "więcej pseudo-ency"
+      ]
+    },
+    {
+      "prompt_id": "g100-eval-010",
+      "category": "skladnia",
+      "preset": "creative",
+      "score_10k": 6,
+      "score_15k": 6,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-011",
+      "category": "petle",
+      "preset": "creative",
+      "score_10k": 6,
+      "score_15k": 6,
+      "delta": 0,
+      "winner": "tie",
+      "improvements": [],
+      "regressions": []
+    },
+    {
+      "prompt_id": "g100-eval-012",
+      "category": "forum_garbage",
+      "preset": "creative",
+      "score_10k": 2,
+      "score_15k": 5,
+      "delta": 3,
+      "winner": "15k",
+      "improvements": [
+        "mniej powtórzenia"
+      ],
+      "regressions": [
+        "więcej pseudo-ency"
+      ]
+    }
+  ]
+}

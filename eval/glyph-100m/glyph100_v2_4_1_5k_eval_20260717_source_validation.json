@@ -1,0 +1,181 @@
+{
+  "run_id": "glyph100_v2_4_1_5k_eval_20260717",
+  "scope": "source-specific fixed validation; no training performed",
+  "source_bins": {
+    "1000_novels": {
+      "documents": 17,
+      "tokens": 186215,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/1000_novels.bin"
+    },
+    "eltec_pol": {
+      "documents": 10,
+      "tokens": 134845,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/eltec_pol.bin"
+    },
+    "parliamentary": {
+      "documents": 78,
+      "tokens": 163332,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/parliamentary.bin"
+    },
+    "wikibooks": {
+      "documents": 26,
+      "tokens": 19588,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikibooks.bin"
+    },
+    "wikinews": {
+      "documents": 45,
+      "tokens": 13731,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikinews.bin"
+    },
+    "wikipedia_pl": {
+      "documents": 647,
+      "tokens": 600153,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikipedia_pl.bin"
+    },
+    "wolne_lektury": {
+      "documents": 49,
+      "tokens": 288872,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wolne_lektury.bin"
+    }
+  },
+  "checkpoints": {
+    "1k": {
+      "checkpoint": "checkpoints/glyph-100m-v2_4_1-1k/step_0001000.pt",
+      "step": 1000,
+      "sources": {
+        "1000_novels": {
+          "documents": 17,
+          "tokens": 186215,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/1000_novels.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 6.163532
+        },
+        "eltec_pol": {
+          "documents": 10,
+          "tokens": 134845,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/eltec_pol.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 6.008331
+        },
+        "parliamentary": {
+          "documents": 78,
+          "tokens": 163332,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/parliamentary.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 6.450452
+        },
+        "wikibooks": {
+          "documents": 26,
+          "tokens": 19588,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikibooks.bin",
+          "eval_batches": 9,
+          "evaluated_blocks": 36,
+          "val_loss": 7.072732
+        },
+        "wikinews": {
+          "documents": 45,
+          "tokens": 13731,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikinews.bin",
+          "eval_batches": 6,
+          "evaluated_blocks": 24,
+          "val_loss": 7.0261
+        },
+        "wikipedia_pl": {
+          "documents": 647,
+          "tokens": 600153,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikipedia_pl.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 6.754182
+        },
+        "wolne_lektury": {
+          "documents": 49,
+          "tokens": 288872,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wolne_lektury.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 6.076216
+        }
+      }
+    },
+    "5k": {
+      "checkpoint": "checkpoints/glyph-100m-v2_4_1-5k/step_0005000.pt",
+      "step": 5000,
+      "sources": {
+        "1000_novels": {
+          "documents": 17,
+          "tokens": 186215,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/1000_novels.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.714629
+        },
+        "eltec_pol": {
+          "documents": 10,
+          "tokens": 134845,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/eltec_pol.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.500906
+        },
+        "parliamentary": {
+          "documents": 78,
+          "tokens": 163332,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/parliamentary.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.37505
+        },
+        "wikibooks": {
+          "documents": 26,
+          "tokens": 19588,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikibooks.bin",
+          "eval_batches": 9,
+          "evaluated_blocks": 36,
+          "val_loss": 5.220388
+        },
+        "wikinews": {
+          "documents": 45,
+          "tokens": 13731,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikinews.bin",
+          "eval_batches": 6,
+          "evaluated_blocks": 24,
+          "val_loss": 5.151582
+        },
+        "wikipedia_pl": {
+          "documents": 647,
+          "tokens": 600153,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikipedia_pl.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.63655
+        },
+        "wolne_lektury": {
+          "documents": 49,
+          "tokens": 288872,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wolne_lektury.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.532188
+        }
+      }
+    }
+  },
+  "delta_5k_minus_1k": {
+    "1000_novels": -1.448903,
+    "eltec_pol": -1.507425,
+    "parliamentary": -2.075402,
+    "wikibooks": -1.852344,
+    "wikinews": -1.874518,
+    "wikipedia_pl": -2.117632,
+    "wolne_lektury": -1.544028
+  },
+  "notes": [
+    "Negative delta means the 5k checkpoint improved over 1k.",
+    "Wikisource has no validation documents in v2.4.1 and is therefore absent.",
+    "Small sources use fewer non-overlapping fixed blocks than large sources."
+  ]
+}

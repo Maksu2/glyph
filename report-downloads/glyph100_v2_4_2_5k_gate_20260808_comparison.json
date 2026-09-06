@@ -1,0 +1,320 @@
+{
+  "run_id": "glyph100_v2_4_2_5k_gate_20260808",
+  "scope": "matched base-LM continuation quality gate; no training performed",
+  "prompts": 20,
+  "presets": {
+    "conservative": {
+      "temperature": 0.6,
+      "top_k": 30,
+      "max_new_tokens": 80
+    },
+    "normal": {
+      "temperature": 0.8,
+      "top_k": 40,
+      "max_new_tokens": 80
+    }
+  },
+  "checkpoints": {
+    "v241_5k": {
+      "path": "checkpoints/glyph-100m-v2_4_1-5k/step_0005000.pt",
+      "step": 5000,
+      "dataset": "glyph100_dataset_v2_4_1_core"
+    },
+    "v242_1k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0001000.pt",
+      "step": 1000,
+      "dataset": "glyph100_dataset_v2_4_2_core"
+    },
+    "v242_3k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0003000.pt",
+      "step": 3000,
+      "dataset": "glyph100_dataset_v2_4_2_core"
+    },
+    "v242_5k": {
+      "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0005000.pt",
+      "step": 5000,
+      "dataset": "glyph100_dataset_v2_4_2_core"
+    }
+  },
+  "checkpoint_contracts": {
+    "v241_5k": {
+      "step": 5000,
+      "current_step": 5000,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_1_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    },
+    "v242_1k": {
+      "step": 1000,
+      "current_step": 1000,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_2_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    },
+    "v242_3k": {
+      "step": 3000,
+      "current_step": 3000,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_2_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    },
+    "v242_5k": {
+      "step": 5000,
+      "current_step": 5000,
+      "variant": "glyph-100m",
+      "dataset_name": "glyph100_dataset_v2_4_2_core",
+      "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_tokens_per_step": 16384,
+      "optimizer_state_present": true,
+      "scheduler_state_present": true,
+      "sampler_state_present": true,
+      "valid": true
+    }
+  },
+  "v242_validation_losses": [
+    {
+      "step": 500,
+      "val_loss": 7.3346
+    },
+    {
+      "step": 1000,
+      "val_loss": 6.4385
+    },
+    {
+      "step": 1500,
+      "val_loss": 5.9524
+    },
+    {
+      "step": 2000,
+      "val_loss": 5.6915
+    },
+    {
+      "step": 2500,
+      "val_loss": 5.4662
+    },
+    {
+      "step": 3000,
+      "val_loss": 5.1757
+    },
+    {
+      "step": 3500,
+      "val_loss": 4.9787
+    },
+    {
+      "step": 4000,
+      "val_loss": 4.8189
+    },
+    {
+      "step": 4500,
+      "val_loss": 4.7063
+    },
+    {
+      "step": 5000,
+      "val_loss": 4.5994
+    }
+  ],
+  "summaries": {
+    "v241_5k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 3.0,
+        "median_quality_score": 4.0,
+        "natural_endings": 6,
+        "cutoff_like": 40,
+        "repetition_samples": 13,
+        "pseudo_ency_samples": 7,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 80,
+        "avg_generation_tokens_per_second": 70.53
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 2.7,
+          "median_quality_score": 3.0,
+          "natural_endings": 4,
+          "cutoff_like": 20,
+          "repetition_samples": 9,
+          "pseudo_ency_samples": 4,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 69.52
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 3.3,
+          "median_quality_score": 4.0,
+          "natural_endings": 2,
+          "cutoff_like": 20,
+          "repetition_samples": 4,
+          "pseudo_ency_samples": 3,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.54
+        }
+      }
+    },
+    "v242_1k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 2.575,
+        "median_quality_score": 2.5,
+        "natural_endings": 2,
+        "cutoff_like": 40,
+        "repetition_samples": 15,
+        "pseudo_ency_samples": 0,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 80,
+        "avg_generation_tokens_per_second": 71.47
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 1.7,
+          "median_quality_score": 1.0,
+          "natural_endings": 0,
+          "cutoff_like": 20,
+          "repetition_samples": 12,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.33
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 3.45,
+          "median_quality_score": 4.0,
+          "natural_endings": 2,
+          "cutoff_like": 20,
+          "repetition_samples": 3,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.62
+        }
+      }
+    },
+    "v242_3k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 3.225,
+        "median_quality_score": 4.0,
+        "natural_endings": 5,
+        "cutoff_like": 39,
+        "repetition_samples": 12,
+        "pseudo_ency_samples": 0,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 78.45,
+        "avg_generation_tokens_per_second": 71.91
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 2.4,
+          "median_quality_score": 2.0,
+          "natural_endings": 2,
+          "cutoff_like": 20,
+          "repetition_samples": 10,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.66
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 4.05,
+          "median_quality_score": 4.0,
+          "natural_endings": 3,
+          "cutoff_like": 19,
+          "repetition_samples": 2,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 76.9,
+          "avg_generation_tokens_per_second": 72.16
+        }
+      }
+    },
+    "v242_5k": {
+      "overall": {
+        "samples": 40,
+        "avg_quality_score": 3.175,
+        "median_quality_score": 4.0,
+        "natural_endings": 5,
+        "cutoff_like": 40,
+        "repetition_samples": 13,
+        "pseudo_ency_samples": 0,
+        "web_residue_samples": 0,
+        "avg_generated_tokens": 80,
+        "avg_generation_tokens_per_second": 71.69
+      },
+      "by_preset": {
+        "conservative": {
+          "samples": 20,
+          "avg_quality_score": 2.9,
+          "median_quality_score": 4.0,
+          "natural_endings": 4,
+          "cutoff_like": 20,
+          "repetition_samples": 9,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.62
+        },
+        "normal": {
+          "samples": 20,
+          "avg_quality_score": 3.45,
+          "median_quality_score": 4.0,
+          "natural_endings": 1,
+          "cutoff_like": 20,
+          "repetition_samples": 4,
+          "pseudo_ency_samples": 0,
+          "web_residue_samples": 0,
+          "avg_generated_tokens": 80,
+          "avg_generation_tokens_per_second": 71.76
+        }
+      }
+    }
+  },
+  "pairwise": {
+    "v241_5k_vs_v242_5k": {
+      "v241_5k": 9,
+      "v242_5k": 14,
+      "ties": 17
+    },
+    "v242_1k_vs_v242_5k": {
+      "v242_1k": 7,
+      "v242_5k": 16,
+      "ties": 17
+    },
+    "v242_3k_vs_v242_5k": {
+      "v242_3k": 11,
+      "v242_5k": 11,
+      "ties": 18
+    }
+  },
+  "heuristic_best_checkpoint": "v242_3k",
+  "methodology_note": "Scores are deterministic diagnostics; semantic samples require manual review."
+}

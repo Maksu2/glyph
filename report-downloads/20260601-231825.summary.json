@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-02T00:31:20.133218+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260601-231825.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260601-231825.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.85,
+  "averages": {
+    "continuation_fit": 3.217,
+    "polish": 3.167,
+    "coherence": 2.867,
+    "repetition": 2.6,
+    "safety": 4.917,
+    "overall": 2.85
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.85/5 na 60/60 próbkach. Trening: step=10000, train_loss=3.6795, val_loss=3.3527, lr=0.000199. Najsłabsze średnie: repetition=2.60, coherence=2.87; najmocniejsza metryka: continuation_fit=3.22.",
+  "training_stats": {
+    "step": 10000,
+    "total_steps": 10000,
+    "progress_pct": 100.0,
+    "loss": 3.6795,
+    "lr": 0.000199,
+    "last_eval": {
+      "ts": "2026-05-27 17:48:31",
+      "step": 10000,
+      "val_loss": 3.3527
+    },
+    "tokens_m": 163.84
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.85/5. Najsłabsze metryki to 'repetition' (2.6) i 'coherence' (2.867). W kontekście treningowym, rozbieżność między train_loss (3.68) a val_loss (3.35) jest umiarkowana, przy stosunkowo niskiej szybkości uczenia (1.99e-4). Model wykazuje tendencję do powtarzania fraz i konstrukcji, co jest widoczne w próbkach (np. powtórzenie 'W pobliżu znajdują się dwa pomniki przyrody').",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarkowy wynosi 2.85/5. Najsłabsze metryki to 'repetition' (2.6) i 'coherence' (2.867). W kontekście treningowym, rozbieżność między train_loss (3.68) a val_loss (3.35) jest umiarkowana, przy stosunkowo niskiej szybkości uczenia (1.99e-4). Model wykazuje tendencję do powtarzania fraz i konstrukcji, co jest widoczne w próbkach (np. powtórzenie 'W pobliżu znajdują się dwa pomniki przyrody').\"\n}\n```"
+}

@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "run_id": "glyph100-v242-p100-5k-to-10k-001",
+  "started_at_utc": "2026-08-08T15:37:09.378373+00:00",
+  "finished_at_utc": "2026-08-08T17:59:37.686002+00:00",
+  "wall_seconds": 8756.069478886,
+  "steps": {
+    "input": 5000,
+    "smoke_end": 5100,
+    "final": 10000
+  },
+  "tokens": {
+    "effective_per_step": 16384,
+    "continuation_5k_to_10k": 81920000,
+    "total_at_10k": 163840000,
+    "train_corpus": 231494339,
+    "approximate_corpus_passes": 0.707748
+  },
+  "performance": {
+    "smoke_tokens_per_second": 9483.8,
+    "continuation_tokens_per_second": 9643.695918367346,
+    "rx5500xt_baseline_tokens_per_second": 3271.45,
+    "p100_to_rx_ratio": 2.948,
+    "p100_faster_percent": 194.8
+  },
+  "gpu": {
+    "name": "Tesla P100-PCIE-16GB",
+    "compute_capability": "6.0",
+    "pytorch": "2.10.0+cu126",
+    "cuda": "12.6",
+    "total_vram_bytes": 17059545088,
+    "training_vram_max_mib": 4097,
+    "training_utilization_avg_percent": 98.6,
+    "training_utilization_max_percent": 99,
+    "training_temperature_avg_c": 57.79,
+    "training_temperature_max_c": 59,
+    "training_power_avg_w": 181.1,
+    "training_power_max_w": 208.8,
+    "host_ram_recorded": false
+  },
+  "train_loss": {
+    "first_logged_step": 5010,
+    "first_logged": 4.768,
+    "final_step": 10000,
+    "final": 4.0054
+  },
+  "validation_loss": {
+    "5050": 4.6221,
+    "5100": 4.6002,
+    "5500": 4.4764,
+    "6000": 4.3395,
+    "6500": 4.2492,
+    "7000": 4.1749,
+    "7500": 4.1136,
+    "8000": 4.0573,
+    "8500": 4.0127,
+    "9000": 3.9748,
+    "9500": 3.946,
+    "10000": 3.9023
+  },
+  "checkpoint": {
+    "path": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+    "size_bytes": 1175129265,
+    "sha256": "e32d34baff7c522a77a83c5ec1812dd83798c31c8b4cdefe93c729a4441ab4ce",
+    "step": 10000,
+    "current_step": 10000,
+    "variant": "glyph-100m",
+    "dataset_name": "glyph100_dataset_v2_4_2_core",
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "context_length": 512,
+    "model_tensors": 113,
+    "model_tensors_finite": true,
+    "model_state_elements": 113088000,
+    "optimizer_state_present": true,
+    "scheduler_state_present": true,
+    "sampler_state_present": true
+  },
+  "failures": {
+    "nan_or_inf": 0,
+    "oom": 0,
+    "crash_or_hang": 0,
+    "checkpoint_write_failure": 0
+  },
+  "input_5k_checkpoint_unchanged": true,
+  "next_training_started": false
+}

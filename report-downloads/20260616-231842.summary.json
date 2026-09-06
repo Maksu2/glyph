@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-17T00:35:41.211635+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260616-231842.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260616-231842.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.767,
+  "averages": {
+    "continuation_fit": 3.217,
+    "polish": 3.25,
+    "coherence": 2.833,
+    "repetition": 2.6,
+    "safety": 5.0,
+    "overall": 2.767
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.767/5 na 60/60 próbkach. Trening: step=45000, train_loss=3.2809, val_loss=3.1953, lr=0.00018. Najsłabsze średnie: repetition=2.60, coherence=2.83; najmocniejsza metryka: polish=3.25.",
+  "training_stats": {
+    "step": 45000,
+    "total_steps": 45000,
+    "progress_pct": 100.0,
+    "loss": 3.2809,
+    "lr": 0.00018,
+    "last_eval": {
+      "ts": "2026-06-10 03:16:19",
+      "step": 45000,
+      "val_loss": 3.1953
+    },
+    "tokens_m": 737.28
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.77/5. Najsłabsze metryki to 'repetition' (2.6) i 'coherence' (2.833). Wskaźniki straty (train_loss=3.28, val_loss=3.19) są blisko siebie, co sugeruje stabilny, ale nieoptymalny transfer wiedzy. Model wykazuje tendencję do powtarzania fraz oraz przechodzenia od ogólnego opisu do niepoprawnie zintegrowanych, faktycznych fragmentów wiedzy.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.77/5. Najsłabsze metryki to 'repetition' (2.6) i 'coherence' (2.833). Wskaźniki straty (train_loss=3.28, val_loss=3.19) są blisko siebie, co sugeruje stabilny, ale nieoptymalny transfer wiedzy. Model wykazuje tendencję do powtarzania fraz oraz przechodzenia od ogólnego opisu do niepoprawnie zintegrowanych, faktycznych fragmentów wiedzy.\"\n}\n```"
+}

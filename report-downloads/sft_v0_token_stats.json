@@ -1,0 +1,62 @@
+{
+  "tokenizer": "data/processed/tokenizer.model",
+  "context_len": 256,
+  "files": [
+    {
+      "path": "data/sft/raw/glyph_sft_v0_seed_1500.jsonl",
+      "examples": 1500,
+      "categories": {
+        "proste_wyjasnienia": 250,
+        "techniczne_proste": 100,
+        "codzienne_decyzje": 600,
+        "pisanie_i_streszczanie": 300,
+        "brak_danych": 150,
+        "korekta_zalozen": 100
+      },
+      "words": 51500,
+      "token_stats": {
+        "template_total_tokens": 90272,
+        "template_min": 31,
+        "template_max": 101,
+        "template_avg": 60.181333333333335,
+        "template_p50": 63.0,
+        "template_p90": 72.0,
+        "template_p95": 74.0,
+        "template_p99": 81.0,
+        "instruction_avg_tokens": 15.258666666666667,
+        "response_avg_tokens": 38.922666666666665,
+        "fits_context": 1500,
+        "over_context": 0,
+        "over_context_lines": []
+      }
+    },
+    {
+      "path": "data/sft/raw/glyph_sft_v0_seed_1500_expanded.jsonl",
+      "examples": 1500,
+      "categories": {
+        "proste_wyjasnienia": 250,
+        "techniczne_proste": 100,
+        "codzienne_decyzje": 600,
+        "pisanie_i_streszczanie": 300,
+        "brak_danych": 150,
+        "korekta_zalozen": 100
+      },
+      "words": 78085,
+      "token_stats": {
+        "template_total_tokens": 130803,
+        "template_min": 53,
+        "template_max": 124,
+        "template_avg": 87.202,
+        "template_p50": 89.0,
+        "template_p90": 99.0,
+        "template_p95": 102.0,
+        "template_p99": 108.0,
+        "instruction_avg_tokens": 15.258666666666667,
+        "response_avg_tokens": 65.94333333333333,
+        "fits_context": 1500,
+        "over_context": 0,
+        "over_context_lines": []
+      }
+    }
+  ]
+}

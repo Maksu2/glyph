@@ -1,0 +1,49 @@
+{
+  "input": "data/sft/glyph100_sft_smoke_v0.jsonl",
+  "tokenizer": "data/processed/tokenizer.model",
+  "context_len": 512,
+  "seed": 2026,
+  "val_fraction": 0.1,
+  "overflow": "drop",
+  "input_examples": 1500,
+  "kept_examples": 1500,
+  "dropped_over_context": 0,
+  "truncated_examples": 0,
+  "train_examples": 1350,
+  "val_examples": 150,
+  "train_tokens": 52169,
+  "val_tokens": 5696,
+  "paths": {
+    "train_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_train.jsonl",
+    "val_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_val.jsonl",
+    "train_txt": "data/sft/processed/glyph100_sft_smoke_v0_train.txt",
+    "val_txt": "data/sft/processed/glyph100_sft_smoke_v0_val.txt",
+    "train_bin": "data/sft/processed/glyph100_sft_smoke_v0_train.bin",
+    "val_bin": "data/sft/processed/glyph100_sft_smoke_v0_val.bin"
+  },
+  "dropped_lines": [],
+  "category_counts_train": {
+    "anty_petle": 135,
+    "brak_danych": 135,
+    "codzienne_proste_pytania": 135,
+    "krotkie_definicje": 135,
+    "krotkie_poprawki_tekstu": 135,
+    "mini_streszczenia": 135,
+    "mvp_first_project_advice": 135,
+    "naturalne_zakonczenia": 135,
+    "ostrozne_odpowiedzi_przy_niepewnosci": 135,
+    "proste_techniczne_wyjasnienia": 135
+  },
+  "category_counts_val": {
+    "anty_petle": 15,
+    "brak_danych": 15,
+    "codzienne_proste_pytania": 15,
+    "krotkie_definicje": 15,
+    "krotkie_poprawki_tekstu": 15,
+    "mini_streszczenia": 15,
+    "mvp_first_project_advice": 15,
+    "naturalne_zakonczenia": 15,
+    "ostrozne_odpowiedzi_przy_niepewnosci": 15,
+    "proste_techniczne_wyjasnienia": 15
+  }
+}

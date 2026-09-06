@@ -1,0 +1,340 @@
+{
+  "checkpoint": "checkpoints/glyph-100m-v2_4_2-15k/latest.pt",
+  "step": 15000,
+  "preset": {
+    "temperature": 0.8,
+    "top_k": 40,
+    "max_new_tokens": 400,
+    "top_p": 1.0,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "eos_safe": true
+  },
+  "n": 40,
+  "ended_by_eos": 19,
+  "hit_limit": 21,
+  "mean_len_to_eos": 127.52631578947368,
+  "seconds": 291.3,
+  "rows": [
+    {
+      "prompt_id": "v241-5k-001",
+      "rep": 0,
+      "seed": 20260717,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-002",
+      "rep": 0,
+      "seed": 20260718,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-003",
+      "rep": 0,
+      "seed": 20260719,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-004",
+      "rep": 0,
+      "seed": 20260720,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-005",
+      "rep": 0,
+      "seed": 20260721,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-006",
+      "rep": 0,
+      "seed": 20260722,
+      "new_tokens": 361,
+      "ended_by_eos": true,
+      "len_to_eos": 361
+    },
+    {
+      "prompt_id": "v241-5k-007",
+      "rep": 0,
+      "seed": 20260723,
+      "new_tokens": 17,
+      "ended_by_eos": true,
+      "len_to_eos": 17
+    },
+    {
+      "prompt_id": "v241-5k-008",
+      "rep": 0,
+      "seed": 20260724,
+      "new_tokens": 331,
+      "ended_by_eos": true,
+      "len_to_eos": 331
+    },
+    {
+      "prompt_id": "v241-5k-009",
+      "rep": 0,
+      "seed": 20260725,
+      "new_tokens": 59,
+      "ended_by_eos": true,
+      "len_to_eos": 59
+    },
+    {
+      "prompt_id": "v241-5k-010",
+      "rep": 0,
+      "seed": 20260726,
+      "new_tokens": 69,
+      "ended_by_eos": true,
+      "len_to_eos": 69
+    },
+    {
+      "prompt_id": "v241-5k-011",
+      "rep": 0,
+      "seed": 20260727,
+      "new_tokens": 54,
+      "ended_by_eos": true,
+      "len_to_eos": 54
+    },
+    {
+      "prompt_id": "v241-5k-012",
+      "rep": 0,
+      "seed": 20260728,
+      "new_tokens": 277,
+      "ended_by_eos": true,
+      "len_to_eos": 277
+    },
+    {
+      "prompt_id": "v241-5k-013",
+      "rep": 0,
+      "seed": 20260729,
+      "new_tokens": 10,
+      "ended_by_eos": true,
+      "len_to_eos": 10
+    },
+    {
+      "prompt_id": "v241-5k-014",
+      "rep": 0,
+      "seed": 20260730,
+      "new_tokens": 115,
+      "ended_by_eos": true,
+      "len_to_eos": 115
+    },
+    {
+      "prompt_id": "v241-5k-015",
+      "rep": 0,
+      "seed": 20260731,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-016",
+      "rep": 0,
+      "seed": 20260732,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-017",
+      "rep": 0,
+      "seed": 20260733,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-018",
+      "rep": 0,
+      "seed": 20260734,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-019",
+      "rep": 0,
+      "seed": 20260735,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-020",
+      "rep": 0,
+      "seed": 20260736,
+      "new_tokens": 87,
+      "ended_by_eos": true,
+      "len_to_eos": 87
+    },
+    {
+      "prompt_id": "v241-5k-001",
+      "rep": 1,
+      "seed": 20360717,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-002",
+      "rep": 1,
+      "seed": 20360718,
+      "new_tokens": 34,
+      "ended_by_eos": true,
+      "len_to_eos": 34
+    },
+    {
+      "prompt_id": "v241-5k-003",
+      "rep": 1,
+      "seed": 20360719,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-004",
+      "rep": 1,
+      "seed": 20360720,
+      "new_tokens": 194,
+      "ended_by_eos": true,
+      "len_to_eos": 194
+    },
+    {
+      "prompt_id": "v241-5k-005",
+      "rep": 1,
+      "seed": 20360721,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-006",
+      "rep": 1,
+      "seed": 20360722,
+      "new_tokens": 34,
+      "ended_by_eos": true,
+      "len_to_eos": 34
+    },
+    {
+      "prompt_id": "v241-5k-007",
+      "rep": 1,
+      "seed": 20360723,
+      "new_tokens": 54,
+      "ended_by_eos": true,
+      "len_to_eos": 54
+    },
+    {
+      "prompt_id": "v241-5k-008",
+      "rep": 1,
+      "seed": 20360724,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-009",
+      "rep": 1,
+      "seed": 20360725,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-010",
+      "rep": 1,
+      "seed": 20360726,
+      "new_tokens": 197,
+      "ended_by_eos": true,
+      "len_to_eos": 197
+    },
+    {
+      "prompt_id": "v241-5k-011",
+      "rep": 1,
+      "seed": 20360727,
+      "new_tokens": 29,
+      "ended_by_eos": true,
+      "len_to_eos": 29
+    },
+    {
+      "prompt_id": "v241-5k-012",
+      "rep": 1,
+      "seed": 20360728,
+      "new_tokens": 202,
+      "ended_by_eos": true,
+      "len_to_eos": 202
+    },
+    {
+      "prompt_id": "v241-5k-013",
+      "rep": 1,
+      "seed": 20360729,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-014",
+      "rep": 1,
+      "seed": 20360730,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-015",
+      "rep": 1,
+      "seed": 20360731,
+      "new_tokens": 22,
+      "ended_by_eos": true,
+      "len_to_eos": 22
+    },
+    {
+      "prompt_id": "v241-5k-016",
+      "rep": 1,
+      "seed": 20360732,
+      "new_tokens": 277,
+      "ended_by_eos": true,
+      "len_to_eos": 277
+    },
+    {
+      "prompt_id": "v241-5k-017",
+      "rep": 1,
+      "seed": 20360733,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-018",
+      "rep": 1,
+      "seed": 20360734,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-019",
+      "rep": 1,
+      "seed": 20360735,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    },
+    {
+      "prompt_id": "v241-5k-020",
+      "rep": 1,
+      "seed": 20360736,
+      "new_tokens": 400,
+      "ended_by_eos": false,
+      "len_to_eos": null
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[{"stream_name":"stdout","time":0.907408868,"data":"nvidia-smi is not present; CUDA validation will use PyTorch\n"}
+,{"stream_name":"stderr","time":1.078778893,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":1.078834141,"data":"  File \"/kaggle/src/script.py\", line 346, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":1.078956266,"data":"    main()\n"}
+,{"stream_name":"stderr","time":1.079044145,"data":"  File \"/kaggle/src/script.py\", line 188, in main\n"}
+,{"stream_name":"stderr","time":1.079314016,"data":"    archive = locate_input_archive()\n"}
+,{"stream_name":"stderr","time":1.079345145,"data":"              ^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":1.079360275,"data":"  File \"/kaggle/src/script.py\", line 53, in locate_input_archive\n"}
+,{"stream_name":"stderr","time":1.079369632,"data":"    raise RuntimeError(f\"Expected exactly one {INPUT_ARCHIVE}, found: {matches}\")\n"}
+,{"stream_name":"stderr","time":1.079471868,"data":"RuntimeError: Expected exactly one glyph100-kaggle-input.tar.gz, found: []\n"}
+,{"stream_name":"stderr","time":4.144140896,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4.144179189,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4.535897545,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4.535928108,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":6.148447019,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":7.8586897350000005,"data":"[NbConvertApp] Writing 328832 bytes to __results__.html\n"}
+]

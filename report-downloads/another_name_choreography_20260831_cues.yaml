@@ -1,0 +1,405 @@
+schema_version: 1
+status: design_only_non_executable
+safe_state:
+  active_automation_created: false
+  schedule_created: false
+  timer_created: false
+  home_assistant_configuration_changed: false
+  light_commands_sent: false
+  audio_playback_started: false
+
+track:
+  title: Another Name
+  artist: Ludwig Göransson
+  album: The Odyssey (Original Motion Picture Soundtrack)
+  source_file: /home/maksu/.codex/attachments/c4da231d-7fd9-4dc9-baae-2a1f42a58225/Another Name.mp3
+  source_sha256: d0311089770db56dd4d7d9d2049c0b980a57ea4f921f8aca29504b354cef8008
+  duration_s_ffprobe: 111.177143
+  duration_s_decoded: 111.130703
+
+latency_model:
+  audio_latency_s: 0.243
+  zigbee_light_latency_s: 0.080
+  sharp_command_offset_s: 0.163
+  sharp_formula: command_send = track_event + audio_latency - light_latency
+  transition_end_formula: command_send = target_track_event + 0.163 - transition_duration
+  transition_start_formula: command_send = transition_start_track_event + 0.163
+  scope_note: Modeled values for choreography design; not measured separately for these specific ZigBee devices.
+
+entities:
+  led_strip: light.tasma_lozko
+  near_bed_bulb: light.zarowka_fotel
+  far_room_bulb: light.zarowka_szafa
+  large_light_circuit_1: light.wlacznik_sypialnia_left
+  large_light_circuit_2: light.wlacznik_sypialnia_right
+  excluded_group: light.swiatla_kolor_sypialnia
+
+palette:
+  strip_deep_amber_xy: [0.585, 0.390]
+  strip_warm_amber_xy: [0.545, 0.410]
+  strip_gold_xy: [0.475, 0.405]
+  strip_pale_gold_xy: [0.405, 0.385]
+  strip_final_gold_xy: [0.455, 0.410]
+  bulb_early_kelvin: 2200
+  bulb_mid_kelvin: 2700
+  bulb_climax_near_kelvin: 3400
+  bulb_climax_far_kelvin: 3200
+  bulb_final_near_kelvin: 3800
+  bulb_final_far_kelvin: 3600
+
+macro_cues:
+  - id: M00
+    exact_track_timestamp: "0:00.000"
+    track_time_s: 0.000000
+    cue_type: gradual
+    musical_reason: Restrained opening; visual scene should already exist before the first audible material.
+    spatial_reason: Keep all illumination immediately around the bed; the rest of the room remains absent.
+    transition_duration_s: 2.000
+    intended_visual_target:
+      mode: transition_end_at_track_event
+      track_time_s: 0.000000
+      description: Initial 2% under-bed/headboard glow is ready at audible track start.
+    calculated_command_send_time_s: -1.837000
+    calculated_command_send_time: "-0:01.837 pre-roll"
+    calculation: 0.000 + 0.163 - 2.000
+    confidence: high_design_low_timing
+    manual_tuning_notes: Requires a pre-roll scene; exact minimum visible brightness must be checked while the room is dark.
+    actions:
+      led_strip: {state: "on", brightness_pct: 2, xy_color: [0.585, 0.390], transition_s: 2.000}
+      near_bed_bulb: {state: "off"}
+      far_room_bulb: {state: "off"}
+      large_light_circuit_1: {state: "off"}
+      large_light_circuit_2: {state: "off"}
+
+  - id: M01
+    exact_track_timestamp: "0:08.522"
+    track_time_s: 8.521723
+    cue_type: gradual
+    musical_reason: First strong spectral/dynamic boundary in the quiet introductory material.
+    spatial_reason: Expand only the reflected glow around the bed; no direct room light yet.
+    transition_duration_s: 4.000
+    intended_visual_target: {mode: transition_end_at_track_event, track_time_s: 8.521723, description: Strip reaches 3%.}
+    calculated_command_send_time_s: 4.684723
+    calculated_command_send_time: "0:04.685"
+    calculation: 8.521723 + 0.163 - 4.000
+    confidence: medium
+    manual_tuning_notes: Boundary is feature-supported but should be checked against the first perceived phrase ending.
+    actions:
+      led_strip: {state: "on", brightness_pct: 3, xy_color: [0.570, 0.400], transition_s: 4.000}
+      near_bed_bulb: {action: hold_off}
+      far_room_bulb: {action: hold_off}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M02
+    exact_track_timestamp: "0:14.652"
+    track_time_s: 14.651791
+    cue_type: structural
+    musical_reason: Harmonic/spectral change begins the early development without a large loudness jump.
+    spatial_reason: Warm the bed halo while preserving darkness beyond the bed.
+    transition_duration_s: 3.000
+    intended_visual_target: {mode: transition_end_at_track_event, track_time_s: 14.651791, description: Strip reaches 5% warm amber.}
+    calculated_command_send_time_s: 11.814791
+    calculated_command_send_time: "0:11.815"
+    calculation: 14.651791 + 0.163 - 3.000
+    confidence: medium
+    manual_tuning_notes: Compare 0:14.652 with the audible phrase change and optionally move within +/-0.5 s.
+    actions:
+      led_strip: {state: "on", brightness_pct: 5, xy_color: [0.545, 0.410], transition_s: 3.000}
+      near_bed_bulb: {action: hold_off}
+      far_room_bulb: {action: hold_off}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M03
+    exact_track_timestamp: "0:26.610"
+    track_time_s: 26.610068
+    cue_type: structural
+    musical_reason: Clear lift in RMS, onset activity and spectral centroid; the rhythm becomes more legible.
+    spatial_reason: Introduce the first proper local key light above the chair beside the bed.
+    transition_duration_s: 4.000
+    intended_visual_target: {mode: transition_end_at_track_event, track_time_s: 26.610068, description: Strip 9%; near bulb appears at 3%.}
+    calculated_command_send_time_s: 22.773068
+    calculated_command_send_time: "0:22.773"
+    calculation: 26.610068 + 0.163 - 4.000
+    confidence: high
+    manual_tuning_notes: Verify whether 3% white mode is already too visible at night; reduce to the lowest stable level if needed.
+    actions:
+      led_strip: {state: "on", brightness_pct: 9, xy_color: [0.525, 0.415], transition_s: 4.000}
+      near_bed_bulb: {state: "on", brightness_pct: 3, color_temp_kelvin: 2200, transition_s: 4.000}
+      far_room_bulb: {action: hold_off}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M04
+    exact_track_timestamp: "0:39.869"
+    track_time_s: 39.868662
+    cue_type: structural
+    musical_reason: Strong structural novelty and increased transient definition before the central build.
+    spatial_reason: Strengthen the near-bed layer but keep the far wall dark; motion remains intimate.
+    transition_duration_s: 4.000
+    intended_visual_target: {mode: transition_end_at_track_event, track_time_s: 39.868662, description: Strip 13%; near bulb 8%.}
+    calculated_command_send_time_s: 36.031662
+    calculated_command_send_time: "0:36.032"
+    calculation: 39.868662 + 0.163 - 4.000
+    confidence: high
+    manual_tuning_notes: The exact phrase boundary may be perceived closer to the 0:40.287 tentative downbeat.
+    actions:
+      led_strip: {state: "on", brightness_pct: 13, xy_color: [0.505, 0.415], transition_s: 4.000}
+      near_bed_bulb: {state: "on", brightness_pct: 8, color_temp_kelvin: 2400, transition_s: 4.000}
+      far_room_bulb: {action: hold_off}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M05
+    exact_track_timestamp: "0:45.627"
+    track_time_s: 45.627211
+    cue_type: gradual
+    musical_reason: High-confidence structural change opens the transition into the pronounced transient sequence.
+    spatial_reason: First faint far-room fill makes the room acquire depth without becoming generally bright.
+    transition_duration_s: 3.000
+    intended_visual_target: {mode: transition_end_at_track_event, track_time_s: 45.627211, description: Far bulb first appears at 2%.}
+    calculated_command_send_time_s: 42.790211
+    calculated_command_send_time: "0:42.790"
+    calculation: 45.627211 + 0.163 - 3.000
+    confidence: high
+    manual_tuning_notes: Check the far bulb's minimum stable white-mode brightness and substitute 3% if 2% is unreliable.
+    actions:
+      led_strip: {state: "on", brightness_pct: 16, xy_color: [0.490, 0.410], transition_s: 3.000}
+      near_bed_bulb: {state: "on", brightness_pct: 12, color_temp_kelvin: 2500, transition_s: 3.000}
+      far_room_bulb: {state: "on", brightness_pct: 2, color_temp_kelvin: 2200, transition_s: 3.000}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M06
+    exact_track_timestamp: "0:51.873"
+    track_time_s: 51.873379
+    cue_type: accent
+    musical_reason: Strongest detected transient in the entire track; first member of a three-accent sequence.
+    spatial_reason: Use only the indirect strip so the accent is clear but not a whole-room flash.
+    transition_duration_s: 0.000
+    intended_visual_target: {mode: sharp_visible_onset_at_track_event, track_time_s: 51.873379, description: Brief +5 percentage-point strip pulse.}
+    calculated_command_send_time_s: 52.036379
+    calculated_command_send_time: "0:52.036"
+    calculation: 51.873379 + 0.163
+    confidence: high
+    manual_tuning_notes: Return command is modeled at 0:52.236; deduplicate this event from micro pattern P02.
+    actions:
+      led_strip: {action: pulse, base_brightness_pct: 16, peak_brightness_pct: 21, pulse_duration_ms: 200, xy_color: [0.490, 0.410], return_command_send_time_s: 52.236379}
+      near_bed_bulb: {action: hold}
+      far_room_bulb: {action: hold}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M07
+    exact_track_timestamp: "0:54.381"
+    track_time_s: 54.381134
+    cue_type: structural
+    musical_reason: Largest pre-climax novelty peak; low-frequency energy and recurring strong attacks become dominant.
+    spatial_reason: Convert the two bulbs from faint presence into an actual room-opening layer while the strip remains musical.
+    transition_duration_s: 1.500
+    intended_visual_target: {mode: transition_end_at_track_event, track_time_s: 54.381134, description: Strip 22%; near 22%; far 8%.}
+    calculated_command_send_time_s: 53.044134
+    calculated_command_send_time: "0:53.044"
+    calculation: 54.381134 + 0.163 - 1.500
+    confidence: high
+    manual_tuning_notes: The audible three-accent sequence continues through 0:57.864; retain P02 rather than adding bulb flashes.
+    actions:
+      led_strip: {state: "on", brightness_pct: 22, xy_color: [0.475, 0.405], transition_s: 1.500}
+      near_bed_bulb: {state: "on", brightness_pct: 22, color_temp_kelvin: 2700, transition_s: 1.500}
+      far_room_bulb: {state: "on", brightness_pct: 8, color_temp_kelvin: 2400, transition_s: 1.500}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M08
+    exact_track_timestamp: "1:11.819"
+    track_time_s: 71.819320
+    cue_type: structural
+    musical_reason: Sustained loudness and onset activity step into the full build; low-band ratio is approximately 0.74.
+    spatial_reason: Make both sides of the room legible while preserving brighter emphasis near the bed.
+    transition_duration_s: 3.000
+    intended_visual_target: {mode: transition_end_at_track_event, track_time_s: 71.819320, description: Room is visibly open but not yet at climax.}
+    calculated_command_send_time_s: 68.982320
+    calculated_command_send_time: "1:08.982"
+    calculation: 71.819320 + 0.163 - 3.000
+    confidence: high
+    manual_tuning_notes: Keep near/far asymmetry; do not replace the two actions with the Zigbee group entity.
+    actions:
+      led_strip: {state: "on", brightness_pct: 30, xy_color: [0.445, 0.400], transition_s: 3.000}
+      near_bed_bulb: {state: "on", brightness_pct: 38, color_temp_kelvin: 3000, transition_s: 3.000}
+      far_room_bulb: {state: "on", brightness_pct: 22, color_temp_kelvin: 2800, transition_s: 3.000}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M09
+    exact_track_timestamp: "1:26.959"
+    track_time_s: 86.958730
+    cue_type: climax
+    musical_reason: Highest combined energy/onset/spectral score; kinetic climax before the final loud plateau.
+    spatial_reason: Peak the cinematic color layer and raise both white-mode bulbs without yet using an abrupt overhead switch.
+    transition_duration_s: 0.800
+    intended_visual_target: {mode: transition_end_at_track_event, track_time_s: 86.958730, description: Pale-gold strip and brighter, slightly cooler room light peak together.}
+    calculated_command_send_time_s: 86.321730
+    calculated_command_send_time: "1:26.322"
+    calculation: 86.958730 + 0.163 - 0.800
+    confidence: high
+    manual_tuning_notes: Check whether 42% strip and 55% near bulb are comfortable from the pillow position.
+    actions:
+      led_strip: {state: "on", brightness_pct: 42, xy_color: [0.405, 0.385], transition_s: 0.800}
+      near_bed_bulb: {state: "on", brightness_pct: 55, color_temp_kelvin: 3400, transition_s: 0.800}
+      far_room_bulb: {state: "on", brightness_pct: 42, color_temp_kelvin: 3200, transition_s: 0.800}
+      large_light_circuit_1: {action: hold_off}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M10
+    exact_track_timestamp: "1:30.651"
+    track_time_s: 90.650703
+    cue_type: accent
+    musical_reason: Selected sharp onset at the entry to the final high-level plateau, close to the 1:30.395 structural candidate.
+    spatial_reason: Introduce only the first large-light circuit so the final wake-up remains staged rather than instantaneous.
+    transition_duration_s: 0.000
+    intended_visual_target: {mode: sharp_visible_onset_at_track_event, track_time_s: 90.650703, description: Large-light circuit 1 switches on.}
+    calculated_command_send_time_s: 90.813703
+    calculated_command_send_time: "1:30.814"
+    calculation: 90.650703 + 0.163
+    confidence: medium_low_optional
+    manual_tuning_notes: Aqara is ON/OFF only. Confirm which physical circuit is left and whether the step is too aggressive; this cue may be omitted.
+    actions:
+      led_strip: {action: hold}
+      near_bed_bulb: {action: hold}
+      far_room_bulb: {action: hold}
+      large_light_circuit_1: {state: "on", optional: true, transition_s: 0.000}
+      large_light_circuit_2: {action: hold_off}
+
+  - id: M11
+    exact_track_timestamp: "1:33.716"
+    track_time_s: 93.715737
+    cue_type: climax
+    musical_reason: Tentative downbeat during the second rise of the final loud plateau.
+    spatial_reason: Complete the large-room opening by adding the second overhead circuit after a three-second spatial delay.
+    transition_duration_s: 0.000
+    intended_visual_target: {mode: sharp_visible_onset_at_track_event, track_time_s: 93.715737, description: Large-light circuit 2 switches on.}
+    calculated_command_send_time_s: 93.878737
+    calculated_command_send_time: "1:33.879"
+    calculation: 93.715737 + 0.163
+    confidence: low_optional
+    manual_tuning_notes: Downbeat phase is not listening-verified. This is the highest-priority timestamp for manual correction and the cue may be omitted.
+    actions:
+      led_strip: {action: hold}
+      near_bed_bulb: {action: hold}
+      far_room_bulb: {action: hold}
+      large_light_circuit_1: {action: hold_on}
+      large_light_circuit_2: {state: "on", optional: true, transition_s: 0.000}
+
+  - id: M12
+    exact_track_timestamp: "1:36.665"
+    track_time_s: 96.664671
+    cue_type: ending
+    musical_reason: Tentative downbeat coincides with the onset of the sustained final decay; RMS begins falling rapidly after this point.
+    spatial_reason: Let the musical strip relax while both white-mode bulbs move toward useful morning illumination.
+    transition_duration_s: 7.267846
+    intended_visual_target:
+      mode: transition_start_at_track_event_and_end_at_ending_boundary
+      start_track_time_s: 96.664671
+      end_track_time_s: 103.932517
+      description: Settle begins with the fade and reaches the final morning state at 1:43.933.
+    calculated_command_send_time_s: 96.827671
+    calculated_command_send_time: "1:36.828"
+    calculation: 96.664671 + 0.163; transition duration = 103.932517 - 96.664671
+    confidence: high_for_fade_medium_for_exact_start
+    manual_tuning_notes: Transition timing must be verified on the actual bulbs; their curve may not be perceptually linear.
+    actions:
+      led_strip: {state: "on", brightness_pct: 24, xy_color: [0.455, 0.410], transition_s: 7.267846}
+      near_bed_bulb: {state: "on", brightness_pct: 72, color_temp_kelvin: 3800, transition_s: 7.267846}
+      far_room_bulb: {state: "on", brightness_pct: 68, color_temp_kelvin: 3600, transition_s: 7.267846}
+      large_light_circuit_1: {action: hold_on_if_M10_accepted}
+      large_light_circuit_2: {action: hold_on_if_M11_accepted}
+
+  - id: M13
+    exact_track_timestamp: "1:43.933"
+    track_time_s: 103.932517
+    cue_type: ending
+    musical_reason: High-confidence end-of-content/fade boundary; the remainder falls toward near-silence.
+    spatial_reason: Latch a useful morning state and explicitly avoid any end-of-track blackout.
+    transition_duration_s: 0.000
+    intended_visual_target: {mode: hold_state_no_new_command, track_time_s: 103.932517, description: Final scene remains active after the track ends.}
+    calculated_command_send_time_s: null
+    calculated_command_send_time: null
+    calculation: No command is required; sending an idempotent reassertion would add unnecessary ZigBee traffic.
+    confidence: high
+    manual_tuning_notes: Confirm final brightness with both optional Aqara circuits on and off; choose one accepted final variant later.
+    actions:
+      led_strip: {action: hold, brightness_pct: 24, xy_color: [0.455, 0.410]}
+      near_bed_bulb: {action: hold, brightness_pct: 72, color_temp_kelvin: 3800}
+      far_room_bulb: {action: hold, brightness_pct: 68, color_temp_kelvin: 3600}
+      large_light_circuit_1: {action: hold_previous}
+      large_light_circuit_2: {action: hold_previous}
+
+micro_cues:
+  - id: P01_early_downbeats
+    section: "0:26.610–0:45.627"
+    beat_downbeat_logic: Tentative downbeat every 4 beats; no pulses in the introduction.
+    affected_device: light.tasma_lozko
+    base_brightness_pct: "9–16, following the current macro state"
+    pulse_delta_pct: 2
+    pulse_duration_ms: 220
+    selected_track_times_s: [28.328345, 31.463039, 34.411973, 37.291247, 40.286621, 43.281995]
+    command_frequency: "one pulse every ~2.972 s; two messages per pulse = ~0.673 ZigBee commands/s"
+    latency_compensation: "rise send = selected track time + 0.163 s; return send = rise send + 0.220 s"
+    subtlety_reason: Only the indirect strip moves by two percentage points; both bulbs remain on macro transitions only.
+    confidence: medium
+
+  - id: P02_transient_triptych
+    section: "0:51.873–0:57.864"
+    beat_downbeat_logic: Three strongest musically grouped spectral transients, not a continuous beat grid.
+    affected_device: light.tasma_lozko
+    base_brightness_pct: "16–22, following M05/M07"
+    pulse_delta_pct: 4
+    pulse_duration_ms: 200
+    selected_track_times_s: [51.873379, 54.125714, 57.864127]
+    implementation_note: "The first event is macro cue M06; issue it once, not once from each list."
+    command_frequency: "three pulses over ~6.0 s; maximum local pair of messages is separated by 200 ms"
+    latency_compensation: "rise send = selected transient + 0.163 s; return send = rise send + 0.200 s"
+    subtlety_reason: The strongest track attacks receive strip-only glows; direct bulbs never flash.
+    confidence: high
+
+  - id: P03_mid_build_downbeats
+    section: "0:54.381–1:11.819"
+    beat_downbeat_logic: Tentative downbeat every 4 beats, beginning after the transient triptych.
+    affected_device: light.tasma_lozko
+    base_brightness_pct: "22–30, following M07/M08"
+    pulse_delta_pct: 3
+    pulse_duration_ms: 180
+    selected_track_times_s: [58.119546, 61.091701, 63.970975, 66.943129, 70.054603]
+    command_frequency: "one pulse every ~2.972 s; two messages per pulse = ~0.673 ZigBee commands/s"
+    latency_compensation: "rise send = selected track time + 0.163 s; return send = rise send + 0.180 s"
+    subtlety_reason: Three-point brightness motion remains visible in reflected light but does not turn the room into a beat visualizer.
+    confidence: medium_high
+
+  - id: P04_climax_downbeats
+    section: "1:11.819–1:30.651"
+    beat_downbeat_logic: Tentative downbeat every 4 beats; stronger delta only during the full build.
+    affected_device: light.tasma_lozko
+    base_brightness_pct: "30–42, following M08/M09"
+    pulse_delta_pct: 4
+    pulse_duration_ms: 160
+    selected_track_times_s: [72.887438, 75.882812, 78.901406, 81.873560, 84.892154, 87.887528]
+    command_frequency: "one pulse every ~2.972 s; two messages per pulse = ~0.673 ZigBee commands/s"
+    latency_compensation: "rise send = selected track time + 0.163 s; return send = rise send + 0.160 s"
+    subtlety_reason: Four-point pulses are confined to the indirect strip and stop before the abrupt Aqara cues and final fade.
+    confidence: medium
+
+traffic_budget:
+  regular_peak_rate_commands_per_s: 0.673
+  brief_return_pair_spacing_ms: 160
+  bulbs_receive_micro_cues: false
+  aqara_receive_micro_cues: false
+  design_rule: Never translate every detected onset or every 80.75 BPM beat into a ZigBee command.
+
+manual_acceptance_required:
+  - Verify perceived beat/downbeat phase, especially M11 at 1:33.716.
+  - Verify minimum stable brightness for both bulbs in white mode.
+  - Verify transition support and actual transition curve on all three dimmable lights.
+  - Map Aqara left/right endpoints to the physical large-light circuits and judge whether either ON step is too aggressive.
+  - Validate the 163 ms model with the eventual playback program; MP3 reports a 25.057 ms stream start time.
+  - Approve the final scene with and without the optional Aqara cues.

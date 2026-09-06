@@ -1,0 +1,199 @@
+{
+  "status": "complete_with_cpu_fallback",
+  "verdict": "B: SFT smoke technically works via CPU fallback, but quality eval does not justify larger SFT before improving SFT data/eval and ROCm stability.",
+  "base_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+  "reference_latest_diagnostic": "checkpoints/glyph-100m-v2_3_1-50k/latest.pt",
+  "sft_output_dir": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke",
+  "sft_final_checkpoint": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-final.pt",
+  "sft_best_checkpoint": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-best.pt",
+  "failed_rocm_attempt": {
+    "reason": "non_finite_loss",
+    "step": 3,
+    "checkpoint": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-nan.pt",
+    "latest_overwritten": false,
+    "diagnosis": "ROCm backward produced non-finite gradients on SFT batches; CPU sanity was finite."
+  },
+  "cpu_smoke": {
+    "device": "cpu",
+    "threads": 6,
+    "steps": 150,
+    "learning_rate": "5e-6 -> 1e-6 cosine",
+    "batch_size": 4,
+    "train_loss_first_logged": 4.3119,
+    "train_loss_last_logged": 3.1373,
+    "val_losses": [
+      {
+        "time": "2026-06-24 09:25:38",
+        "step": 25,
+        "val_loss": 3.524
+      },
+      {
+        "time": "2026-06-24 09:26:10",
+        "step": 50,
+        "val_loss": 3.1065
+      },
+      {
+        "time": "2026-06-24 09:26:49",
+        "step": 75,
+        "val_loss": 3.2529
+      },
+      {
+        "time": "2026-06-24 09:27:12",
+        "step": 100,
+        "val_loss": 3.0224
+      },
+      {
+        "time": "2026-06-24 09:27:51",
+        "step": 125,
+        "val_loss": 3.0695
+      },
+      {
+        "time": "2026-06-24 09:28:15",
+        "step": 150,
+        "val_loss": 3.1069
+      },
+      {
+        "time": "2026-06-24 09:28:20",
+        "step": 150,
+        "val_loss": 2.8828
+      }
+    ],
+    "best_val_loss": 2.8828,
+    "final_val_loss": 2.8828,
+    "avg_logged_tok_s": 183.1,
+    "nan_inf_oom_crash": "none during CPU fallback run"
+  },
+  "dataset": {
+    "examples": 1500,
+    "categories": {
+      "anty_petle": 150,
+      "krotkie_poprawki_tekstu": 150,
+      "ostrozne_odpowiedzi_przy_niepewnosci": 150,
+      "codzienne_proste_pytania": 150,
+      "proste_techniczne_wyjasnienia": 150,
+      "brak_danych": 150,
+      "krotkie_definicje": 150,
+      "mini_streszczenia": 150,
+      "naturalne_zakonczenia": 150,
+      "mvp_first_project_advice": 150
+    },
+    "train_examples": 1350,
+    "val_examples": 150,
+    "max_template_tokens": 65,
+    "over_context": 0,
+    "duplicates": {
+      "duplicate_instructions_extra": 0,
+      "duplicate_pairs_extra": 0
+    },
+    "suspicious_phrase_counts": {
+      "w latach 1975-1998": 0,
+      "w latach 1975–1998": 0,
+      "gminie": 0,
+      "powiecie": 0,
+      "strona główna": 0,
+      "cookies": 0,
+      "kup teraz": 0,
+      "dodaj do koszyka": 0,
+      "zaloguj": 0,
+      "zarejestruj": 0,
+      "polityka prywatności": 0,
+      "jako model językowy": 0,
+      "jako sztuczna inteligencja": 0
+    }
+  },
+  "eval": {
+    "baseline_summary": {
+      "base_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+      "sft_checkpoint": null,
+      "base_step": 44000,
+      "sft_step": null,
+      "base_variant": "glyph-100m",
+      "sft_variant": null,
+      "examples": 28,
+      "winners": {},
+      "base_avg_score": 4.214285714285714,
+      "sft_avg_score": null,
+      "base_repetition_samples": 0,
+      "sft_repetition_samples": null,
+      "base_web_residue": 0,
+      "sft_web_residue": null,
+      "base_pseudo_ency": 1,
+      "sft_pseudo_ency": null
+    },
+    "before_after_summary": {
+      "base_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+      "sft_checkpoint": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-final.pt",
+      "base_step": 44000,
+      "sft_step": 150,
+      "base_variant": "glyph-100m",
+      "sft_variant": "glyph-100m",
+      "examples": 28,
+      "winners": {
+        "tie": 25,
+        "base": 3
+      },
+      "base_avg_score": 4.214285714285714,
+      "sft_avg_score": 3.7142857142857144,
+      "base_repetition_samples": 0,
+      "sft_repetition_samples": 0,
+      "base_web_residue": 0,
+      "sft_web_residue": 2,
+      "base_pseudo_ency": 1,
+      "sft_pseudo_ency": 0
+    }
+  },
+  "checkpoints": [
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-best.pt",
+      "size_bytes": 1175134471,
+      "size_gb": 1.094
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-final.pt",
+      "size_bytes": 1175134889,
+      "size_gb": 1.094
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-latest.pt",
+      "size_bytes": 1175134471,
+      "size_gb": 1.094
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-nan.pt",
+      "size_bytes": 1175137471,
+      "size_gb": 1.094
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/step_000050.pt",
+      "size_bytes": 1175122703,
+      "size_gb": 1.094
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/step_000100.pt",
+      "size_bytes": 1175122703,
+      "size_gb": 1.094
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/step_000150.pt",
+      "size_bytes": 1175122703,
+      "size_gb": 1.094
+    }
+  ],
+  "files": {
+    "dataset": "data/sft/glyph100_sft_smoke_v0.jsonl",
+    "dataset_report_md": "data/sft/glyph100_sft_smoke_v0_report.md",
+    "dataset_report_json": "data/sft/glyph100_sft_smoke_v0_report.json",
+    "baseline_eval_md": "eval/glyph-100m/sft_smoke_44k_baseline.md",
+    "baseline_eval_json": "eval/glyph-100m/sft_smoke_44k_baseline.json",
+    "before_after_md": "eval/glyph-100m/sft_smoke_44k_before_after.md",
+    "before_after_json": "eval/glyph-100m/sft_smoke_44k_before_after.json",
+    "train_log": "logs/glyph-100m-v2_3_1-44k-sft-smoke/train.log",
+    "emergency_report": "logs/glyph-100m-v2_3_1-44k-sft-smoke/emergency_stop.json"
+  },
+  "next_recommendation": [
+    "Do not run larger SFT yet.",
+    "Fix ROCm SFT backward instability or use CPU only for very small SFT probes.",
+    "Improve SFT dataset with more varied instruction behavior and add stronger eval before a larger SFT v1.",
+    "If continuing, run a smaller LR/better curated SFT v0.1 smoke and require SFT wins over base before scaling."
+  ]
+}

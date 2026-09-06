@@ -1,0 +1,8 @@
+{
+  "status": "model-missing",
+  "updated_at": "2026-09-06T01:23:50.386052+00:00",
+  "model": "Gemma 4 E4B",
+  "message": "expected GGUF model at /home/maksu/ai-model/models/gemma4/gemma-4-e4b-it-q4_k_m.gguf",
+  "report": "",
+  "overall_avg": null
+}

@@ -1,0 +1,32 @@
+{
+  "status": "v2.4.2 matched 10k/12.5k/15k generation eval measured on CPU; canonical best crowned: 15k (step_0015000.pt = latest.pt weights); parity vs v2.3.1 44k; training STOP recommended",
+  "history": [
+    {"at_utc": "2026-09-01T19:57:00+00:00", "status_was": "v2.4.2 15k checkpoint complete; eval pending"},
+    {"at_utc": "2026-09-05T00:00:00+00:00", "status_was": "v2.4.2 15k run reported; matched 10k/12.5k/15k generation eval scripted, execution pending (no shell in 2026-09-05 session)"}
+  ],
+  "model": "Glyph-100M",
+  "current_dataset": "glyph100_dataset_v2_4_2_core",
+  "resume_step": 10000,
+  "current_target_step": 15000,
+  "completed_step": 15000,
+  "completed_at_utc": "2026-09-01T18:37:33+00:00",
+  "final_train_loss": 4.094,
+  "final_val_loss": 3.9755,
+  "exit_code": 0,
+  "current_log": "logs/glyph-100m-v2_4_2-15k/train.log",
+  "current_checkpoint_dir": "checkpoints/glyph-100m-v2_4_2-15k",
+  "resume_checkpoint": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+  "previous_branch_best_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+  "verdict": "canonical best v2.4.2 is 15k (avg 3.525, pairwise 12-9 vs 10k and 19-4 vs 12.5k, 10/40 natural endings, manual review clean of regression); vs v2.3.1 44k rough parity (13-11-16, avg 3.525 vs 3.350); generation confirms val plateau so training STOPS",
+  "warning": "Base LM research checkpoint only; no further training approved (STOP recommended, no 20k without reviewed LR change).",
+  "next_step": "publish reports (done 2026-09-05); optional follow-ups only: none training-related",
+  "run_report": "reports/glyph100_v2_4_2_10k_15k_run_20260905.json",
+  "eval_script": "scripts/eval_glyph100_v242_15k_trajectory.py",
+  "eval_spec": "reports/glyph100_v2_4_2_15k_matched_eval_20260905.json",
+  "eval_device": "cpu (no CUDA on eval host; noted in matched eval report)",
+  "provisional_best_checkpoint": "checkpoints/glyph-100m-v2_4_2-10k/step_0010000.pt",
+  "canonical_best_checkpoint": "checkpoints/glyph-100m-v2_4_2-15k/step_0015000.pt",
+  "canonical_best_equivalent": "checkpoints/glyph-100m-v2_4_2-15k/latest.pt (413/413 weight tensors identical, verified 2026-09-05)",
+  "canonical_best_selected": true,
+  "updated_at_utc": "2026-09-05T14:51:23+00:00"
+}

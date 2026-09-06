@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "2026-08-08T09:33:28Z",
+  "status": "BLOCKED_BEFORE_TRAINING",
+  "decision": {
+    "repeat_full_v0_3_400_steps": false,
+    "reason": "SFT v0.3 already completed locally for 586 steps and was worse than v0.2 in broad evaluation",
+    "run_short_cuda_compatibility_smoke": true,
+    "requested_smoke_steps": 25
+  },
+  "kaggle": {
+    "account": "maksymilianputa",
+    "dataset": "maksymilianputa/glyph100-sft-cuda-smoke-input",
+    "dataset_visibility": "private",
+    "dataset_status": "ready",
+    "kernel": "maksymilianputa/glyph-100m-v0-3-p100-cuda-smoke",
+    "kernel_visibility": "private",
+    "requested_accelerator": "NvidiaTeslaP100",
+    "kernel_metadata_enable_gpu": true,
+    "kernel_metadata_machine_shape": "Gpu",
+    "runtime_cuda_available": false
+  },
+  "input": {
+    "base_step": 44000,
+    "variant": "glyph-100m",
+    "dataset": "glyph100_sft_smoke_v0_3",
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "transport_archive_bytes": 363022578,
+    "transport_archive_sha256": "dd0016c992015daa9d6f9955046b8bc30943bd5e9d2c3f89927eb35803169790",
+    "verified_payload_files": 12,
+    "contains_checkpoint_50k": false,
+    "contains_secrets": false
+  },
+  "attempts": [
+    {
+      "version": 1,
+      "stopped_at_seconds": 0.964,
+      "reason": "nvidia-smi executable absent",
+      "optimizer_steps": 0,
+      "log": "glyph100_kaggle_p100_smoke_attempt_v1_log.json"
+    },
+    {
+      "version": 2,
+      "stopped_at_seconds": 1.079,
+      "reason": "Kaggle unpacked the tar archive and mounted individual files",
+      "optimizer_steps": 0,
+      "log": "glyph100_kaggle_p100_smoke_attempt_v2_log.json"
+    },
+    {
+      "version": 3,
+      "stopped_at_seconds": 8.655,
+      "reason": "torch.cuda.is_available() returned false",
+      "optimizer_steps": 0,
+      "log": "glyph100_kaggle_p100_smoke_attempt_v3_log.json"
+    }
+  ],
+  "safety": {
+    "training_started": false,
+    "optimizer_steps": 0,
+    "checkpoints_written": 0,
+    "existing_local_checkpoints_modified": false,
+    "public_resources_created": 0,
+    "automatic_retry_allowed": false
+  },
+  "likely_blocker": "Kaggle account accelerator eligibility, commonly phone/account verification",
+  "next_action": "Complete Kaggle phone/account verification, confirm GPU availability, then rerun only the existing 25-step compatibility smoke"
+}

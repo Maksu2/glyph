@@ -1,0 +1,560 @@
+<|user|>
+Nie powtarzaj: jak kończyć odpowiedź? Zakończ naturalnie.
+<|assistant|>
+Zakończ ją wtedy, gdy główna myśl jest jasna.
+<|end|>
+<|user|>
+Wyjaśnij w dwóch zdaniach, dlaczego niższy loss nie zawsze wystarcza. Zakończ po ostatnim zdaniu.
+<|assistant|>
+Niższy loss może oznaczać lepsze przewidywanie danych walidacyjnych. Jakość generacji trzeba jednak sprawdzić na przykładach, bo model może nadal powtarzać albo dryfować.
+<|end|>
+<|user|>
+Streść w jednym zdaniu: Model bazowy kontynuuje tekst, więc nie należy oceniać go jak asystenta po instrukcyjnym tuningu.
+<|assistant|>
+Model bazowy ocenia się jako generator kontynuacji.
+<|end|>
+<|user|>
+Skróć tekst: W małym modelu krótki kontekst ogranicza zdolność utrzymania dłuższej wypowiedzi.
+<|assistant|>
+Krótki kontekst ogranicza długie generacje.
+<|end|>
+<|user|>
+Czy model może zmyślać?
+<|assistant|>
+Tak. Model językowy może generować tekst brzmiący pewnie, nawet gdy informacja jest błędna.
+<|end|>
+<|user|>
+Skróć i popraw: Proszę o przesłanie informacji zwrotnej w temacie tej sprawy.
+<|assistant|>
+Proszę o informację zwrotną w tej sprawie.
+<|end|>
+<|user|>
+Podaj krótkie streszczenie: Ewaluacja jakościowa nie jest idealna, ale pokazuje problemy niewidoczne w samym loss.
+<|assistant|>
+Eval jakościowy uzupełnia loss.
+<|end|>
+<|user|>
+Napisz sedno tego tekstu: Dashboard ma pomagać w decyzjach, a nie tylko pokazywać dużo liczb.
+<|assistant|>
+Dashboard powinien wspierać decyzje.
+<|end|>
+<|user|>
+Czym jest MVP?
+<|assistant|>
+MVP to najmniejsza wersja produktu, która pozwala sprawdzić główne założenie.
+<|end|>
+<|user|>
+Podaj prostą definicję: wdrożenie.
+<|assistant|>
+Wdrożenie to uruchomienie projektu w miejscu, gdzie może z niego korzystać użytkownik.
+<|end|>
+<|user|>
+Podaj prostą definicję: proces.
+<|assistant|>
+Proces to uruchomiony program wraz z pamięcią i zasobami systemu.
+<|end|>
+<|user|>
+Opisz krótko, po co robi się smoke test SFT. Zakończ jasno.
+<|assistant|>
+Smoke test SFT sprawdza, czy model reaguje na format instrukcji i czy trening jest stabilny. Nie jest jeszcze dowodem, że model nadaje się do użycia jako asystent.
+<|end|>
+<|user|>
+Zakończ jasno: kiedy nie zgadywać? Nie dodawaj kolejnej wersji tej samej myśli.
+<|assistant|>
+Nie zgaduj, gdy brakuje kryteriów, danych wejściowych albo punktu odniesienia.
+<|end|>
+<|user|>
+Odpowiedz praktycznie: Czy warto od razu robić konta użytkowników?
+<|assistant|>
+Tylko jeśli są konieczne do głównego celu. W przeciwnym razie zacznij bez kont.
+<|end|>
+<|user|>
+Co oznacza termin „wątek”?
+<|assistant|>
+Wątek to część procesu, która może wykonywać pracę równolegle z innymi wątkami.
+<|end|>
+<|user|>
+Czy ten wynik jest dobry? Odpowiedz uczciwie.
+<|assistant|>
+Brakuje punktu odniesienia i kryteriów oceny. Bez nich nie da się powiedzieć, czy wynik jest dobry.
+<|end|>
+<|user|>
+Podaj rozsądny następny krok: Jak zrobić projekt portfolio?
+<|assistant|>
+Pokaż działający efekt, decyzje techniczne, ograniczenia i wnioski. To jest cenniejsze niż lista technologii.
+<|end|>
+<|user|>
+Skróć i popraw: Chciałbym poinformować, że nie zdążę oddać pracy dzisiaj.
+<|assistant|>
+Nie zdążę dziś oddać pracy.
+<|end|>
+<|user|>
+Opisz krótko, co oznacza dobry raport techniczny. Krótkim akapitem.
+<|assistant|>
+Dobry raport techniczny podaje cel, ustawienia, wynik i ograniczenia. Powinien pozwolić wrócić do decyzji bez zgadywania, co było testowane.
+<|end|>
+<|user|>
+Odpowiedz bez powtórzeń: jak pisać krócej?
+<|assistant|>
+Usuń dygresje i zostaw tylko informację potrzebną do decyzji.
+<|end|>
+<|user|>
+Streść w jednym zdaniu: Nie każdy problem wymaga aplikacji, kont użytkowników i dashboardu. Czasem wystarczy prosty skrypt albo plik tekstowy.
+<|assistant|>
+Najprostsze rozwiązanie bywa wystarczające.
+<|end|>
+<|user|>
+Czy model po SFT staje się asystentem? Bez przesadnej pewności.
+<|assistant|>
+Nie automatycznie. SFT może poprawić format, ale jakość zależy od bazy i datasetu.
+<|end|>
+<|user|>
+Popraw tekst: Ten tekst jest napisany w sposób niezbyt dobry i trzeba go poprawić.
+<|assistant|>
+Ten tekst wymaga poprawy.
+<|end|>
+<|user|>
+Czy zmiana temperatury naprawi model? Bez przesadnej pewności.
+<|assistant|>
+Może poprawić stabilność generacji, ale nie naprawi braków danych ani wiedzy.
+<|end|>
+<|user|>
+Napisz sedno tego tekstu: Jeśli uczysz się tylko przez czytanie odpowiedzi, łatwo pomylić znajomość tekstu ze zrozumieniem.
+<|assistant|>
+Samo czytanie odpowiedzi nie gwarantuje zrozumienia.
+<|end|>
+<|user|>
+Zakończ jasno: kiedy nie zgadywać? Krótko.
+<|assistant|>
+Nie zgaduj, gdy brakuje kryteriów, danych wejściowych albo punktu odniesienia.
+<|end|>
+<|user|>
+Co zrobić, gdy mam za dużo zadań? Daj prostą radę.
+<|assistant|>
+Spisz zadania, wybierz najpilniejsze i usuń albo odłóż te, które nie są konieczne dziś.
+<|end|>
+<|user|>
+Wyjaśnij w dwóch zdaniach, po co robi się checkpointy. Bez listy.
+<|assistant|>
+Checkpoint zapisuje stan modelu i optimizera w konkretnym momencie. Dzięki temu można wznowić trening albo wrócić do lepszego punktu.
+<|end|>
+<|user|>
+Czy ten komputer wystarczy? Odpowiedz ostrożnie.
+<|assistant|>
+To zależy od zastosowania. Podaj programy, budżet i wymagania, wtedy da się ocenić sensownie.
+<|end|>
+<|user|>
+Odpowiedz krótko: kiedy dataset jest za słaby? Zakończ po kompletnej odpowiedzi.
+<|assistant|>
+Dataset jest za słaby, gdy próbki pokazują śmieci, duplikaty albo zbyt wąski styl.
+<|end|>
+<|user|>
+W jednym akapicie: Czym jest overfitting w modelu językowym?
+<|assistant|>
+Overfitting występuje, gdy model uczy się zbyt konkretnych wzorców z datasetu i gorzej uogólnia.
+<|end|>
+<|user|>
+Czy ten błąd jest poważny? Wskaż brakujące dane.
+<|assistant|>
+Trzeba znać komunikat błędu, miejsce wystąpienia i wpływ na działanie systemu.
+<|end|>
+<|user|>
+Podaj rozsądny następny krok: Mam dużo pomysłów i nie wiem od czego zacząć.
+<|assistant|>
+Wybierz jeden mierzalny cel na najbliższy etap. Po jego wykonaniu łatwiej zdecydować, co ma sens dalej.
+<|end|>
+<|user|>
+Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez drugiej myśli.
+<|assistant|>
+Loss pokazuje, czy model uczy się przewidywać dane treningowe lub walidacyjne.
+<|end|>
+<|user|>
+Co oznacza termin „inferencja”?
+<|assistant|>
+Inferencja to użycie wytrenowanego modelu do wygenerowania wyniku.
+<|end|>
+<|user|>
+Czy ten wynik jest dobry? Nie dopowiadaj faktów.
+<|assistant|>
+Brakuje punktu odniesienia i kryteriów oceny. Bez nich nie da się powiedzieć, czy wynik jest dobry.
+<|end|>
+<|user|>
+Ten tekst nie powinien się zapętlać. Wyjaśnij krótko dlaczego. Bez drugiej myśli.
+<|assistant|>
+Zapętlenie utrudnia zrozumienie i nie dodaje nowych informacji.
+<|end|>
+<|user|>
+Opisz krótko, co oznacza dobry raport techniczny. Odpowiedz spokojnie.
+<|assistant|>
+Dobry raport techniczny podaje cel, ustawienia, wynik i ograniczenia. Powinien pozwolić wrócić do decyzji bez zgadywania, co było testowane.
+<|end|>
+<|user|>
+W jednym akapicie: Co oznacza OOM?
+<|assistant|>
+OOM oznacza brak pamięci potrzebnej do wykonania operacji.
+<|end|>
+<|user|>
+Wyjaśnij, dlaczego nie warto powtarzać tej samej frazy. Bez listy.
+<|assistant|>
+Powtarzanie tej samej frazy nie dodaje informacji i szybko psuje czytelność odpowiedzi. Jeśli myśl jest kompletna, lepiej zakończyć tekst.
+<|end|>
+<|user|>
+Napisz naturalniej: Proces treningu został zakończony w sposób poprawny.
+<|assistant|>
+Trening zakończył się poprawnie.
+<|end|>
+<|user|>
+Czy wybrałem dobrą technologię? Odpowiedz krótko.
+<|assistant|>
+To zależy od wymagań projektu, zespołu i czasu. Bez tych danych odpowiedź byłaby zbyt ogólna.
+<|end|>
+<|user|>
+Napisz neutralną wiadomość, że nie mogę dziś przyjść. Naturalnie.
+<|assistant|>
+Cześć, niestety nie mogę dziś przyjść. Dam znać, kiedy będę dostępny.
+<|end|>
+<|user|>
+Czy ten komputer wystarczy? Nie zgaduj.
+<|assistant|>
+To zależy od zastosowania. Podaj programy, budżet i wymagania, wtedy da się ocenić sensownie.
+<|end|>
+<|user|>
+Czy test na małej próbce wystarcza? Wskaż ograniczenie.
+<|assistant|>
+Wystarcza do wstępnej decyzji, ale nie do mocnego wniosku jakościowego.
+<|end|>
+<|user|>
+Co zrobić, gdy odpowiedź jest zbyt długa? Daj prostą radę.
+<|assistant|>
+Usuń powtórzenia i zostaw tylko informacje potrzebne do decyzji.
+<|end|>
+<|user|>
+Krótko: co robi tokenizer? Jednym akapitem.
+<|assistant|>
+Tokenizer zamienia tekst na tokeny, z którymi pracuje model.
+<|end|>
+<|user|>
+Co zrobić? Co jest lepsze: mniej funkcji czy więcej niedokończonych?
+<|assistant|>
+Mniej funkcji, ale działających. Niedokończone funkcje zwykle obniżają wiarygodność projektu.
+<|end|>
+<|user|>
+Co oznacza termin „debugowanie”?
+<|assistant|>
+Debugowanie to szukanie przyczyny błędu i sprawdzanie, co faktycznie dzieje się w programie.
+<|end|>
+<|user|>
+W jednym akapicie: Czym jest scheduler learning rate?
+<|assistant|>
+Scheduler zmienia learning rate w czasie, na przykład po rozgrzewce stopniowo go zmniejsza.
+<|end|>
+<|user|>
+Nie powtarzaj: jak kończyć odpowiedź? Jednym akapitem.
+<|assistant|>
+Zakończ ją wtedy, gdy główna myśl jest jasna.
+<|end|>
+<|user|>
+Odpowiedz spokojnie: projekt nie działa, co teraz? Naturalnie.
+<|assistant|>
+Zacznij od sprawdź ostatnią zmianę, log błędu i najprostszy sposób odtworzenia problemu.
+<|end|>
+<|user|>
+Czy wynik evala jest wiarygodny? Krótko.
+<|assistant|>
+Trzeba znać liczbę promptów, ustawienia generacji i metodę oceny.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Bez dodatkowego komentarza.
+<|assistant|>
+Krótka odpowiedź powinna zawierać jedną myśl i zakończyć się, gdy ta myśl jest jasna.
+<|end|>
+<|user|>
+Czy ten projekt warto pokazać? Jednym akapitem.
+<|assistant|>
+Nie wiadomo bez celu, odbiorcy i aktualnego stanu projektu.
+<|end|>
+<|user|>
+Napisz krótkie wyjaśnienie, dlaczego nie warto zgadywać bez danych. Bez rozwijania w kolejny temat.
+<|assistant|>
+Zgadywanie może prowadzić do złych decyzji. Lepiej jasno wskazać brakujące informacje.
+<|end|>
+<|user|>
+Podaj prostą definicję: cache.
+<|assistant|>
+Cache to szybka pamięć podręczna używana po to, żeby nie liczyć lub pobierać tych samych danych ponownie.
+<|end|>
+<|user|>
+Wyjaśnij w trzech zdaniach, dlaczego czysty dataset jest ważny. Bez lania wody.
+<|assistant|>
+Model uczy się wzorców z danych, także tych niepożądanych. Jeśli dataset zawiera reklamy, menu i spam, model może je później powtarzać. Dlatego jakość danych jest ważniejsza niż sama liczba tokenów.
+<|end|>
+<|user|>
+Przeredaguj zdanie: Wyniki pokazują, że doszło do poprawy jakości.
+<|assistant|>
+Wyniki pokazują poprawę jakości.
+<|end|>
+<|user|>
+Jedno zdanie: dlaczego powtórzenia są problemem? Jednym akapitem.
+<|assistant|>
+Powtórzenia utrudniają czytanie i zwykle nie dodają nowych informacji.
+<|end|>
+<|user|>
+Czy powinienem to kupić? Co trzeba wiedzieć?
+<|assistant|>
+Brakuje informacji o produkcie, cenie, stanie i twoich potrzebach. Bez tego można tylko zgadywać.
+<|end|>
+<|user|>
+Zakończ naturalnie: czy większy model zawsze pomaga? Krótko.
+<|assistant|>
+Nie, większy model nadal zależy od jakości danych i treningu.
+<|end|>
+<|user|>
+Podaj prostą definicję: błąd.
+<|assistant|>
+Błąd to zachowanie programu niezgodne z oczekiwaniem.
+<|end|>
+<|user|>
+Co oznacza termin „interfejs”?
+<|assistant|>
+Interfejs to sposób komunikacji użytkownika albo programu z systemem.
+<|end|>
+<|user|>
+Zakończ jasno: kiedy nie zgadywać? Nie zaczynaj nowego tematu.
+<|assistant|>
+Nie zgaduj, gdy brakuje kryteriów, danych wejściowych albo punktu odniesienia.
+<|end|>
+<|user|>
+Jak kończyć odpowiedź? Bez listy.
+<|assistant|>
+Zakończ wtedy, gdy główna myśl jest jasna i nie dodawaj nowych wątków na siłę.
+<|end|>
+<|user|>
+Jak uniknąć złych decyzji technicznych? Odpowiedz krótko.
+<|assistant|>
+Zapisuj założenia i sprawdzaj je krótkimi testami.
+<|end|>
+<|user|>
+Podaj krótkie streszczenie: Jeśli test zależy od losowego samplingu, trzeba sprawdzić kilka seedów.
+<|assistant|>
+Kilka seedów pomaga odróżnić jakość od losowości.
+<|end|>
+<|user|>
+Czy mam za mało RAM-u? Podaj uczciwą odpowiedź.
+<|assistant|>
+Trzeba znać użycie pamięci pod obciążeniem. Sam rozmiar RAM-u nie mówi, czy jest problem.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Zakończ naturalnie.
+<|assistant|>
+Krótka odpowiedź powinna zawierać jedną myśl i zakończyć się, gdy ta myśl jest jasna.
+<|end|>
+<|user|>
+Jak nie przeciążyć planu?
+<|assistant|>
+Dodawaj rezerwę czasu i nie zakładaj, że wszystko zadziała za pierwszym razem.
+<|end|>
+<|user|>
+Czy zmiana temperatury naprawi model? Krótko.
+<|assistant|>
+Może poprawić stabilność generacji, ale nie naprawi braków danych ani wiedzy.
+<|end|>
+<|user|>
+Nie powtarzaj: co robi repetition penalty? Bez dygresji.
+<|assistant|>
+Zmniejsza szansę powtarzania tych samych tokenów lub fraz.
+<|end|>
+<|user|>
+Czy ten wynik jest poprawny?
+<|assistant|>
+Nie mam danych wejściowych ani oczekiwanego wyniku, więc nie da się tego rzetelnie sprawdzić.
+<|end|>
+<|user|>
+Popraw tekst: Nie mogę przyjść dzisiaj, bo wystąpiła u mnie sytuacja prywatna.
+<|assistant|>
+Nie mogę dziś przyjść z powodów prywatnych.
+<|end|>
+<|user|>
+Przeredaguj zdanie: Projekt może być ciekawy, ale obecnie ma zbyt wiele funkcji planowanych na start.
+<|assistant|>
+Projekt jest ciekawy, ale ma zbyt szeroki zakres na start.
+<|end|>
+<|user|>
+Czy kontynuować, gdy wynik jest mieszany?
+<|assistant|>
+Zacznij od trzeba ustalić, czy problem wynika z danych, modelu, czy sposobu oceny.
+<|end|>
+<|user|>
+Bez pętli: co zrobić, gdy odpowiedź jest kompletna? Nie zaczynaj nowego tematu.
+<|assistant|>
+Zakończyć ją i nie dopisywać kolejnych wersji tej samej myśli.
+<|end|>
+<|user|>
+Zakończ odpowiedź po drugim zdaniu: czym jest tokenizer? W jednym akapicie.
+<|assistant|>
+Tokenizer dzieli tekst na tokeny. Dzięki temu model może pracować na liczbach zamiast bezpośrednio na znakach.
+<|end|>
+<|user|>
+Jak zacząć naukę nowego narzędzia? Bez listy.
+<|assistant|>
+Uruchom najmniejszy przykład i dopiero potem dodawaj bardziej złożone elementy.
+<|end|>
+<|user|>
+Przeredaguj zdanie: Ten projekt jest bardzo dobry, ponieważ posiada wiele funkcji i działa w dobry sposób.
+<|assistant|>
+Ten projekt jest solidny, bo ma wiele przydatnych funkcji i działa stabilnie.
+<|end|>
+<|user|>
+Mam pomysł na pięć modułów.
+<|assistant|>
+Zacznij od jednego modułu i pokaż jego wartość. Kolejne moduły dodawaj po sprawdzeniu pierwszego.
+<|end|>
+<|user|>
+Czy krótsze odpowiedzi zawsze są lepsze? Bez przesadnej pewności.
+<|assistant|>
+Nie, Są lepsze wtedy, gdy odpowiadają na pytanie bez utraty potrzebnych informacji.
+<|end|>
+<|user|>
+Nie powtarzaj frazy: czy warto trenować dalej bez evala? Jednym akapitem.
+<|assistant|>
+Nie warto, bo bez evala nie wiadomo, czy model faktycznie się poprawia.
+<|end|>
+<|user|>
+Odpowiedz krótko: czego nie da się ocenić bez danych? Nie dodawaj przykładu.
+<|assistant|>
+Bez danych nie da się rzetelnie ocenić jakości, bezpieczeństwa ani opłacalności decyzji.
+<|end|>
+<|user|>
+Odpowiedz prosto: Czym jest top-k sampling?
+<|assistant|>
+Top-k sampling ogranicza wybór kolejnego tokenu do kilku najbardziej prawdopodobnych opcji.
+<|end|>
+<|user|>
+Podaj rozsądny następny krok: Mam pomysł na aplikację i chcę od razu zrobić logowanie, dashboard i AI.
+<|assistant|>
+Najpierw zbuduj najmniejszą wersję, która pokazuje główną wartość. Logowanie i dashboard dodaj dopiero, gdy podstawowy przepływ działa.
+<|end|>
+<|user|>
+Przeredaguj zdanie: Należy dokonać sprawdzenia poprawności działania programu.
+<|assistant|>
+Trzeba sprawdzić, czy program działa poprawnie.
+<|end|>
+<|user|>
+Czy mam kupić ten sprzęt? Nie zgaduj.
+<|assistant|>
+Potrzebny jest model, cena, stan sprzętu i zastosowanie. Bez tego odpowiedź byłaby zgadywaniem.
+<|end|>
+<|user|>
+Czy SFT może popsuć styl bazowy?
+<|assistant|>
+Tak. Zbyt mocny albo schematyczny SFT może ograniczyć naturalność generacji.
+<|end|>
+<|user|>
+Jak wybrać temat projektu? Bez listy.
+<|assistant|>
+Wybierz temat, który da się zrealizować w dostępnym czasie i który możesz pokazać działająco.
+<|end|>
+<|user|>
+Podaj krótkie streszczenie: Najpierw warto sprawdzić, czy pipeline działa, zanim zwiększy się skalę eksperymentu.
+<|assistant|>
+Skalę zwiększa się po sprawdzeniu pipeline’u.
+<|end|>
+<|user|>
+W jednym akapicie: Czym jest inference preset?
+<|assistant|>
+Inference preset to zestaw ustawień generacji, na przykład temperatura i liczba tokenów.
+<|end|>
+<|user|>
+Krótko i konkretnie: Czym jest scheduler learning rate?
+<|assistant|>
+Scheduler zmienia learning rate w czasie, na przykład po rozgrzewce stopniowo go zmniejsza.
+<|end|>
+<|user|>
+W jednym akapicie: Po co są logi treningu?
+<|assistant|>
+Logi treningu pokazują kroki, loss, prędkość, checkpointy i błędy.
+<|end|>
+<|user|>
+Jedna myśl: co oznacza brak danych? Krótko.
+<|assistant|>
+Brak danych oznacza, że uczciwa odpowiedź powinna wskazać niepewność.
+<|end|>
+<|user|>
+Czy ten projekt warto pokazać? Wskaż brakujące dane.
+<|assistant|>
+Nie wiadomo bez celu, odbiorcy i aktualnego stanu projektu.
+<|end|>
+<|user|>
+Wyjaśnij krótko pojęcie: cache.
+<|assistant|>
+Cache to szybka pamięć podręczna używana po to, żeby nie liczyć lub pobierać tych samych danych ponownie.
+<|end|>
+<|user|>
+Jedna myśl: co daje czysty dataset? Bez powtarzania.
+<|assistant|>
+Czysty dataset zmniejsza ryzyko uczenia reklam, menu i przypadkowych śmieci.
+<|end|>
+<|user|>
+Czy mogę zaufać tej odpowiedzi? Zakończ naturalnie.
+<|assistant|>
+Bez źródeł, kontekstu i kryteriów nie należy traktować odpowiedzi jako pewnej.
+<|end|>
+<|user|>
+Czy dodać animacje?
+<|assistant|>
+Dodaj tylko takie animacje, które pomagają zrozumieć stan interfejsu. Dekoracje nie powinny przykrywać funkcji.
+<|end|>
+<|user|>
+Odpowiedz prosto: Co oznacza OOM?
+<|assistant|>
+OOM oznacza brak pamięci potrzebnej do wykonania operacji.
+<|end|>
+<|user|>
+Co zrobić? Jak rozbić duży projekt?
+<|assistant|>
+Podziel go na etapy: dane, główna logika, prosty widok, test, dopiero potem dodatki.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Bez drugiej myśli.
+<|assistant|>
+Krótka odpowiedź powinna zawierać jedną myśl i zakończyć się, gdy ta myśl jest jasna.
+<|end|>
+<|user|>
+Bez pętli: co zrobić, gdy model powtarza tekst? Zakończ naturalnie.
+<|assistant|>
+Zmierz skalę problemu, popraw dane i sprawdź ustawienia generacji.
+<|end|>
+<|user|>
+Jedna myśl, bez listy: kiedy projekt jest za duży? Nie rozwijaj dalej.
+<|assistant|>
+Projekt jest za duży, gdy nie da się szybko pokazać jego głównej wartości.
+<|end|>
+<|user|>
+Jak zaplanować naukę na jutro? Jednym akapitem.
+<|assistant|>
+Wybierz dwa najważniejsze tematy i zaplanuj krótkie bloki pracy z przerwami.
+<|end|>
+<|user|>
+Odpowiedz spokojnie: projekt nie działa, co teraz?
+<|assistant|>
+Na start sprawdź ostatnią zmianę, log błędu i najprostszy sposób odtworzenia problemu.
+<|end|>
+<|user|>
+Wyjaśnij prosto, czym jest log.
+<|assistant|>
+Log to zapis zdarzeń z działania programu, przydatny przy diagnozowaniu błędów.
+<|end|>
+<|user|>
+Nie powtarzaj: jak kończyć odpowiedź? Nie zaczynaj nowego tematu.
+<|assistant|>
+Zakończ ją wtedy, gdy główna myśl jest jasna.
+<|end|>
+<|user|>
+Co oznacza termin „zbiór walidacyjny”?
+<|assistant|>
+Zbiór walidacyjny służy do oceny modelu poza właściwym treningiem.
+<|end|>
+<|user|>
+Jedna myśl: co oznacza brak danych? Jednym akapitem.
+<|assistant|>
+Brak danych oznacza, że uczciwa odpowiedź powinna wskazać niepewność.
+<|end|>

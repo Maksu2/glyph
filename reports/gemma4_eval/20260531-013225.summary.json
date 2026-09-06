@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-31T01:40:09.153699+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260531-013225.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260531-013225.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.833,
+  "averages": {
+    "continuation_fit": 3.167,
+    "polish": 3.167,
+    "coherence": 2.867,
+    "repetition": 2.533,
+    "safety": 4.917,
+    "overall": 2.833
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.833/5 na 60/60 próbkach. Trening: step=10000, train_loss=3.6795, val_loss=3.3527, lr=0.000199. Najsłabsze średnie: repetition=2.53, coherence=2.87; najmocniejsza metryka: continuation_fit=3.17.",
+  "training_stats": {
+    "step": 10000,
+    "total_steps": 10000,
+    "progress_pct": 100.0,
+    "loss": 3.6795,
+    "lr": 0.000199,
+    "last_eval": {
+      "ts": "2026-05-27 17:48:31",
+      "step": 10000,
+      "val_loss": 3.3527
+    },
+    "tokens_m": 163.84
+  },
+  "gemma_description": "Ogólny wynik benchmarku wynosi 2.833, co wskazuje na umiarką wydajność kontynuacji tekstu. Najsłabsze metryki to 'repetition' (2.533) oraz 'coherence' (2.867), co sugeruje problemy z utrzymaniem spójności i powtarzalnością fraz. W kontekście treningowym, spadek strat (train_loss 3.6795 -> val_loss 3.3527) przy niskiej szybkości uczenia (0.000199) jest stabilny, ale nie koreluje z wysoką spójnością w wynikach. Typowym błędem widocznym w próbkach jest tendencja do powtarzania fraz lub wprowadzania nienaturalnych, wymuszonych konstrukcji narracyjnych.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarku wynosi 2.833, co wskazuje na umiarką wydajność kontynuacji tekstu. Najsłabsze metryki to 'repetition' (2.533) oraz 'coherence' (2.867), co sugeruje problemy z utrzymaniem spójności i powtarzalnością fraz. W kontekście treningowym, spadek strat (train_loss 3.6795 -> val_loss 3.3527) przy niskiej szybkości uczenia (0.000199) jest stabilny, ale nie koreluje z wysoką spójnością w wynikach. Typowym błędem widocznym w próbkach jest tendencja do powtarzania fraz lub wprowadzania nienaturalnych, wymuszonych konstrukcji narracyjnych.\"\n}\n```"
+}

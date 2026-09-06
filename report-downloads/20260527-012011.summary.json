@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-05-27T01:27:32.172036+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260527-012011.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260527-012011.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.75,
+  "averages": {
+    "continuation_fit": 3.267,
+    "polish": 3.267,
+    "coherence": 2.85,
+    "repetition": 2.567,
+    "safety": 4.983,
+    "overall": 2.75
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.75/5 na 60/60 próbkach. Trening: step=1000, train_loss=6.3248, val_loss=6.2177, lr=0.0001. Najsłabsze średnie: repetition=2.57, coherence=2.85; najmocniejsza metryka: continuation_fit=3.27.",
+  "training_stats": {
+    "step": 1000,
+    "total_steps": 1000,
+    "progress_pct": 100.0,
+    "loss": 6.3248,
+    "lr": 0.0001,
+    "last_eval": {
+      "ts": "2026-05-26 18:13:35",
+      "step": 1000,
+      "val_loss": 6.2177
+    },
+    "tokens_m": 16.38
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.75/5. Najsłabsze metryki to 'repetition' (2.567) oraz 'coherence' (2.85). Wskaźnik strat (train_loss=6.3248, val_loss=6.2177) jest bliski, co sugeruje minimalny przepływ informacji do zbioru walidacyjnego przy obecnym LR. W próbkach widoczna jest tendencja do powtarzania fraz oraz nieciągłe, faktograficzne wstawki, co obniża płynność narracyjną.",
+  "raw_description_output": "```json\n{\n\"description\": \"Ogólny wynik benchmarkowy wynosi 2.75/5. Najsłabsze metryki to 'repetition' (2.567) oraz 'coherence' (2.85). Wskaźnik strat (train_loss=6.3248, val_loss=6.2177) jest bliski, co sugeruje minimalny przepływ informacji do zbioru walidacyjnego przy obecnym LR. W próbkach widoczna jest tendencja do powtarzania fraz oraz nieciągłe, faktograficzne wstawki, co obniża płynność narracyjną.\"\n}\n```"
+}

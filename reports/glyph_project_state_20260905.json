@@ -1,0 +1,213 @@
+{
+  "report": "glyph_project_state_20260905",
+  "generated_at_utc": "2026-09-05T00:21:52Z",
+  "project": {
+    "name": "Glyph",
+    "purpose": "Educational and research project for Polish decoder-only language models trained from scratch, including data preparation, pretraining, SFT, evaluation and ROCm/CUDA operations.",
+    "not_claimed": [
+      "production chatbot",
+      "reliable factual assistant",
+      "published final model"
+    ]
+  },
+  "architecture": {
+    "implementation": "model/transformer.py",
+    "configuration": "config.py",
+    "tokenizer": "data/processed/tokenizer.model",
+    "tokenizer_type": "SentencePiece BPE",
+    "tokenizer_vocab_size": 16000,
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "glyph_27m": {
+      "layers": 6,
+      "heads": 8,
+      "embedding_dim": 512,
+      "context_length": 256,
+      "unique_parameters": 27210752,
+      "logical_parameters": 35402752
+    },
+    "glyph_100m": {
+      "layers": 12,
+      "heads": 12,
+      "embedding_dim": 768,
+      "ffn_dim": 3072,
+      "context_length": 512,
+      "unique_parameters": 97654272,
+      "logical_parameters": 109942272,
+      "embedding_parameters": 12681216,
+      "transformer_block_parameters": 84971520,
+      "tied_lm_head": true
+    }
+  },
+  "milestones": [
+    {
+      "name": "Glyph-27M Base",
+      "checkpoint": "checkpoints/final.pt",
+      "step": 200000,
+      "status": "completed proof-of-pipeline"
+    },
+    {
+      "name": "Glyph-27M SFT v0",
+      "checkpoint": "checkpoints/sft-v0/glyph-27m-sft-v0-final.pt",
+      "step": 85,
+      "status": "experimental; technically working but qualitatively weak",
+      "strict_eval": {
+        "sft_wins": 11,
+        "base_wins": 5,
+        "ties": 0,
+        "both_bad": 24
+      }
+    },
+    {
+      "name": "Glyph-100M v2.3.1",
+      "best_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+      "best_step": 44000,
+      "latest_diagnostic_checkpoint": "checkpoints/glyph-100m-v2_3_1-50k/latest.pt",
+      "status": "pretraining stopped; 44k selected by broad eval"
+    },
+    {
+      "name": "Glyph-100M SFT smoke v0.1-v0.3",
+      "base_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+      "status": "mechanically validated after label-mask fix; v0.3 failed semantic quality gate; no SFT v1"
+    },
+    {
+      "name": "Glyph-100M v2.4.2",
+      "latest_checkpoint": "checkpoints/glyph-100m-v2_4_2-15k/latest.pt",
+      "step": 15000,
+      "status": "complete; matched eval pending",
+      "best_checkpoint_selected": false
+    }
+  ],
+  "current_state": {
+    "active_branch": "glyph100_dataset_v2_4_2_core",
+    "latest_checkpoint": "checkpoints/glyph-100m-v2_4_2-15k/latest.pt",
+    "step": 15000,
+    "train_loss": 4.094,
+    "val_loss": 3.9755,
+    "lowest_continuation_val_loss": {
+      "step": 11000,
+      "value": 3.9538
+    },
+    "average_tokens_per_second": 3276.0666666667,
+    "effective_tokens_processed": 245760000,
+    "corpus_passes": 1.0616306968,
+    "training_process_active": false,
+    "checkpoint_strict_load": true,
+    "checkpoint_parameters_finite": true,
+    "next_gate": "matched v2.4.2 checkpoint evaluation at 10k, 12.5k and 15k",
+    "further_training_approved": false
+  },
+  "current_dataset": {
+    "name": "glyph100_dataset_v2_4_2_core",
+    "stats_file": "data/reports/glyph100_dataset_v2_4_2_stats.json",
+    "documents": 159579,
+    "total_tokens": 232671067,
+    "train_tokens": 231494339,
+    "val_tokens": 1176728,
+    "token_word_ratio": 1.9382224035,
+    "wikipedia_share": 0.4083057263,
+    "literature_share": 0.543905964,
+    "parliamentary_share": 0.0258320731,
+    "automatic_quality_gates_passed": true,
+    "known_validation_gap": "Wikisource has 27,607,311 train tokens and zero validation tokens."
+  },
+  "working_components": [
+    "27M and 100M variants",
+    "SentencePiece tokenizer with stable checksum",
+    "source-aware preprocessing and document split",
+    "ROCm training on RX 5500 XT",
+    "CUDA training on Kaggle P100",
+    "checkpoint resume with optimizer, scheduler and data state",
+    "fixed SFT label mask",
+    "Colab/Kaggle bundles and preflight tools",
+    "training dashboard",
+    "local report download page"
+  ],
+  "open_problems": [
+    {
+      "severity": "BLOCKER",
+      "problem": "No matched 10k/12.5k/15k evaluation for v2.4.2; 15k is latest, not best."
+    },
+    {
+      "severity": "HIGH",
+      "problem": "Semantic quality at v2.4.2 10k remained weak; 15k quality is unknown."
+    },
+    {
+      "severity": "HIGH",
+      "problem": "Validation loss bottomed near 11k and ended higher at 15k."
+    },
+    {
+      "severity": "MEDIUM",
+      "problem": "Core train.py resume checks variant/model config but does not hard-fail on tokenizer SHA or dataset identity."
+    },
+    {
+      "severity": "MEDIUM",
+      "problem": "Core checkpoint step writes do not have the full atomic write and reload verification used by Colab tooling."
+    },
+    {
+      "severity": "MEDIUM",
+      "problem": "SFT execution is fragmented between finetune.py and safer specialized runners."
+    },
+    {
+      "severity": "MEDIUM",
+      "problem": "Wikisource has no validation allocation and the corpus remains 54.39% literary."
+    },
+    {
+      "severity": "MEDIUM",
+      "problem": "README and glyph.maksu.online model copy are stale relative to the v2.4.2 15k training snapshot."
+    },
+    {
+      "severity": "LOW",
+      "problem": "Public demo serves Glyph-27M step 115k; the reason for that exact checkpoint is not documented."
+    },
+    {
+      "severity": "LOW",
+      "problem": "Workspace is not a Git repository and pytest is absent from the local virtual environment."
+    }
+  ],
+  "next_steps": [
+    {
+      "priority": "P0",
+      "action": "Generate the final 10k-to-15k run report and matched evaluation of v2.4.2 checkpoints at 10k, 12.5k and 15k without training."
+    },
+    {
+      "priority": "P0",
+      "action": "Select and record a canonical v2.4.2 best checkpoint, then compare it with v2.3.1 44k using the same prompts and decoding."
+    },
+    {
+      "priority": "P1",
+      "action": "Only after evaluation decide whether to stop, retain 10k/12.5k, or authorize a controlled 20k checkpoint with a reviewed LR schedule."
+    },
+    {
+      "priority": "P2",
+      "action": "Add hard resume checks for tokenizer SHA and dataset identity, atomic verified checkpoint writes, and consolidate the safe SFT runner."
+    },
+    {
+      "priority": "P3",
+      "action": "Align README, glyph.maksu.online content and dashboard metadata; explicitly label the public demo as archival Glyph-27M step 115k."
+    },
+    {
+      "priority": "P4",
+      "action": "Address the Wikisource validation gap and literary bias before another large corpus rebuild; do not scale SFT v0.3."
+    }
+  ],
+  "unknowns": [
+    "Whether v2.4.2 15k is qualitatively better than 10k or 12.5k.",
+    "Whether any v2.4.2 checkpoint beats historical v2.3.1 44k under a matched evaluation.",
+    "Why the public demo uses Glyph-27M step 115k.",
+    "Current FinetextPL-Edu access status beyond the recorded gated/pending state.",
+    "Current free Kaggle or Colab GPU quota.",
+    "Exact source-code commit corresponding to checkpoints because the workspace is not a Git repository."
+  ],
+  "validation_on_2026_09_05": {
+    "active_training_processes": 0,
+    "running_relevant_containers": [
+      "glyph-reports-report-downloads-1",
+      "glyph-inference-glyph-inference-1"
+    ],
+    "unittest": "12/12 PASS",
+    "pytest": "not run; pytest is not installed in .venv",
+    "dashboard": "reports v2.4.2 15k complete and eval pending",
+    "public_site_consistency": "partial; training snapshot is current but model/content copy is stale"
+  },
+  "verdict": "Do not train further and do not start SFT v1. First complete matched v2.4.2 checkpoint evaluation and select a canonical best checkpoint."
+}

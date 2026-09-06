@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-07-18T04:57:38.540643+00:00",
+  "dataset_name": "glyph100_dataset_v2_4_2_core",
+  "verdict": "PASS: v2.4.2 is mechanically and compositionally ready for one fresh 5k matched proxy.",
+  "ready_for_5k_proxy": true,
+  "checks": {
+    "dataset identity": true,
+    "metadata total matches docs": true,
+    "metadata train matches docs": true,
+    "metadata val matches docs": true,
+    "metadata docs match": true,
+    "train binary size": true,
+    "validation binary size": true,
+    "tokenizer checksum": true,
+    "minimum token floor": true,
+    "literature share": true,
+    "Wikipedia share": true,
+    "parliamentary share": true,
+    "unique document IDs": true,
+    "no exact duplicates": true,
+    "no normalized duplicates": true,
+    "no parent leakage": true,
+    "no residual rejected patterns": true,
+    "builder gates passed": true,
+    "all validation sources represented": true,
+    "Wikisource remains train-only": true
+  },
+  "docs": 159579,
+  "parents": 151981,
+  "train_tokens": 231494339,
+  "val_tokens": 1176728,
+  "total_tokens": 232671067,
+  "literature_share": 0.543905964036345,
+  "wikipedia_share": 0.40830572629814776,
+  "parliamentary_share": 0.025832073052727264,
+  "duplicate_ids": 0,
+  "exact_duplicates": 0,
+  "normalized_duplicates": 0,
+  "parent_leakage_count": 0,
+  "parent_leakage_examples": [],
+  "residual_pattern_docs": 0,
+  "residual_patterns": {},
+  "sources": {
+    "1000_novels": {
+      "docs": 2767,
+      "tokens": 30091693,
+      "train_tokens": 29905478,
+      "val_tokens": 186215
+    },
+    "eltec_pol": {
+      "docs": 1057,
+      "tokens": 13827409,
+      "train_tokens": 13692564,
+      "val_tokens": 134845
+    },
+    "parliamentary": {
+      "docs": 6226,
+      "tokens": 6010376,
+      "train_tokens": 5966996,
+      "val_tokens": 43380
+    },
+    "wikibooks": {
+      "docs": 4068,
+      "tokens": 3608515,
+      "train_tokens": 3588927,
+      "val_tokens": 19588
+    },
+    "wikinews": {
+      "docs": 4544,
+      "tokens": 1500066,
+      "train_tokens": 1492984,
+      "val_tokens": 7082
+    },
+    "wikipedia_pl": {
+      "docs": 100721,
+      "tokens": 95000929,
+      "train_tokens": 94504183,
+      "val_tokens": 496746
+    },
+    "wikisource": {
+      "docs": 33023,
+      "tokens": 27607311,
+      "train_tokens": 27607311,
+      "val_tokens": 0
+    },
+    "wolne_lektury": {
+      "docs": 7173,
+      "tokens": 55024768,
+      "train_tokens": 54735896,
+      "val_tokens": 288872
+    }
+  },
+  "samples_file": "/workspace/reports/glyph100_v2_4_2_validation_samples.json"
+}

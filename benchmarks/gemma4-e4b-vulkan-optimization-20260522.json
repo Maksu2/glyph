@@ -1,0 +1,600 @@
+{
+  "created_at": "2026-05-22T20:01:24.690994+00:00",
+  "image": "ghcr.io/ggml-org/llama.cpp:server-vulkan",
+  "model": "/home/maksu/ai-model/models/gemma4/gemma-4-e4b-it-q4_k_m.gguf",
+  "baseline_previous_gen_tok_s": 43.23027954490264,
+  "results": [
+    {
+      "name": "baseline_current",
+      "port": 8290,
+      "container": "gemma-e4b-vulkan-opt-baseline_current-bbcac0",
+      "config": {
+        "name": "baseline_current",
+        "ctx": 4096,
+        "batch": 256,
+        "ubatch": 64,
+        "fa": "off",
+        "threads": 2,
+        "threads_batch": 2,
+        "extra": [
+          "--no-cont-batching"
+        ]
+      },
+      "container_id": "58bd998fb073893ef2a19cca385ecee8a6f32b88fba16a30bb13a72367b5211c",
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3099,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 133.512,
+            "prompt_per_token_ms": 6.068727272727273,
+            "prompt_per_second": 164.7791958775241,
+            "predicted_n": 128,
+            "predicted_ms": 2963.657,
+            "predicted_per_token_ms": 23.1535703125,
+            "predicted_per_second": 43.18988330970824
+          },
+          "content_len": 421
+        },
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3098,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 134.768,
+            "prompt_per_token_ms": 6.125818181818182,
+            "prompt_per_second": 163.2434999406387,
+            "predicted_n": 128,
+            "predicted_ms": 2961.514,
+            "predicted_per_token_ms": 23.136828125,
+            "predicted_per_second": 43.22113621613809
+          },
+          "content_len": 423
+        }
+      ],
+      "health": {
+        "status": "ok"
+      },
+      "load_ms": 4028,
+      "warmup_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 369.189,
+        "prompt_per_token_ms": 16.781318181818182,
+        "prompt_per_second": 59.59007446050668,
+        "predicted_n": 64,
+        "predicted_ms": 1503.44,
+        "predicted_per_token_ms": 23.49125,
+        "predicted_per_second": 42.56904166444953
+      },
+      "summary": {
+        "gen_avg": 43.20550976292317,
+        "gen_min": 43.18988330970824,
+        "gen_max": 43.22113621613809,
+        "prefill_avg": 164.0113479090814
+      }
+    },
+    {
+      "name": "fa_on_same",
+      "port": 8291,
+      "container": "gemma-e4b-vulkan-opt-fa_on_same-765210",
+      "config": {
+        "name": "fa_on_same",
+        "ctx": 4096,
+        "batch": 256,
+        "ubatch": 64,
+        "fa": "on",
+        "threads": 2,
+        "threads_batch": 2,
+        "extra": [
+          "--no-cont-batching"
+        ]
+      },
+      "container_id": "734f65eb4094359293aa3f98b45ae771cf04e8564e52803fab38777919332ffa",
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3036,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 124.541,
+            "prompt_per_token_ms": 5.660954545454545,
+            "prompt_per_second": 176.64865385696277,
+            "predicted_n": 128,
+            "predicted_ms": 2910.168,
+            "predicted_per_token_ms": 22.7356875,
+            "predicted_per_second": 43.98371502951032
+          },
+          "content_len": 362
+        },
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3033,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 124.49,
+            "prompt_per_token_ms": 5.658636363636363,
+            "prompt_per_second": 176.7210217688168,
+            "predicted_n": 128,
+            "predicted_ms": 2906.67,
+            "predicted_per_token_ms": 22.708359375,
+            "predicted_per_second": 44.03664674696474
+          },
+          "content_len": 423
+        }
+      ],
+      "health": {
+        "status": "ok"
+      },
+      "load_ms": 4005,
+      "warmup_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 433.451,
+        "prompt_per_token_ms": 19.702318181818182,
+        "prompt_per_second": 50.755448712772605,
+        "predicted_n": 64,
+        "predicted_ms": 1467.53,
+        "predicted_per_token_ms": 22.93015625,
+        "predicted_per_second": 43.6106927967401
+      },
+      "summary": {
+        "gen_avg": 44.01018088823753,
+        "gen_min": 43.98371502951032,
+        "gen_max": 44.03664674696474,
+        "prefill_avg": 176.68483781288978
+      }
+    },
+    {
+      "name": "fa_on_b512_ub128",
+      "port": 8292,
+      "container": "gemma-e4b-vulkan-opt-fa_on_b512_ub128-c724ee",
+      "config": {
+        "name": "fa_on_b512_ub128",
+        "ctx": 4096,
+        "batch": 512,
+        "ubatch": 128,
+        "fa": "on",
+        "threads": 2,
+        "threads_batch": 2,
+        "extra": [
+          "--no-cont-batching"
+        ]
+      },
+      "container_id": "82ae4808e828fceb04ec9563bcd75b1e4d5e08797cde116979044b88a2b2f6e5",
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3039,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 125.766,
+            "prompt_per_token_ms": 5.716636363636364,
+            "prompt_per_second": 174.92804096496667,
+            "predicted_n": 128,
+            "predicted_ms": 2911.733,
+            "predicted_per_token_ms": 22.7479140625,
+            "predicted_per_second": 43.96007463596422
+          },
+          "content_len": 362
+        },
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3040,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 124.824,
+            "prompt_per_token_ms": 5.673818181818182,
+            "prompt_per_second": 176.24815740562713,
+            "predicted_n": 128,
+            "predicted_ms": 2913.286,
+            "predicted_per_token_ms": 22.760046875,
+            "predicted_per_second": 43.936640618188534
+          },
+          "content_len": 423
+        }
+      ],
+      "health": {
+        "status": "ok"
+      },
+      "load_ms": 4005,
+      "warmup_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 443.35,
+        "prompt_per_token_ms": 20.152272727272727,
+        "prompt_per_second": 49.622194654336305,
+        "predicted_n": 64,
+        "predicted_ms": 1470.834,
+        "predicted_per_token_ms": 22.98178125,
+        "predicted_per_second": 43.51272815287109
+      },
+      "summary": {
+        "gen_avg": 43.948357627076376,
+        "gen_min": 43.936640618188534,
+        "gen_max": 43.96007463596422,
+        "prefill_avg": 175.5880991852969
+      }
+    },
+    {
+      "name": "fa_on_b2048_ub512",
+      "port": 8293,
+      "container": "gemma-e4b-vulkan-opt-fa_on_b2048_ub512-1c2784",
+      "config": {
+        "name": "fa_on_b2048_ub512",
+        "ctx": 4096,
+        "batch": 2048,
+        "ubatch": 512,
+        "fa": "on",
+        "threads": 2,
+        "threads_batch": 2,
+        "extra": [
+          "--no-cont-batching"
+        ]
+      },
+      "container_id": "ef9b771fc53b6d8b7b131f1da91e8e44d76e35da298511de8aadc410b737627d",
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 2931,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 120.316,
+            "prompt_per_token_ms": 5.468909090909091,
+            "prompt_per_second": 182.85182353136742,
+            "predicted_n": 128,
+            "predicted_ms": 2809.0,
+            "predicted_per_token_ms": 21.9453125,
+            "predicted_per_second": 45.56781772872908
+          },
+          "content_len": 362
+        },
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 2933,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 124.052,
+            "prompt_per_token_ms": 5.638727272727273,
+            "prompt_per_second": 177.34498436139685,
+            "predicted_n": 128,
+            "predicted_ms": 2806.947,
+            "predicted_per_token_ms": 21.9292734375,
+            "predicted_per_second": 45.60114601380076
+          },
+          "content_len": 423
+        }
+      ],
+      "health": {
+        "status": "ok"
+      },
+      "load_ms": 4005,
+      "warmup_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 433.869,
+        "prompt_per_token_ms": 19.721318181818184,
+        "prompt_per_second": 50.70654967282751,
+        "predicted_n": 64,
+        "predicted_ms": 1418.762,
+        "predicted_per_token_ms": 22.16815625,
+        "predicted_per_second": 45.109750613563094
+      },
+      "summary": {
+        "gen_avg": 45.58448187126492,
+        "gen_min": 45.56781772872908,
+        "gen_max": 45.60114601380076,
+        "prefill_avg": 180.09840394638212
+      }
+    },
+    {
+      "name": "fa_off_b2048_ub512",
+      "port": 8294,
+      "container": "gemma-e4b-vulkan-opt-fa_off_b2048_ub512-47a055",
+      "config": {
+        "name": "fa_off_b2048_ub512",
+        "ctx": 4096,
+        "batch": 2048,
+        "ubatch": 512,
+        "fa": "off",
+        "threads": 2,
+        "threads_batch": 2,
+        "extra": [
+          "--no-cont-batching"
+        ]
+      },
+      "container_id": "7671cab08fb7e23806822e4bc92452bfc46ac64dcf8ba8a4bed79ad2ea42b7c8",
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3058,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 132.004,
+            "prompt_per_token_ms": 6.000181818181818,
+            "prompt_per_second": 166.66161631465715,
+            "predicted_n": 128,
+            "predicted_ms": 2924.153,
+            "predicted_per_token_ms": 22.8449453125,
+            "predicted_per_second": 43.773359328325164
+          },
+          "content_len": 421
+        },
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3056,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 132.51,
+            "prompt_per_token_ms": 6.0231818181818175,
+            "prompt_per_second": 166.025205644857,
+            "predicted_n": 128,
+            "predicted_ms": 2921.602,
+            "predicted_per_token_ms": 22.825015625,
+            "predicted_per_second": 43.81158008517245
+          },
+          "content_len": 423
+        }
+      ],
+      "health": {
+        "status": "ok"
+      },
+      "load_ms": 4007,
+      "warmup_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 370.269,
+        "prompt_per_token_ms": 16.83040909090909,
+        "prompt_per_second": 59.41626223097261,
+        "predicted_n": 64,
+        "predicted_ms": 1490.387,
+        "predicted_per_token_ms": 23.287296875,
+        "predicted_per_second": 42.941866776884126
+      },
+      "summary": {
+        "gen_avg": 43.792469706748804,
+        "gen_min": 43.773359328325164,
+        "gen_max": 43.81158008517245,
+        "prefill_avg": 166.3434109797571
+      }
+    },
+    {
+      "name": "fa_on_threads6",
+      "port": 8295,
+      "container": "gemma-e4b-vulkan-opt-fa_on_threads6-6ca5c7",
+      "config": {
+        "name": "fa_on_threads6",
+        "ctx": 4096,
+        "batch": 2048,
+        "ubatch": 512,
+        "fa": "on",
+        "threads": 6,
+        "threads_batch": 6,
+        "extra": [
+          "--no-cont-batching"
+        ]
+      },
+      "container_id": "40716e237c63301b6aa351a8006591d3027361164949d0a2869a41d62f28add8",
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 2934,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 123.135,
+            "prompt_per_token_ms": 5.597045454545455,
+            "prompt_per_second": 178.6656921265278,
+            "predicted_n": 128,
+            "predicted_ms": 2808.975,
+            "predicted_per_token_ms": 21.9451171875,
+            "predicted_per_second": 45.56822328429409
+          },
+          "content_len": 362
+        },
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 2933,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 122.942,
+            "prompt_per_token_ms": 5.588272727272727,
+            "prompt_per_second": 178.94616973857592,
+            "predicted_n": 128,
+            "predicted_ms": 2808.246,
+            "predicted_per_token_ms": 21.939421875,
+            "predicted_per_second": 45.580052459791624
+          },
+          "content_len": 423
+        }
+      ],
+      "health": {
+        "status": "ok"
+      },
+      "load_ms": 4004,
+      "warmup_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 436.845,
+        "prompt_per_token_ms": 19.85659090909091,
+        "prompt_per_second": 50.36111206492005,
+        "predicted_n": 64,
+        "predicted_ms": 1415.64,
+        "predicted_per_token_ms": 22.119375,
+        "predicted_per_second": 45.209233986041646
+      },
+      "summary": {
+        "gen_avg": 45.574137872042854,
+        "gen_min": 45.56822328429409,
+        "gen_max": 45.580052459791624,
+        "prefill_avg": 178.80593093255186
+      }
+    },
+    {
+      "name": "fa_on_poll100",
+      "port": 8296,
+      "container": "gemma-e4b-vulkan-opt-fa_on_poll100-949c1d",
+      "config": {
+        "name": "fa_on_poll100",
+        "ctx": 4096,
+        "batch": 2048,
+        "ubatch": 512,
+        "fa": "on",
+        "threads": 2,
+        "threads_batch": 2,
+        "extra": [
+          "--no-cont-batching",
+          "--poll",
+          "100",
+          "--poll-batch",
+          "1"
+        ]
+      },
+      "container_id": "e70b980b816e095044944cb078bed30e436f32a484850e4c6fa3247578db52dc",
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 2930,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 119.908,
+            "prompt_per_token_ms": 5.450363636363637,
+            "prompt_per_second": 183.47399673082694,
+            "predicted_n": 128,
+            "predicted_ms": 2808.277,
+            "predicted_per_token_ms": 21.9396640625,
+            "predicted_per_second": 45.579549310840775
+          },
+          "content_len": 362
+        },
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 2930,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 123.214,
+            "prompt_per_token_ms": 5.600636363636363,
+            "prompt_per_second": 178.55113866930705,
+            "predicted_n": 128,
+            "predicted_ms": 2805.405,
+            "predicted_per_token_ms": 21.9172265625,
+            "predicted_per_second": 45.62621083230407
+          },
+          "content_len": 423
+        }
+      ],
+      "health": {
+        "status": "ok"
+      },
+      "load_ms": 4005,
+      "warmup_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 436.09,
+        "prompt_per_token_ms": 19.822272727272725,
+        "prompt_per_second": 50.448301956018256,
+        "predicted_n": 64,
+        "predicted_ms": 1421.41,
+        "predicted_per_token_ms": 22.20953125,
+        "predicted_per_second": 45.02571390379975
+      },
+      "summary": {
+        "gen_avg": 45.60288007157242,
+        "gen_min": 45.579549310840775,
+        "gen_max": 45.62621083230407,
+        "prefill_avg": 181.012567700067
+      }
+    },
+    {
+      "name": "fa_on_kv_q8",
+      "port": 8297,
+      "container": "gemma-e4b-vulkan-opt-fa_on_kv_q8-9a6439",
+      "config": {
+        "name": "fa_on_kv_q8",
+        "ctx": 4096,
+        "batch": 2048,
+        "ubatch": 512,
+        "fa": "on",
+        "threads": 2,
+        "threads_batch": 2,
+        "extra": [
+          "--no-cont-batching",
+          "-ctk",
+          "q8_0",
+          "-ctv",
+          "q8_0"
+        ]
+      },
+      "container_id": "fd8abf688d5dec6233c68b061ef6fa65713f478ea614a32c4f268f6b9fe2f085",
+      "runs": [
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3120,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 130.273,
+            "prompt_per_token_ms": 5.9215,
+            "prompt_per_second": 168.87612935911508,
+            "predicted_n": 128,
+            "predicted_ms": 2988.871,
+            "predicted_per_token_ms": 23.3505546875,
+            "predicted_per_second": 42.82553512680875
+          },
+          "content_len": 403
+        },
+        {
+          "prompt_id": "pl_short",
+          "elapsed_ms": 3110,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 22,
+            "prompt_ms": 127.814,
+            "prompt_per_token_ms": 5.809727272727272,
+            "prompt_per_second": 172.12511931400317,
+            "predicted_n": 128,
+            "predicted_ms": 2980.92,
+            "predicted_per_token_ms": 23.2884375,
+            "predicted_per_second": 42.93976356292688
+          },
+          "content_len": 365
+        }
+      ],
+      "health": {
+        "status": "ok"
+      },
+      "load_ms": 4005,
+      "warmup_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 498.539,
+        "prompt_per_token_ms": 22.660863636363636,
+        "prompt_per_second": 44.12894477663733,
+        "predicted_n": 64,
+        "predicted_ms": 1520.326,
+        "predicted_per_token_ms": 23.75509375,
+        "predicted_per_second": 42.09623462336367
+      },
+      "summary": {
+        "gen_avg": 42.882649344867815,
+        "gen_min": 42.82553512680875,
+        "gen_max": 42.93976356292688,
+        "prefill_avg": 170.50062433655913
+      }
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "kind": "good",
+    "promptId": "base_lit_05",
+    "category": "literary",
+    "mode": "base",
+    "step": 200000,
+    "generatedAt": "2026-06-21T01:32:06.787722+00:00",
+    "settings": {
+      "maxTokens": 60,
+      "temperature": 0.75,
+      "topK": 50,
+      "topP": 0.92,
+      "repetitionPenalty": 1.1,
+      "noRepeatNgram": 4
+    },
+    "prompt": "Wieczorem niebo nad Warszawą zrobiło się ciężkie i",
+    "output": "Wieczorem niebo nad Warszawą zrobiło się ciężkie i zgniłe, a także ucichło i wtargnęło do mnie po brzegi. W końcu moje serce odbiło się z góry i na chwilę przypłynęło do mnie, a ja myślałam, że to był czas, żeby zobaczyć i coś, co mnie tu naprawdę kochało",
+    "scores": {
+      "continuationFit": 5.0,
+      "polish": 4.0,
+      "coherence": 4.0,
+      "repetition": 4.0,
+      "safety": 5.0,
+      "overall": 4.0
+    },
+    "comment": {
+      "pl": "Model świetnie kontynuuje frazę, utrzymując poetycki i melancholijny ton. Polszczyzna jest poprawna, choć pojawiają się nieco nienaturalne konstrukcje ('odbiliło się z góry'). To typowy dla modelu bazowego, ale obiecujący wynik, wskazujący na dobrą zdolność do utrzymania nastroju.",
+      "en": "Gemma Judge rated this continuation 4.0/5. The weakest signals are polish 4.0/5, coherence 4.0/5."
+    }
+  },
+  {
+    "kind": "good",
+    "promptId": "base_lit_06",
+    "category": "literary",
+    "mode": "base",
+    "step": 200000,
+    "generatedAt": "2026-06-21T01:32:06.787722+00:00",
+    "settings": {
+      "maxTokens": 60,
+      "temperature": 0.75,
+      "topK": 50,
+      "topP": 0.92,
+      "repetitionPenalty": 1.1,
+      "noRepeatNgram": 4
+    },
+    "prompt": "Gdy pociąg ruszył, mężczyzna siedzący przy oknie",
+    "output": "Gdy pociąg ruszył, mężczyzna siedzący przy oknie oderwał się do okna, co nie było żadne z nich. — Módl się — rzekła — odezwała się na usta. — No, panna pani! — Ujrzałem — odpowiedział na to pytanie. — Ale teraz... jak panna? —",
+    "scores": {
+      "continuationFit": 4.0,
+      "polish": 4.0,
+      "coherence": 5.0,
+      "repetition": 4.0,
+      "safety": 5.0,
+      "overall": 4.0
+    },
+    "comment": {
+      "pl": "Model dobrze kontynuuje narrację, utrzymując płynny styl literacki. Gramatyka jest poprawna, a dialogi są naturalnie wplecione w kontekst. Widać, że model radzi sobie z utrzymaniem tonu i spójności fabularnej, co jest dobrym znakiem dla modelu bazowego.",
+      "en": "Gemma Judge rated this continuation 4.0/5. The weakest signals are continuation_fit 4.0/5, polish 4.0/5."
+    }
+  },
+  {
+    "kind": "typical",
+    "promptId": "base_lit_02",
+    "category": "literary",
+    "mode": "base",
+    "step": 200000,
+    "generatedAt": "2026-06-21T01:32:06.787722+00:00",
+    "settings": {
+      "maxTokens": 60,
+      "temperature": 0.75,
+      "topK": 50,
+      "topP": 0.92,
+      "repetitionPenalty": 1.1,
+      "noRepeatNgram": 4
+    },
+    "prompt": "Stary dworzec kolejowy pachniał deszczem, kurzem i",
+    "output": "Stary dworzec kolejowy pachniał deszczem, kurzem i szczupakiem. W latach 1863–1870 należał do Bratysławy. Od 1873 był jednym z jego współwłaścicieli, w 1885 miał dworzec kolejowo-drogowy, w 1877 roku, po czym w 1885 r. rozpoczął się remont na ul. Wa",
+    "scores": {
+      "continuationFit": 4.0,
+      "polish": 3.0,
+      "coherence": 3.0,
+      "repetition": 3.0,
+      "safety": 5.0,
+      "overall": 3.0
+    },
+    "comment": {
+      "pl": "Model poprawnie kontynuuje opis sensoryczny, ale nagle przechodzi w bardzo specyficzne, historyczne detale. Gramatyka jest akceptowalna, ale pojawiają się błędy formatowania dat i niejasne przejścia tematyczne. Przy modelu bazowym, jest to akceptowalny, ale nie płynny ciąg narracyjny.",
+      "en": "Gemma Judge rated this continuation 3.0/5. The weakest signals are polish 3.0/5, coherence 3.0/5."
+    }
+  },
+  {
+    "kind": "typical",
+    "promptId": "base_lit_08",
+    "category": "literary",
+    "mode": "base",
+    "step": 200000,
+    "generatedAt": "2026-06-21T01:32:06.787722+00:00",
+    "settings": {
+      "maxTokens": 60,
+      "temperature": 0.75,
+      "topK": 50,
+      "topP": 0.92,
+      "repetitionPenalty": 1.1,
+      "noRepeatNgram": 4
+    },
+    "prompt": "Biblioteka była prawie pusta, tylko przy ostatnim stoliku",
+    "output": "Biblioteka była prawie pusta, tylko przy ostatnim stoliku, a w dodatku był już po prostu \"kołysanka\". Inaczej mówiąc, nie mam wątpliwości, że gdyby ktoś z nich pracował, to bym się nie zgodził. Ale za to, że to nie może być \"książek\", a nawet \"opieszczotli",
+    "scores": {
+      "continuationFit": 3.0,
+      "polish": 4.0,
+      "coherence": 3.0,
+      "repetition": 3.0,
+      "safety": 5.0,
+      "overall": 3.0
+    },
+    "comment": {
+      "pl": "Model poprawnie kontynuuje narrację, utrzymując ton literacki. Jednak pojawiają się niepoprawne konstrukcje i nieścisłości semantyczne (np. 'kołysanka', 'opieszczotli'), co jest typowe dla modelu bazowego. Ogólna płynność jest akceptowalna, ale wymaga dalszego treningu w zakresie poprawności słownictwa.",
+      "en": "Gemma Judge rated this continuation 3.0/5. The weakest signals are continuation_fit 3.0/5, coherence 3.0/5."
+    }
+  },
+  {
+    "kind": "failure",
+    "promptId": "base_fragment_04",
+    "category": "fragment",
+    "mode": "base",
+    "step": 200000,
+    "generatedAt": "2026-06-21T01:32:06.787722+00:00",
+    "settings": {
+      "maxTokens": 60,
+      "temperature": 0.75,
+      "topK": 50,
+      "topP": 0.92,
+      "repetitionPenalty": 1.1,
+      "noRepeatNgram": 4
+    },
+    "prompt": "Mały model nie będzie odpowiadał jak duży system komercyjny, ale",
+    "output": "Mały model nie będzie odpowiadał jak duży system komercyjny, ale... cena: 39,90 18,30 złdo koszyka Zabezpieczenia przed korozjąZestaw narzędzi i narzędzi - akcesoria do usterek wtyczkiZestaw narzędzi, które ułatwiają montaż i utrzymanie parametrów związanych z korozją. Wytrzymałość i niezawodność w przypadku korozją....",
+    "scores": {
+      "continuationFit": 1.0,
+      "polish": 2.0,
+      "coherence": 1.0,
+      "repetition": 1.0,
+      "safety": 5.0,
+      "overall": 1.0
+    },
+    "comment": {
+      "pl": "Model całkowicie stracił kontekst i zaczął generować losowy, komercyjny bełkot. Nie ma tu żadnej spójności ani związku z promptem. Wynik jest bardzo niski, co jest typowe dla modelu, który nie został jeszcze odpowiednio wyregulowany na kontynuację tekstu.",
+      "en": "Gemma Judge rated this continuation 1.0/5. The weakest signals are continuation_fit 1.0/5, coherence 1.0/5."
+    }
+  },
+  {
+    "kind": "failure",
+    "promptId": "base_lit_01",
+    "category": "literary",
+    "mode": "base",
+    "step": 200000,
+    "generatedAt": "2026-06-21T01:32:06.787722+00:00",
+    "settings": {
+      "maxTokens": 60,
+      "temperature": 0.75,
+      "topK": 50,
+      "topP": 0.92,
+      "repetitionPenalty": 1.1,
+      "noRepeatNgram": 4
+    },
+    "prompt": "W małym miasteczku nad rzeką każdego ranka",
+    "output": "W małym miasteczku nad rzeką każdego ranka i z jednej strony można spotkać się z nim w całej Europie. Tam, gdzie na drodze do domu, w jednym z wielu miast, gdzie znajduje się przyległa część miasteczka, na której znajdują się również inne miejsca w mieście. Docierają one do portu i portu, które można",
+    "scores": {
+      "continuationFit": 3.0,
+      "polish": 3.0,
+      "coherence": 2.0,
+      "repetition": 2.0,
+      "safety": 5.0,
+      "overall": 2.0
+    },
+    "comment": {
+      "pl": "Model ma problemy z płynnym kontynuowaniem narracji. Widać powtarzające się konstrukcje ('miasteczko', 'port') i niejasne przejścia tematyczne. Choć polszczyzna jest zrozumiała, brakuje jej naturalnego rytmu. Wynik jest typowy dla modelu bazowego, który próbuje wypełnić przestrzeń, ale nie ma jeszcze zrozumienia kontekstu narracyjnego.",
+      "en": "Gemma Judge rated this continuation 2.0/5. The weakest signals are coherence 2.0/5, repetition 2.0/5."
+    }
+  }
+]

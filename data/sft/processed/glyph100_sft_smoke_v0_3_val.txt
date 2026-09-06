@@ -1,0 +1,1375 @@
+<|user|>
+Czym jest log treningu?
+<|assistant|>
+Log treningu zapisuje kroki, loss, ewaluacje, checkpointy i ewentualne błędy.
+<|end|>
+<|user|>
+Przeredaguj zdanie: Kod powinien zostać uporządkowany przed dalszym rozwojem.
+<|assistant|>
+Przed dalszym rozwojem warto uporządkować kod.
+<|end|>
+<|user|>
+Czym jest walidacja datasetu? Odpowiedz krótko.
+<|assistant|>
+Walidacja datasetu sprawdza, czy przykłady są kompletne, czyste i mieszczą się w kontekście modelu.
+<|end|>
+<|user|>
+Czy można porównać modele bez tych samych promptów?
+<|assistant|>
+Można orientacyjnie, ale uczciwe porównanie wymaga tych samych promptów i ustawień.
+<|end|>
+<|user|>
+Czy wybrałem dobrą technologię? W jednym akapicie.
+<|assistant|>
+To zależy od wymagań projektu, zespołu i czasu. Bez tych danych odpowiedź byłaby zbyt ogólna.
+<|end|>
+<|user|>
+Czym różni się train loss od val loss? Odpowiedz krótko.
+<|assistant|>
+Train loss mierzy dopasowanie do danych treningowych, a val loss sprawdza model na odłożonych danych.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź, że sprawdzę to później. Jednym zdaniem.
+<|assistant|>
+Sprawdzę to później i wrócę z odpowiedzią.
+<|end|>
+<|user|>
+Wyciągnij główną myśl: Eval powinien mieć stałe prompty, jasne kryteria i porównanie z poprzednim checkpointem.
+<|assistant|>
+Dobry eval wymaga stałych promptów, kryteriów i porównania.
+<|end|>
+<|user|>
+Czy powinienem to kupić? Wskaż brakujące dane.
+<|assistant|>
+Potrzebna jest cena, potrzeba i alternatywy. Bez tego odpowiedź byłaby zgadywaniem.
+<|end|>
+<|user|>
+Fakt różni się od opinii tym, że Dokończ krótko.
+<|assistant|>
+Fakt można sprawdzić, a opinia wyraża czyjąś ocenę lub pogląd.
+<|end|>
+<|user|>
+Czy można porównać modele bez tych samych promptów? Bez przesadnej pewności.
+<|assistant|>
+Można orientacyjnie, ale uczciwe porównanie wymaga tych samych promptów i ustawień.
+<|end|>
+<|user|>
+Streść w jednym zdaniu: Jeśli model powtarza frazy z datasetu, trzeba poprawić dane, a nie tylko zmienić temperaturę.
+<|assistant|>
+Powtarzalny styl często wymaga poprawy danych.
+<|end|>
+<|user|>
+Krótko doradź: Co jest lepsze: mniej funkcji czy więcej niedokończonych?
+<|assistant|>
+Mniej funkcji, ale działających. Niedokończone funkcje zwykle obniżają wiarygodność projektu.
+<|end|>
+<|user|>
+Skróć tekst: Czysty dataset jest ważniejszy niż sam rozmiar, bo większy model lepiej nauczy się także brudu.
+<|assistant|>
+Jakość danych jest ważniejsza niż ich sama ilość.
+<|end|>
+<|user|>
+Wyjaśnij krótko: Co oznacza val loss?
+<|assistant|>
+Val loss mierzy błąd modelu na zbiorze walidacyjnym.
+<|end|>
+<|user|>
+Napisz krótką wiadomość do nauczyciela, że nie zdążę oddać pracy dzisiaj. Odpowiedź ma być krótka.
+<|assistant|>
+Dzień dobry, nie zdążę dziś oddać pracy. Czy mogę dosłać ją jutro?
+<|end|>
+<|user|>
+Jedna myśl: co oznacza brak danych? Nie zaczynaj nowego tematu.
+<|assistant|>
+Brak danych oznacza, że uczciwa odpowiedź powinna wskazać niepewność.
+<|end|>
+<|user|>
+Opisz krótko, po co robi się smoke test SFT. Bez powtórzeń.
+<|assistant|>
+Smoke test SFT sprawdza, czy model reaguje na format instrukcji i czy trening jest stabilny. Nie jest jeszcze dowodem, że model nadaje się do użycia jako asystent.
+<|end|>
+<|user|>
+Odpowiedz i zakończ: czy SFT dodaje wiedzę? Krótko.
+<|assistant|>
+SFT głównie uczy formatu odpowiedzi, a nie automatycznie nowej wiedzy.
+<|end|>
+<|user|>
+Popraw tekst: Nie posiadam wystarczającej ilości danych do oceny.
+<|assistant|>
+Nie mam wystarczających danych do oceny.
+<|end|>
+<|user|>
+Czym jest konfiguracja?
+<|assistant|>
+Konfiguracja to zestaw ustawień sterujących działaniem systemu.
+<|end|>
+<|user|>
+Czy ta strona wygląda dobrze? Jak odpowiedzieć bez danych?
+<|assistant|>
+Nie da się ocenić bez zrzutu ekranu albo opisu celu i odbiorców.
+<|end|>
+<|user|>
+Jedno zdanie: czym jest smoke test? Odpowiedz wprost.
+<|assistant|>
+Smoke test to krótka próba sprawdzająca, czy pipeline działa bez oczywistych błędów.
+<|end|>
+<|user|>
+Krótko doradź: Czy dokumentacja jest potrzebna w małym projekcie?
+<|assistant|>
+Tak, ale krótka. Wystarczy opis uruchomienia, decyzji i ograniczeń.
+<|end|>
+<|user|>
+Streść jednym zdaniem: SFT smoke sprawdza mechanikę uczenia instrukcji, ale nie dowodzi gotowości modelu do użycia.
+<|assistant|>
+SFT smoke jest testem mechaniki, nie certyfikatem jakości modelu.
+<|end|>
+<|user|>
+Odpowiedz do końca: czym jest walidacja? Tylko sedno.
+<|assistant|>
+Walidacja to sprawdzenie modelu na danych, których nie używa bezpośrednio do nauki.
+<|end|>
+<|user|>
+Wyjaśnij krótko: Co robi gradient clipping?
+<|assistant|>
+Gradient clipping ogranicza zbyt duże gradienty, żeby trening nie stał się niestabilny.
+<|end|>
+<|user|>
+Czy model bazowy powinien odpowiadać na instrukcje? Krótko.
+<|assistant|>
+Nie musi. Model bazowy głównie kontynuuje tekst.
+<|end|>
+<|user|>
+Co zrobić, gdy mam sprzeczne wyniki? Jednym akapitem.
+<|assistant|>
+Sprawdź konfigurację testu i powtórz pomiar w kontrolowanych warunkach.
+<|end|>
+<|user|>
+Jedna myśl: co oznacza brak danych? Odpowiedz wprost.
+<|assistant|>
+Brak danych oznacza, że uczciwa odpowiedź powinna wskazać niepewność.
+<|end|>
+<|user|>
+Czy wynik evala jest wiarygodny? Nie zgaduj.
+<|assistant|>
+Trzeba znać liczbę promptów, ustawienia generacji i metodę oceny.
+<|end|>
+<|user|>
+Bez pętli: co zrobić, gdy odpowiedź jest kompletna? Bez dygresji.
+<|assistant|>
+Zakończyć ją i nie dopisywać kolejnych wersji tej samej myśli.
+<|end|>
+<|user|>
+Czy mogę zaufać tej odpowiedzi? Odpowiedz ostrożnie.
+<|assistant|>
+Bez źródeł, kontekstu i kryteriów nie należy traktować odpowiedzi jako pewnej.
+<|end|>
+<|user|>
+Wyjaśnij w dwóch zdaniach, czemu nie oceniać modelu po jednym samplu.
+<|assistant|>
+Jeden sample może być przypadkowo dobry albo przypadkowo zły. Lepszy obraz daje stały zestaw promptów i kilka ustawień generacji.
+<|end|>
+<|user|>
+W jednym akapicie: Czym jest learning rate?
+<|assistant|>
+Learning rate określa, jak duży krok wykonuje optimizer przy aktualizacji wag modelu.
+<|end|>
+<|user|>
+Czy ten błąd jest poważny? Wskaż brakujące dane. (2)
+<|assistant|>
+Potrzebny jest komunikat błędu, miejsce wystąpienia i wpływ na działanie systemu.
+<|end|>
+<|user|>
+Krótko i konkretnie: Czym jest fallback CPU?
+<|assistant|>
+Fallback CPU to awaryjne uruchomienie pracy na procesorze, gdy GPU nie działa stabilnie.
+<|end|>
+<|user|>
+Czy można zgadywać brakujące parametry? Wskaż ograniczenie.
+<|assistant|>
+Lepiej tego nie robić. Trzeba wskazać założenia albo poprosić o brakujące dane.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź, że sprawdzę to później. Krótko.
+<|assistant|>
+Sprawdzę to później i wrócę z odpowiedzią.
+<|end|>
+<|user|>
+Czym jest prompt? (2)
+<|assistant|>
+Prompt to tekst wejściowy przekazany modelowi przed generacją odpowiedzi.
+<|end|>
+<|user|>
+Jedna myśl: co oznacza brak danych? Zakończ po kompletnej odpowiedzi.
+<|assistant|>
+Brak danych oznacza, że uczciwa odpowiedź powinna wskazać niepewność.
+<|end|>
+<|user|>
+Podaj prostą definicję: latencja.
+<|assistant|>
+Latencja to czas oczekiwania na odpowiedź systemu.
+<|end|>
+<|user|>
+Czy model bazowy powinien odpowiadać na instrukcje? Bez przesadnej pewności.
+<|assistant|>
+Nie musi. Model bazowy głównie kontynuuje tekst.
+<|end|>
+<|user|>
+Jedna myśl: co daje czysty dataset? Tylko sedno.
+<|assistant|>
+Czysty dataset zmniejsza ryzyko uczenia reklam, menu i przypadkowych śmieci.
+<|end|>
+<|user|>
+Wyjaśnij w trzech zdaniach, dlaczego czysty dataset jest ważny. Naturalnie.
+<|assistant|>
+Model uczy się wzorców z danych, także tych niepożądanych. Jeśli dataset zawiera reklamy, menu i spam, model może je później powtarzać. Dlatego jakość danych jest ważniejsza niż sama liczba tokenów.
+<|end|>
+<|user|>
+Opisz krótko, po co robi się smoke test SFT. Zakończ jasno.
+<|assistant|>
+Smoke test SFT sprawdza, czy model reaguje na format instrukcji i czy trening jest stabilny. Nie jest jeszcze dowodem, że model nadaje się do użycia jako asystent.
+<|end|>
+<|user|>
+Zakończ po jednej myśli: czym jest checkpoint? Krótko.
+<|assistant|>
+Checkpoint to zapis stanu modelu, do którego można wrócić później.
+<|end|>
+<|user|>
+Bez komentarza, tylko streszczenie: Czysty dataset jest ważniejszy niż duży dataset pełen reklam, menu i przypadkowych śmieci.
+<|assistant|>
+Jakość danych jest ważniejsza niż sama liczba tokenów.
+<|end|>
+<|user|>
+Nie dodawaj tekstu sklepu: jak opisać GPU? Jednym zdaniem.
+<|assistant|>
+GPU wykonuje wiele obliczeń równolegle i dobrze nadaje się do części zadań treningowych.
+<|end|>
+<|user|>
+Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu? Odpowiedź ma być krótka.
+<|assistant|>
+Odpowiedź brzmi: nie. Loss trzeba połączyć z próbkami generacji i ewaluacją jakościową.
+<|end|>
+<|user|>
+Co oznacza termin „parametr”?
+<|assistant|>
+Parametr to wartość sterująca zachowaniem programu, modelu albo eksperymentu.
+<|end|>
+<|user|>
+Czym jest inferencja?
+<|assistant|>
+Inferencja to użycie wytrenowanego modelu do wygenerowania wyniku.
+<|end|>
+<|user|>
+Odpowiedz praktycznie: Nie wiem, które funkcje zostawić.
+<|assistant|>
+Zostaw funkcje potrzebne do jednego głównego scenariusza użytkownika. Resztę wpisz jako przyszłe rozszerzenia.
+<|end|>
+<|user|>
+Co zrobić? Jak ocenić, czy projekt idzie dobrze?
+<|assistant|>
+Sprawdź, czy da się przejść główny scenariusz od początku do końca. To ważniejsze niż liczba funkcji.
+<|end|>
+<|user|>
+Czy mogę zaufać tej odpowiedzi? Wskaż brakujące dane.
+<|assistant|>
+Bez źródeł, kontekstu i kryteriów nie należy traktować odpowiedzi jako pewnej.
+<|end|>
+<|user|>
+Podaj prostą definicję: zbiór walidacyjny.
+<|assistant|>
+Zbiór walidacyjny służy do oceny modelu poza właściwym treningiem.
+<|end|>
+<|user|>
+Jedno zdanie: czym jest smoke test? Nie używaj listy.
+<|assistant|>
+Smoke test to krótka próba sprawdzająca, czy pipeline działa bez oczywistych błędów.
+<|end|>
+<|user|>
+Wyjaśnij w dwóch zdaniach, dlaczego niższy loss nie zawsze wystarcza. Krótkim akapitem.
+<|assistant|>
+Niższy loss może oznaczać lepsze przewidywanie danych walidacyjnych. Jakość generacji trzeba jednak sprawdzić na przykładach, bo model może nadal powtarzać albo dryfować.
+<|end|>
+<|user|>
+Wyciągnij najważniejszą myśl: Dobre metryki muszą być czytane razem z próbkami jakościowymi.
+<|assistant|>
+Metryki i próbki powinny być analizowane razem.
+<|end|>
+<|user|>
+Jednym zdaniem: po co raport? Zakończ po kompletnej odpowiedzi.
+<|assistant|>
+Raport zapisuje wynik, ustawienia i decyzję po eksperymencie.
+<|end|>
+<|user|>
+Czym jest ewaluacja jakościowa? Odpowiedz jednym zdaniem.
+<|assistant|>
+Ewaluacja jakościowa sprawdza konkretne odpowiedzi modelu, a nie tylko liczbę loss.
+<|end|>
+<|user|>
+Wyciągnij najważniejszą myśl: Dashboard ma pomagać w decyzjach, a nie tylko pokazywać dużo liczb.
+<|assistant|>
+Dashboard powinien wspierać decyzje.
+<|end|>
+<|user|>
+Przeredaguj zdanie: Użytkownik ma możliwość wpisania tekstu do formularza.
+<|assistant|>
+Użytkownik może wpisać tekst w formularzu.
+<|end|>
+<|user|>
+Zakończ po jednej myśli: czym jest checkpoint? Zakończ naturalnie.
+<|assistant|>
+Checkpoint to zapis stanu modelu, do którego można wrócić później.
+<|end|>
+<|user|>
+Podaj prostą definicję: dane treningowe.
+<|assistant|>
+Dane treningowe to przykłady, na których model uczy się wzorców.
+<|end|>
+<|user|>
+Odpowiedz krótko: kiedy przerwać eksperyment? Tylko sedno.
+<|assistant|>
+Przerwij eksperyment, gdy pojawia się NaN, OOM, crash albo wyraźna regresja jakości.
+<|end|>
+<|user|>
+Czym jest GPU? Jednym zdaniem.
+<|assistant|>
+GPU to układ wyspecjalizowany w równoległym przetwarzaniu wielu prostych operacji.
+<|end|>
+<|user|>
+W jednym akapicie: Czym jest smoke test?
+<|assistant|>
+Smoke test to krótka próba sprawdzająca, czy cały pipeline działa bez oczywistych błędów.
+<|end|>
+<|user|>
+Krótko i konkretnie: Po co rozdziela się train i val?
+<|assistant|>
+Rozdział train i val pozwala sprawdzić, czy model działa poza przykładami używanymi do uczenia.
+<|end|>
+<|user|>
+Nie dopisuj drugiej myśli: co zrobić po awarii? Krótko.
+<|assistant|>
+Na start zabezpiecz logi i ostatni poprawny checkpoint.
+<|end|>
+<|user|>
+Czy repetition penalty rozwiązuje wszystkie pętle?
+<|assistant|>
+Nie. Może pomóc, ale dane i trening też muszą uczyć kończenia odpowiedzi.
+<|end|>
+<|user|>
+Podaj krótkie streszczenie: Instrukcyjny tuning nie dodaje magicznej wiedzy, tylko uczy model formatu odpowiedzi.
+<|assistant|>
+SFT poprawia format odpowiedzi, ale nie zastępuje wiedzy.
+<|end|>
+<|user|>
+Czy wynik ładnie wygląda, więc jest poprawny? W dwóch zdaniach.
+<|assistant|>
+Nie. Trzeba sprawdzić, czy odpowiedź faktycznie ma sens.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź, że sprawdzę to później. Uprzejmie.
+<|assistant|>
+Sprawdzę to później i wrócę z odpowiedzią.
+<|end|>
+<|user|>
+Czy ten laptop jest dobry? Odpowiedz ostrożnie. (2)
+<|assistant|>
+Do oceny potrzebne są model, cena, stan i zastosowanie laptopa.
+<|end|>
+<|user|>
+Napisz krótką wiadomość do nauczyciela, że nie zdążę oddać pracy dzisiaj.
+<|assistant|>
+Dzień dobry, nie zdążę dziś oddać pracy. Czy mogę dosłać ją jutro?
+<|end|>
+<|user|>
+Co zrobić? Czy robić panel admina od razu?
+<|assistant|>
+To nie wystarczy: jeśli dane można na początku obsłużyć prościej. Panel admina dodaj, gdy ręczna obsługa naprawdę przeszkadza.
+<|end|>
+<|user|>
+Czy można ocenić bezpieczeństwo bez kontekstu? Krótko.
+<|assistant|>
+Bez kontekstu da się najwyżej wskazać możliwe ryzyka.
+<|end|>
+<|user|>
+Co zrobić? Jak ograniczyć zakres projektu?
+<|assistant|>
+Usuń wszystko, czego nie trzeba do pierwszego działającego scenariusza.
+<|end|>
+<|user|>
+Czy ta strona wygląda dobrze? Co trzeba wiedzieć?
+<|assistant|>
+Nie da się ocenić bez zrzutu ekranu albo opisu celu i odbiorców.
+<|end|>
+<|user|>
+Jak napisać prostą wiadomość z przeprosinami? Odpowiedz krótko.
+<|assistant|>
+Napisz, za co przepraszasz, krótko wyjaśnij sytuację i zaproponuj następny krok.
+<|end|>
+<|user|>
+Popraw tekst: Model udzielił odpowiedzi w sposób zbyt rozwlekły.
+<|assistant|>
+Model odpowiedział zbyt rozwlekle.
+<|end|>
+<|user|>
+Rok ma zwykle Jednym zdaniem.
+<|assistant|>
+Rok ma zwykle 365 dni.
+<|end|>
+<|user|>
+Odpowiedz krótko: kiedy dataset jest za słaby? Nie używaj listy.
+<|assistant|>
+Dataset jest za słaby, gdy próbki pokazują śmieci, duplikaty albo zbyt wąski styl.
+<|end|>
+<|user|>
+Po co jest gradient clipping? Zakończ po wyjaśnieniu.
+<|assistant|>
+Gradient clipping ogranicza zbyt duże gradienty, żeby zmniejszyć ryzyko niestabilnego treningu.
+<|end|>
+<|user|>
+Odpowiedz praktycznie: Jak ocenić, czy projekt idzie dobrze?
+<|assistant|>
+Sprawdź, czy da się przejść główny scenariusz od początku do końca. To ważniejsze niż liczba funkcji.
+<|end|>
+<|user|>
+Wyciągnij najważniejszą myśl: Przed długim treningiem warto zrobić krótki run kontrolny, żeby wykryć błędy pipeline’u.
+<|assistant|>
+Krótki run kontrolny zmniejsza ryzyko długiego treningu.
+<|end|>
+<|user|>
+Jedna myśl: co daje czysty dataset? Bez dygresji.
+<|assistant|>
+Czysty dataset zmniejsza ryzyko uczenia reklam, menu i przypadkowych śmieci.
+<|end|>
+<|user|>
+Podaj krótkie streszczenie: Dobre metryki muszą być czytane razem z próbkami jakościowymi.
+<|assistant|>
+Metryki i próbki powinny być analizowane razem.
+<|end|>
+<|user|>
+Nie rób z tego oferty handlowej: po co jest raport? Bez reklam.
+<|assistant|>
+Raport zapisuje ustawienia, wynik i decyzję po eksperymencie.
+<|end|>
+<|user|>
+Czy mam za mało RAM-u? W jednym akapicie.
+<|assistant|>
+Trzeba znać użycie pamięci pod obciążeniem. Sam rozmiar RAM-u nie mówi, czy jest problem.
+<|end|>
+<|user|>
+Nie powtarzaj frazy: czy warto trenować dalej bez evala? Zakończ naturalnie.
+<|assistant|>
+Nie warto, bo bez evala nie wiadomo, czy model faktycznie się poprawia.
+<|end|>
+<|user|>
+Jak zaplanować naukę na jutro? Daj prostą radę.
+<|assistant|>
+Wybierz dwa najważniejsze tematy i zaplanuj krótkie bloki pracy z przerwami.
+<|end|>
+<|user|>
+Jak odpowiedzieć, gdy nie znam szczegółów? Daj prostą radę.
+<|assistant|>
+Powiedz, czego brakuje, i zaproponuj, jakie informacje są potrzebne.
+<|end|>
+<|user|>
+Poproś krótko o ponowne przesłanie pliku. Bez tłumaczenia się.
+<|assistant|>
+Czy możesz przesłać ten plik jeszcze raz?
+<|end|>
+<|user|>
+Napisz sedno tego tekstu: Jeśli uczysz się tylko przez czytanie odpowiedzi, łatwo pomylić znajomość tekstu ze zrozumieniem.
+<|assistant|>
+Samo czytanie odpowiedzi nie gwarantuje zrozumienia.
+<|end|>
+<|user|>
+Co zrobić? Czy dodać integrację z zewnętrznym API?
+<|assistant|>
+Dodaj ją dopiero, gdy masz jasny przypadek użycia i plan awarii. Na start często wystarczy lokalny mock.
+<|end|>
+<|user|>
+Wyjaśnij jednym akapitem, po co robi się raport po eksperymencie. Naturalnie.
+<|assistant|>
+Raport zapisuje wynik, ustawienia i wnioski, dzięki czemu można później podjąć lepszą decyzję.
+<|end|>
+<|user|>
+Czym jest walidacja datasetu? Bez przykładu.
+<|assistant|>
+Walidacja datasetu sprawdza, czy przykłady są kompletne, czyste i mieszczą się w kontekście modelu.
+<|end|>
+<|user|>
+Napisz neutralnie, że nie mogę dziś przyjść. Uprzejmie.
+<|assistant|>
+Nie mogę dziś przyjść. Dam znać, kiedy będę dostępny.
+<|end|>
+<|user|>
+Popraw tekst: Kod powinien zostać uporządkowany przed dalszym rozwojem.
+<|assistant|>
+Przed dalszym rozwojem warto uporządkować kod.
+<|end|>
+<|user|>
+Czym jest ewaluacja jakościowa? Krótko i poprawnie.
+<|assistant|>
+Ewaluacja jakościowa sprawdza konkretne odpowiedzi modelu, a nie tylko liczbę loss.
+<|end|>
+<|user|>
+Skróć: Zostało wykonane przeprowadzenie testu modelu.
+<|assistant|>
+Przetestowano model.
+<|end|>
+<|user|>
+Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Bez metafor.
+<|assistant|>
+Lepsza jest krótka, konkretna odpowiedź niż długi tekst bez treści.
+<|end|>
+<|user|>
+Nie rozwijaj dalej: po co jest zbiór walidacyjny?
+<|assistant|>
+Zbiór walidacyjny pokazuje, jak model działa poza danymi treningowymi.
+<|end|>
+<|user|>
+Czy ten plan ma sens? Wskaż brakujące informacje.
+<|assistant|>
+Potrzebuję celu, ograniczeń i dostępnych zasobów. Bez nich plan może wyglądać dobrze, ale nie pasować do sytuacji.
+<|end|>
+<|user|>
+Po co jest gradient clipping? Bez listy.
+<|assistant|>
+Gradient clipping ogranicza zbyt duże gradienty, żeby zmniejszyć ryzyko niestabilnego treningu.
+<|end|>
+<|user|>
+Odpowiedz jednym zdaniem i zakończ: co zrobić, gdy brakuje danych? Nie zaczynaj nowego tematu.
+<|assistant|>
+Powiedz, jakich danych brakuje, i nie zgaduj wyniku.
+<|end|>
+<|user|>
+Odpowiedz spokojnie: projekt nie działa, co teraz? Naturalnie.
+<|assistant|>
+Zacznij od sprawdź ostatnią zmianę, log błędu i najprostszy sposób odtworzenia problemu.
+<|end|>
+<|user|>
+Jednym zdaniem: po co raport? Krótko.
+<|assistant|>
+Raport zapisuje wynik, ustawienia i decyzję po eksperymencie.
+<|end|>
+<|user|>
+Czy mogę opublikować ten model? Bez powtarzania.
+<|assistant|>
+Najpierw trzeba znać jakość, ograniczenia, dane treningowe i ryzyka użycia.
+<|end|>
+<|user|>
+Usuń lanie wody: Dokonano wykonania testu działania systemu.
+<|assistant|>
+Przetestowano działanie systemu.
+<|end|>
+<|user|>
+Odpowiedz bez lania wody: czym jest checkpoint? Zwięźle.
+<|assistant|>
+Checkpoint to zapis stanu modelu, do którego można wrócić później.
+<|end|>
+<|user|>
+Odpowiedz prosto: Czym różni się kontener od maszyny wirtualnej?
+<|assistant|>
+Kontener współdzieli jądro systemu, a maszyna wirtualna uruchamia osobny system operacyjny.
+<|end|>
+<|user|>
+Podaj prostą definicję: model językowy.
+<|assistant|>
+Model językowy przewiduje kolejne fragmenty tekstu na podstawie wcześniejszego kontekstu.
+<|end|>
+<|user|>
+Zakończ odpowiedź: czym jest backup? Nie dodawaj kolejnej wersji tej samej myśli.
+<|assistant|>
+Backup to kopia danych potrzebna do odtworzenia ich po awarii.
+<|end|>
+<|user|>
+Zakończ odpowiedź naturalnie: czy jeden wynik wystarczy? Zakończ naturalnie.
+<|assistant|>
+To nie wystarczy: jeden wynik trzeba porównać z próbkami i powtórzyć w kontrolowanych warunkach.
+<|end|>
+<|user|>
+Usuń lanie wody: W mojej opinii uważam, że wynik ten jest dobry.
+<|assistant|>
+Uważam, że ten wynik jest dobry.
+<|end|>
+<|user|>
+Czy ten wynik jest dobry? Wskaż brakujące dane.
+<|assistant|>
+Potrzebne są punktu odniesienia i kryteriów oceny. Bez nich nie da się powiedzieć, czy wynik jest dobry.
+<|end|>
+<|user|>
+Wyjaśnij, dlaczego nie warto powtarzać tej samej frazy. Bez powtórzeń.
+<|assistant|>
+Powtarzanie tej samej frazy nie dodaje informacji i szybko psuje czytelność odpowiedzi. Jeśli myśl jest kompletna, lepiej zakończyć tekst.
+<|end|>
+<|user|>
+Podaj krótkie streszczenie: W małym modelu krótki kontekst ogranicza zdolność utrzymania dłuższej wypowiedzi.
+<|assistant|>
+Krótki kontekst ogranicza długie generacje.
+<|end|>
+<|user|>
+Jak wybrać priorytet? Daj prostą radę.
+<|assistant|>
+Wybierz zadanie, które usuwa największą blokadę albo daje najwięcej informacji.
+<|end|>
+<|user|>
+Czy mam kupić ten sprzęt? Zakończ naturalnie.
+<|assistant|>
+Potrzebny jest model, cena, stan sprzętu i zastosowanie. Bez tego odpowiedź byłaby zgadywaniem.
+<|end|>
+<|user|>
+Czy moja odpowiedź jest dobra? Nie udawaj pewności.
+<|assistant|>
+Nie da się ocenić bez treści odpowiedzi i kryteriów oceny.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Bez drugiej myśli.
+<|assistant|>
+Krótka odpowiedź powinna zawierać jedną myśl i zakończyć się, gdy ta myśl jest jasna.
+<|end|>
+<|user|>
+Jedna myśl: co daje czysty dataset? Nie używaj listy.
+<|assistant|>
+Czysty dataset zmniejsza ryzyko uczenia reklam, menu i przypadkowych śmieci.
+<|end|>
+<|user|>
+Czy większy model zawsze daje lepszy wynik? Odpowiedz ostrożnie.
+<|assistant|>
+Raczej nie. Większy model nadal zależy od jakości danych, treningu i sposobu ewaluacji.
+<|end|>
+<|user|>
+Czy benchmark wystarczy do decyzji?
+<|assistant|>
+Raczej nie. Benchmark trzeba połączyć ze stabilnością, kosztami i jakością wyniku.
+<|end|>
+<|user|>
+Czym jest backup? Zakończ naturalnie.
+<|assistant|>
+Backup to kopia danych przygotowana po to, żeby dało się je odtworzyć po awarii lub pomyłce.
+<|end|>
+<|user|>
+Odpowiedz i zakończ: czy SFT dodaje wiedzę? Bez powtarzania.
+<|assistant|>
+SFT głównie uczy formatu odpowiedzi, a nie automatycznie nowej wiedzy.
+<|end|>
+<|user|>
+Czym jest learning rate? Zakończ naturalnie.
+<|assistant|>
+Learning rate określa, jak duży krok robi optimizer podczas aktualizacji wag modelu.
+<|end|>
+<|user|>
+Kiedy lepiej powiedzieć, że brakuje danych? Naturalnie.
+<|assistant|>
+Gdy pytanie wymaga informacji, których nie ma w opisie.
+<|end|>
+<|user|>
+Podaj prostą definicję: metryka.
+<|assistant|>
+Metryka to liczba opisująca wybraną cechę działania systemu.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź, że sprawdzę to później. Naturalnie.
+<|assistant|>
+Sprawdzę to później i wrócę z odpowiedzią.
+<|end|>
+<|user|>
+Krótko i do końca: czy loss wystarczy? Nie dodawaj kolejnej wersji tej samej myśli.
+<|assistant|>
+To nie wystarczy: loss trzeba czytać razem z przykładami generacji.
+<|end|>
+<|user|>
+Jak zacząć raport?
+<|assistant|>
+Zacznij od celu, wyniku i najważniejszego wniosku.
+<|end|>
+<|user|>
+Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu? Zwięźle.
+<|assistant|>
+Odpowiedź brzmi: nie. Loss trzeba połączyć z próbkami generacji i ewaluacją jakościową.
+<|end|>
+<|user|>
+Czy krótsza odpowiedź zawsze jest lepsza? Nie zgaduj.
+<|assistant|>
+Nie zawsze. Ma być tak krótka, jak pozwala na pełną i poprawną odpowiedź.
+<|end|>
+<|user|>
+Wisła to Jednym zdaniem.
+<|assistant|>
+Wisła to najdłuższa rzeka w Polsce.
+<|end|>
+<|user|>
+Odpowiedz praktycznie: Czy warto robić roadmapę?
+<|assistant|>
+Tak, ale krótka roadmapa jest lepsza niż długa lista życzeń. Powinna pomagać w decyzjach, nie zastępować pracy.
+<|end|>
+<|user|>
+Wyjaśnij w dwóch zdaniach, dlaczego niższy loss nie zawsze wystarcza. Nie rozwijaj ponad potrzebę.
+<|assistant|>
+Niższy loss może oznaczać lepsze przewidywanie danych walidacyjnych. Jakość generacji trzeba jednak sprawdzić na przykładach, bo model może nadal powtarzać albo dryfować.
+<|end|>
+<|user|>
+Odpowiedz krótko: kiedy dataset jest za słaby? Tylko sedno.
+<|assistant|>
+Dataset jest za słaby, gdy próbki pokazują śmieci, duplikaty albo zbyt wąski styl.
+<|end|>
+<|user|>
+Przeredaguj zdanie: Aplikacja posiada możliwość wykonywania wielu rzeczy naraz.
+<|assistant|>
+Aplikacja pozwala wykonywać kilka zadań jednocześnie.
+<|end|>
+<|user|>
+Nie rozwijaj nowego tematu: czym jest best checkpoint? Zakończ naturalnie.
+<|assistant|>
+Best checkpoint to zapis wybrany na podstawie najlepszej ewaluacji.
+<|end|>
+<|user|>
+Krótko i konkretnie: Czym jest top-p sampling?
+<|assistant|>
+Top-p sampling wybiera tokeny z najmniejszego zbioru, którego łączna szansa przekracza ustalony próg.
+<|end|>
+<|user|>
+Co zrobić, gdy mam za dużo zadań? Jednym akapitem.
+<|assistant|>
+Spisz zadania, wybierz najpilniejsze i usuń albo odłóż te, które nie są konieczne dziś.
+<|end|>
+<|user|>
+Odpowiedz do końca: czym jest walidacja? Bez dygresji.
+<|assistant|>
+Walidacja to sprawdzenie modelu na danych, których nie używa bezpośrednio do nauki.
+<|end|>
+<|user|>
+Wyjaśnij, dlaczego nie warto powtarzać tej samej frazy. Krótkim akapitem.
+<|assistant|>
+Powtarzanie tej samej frazy nie dodaje informacji i szybko psuje czytelność odpowiedzi. Jeśli myśl jest kompletna, lepiej zakończyć tekst.
+<|end|>
+<|user|>
+Czy ten wynik jest dobry? Powiedz, czego brakuje.
+<|assistant|>
+Potrzebne są punktu odniesienia i kryteriów oceny. Bez nich nie da się powiedzieć, czy wynik jest dobry.
+<|end|>
+<|user|>
+Czym jest walidacja datasetu? W prostym języku.
+<|assistant|>
+Walidacja datasetu sprawdza, czy przykłady są kompletne, czyste i mieszczą się w kontekście modelu.
+<|end|>
+<|user|>
+Odpowiedz jednym akapitem: co oznacza overfit? Tylko sedno.
+<|assistant|>
+Overfit oznacza, że model zbyt mocno dopasował się do danych treningowych i gorzej uogólnia.
+<|end|>
+<|user|>
+Czy ten plan ma sens? Podaj uczciwą odpowiedź.
+<|assistant|>
+Potrzebuję celu, ograniczeń i dostępnych zasobów. Bez nich plan może wyglądać dobrze, ale nie pasować do sytuacji.
+<|end|>
+<|user|>
+Czym jest gradient accumulation? Użyj prostego języka.
+<|assistant|>
+Gradient accumulation zbiera gradienty z kilku małych batchy przed jednym krokiem optimizera.
+<|end|>
+<|user|>
+Krótko doradź: Czy dodać integrację z zewnętrznym API?
+<|assistant|>
+Dodaj ją dopiero, gdy masz jasny przypadek użycia i plan awarii. Na start często wystarczy lokalny mock.
+<|end|>
+<|user|>
+Czym jest tokenizer? Krótko i poprawnie.
+<|assistant|>
+Tokenizer dzieli tekst na tokeny, czyli jednostki, które model może przetwarzać jako liczby.
+<|end|>
+<|user|>
+Nie używaj marketingu: czym jest checkpoint? Naturalnie.
+<|assistant|>
+Checkpoint to zapis stanu treningu, do którego można wrócić później.
+<|end|>
+<|user|>
+Co zrobić, gdy wynik mnie zaskakuje? Bez listy.
+<|assistant|>
+Sprawdź dane wejściowe, metodę pomiaru i powtórz test w tych samych warunkach.
+<|end|>
+<|user|>
+Czy warto kontynuować trening? Odpowiedz ostrożnie.
+<|assistant|>
+Potrzebne są trendy loss, próbki jakościowe i koszt dalszego treningu. Bez tego decyzja jest niepewna.
+<|end|>
+<|user|>
+Krótko i konkretnie: Co oznacza val loss?
+<|assistant|>
+Val loss mierzy błąd modelu na zbiorze walidacyjnym.
+<|end|>
+<|user|>
+Czy najpierw poprawiać wygląd? Zakończ naturalnie.
+<|assistant|>
+Wygląd warto poprawiać po potwierdzeniu, że główna logika działa.
+<|end|>
+<|user|>
+Czy model działa dobrze? Wskaż brakujące dane.
+<|assistant|>
+Trzeba zobaczyć próbki, metryki i zestaw testowy. Sama informacja, że działa, nie wystarcza.
+<|end|>
+<|user|>
+Zakończ po jednej myśli: po co robi się testy? Zakończ naturalnie.
+<|assistant|>
+Testy pomagają wykrywać błędy i upewnić się, że zmiany nie psują działania.
+<|end|>
+<|user|>
+Czym jest ryzyko?
+<|assistant|>
+Ryzyko to możliwość wystąpienia problemu oraz jego potencjalny wpływ.
+<|end|>
+<|user|>
+Czy ta optymalizacja ma sens? Powiedz, czego brakuje.
+<|assistant|>
+W pierwszym kroku trzeba zmierzyć wąskie gardło. Bez pomiaru optymalizacja może być przypadkowa.
+<|end|>
+<|user|>
+Czym jest smoke test?
+<|assistant|>
+Smoke test to krótka próba sprawdzająca, czy cały pipeline działa bez oczywistych błędów.
+<|end|>
+<|user|>
+Czy ten projekt warto pokazać? Nie dopowiadaj faktów.
+<|assistant|>
+Nie wiadomo bez celu, odbiorcy i aktualnego stanu projektu.
+<|end|>
+<|user|>
+Usuń lanie wody: Nie jest możliwe jednoznaczne stwierdzenie bez dodatkowych informacji.
+<|assistant|>
+Bez dodatkowych informacji nie da się tego jednoznacznie stwierdzić.
+<|end|>
+<|user|>
+Podaj krótkie streszczenie: Duże projekty często upadają nie dlatego, że są niemożliwe, ale dlatego, że zaczynają się od zbyt szerokiego zakresu.
+<|assistant|>
+Zbyt szeroki zakres często szkodzi projektom bardziej niż sama trudność.
+<|end|>
+<|user|>
+Czy eval jest wiarygodny? Zakończ naturalnie.
+<|assistant|>
+Trzeba znać liczbę promptów, metodę oceny i ustawienia generacji.
+<|end|>
+<|user|>
+Podaj krótkie streszczenie: Nie warto trenować dalej tylko dlatego, że trening technicznie działa.
+<|assistant|>
+Techniczna stabilność nie wystarcza do decyzji o dalszym treningu.
+<|end|>
+<|user|>
+Czy warto ignorować ostrzeżenia w logach? Wskaż ograniczenie.
+<|assistant|>
+Odpowiedź brzmi: nie. Ostrzeżenia mogą wskazywać problem, który później stanie się awarią.
+<|end|>
+<|user|>
+Czy model się poprawił? Zakończ naturalnie.
+<|assistant|>
+Potrzebne są porównywalne próbki, metryki i ten sam zestaw promptów.
+<|end|>
+<|user|>
+Czy wynik evala jest wiarygodny? Jednym akapitem.
+<|assistant|>
+Trzeba znać liczbę promptów, ustawienia generacji i metodę oceny.
+<|end|>
+<|user|>
+Jedna myśl: co daje czysty dataset? Bez powtarzania.
+<|assistant|>
+Czysty dataset zmniejsza ryzyko uczenia reklam, menu i przypadkowych śmieci.
+<|end|>
+<|user|>
+Odpowiedz krótko: czego nie da się ocenić bez danych? Odpowiedz wprost.
+<|assistant|>
+Bez danych nie da się rzetelnie ocenić jakości, bezpieczeństwa ani opłacalności decyzji.
+<|end|>
+<|user|>
+Wyjaśnij prosto, czym jest log. Naturalnie.
+<|assistant|>
+Log to zapis zdarzeń z działania programu, przydatny przy diagnozowaniu błędów.
+<|end|>
+<|user|>
+Przeredaguj zdanie: Warto byłoby dokonać porównania kilku wariantów.
+<|assistant|>
+Rozsądnie jest porównać kilka wariantów.
+<|end|>
+<|user|>
+Jedno zdanie: czym jest smoke test? Nie dodawaj kolejnej wersji tej samej myśli.
+<|assistant|>
+Smoke test to krótka próba sprawdzająca, czy pipeline działa bez oczywistych błędów.
+<|end|>
+<|user|>
+Podaj prostą definicję: wdrożenie.
+<|assistant|>
+Wdrożenie to uruchomienie projektu w miejscu, gdzie może z niego korzystać użytkownik.
+<|end|>
+<|user|>
+Nie używaj marketingu: czym jest checkpoint? Krótko.
+<|assistant|>
+Checkpoint to zapis stanu treningu, do którego można wrócić później.
+<|end|>
+<|user|>
+Podaj rozsądny następny krok: Co zrobić, gdy pomysł nie działa?
+<|assistant|>
+Nazwij konkretny problem i sprawdź, czy da się uprościć założenia. Jeśli nie, warto zmienić kierunek wcześnie.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź: po co ograniczać zakres? Jednym akapitem.
+<|assistant|>
+Ograniczenie zakresu pomaga szybciej ukończyć działającą wersję i sprawdzić pomysł.
+<|end|>
+<|user|>
+Zakończ po jednej myśli: co zrobić, gdy odpowiedź jest pełna? Bez powtarzania.
+<|assistant|>
+Zatrzymaj tekst i nie dopisuj kolejnej wersji tej samej informacji.
+<|end|>
+<|user|>
+Zakończ po jednej myśli: czym jest checkpoint?
+<|assistant|>
+Checkpoint to zapis stanu modelu, do którego można wrócić później.
+<|end|>
+<|user|>
+Co zrobić? Projekt robi się za duży.
+<|assistant|>
+Zapisz jedną najważniejszą funkcję i odłóż resztę na później. Mniejszy zakres łatwiej ukończyć i ocenić.
+<|end|>
+<|user|>
+Skróć tekst: Model językowy może generować płynny tekst, ale nie oznacza to, że zna prawdę o świecie.
+<|assistant|>
+Płynny tekst modelu nie gwarantuje poprawności faktów.
+<|end|>
+<|user|>
+Czy dane webowe są zawsze złe? Bez przesadnej pewności.
+<|assistant|>
+Nie, ale wymagają filtracji, bo mogą zawierać reklamy, menu i komentarze.
+<|end|>
+<|user|>
+Co oznacza termin „kontener”?
+<|assistant|>
+Kontener uruchamia aplikację z jej zależnościami w odizolowanym środowisku.
+<|end|>
+<|user|>
+Odpowiedz krótko: kiedy przerwać eksperyment? Nie dodawaj kolejnej wersji tej samej myśli.
+<|assistant|>
+Przerwij eksperyment, gdy pojawia się NaN, OOM, crash albo wyraźna regresja jakości.
+<|end|>
+<|user|>
+Czy ta konfiguracja jest optymalna? Wskaż brakujące informacje.
+<|assistant|>
+Nie wiadomo bez obciążenia, celu i pomiarów. Najpierw trzeba sprawdzić realne metryki.
+<|end|>
+<|user|>
+Napisz neutralnie, że nie mogę dziś przyjść. Jednym zdaniem.
+<|assistant|>
+Nie mogę dziś przyjść. Dam znać, kiedy będę dostępny.
+<|end|>
+<|user|>
+Czy powinienem to kupić? Wskaż brakujące informacje.
+<|assistant|>
+Brakuje informacji o produkcie, cenie, stanie i twoich potrzebach. Bez tego można tylko zgadywać.
+<|end|>
+<|user|>
+Czy większy model zawsze daje lepszy wynik? Wskaż ograniczenie.
+<|assistant|>
+Większy model nadal zależy od jakości danych, treningu i sposobu ewaluacji.
+<|end|>
+<|user|>
+Odpowiedz bez wezwania do kontaktu: co zrobić po błędzie? Bez reklam.
+<|assistant|>
+Zapisz log, sprawdź ostatnią zmianę i odtwórz problem w kontrolowany sposób.
+<|end|>
+<|user|>
+Wyjaśnij jednym akapitem, po co robi się raport po eksperymencie. Jednym akapitem.
+<|assistant|>
+Raport zapisuje wynik, ustawienia i wnioski, dzięki czemu można później podjąć lepszą decyzję.
+<|end|>
+<|user|>
+Skróć: Chciałbym poinformować, że nie zdążę oddać pracy dzisiaj.
+<|assistant|>
+Nie zdążę dziś oddać pracy.
+<|end|>
+<|user|>
+Czy jeden dobry sample wystarcza? Naturalnie.
+<|assistant|>
+Nie. Trzeba sprawdzić więcej promptów i kilka typów błędów.
+<|end|>
+<|user|>
+Wyjaśnij w dwóch zdaniach, po co robi się checkpointy. Bez lania wody.
+<|assistant|>
+Checkpoint zapisuje stan modelu i optimizera w konkretnym momencie. Dzięki temu można wznowić trening albo wrócić do lepszego punktu.
+<|end|>
+<|user|>
+Czym jest interfejs?
+<|assistant|>
+Interfejs to sposób komunikacji użytkownika albo programu z systemem.
+<|end|>
+<|user|>
+Czy ten wynik jest dobry? Odpowiedz ostrożnie.
+<|assistant|>
+Z samego opisu nie wynika punktu odniesienia i kryteriów oceny. Bez nich nie da się powiedzieć, czy wynik jest dobry.
+<|end|>
+<|user|>
+Wyjaśnij w trzech zdaniach, dlaczego czysty dataset jest ważny. Krótkim akapitem.
+<|assistant|>
+Model uczy się wzorców z danych, także tych niepożądanych. Jeśli dataset zawiera reklamy, menu i spam, model może je później powtarzać. Dlatego jakość danych jest ważniejsza niż sama liczba tokenów.
+<|end|>
+<|user|>
+Napisz sedno tego tekstu: Walidacja jest ważna, bo sam spadek train loss może ukrywać overfit.
+<|assistant|>
+Walidacja pomaga wykryć overfit.
+<|end|>
+<|user|>
+Nie rozwijaj dalej: po co jest zbiór walidacyjny? Nie zaczynaj nowego tematu.
+<|assistant|>
+Zbiór walidacyjny pokazuje, jak model działa poza danymi treningowymi.
+<|end|>
+<|user|>
+Czym jest wdrożenie?
+<|assistant|>
+Wdrożenie to uruchomienie projektu w miejscu, gdzie może z niego korzystać użytkownik.
+<|end|>
+<|user|>
+Czy można ufać jednej próbce generacji? Krótko.
+<|assistant|>
+Nie, Jedna próbka może być przypadkowo dobra albo zła, więc warto sprawdzić więcej przykładów.
+<|end|>
+<|user|>
+Czy zawsze warto wybrać szybsze rozwiązanie? Bez przesadnej pewności.
+<|assistant|>
+Nie zawsze. Szybsze rozwiązanie ma sens, jeśli nie zwiększa zbyt mocno ryzyka i długu technicznego.
+<|end|>
+<|user|>
+Czy nowsza wersja zawsze jest lepsza? Bez przesadnej pewności.
+<|assistant|>
+Nowsza wersja może mieć poprawki, ale też nowe błędy albo niezgodności.
+<|end|>
+<|user|>
+Podaj prostą definicję: test.
+<|assistant|>
+Test sprawdza, czy wybrany fragment systemu działa zgodnie z założeniem.
+<|end|>
+<|user|>
+Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Bez dodatkowego komentarza.
+<|assistant|>
+Lepsza jest krótka, konkretna odpowiedź niż długi tekst bez treści.
+<|end|>
+<|user|>
+Wyjaśnij w dwóch zdaniach, czemu nie oceniać modelu po jednym samplu. Bez powtórzeń.
+<|assistant|>
+Jeden sample może być przypadkowo dobry albo przypadkowo zły. Lepszy obraz daje stały zestaw promptów i kilka ustawień generacji.
+<|end|>
+<|user|>
+Napisz krótko, że potrzebuję więcej informacji. Bez formalnego tonu.
+<|assistant|>
+Potrzebuję więcej informacji, żeby odpowiedzieć dokładnie.
+<|end|>
+<|user|>
+Jak ocenić, czy tekst jest jasny? Odpowiedz krótko.
+<|assistant|>
+Sprawdź, czy po pierwszym czytaniu wiadomo, o co chodzi i co trzeba zrobić.
+<|end|>
+<|user|>
+Wyjaśnij krótko, czym jest smoke test?
+<|assistant|>
+Smoke test to krótka próba sprawdzająca, czy cały pipeline działa bez oczywistych błędów.
+<|end|>
+<|user|>
+Krótko: co robi tokenizer?
+<|assistant|>
+Tokenizer zamienia tekst na tokeny, z którymi pracuje model.
+<|end|>
+<|user|>
+Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Zakończ naturalnie.
+<|assistant|>
+Lepsza jest krótka, konkretna odpowiedź niż długi tekst bez treści.
+<|end|>
+<|user|>
+Usuń lanie wody: Interfejs powinien zostać uproszczony w celu poprawy czytelności.
+<|assistant|>
+Interfejs warto uprościć, żeby był czytelniejszy.
+<|end|>
+<|user|>
+Popraw tekst: Nie jest możliwe jednoznaczne stwierdzenie bez dodatkowych informacji.
+<|assistant|>
+Bez dodatkowych informacji nie da się tego jednoznacznie stwierdzić.
+<|end|>
+<|user|>
+Wyjaśnij w dwóch zdaniach, po co robi się checkpointy. Odpowiedz spokojnie.
+<|assistant|>
+Checkpoint zapisuje stan modelu i optimizera w konkretnym momencie. Dzięki temu można wznowić trening albo wrócić do lepszego punktu.
+<|end|>
+<|user|>
+Czy benchmark jest ważniejszy niż funkcje?
+<|assistant|>
+Benchmark jest ważny, gdy mierzy realny problem. Nie powinien zastępować sprawdzenia, czy projekt działa dla użytkownika.
+<|end|>
+<|user|>
+Usuń lanie wody: Użytkownik ma możliwość wpisania tekstu do formularza.
+<|assistant|>
+Użytkownik może wpisać tekst w formularzu.
+<|end|>
+<|user|>
+Zakończ odpowiedź naturalnie: czy jeden wynik wystarczy? Bez dygresji.
+<|assistant|>
+Raczej nie, jeden wynik trzeba porównać z próbkami i powtórzyć w kontrolowanych warunkach.
+<|end|>
+<|user|>
+Napisz odpowiedź techniczną bez tekstu sklepu: czym jest backup? Naturalnie.
+<|assistant|>
+Backup to kopia danych używana do odtworzenia ich po awarii.
+<|end|>
+<|user|>
+Jedna myśl: co oznacza brak danych? Bez powtarzania.
+<|assistant|>
+Brak danych oznacza, że uczciwa odpowiedź powinna wskazać niepewność.
+<|end|>
+<|user|>
+Napisz krótką odpowiedź o tym, dlaczego warto robić notatki. Bez rozwijania w kolejny temat.
+<|assistant|>
+Notatki pomagają wrócić do decyzji i nie powtarzać tych samych analiz.
+<|end|>
+<|user|>
+Co zrobić? Mam mało czasu na projekt.
+<|assistant|>
+Wybierz wersję, którą da się pokazać od początku do końca. Lepiej mieć prosty działający projekt niż rozbudowany szkic.
+<|end|>
+<|user|>
+Wyjaśnij prosto, czym jest log. Prosto.
+<|assistant|>
+Log to zapis zdarzeń z działania programu, przydatny przy diagnozowaniu błędów.
+<|end|>
+<|user|>
+Skróć i popraw: Aplikacja nie posiada jeszcze pełnej funkcjonalności.
+<|assistant|>
+Aplikacja nie ma jeszcze wszystkich funkcji.
+<|end|>
+<|user|>
+Napisz naturalniej: Ten projekt jest bardzo dobry, ponieważ posiada wiele funkcji i działa w dobry sposób.
+<|assistant|>
+Ten projekt jest solidny, bo ma wiele przydatnych funkcji i działa stabilnie.
+<|end|>
+<|user|>
+Nie powtarzaj frazy: czy warto trenować dalej bez evala?
+<|assistant|>
+Nie warto, bo bez evala nie wiadomo, czy model faktycznie się poprawia.
+<|end|>
+<|user|>
+W jednym akapicie: Co oznacza train loss?
+<|assistant|>
+Train loss mierzy błąd modelu na przykładach używanych podczas treningu.
+<|end|>
+<|user|>
+Napisz naturalniej: W przypadku wystąpienia błędu należy ponownie uruchomić usługę.
+<|assistant|>
+Jeśli wystąpi błąd, uruchom usługę ponownie.
+<|end|>
+<|user|>
+Popraw tekst: Ten projekt jest bardzo dobry, ponieważ posiada wiele funkcji i działa w dobry sposób.
+<|assistant|>
+Ten projekt jest solidny, bo ma wiele przydatnych funkcji i działa stabilnie.
+<|end|>
+<|user|>
+Napisz sedno tego tekstu: Przed długim treningiem warto zrobić krótki run kontrolny, żeby wykryć błędy pipeline’u.
+<|assistant|>
+Krótki run kontrolny zmniejsza ryzyko długiego treningu.
+<|end|>
+<|user|>
+Podaj prostą definicję: proces.
+<|assistant|>
+Proces to uruchomiony program wraz z pamięcią i zasobami systemu.
+<|end|>
+<|user|>
+Opisz krótko, czym różni się model bazowy od modelu po SFT. Bez powtórzeń.
+<|assistant|>
+Model bazowy przede wszystkim kontynuuje tekst. Model po SFT jest uczony reagowania na instrukcje i kończenia odpowiedzi w bardziej przewidywalnym formacie.
+<|end|>
+<|user|>
+Skróć i popraw: Użytkownik ma możliwość wpisania tekstu do formularza.
+<|assistant|>
+Użytkownik może wpisać tekst w formularzu.
+<|end|>
+<|user|>
+Czy wynik evala jest wiarygodny? Wskaż brakujące dane.
+<|assistant|>
+Trzeba znać liczbę promptów, ustawienia generacji i metodę oceny.
+<|end|>
+<|user|>
+Nie powtarzaj: jak kończyć odpowiedź? Bez dygresji.
+<|assistant|>
+Zakończ ją wtedy, gdy główna myśl jest jasna.
+<|end|>
+<|user|>
+Czy wynik benchmarku jest dobry? Podaj uczciwą odpowiedź.
+<|assistant|>
+Trzeba znać sprzęt, ustawienia testu i punkt odniesienia. Sama liczba nie wystarcza.
+<|end|>
+<|user|>
+Czy krótsza odpowiedź zawsze jest lepsza? Naturalnie.
+<|assistant|>
+Nie zawsze. Ma być tak krótka, jak pozwala na pełną i poprawną odpowiedź.
+<|end|>
+<|user|>
+Streść jednym zdaniem: Eval powinien mieć stałe prompty, jasne kryteria i porównanie z poprzednim checkpointem.
+<|assistant|>
+Dobry eval wymaga stałych promptów, kryteriów i porównania.
+<|end|>
+<|user|>
+Jedna myśl, bez listy: kiedy projekt jest za duży? Bez metafor.
+<|assistant|>
+Projekt jest za duży, gdy nie da się szybko pokazać jego głównej wartości.
+<|end|>
+<|user|>
+Odpowiedz krótko: kiedy przerwać eksperyment? Krótko.
+<|assistant|>
+Przerwij eksperyment, gdy pojawia się NaN, OOM, crash albo wyraźna regresja jakości.
+<|end|>
+<|user|>
+Wyjaśnij krótko: Co oznacza train loss?
+<|assistant|>
+Train loss mierzy błąd modelu na przykładach używanych podczas treningu.
+<|end|>
+<|user|>
+Czy automat powinien kasować stare checkpointy?
+<|assistant|>
+Nie bez jasnej polityki retencji i potwierdzenia, bo checkpointy mogą być potrzebne do powrotu.
+<|end|>
+<|user|>
+Czy ta optymalizacja ma sens? Odpowiedz uczciwie.
+<|assistant|>
+W pierwszym kroku trzeba zmierzyć wąskie gardło. Bez pomiaru optymalizacja może być przypadkowa.
+<|end|>
+<|user|>
+Nie dopisuj drugiej myśli: co zrobić po awarii?
+<|assistant|>
+W pierwszym kroku zabezpiecz logi i ostatni poprawny checkpoint.
+<|end|>
+<|user|>
+CPU to Bez zmyślania.
+<|assistant|>
+CPU to główny procesor wykonujący instrukcje programu.
+<|end|>
+<|user|>
+Czy można oceniać bezpieczeństwo bez szczegółów? Bez przesadnej pewności.
+<|assistant|>
+Nie. Ocena bezpieczeństwa wymaga kontekstu, konfiguracji i możliwych skutków.
+<|end|>
+<|user|>
+Czy ten błąd jest poważny? Powiedz, czego brakuje.
+<|assistant|>
+Trzeba znać komunikat błędu, miejsce wystąpienia i wpływ na działanie systemu.
+<|end|>
+<|user|>
+Czy najpierw poprawiać wygląd? Krótko.
+<|assistant|>
+Wygląd warto poprawiać po potwierdzeniu, że główna logika działa.
+<|end|>
+<|user|>
+Jedna myśl, bez listy: kiedy projekt jest za duży? W jednym akapicie.
+<|assistant|>
+Projekt jest za duży, gdy nie da się szybko pokazać jego głównej wartości.
+<|end|>
+<|user|>
+Wyjaśnij w trzech zdaniach, dlaczego czysty dataset jest ważny. Nie rozwijaj ponad potrzebę.
+<|assistant|>
+Model uczy się wzorców z danych, także tych niepożądanych. Jeśli dataset zawiera reklamy, menu i spam, model może je później powtarzać. Dlatego jakość danych jest ważniejsza niż sama liczba tokenów.
+<|end|>
+<|user|>
+Podaj rozsądny następny krok: Czy warto robić roadmapę?
+<|assistant|>
+Tak, ale krótka roadmapa jest lepsza niż długa lista życzeń. Powinna pomagać w decyzjach, nie zastępować pracy.
+<|end|>
+<|user|>
+Jak napisać krótkie podsumowanie?
+<|assistant|>
+Zostaw tylko główną myśl, wynik i najważniejszy wniosek.
+<|end|>
+<|user|>
+Odpowiedz bez powtórzeń: jak pisać krócej? Zakończ naturalnie.
+<|assistant|>
+Usuń dygresje i zostaw tylko informację potrzebną do decyzji.
+<|end|>
+<|user|>
+Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu? Naturalnie.
+<|assistant|>
+Raczej nie, Loss trzeba połączyć z próbkami generacji i ewaluacją jakościową.
+<|end|>
+<|user|>
+Krótko doradź: Czy warto robić pełną automatyzację od razu?
+<|assistant|>
+Nie zawsze. Najpierw sprawdź ręczny albo prosty półautomatyczny proces, a potem automatyzuj to, co faktycznie się powtarza.
+<|end|>
+<|user|>
+Czy automat powinien kasować stare checkpointy? Wskaż ograniczenie.
+<|assistant|>
+Nie bez jasnej polityki retencji i potwierdzenia, bo checkpointy mogą być potrzebne do powrotu.
+<|end|>
+<|user|>
+Skróć i popraw: Nie posiadam wystarczającej ilości danych do oceny.
+<|assistant|>
+Nie mam wystarczających danych do oceny.
+<|end|>
+<|user|>
+Rok ma zwykle Nie dodawaj dat ani gmin.
+<|assistant|>
+Rok ma zwykle 365 dni.
+<|end|>
+<|user|>
+Czy model po SFT automatycznie zna więcej faktów? Odpowiedz jasno.
+<|assistant|>
+Nie. SFT głównie uczy sposobu odpowiadania, a wiedza nadal zależy od bazy i danych.
+<|end|>
+<|user|>
+Odpowiedz i zakończ: czy SFT dodaje wiedzę? Nie zaczynaj nowego tematu.
+<|assistant|>
+SFT głównie uczy formatu odpowiedzi, a nie automatycznie nowej wiedzy.
+<|end|>
+<|user|>
+Czym jest plik?
+<|assistant|>
+Plik to nazwany zapis danych w systemie plików.
+<|end|>
+<|user|>
+Czy ten dataset wystarczy? Powiedz, czego brakuje.
+<|assistant|>
+Potrzebna jest liczba tokenów, próbki jakościowe i plan treningu. Sama nazwa datasetu nie wystarcza.
+<|end|>
+<|user|>
+Czy mam kupić ten sprzęt? Nie dopowiadaj faktów.
+<|assistant|>
+Potrzebny jest model, cena, stan sprzętu i zastosowanie. Bez tego odpowiedź byłaby zgadywaniem.
+<|end|>
+<|user|>
+Grawitacja to Nie dodawaj dat ani gmin.
+<|assistant|>
+Grawitacja to oddziaływanie, które przyciąga masy do siebie.
+<|end|>
+<|user|>
+Jednym zdaniem: po co raport? Nie zaczynaj nowego tematu.
+<|assistant|>
+Raport zapisuje wynik, ustawienia i decyzję po eksperymencie.
+<|end|>
+<|user|>
+Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez dygresji.
+<|assistant|>
+Loss pokazuje, czy model uczy się przewidywać dane treningowe lub walidacyjne.
+<|end|>
+<|user|>
+Po co robi się eval na tych samych promptach?
+<|assistant|>
+Stałe prompty pozwalają porównać checkpointy bez mieszania zmian modelu ze zmianami testu.
+<|end|>
+<|user|>
+W jednym akapicie: Czym różni się kontener od maszyny wirtualnej?
+<|assistant|>
+Kontener współdzieli jądro systemu, a maszyna wirtualna uruchamia osobny system operacyjny.
+<|end|>
+<|user|>
+Czym jest RAM? (2)
+<|assistant|>
+RAM to szybka pamięć robocza używana przez działające programy i system.
+<|end|>
+<|user|>
+Czym jest checkpoint? Zakończ naturalnie.
+<|assistant|>
+Checkpoint to zapis stanu modelu i treningu w konkretnym momencie.
+<|end|>
+<|user|>
+Nie powtarzaj pierwszego słowa: po co jest eval? Bez listy.
+<|assistant|>
+Eval pomaga sprawdzić, czy model poprawia się w praktyce.
+<|end|>
+<|user|>
+Odpowiedz prosto: Po co używa się Dockera?
+<|assistant|>
+Docker ułatwia uruchamianie aplikacji z tymi samymi zależnościami na różnych maszynach.
+<|end|>

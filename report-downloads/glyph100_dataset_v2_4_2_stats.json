@@ -1,0 +1,153 @@
+{
+  "generated_at": "2026-07-18T04:50:25.580112+00:00",
+  "dataset_name": "glyph100_dataset_v2_4_2_core",
+  "description": "Corrective source-aware corpus derived from v2.4.1 with capped parliamentary text and filtered Wikipedia locality templates",
+  "config": "configs/glyph100_v2_4_2_core.json",
+  "derived_from": "glyph100_dataset_v2_4_1_core",
+  "tokenizer": "data/processed/tokenizer.model",
+  "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+  "train_bin": "data/processed/glyph100_v2_4_2_train.bin",
+  "val_bin": "data/processed/glyph100_v2_4_2_val.bin",
+  "docs_jsonl": "data/processed/glyph100_v2_4_2_docs.jsonl",
+  "docs_store": "data/raw/glyph100_v2_4_2/glyph100_v2_4_2_docs.jsonl",
+  "train_tokens": 231494339,
+  "val_tokens": 1176728,
+  "total_tokens": 232671067,
+  "total_docs": 159579,
+  "parent_docs": 151981,
+  "parent_leakage_count": 0,
+  "parent_leakage_examples": [],
+  "duplicate_ids": 0,
+  "exact_duplicates": 0,
+  "normalized_duplicates": 0,
+  "token_word_ratio": 1.9382224035490325,
+  "literature_share": 0.543905964036345,
+  "wikipedia_share": 0.40830572629814776,
+  "parliamentary_share": 0.025832073052727264,
+  "residual_web_docs": 0,
+  "residual_locality_docs": 0,
+  "minimum_ready_tokens": 220000000,
+  "input_source_tokens": {
+    "wikipedia_pl": 120003040,
+    "wolne_lektury": 55037100,
+    "1000_novels": 30196490,
+    "eltec_pol": 13841376,
+    "parliamentary": 23852526,
+    "wikibooks": 3772313,
+    "wikinews": 2745045,
+    "wikisource": 30048511
+  },
+  "selected_parent_token_estimates": {
+    "wikipedia_pl": 95000929,
+    "wolne_lektury": 55024768,
+    "1000_novels": 30091693,
+    "eltec_pol": 13827409,
+    "parliamentary": 6010376,
+    "wikibooks": 3608515,
+    "wikinews": 1500066,
+    "wikisource": 27607311
+  },
+  "sources": {
+    "1000_novels": {
+      "tokens": 30091693,
+      "train_tokens": 29905478,
+      "val_tokens": 186215,
+      "docs": 2767,
+      "train_docs": 2750,
+      "val_docs": 17
+    },
+    "eltec_pol": {
+      "tokens": 13827409,
+      "train_tokens": 13692564,
+      "val_tokens": 134845,
+      "docs": 1057,
+      "train_docs": 1047,
+      "val_docs": 10
+    },
+    "parliamentary": {
+      "tokens": 6010376,
+      "train_tokens": 5966996,
+      "val_tokens": 43380,
+      "docs": 6226,
+      "train_docs": 6185,
+      "val_docs": 41
+    },
+    "wikibooks": {
+      "tokens": 3608515,
+      "train_tokens": 3588927,
+      "val_tokens": 19588,
+      "docs": 4068,
+      "train_docs": 4042,
+      "val_docs": 26
+    },
+    "wikinews": {
+      "tokens": 1500066,
+      "train_tokens": 1492984,
+      "val_tokens": 7082,
+      "docs": 4544,
+      "train_docs": 4521,
+      "val_docs": 23
+    },
+    "wikipedia_pl": {
+      "tokens": 95000929,
+      "train_tokens": 94504183,
+      "val_tokens": 496746,
+      "docs": 100721,
+      "train_docs": 100218,
+      "val_docs": 503
+    },
+    "wikisource": {
+      "tokens": 27607311,
+      "train_tokens": 27607311,
+      "val_tokens": 0,
+      "docs": 33023,
+      "train_docs": 33023,
+      "val_docs": 0
+    },
+    "wolne_lektury": {
+      "tokens": 55024768,
+      "train_tokens": 54735896,
+      "val_tokens": 288872,
+      "docs": 7173,
+      "train_docs": 7124,
+      "val_docs": 49
+    }
+  },
+  "rejection_reasons": {
+    "wiki_1975_1998_template": 21888,
+    "wiki_locality_administrative_lead": 19749,
+    "wiki_locality_template_cluster": 5669,
+    "wiki_surface_template": 4209,
+    "wiki_admin_template": 3977,
+    "wiki_population_template": 3656,
+    "web_residue_pattern": 1638,
+    "wiki_register_template": 1621,
+    "parliamentary_legal_citation_heavy": 1297,
+    "wikisource_page_header_ocr": 764,
+    "wiki_media_residue": 759,
+    "wiki_markup_residue": 149,
+    "wikibooks_link_list_heavy": 27,
+    "source_metadata_preamble": 2
+  },
+  "input_scan": {
+    "duplicate_input_ids": 0,
+    "input_docs": 201746
+  },
+  "quality_gate_checks": {
+    "minimum token floor": true,
+    "literature share": true,
+    "Wikipedia share": true,
+    "parliamentary share": true,
+    "web residue": true,
+    "strong locality templates": true,
+    "parent split leakage": true,
+    "duplicate IDs": true,
+    "exact text duplicates": true,
+    "normalized text duplicates": true,
+    "tokenizer checksum": true
+  },
+  "ready_for_training_validation": true,
+  "recommendation": "READY FOR INDEPENDENT VALIDATION AND A FRESH 5K PROXY: all source-mix, residue, split, dedup and tokenizer gates passed.",
+  "build_seconds": 1534.712,
+  "no_training_started": true
+}

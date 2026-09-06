@@ -1,0 +1,1531 @@
+{
+  "dataset": "glyph100_sft_smoke_v0_3",
+  "purpose": "targeted small SFT smoke dataset after v0.2 decoding audit; not SFT v1",
+  "input_v02": "data/sft/glyph100_sft_smoke_v0_2.jsonl",
+  "output": "data/sft/glyph100_sft_smoke_v0_3.jsonl",
+  "tokenizer": "data/processed/tokenizer.model",
+  "context_len": 512,
+  "stats": {
+    "examples": 2753,
+    "categories": {
+      "anty_powtorzenia_i_konczenie": 820,
+      "krotkie_definicje_poprawne": 286,
+      "techniczne_proste_wyjasnienia": 198,
+      "ostrozne_odpowiedzi": 185,
+      "codzienne_proste_pytania": 185,
+      "anty_web_residue": 56,
+      "poprawki_tekstu": 213,
+      "mini_streszczenia": 175,
+      "mvp_first_project_advice": 185,
+      "not_in_dataset_style_generalization": 64,
+      "sanity_fakty_podstawowe": 60,
+      "brak_danych_bez_petli": 326
+    },
+    "qualities": {
+      "approved": 2753
+    },
+    "sources": {
+      "synthetic_curated_sft_smoke_v0_3": 2753
+    },
+    "instruction_chars_avg": 58.44569560479477,
+    "response_chars_avg": 75.54558663276426,
+    "instruction_words_avg": 8.61351253178351,
+    "response_words_avg": 10.873592444605885,
+    "instruction_words_total": 23713,
+    "response_words_total": 29935,
+    "total_words": 53648,
+    "instruction_duplicate_extra": 0,
+    "instruction_response_duplicate_extra": 0,
+    "bad_patterns": {
+      "empty_instruction": 0,
+      "empty_response": 0,
+      "very_short_response_lt_8_words": 445,
+      "very_long_response_gt_120_words": 0,
+      "control_chars": 0,
+      "as_language_model_phrase": 0,
+      "english_pattern": 0
+    },
+    "token_stats": {
+      "template_total_tokens": 107263,
+      "template_min": 16,
+      "template_max": 76,
+      "template_avg": 38.96222302942245,
+      "template_p50": 39.0,
+      "template_p90": 47.0,
+      "template_p95": 52.0,
+      "template_p99": 66.0,
+      "instruction_avg_tokens": 14.984017435524882,
+      "response_avg_tokens": 17.978205593897567,
+      "fits_context": 2753,
+      "over_context": 0,
+      "over_context_lines": []
+    }
+  },
+  "split_counts": {
+    "train": 2341,
+    "val": 275,
+    "test": 137
+  },
+  "split_paths": {
+    "train_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_3_train.jsonl",
+    "val_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_3_val.jsonl",
+    "test_jsonl": "data/sft/processed/glyph100_sft_smoke_v0_3_test.jsonl",
+    "train_txt": "data/sft/processed/glyph100_sft_smoke_v0_3_train.txt",
+    "val_txt": "data/sft/processed/glyph100_sft_smoke_v0_3_val.txt",
+    "test_txt": "data/sft/processed/glyph100_sft_smoke_v0_3_test.txt"
+  },
+  "duplicates": {
+    "pair_extra": 0,
+    "instruction_extra": 0
+  },
+  "near_duplicates": [
+    {
+      "score": 1.0,
+      "line_a": 54,
+      "line_b": 2454,
+      "instruction_a": "Czym jest tokenizer?",
+      "instruction_b": "Czym jest tokenizer? (2)"
+    },
+    {
+      "score": 1.0,
+      "line_a": 341,
+      "line_b": 577,
+      "instruction_a": "Czym jest RAM? Zakończ naturalnie.",
+      "instruction_b": "Czym jest RAM? Zakończ naturalnie. (2)"
+    },
+    {
+      "score": 1.0,
+      "line_a": 383,
+      "line_b": 979,
+      "instruction_a": "Czym jest top-p sampling?",
+      "instruction_b": "Czym jest top-k sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 388,
+      "line_b": 1311,
+      "instruction_a": "Czym jest smoke test? (2)",
+      "instruction_b": "Czym jest smoke test?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 427,
+      "line_b": 701,
+      "instruction_a": "Zakończ naturalnie: czym jest prototyp?",
+      "instruction_b": "Zakończ naturalnie: czym jest prototyp? Naturalnie."
+    },
+    {
+      "score": 1.0,
+      "line_a": 662,
+      "line_b": 1181,
+      "instruction_a": "Krótko i konkretnie: Czym jest top-k sampling?",
+      "instruction_b": "Krótko i konkretnie: Czym jest top-p sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 667,
+      "line_b": 1710,
+      "instruction_a": "Czym jest walidacja?",
+      "instruction_b": "Czym jest walidacja? (2)"
+    },
+    {
+      "score": 1.0,
+      "line_a": 742,
+      "line_b": 1741,
+      "instruction_a": "Wyjaśnij krótko, czym jest top-k sampling?",
+      "instruction_b": "Wyjaśnij krótko, czym jest top-p sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 915,
+      "line_b": 1151,
+      "instruction_a": "Wyjaśnij prosto, czym jest log.",
+      "instruction_b": "Wyjaśnij prosto, czym jest log. Prosto."
+    },
+    {
+      "score": 1.0,
+      "line_a": 1249,
+      "line_b": 1736,
+      "instruction_a": "Czym jest RAM? (2)",
+      "instruction_b": "Czym jest RAM?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 1395,
+      "line_b": 2598,
+      "instruction_a": "Czym jest learning rate? (2)",
+      "instruction_b": "Czym jest learning rate?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 1398,
+      "line_b": 2456,
+      "instruction_a": "Czym jest prompt? (2)",
+      "instruction_b": "Czym jest prompt?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 1440,
+      "line_b": 2080,
+      "instruction_a": "Czym jest overfit?",
+      "instruction_b": "Czym jest overfit? (2)"
+    },
+    {
+      "score": 1.0,
+      "line_a": 2213,
+      "line_b": 2540,
+      "instruction_a": "Odpowiedz prosto: Czym jest top-p sampling?",
+      "instruction_b": "Odpowiedz prosto: Czym jest top-k sampling?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 370,
+      "line_b": 562,
+      "instruction_a": "Odpowiedz krótko i zakończ naturalnie: czym jest backup?",
+      "instruction_b": "Odpowiedz krótko i zakończ naturalnie: czym jest backup? Zakończ naturalnie."
+    },
+    {
+      "score": 1.0,
+      "line_a": 1777,
+      "line_b": 2169,
+      "instruction_a": "Czym jest backup? (2)",
+      "instruction_b": "Czym jest backup?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 62,
+      "line_b": 1834,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych? Odpowiedz wprost.",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 108,
+      "line_b": 1834,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych? Nie powtarzaj.",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 1612,
+      "line_b": 1834,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych? Bez dygresji.",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 1834,
+      "line_b": 1839,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych?",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych? Zwięźle."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1834,
+      "line_b": 2153,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych?",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych? Bez metafor."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1834,
+      "line_b": 2181,
+      "instruction_a": "Odpowiedz krótko: czego nie da się ocenić bez danych?",
+      "instruction_b": "Odpowiedz krótko: czego nie da się ocenić bez danych? Bez listy."
+    },
+    {
+      "score": 1.0,
+      "line_a": 411,
+      "line_b": 487,
+      "instruction_a": "Zakończ odpowiedź naturalnie: czy jeden wynik wystarczy?",
+      "instruction_b": "Zakończ odpowiedź naturalnie: czy jeden wynik wystarczy? Zakończ naturalnie."
+    },
+    {
+      "score": 0.889,
+      "line_a": 29,
+      "line_b": 1153,
+      "instruction_a": "Nie pisz jak strona firmowa: czym jest tokenizer? Krótko.",
+      "instruction_b": "Nie pisz jak strona firmowa: czym jest tokenizer?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 152,
+      "line_b": 1153,
+      "instruction_a": "Nie pisz jak strona firmowa: czym jest tokenizer? Naturalnie.",
+      "instruction_b": "Nie pisz jak strona firmowa: czym jest tokenizer?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 330,
+      "line_b": 2592,
+      "instruction_a": "Czy wynik 50k musi być lepszy niż 44k? Krótko.",
+      "instruction_b": "Czy wynik 50k musi być lepszy niż 44k?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 42,
+      "line_b": 2508,
+      "instruction_a": "Przeredaguj: Chciałbym poinformować, że nie zdążę oddać pracy dzisiaj.",
+      "instruction_b": "Przeredaguj zdanie: Chciałbym poinformować, że nie zdążę oddać pracy dzisiaj."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1048,
+      "line_b": 1204,
+      "instruction_a": "Skróć: Chciałbym poinformować, że nie zdążę oddać pracy dzisiaj.",
+      "instruction_b": "Skróć i popraw: Chciałbym poinformować, że nie zdążę oddać pracy dzisiaj."
+    },
+    {
+      "score": 1.0,
+      "line_a": 683,
+      "line_b": 1406,
+      "instruction_a": "Czym jest GPU? (2)",
+      "instruction_b": "Czym jest GPU?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 1217,
+      "line_b": 2551,
+      "instruction_a": "Czym jest GPU? Zakończ naturalnie.",
+      "instruction_b": "Czym jest GPU? Zakończ naturalnie. (2)"
+    },
+    {
+      "score": 0.889,
+      "line_a": 907,
+      "line_b": 1035,
+      "instruction_a": "Nie używaj szablonu: czy model po SFT jest gotowy? Nie używaj listy.",
+      "instruction_b": "Nie używaj szablonu: czy model po SFT jest gotowy?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 1035,
+      "line_b": 1176,
+      "instruction_a": "Nie używaj szablonu: czy model po SFT jest gotowy?",
+      "instruction_b": "Nie używaj szablonu: czy model po SFT jest gotowy? Krótko."
+    },
+    {
+      "score": 1.0,
+      "line_a": 304,
+      "line_b": 1147,
+      "instruction_a": "Krótko: czy można ocenić laptop bez modelu?",
+      "instruction_b": "Krótko: czy można ocenić laptop bez modelu? Krótko."
+    },
+    {
+      "score": 0.889,
+      "line_a": 721,
+      "line_b": 935,
+      "instruction_a": "Czy można porównać modele bez tych samych promptów? Krótko.",
+      "instruction_b": "Czy można porównać modele bez tych samych promptów?"
+    },
+    {
+      "score": 0.9,
+      "line_a": 1283,
+      "line_b": 1386,
+      "instruction_a": "Nie powtarzaj frazy: czy warto trenować dalej bez evala? Bez dygresji.",
+      "instruction_b": "Nie powtarzaj frazy: czy warto trenować dalej bez evala?"
+    },
+    {
+      "score": 0.9,
+      "line_a": 1386,
+      "line_b": 1594,
+      "instruction_a": "Nie powtarzaj frazy: czy warto trenować dalej bez evala?",
+      "instruction_b": "Nie powtarzaj frazy: czy warto trenować dalej bez evala? Krótko."
+    },
+    {
+      "score": 0.9,
+      "line_a": 1386,
+      "line_b": 1825,
+      "instruction_a": "Nie powtarzaj frazy: czy warto trenować dalej bez evala?",
+      "instruction_b": "Nie powtarzaj frazy: czy warto trenować dalej bez evala? Bez powtarzania."
+    },
+    {
+      "score": 0.889,
+      "line_a": 60,
+      "line_b": 601,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez metafor.",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 60,
+      "line_b": 1535,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez metafor.",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+    },
+    {
+      "score": 0.889,
+      "line_a": 601,
+      "line_b": 1356,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży?",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Zwięźle."
+    },
+    {
+      "score": 1.0,
+      "line_a": 601,
+      "line_b": 1535,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży?",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+    },
+    {
+      "score": 0.889,
+      "line_a": 601,
+      "line_b": 1819,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży?",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez dygresji."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1356,
+      "line_b": 1535,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Zwięźle.",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1535,
+      "line_b": 1819,
+      "instruction_a": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez listy.",
+      "instruction_b": "Jedna myśl, bez listy: kiedy projekt jest za duży? Bez dygresji."
+    },
+    {
+      "score": 1.0,
+      "line_a": 64,
+      "line_b": 2565,
+      "instruction_a": "Czy ten wynik jest poprawny? Odpowiedz ostrożnie. (2)",
+      "instruction_b": "Czy ten wynik jest poprawny? Odpowiedz ostrożnie."
+    },
+    {
+      "score": 1.0,
+      "line_a": 129,
+      "line_b": 782,
+      "instruction_a": "Czy ten wynik jest poprawny? Nie zgaduj. (2)",
+      "instruction_b": "Czy ten wynik jest poprawny? Nie zgaduj."
+    },
+    {
+      "score": 1.0,
+      "line_a": 1642,
+      "line_b": 1773,
+      "instruction_a": "Czy ten wynik jest poprawny? (2)",
+      "instruction_b": "Czy ten wynik jest poprawny?"
+    },
+    {
+      "score": 1.0,
+      "line_a": 1671,
+      "line_b": 2202,
+      "instruction_a": "Odpowiedz krótko: kiedy przerwać eksperyment? Krótko.",
+      "instruction_b": "Odpowiedz krótko: kiedy przerwać eksperyment?"
+    },
+    {
+      "score": 0.917,
+      "line_a": 78,
+      "line_b": 426,
+      "instruction_a": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Odpowiedz wprost.",
+      "instruction_b": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?"
+    },
+    {
+      "score": 0.917,
+      "line_a": 426,
+      "line_b": 724,
+      "instruction_a": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?",
+      "instruction_b": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Jednym zdaniem."
+    },
+    {
+      "score": 0.917,
+      "line_a": 426,
+      "line_b": 846,
+      "instruction_a": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej?",
+      "instruction_b": "Odpowiedz jednym akapitem: czy warto lać wodę, żeby odpowiedź wyglądała mądrzej? Zwięźle."
+    },
+    {
+      "score": 0.889,
+      "line_a": 440,
+      "line_b": 942,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Zwięźle."
+    },
+    {
+      "score": 0.889,
+      "line_a": 440,
+      "line_b": 1797,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Nie powtarzaj."
+    },
+    {
+      "score": 0.889,
+      "line_a": 440,
+      "line_b": 1893,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez metafor."
+    },
+    {
+      "score": 0.889,
+      "line_a": 440,
+      "line_b": 2013,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez dygresji."
+    },
+    {
+      "score": 0.889,
+      "line_a": 440,
+      "line_b": 2668,
+      "instruction_a": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss?",
+      "instruction_b": "Nie rozwijaj bez końca: dlaczego warto mierzyć loss? Bez listy."
+    },
+    {
+      "score": 0.889,
+      "line_a": 93,
+      "line_b": 100,
+      "instruction_a": "Usuń styl SEO: dlaczego czysty dataset jest ważny? Krótko.",
+      "instruction_b": "Usuń styl SEO: dlaczego czysty dataset jest ważny?"
+    },
+    {
+      "score": 0.889,
+      "line_a": 100,
+      "line_b": 672,
+      "instruction_a": "Usuń styl SEO: dlaczego czysty dataset jest ważny?",
+      "instruction_b": "Usuń styl SEO: dlaczego czysty dataset jest ważny? Naturalnie."
+    },
+    {
+      "score": 0.889,
+      "line_a": 482,
+      "line_b": 2665,
+      "instruction_a": "Wyjaśnij w trzech zdaniach, dlaczego czysty dataset jest ważny.",
+      "instruction_b": "Wyjaśnij w trzech zdaniach, dlaczego czysty dataset jest ważny. Naturalnie."
+    },
+    {
+      "score": 1.0,
+      "line_a": 319,
+      "line_b": 757,
+      "instruction_a": "Czy powinienem to kupić? Nie zgaduj.",
+      "instruction_b": "Czy powinienem to kupić? Nie zgaduj. (2)"
+    },
+    {
+      "score": 1.0,
+      "line_a": 1320,
+      "line_b": 2437,
+      "instruction_a": "Czy powinienem to kupić? Odpowiedz ostrożnie.",
+      "instruction_b": "Czy powinienem to kupić? Odpowiedz ostrożnie. (2)"
+    },
+    {
+      "score": 1.0,
+      "line_a": 1985,
+      "line_b": 2649,
+      "instruction_a": "Czy powinienem to kupić?",
+      "instruction_b": "Czy powinienem to kupić? (2)"
+    },
+    {
+      "score": 0.889,
+      "line_a": 1486,
+      "line_b": 1897,
+      "instruction_a": "Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Zwięźle.",
+      "instruction_b": "Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Nie powtarzaj."
+    },
+    {
+      "score": 0.889,
+      "line_a": 1486,
+      "line_b": 2651,
+      "instruction_a": "Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Zwięźle.",
+      "instruction_b": "Napisz krótką odpowiedź i nie powtarzaj tej samej myśli."
+    },
+    {
+      "score": 1.0,
+      "line_a": 1897,
+      "line_b": 2651,
+      "instruction_a": "Napisz krótką odpowiedź i nie powtarzaj tej samej myśli. Nie powtarzaj.",
+      "instruction_b": "Napisz krótką odpowiedź i nie powtarzaj tej samej myśli."
+    },
+    {
+      "score": 1.0,
+      "line_a": 132,
+      "line_b": 613,
+      "instruction_a": "Czy ten błąd jest poważny? Zakończ naturalnie. (2)",
+      "instruction_b": "Czy ten błąd jest poważny? Zakończ naturalnie."
+    },
+    {
+      "score": 1.0,
+      "line_a": 393,
+      "line_b": 2022,
+      "instruction_a": "Czy ten błąd jest poważny? Nie zgaduj. (2)",
+      "instruction_b": "Czy ten błąd jest poważny? Nie zgaduj."
+    },
+    {
+      "score": 1.0,
+      "line_a": 1090,
+      "line_b": 2414,
+      "instruction_a": "Czy ten błąd jest poważny? Odpowiedz ostrożnie. (2)",
+      "instruction_b": "Czy ten błąd jest poważny? Odpowiedz ostrożnie."
+    },
+    {
+      "score": 1.0,
+      "line_a": 1319,
+      "line_b": 1510,
+      "instruction_a": "Czy ten błąd jest poważny?",
+      "instruction_b": "Czy ten błąd jest poważny? (2)"
+    },
+    {
+      "score": 0.909,
+      "line_a": 204,
+      "line_b": 925,
+      "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+      "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Naturalnie."
+    },
+    {
+      "score": 0.909,
+      "line_a": 204,
+      "line_b": 1109,
+      "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+      "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Prosto."
+    },
+    {
+      "score": 0.909,
+      "line_a": 204,
+      "line_b": 1408,
+      "instruction_a": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt?",
+      "instruction_b": "Napisz krótką odpowiedź: czy więcej funkcji zawsze oznacza lepszy projekt? Zwięźle."
+    },
+    {
+      "score": 1.0,
+      "line_a": 459,
+      "line_b": 2436,
+      "instruction_a": "Krótko: co robi tokenizer?",
+      "instruction_b": "Krótko: co robi tokenizer? Krótko."
+    },
+    {
+      "score": 1.0,
+      "line_a": 2191,
+      "line_b": 2499,
+      "instruction_a": "Krótko i do końca: czy loss wystarczy? Krótko.",
+      "instruction_b": "Krótko i do końca: czy loss wystarczy?"
+    },
+    {
+      "score": 0.909,
+      "line_a": 199,
+      "line_b": 2166,
+      "instruction_a": "Skróć i popraw: Ten tekst jest napisany w sposób niezbyt dobry i trzeba go poprawić.",
+      "instruction_b": "Popraw tekst: Ten tekst jest napisany w sposób niezbyt dobry i trzeba go poprawić."
+    },
+    {
+      "score": 0.9,
+      "line_a": 171,
+      "line_b": 2334,
+      "instruction_a": "Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu? Zwięźle.",
+      "instruction_b": "Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu?"
+    },
+    {
+      "score": 0.9,
+      "line_a": 1536,
+      "line_b": 2334,
+      "instruction_a": "Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu? Naturalnie.",
+      "instruction_b": "Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu?"
+    },
+    {
+      "score": 0.9,
+      "line_a": 2334,
+      "line_b": 2656,
+      "instruction_a": "Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu?",
+      "instruction_b": "Napisz prostą odpowiedź: czy wynik loss wystarczy do oceny modelu? Prosto."
+    },
+    {
+      "score": 0.9,
+      "line_a": 775,
+      "line_b": 2396,
+      "instruction_a": "Napisz odpowiedź techniczną bez tekstu sklepu: czym jest backup? Naturalnie.",
+      "instruction_b": "Napisz odpowiedź techniczną bez tekstu sklepu: czym jest backup?"
+    },
+    {
+      "score": 0.9,
+      "line_a": 917,
+      "line_b": 2396,
+      "instruction_a": "Napisz odpowiedź techniczną bez tekstu sklepu: czym jest backup? Bez reklam.",
+      "instruction_b": "Napisz odpowiedź techniczną bez tekstu sklepu: czym jest backup?"
+    }
+  ],
+  "first_response_words": [
+    [
+      "nie",
+      275
+    ],
+    [
+      "trzeba",
+      92
+    ],
+    [
+      "checkpoint",
+      59
+    ],
+    [
+      "backup",
+      54
+    ],
+    [
+      "walidacja",
+      50
+    ],
+    [
+      "tokenizer",
+      49
+    ],
+    [
+      "zacznij",
+      46
+    ],
+    [
+      "raczej",
+      45
+    ],
+    [
+      "odpowiedź",
+      43
+    ],
+    [
+      "bez",
+      42
+    ],
+    [
+      "to",
+      41
+    ],
+    [
+      "smoke",
+      40
+    ],
+    [
+      "model",
+      39
+    ],
+    [
+      "raport",
+      35
+    ],
+    [
+      "sprawdź",
+      32
+    ],
+    [
+      "potrzebne",
+      32
+    ],
+    [
+      "wybierz",
+      30
+    ],
+    [
+      "sft",
+      30
+    ],
+    [
+      "potrzebny",
+      29
+    ],
+    [
+      "na",
+      28
+    ],
+    [
+      "loss",
+      28
+    ],
+    [
+      "ten",
+      27
+    ],
+    [
+      "tak",
+      25
+    ],
+    [
+      "zostaw",
+      23
+    ],
+    [
+      "log",
+      22
+    ],
+    [
+      "usuń",
+      22
+    ],
+    [
+      "overfit",
+      22
+    ],
+    [
+      "gpu",
+      21
+    ],
+    [
+      "projekt",
+      20
+    ],
+    [
+      "eval",
+      20
+    ],
+    [
+      "dataset",
+      20
+    ],
+    [
+      "powtórzenia",
+      20
+    ],
+    [
+      "czysty",
+      19
+    ],
+    [
+      "ram",
+      19
+    ],
+    [
+      "potrzebna",
+      19
+    ],
+    [
+      "uważam",
+      17
+    ],
+    [
+      "gradient",
+      17
+    ],
+    [
+      "dobry",
+      17
+    ],
+    [
+      "zakończ",
+      17
+    ],
+    [
+      "powiedz",
+      17
+    ],
+    [
+      "potrzebuję",
+      17
+    ],
+    [
+      "w",
+      16
+    ],
+    [
+      "zbiór",
+      16
+    ],
+    [
+      "testy",
+      15
+    ],
+    [
+      "dodaj",
+      15
+    ],
+    [
+      "napisz",
+      15
+    ],
+    [
+      "lepsza",
+      15
+    ],
+    [
+      "zapętlenie",
+      15
+    ],
+    [
+      "pokaż",
+      15
+    ],
+    [
+      "krótka",
+      15
+    ],
+    [
+      "tylko",
+      15
+    ],
+    [
+      "prototyp",
+      14
+    ],
+    [
+      "brakuje",
+      14
+    ],
+    [
+      "najpierw",
+      13
+    ],
+    [
+      "do",
+      13
+    ],
+    [
+      "best",
+      13
+    ],
+    [
+      "brak",
+      12
+    ],
+    [
+      "prompt",
+      12
+    ],
+    [
+      "przerwij",
+      12
+    ],
+    [
+      "porównaj",
+      12
+    ]
+  ],
+  "top_response_4grams": [
+    [
+      "backup to kopia danych",
+      44
+    ],
+    [
+      "nie da się tego",
+      44
+    ],
+    [
+      "checkpoint to zapis stanu",
+      39
+    ],
+    [
+      "do odtworzenia ich po",
+      34
+    ],
+    [
+      "odtworzenia ich po awarii",
+      34
+    ],
+    [
+      "to zapis stanu modelu",
+      32
+    ],
+    [
+      "do którego można wrócić",
+      29
+    ],
+    [
+      "którego można wrócić później",
+      29
+    ],
+    [
+      "tokenizer dzieli tekst na",
+      28
+    ],
+    [
+      "dzieli tekst na tokeny",
+      28
+    ],
+    [
+      "to kopia danych potrzebna",
+      27
+    ],
+    [
+      "kopia danych potrzebna do",
+      27
+    ],
+    [
+      "danych potrzebna do odtworzenia",
+      27
+    ],
+    [
+      "potrzebna do odtworzenia ich",
+      27
+    ],
+    [
+      "potrzebny jest model cena",
+      24
+    ],
+    [
+      "smoke test to krótka",
+      23
+    ],
+    [
+      "test to krótka próba",
+      23
+    ],
+    [
+      "to krótka próba sprawdzająca",
+      23
+    ],
+    [
+      "krótka próba sprawdzająca czy",
+      23
+    ],
+    [
+      "nie mogę dziś przyjść",
+      22
+    ],
+    [
+      "raport zapisuje wynik ustawienia",
+      22
+    ],
+    [
+      "zapisuje wynik ustawienia i",
+      22
+    ],
+    [
+      "jakość danych jest ważniejsza",
+      22
+    ],
+    [
+      "danych jest ważniejsza niż",
+      22
+    ],
+    [
+      "overfit oznacza że model",
+      22
+    ],
+    [
+      "dopasował się do danych",
+      22
+    ],
+    [
+      "się do danych treningowych",
+      22
+    ],
+    [
+      "do danych treningowych i",
+      22
+    ],
+    [
+      "większy model nadal zależy",
+      22
+    ],
+    [
+      "model nadal zależy od",
+      22
+    ],
+    [
+      "nadal zależy od jakości",
+      22
+    ],
+    [
+      "zależy od jakości danych",
+      22
+    ],
+    [
+      "da się tego ocenić",
+      22
+    ],
+    [
+      "się tego ocenić bez",
+      22
+    ],
+    [
+      "zapis stanu modelu do",
+      22
+    ],
+    [
+      "stanu modelu do którego",
+      22
+    ],
+    [
+      "modelu do którego można",
+      22
+    ],
+    [
+      "nie da się ocenić",
+      20
+    ],
+    [
+      "da się ocenić bez",
+      20
+    ],
+    [
+      "śmieci duplikaty albo zbyt",
+      20
+    ],
+    [
+      "duplikaty albo zbyt wąski",
+      20
+    ],
+    [
+      "albo zbyt wąski styl",
+      20
+    ],
+    [
+      "i zwykle nie dodają",
+      20
+    ],
+    [
+      "to sprawdzenie modelu na",
+      19
+    ],
+    [
+      "i decyzję po eksperymencie",
+      19
+    ],
+    [
+      "trzeba znać liczbę promptów",
+      19
+    ],
+    [
+      "czysty dataset zmniejsza ryzyko",
+      19
+    ],
+    [
+      "bez tego odpowiedź byłaby",
+      19
+    ],
+    [
+      "tego odpowiedź byłaby zgadywaniem",
+      19
+    ],
+    [
+      "komunikat błędu miejsce wystąpienia",
+      19
+    ],
+    [
+      "błędu miejsce wystąpienia i",
+      19
+    ],
+    [
+      "miejsce wystąpienia i wpływ",
+      19
+    ],
+    [
+      "wystąpienia i wpływ na",
+      19
+    ],
+    [
+      "i wpływ na działanie",
+      19
+    ],
+    [
+      "wpływ na działanie systemu",
+      19
+    ],
+    [
+      "nie zdążę dziś oddać",
+      18
+    ],
+    [
+      "zdążę dziś oddać pracy",
+      18
+    ],
+    [
+      "oznacza że model zbyt",
+      18
+    ],
+    [
+      "że model zbyt mocno",
+      18
+    ],
+    [
+      "model zbyt mocno dopasował",
+      18
+    ]
+  ],
+  "suspicious_phrase_counts": {
+    "w latach 1975-1998": 0,
+    "w latach 1975–1998": 0,
+    "gminie": 0,
+    "powiecie": 0,
+    "województwie": 0,
+    "strona główna": 0,
+    "cookies": 0,
+    "kup teraz": 0,
+    "dodaj do koszyka": 0,
+    "zaloguj": 0,
+    "zarejestruj": 0,
+    "polityka prywatności": 0,
+    "jako model językowy": 0,
+    "jako sztuczna inteligencja": 0,
+    "kliknij": 0,
+    "skontaktuj się z nami": 0,
+    "na naszej stronie": 0
+  },
+  "label_mask_sanity": {
+    "summary": {
+      "first_token_supervised": true,
+      "end_token_supervised": true,
+      "prompt_masked": true,
+      "padding_ignore_index": true,
+      "examples_without_labels": 0
+    },
+    "details": {
+      "checked": 40,
+      "first_token_supervised_ok": 40,
+      "end_token_supervised_ok": 40,
+      "prompt_masked_ok": 40,
+      "padding_ignore_index": true,
+      "examples_without_labels": 0,
+      "samples": [
+        {
+          "id": "glyph100-sft-smoke-v0-3-0001",
+          "response": "Walidacja to sprawdzenie modelu na danych, których nie używa bezpośrednio do nauki.",
+          "first_supervised_piece": "▁Wali",
+          "expected_first_piece": "▁Wali",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0002",
+          "response": "Brak danych oznacza, że uczciwa odpowiedź powinna wskazać niepewność.",
+          "first_supervised_piece": "▁Brak",
+          "expected_first_piece": "▁Brak",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0003",
+          "response": "Backup to kopia danych potrzebna do odtworzenia ich po awarii.",
+          "first_supervised_piece": "▁Ba",
+          "expected_first_piece": "▁Ba",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0004",
+          "response": "Backup to kopia danych, którą można przywrócić po awarii albo pomyłce.",
+          "first_supervised_piece": "▁Ba",
+          "expected_first_piece": "▁Ba",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0005",
+          "response": "Rozdział train i val pozwala sprawdzić, czy model działa poza przykładami używanymi do uczenia.",
+          "first_supervised_piece": "▁Roz",
+          "expected_first_piece": "▁Roz",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0006",
+          "response": "Zostaw jedną główną myśl i usuń dygresje.",
+          "first_supervised_piece": "▁Zosta",
+          "expected_first_piece": "▁Zosta",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0007",
+          "response": "Jedna próbka może być przypadkowo dobra albo zła, więc warto sprawdzić więcej przykładów.",
+          "first_supervised_piece": "▁Jedna",
+          "expected_first_piece": "▁Jedna",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0008",
+          "response": "Czy możesz przesłać ten plik jeszcze raz?",
+          "first_supervised_piece": "▁Czy",
+          "expected_first_piece": "▁Czy",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0009",
+          "response": "Raport zapisuje ustawienia, wynik i decyzję po eksperymencie.",
+          "first_supervised_piece": "▁Ra",
+          "expected_first_piece": "▁Ra",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0010",
+          "response": "Uważam, że to rozwiązanie jest najlepsze.",
+          "first_supervised_piece": "▁U",
+          "expected_first_piece": "▁U",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0011",
+          "response": "Rozbieżność loss i próbek wymaga audytu evala.",
+          "first_supervised_piece": "▁Roz",
+          "expected_first_piece": "▁Roz",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0012",
+          "response": "Jeśli wystąpi błąd, uruchom usługę ponownie.",
+          "first_supervised_piece": "▁Jeśli",
+          "expected_first_piece": "▁Jeśli",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0013",
+          "response": "Zostaw tylko główną myśl, wynik i najważniejszy wniosek.",
+          "first_supervised_piece": "▁Zosta",
+          "expected_first_piece": "▁Zosta",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0014",
+          "response": "Oznacza, że trzeba wskazać niepewność zamiast zgadywać.",
+          "first_supervised_piece": "▁Ozna",
+          "expected_first_piece": "▁Ozna",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0015",
+          "response": "Bez danych nie da się rzetelnie ocenić jakości, bezpieczeństwa ani opłacalności decyzji.",
+          "first_supervised_piece": "▁Bez",
+          "expected_first_piece": "▁Bez",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0016",
+          "response": "Nie zawsze. Szybsze rozwiązanie ma sens, jeśli nie zwiększa zbyt mocno ryzyka i długu technicznego.",
+          "first_supervised_piece": "▁Nie",
+          "expected_first_piece": "▁Nie",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0017",
+          "response": "Gradient clipping ogranicza zbyt duże gradienty, żeby trening nie stał się niestabilny.",
+          "first_supervised_piece": "▁Gra",
+          "expected_first_piece": "▁Gra",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0018",
+          "response": "Testy pomagają wykrywać błędy i upewnić się, że zmiany nie psują działania.",
+          "first_supervised_piece": "▁Te",
+          "expected_first_piece": "▁Te",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0019",
+          "response": "Raczej nie, jeden wynik trzeba porównać z próbkami i powtórzyć w kontrolowanych warunkach.",
+          "first_supervised_piece": "▁Ra",
+          "expected_first_piece": "▁Ra",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0020",
+          "response": "Na start upewnij się, że dane i podstawowe akcje działają. Wygląd ma sens dopiero, gdy nie maskuje braków funkcjonalnych.",
+          "first_supervised_piece": "▁Na",
+          "expected_first_piece": "▁Na",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0021",
+          "response": "Raczej nie. Są lepsze wtedy, gdy odpowiadają na pytanie bez utraty potrzebnych informacji.",
+          "first_supervised_piece": "▁Ra",
+          "expected_first_piece": "▁Ra",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0022",
+          "response": "Przeanalizowano dane i wyciągnięto wnioski.",
+          "first_supervised_piece": "▁Prze",
+          "expected_first_piece": "▁Prze",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0023",
+          "response": "Train loss mierzy dopasowanie do danych treningowych, a val loss sprawdza model na odłożonych danych.",
+          "first_supervised_piece": "▁Tra",
+          "expected_first_piece": "▁Tra",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0024",
+          "response": "Tak, ale krótka. Wystarczy opis uruchomienia, decyzji i ograniczeń.",
+          "first_supervised_piece": "▁Tak",
+          "expected_first_piece": "▁Tak",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0025",
+          "response": "Kilka seedów pomaga odróżnić jakość od losowości.",
+          "first_supervised_piece": "▁Kilka",
+          "expected_first_piece": "▁Kilka",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0026",
+          "response": "Nie mam wystarczających danych do oceny.",
+          "first_supervised_piece": "▁Nie",
+          "expected_first_piece": "▁Nie",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0027",
+          "response": "Model odpowiedział zbyt rozwlekle.",
+          "first_supervised_piece": "▁Model",
+          "expected_first_piece": "▁Model",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0028",
+          "response": "Wybierz jeden mierzalny cel na najbliższy etap. Po jego wykonaniu łatwiej zdecydować, co ma sens dalej.",
+          "first_supervised_piece": "▁Wybierz",
+          "expected_first_piece": "▁Wybierz",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0029",
+          "response": "Tokenizer dzieli tekst na tokeny, które model przetwarza jako liczby.",
+          "first_supervised_piece": "▁To",
+          "expected_first_piece": "▁To",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0030",
+          "response": "Brak danych oznacza, że uczciwa odpowiedź powinna wskazać niepewność.",
+          "first_supervised_piece": "▁Brak",
+          "expected_first_piece": "▁Brak",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0031",
+          "response": "Późniejszy checkpoint może mieć niższą stratę, ale gorsze próbki jakościowe.",
+          "first_supervised_piece": "▁P",
+          "expected_first_piece": "▁P",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0032",
+          "response": "Decyzja techniczna wybiera konkretną drogę działania wraz z uzasadnieniem.",
+          "first_supervised_piece": "▁Decy",
+          "expected_first_piece": "▁Decy",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0033",
+          "response": "Prompt to tekst wejściowy przekazany modelowi przed generacją odpowiedzi.",
+          "first_supervised_piece": "▁Pro",
+          "expected_first_piece": "▁Pro",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0034",
+          "response": "Jeśli wystąpi błąd, uruchom usługę ponownie.",
+          "first_supervised_piece": "▁Jeśli",
+          "expected_first_piece": "▁Jeśli",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0035",
+          "response": "Fallback CPU to awaryjne uruchomienie pracy na procesorze, gdy GPU nie działa stabilnie.",
+          "first_supervised_piece": "▁F",
+          "expected_first_piece": "▁F",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0036",
+          "response": "Train loss mierzy błąd modelu na przykładach używanych podczas treningu.",
+          "first_supervised_piece": "▁Tra",
+          "expected_first_piece": "▁Tra",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0037",
+          "response": "Sprawdzono poprawność działania systemu.",
+          "first_supervised_piece": "▁Spraw",
+          "expected_first_piece": "▁Spraw",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0038",
+          "response": "To rozwiązanie jest proste.",
+          "first_supervised_piece": "▁To",
+          "expected_first_piece": "▁To",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0039",
+          "response": "Nie zawsze. Ma być tak krótka, jak pozwala na pełną i poprawną odpowiedź.",
+          "first_supervised_piece": "▁Nie",
+          "expected_first_piece": "▁Nie",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        },
+        {
+          "id": "glyph100-sft-smoke-v0-3-0040",
+          "response": "SFT smoke jest testem mechaniki, nie certyfikatem jakości modelu.",
+          "first_supervised_piece": "▁S",
+          "expected_first_piece": "▁S",
+          "first_token_supervised": true,
+          "end_token_supervised": true,
+          "prompt_masked": true
+        }
+      ]
+    }
+  },
+  "quality_notes": [
+    "Uses requested v0.3 categories.",
+    "Adds anti_web_residue and sanity_fakty_podstawowe examples.",
+    "Varies missing-data answer openings.",
+    "Keeps max template length well below context 512."
+  ]
+}

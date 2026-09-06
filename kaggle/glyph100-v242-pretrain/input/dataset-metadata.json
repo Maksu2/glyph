@@ -1,0 +1,11 @@
+{
+  "title": "Glyph-100M v2.4.2 private pretraining input",
+  "id": "maksymilianputa/glyph100-v242-pretrain-input",
+  "subtitle": "Private 5k resume bundle for a gated P100 continuation to 10k",
+  "description": "Private Glyph-100M v2.4.2 input bundle. Contains exactly one full 5k resume checkpoint, tokenizer, training code, train/validation bins and metadata. No credentials or historical checkpoints.",
+  "licenses": [
+    {
+      "name": "other"
+    }
+  ]
+}

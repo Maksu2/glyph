@@ -1,0 +1,70 @@
+{
+  "project": "Lowband Gateway",
+  "version": "0.1.0",
+  "validated_at": "2026-07-27T13:57:52Z",
+  "repository": "/home/maksu/lowband-gateway",
+  "status": "ready_for_operator_configuration",
+  "automated_tests": {
+    "passed": 60,
+    "skipped_by_default": 1,
+    "failed": 0,
+    "coverage_percent": 78,
+    "warning_count": 1
+  },
+  "real_codex_test": {
+    "enabled_explicitly": true,
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": "medium",
+    "passed": 1,
+    "failed": 0
+  },
+  "docker_e2e": {
+    "passed": true,
+    "accepted_seconds": 0.289,
+    "client_disconnected": true,
+    "final_status": "done",
+    "etag_status": 304
+  },
+  "restart_validation": {
+    "web_during_running": "passed",
+    "worker_during_running": "passed_after_lease_recovery",
+    "full_compose_while_queued": "passed"
+  },
+  "database": {
+    "integrity_check": "ok",
+    "journal_mode": "wal",
+    "migration_head": "0003_system_job_events"
+  },
+  "browser": {
+    "headless_fetch_bytes": 559,
+    "configured_10kb_limit_rejected_large_page": true,
+    "private_lan_blocked": true,
+    "direct_internet_without_proxy_blocked": true
+  },
+  "runner_isolation": {
+    "uid": 10001,
+    "capabilities": "none",
+    "read_only_root": true,
+    "no_new_privileges": true,
+    "application_secrets_absent": true,
+    "workspace_empty_after_run": true
+  },
+  "pwa_assets": {
+    "shell_bytes": 31452,
+    "shell_gzip_bytes": 10466,
+    "cold_requests_before_api": 6,
+    "refresh_requests_before_api": 1
+  },
+  "external_configuration_required": [
+    "Cloudflare domain and tunnel token",
+    "application password hash and session secrets",
+    "Codex login in the dedicated runner volume",
+    "optional ntfy topic/token"
+  ],
+  "not_executed": [
+    "20-call Terra versus Luna benchmark",
+    "physical iPhone EDGE/GPRS test",
+    "public production deployment",
+    "real ntfy delivery"
+  ]
+}

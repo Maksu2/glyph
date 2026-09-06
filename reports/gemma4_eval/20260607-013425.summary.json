@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "generated_at": "2026-06-07T01:41:44.510560+00:00",
+  "model": "Gemma 4 E4B",
+  "samples": "/home/maksu/ai-model/reports/samples/20260607-013425.jsonl",
+  "report": "/home/maksu/ai-model/reports/gemma4_eval/20260607-013425.jsonl",
+  "count": 60,
+  "valid_count": 60,
+  "overall_avg": 2.867,
+  "averages": {
+    "continuation_fit": 3.233,
+    "polish": 3.183,
+    "coherence": 2.9,
+    "repetition": 2.6,
+    "safety": 4.917,
+    "overall": 2.867
+  },
+  "description": "Benchmark kontynuacji tekstu bazowego modelu, nie chatu po SFT. Wynik: overall=2.867/5 na 60/60 próbkach. Trening: step=10000, train_loss=3.6795, val_loss=3.3527, lr=0.000199. Najsłabsze średnie: repetition=2.60, coherence=2.90; najmocniejsza metryka: continuation_fit=3.23.",
+  "training_stats": {
+    "step": 10000,
+    "total_steps": 10000,
+    "progress_pct": 100.0,
+    "loss": 3.6795,
+    "lr": 0.000199,
+    "last_eval": {
+      "ts": "2026-05-27 17:48:31",
+      "step": 10000,
+      "val_loss": 3.3527
+    },
+    "tokens_m": 163.84
+  },
+  "gemma_description": "Ogólny wynik benchmarkowy wynosi 2.87/5. Najsłabsze metryki to 'repetition' (2.6) i 'coherence' (2.9). Wskaźniki straty (train_loss=3.68, val_loss=3.35) wykazują niewielką rozbieżność, co jest oczekiwane dla modelu po pretrainingu. Model wykazuje niestabilność w utrzymaniu spójności narracyjnej, manifestując się powtarzaniem fraz i niejasnymi skokami tematycznymi.",
+  "raw_description_output": "```json\n{\n  \"description\": \"Ogólny wynik benchmarkowy wynosi 2.87/5. Najsłabsze metryki to 'repetition' (2.6) i 'coherence' (2.9). Wskaźniki straty (train_loss=3.68, val_loss=3.35) wykazują niewielką rozbieżność, co jest oczekiwane dla modelu po pretrainingu. Model wykazuje niestabilność w utrzymaniu spójności narracyjnej, manifestując się powtarzaniem fraz i niejasnymi skokami tematycznymi.\"\n}\n```"
+}

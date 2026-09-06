@@ -1,0 +1,85 @@
+{
+  "summary": {
+    "created_at": "2026-06-24T18:34:17.537107+00:00",
+    "base_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+    "final_checkpoint": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask-final.pt",
+    "dataset": "glyph100_sft_tiny_overfit_fixedmask",
+    "train_examples": 64,
+    "device": "cpu",
+    "steps": 300,
+    "batch_size": 4,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.0,
+    "first_logged_loss": 4.127,
+    "final_logged_loss": 0.0014,
+    "final_val_loss": 0.0002,
+    "eval_losses": [
+      {
+        "step": 50,
+        "val_loss": 0.6177,
+        "line": "2026-06-24 18:20:12 sft eval step=    50 | val_loss=0.6177 | batches=16"
+      },
+      {
+        "step": 100,
+        "val_loss": 0.0547,
+        "line": "2026-06-24 18:21:08 sft eval step=   100 | val_loss=0.0547 | batches=16"
+      },
+      {
+        "step": 150,
+        "val_loss": 0.0154,
+        "line": "2026-06-24 18:22:11 sft eval step=   150 | val_loss=0.0154 | batches=16"
+      },
+      {
+        "step": 200,
+        "val_loss": 0.0008,
+        "line": "2026-06-24 18:23:07 sft eval step=   200 | val_loss=0.0008 | batches=16"
+      },
+      {
+        "step": 250,
+        "val_loss": 0.0004,
+        "line": "2026-06-24 18:24:07 sft eval step=   250 | val_loss=0.0004 | batches=16"
+      },
+      {
+        "step": 300,
+        "val_loss": 0.0002,
+        "line": "2026-06-24 18:25:05 sft eval step=   300 | val_loss=0.0002 | batches=16"
+      },
+      {
+        "step": 300,
+        "val_loss": 0.0002,
+        "line": "2026-06-24 18:25:23 sft final_eval step=   300 | val_loss=0.0002 | batches=16"
+      }
+    ],
+    "avg_tok_s": 179.4,
+    "status": {
+      "non_finite": false,
+      "oom": false,
+      "crash": false,
+      "complete": true
+    },
+    "eval_md": "eval/glyph-100m/sft_tiny_overfit_cpu_fixedmask_eval.md",
+    "eval_examples": 32,
+    "eval_winners": {
+      "sft": 32
+    },
+    "base_avg_score": -1.53125,
+    "sft_avg_score": 9.9375,
+    "sft_overlap_ge_0_70": 32,
+    "sft_starts_correctly": 32,
+    "sft_ended_by_end_token": 32,
+    "sft_repetition_samples": 0,
+    "sft_web_residue": 1,
+    "sft_pseudo_ency": 0
+  },
+  "verdict": "A) Fixed mask działa; model potrafi overfitować tiny dataset na CPU.",
+  "previous_sft_smoke_quality_status": "invalid-for-quality",
+  "previous_sft_smoke_invalid_reason": "label mask off-by-one bug masked first assistant response token",
+  "not_done": [
+    "larger SFT",
+    "SFT v1",
+    "ROCm SFT",
+    "pretraining",
+    "checkpoint cleanup",
+    "model publication"
+  ]
+}

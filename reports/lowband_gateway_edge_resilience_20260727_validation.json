@@ -1,0 +1,72 @@
+{
+  "project": "Lowband Gateway",
+  "version": "0.1.1",
+  "validated_at_utc": "2026-07-27T21:21:00Z",
+  "production_url": "https://lowband.maksu.online",
+  "status": "passed",
+  "tests": {
+    "pytest": {
+      "passed": 70,
+      "skipped": 1,
+      "failed": 0
+    },
+    "ruff": "passed",
+    "javascript_syntax": "passed",
+    "compose_config": "passed",
+    "browser_checks": {
+      "passed": 17,
+      "failed": 0
+    }
+  },
+  "network_profiles": [
+    {
+      "name": "Weak EDGE",
+      "download_kbps": 100,
+      "upload_kbps": 40,
+      "combined_latency_ms": 850,
+      "packet_loss_percent": 1,
+      "cached_shell_ms": 46,
+      "passed": true
+    },
+    {
+      "name": "Brutal EDGE",
+      "download_kbps": 50,
+      "upload_kbps": 15,
+      "combined_latency_ms": 1950,
+      "packet_loss_percent": 3,
+      "cached_shell_ms": 24,
+      "passed": true
+    },
+    {
+      "name": "Offline",
+      "cached_shell_ms": 33,
+      "passed": true
+    },
+    {
+      "name": "Offline after interrupted and completed service worker update",
+      "cached_shell_ms": 35,
+      "old_cache_preserved_after_failed_update": true,
+      "passed": true
+    }
+  ],
+  "assets": {
+    "shell_bytes": 62719,
+    "shell_gzip_bytes": 16991,
+    "cold_requests_before_api": 6,
+    "refresh_navigation_requests": 1
+  },
+  "production": {
+    "services_healthy_or_running": 6,
+    "sqlite_integrity": "ok",
+    "existing_done_jobs_preserved": 1,
+    "unauthenticated_jobs_status": 401,
+    "unauthenticated_lookup_status": 401,
+    "backup": "/data/backups/lowband-pre-edge-20260727.sqlite"
+  },
+  "limitations": [
+    "Pierwsza instalacja shellu wymaga sieci.",
+    "Safari może usunąć cache i IndexedDB pod presją miejsca.",
+    "CDP sumuje oddzielne opóźnienie DNS z latency i nie zastępuje fizycznego Network Link Conditioner.",
+    "Pełne prywatne wyniki pozostają network-only."
+  ]
+}

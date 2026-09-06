@@ -1,0 +1,80 @@
+{
+  "created_at_utc": "2026-06-17T09:04:22+00:00",
+  "model": "Glyph-100M",
+  "variant": "glyph-100m",
+  "dataset": "glyph100_v2_3_1",
+  "status": "pretraining stopped",
+  "decision": "44k remains best practical checkpoint; 50k is healthy but not better.",
+  "best_practical_checkpoint": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+  "best_practical_label": "44k",
+  "latest_diagnostic_checkpoint": "checkpoints/glyph-100m-v2_3_1-50k/latest.pt",
+  "latest_diagnostic_label": "50k",
+  "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+  "do_not_continue": [
+    "55k",
+    "60k",
+    "further v2.3.1 pretraining"
+  ],
+  "reason": "50k finished cleanly, but broad eval and seed sensitivity do not beat 44k. Further pretraining on v2.3.1 is not justified.",
+  "training_50k": {
+    "status": "complete",
+    "duration": "7h 2m",
+    "avg_tokens_per_second": 3239.78,
+    "train_loss_first_logged": 3.2994,
+    "train_loss_last_logged": 3.2214,
+    "val_loss_trend": "rising",
+    "overfit_signal": "watch_val_loss",
+    "final_val_loss": 3.3927,
+    "nan_inf_count": 0,
+    "oom_count": 0,
+    "crash_count": 0
+  },
+  "broad_eval": {
+    "avg_quality": {
+      "44k": 6.198,
+      "45k": 5.721,
+      "50k": 5.644
+    },
+    "median_quality": {
+      "44k": 8.0,
+      "45k": 6.0,
+      "50k": 6.0
+    },
+    "pairwise": {
+      "50k_vs_44k": {
+        "50k_wins": 126,
+        "44k_wins": 160,
+        "ties": 194
+      },
+      "50k_vs_45k": {
+        "50k_wins": 145,
+        "45k_wins": 144,
+        "ties": 191
+      }
+    }
+  },
+  "seed_sensitivity": {
+    "50k_vs_44k": {
+      "50k": 28,
+      "tie": 38,
+      "44k": 34,
+      "mean_44k": 8.37,
+      "mean_50k": 7.55,
+      "diff_50k_minus_44k": -0.82
+    },
+    "50k_vs_45k": {
+      "50k": 38,
+      "tie": 30,
+      "45k": 32,
+      "mean_45k": 7.06,
+      "mean_50k": 7.55,
+      "diff_50k_minus_45k": 0.49
+    }
+  },
+  "next_recommended_steps": [
+    "small SFT smoke test on 44k",
+    "dataset v2.4 work",
+    "freeze project as portfolio milestone"
+  ],
+  "warning": "Glyph-100M remains a base language model, not a chatbot and not a final published model."
+}

@@ -1,0 +1,271 @@
+{
+  "run_id": "glyph100_v2_4_1_10k_eval_20260718",
+  "scope": "source-specific fixed validation; no training performed",
+  "source_bins": {
+    "1000_novels": {
+      "documents": 17,
+      "tokens": 186215,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/1000_novels.bin"
+    },
+    "eltec_pol": {
+      "documents": 10,
+      "tokens": 134845,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/eltec_pol.bin"
+    },
+    "parliamentary": {
+      "documents": 78,
+      "tokens": 163332,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/parliamentary.bin"
+    },
+    "wikibooks": {
+      "documents": 26,
+      "tokens": 19588,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikibooks.bin"
+    },
+    "wikinews": {
+      "documents": 45,
+      "tokens": 13731,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikinews.bin"
+    },
+    "wikipedia_pl": {
+      "documents": 647,
+      "tokens": 600153,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikipedia_pl.bin"
+    },
+    "wolne_lektury": {
+      "documents": 49,
+      "tokens": 288872,
+      "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wolne_lektury.bin"
+    }
+  },
+  "checkpoints": {
+    "5k": {
+      "checkpoint": "checkpoints/glyph-100m-v2_4_1-5k/step_0005000.pt",
+      "step": 5000,
+      "sources": {
+        "1000_novels": {
+          "documents": 17,
+          "tokens": 186215,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/1000_novels.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.714629
+        },
+        "eltec_pol": {
+          "documents": 10,
+          "tokens": 134845,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/eltec_pol.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.500906
+        },
+        "parliamentary": {
+          "documents": 78,
+          "tokens": 163332,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/parliamentary.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.37505
+        },
+        "wikibooks": {
+          "documents": 26,
+          "tokens": 19588,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikibooks.bin",
+          "eval_batches": 9,
+          "evaluated_blocks": 36,
+          "val_loss": 5.220388
+        },
+        "wikinews": {
+          "documents": 45,
+          "tokens": 13731,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikinews.bin",
+          "eval_batches": 6,
+          "evaluated_blocks": 24,
+          "val_loss": 5.151582
+        },
+        "wikipedia_pl": {
+          "documents": 647,
+          "tokens": 600153,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikipedia_pl.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.63655
+        },
+        "wolne_lektury": {
+          "documents": 49,
+          "tokens": 288872,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wolne_lektury.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.532188
+        }
+      }
+    },
+    "7.5k": {
+      "checkpoint": "checkpoints/glyph-100m-v2_4_1-10k/step_0007500.pt",
+      "step": 7500,
+      "sources": {
+        "1000_novels": {
+          "documents": 17,
+          "tokens": 186215,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/1000_novels.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.519056
+        },
+        "eltec_pol": {
+          "documents": 10,
+          "tokens": 134845,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/eltec_pol.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.287544
+        },
+        "parliamentary": {
+          "documents": 78,
+          "tokens": 163332,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/parliamentary.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.115706
+        },
+        "wikibooks": {
+          "documents": 26,
+          "tokens": 19588,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikibooks.bin",
+          "eval_batches": 9,
+          "evaluated_blocks": 36,
+          "val_loss": 4.879178
+        },
+        "wikinews": {
+          "documents": 45,
+          "tokens": 13731,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikinews.bin",
+          "eval_batches": 6,
+          "evaluated_blocks": 24,
+          "val_loss": 4.852134
+        },
+        "wikipedia_pl": {
+          "documents": 647,
+          "tokens": 600153,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikipedia_pl.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.297303
+        },
+        "wolne_lektury": {
+          "documents": 49,
+          "tokens": 288872,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wolne_lektury.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.306132
+        }
+      }
+    },
+    "10k": {
+      "checkpoint": "checkpoints/glyph-100m-v2_4_1-10k/step_0010000.pt",
+      "step": 10000,
+      "sources": {
+        "1000_novels": {
+          "documents": 17,
+          "tokens": 186215,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/1000_novels.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.350968
+        },
+        "eltec_pol": {
+          "documents": 10,
+          "tokens": 134845,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/eltec_pol.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.110345
+        },
+        "parliamentary": {
+          "documents": 78,
+          "tokens": 163332,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/parliamentary.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 3.911543
+        },
+        "wikibooks": {
+          "documents": 26,
+          "tokens": 19588,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikibooks.bin",
+          "eval_batches": 9,
+          "evaluated_blocks": 36,
+          "val_loss": 4.620407
+        },
+        "wikinews": {
+          "documents": 45,
+          "tokens": 13731,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikinews.bin",
+          "eval_batches": 6,
+          "evaluated_blocks": 24,
+          "val_loss": 4.626867
+        },
+        "wikipedia_pl": {
+          "documents": 647,
+          "tokens": 600153,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wikipedia_pl.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.044007
+        },
+        "wolne_lektury": {
+          "documents": 49,
+          "tokens": 288872,
+          "path": "eval/glyph-100m/glyph100_v2_4_1_5k_eval_20260717_source_val_bins/wolne_lektury.bin",
+          "eval_batches": 64,
+          "evaluated_blocks": 256,
+          "val_loss": 4.141425
+        }
+      }
+    }
+  },
+  "deltas": {
+    "1000_novels": {
+      "7.5k_minus_5k": -0.195573,
+      "10k_minus_7.5k": -0.168088,
+      "10k_minus_5k": -0.363661
+    },
+    "eltec_pol": {
+      "7.5k_minus_5k": -0.213362,
+      "10k_minus_7.5k": -0.177199,
+      "10k_minus_5k": -0.390561
+    },
+    "parliamentary": {
+      "7.5k_minus_5k": -0.259344,
+      "10k_minus_7.5k": -0.204163,
+      "10k_minus_5k": -0.463507
+    },
+    "wikibooks": {
+      "7.5k_minus_5k": -0.34121,
+      "10k_minus_7.5k": -0.258771,
+      "10k_minus_5k": -0.599981
+    },
+    "wikinews": {
+      "7.5k_minus_5k": -0.299448,
+      "10k_minus_7.5k": -0.225267,
+      "10k_minus_5k": -0.524715
+    },
+    "wikipedia_pl": {
+      "7.5k_minus_5k": -0.339247,
+      "10k_minus_7.5k": -0.253296,
+      "10k_minus_5k": -0.592543
+    },
+    "wolne_lektury": {
+      "7.5k_minus_5k": -0.226056,
+      "10k_minus_7.5k": -0.164707,
+      "10k_minus_5k": -0.390763
+    }
+  },
+  "notes": [
+    "Negative delta means improvement.",
+    "Wikisource has no validation documents in v2.4.1 and is absent.",
+    "The source panel and seeds match the earlier v2.4.1 1k/5k evaluation."
+  ]
+}

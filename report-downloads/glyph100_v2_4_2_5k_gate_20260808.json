@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "decision": "allow_one_controlled_continuation_to_10k",
+  "checkpoint": {
+    "path": "checkpoints/glyph-100m-v2_4_2-5k/step_0005000.pt",
+    "sha256": "aad89bc2827a4d626092f8da827ecc549afe6c414e837c94b7543ac9ffafc09a",
+    "step": 5000,
+    "variant": "glyph-100m",
+    "dataset_name": "glyph100_dataset_v2_4_2_core",
+    "context_length": 512,
+    "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "effective_tokens_per_step": 16384,
+    "optimizer_state_present": true,
+    "scheduler_state_present": true,
+    "sampler_state_present": true
+  },
+  "validation_loss": {
+    "step_500": 7.3346,
+    "step_1000": 6.4385,
+    "step_1500": 5.9524,
+    "step_2000": 5.6915,
+    "step_2500": 5.4662,
+    "step_3000": 5.1757,
+    "step_3500": 4.9787,
+    "step_4000": 4.8189,
+    "step_4500": 4.7063,
+    "step_5000": 4.5994
+  },
+  "matched_generation": {
+    "prompts": 20,
+    "samples_per_checkpoint": 40,
+    "v241_5k_avg_quality": 3.0,
+    "v242_5k_avg_quality": 3.175,
+    "v241_5k_repetition_samples": 13,
+    "v242_5k_repetition_samples": 13,
+    "v241_5k_pseudo_ency_samples": 7,
+    "v242_5k_pseudo_ency_samples": 0,
+    "v242_wins": 14,
+    "v241_wins": 9,
+    "ties": 17
+  },
+  "limitations": [
+    "The generation panel is small and heuristic scoring is not semantic evaluation.",
+    "The model remained an early base LM and was not considered useful or assistant-ready at 5k."
+  ],
+  "training_started_by_gate": "only_after_separate_p100_smoke_pass"
+}

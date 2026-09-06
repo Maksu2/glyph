@@ -1,0 +1,64 @@
+name: glyph-inference
+
+services:
+  glyph-inference:
+    build:
+      context: .
+      dockerfile: Dockerfile.inference
+      args:
+        APP_UID: "${GLYPH_INFER_UID:-1000}"
+        APP_GID: "${GLYPH_INFER_GID:-1000}"
+    image: glyph-inference:cpu
+    init: true
+    user: "${GLYPH_INFER_UID:-1000}:${GLYPH_INFER_GID:-1000}"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: "${GLYPH_INFER_MEM_LIMIT:-3g}"
+    memswap_limit: "${GLYPH_INFER_MEM_LIMIT:-3g}"
+    pids_limit: 128
+    cpu_shares: "${GLYPH_INFER_CPU_SHARES:-512}"
+    cpus: "${GLYPH_INFER_CPUS:-4.0}"
+    oom_score_adj: 400
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    ports:
+      - "127.0.0.1:${GLYPH_DEMO_PORT:-8195}:8195"
+    environment:
+      GLYPH_DEMO_HOST: "0.0.0.0"
+      GLYPH_DEMO_PORT: "8195"
+      GLYPH_DEMO_ENABLED: "${GLYPH_DEMO_ENABLED:-true}"
+      GLYPH_DEMO_CHECKPOINT: "/app/checkpoints/public-demo.pt"
+      GLYPH_DEMO_TOKENIZER: "/app/data/processed/tokenizer.model"
+      GLYPH_DEMO_PRESET: "${GLYPH_DEMO_PRESET:-balanced-long}"
+      GLYPH_DEMO_THREADS: "${GLYPH_DEMO_THREADS:-4}"
+      GLYPH_DEMO_MAX_PROMPT_CHARS: "${GLYPH_DEMO_MAX_PROMPT_CHARS:-500}"
+      GLYPH_DEMO_MAX_BODY_BYTES: "${GLYPH_DEMO_MAX_BODY_BYTES:-4096}"
+      GLYPH_DEMO_MAX_NEW_TOKENS: "${GLYPH_DEMO_MAX_NEW_TOKENS:-120}"
+      GLYPH_DEMO_TIMEOUT_SECONDS: "${GLYPH_DEMO_TIMEOUT_SECONDS:-45}"
+      GLYPH_DEMO_CONCURRENCY: "${GLYPH_DEMO_CONCURRENCY:-1}"
+      GLYPH_DEMO_QUEUE_SIZE: "${GLYPH_DEMO_QUEUE_SIZE:-4}"
+      GLYPH_DEMO_QUEUE_TIMEOUT_SECONDS: "${GLYPH_DEMO_QUEUE_TIMEOUT_SECONDS:-10}"
+      GLYPH_DEMO_TEMPERATURE: "${GLYPH_DEMO_TEMPERATURE:-0.75}"
+      GLYPH_DEMO_TOP_K: "${GLYPH_DEMO_TOP_K:-40}"
+      GLYPH_DEMO_TOP_P: "${GLYPH_DEMO_TOP_P:-0.92}"
+      GLYPH_DEMO_REPETITION_PENALTY: "${GLYPH_DEMO_REPETITION_PENALTY:-1.15}"
+      GLYPH_DEMO_NO_REPEAT_NGRAM: "${GLYPH_DEMO_NO_REPEAT_NGRAM:-4}"
+      GLYPH_DEMO_RATE_PER_MINUTE: "${GLYPH_DEMO_RATE_PER_MINUTE:-3}"
+      GLYPH_DEMO_RATE_PER_10_MINUTES: "${GLYPH_DEMO_RATE_PER_10_MINUTES:-10}"
+      GLYPH_DEMO_RATE_PER_DAY: "${GLYPH_DEMO_RATE_PER_DAY:-30}"
+      GLYPH_DEMO_CORS_ORIGIN: "https://glyph.maksu.online"
+      OMP_NUM_THREADS: "${GLYPH_DEMO_THREADS:-4}"
+      MKL_NUM_THREADS: "${GLYPH_DEMO_THREADS:-4}"
+    volumes:
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/checkpoints/public-demo.pt"
+        target: /app/checkpoints/public-demo.pt
+        read_only: true
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/data/processed/tokenizer.model"
+        target: /app/data/processed/tokenizer.model
+        read_only: true
+    restart: unless-stopped

@@ -1,0 +1,235 @@
+{
+  "created_at": "2026-06-24T18:18:46.281655+00:00",
+  "source_dataset": "data/sft/glyph100_sft_smoke_v0.jsonl",
+  "output": "data/sft/processed/glyph100_sft_tiny_overfit_fixedmask_train.jsonl",
+  "examples": 64,
+  "seed": 2026,
+  "categories": {
+    "krotkie_definicje": 8,
+    "proste_techniczne_wyjasnienia": 7,
+    "mvp_first_project_advice": 7,
+    "brak_danych": 7,
+    "krotkie_poprawki_tekstu": 7,
+    "mini_streszczenia": 7,
+    "anty_petle": 7,
+    "codzienne_proste_pytania": 7,
+    "ostrozne_odpowiedzi_przy_niepewnosci": 7
+  },
+  "stats": {
+    "examples": 64,
+    "categories": {
+      "krotkie_definicje": 8,
+      "proste_techniczne_wyjasnienia": 7,
+      "mvp_first_project_advice": 7,
+      "brak_danych": 7,
+      "krotkie_poprawki_tekstu": 7,
+      "mini_streszczenia": 7,
+      "anty_petle": 7,
+      "codzienne_proste_pytania": 7,
+      "ostrozne_odpowiedzi_przy_niepewnosci": 7
+    },
+    "qualities": {
+      "approved": 64
+    },
+    "sources": {
+      "synthetic_curated_sft_smoke": 64
+    },
+    "instruction_chars_avg": 59.3125,
+    "response_chars_avg": 72.59375,
+    "instruction_words_avg": 8.328125,
+    "response_words_avg": 10.3125,
+    "instruction_words_total": 533,
+    "response_words_total": 660,
+    "total_words": 1193,
+    "instruction_duplicate_extra": 0,
+    "instruction_response_duplicate_extra": 0,
+    "bad_patterns": {
+      "empty_instruction": 0,
+      "empty_response": 0,
+      "very_short_response_lt_8_words": 16,
+      "very_long_response_gt_120_words": 0,
+      "control_chars": 0,
+      "as_language_model_phrase": 0,
+      "english_pattern": 0
+    },
+    "token_stats": {
+      "template_total_tokens": 2405,
+      "template_min": 25,
+      "template_max": 61,
+      "template_avg": 37.578125,
+      "template_p50": 37.5,
+      "template_p90": 44.0,
+      "template_p95": 47.0,
+      "template_p99": 56.58999999999998,
+      "instruction_avg_tokens": 14.5625,
+      "response_avg_tokens": 17.015625,
+      "fits_context": 64,
+      "over_context": 0,
+      "over_context_lines": []
+    }
+  },
+  "max_template_tokens": 61,
+  "over_context": 0,
+  "sample_examples": [
+    {
+      "id": "glyph100-sft-smoke-v0-0317",
+      "tiny_overfit_id": "tiny-fixedmask-0001",
+      "category": "krotkie_definicje",
+      "instruction": "Co oznacza termin „metryka”?",
+      "response": "Metryka to liczba opisująca wybraną cechę działania systemu.",
+      "template_tokens": 28
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0713",
+      "tiny_overfit_id": "tiny-fixedmask-0002",
+      "category": "krotkie_definicje",
+      "instruction": "Co oznacza termin „wersjonowanie”?",
+      "response": "Wersjonowanie pozwala śledzić zmiany i wracać do wcześniejszych stanów projektu.",
+      "template_tokens": 33
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1277",
+      "tiny_overfit_id": "tiny-fixedmask-0003",
+      "category": "krotkie_definicje",
+      "instruction": "Podaj prostą definicję: dokumentacja.",
+      "response": "Dokumentacja opisuje, jak projekt działa, jak go uruchomić i jakie ma ograniczenia.",
+      "template_tokens": 34
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0797",
+      "tiny_overfit_id": "tiny-fixedmask-0004",
+      "category": "krotkie_definicje",
+      "instruction": "Wyjaśnij krótko pojęcie: wątek.",
+      "response": "Wątek to część procesu, która może wykonywać pracę równolegle z innymi wątkami.",
+      "template_tokens": 36
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0228",
+      "tiny_overfit_id": "tiny-fixedmask-0005",
+      "category": "krotkie_definicje",
+      "instruction": "Wyjaśnij krótko pojęcie: metryka.",
+      "response": "Metryka to liczba opisująca wybraną cechę działania systemu.",
+      "template_tokens": 32
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0697",
+      "tiny_overfit_id": "tiny-fixedmask-0006",
+      "category": "krotkie_definicje",
+      "instruction": "Podaj prostą definicję: konfiguracja.",
+      "response": "Konfiguracja to zestaw ustawień sterujących działaniem systemu.",
+      "template_tokens": 30
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1213",
+      "tiny_overfit_id": "tiny-fixedmask-0007",
+      "category": "proste_techniczne_wyjasnienia",
+      "instruction": "Krótko i konkretnie: Czym jest deduplikacja danych?",
+      "response": "Deduplikacja usuwa powtarzające się dokumenty albo fragmenty, żeby model nie uczył się jednego tekstu zbyt wiele razy.",
+      "template_tokens": 47
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0069",
+      "tiny_overfit_id": "tiny-fixedmask-0008",
+      "category": "proste_techniczne_wyjasnienia",
+      "instruction": "Po co rozdziela się train i val?",
+      "response": "Rozdział train i val pozwala sprawdzić, czy model działa poza przykładami używanymi do uczenia.",
+      "template_tokens": 40
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0155",
+      "tiny_overfit_id": "tiny-fixedmask-0009",
+      "category": "proste_techniczne_wyjasnienia",
+      "instruction": "Krótko i konkretnie: Po co używa się Dockera?",
+      "response": "Docker ułatwia uruchamianie aplikacji z tymi samymi zależnościami na różnych maszynach.",
+      "template_tokens": 42
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1463",
+      "tiny_overfit_id": "tiny-fixedmask-0010",
+      "category": "proste_techniczne_wyjasnienia",
+      "instruction": "Wyjaśnij krótko, czym różni się RAM od dysku?",
+      "response": "RAM jest szybka i ulotna, a dysk jest wolniejszy, ale przechowuje dane po wyłączeniu komputera.",
+      "template_tokens": 43
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1059",
+      "tiny_overfit_id": "tiny-fixedmask-0011",
+      "category": "proste_techniczne_wyjasnienia",
+      "instruction": "Wyjaśnij krótko: Co oznacza context length?",
+      "response": "Context length to maksymalna liczba tokenów, które model widzi jednocześnie.",
+      "template_tokens": 40
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1133",
+      "tiny_overfit_id": "tiny-fixedmask-0012",
+      "category": "proste_techniczne_wyjasnienia",
+      "instruction": "Odpowiedz prosto: Po co są logi treningu?",
+      "response": "Logi treningu pokazują kroki, loss, prędkość, checkpointy i błędy.",
+      "template_tokens": 35
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0264",
+      "tiny_overfit_id": "tiny-fixedmask-0013",
+      "category": "mvp_first_project_advice",
+      "instruction": "Odpowiedz praktycznie: Jak ograniczyć zakres projektu?",
+      "response": "Usuń wszystko, czego nie trzeba do pierwszego działającego scenariusza.",
+      "template_tokens": 29
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1101",
+      "tiny_overfit_id": "tiny-fixedmask-0014",
+      "category": "mvp_first_project_advice",
+      "instruction": "Co zrobić? Jak ocenić, czy projekt idzie dobrze?",
+      "response": "Sprawdź, czy da się przejść główny scenariusz od początku do końca. To ważniejsze niż liczba funkcji.",
+      "template_tokens": 38
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1336",
+      "tiny_overfit_id": "tiny-fixedmask-0015",
+      "category": "mvp_first_project_advice",
+      "instruction": "Krótko doradź: Chcę poprawiać wygląd zanim działa backend.",
+      "response": "Najpierw upewnij się, że dane i podstawowe akcje działają. Wygląd ma sens dopiero, gdy nie maskuje braków funkcjonalnych.",
+      "template_tokens": 52
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0637",
+      "tiny_overfit_id": "tiny-fixedmask-0016",
+      "category": "mvp_first_project_advice",
+      "instruction": "Krótko doradź: Jak rozbić duży projekt?",
+      "response": "Podziel go na etapy: dane, główna logika, prosty widok, test, dopiero potem dodatki.",
+      "template_tokens": 39
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1249",
+      "tiny_overfit_id": "tiny-fixedmask-0017",
+      "category": "mvp_first_project_advice",
+      "instruction": "Odpowiedz praktycznie: Jak rozbić duży projekt?",
+      "response": "Podziel go na etapy: dane, główna logika, prosty widok, test, dopiero potem dodatki.",
+      "template_tokens": 36
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0518",
+      "tiny_overfit_id": "tiny-fixedmask-0018",
+      "category": "mvp_first_project_advice",
+      "instruction": "Krótko doradź: Mam pomysł na aplikację i chcę od razu zrobić logowanie, dashboard i AI.",
+      "response": "Najpierw zbuduj najmniejszą wersję, która pokazuje główną wartość. Logowanie i dashboard dodaj dopiero, gdy podstawowy przepływ działa.",
+      "template_tokens": 61
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-0107",
+      "tiny_overfit_id": "tiny-fixedmask-0019",
+      "category": "brak_danych",
+      "instruction": "Czy wynik benchmarku jest dobry? Odpowiedz krótko.",
+      "response": "Trzeba znać sprzęt, ustawienia testu i punkt odniesienia. Sama liczba nie wystarcza.",
+      "template_tokens": 36
+    },
+    {
+      "id": "glyph100-sft-smoke-v0-1322",
+      "tiny_overfit_id": "tiny-fixedmask-0020",
+      "category": "brak_danych",
+      "instruction": "Czy to błąd w kodzie? Podaj uczciwą odpowiedź.",
+      "response": "Możliwe, ale potrzebny jest komunikat błędu, fragment kodu i sposób odtworzenia problemu.",
+      "template_tokens": 42
+    }
+  ]
+}

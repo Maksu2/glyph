@@ -1,0 +1,85 @@
+name: ai-model-train
+
+services:
+  trainer:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+      args:
+        TRAIN_UID: "${TRAIN_UID:-1000}"
+        TRAIN_GID: "${TRAIN_GID:-1000}"
+    image: ai-model-trainer:cpu
+    init: true
+    working_dir: /workspace
+    user: "${TRAIN_UID:-1000}:${TRAIN_GID:-1000}"
+    cpu_shares: "${TRAIN_CPU_SHARES:-256}"
+    mem_limit: "${TRAIN_MEM_LIMIT:-22g}"
+    memswap_limit: "${TRAIN_MEMSWAP_LIMIT:-22g}"
+    pids_limit: 512
+    oom_score_adj: 500
+    shm_size: "1g"
+    read_only: true
+    stdin_open: true
+    tty: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:size=1g,mode=1777
+    environment:
+      TRAIN_INTEROP_THREADS: "${TRAIN_INTEROP_THREADS:-1}"
+      TRAIN_NICE: "${TRAIN_NICE:-10}"
+      TRAIN_IONICE_CLASS: "${TRAIN_IONICE_CLASS:-2}"
+      TRAIN_IONICE_LEVEL: "${TRAIN_IONICE_LEVEL:-7}"
+      TRAIN_SCHEDULE_TZ: "${TRAIN_SCHEDULE_TZ:-Europe/Warsaw}"
+      OMP_WAIT_POLICY: "${TRAIN_OMP_WAIT_POLICY:-PASSIVE}"
+      OMP_PROC_BIND: "${TRAIN_OMP_PROC_BIND:-false}"
+      OMP_PLACES: "${TRAIN_OMP_PLACES:-cores}"
+      OMP_DYNAMIC: "${TRAIN_OMP_DYNAMIC:-FALSE}"
+      MKL_DYNAMIC: "${TRAIN_MKL_DYNAMIC:-FALSE}"
+      HF_HOME: /workspace/.cache/huggingface
+      HF_DATASETS_CACHE: /workspace/.cache/huggingface/datasets
+      TORCH_HOME: /workspace/.cache/torch
+      XDG_CACHE_HOME: /workspace/.cache
+      PYTHONUNBUFFERED: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    volumes:
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/config.py"
+        target: /workspace/config.py
+        read_only: true
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/train.py"
+        target: /workspace/train.py
+        read_only: true
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/generate.py"
+        target: /workspace/generate.py
+        read_only: true
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/finetune.py"
+        target: /workspace/finetune.py
+        read_only: true
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/requirements.txt"
+        target: /workspace/requirements.txt
+        read_only: true
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/model"
+        target: /workspace/model
+        read_only: true
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/data"
+        target: /workspace/data
+        read_only: true
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/checkpoints"
+        target: /workspace/checkpoints
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/logs"
+        target: /workspace/logs
+      - type: bind
+        source: "${AI_MODEL_ROOT:-/home/maksu/ai-model}/.cache"
+        target: /workspace/.cache
+    command: ["bash"]

@@ -1,0 +1,711 @@
+{
+  "created_at": "2026-07-04T12:57:30.386135+00:00",
+  "mode": "applied",
+  "checkpoint_files_before": 131,
+  "checkpoint_files_kept": 9,
+  "checkpoint_files_removed": 122,
+  "bytes_removed": 130645283914,
+  "snapshot_support_files_removed": 7,
+  "snapshot_support_bytes_removed": 521879,
+  "kept": [
+    {
+      "path": "checkpoints/final.pt",
+      "bytes": 326978459
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm-latest.pt",
+      "bytes": 1175147247
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-best.pt",
+      "bytes": 1175145993
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-best.pt",
+      "bytes": 1175145993
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-final-step_000586.pt",
+      "bytes": 1175158019
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0044000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/latest.pt",
+      "bytes": 1175128015
+    },
+    {
+      "path": "checkpoints/public-demo.pt",
+      "bytes": 326987359
+    },
+    {
+      "path": "checkpoints/sft-v0/glyph-27m-sft-v0-final.pt",
+      "bytes": 326991051
+    }
+  ],
+  "removed": [
+    {
+      "path": "checkpoints/glyph-100m/latest.pt",
+      "bytes": 1175128015
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0000500.pt",
+      "bytes": 1175127025
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0001000.pt",
+      "bytes": 1175127025
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0002000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0003000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0004000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0005000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0006000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0007000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0008000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0009000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m/step_0010000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-thermal-test/emergency.pt",
+      "bytes": 1175125771
+    },
+    {
+      "path": "checkpoints/glyph-100m-thermal-test/latest.pt",
+      "bytes": 1175126607
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/latest.pt",
+      "bytes": 1175128015
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0016000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0017000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0018000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0019000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0020000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0021000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0022000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0023000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0024000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-25k/step_0025000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/emergency.pt",
+      "bytes": 1175127179
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/latest.pt",
+      "bytes": 1175128015
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0026000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0027000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0028000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0029000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0030000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0031000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0032000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0033000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0034000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-35k/step_0035000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-best.pt",
+      "bytes": 1175134471
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-final.pt",
+      "bytes": 1175134889
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-latest.pt",
+      "bytes": 1175134471
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/glyph-100m-v2_3_1-44k-sft-smoke-nan.pt",
+      "bytes": 1175137471
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/step_000050.pt",
+      "bytes": 1175122703
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/step_000100.pt",
+      "bytes": 1175122703
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke/step_000150.pt",
+      "bytes": 1175122703
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm-final-step_000400.pt",
+      "bytes": 1175157955
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm-step_000100-step_000100.pt",
+      "bytes": 1175180431
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm-step_000200-step_000200.pt",
+      "bytes": 1175180431
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm-step_000300-step_000300.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm-step_000400-step_000400.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-final-step_000462.pt",
+      "bytes": 1175158019
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-latest.pt",
+      "bytes": 1175147311
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000050-step_000050.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000100-step_000100.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000150-step_000150.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000200-step_000200.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000250-step_000250.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000300-step_000300.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000350-step_000350.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000400-step_000400.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm-step_000450-step_000450.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-latest.pt",
+      "bytes": 1175147311
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000050-step_000050.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000100-step_000100.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000150-step_000150.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000200-step_000200.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000250-step_000250.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000300-step_000300.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000350-step_000350.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000400-step_000400.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000450-step_000450.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000500-step_000500.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm-step_000550-step_000550.pt",
+      "bytes": 1175180495
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask-best.pt",
+      "bytes": 1175143569
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask-final.pt",
+      "bytes": 1175143987
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask-latest.pt",
+      "bytes": 1175143569
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask/step_000100.pt",
+      "bytes": 1175122831
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask/step_000200.pt",
+      "bytes": 1175122831
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask/step_000300.pt",
+      "bytes": 1175122831
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-final-step_000050.pt",
+      "bytes": 1175180849
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-final-step_000200.pt",
+      "bytes": 1175180849
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-latest.pt",
+      "bytes": 1175156573
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-step_000050-step_000050.pt",
+      "bytes": 1175183357
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-step_000100-step_000100.pt",
+      "bytes": 1175183357
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe-step_000200-step_000200.pt",
+      "bytes": 1175183357
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/latest.pt",
+      "bytes": 1175128015
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0036000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0037000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0038000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0039000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0040000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0041000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0042000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0043000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-45k/step_0045000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0046000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0047000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0048000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0049000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-50k/step_0050000.pt",
+      "bytes": 1175128433
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-batch8-bench/latest.pt",
+      "bytes": 1175128079
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-batch8-bench/step_0025100.pt",
+      "bytes": 1175128497
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-preflight/latest.pt",
+      "bytes": 1175128079
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-preflight/step_0011000.pt",
+      "bytes": 1175128497
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-preflight/step_0012000.pt",
+      "bytes": 1175128497
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-preflight/step_0013000.pt",
+      "bytes": 1175128497
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-preflight/step_0014000.pt",
+      "bytes": 1175128497
+    },
+    {
+      "path": "checkpoints/glyph-100m-v2_3_1-preflight/step_0015000.pt",
+      "bytes": 1175128497
+    },
+    {
+      "path": "checkpoints/latest.pt",
+      "bytes": 326990147
+    },
+    {
+      "path": "checkpoints/sft-v0/glyph-27m-sft-v0-best.pt",
+      "bytes": 326990831
+    },
+    {
+      "path": "checkpoints/sft-v0/glyph-27m-sft-v0-latest.pt",
+      "bytes": 326993263
+    },
+    {
+      "path": "checkpoints/sft-v0/step_000050.pt",
+      "bytes": 326990339
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke/glyph-27m-sft-v0-smoke-best.pt",
+      "bytes": 326992151
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke/glyph-27m-sft-v0-smoke-final.pt",
+      "bytes": 326992371
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke/glyph-27m-sft-v0-smoke-latest.pt",
+      "bytes": 326994583
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke/step_000025.pt",
+      "bytes": 326990339
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke/step_000050.pt",
+      "bytes": 326990339
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke-resume-test/glyph-27m-sft-v0-resume-test-best.pt",
+      "bytes": 326993727
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke-resume-test/glyph-27m-sft-v0-resume-test-final.pt",
+      "bytes": 326993947
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke-resume-test/glyph-27m-sft-v0-resume-test-latest.pt",
+      "bytes": 326996735
+    },
+    {
+      "path": "checkpoints/sft-v0-smoke-resume-test/step_000051.pt",
+      "bytes": 326991171
+    },
+    {
+      "path": "checkpoints/snapshots/pre-sft-v0-20260525-170501/glyph-27m-base-final.pt",
+      "bytes": 326978459
+    },
+    {
+      "path": "checkpoints/step_0200000.pt",
+      "bytes": 326990367
+    }
+  ],
+  "removed_by_directory": {
+    "checkpoints": {
+      "files": 2,
+      "bytes": 653980514
+    },
+    "checkpoints/glyph-100m": {
+      "files": 12,
+      "bytes": 14101537962
+    },
+    "checkpoints/glyph-100m-thermal-test": {
+      "files": 2,
+      "bytes": 2350252378
+    },
+    "checkpoints/glyph-100m-v2_3_1-25k": {
+      "files": 11,
+      "bytes": 12926412345
+    },
+    "checkpoints/glyph-100m-v2_3_1-35k": {
+      "files": 12,
+      "bytes": 14101539524
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke": {
+      "files": 7,
+      "bytes": 8225909411
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm": {
+      "files": 5,
+      "bytes": 5875879807
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm": {
+      "files": 11,
+      "bytes": 12926929785
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm": {
+      "files": 12,
+      "bytes": 14102132756
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask": {
+      "files": 6,
+      "bytes": 7050799618
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe": {
+      "files": 6,
+      "bytes": 7051068342
+    },
+    "checkpoints/glyph-100m-v2_3_1-45k": {
+      "files": 10,
+      "bytes": 11751283912
+    },
+    "checkpoints/glyph-100m-v2_3_1-50k": {
+      "files": 5,
+      "bytes": 5875642165
+    },
+    "checkpoints/glyph-100m-v2_3_1-batch8-bench": {
+      "files": 2,
+      "bytes": 2350256576
+    },
+    "checkpoints/glyph-100m-v2_3_1-preflight": {
+      "files": 6,
+      "bytes": 7050770564
+    },
+    "checkpoints/sft-v0": {
+      "files": 3,
+      "bytes": 980974433
+    },
+    "checkpoints/sft-v0-smoke": {
+      "files": 5,
+      "bytes": 1634959783
+    },
+    "checkpoints/sft-v0-smoke-resume-test": {
+      "files": 4,
+      "bytes": 1307975580
+    },
+    "checkpoints/snapshots/pre-sft-v0-20260525-170501": {
+      "files": 1,
+      "bytes": 326978459
+    }
+  },
+  "removed_by_directory_precomputed": {
+    "checkpoints": {
+      "files": 2,
+      "bytes": 653980514
+    },
+    "checkpoints/glyph-100m": {
+      "files": 12,
+      "bytes": 14101537962
+    },
+    "checkpoints/glyph-100m-thermal-test": {
+      "files": 2,
+      "bytes": 2350252378
+    },
+    "checkpoints/glyph-100m-v2_3_1-25k": {
+      "files": 11,
+      "bytes": 12926412345
+    },
+    "checkpoints/glyph-100m-v2_3_1-35k": {
+      "files": 12,
+      "bytes": 14101539524
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke": {
+      "files": 7,
+      "bytes": 8225909411
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_1-fixedmask-rocm": {
+      "files": 5,
+      "bytes": 5875879807
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_2-fixedmask-rocm": {
+      "files": 11,
+      "bytes": 12926929785
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke-v0_3-fixedmask-rocm": {
+      "files": 12,
+      "bytes": 14102132756
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask": {
+      "files": 6,
+      "bytes": 7050799618
+    },
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe": {
+      "files": 6,
+      "bytes": 7051068342
+    },
+    "checkpoints/glyph-100m-v2_3_1-45k": {
+      "files": 10,
+      "bytes": 11751283912
+    },
+    "checkpoints/glyph-100m-v2_3_1-50k": {
+      "files": 5,
+      "bytes": 5875642165
+    },
+    "checkpoints/glyph-100m-v2_3_1-batch8-bench": {
+      "files": 2,
+      "bytes": 2350256576
+    },
+    "checkpoints/glyph-100m-v2_3_1-preflight": {
+      "files": 6,
+      "bytes": 7050770564
+    },
+    "checkpoints/sft-v0": {
+      "files": 3,
+      "bytes": 980974433
+    },
+    "checkpoints/sft-v0-smoke": {
+      "files": 5,
+      "bytes": 1634959783
+    },
+    "checkpoints/sft-v0-smoke-resume-test": {
+      "files": 4,
+      "bytes": 1307975580
+    },
+    "checkpoints/snapshots/pre-sft-v0-20260525-170501": {
+      "files": 1,
+      "bytes": 326978459
+    }
+  },
+  "empty_directories_removed": [
+    "checkpoints/glyph-100m-thermal-test",
+    "checkpoints/glyph-100m-v2_3_1-25k",
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-cpu-fixedmask",
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-tiny-overfit-rocm-fixedmask-safe",
+    "checkpoints/glyph-100m",
+    "checkpoints/glyph-100m-v2_3_1-preflight",
+    "checkpoints/sft-v0-smoke",
+    "checkpoints/glyph-100m-v2_3_1-batch8-bench",
+    "checkpoints/glyph-100m-v2_3_1-44k-sft-smoke",
+    "checkpoints/glyph-100m-v2_3_1-35k",
+    "checkpoints/sft-v0-smoke-resume-test"
+  ],
+  "snapshot_directory_removed": "checkpoints/snapshots",
+  "checkpoint_dir_bytes_after": 8032428032,
+  "repo_bytes_after": 77808263168,
+  "filesystem_free_bytes_after": 155991269376
+}
