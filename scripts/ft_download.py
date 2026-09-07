@@ -155,8 +155,8 @@ def main():
     print(f"DONE web={counts['web']} pdf={counts['pdf']} scanned={scanned}", flush=True)
     write_done(a.done, exit_code, pdf_docs=counts["pdf"]["docs"],
                web_docs=counts["web"]["docs"], scanned=scanned)
-    return exit_code
-
-
-if __name__ == "__main__":
-    sys.exit(main())
+    sys.stdout.flush()
+    # datasets streaming teardown races at interpreter exit (GIL crash AFTER
+    # all files/.done are written) -> bypass finalizers, keep .done exit code.
+    import os
+    os._exit(exit_code)
