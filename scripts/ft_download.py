@@ -95,6 +95,13 @@ def main():
     try:
         for row in ds:
             scanned += 1
+            if scanned % a.progress_every == 0:
+                el = time.time() - t0
+                print(f"scanned={scanned} web={counts['web']} pdf={counts['pdf']} "
+                      f"elapsed={el:.0f}s", flush=True)
+                state_path.write_text(json.dumps(
+                    {"counts": counts, "scanned": scanned,
+                     "seen": own_seen}, ensure_ascii=False), encoding="utf-8")
             rid = row.get("id")
             if rid in seen:
                 continue
@@ -128,13 +135,6 @@ def main():
                 own_seen.append(rid)
             else:
                 continue
-            if scanned % a.progress_every == 0:
-                el = time.time() - t0
-                print(f"scanned={scanned} web={counts['web']} pdf={counts['pdf']} "
-                      f"elapsed={el:.0f}s", flush=True)
-                state_path.write_text(json.dumps(
-                    {"counts": counts, "scanned": scanned,
-                     "seen": own_seen}, ensure_ascii=False), encoding="utf-8")
             if counts["pdf"]["tokens"] >= a.pdf_token_target:
                 print(f"TARGET pdf tokens reached: {counts['pdf']}", flush=True)
                 break
