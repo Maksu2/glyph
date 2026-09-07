@@ -160,3 +160,7 @@ def main():
     # all files/.done are written) -> bypass finalizers, keep .done exit code.
     import os
     os._exit(exit_code)
+
+
+if __name__ == "__main__":
+    main()
