@@ -61,6 +61,7 @@ def main():
     ap.add_argument("--state", default="")
     ap.add_argument("--skip-web", action="store_true",
                     help="count/skip web docs but do not write them (v2_5_1: web complete)")
+    ap.add_argument("--max-retries", type=int, default=50)
     ap.add_argument("--done", default="logs/v2_5_1/ft_download.done")
     ap.add_argument("--progress-every", type=int, default=500_000)
     a = ap.parse_args()
@@ -87,71 +88,106 @@ def main():
     own_seen = []
 
     from datasets import load_dataset
-    ds = load_dataset(REPO, split=a.split, streaming=True, revision=REVISION)
-    fp = open(pdf_path, "a", encoding="utf-8")
-    fw = None if a.skip_web else open(web_path, "a", encoding="utf-8")
-    t0 = time.time()
-    exit_code = 0
-    try:
-        for row in ds:
-            scanned += 1
-            if scanned % a.progress_every == 0:
-                el = time.time() - t0
-                print(f"scanned={scanned} web={counts['web']} pdf={counts['pdf']} "
-                      f"elapsed={el:.0f}s", flush=True)
-                state_path.write_text(json.dumps(
-                    {"counts": counts, "scanned": scanned,
-                     "seen": own_seen}, ensure_ascii=False), encoding="utf-8")
-            rid = row.get("id")
-            if rid in seen:
-                continue
-            pred = row.get("prediction")
-            if not isinstance(pred, (int, float)) or pred < a.pred_min:
-                continue
-            if row.get("is_truncated") is True:
-                continue
-            src = row.get("dataset_source")
-            text = row.get("text") or ""
-            if not text.strip():
-                continue
-            rec = {"id": rid, "dataset_source": src, "dump": row.get("dump"),
-                   "duplicate_count": row.get("duplicate_count"),
-                   "is_truncated": row.get("is_truncated"),
-                   "minhash_cluster_size": row.get("minhash_cluster_size"),
-                   "prediction": float(pred), "url": row.get("url"), "text": text}
-            line = json.dumps(rec, ensure_ascii=False) + "\n"
-            if src == "finepdfs":
-                fp.write(line)
-                counts["pdf"]["docs"] += 1
-                counts["pdf"]["tokens"] += len(text.split())
-                seen.add(rid)
-                own_seen.append(rid)
-            elif src == "fineweb2":
-                if fw is not None:
-                    fw.write(line)
-                    counts["web"]["docs"] += 1
-                    counts["web"]["tokens"] += len(text.split())
-                seen.add(rid)
-                own_seen.append(rid)
-            else:
-                continue
-            if counts["pdf"]["tokens"] >= a.pdf_token_target:
-                print(f"TARGET pdf tokens reached: {counts['pdf']}", flush=True)
-                break
-    except Exception:
-        import traceback
-        traceback.print_exc()
-        exit_code = 1
-    finally:
-        fp.close()
-        if fw is not None:
-            fw.close()
+
+    def process_row(row):
+        rid = row.get("id")
+        if rid in seen:
+            return
+        pred = row.get("prediction")
+        if not isinstance(pred, (int, float)) or pred < a.pred_min:
+            return
+        if row.get("is_truncated") is True:
+            return
+        src = row.get("dataset_source")
+        text = row.get("text") or ""
+        if not text.strip():
+            return
+        if src == "finepdfs":
+            fp.write(json.dumps(
+                {"id": rid, "dataset_source": src, "dump": row.get("dump"),
+                 "duplicate_count": row.get("duplicate_count"),
+                 "is_truncated": row.get("is_truncated"),
+                 "minhash_cluster_size": row.get("minhash_cluster_size"),
+                 "prediction": float(pred), "url": row.get("url"),
+                 "text": text}, ensure_ascii=False) + "\n")
+            counts["pdf"]["docs"] += 1
+            counts["pdf"]["tokens"] += len(text.split())
+            seen.add(rid)
+            own_seen.append(rid)
+        elif src == "fineweb2":
+            if fw is not None:
+                fw.write(json.dumps(
+                    {"id": rid, "dataset_source": src, "dump": row.get("dump"),
+                     "duplicate_count": row.get("duplicate_count"),
+                     "is_truncated": row.get("is_truncated"),
+                     "minhash_cluster_size": row.get("minhash_cluster_size"),
+                     "prediction": float(pred), "url": row.get("url"),
+                     "text": text}, ensure_ascii=False) + "\n")
+                counts["web"]["docs"] += 1
+                counts["web"]["tokens"] += len(text.split())
+            seen.add(rid)
+            own_seen.append(rid)
+
+    def save_state():
         try:
             state_path.write_text(json.dumps(
                 {"counts": counts, "scanned": scanned,
                  "seen": own_seen}, ensure_ascii=False), encoding="utf-8")
         except Exception as e:
             print(f"state save failed: {e}", flush=True)
+
+    fp = open(pdf_path, "a", encoding="utf-8")
+    fw = None if a.skip_web else open(web_path, "a", encoding="utf-8")
+    t0 = time.time()
+    exit_code = 0
+    # Retry loop: HF streaming drops transiently (same error killed v2_5
+    # attempt 1). Stream order is deterministic (pinned revision+split), so
+    # resume = re-iterate and discard the first `scanned` rows.
+    attempt = 0
+    target_hit = False
+    try:
+        while not target_hit:
+            skip_left = scanned
+            try:
+                ds = load_dataset(REPO, split=a.split, streaming=True,
+                                  revision=REVISION)
+                for row in ds:
+                    if skip_left > 0:
+                        skip_left -= 1
+                        continue
+                    scanned += 1
+                    process_row(row)
+                    if scanned % a.progress_every == 0:
+                        el = time.time() - t0
+                        print(f"scanned={scanned} web={counts['web']} "
+                              f"pdf={counts['pdf']} elapsed={el:.0f}s", flush=True)
+                        save_state()
+                    if counts["pdf"]["tokens"] >= a.pdf_token_target:
+                        print(f"TARGET pdf tokens reached: {counts['pdf']}",
+                              flush=True)
+                        target_hit = True
+                        break
+                else:
+                    print("STREAM EXHAUSTED before target", flush=True)
+                    break
+            except Exception:
+                import traceback
+                traceback.print_exc()
+                attempt += 1
+                save_state()
+                if attempt > a.max_retries:
+                    print(f"too many retries ({attempt}), giving up", flush=True)
+                    exit_code = 1
+                    break
+                wait = min(60 * 2 ** min(attempt, 4), 600)
+                print(f"-- attempt {attempt}/{a.max_retries}: retry in "
+                      f"{wait}s (scanned={scanned}) --", flush=True)
+                time.sleep(wait)
+    finally:
+        fp.close()
+        if fw is not None:
+            fw.close()
+        save_state()
     print(f"DONE web={counts['web']} pdf={counts['pdf']} scanned={scanned}", flush=True)
     write_done(a.done, exit_code, pdf_docs=counts["pdf"]["docs"],
                web_docs=counts["web"]["docs"], scanned=scanned)
