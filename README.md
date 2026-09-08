@@ -2,313 +2,87 @@
 
 ![Glyph logo](assets/brand/glyph_logotext.png)
 
-Glyph is a family of small Polish decoder-only Transformers trained from scratch on a homelab
-(single RX 5500 XT, ROCm).
-Milestones so far: `Glyph-27M` (completed) and `Glyph-100M v2.4.2` (15k-checkpoint,
-evaluation pending). In progress: a rebuilt v2.5 pretraining mixture.
-
-This project was previously known internally under working names such as `miniGPT`, `miniGPT-PL`, `ai-model`, and `Polish GPT`. The on-disk path stays `/home/maksu/ai-model` for operational safety, but the model/project name is now:
-
-- project name: `Glyph`
-- base model: `Glyph-27M Base`
-- instruction-tuned experiment: `Glyph-27M SFT v0` (completed, experimental)
-- current base model: `Glyph-100M v2.4.2` (15k checkpoint, evaluation pending)
-- next dataset: rebuilt `glyph100` v2.5 mixture (in progress)
-- future cleaned-up instruction variant: `Glyph-100M Instruct`
-
-## Status
-
-Glyph-27M Base completed its 200,000-step pretraining run on 2026-05-22. The final base checkpoint is `checkpoints/final.pt`.
-
-Glyph-27M SFT v0 was then trained as a small supervised fine-tuning experiment on 2026-05-25. It used 1,500 synthetic curated instruction examples, a 90/10 stratified split, and one epoch on ROCm/RX 5500 XT. SFT v0 improves response format and instruction-following behavior, but it does not make the 27M model a production assistant.
-
-Glyph-100M v2.4.2 reached its 15,000-step checkpoint on 2026-09-01 (train loss 4.094,
-validation loss 3.976, ~246M tokens processed, effective batch 16,384 tokens).
-Matched checkpoint evaluation is pending before any continuation decision.
-
-The v2.5 mixture is being rebuilt from scratch (`glyph100_v2_5_1` pipeline:
-download → filter → tokenize/chunk → MinHash dedup → cross-ref → build,
-targeting roughly 715M tokens). Do not start full Glyph-100M training on the new
-mixture without an explicit approval step.
-
-## Architecture
-
-### Glyph-27M
-
-| Field | Value |
-|---|---:|
-| Type | decoder-only Transformer |
-| Framework | PyTorch |
-| Layers | 6 |
-| Attention heads | 8 |
-| Hidden size | 512 |
-| FFN width | 2048 |
-| Context length | 256 tokens |
-| Vocabulary | 16,000 tokens |
-| Dropout | 0.1 |
-| Parameters | 27.21M counted parameters |
-| Weight tying | enabled; about 19.02M unique parameters |
-
-The model definition is in `model/transformer.py`; hyperparameters live in `config.py`.
-
-### Glyph-100M (v2.4.x)
-
-| Field | Value |
-|---|---:|
-| Type | decoder-only Transformer |
-| Framework | PyTorch |
-| Layers | 12 |
-| Attention heads | 12 |
-| Hidden size | 768 |
-| FFN width | 3072 |
-| Context length | 512 tokens |
-| Vocabulary | 16,000 tokens |
-| Dropout | 0.1 |
-| Parameters | 97.65M unique/trainable, 109.94M logical with tied LM head counted separately |
-| Weight tying | enabled |
-
-Variant configs are exposed through `MODEL_VARIANTS` in `config.py`. The default remains `glyph-27m` for backward compatibility.
-
-## Tokenizer
-
-Glyph-27M uses a SentencePiece BPE tokenizer:
-
-- model: `data/processed/tokenizer.model`
-- vocab: `data/processed/tokenizer.vocab`
-- vocab size: 16,000
-- token IDs are stored as `uint16` in `data/processed/tokens.bin`
-
-## Data
-
-The training corpus is Polish text assembled for local pretraining. The intended/source mix is:
-
-- Polish Wikipedia
-- mC4/OSCAR Polish fallback data
-- Wolne Lektury
-
-Current processed artifacts:
-
-- `data/processed/corpus_clean.txt`: cleaned text corpus
-- `data/processed/tokens.bin`: training token stream
-- `data/processed/val_tokens.bin`: validation holdout
-- `data/processed/val_tokens.meta.json`: validation split metadata
-
-Do not regenerate preprocessing during an active training run unless you intentionally plan a new training stream.
-
-Glyph-100M uses separate dataset outputs:
-
-- `data/processed/glyph100_train.bin`
-- `data/processed/glyph100_val.bin`
-- `data/processed/glyph100_metadata.json`
-- `data/reports/glyph_100m_dataset_report.md`
-- `data/reports/glyph_100m_dataset_stats.json`
-
-The legacy `data/processed/tokens.bin` remains the Glyph-27M token stream and should not be overwritten.
-
-Dataset lineage reports (`data/reports/glyph100_dataset_v2_*`) document each mixture
-iteration, including per-source accept/reject samples. The v2.5 rebuild stages live in
-`scripts/` (`ft_download.py`, `filter1.py`, `tokchunk.py`, `minhash.py`, `xref.py`,
-`xref_wp.py`, `build25.py`) with progress via `scripts/v251_progress.py`.
-
-## Training
-
-Main script:
-
-```bash
-python train.py --resume checkpoints/latest.pt
-```
-
-Training configuration:
-
-| Field | Value |
-|---|---:|
-| Batch size | 32 |
-| Max steps | 200,000 |
-| Max LR | 3e-4 |
-| Min LR | 3e-5 |
-| Warmup | 2,000 steps |
-| Optimizer | AdamW |
-| Betas | 0.9, 0.95 |
-| Weight decay | 0.1 |
-| Grad clip | 1.0 |
-| Eval interval | 500 steps |
-| Checkpoint interval | 1,000 steps |
-| Schedule | warmup–stable–decay (WSD); see `train.py` |
-
-Cooldown/decay continuations from a main-line checkpoint use
-`scripts/run_decay_branch.sh`. Long runs are confined to the night window by the
-scheduler so the homelab stays quiet during the day.
-
-Logs:
-
-- `logs/train.log`
-- `logs/train.stdout.log`
-
-Checkpoints:
-
-- `checkpoints/latest.pt`
-- `checkpoints/step_XXXXXXX.pt`
-- `checkpoints/emergency.pt`
-
-## Docker Training
-
-The training setup is CPU-only and designed to coexist with other homelab services. The path remains `/home/maksu/ai-model`.
-
-Build:
-
-```bash
-cd /home/maksu/ai-model
-docker compose -f docker-compose.train.yml build trainer
-```
-
-Smoke test:
-
-```bash
-cd /home/maksu/ai-model
-scripts/smoke_test_container.sh
-```
-
-Short resume test:
-
-```bash
-cd /home/maksu/ai-model
-docker compose -f docker-compose.train.yml run --rm trainer \
-  python train.py --resume checkpoints/latest.pt --max-steps 10
-```
-
-Long resume:
-
-```bash
-cd /home/maksu/ai-model
-docker compose -f docker-compose.train.yml run --rm trainer \
-  python train.py --resume checkpoints/latest.pt
-```
-
-Do not start long training while another training process is already running.
-
-## SFT v0
-
-SFT v0 is documented in `docs/sft-v0.md`.
-
-Key artifacts:
-
-- raw data: `data/sft/raw/glyph_sft_v0_seed_1500_expanded.jsonl`
-- processed split: `data/sft/processed/sft_v0_train.jsonl`, `data/sft/processed/sft_v0_val.jsonl`
-- token stats and validation report: `data/sft/reports/`
-- final checkpoint: `checkpoints/sft-v0/glyph-27m-sft-v0-final.pt`
-- comparison samples: `eval/sft-v0/comparison.md`
-
-Safe ROCm command:
-
-```bash
-cd /home/maksu/ai-model
-docker compose -f docker-compose.train.rocm.yml run --rm trainer-rocm \
-  python finetune.py \
-    --device cuda \
-    --base checkpoints/final.pt \
-    --train-jsonl data/sft/processed/sft_v0_train.jsonl \
-    --val-jsonl data/sft/processed/sft_v0_val.jsonl \
-    --output checkpoints/sft-v0 \
-    --epochs 1 \
-    --batch-size 16 \
-    --learning-rate 2e-5
-```
-
-## Inference
-
-Basic continuation:
-
-```bash
-cd /home/maksu/ai-model
-python generate.py "Paryż, stolica Francji, jest" \
-  --checkpoint checkpoints/latest.pt \
-  --max-tokens 50 \
-  --temperature 0.75 \
-  --top-k 50 \
-  --top-p 0.92 \
-  --repetition-penalty 1.10 \
-  --no-repeat-ngram-size 4
-```
-
-The private training dashboard does not expose inference. Public testing lives in the separate locked-down demo service for `glyph.maksu.online`.
-
-## Evaluation
-
-Glyph-27M is evaluated with fixed Polish continuation prompts plus Gemma 4 as a separate judge. Gemma is not part of the gradient training loop.
-
-Key outputs:
-
-- `reports/samples/latest.jsonl`
-- `reports/gemma4_eval/latest.jsonl`
-- `reports/gemma4_eval/latest_summary.json`
-- `reports/gemma4_eval/status.json`
-
-The scheduled Gemma evaluation runs only at night. Manual runs from the private dashboard require a configured owner code, same-origin fetch, rate limits and the configured night window.
-
-Glyph-100M base evaluation prompts are prepared in `eval/glyph-100m/base_continuation_prompts.jsonl`. These prompts treat the base model as a continuation model, not as an instruction-following assistant.
-
-## Dashboard
-
-The local dashboard runs on:
+Glyph is a family of tiny Polish language models trained from scratch on a single
+home GPU. No cluster, no cloud bill — just one graphics card, a lot of patience,
+and the question: how good a Polish model can you grow in a homelab?
+
+## Why this exists
+
+Big models are trained behind closed doors on hardware most people will never
+touch. Glyph is the opposite: every step happens in the open, on consumer
+hardware, with all the mistakes and fixes visible in the commit history. If you
+have ever wondered what it actually takes to take a language model from zero to
+something that speaks your language — this is that story, with code.
+
+## The story so far
+
+**Glyph-27M — the proof that the pipeline works.** Six layers, 256 tokens of
+context, 200,000 training steps. It learned Polish grammar, then promptly started
+looping phrases and drifting off-topic. A small instruction-tuning experiment
+(1,500 hand-picked examples) taught it to at least answer in the right shape.
+Lesson: the training loop, tokenizer, checkpointing and evaluation all worked
+end to end. Capacity was the bottleneck, not the plumbing.
+
+**Glyph-100M — the real attempt.** Twelve layers, 768 wide, 512 tokens of
+context, ~98M parameters. But a bigger model only helps if you feed it better
+text, so most of the work went into the dataset: iterating the Polish mixture
+through versions v2–v2.4 (Wikipedia, books, web), auditing every source with
+accept/reject samples, and measuring what each change actually did. The v2.4.2
+checkpoint reached 15,000 steps (train loss 4.094, validation 3.976, ~246M
+tokens) and is now awaiting evaluation before anything continues.
+
+**v2.5 — rebuilding the food supply.** The current work: throwing the mixture
+out and rebuilding it properly — download, filtering, tokenization, MinHash
+dedup, cross-referencing — targeting roughly 715M clean Polish tokens. A model
+is what it eats.
+
+## How it trains
+
+- Decoder-only Transformer, PyTorch, SentencePiece BPE (16k vocabulary)
+- Warmup–stable–decay learning-rate schedule, with short cooldown branches
+  spun off from main checkpoints for evaluation
+- Long runs happen overnight, when electricity is cheap and nobody hears the fans
+
+## How good is it?
+
+Honestly? It is a research toy, not an assistant. It writes grammatical Polish,
+then loses the thread. It hallucinates with confidence. It has no safety
+alignment and should not be trusted for anything factual, medical, legal, or
+financial. The interesting part is not the scores — it is watching a pile of
+matrix multiplications slowly learn a language, and knowing exactly which data
+and which decisions shaped it.
+
+Evaluation is done with fixed Polish continuation prompts, graded by a separate
+larger model acting as judge (never part of training). Sample transcripts and
+per-version dataset audits live in `reports/` and `data/reports/`.
+
+## What's in this repo
 
 ```text
-http://127.0.0.1:8181
+├── train.py            # training loop (WSD schedule, checkpointing)
+├── generate.py         # sample continuations from a checkpoint
+├── finetune.py         # supervised fine-tuning path
+├── model/              # Transformer definition
+├── config.py           # model variants + hyperparameters
+├── scripts/            # dataset pipeline stages (download → filter →
+│                       #   tokenize → dedup → cross-ref → build)
+├── eval/               # fixed Polish evaluation prompts
+├── reports/            # samples, eval transcripts, dataset audits
+└── data/reports/       # per-mixture-version lineage (v2–v2.5)
 ```
 
-Public/tunnel usage has been documented in `DASHBOARD_USAGE.md`. The dashboard title is `Glyph-27M Training` and reports metadata fields:
+## What is NOT here
 
-```json
-{
-  "project_name": "Glyph",
-  "model_name": "Glyph-27M",
-  "variant": "Base"
-}
-```
+Checkpoints, token streams and raw datasets are far too large for git and stay
+local — so this repo is the recipe and the lab notebook, not a download-and-run
+package. The code is published as-is: readable, hacky in places, and honest
+about what it is.
 
-## Limitations
+## Models
 
-Glyph-27M Base is a small base language model. Glyph-27M SFT v0 is an instruction-tuning experiment, not a production chatbot.
-
-Known limitations:
-
-- repetition and phrase loops
-- topic drift after a few sentences
-- short 256-token context
-- factual unreliability
-- noisy/statistical templates from source data
-- weak long-range coherence
-- no safety alignment or RLHF
-
-Not intended for:
-
-- production assistant use
-- factual Q&A
-- medical, legal, financial, or safety-critical decisions
-- unsupervised public API usage
-
-## Directory Overview
-
-```text
-/home/maksu/ai-model/
-├── config.py
-├── train.py
-├── generate.py
-├── finetune.py
-├── model/
-├── data/
-├── checkpoints/
-├── logs/
-├── reports/
-├── web/
-├── scripts/
-├── Dockerfile.train
-├── docker-compose.train.yml
-├── docker-compose.teacher.yml
-├── DASHBOARD_USAGE.md
-├── TRAINING_CONTAINER.md
-└── MODEL_CARD.md
-```
-
-## Rebranding Note
-
-Only display names, documentation, metadata, and non-behavioral labels were changed during the Glyph-27M rebrand. Checkpoints, tokenizer files, datasets, container-safe paths, and the `/home/maksu/ai-model` directory name were intentionally left unchanged.
+| Model | Params | Context | Status |
+|---|---|---|---|
+| Glyph-27M Base | 27M | 256 | done (200k steps) |
+| Glyph-27M SFT v0 | 27M | 256 | experiment, done |
+| Glyph-100M v2.4.2 | ~98M | 512 | 15k checkpoint, eval pending |
+| Glyph-100M v2.5 | ~98M | 512 | dataset rebuild in progress |
