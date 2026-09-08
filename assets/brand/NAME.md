@@ -43,3 +43,18 @@ evaluations keep circling. The name does not answer it. It just states it.
 The logo is a pen nib drawn as the letter G: the instrument that makes
 glyphs, drawing the initial of the project. Black on white, one continuous
 idea — the hand, the tool, the letter.
+
+## The original note (verbatim)
+
+Recovered from the conversation where the name was chosen. Preserved
+word for word:
+
+> Glyph
+>
+> Ang. glyph przyszło przez francuskie glyphe z greckiego γλυφή / glyphē,
+> czyli „rzeźbienie, wyryty znak", od γλύφω / glyphō, „ryć, wycinać,
+> grawerować".
+>
+> Brzmieniowo: znaki, tokeny, zapis, tekst, symbole.
+> Minus: bardziej znak/grafem niż „inteligencja", ale dla LLM-a to akurat
+> mocny plus.
