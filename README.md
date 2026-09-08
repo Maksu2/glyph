@@ -2,15 +2,18 @@
 
 ![Glyph logo](assets/brand/glyph_logotext.png)
 
-Glyph is a family of small Polish decoder-only Transformers trained from scratch on a homelab.
-The completed milestone is `Glyph-27M`; the next prepared variant is `Glyph-100M`.
+Glyph is a family of small Polish decoder-only Transformers trained from scratch on a homelab
+(single RX 5500 XT, ROCm).
+Milestones so far: `Glyph-27M` (completed) and `Glyph-100M v2.4.2` (15k-checkpoint,
+evaluation pending). In progress: a rebuilt v2.5 pretraining mixture.
 
 This project was previously known internally under working names such as `miniGPT`, `miniGPT-PL`, `ai-model`, and `Polish GPT`. The on-disk path stays `/home/maksu/ai-model` for operational safety, but the model/project name is now:
 
 - project name: `Glyph`
 - base model: `Glyph-27M Base`
-- current instruction-tuned experiment: `Glyph-27M SFT v0`
-- next base experiment: `Glyph-100M`
+- instruction-tuned experiment: `Glyph-27M SFT v0` (completed, experimental)
+- current base model: `Glyph-100M v2.4.2` (15k checkpoint, evaluation pending)
+- next dataset: rebuilt `glyph100` v2.5 mixture (in progress)
 - future cleaned-up instruction variant: `Glyph-100M Instruct`
 
 ## Status
@@ -19,7 +22,14 @@ Glyph-27M Base completed its 200,000-step pretraining run on 2026-05-22. The fin
 
 Glyph-27M SFT v0 was then trained as a small supervised fine-tuning experiment on 2026-05-25. It used 1,500 synthetic curated instruction examples, a 90/10 stratified split, and one epoch on ROCm/RX 5500 XT. SFT v0 improves response format and instruction-following behavior, but it does not make the 27M model a production assistant.
 
-Glyph-100M is in preparation. The goal is to keep the proven pipeline from Glyph-27M, increase model capacity, extend context to 512 tokens, and use a cleaner filtered Polish corpus before any long run. Do not start full Glyph-100M training without an explicit approval step.
+Glyph-100M v2.4.2 reached its 15,000-step checkpoint on 2026-09-01 (train loss 4.094,
+validation loss 3.976, ~246M tokens processed, effective batch 16,384 tokens).
+Matched checkpoint evaluation is pending before any continuation decision.
+
+The v2.5 mixture is being rebuilt from scratch (`glyph100_v2_5_1` pipeline:
+download → filter → tokenize/chunk → MinHash dedup → cross-ref → build,
+targeting roughly 715M tokens). Do not start full Glyph-100M training on the new
+mixture without an explicit approval step.
 
 ## Architecture
 
@@ -41,7 +51,7 @@ Glyph-100M is in preparation. The goal is to keep the proven pipeline from Glyph
 
 The model definition is in `model/transformer.py`; hyperparameters live in `config.py`.
 
-### Glyph-100M Prepared Variant
+### Glyph-100M (v2.4.x)
 
 | Field | Value |
 |---|---:|
@@ -95,6 +105,11 @@ Glyph-100M uses separate dataset outputs:
 
 The legacy `data/processed/tokens.bin` remains the Glyph-27M token stream and should not be overwritten.
 
+Dataset lineage reports (`data/reports/glyph100_dataset_v2_*`) document each mixture
+iteration, including per-source accept/reject samples. The v2.5 rebuild stages live in
+`scripts/` (`ft_download.py`, `filter1.py`, `tokchunk.py`, `minhash.py`, `xref.py`,
+`xref_wp.py`, `build25.py`) with progress via `scripts/v251_progress.py`.
+
 ## Training
 
 Main script:
@@ -118,6 +133,11 @@ Training configuration:
 | Grad clip | 1.0 |
 | Eval interval | 500 steps |
 | Checkpoint interval | 1,000 steps |
+| Schedule | warmup–stable–decay (WSD); see `train.py` |
+
+Cooldown/decay continuations from a main-line checkpoint use
+`scripts/run_decay_branch.sh`. Long runs are confined to the night window by the
+scheduler so the homelab stays quiet during the day.
 
 Logs:
 
