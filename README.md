@@ -25,6 +25,40 @@ the honest results — including the failures.
   dictated the batch sizes, the schedule design, and the overnight-only
   training windows.
 
+## Why "Glyph"?
+
+The name carries its own justification. English *glyph* arrives via French
+*glyphe* from Greek *γλυφή* (*glyphē*) — "a carving, an engraved mark" — and
+that from *γλύφω* (*glyphō*), "to carve, to cut, to engrave". Every layer of
+that lineage maps onto what this project does:
+
+- **Carving, not building.** Nobody assembles a model the way you assemble
+  furniture. Training presses an entire written language down into millions
+  of weights — the Polish language, engraved into matrices. And doing it on
+  a single home GPU, against datacenter-scale labs, is hand engraving next
+  to a printing press: slower, smaller, every cut visible in the open.
+- **Cutting, not reading.** The tokenizer never understands a word; byte-pair
+  encoding slices text into subword fragments and the model shuffles those
+  fragments to imitate speech. Tokens are the machine's glyphs — cut marks
+  traded for the appearance of meaning.
+- **A shared word.** Polish already owns this one: *glif* is the native term
+  for the visible shape of a character. No translation needed, pronounced
+  identically in both languages — fitting for a Polish-first project.
+- **A measure of honesty.** AI products name themselves after gods and cosmic
+  forces. This is a 27-million-parameter model that repeats itself and loses
+  the thread. A glyph is small and handmade — and a writing system is nothing
+  but glyphs accumulated, which is the whole roadmap: 27M, then 100M, then
+  whatever cleaner data allows.
+- **Form before meaning.** A glyph is pure shape with no guaranteed
+  understanding behind it — and whether next-token prediction amounts to
+  comprehension is precisely the question the evaluations here keep probing.
+  The name states the question instead of pretending to answer it. (For an
+  LLM, that supposed weakness — "more sign than intelligence" — is exactly
+  the point.)
+
+The logo follows the same logic: a pen nib drawn as the letter G — the tool
+that makes glyphs, signing the project with its own initial.
+
 ## Models
 
 | Model | Parameters | Context | Status |
