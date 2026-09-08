@@ -113,6 +113,9 @@ class TrainConfig:
     # Schedule
     max_steps: int = 200_000
     warmup_steps: int = 2_000
+    scheduler_type: str = "cosine"
+    decay_start_step: int | None = None
+    decay_steps: int | None = None
 
     # Logging / checkpointing
     log_interval: int = 10

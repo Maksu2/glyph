@@ -318,9 +318,11 @@ class TokenDataset:
 # ---------------------------------------------------------------------------
 
 def get_lr(step: int, cfg: TrainConfig) -> float:
-    # Linear warmup
+    # Linear warmup (shared by all scheduler types)
     if step < cfg.warmup_steps:
         return cfg.max_lr * step / cfg.warmup_steps
+    if cfg.scheduler_type == "wsd":
+        return _get_lr_wsd(step, cfg)
     # Past max_steps: return min_lr
     if step >= cfg.max_steps:
         return cfg.min_lr
@@ -328,6 +330,24 @@ def get_lr(step: int, cfg: TrainConfig) -> float:
     progress = (step - cfg.warmup_steps) / (cfg.max_steps - cfg.warmup_steps)
     cosine = 0.5 * (1.0 + math.cos(math.pi * progress))
     return cfg.min_lr + (cfg.max_lr - cfg.min_lr) * cosine
+
+
+def _get_lr_wsd(step: int, cfg: TrainConfig) -> float:
+    """Warmup-stable-decay: flat max_lr, then linear decay to min_lr.
+
+    max_steps deliberately never enters this formula; it only bounds
+    the training loop. decay_start_step=None means stable forever.
+    """
+    decay_start = cfg.decay_start_step
+    if decay_start is None or step < decay_start:
+        return cfg.max_lr
+    decay_steps = cfg.decay_steps
+    if not decay_steps or decay_steps <= 0:
+        return cfg.min_lr
+    if step >= decay_start + decay_steps:
+        return cfg.min_lr
+    frac = (step - decay_start) / decay_steps
+    return cfg.max_lr + (cfg.min_lr - cfg.max_lr) * frac
 
 
 @torch.no_grad()
@@ -448,16 +468,29 @@ def checkpoint_metadata(
         "dataset_metadata_path": cfg.dataset_metadata_path,
         "dataset_name": cfg.dataset_name,
         "data_sampler": data_state,
-        "scheduler_state": {
-            "type": "linear_warmup_cosine_decay",
-            "step": step,
-            "max_steps": cfg.max_steps,
-            "warmup_steps": cfg.warmup_steps,
-            "max_lr": cfg.max_lr,
-            "min_lr": cfg.min_lr,
-        },
+        "scheduler_state": _scheduler_state_dict(cfg, step),
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
+
+
+def scheduler_type_name(scheduler_type: str) -> str:
+    """Canonical scheduler_state["type"] string for a config scheduler type."""
+    return "wsd" if scheduler_type == "wsd" else "linear_warmup_cosine_decay"
+
+
+def _scheduler_state_dict(cfg: TrainConfig, step: int) -> dict:
+    state = {
+        "type": scheduler_type_name(cfg.scheduler_type),
+        "step": step,
+        "max_steps": cfg.max_steps,
+        "warmup_steps": cfg.warmup_steps,
+        "max_lr": cfg.max_lr,
+        "min_lr": cfg.min_lr,
+    }
+    if cfg.scheduler_type == "wsd":
+        state["decay_start_step"] = cfg.decay_start_step
+        state["decay_steps"] = cfg.decay_steps
+    return state
 
 
 def validate_checkpoint_compatibility(state: dict, expected_variant: str, expected_model_config) -> None:
@@ -522,6 +555,21 @@ def validate_resume_contract(state: dict, train_cfg, model_cfg, dataset=None, st
             f"checkpoint={state.get('gradient_accumulation_steps')!r}, "
             f"current={train_cfg.gradient_accumulation_steps!r}"
         )
+    if "scheduler_state" in state:
+        ckpt_sched = state.get("scheduler_state") or {}
+        live_sched_type = scheduler_type_name(train_cfg.scheduler_type)
+        if ckpt_sched.get("type") != live_sched_type:
+            problems.append(
+                f"scheduler type: checkpoint={ckpt_sched.get('type')!r}, "
+                f"current={live_sched_type!r}"
+            )
+        elif live_sched_type == "wsd":
+            for key in ("decay_start_step", "decay_steps"):
+                if ckpt_sched.get(key) != getattr(train_cfg, key):
+                    problems.append(
+                        f"scheduler {key}: checkpoint={ckpt_sched.get(key)!r}, "
+                        f"current={getattr(train_cfg, key)!r}"
+                    )
     if not problems:
         log.info("Resume contract OK: tokenizer, dataset, data length, context, batch/accum match")
         return
@@ -835,6 +883,12 @@ def _train_impl(args):
         train_cfg.min_lr = args.min_lr
     if args.warmup_steps is not None:
         train_cfg.warmup_steps = args.warmup_steps
+    if args.scheduler is not None:
+        train_cfg.scheduler_type = args.scheduler
+    if args.decay_start_step is not None:
+        train_cfg.decay_start_step = args.decay_start_step
+    if args.decay_steps is not None:
+        train_cfg.decay_steps = args.decay_steps
     if args.weight_decay is not None:
         train_cfg.weight_decay = args.weight_decay
     if args.grad_clip is not None:
@@ -869,6 +923,12 @@ def _train_impl(args):
         sys.exit(2)
     if args.min_lr is not None and args.min_lr < 0:
         log.error("--min-lr must be non-negative")
+        sys.exit(2)
+    if args.decay_start_step is not None and args.decay_start_step < 0:
+        log.error("--decay-start-step must be a non-negative integer")
+        sys.exit(2)
+    if args.decay_steps is not None and args.decay_steps <= 0:
+        log.error("--decay-steps must be a positive integer")
         sys.exit(2)
     if train_cfg.min_lr > train_cfg.max_lr:
         log.error("--min-lr cannot be larger than learning rate")
@@ -1334,6 +1394,24 @@ def main():
         type=int,
         default=None,
         help="Override warmup steps",
+    )
+    parser.add_argument(
+        "--scheduler",
+        choices=("cosine", "wsd"),
+        default=None,
+        help="LR schedule type (default: cosine)",
+    )
+    parser.add_argument(
+        "--decay-start-step",
+        type=int,
+        default=None,
+        help="WSD: step where linear decay to --min-lr starts (absent = stable forever)",
+    )
+    parser.add_argument(
+        "--decay-steps",
+        type=int,
+        default=None,
+        help="WSD: linear decay length in steps",
     )
     parser.add_argument(
         "--weight-decay",
