@@ -1,0 +1,313 @@
+{
+  "dataset_name": "glyph100_dataset_v2_5",
+  "generated_at": "2026-09-07T01:56:04Z",
+  "tokenizer": "data/processed/tokenizer.model",
+  "tokenizer_sha256": "21bad2b08f1081afee40fbb6d5489d8199deebd7b81d76a34b347f2f01dd4029",
+  "eos_id": 3,
+  "train_tokens": 1309237542,
+  "val_tokens": 7240792,
+  "total_tokens": 1316478334,
+  "total_docs": 571634,
+  "val_share": 0.005500122419789098,
+  "eos_density_train": 2302.441907743172,
+  "sources": {
+    "1000_novels": {
+      "tokens": 30091693,
+      "train_tokens": 29905478,
+      "val_tokens": 186215,
+      "docs": 2767,
+      "train_docs": 2750,
+      "val_docs": 17,
+      "chars": 105811689,
+      "share": 0.022857719890132275,
+      "fertility_chars_per_token": 3.5163089361572313,
+      "eos_1_per_n_train_tokens": 10874.719272727272
+    },
+    "eltec_pol": {
+      "tokens": 13827409,
+      "train_tokens": 13692564,
+      "val_tokens": 134845,
+      "docs": 1057,
+      "train_docs": 1047,
+      "val_docs": 10,
+      "chars": 48444971,
+      "share": 0.010503331990270339,
+      "fertility_chars_per_token": 3.5035465429568187,
+      "eos_1_per_n_train_tokens": 13077.902578796562
+    },
+    "finetext_pdf": {
+      "tokens": 321155921,
+      "train_tokens": 319450593,
+      "val_tokens": 1705328,
+      "docs": 63066,
+      "train_docs": 62727,
+      "val_docs": 339,
+      "chars": 1205173114,
+      "share": 0.24395078346955917,
+      "fertility_chars_per_token": 3.7526106018764636,
+      "eos_1_per_n_train_tokens": 5092.712755272849
+    },
+    "finetext_web": {
+      "tokens": 762651346,
+      "train_tokens": 758572000,
+      "val_tokens": 4079346,
+      "docs": 348989,
+      "train_docs": 347181,
+      "val_docs": 1808,
+      "chars": 3039458968,
+      "share": 0.5793117336635181,
+      "fertility_chars_per_token": 3.985384650458612,
+      "eos_1_per_n_train_tokens": 2184.946756878977
+    },
+    "parliamentary": {
+      "tokens": 6010376,
+      "train_tokens": 5966996,
+      "val_tokens": 43380,
+      "docs": 6226,
+      "train_docs": 6185,
+      "val_docs": 41,
+      "chars": 26999131,
+      "share": 0.004565495568573482,
+      "fertility_chars_per_token": 4.492086851138764,
+      "eos_1_per_n_train_tokens": 964.7527890056589
+    },
+    "wikibooks": {
+      "tokens": 3608515,
+      "train_tokens": 3588927,
+      "val_tokens": 19588,
+      "docs": 4068,
+      "train_docs": 4042,
+      "val_docs": 26,
+      "chars": 13763993,
+      "share": 0.002741036374701173,
+      "fertility_chars_per_token": 3.8143094874207257,
+      "eos_1_per_n_train_tokens": 887.9087085601187
+    },
+    "wikinews": {
+      "tokens": 1500066,
+      "train_tokens": 1492984,
+      "val_tokens": 7082,
+      "docs": 4544,
+      "train_docs": 4521,
+      "val_docs": 23,
+      "chars": 6116238,
+      "share": 0.001139453617472143,
+      "fertility_chars_per_token": 4.077312598245677,
+      "eos_1_per_n_train_tokens": 330.23313426233136
+    },
+    "wikipedia_pl": {
+      "tokens": 95000929,
+      "train_tokens": 94504183,
+      "val_tokens": 496746,
+      "docs": 100721,
+      "train_docs": 100218,
+      "val_docs": 503,
+      "chars": 360915541,
+      "share": 0.07216292630608534,
+      "fertility_chars_per_token": 3.79907380695193,
+      "eos_1_per_n_train_tokens": 942.9861202578379
+    },
+    "wikisource": {
+      "tokens": 27607311,
+      "train_tokens": 27327921,
+      "val_tokens": 279390,
+      "docs": 33023,
+      "train_docs": 32835,
+      "val_docs": 188,
+      "chars": 95628191,
+      "share": 0.020970577553006655,
+      "fertility_chars_per_token": 3.4638719794187853,
+      "eos_1_per_n_train_tokens": 832.2802192782092
+    },
+    "wolne_lektury": {
+      "tokens": 55024768,
+      "train_tokens": 54735896,
+      "val_tokens": 288872,
+      "docs": 7173,
+      "train_docs": 7124,
+      "val_docs": 49,
+      "chars": 194132498,
+      "share": 0.04179694156668134,
+      "fertility_chars_per_token": 3.5280929853261718,
+      "eos_1_per_n_train_tokens": 7683.3093767546325
+    }
+  },
+  "stages": {
+    "filter_stats_web.json": {
+      "src": "web",
+      "n_in": 335699,
+      "n_kept": 327246,
+      "n_rejected": 8453,
+      "kept_chars": 3046741012,
+      "reason_hits": {
+        "numline>0.3": 2020,
+        "noend_long>0.85": 5367,
+        "weird>0.01": 288,
+        "glue>200": 431,
+        "homoglyph>2": 374,
+        "short>0.9": 56
+      },
+      "elapsed_s": 313.1
+    },
+    "filter_stats_pdf.json": {
+      "src": "pdf",
+      "n_in": 50464,
+      "n_kept": 44713,
+      "n_rejected": 5751,
+      "kept_chars": 1210502095,
+      "reason_hits": {
+        "weird>0.01": 1134,
+        "noend_long>0.85": 3735,
+        "glue>200": 573,
+        "homoglyph>2": 726,
+        "short>0.9": 199,
+        "numline>0.3": 3
+      },
+      "elapsed_s": 127.0
+    },
+    "tok_stats_web.json": {
+      "src": "web",
+      "docs_in": 327246,
+      "chunks": 349853,
+      "tokens": 764229269,
+      "split_tokens": {
+        "train": 760137924,
+        "val": 4091345
+      },
+      "elapsed_s": 576.1
+    },
+    "tok_stats_pdf.json": {
+      "src": "pdf",
+      "docs_in": 44713,
+      "chunks": 63451,
+      "tokens": 322633948,
+      "split_tokens": {
+        "train": 320926614,
+        "val": 1707334
+      },
+      "elapsed_s": 224.3
+    },
+    "mh_web_mhstats.json": {
+      "docs_in": 349853,
+      "tokens_in": 764229269,
+      "dups": 268,
+      "tokens_dropped": 1320934,
+      "candidate_pairs": 2050,
+      "unions": 268,
+      "elapsed_s": 277.9
+    },
+    "mh_pdf_mhstats.json": {
+      "docs_in": 63451,
+      "tokens_in": 322633948,
+      "dups": 60,
+      "tokens_dropped": 103599,
+      "candidate_pairs": 130,
+      "unions": 60,
+      "elapsed_s": 108.8
+    },
+    "web_xref.json": {
+      "exact_vs_train": 0,
+      "exact_vs_val": 0,
+      "norm_vs_train": 10,
+      "norm_vs_val": 0,
+      "mh_vs_train": 585,
+      "mh_vs_val": 2,
+      "checked": 349853,
+      "dropped_chunks": 597,
+      "dropped_tokens": 606333,
+      "elapsed_s": 1075.6
+    },
+    "pdf_xref.json": {
+      "exact_vs_train": 0,
+      "exact_vs_val": 0,
+      "norm_vs_train": 0,
+      "norm_vs_val": 0,
+      "mh_vs_train": 1,
+      "mh_vs_val": 0,
+      "checked": 63451,
+      "dropped_chunks": 1,
+      "dropped_tokens": 2037,
+      "elapsed_s": 434.0
+    },
+    "wp_xref.json": {
+      "pdf_checked": 63451,
+      "pdf_dropped": 367,
+      "tokens_dropped": 1436071,
+      "elapsed_s": 44.7
+    },
+    "download_quotas": {
+      "web": {
+        "docs": 335699,
+        "tokens": 800004280
+      },
+      "pdf": {
+        "docs": 49579,
+        "tokens": 354580365
+      },
+      "scanned_rows": 37594006,
+      "note": "pdf stopped early at ~355M raw tokens (quota 800M unreachable: sparse pdf rows); web reached 800M quota"
+    }
+  },
+  "val_domain_bins": {
+    "1000_novels": {
+      "file": "val_domain_v25_1000_novels.bin",
+      "tokens": 186215
+    },
+    "eltec_pol": {
+      "file": "val_domain_v25_eltec_pol.bin",
+      "tokens": 134845
+    },
+    "finetext_pdf": {
+      "file": "val_domain_v25_finetext_pdf.bin",
+      "tokens": 1705328
+    },
+    "finetext_web": {
+      "file": "val_domain_v25_finetext_web.bin",
+      "tokens": 4079346
+    },
+    "parliamentary": {
+      "file": "val_domain_v25_parliamentary.bin",
+      "tokens": 43380
+    },
+    "wikibooks": {
+      "file": "val_domain_v25_wikibooks.bin",
+      "tokens": 19588
+    },
+    "wikinews": {
+      "file": "val_domain_v25_wikinews.bin",
+      "tokens": 7082
+    },
+    "wikipedia_pl": {
+      "file": "val_domain_v25_wikipedia_pl.bin",
+      "tokens": 496746
+    },
+    "wikisource": {
+      "file": "val_domain_v25_wikisource.bin",
+      "tokens": 279390
+    },
+    "wolne_lektury": {
+      "file": "val_domain_v25_wolne_lektury.bin",
+      "tokens": 288872
+    }
+  },
+  "web_apply_drops": {
+    "dropped_apply": 864,
+    "dropped_apply_tok": 1926912,
+    "dup_ids": 0
+  },
+  "pdf_apply_drops": {
+    "dropped_apply": 385,
+    "dropped_apply_tok": 1541093,
+    "dup_ids": 0
+  },
+  "verification": {
+    "docs_sum_eq_train_plus_val": true,
+    "train_bin_size_ok": true,
+    "val_bin_size_ok": true,
+    "val_domain_sum_eq_val": true,
+    "eos_count_train_ok": true,
+    "eos_count_val_ok": true
+  },
+  "no_training_started": true,
+  "build_seconds": 401.8
+}

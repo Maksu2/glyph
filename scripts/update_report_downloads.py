@@ -30,6 +30,11 @@ class Section:
 
 SECTIONS = (
     Section(
+        "Prompt 2026-09-06: Glyph v2.5 — korpus ~1,3 mld tokenow",
+        "Jeden prompt roboczy: budowa korpusu v2.5 (FinetextPL-Edu web+pdf z filtrami fazy 2, MinHash i cross-dedup, caly v2.4.2, val per-domena dla 10 zrodel) bez treningu; statystyki i 20 okien do czytania.",
+        ("glyph100_dataset_v2_5", "glyph100_v2_5"),
+    ),
+    Section(
         "Prompt 2026-09-05: Glyph - pelne podsumowanie projektu",
         "Jeden prompt roboczy: audyt calej historii Glyph, rzeczywisty stan modeli, datasetow, checkpointow, SFT, infrastruktury i stron oraz konkretna kolejnosc dalszych decyzji bez uruchamiania treningu.",
         ("glyph_project_state_20260905",),
