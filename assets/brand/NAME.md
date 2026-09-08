@@ -3,9 +3,11 @@
 ## The word
 
 A **glyph** is the smallest unit of writing that still carries meaning — a
-single carved mark. From Greek *glyphē*: a carving, an engraving. Long before
-printing presses, knowledge survived because someone cut marks into stone,
-and the marks outlived the hand that made them.
+single carved mark. English *glyph* came via French *glyphe* from Greek
+*γλυφή* (*glyphē*): "a carving, an engraved mark", from *γλύφω* (*glyphō*) —
+"to carve, to cut, to engrave". Long before printing presses, knowledge
+survived because someone cut marks into stone, and the marks outlived the
+hand that made them.
 
 ## Why it fits this project
 
