@@ -1,6 +1,6 @@
 # Glyph
 
-![Glyph logo](assets/brand/glyph_logotext.png)
+![Glyph logo](assets/brand/glyph_logotext.png?raw=true)
 
 Glyph is a family of tiny Polish language models trained from scratch on a single
 home GPU. No cluster, no cloud bill — just one graphics card, a lot of patience,
