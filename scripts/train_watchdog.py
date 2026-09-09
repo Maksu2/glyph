@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Start and monitor Glyph training on ROCm, with conservative CPU fallback."""
+"""Start and monitor Glyph training on ROCm, with conservative CPU fallback.
+
+Also guards the GPU power cap (monitoring only, never writes): logs every
+change of power1_cap / power1_cap_max and warns when the cap differs from
+the expected day/quiet-hours value. A silent ceiling drop costs ~11%
+throughput and is otherwise visible only in tok/s.
+"""
 import argparse
 import fcntl
 import json
@@ -93,6 +99,55 @@ def save_container_logs(name, reason):
     path.write_text(proc.stdout + proc.stderr, encoding="utf-8", errors="replace")
     log(f"Saved container logs for {name} reason={reason} path={path}")
     return path
+
+
+def find_amdgpu_hwmon():
+    import glob
+    for path in sorted(glob.glob("/sys/class/drm/card*/device/hwmon/hwmon*")):
+        try:
+            if (Path(path) / "name").read_text().strip() == "amdgpu":
+                return Path(path)
+        except OSError:
+            continue
+    return None
+
+
+def read_gpu_caps():
+    """Read-only snapshot of GPU power caps in microwatts. Never raises."""
+    try:
+        hwmon = find_amdgpu_hwmon()
+        if hwmon is None:
+            return None
+
+        def rd(name):
+            try:
+                return int((hwmon / name).read_text().strip())
+            except (OSError, ValueError):
+                return None
+
+        return {"cap": rd("power1_cap"), "max": rd("power1_cap_max"),
+                "default": rd("power1_cap_default")}
+    except Exception:
+        return None
+
+
+def local_now(tzname):
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo(tzname))
+    except Exception:
+        return datetime.now().astimezone()
+
+
+def in_quiet_window(now, start_hm, end_hm):
+    def mins(hm):
+        hour, minute = hm.split(":")
+        return int(hour) * 60 + int(minute)
+
+    start, end, cur = mins(start_hm), mins(end_hm), now.hour * 60 + now.minute
+    if start <= end:
+        return start <= cur < end
+    return cur >= start or cur < end
 
 
 def latest_progress():
@@ -213,11 +268,35 @@ def graceful_stop(name, timeout):
     save_container_logs(name, "stopped")
 
 
+def check_power_caps(args, backend, last_caps):
+    """One monitoring-only cap tick. Returns (caps_or_None, changed_logged)."""
+    caps = read_gpu_caps()
+    if caps is None:
+        return None, False
+    if last_caps is not None:
+        if caps.get("cap") != last_caps.get("cap"):
+            log(f"{backend} POWER CAP CHANGED: {last_caps.get('cap')} -> {caps.get('cap')} uW")
+        if caps.get("max") != last_caps.get("max"):
+            log(f"{backend} WARNING power cap_max changed: {last_caps.get('max')} -> {caps.get('max')} uW (ceiling moved!)")
+    now = local_now(args.schedule_tz)
+    quiet = in_quiet_window(now, args.quiet_start, args.quiet_end)
+    expected_w = args.quiet_cap_w if quiet else args.day_cap_w
+    actual_w = caps["cap"] // 1_000_000 if caps.get("cap") else None
+    if actual_w is not None and actual_w != expected_w:
+        period = "quiet hours" if quiet else "daytime"
+        log(f"{backend} WARNING power cap {actual_w}W != expected {expected_w}W "
+            f"({period}, {now:%H:%M} {args.schedule_tz})")
+    return caps, True
+
+
 def monitor(args, name, backend, gpu_attempts):
     last = latest_progress()
     last_step = last["step"] if last else 0
     last_progress_seen = time.time()
     log(f"Monitoring {backend} container={name} initial_step={last_step}")
+    last_caps = None
+    last_cap_check = 0.0
+    caps_warned = False
 
     while True:
         time.sleep(args.poll_seconds)
@@ -232,7 +311,19 @@ def monitor(args, name, backend, gpu_attempts):
                 gpu_attempts=gpu_attempts,
                 last_progress=progress,
                 checkpoint=str(best_checkpoint(None)),
+                last_gpu_caps=last_caps,
             )
+
+        if time.time() - last_cap_check >= args.cap_check_minutes * 60:
+            last_cap_check = time.time()
+            caps, ok = check_power_caps(args, backend, last_caps)
+            if not ok:
+                if not caps_warned:
+                    caps_warned = True
+                    log(f"{backend} GPU power caps unreadable (no amdgpu hwmon); cap guard idle")
+            else:
+                caps_warned = False
+                last_caps = caps
 
         if not container_running(name):
             status = container_status(name)
@@ -256,6 +347,13 @@ def main():
     parser.add_argument("--poll-seconds", type=int, default=60)
     parser.add_argument("--stop-timeout", type=int, default=300)
     parser.add_argument("--checkpoint-interval", type=int, default=500)
+    parser.add_argument("--cap-check-minutes", type=int, default=10,
+                        help="GPU power-cap guard cadence (monitoring only, never writes)")
+    parser.add_argument("--schedule-tz", default="Europe/Warsaw")
+    parser.add_argument("--quiet-start", default="22:00")
+    parser.add_argument("--quiet-end", default="06:00")
+    parser.add_argument("--quiet-cap-w", type=int, default=80)
+    parser.add_argument("--day-cap-w", type=int, default=125)
     parser.add_argument("--no-fallback", action="store_true")
     args = parser.parse_args()
 
